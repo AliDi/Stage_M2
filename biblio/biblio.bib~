@@ -1,0 +1,278 @@
+@article{virieux_review,
+    author =       {Virieux, J. and Operto, S.},
+    title =        {An overview of full-waveform inversion in exploration geophysics},
+    year =         {2009},
+    journal =      {Geophysics},
+    volume = 	   {74},
+    number =       {6},
+    pages =        {~p.~WCC1--WCC26}
+}
+
+@article{tarantola_84,
+    author =       {Tarantola, A.},
+    title =        {Inversion of seismic reflection data in the acoustic approximation},
+    journal =      {Geophysics},
+    year =         {1984},
+    volume = 	   {49},
+    number =       {8},
+    pages =        {~p.~1259--1266}
+}
+
+@article{kolb,
+    author =       {Kolb, P. and Collino, F. and Lailly, P},
+    title =        {Pre-Stack Inversion of a 1-{D} Medium},
+    journal =      {Proceedings of IEEE},
+    volume = 	   {74},
+    number =       {3},
+    pages =        {~p.~498--508},
+    year =         {1986}
+}
+
+
+@article{gauthier_86,
+    author =       {Gauthier, O. and Virieux, J. and Tarantola, A.},
+    title =        {Two-dimensional nonlinear inversion of seismic waveforms : Numerical results},
+    journal =      {Geophysics},
+    volume = 	   {51},
+    number =       {7},
+    pages =        {~p.~1387--1403},
+    year =         {1986}
+}
+
+@article{mora_87a,
+    author =       {Mora, P.},
+    title =        {Nonlinear two-dimensional elastic inversion of multioffset seismic data},
+    year =         {1987},
+    journal =      {Geophysics},
+    volume = 	   {52},
+    number =       {9},
+    pages =        {~p.~1211--1228}
+}
+
+@article{mora_87b,
+    author =       {Mora, P.},
+    title =        {Nonlinear Elastic Inversion of Real Data},
+    journal =      {SEG Technical Program Expanded Abstracts},
+    pages =        {430--432},
+    year =         {1987}
+}
+
+@article{pratt_90a,
+    author =       {Pratt, R. G. and Worthington, M. H.},
+    title =        {Inverse theory applied to multi-source cross-hole tomography. {P}art 1: acoustic wave-equation method},
+    year =         {1990},
+    journal =      {Geophysical Prospecting},
+    volume = 	   {38},
+    number =       {},
+    pages =        {~p.~287--310}
+}
+
+@article{pratt_90b,
+    author =       {R. G. Pratt},
+    title =        {Inverse theory applied to multi-source cross-hole tomography. {P}art 2 : Elastic wave-equation method},
+    year =         {1990},
+    journal =      {Geophysical Prospecting},
+    volume = 	   {38},
+    number =       {},
+    pages =        {~p.~311--329}
+}
+
+@techreport{bruss_84,
+    author =       {L J. Busse{,} H. D. Collins{,} S. R. Doctor},
+    title =        {Review and Discussion of the Development of Synthetic Aperture Focusing Technique for Ultrasonic Testing (SAFT-UT)},
+    year =         {1984},
+    institution =  {Pacific Northwest Lab., Richland, WA (USA)},
+	number = 		   {NUREG/CR-3625; PNL-4957}
+}
+
+@article{prada_dort,
+    author =       {C. Prada{,} M. Fink},
+    title =        {Eigenmodes of the time reversal operator: A solution to selective focusing in multiple-target media},
+    year =         {1994},
+    journal =      {Wave Motion},
+    volume = 	   {20},
+    number =       {},
+    pages =        {~p.~151--163}
+}
+
+@conference{lailly,
+    author =       {P. Lailly},
+    title =        {The seismic inverse problem as a sequence of before stack migrations},
+    year =         {1983},
+    booktitle =    {Conference on Inverse Scattering--Theory and Application},
+    pages =        {~p.~206--220}
+}
+
+@article{sirgue,
+    author =       {L. Sirgue{,} R. G. Pratt},
+    title =        {Efficient waveform inversion and imaging: A strategy for selecting temporal frequencies},
+    year =         {2004},
+    journal =      {Geophysics},
+    volume = 	   {69},
+    number =       {1},
+    pages =        {~p.~231--248}
+}
+
+@article{pratt_98,
+    author =       {R. G. Pratt{,} C. Shin{,} G. J. Hicks},
+    title =        {Gauss-Newton and full Newton methods in frequency-space seismic waveform inversion},
+    year =         {1998},
+    journal =      {Geophys. J. Int.},
+    volume = 	   {133},
+    number =       {},
+    pages =        {~p.~341--362}
+}
+
+@article{schmidt,
+    author =       {R. 0. Schmidt},
+    title =        {Multiple Emitter Location and Signal Parameter Estimation},
+    year =         {1986},
+    journal =      {IEEE Transactions on antennas and propagation},
+    volume = 	   {AP-34},
+    number =       {3},
+    pages =        {~p.~276--280}
+}
+
+@article{capon,
+    author =       {J. Capon},
+    title =        {High-Resolution Frequency-Wavenumber Spectrum Analysis},
+    year =         {1969},
+    journal =      {Proceedings of the IEEE},
+    volume = 	   {57},
+    number =       {8},
+    pages =        {~p.~1408--1418}
+}
+
+@article{silk,
+    author =       {M. G. Silk{,} B. H. Lidington},
+    title =        {The potential of scattered or diffracted ultrasound in the determination of crack depth},
+    year =         {1975},
+    journal =      {Non-Destructive Testing},
+    volume = 	   {8},
+    number =       {3},
+    pages =        {~p.~146--151}
+}
+
+@article{virieux_86,
+    author =       {J. Virieux},
+    title =        {{P-SV} wave propagation in heterogeneous media, velocity-stress finite difference method},
+    year =         {1986},
+    journal =      {Geophysics},
+    volume = 	   {51},
+    number =       {4},
+    pages =        {~p.~889--901}
+}
+
+@article{levander,
+    author =       {A. R. Levander},
+    title =        {Fourth-order finite-difference {P-SV} seismograms},
+    year =         {1988},
+    journal =      {Geophysics},
+    volume = 	   {53},
+    number =       {11},
+    pages =        {~p.~1425--1436}
+}
+
+@article{brossier_2008,
+    author =       {R. Brossier{,} J. Virieux{,} S. Operto},
+    title =        {Parsimonious finite-volume frequency-domain method for 2-{D} {P-SV}-wave modelling},
+    year =         {2008},
+    journal =      {Geophys. J. Int.},
+    volume = 	   {175},
+    number =       {},
+    pages =        {~p.~541--559}
+}
+
+
+@phdthesis{brossier_these,
+    author =       {R. Brossier},
+    title =        {Imagerie sismique à deux dimensions des milieux visco-élastiques par inversion des formes d’ondes : développements méethodologiques et applications},
+    year =         {2009},
+    school =       {Université de Nice-Sophia Antipolis},
+}
+@article{brossier_2009,
+    author =       {R. Brossier{,} S. Operto{,} Jean Virieux},
+    title =        {Seismic imaging of complex onshore structures by 2{D} elastic frequency-domain full-waveform inversion},
+    year =         {2009},
+    journal =      {Geophysics},
+    volume = 	   {74},
+    number =       {6},
+    pages =        {~p.~WCC105}--WCC118}
+}
+
+@book{virieux_ray,
+    author =       {J. Virieux},
+	title = 	   {Seismic modelling of earth structure}
+    publisher =    {Editrice compositori},
+    year =         {1996},
+    chapter =      {Chap. 6 : Seismic ray tracing},
+    pages =        {~p.~223--304}
+}
+
+
+@article{,
+    author =       {},
+    title =        {},
+    year =         {},
+    journal =      {},
+    volume = 	   {},
+    number =       {},
+    pages =        {~p.~}
+}
+
+
+
+
+%=========À CITER !!==============
+@article{oberai_03,
+    author =       "A. A. Oberai{,} N. H. Gokhale{, }G. R. Feijoo",
+    title =        {Solution of inverse problems in elasticity imaging using the adjoint method},
+    year =         {2003},
+    journal =      {Inverse Problems},
+    volume = 	   {19},
+    number =       {},
+    pages =        {~p.~297--313}
+}
+
+@article{rodriguez,
+    author =       {S. Rodriguez, M. Deschamps, M. Castaings, E. Ducasse},
+    title =        {Guided wave topological imaging of isotropic plates},
+    year =         {2013},
+    journal =      {Ultrasonics},
+    volume = 	   {54},
+    number =       {},
+    pages =        {~p.~1880--1890}
+}
+
+@article{dominguez,
+    author =       {N. Dominguez, V. Gibiat, Y. Esquerre},
+    title =        {Time domain topological gradient and time reversal analogy : an inverse method for ultrasonic target detection},
+    year =         {2005},
+    journal =      {Wave Motion},
+    volume = 	   {42},
+    number =       {},
+    pages =        {~p.~31--52}
+}
+
+
+%=========À CITER ??=======
+@article{holmes_tfm,
+    author =       {C. Holmes{,} B. W. Drinkwater{,} P. D. Wilcox},
+    title =        {Post-processing of the full matrix of ultrasonic transmit–receive array data for non-destructive evaluation},
+    journal =      {NDT\&E International},
+    number =       {38},
+    pages =        {701--711},
+    year =         {2005}
+}
+
+@article{doctor_saft,
+    author =       {S.R. Doctor{,} T.E. Hall{,} L.D. Reid},
+    title =        {S A F T - the evolution of a signal processing technology for ultrasonic testing},
+    journal =      {NDT International},
+    number =       {19},
+    pages =        {163--167},
+    year =         {1986}
+}
+
+
+

@@ -1,0 +1,218 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Journal Article
+% LaTeX Template
+% Version 1.3 (9/9/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Frits Wenneker (http://www.howtotex.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[]{article}
+
+\usepackage[french]{babel}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage[sc]{mathpazo} % Use the Palatino font
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\linespread{1.05} % Line spacing - Palatino needs more space between lines
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+
+\usepackage[hmarginratio=1:1,top=20mm, right=20mm]{geometry} % Document margins
+%\usepackage{multicol} % Used for the two-column layout of the document
+\usepackage[hang, small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under/above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+%\usepackage{float} % Required for tables and figures in the multi-column environment - they need to be placed in specific locations with the [H] (e.g. \begin{table}[H])
+\usepackage{hyperref} % For hyperlinks in the PDF
+
+\usepackage{lettrine} % The lettrine is the first enlarged letter at the beginning of the text
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+
+
+\usepackage{titlesec} % Allows customization of titles
+\renewcommand\thesection{\Roman{section}} % Roman numerals for the sections
+\renewcommand\thesubsection{\arabic{subsection}.\arabic{subsection}} % Roman numerals for subsections
+\titleformat{\section}[block]{\bfseries\large\scshape\centering}{\thesection.}{1em}{} % Change the look of the section titles
+\titleformat{\subsection}[block]{\bfseries\large}{\thesubsection.}{1em}{} % Change the look of the section titles
+
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\renewcommand{\headrulewidth}{0pt} %pour enlever la ligne du header
+%\fancyhead[C]{titre, date, noms...	} % Custom header text
+\fancyfoot[RO,RE]{\thepage} % Custom footer text
+\fancyfoot[LO,LE]{A. DINSENMEYER, 15/03/16}
+\renewcommand{\footrulewidth}{0.4pt} 
+ 
+ 
+%agrandissement de la zone de texte
+%\addtolength{\oddsidemargin}{-1cm}
+%\addtolength{\evensidemargin}{-1cm}
+%\addtolength{\textwidth}{2cm}
+%\addtolength{\topmargin}{-0.7cm}
+\addtolength{\textheight}{1cm}
+
+\usepackage{todonotes}
+
+%\usepackage{cite} 
+\usepackage[round,authoryear,numbers]{natbib}
+
+
+\usepackage{hyperref}
+\hypersetup{
+     colorlinks   = true,
+     citecolor    = blue!90
+}
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+%\title{\vspace{-15mm}\fontsize{24pt}{10pt}\selectfont\textbf{Imagerie par application de la FWI à des signaux ultrasonores}} % Article title
+ \title{
+\centering \fontsize{18pt}{10pt}\textbf{Étude bibliographique : Imagerie par application de la FWI à des signaux ultrasonores}
+}
+\author{
+\large{Alice \textsc{Dinsenmeyer}}\\[2mm] % Your name %\thanks{}
+%\normalsize University of California \\ % Your institution
+%\normalsize \href{mailto:john@smith.com}{john@smith.com} % Your email address
+\vspace{-5mm}
+}
+\date{}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Insert title
+
+\thispagestyle{fancy} % All pages have headers and footers
+
+
+%----------------------------------------------------------------------------------------
+%	ARTICLE CONTENTS
+%----------------------------------------------------------------------------------------
+
+%\begin{multicols}{2} % Two-column layout throughout the main article text
+
+
+\subsection*{Méthodes pour le contrôle par ultrasons}
+
+
+En complément de la radiographie, les ondes élastiques sont utilisées pour imager des milieux tels que la croûte terrestre, les tissus humains ou des pièces industrielles. Différentes méthodes de reconstruction d'image à partir des données de mesures peuvent être utilisées. Les méthodes type Total Focusing Method \citep{holmes_tfm}, Synthetic Aperture Focusing Technique \citep{bruss_84} ou Time-of-flight Diffraction \citep{silk} se basent sur le temps d'arrivée des ondes pour détecter, caractériser et dimensionner les défauts. La résolution spatiale de ces méthodes de formation de voies est principalement limitée par le nombre et l'espacement des transducteurs utilisés. \\ 
+
+
+Pour dépasser cette limitation, d'autre méthodes de formation de voies dites "haute résolution" utilisent les techniques du retournement temporel telles que la méthode de Décomposition de l'Opérateur de Retournement Temporel \citep{prada_dort} ou la méthode Capon \citep{capon} dont est issu notamment l'algorithme MUltiple SIgnal Classification \citep{schmidt}. Ces méthodes sont basées sur la décomposition en valeurs propres de la matrice interspectrale et permettent ainsi de minimiser la contribution énergétique du bruit. Cependant, ces méthodes restent sensibles au bruit. De plus, tout comme les méthodes de formation de voies classiques, elles nécessitent de connaître a priori les propriétés élastiques du milieu de propagation des ondes.
+
+ 
+
+
+\subsection*{Full Waveform Inversion}
+
+Développé dans un contexte géophysique, la Full Waveform Inversion (FWI) est également basée sur une résolution de problème inverse \citep{virieux_review}. En 1984, avec la volonté d'imager la croûte terrestre, \cite{lailly} et \cite{tarantola_84} rétropropagent non pas le signal enregistré comme en retournement temporel, mais la différence entre le signal mesuré et le signal simulé. Cette méthode est donc un problème d'optimisation basé sur le calcul du gradient et du hessien de la fonction de coût (\cite{plessix} revient sur le formalisme de l'état adjoint). Les premiers résultats numériques de cette méthode sont donnés en 1986 par \cite{kolb} puis par \cite{gauthier_86}, pour un milieu acoustique. \cite{kolb} montrent que la méthode est robuste même dans le bruit et \cite{gauthier_86} constatent que la convergence est meilleure pour les hautes fréquences spatiales. Mora image ensuite les vitesses des ondes de compression et de cisaillement, ainsi que la densité et l'impédance \citep{mora_87a} puis teste la méthode sur données réelles \citep{mora_87b}. \\
+
+D'abord réalisée dans le domaine temporel, l'inversion est testée dans le domaine fréquentiel par Pratt et Worthington \citep{pratt_90a, pratt_90b}. Ce choix permet notamment d'alléger les calculs en restreignant l'étude aux fréquences nécessaires. \cite{sirgue} montrent que plus la distance parcourue par l'onde est importante, plus le nombre de fréquences peut être restreint, sans risque de sous-échantillonnage. L'implémentation dans le domaine fréquentiel permet également de prendre en compte plus facilement l'atténuation et d'ajouter des sources à moindre coût \citep{pratt_90a,pratt_90b}.
+
+
+
+
+
+\subsection*{Résolution du problème direct}
+Le problème direct peut être résolu soit par des méthodes analytiques (représentation intégrale, méthodes modales,...) soit par des méthodes numériques. Parmi les méthodes numériques les plus usitées figurent : les méthodes de différences finies (\citealp{virieux_86}, à l'ordre 2 et \citealp{levander}, à l'ordre 4), les méthodes des éléments finis (Galerkin discontinu par exemple : \citealp{brossier_these}) ou volumes finis \citep{brossier_2008}, les lancers de rayons \citep{virieux_ray}. 
+
+%pseudospectral methods, boundary integral, discrete wavenumber method, generalizer screen method, full-wave theory, diffraction theory.
+
+
+
+\subsection*{Résolution du problème inverse}
+Le problème d'optimisation peut ensuite être résolu par des méthodes globales ou semiglobales \citep{sen, zhang}. Ces méthodes peuvent être utilisées pour l'imagerie de sous-sol, pour lesquelles le modèle initial est mal connu. Mais elles sont coûteuses et inadaptées dans le cas des soudures au sujet desquelles beaucoup d'informations sont connues a priori \citep{ogilvy,chassignole}. Il est donc préférable de résoudre le problème inverse par une méthode d'optimisation locale.\\
+
+
+L'idée est de minimiser la fonction de coût (différence entre le signal mesuré et celui issu du problème direct). Pour cela, il est nécessaire de connaître la direction de sa plus forte pente et sa courbure, données respectivement par son gradient et son hessien.\\
+
+La méthode du gradient conjugué permet de déterminer le pas de descente optimal, en linéarisant le problème inverse. Cette méthode populaire est celle utilisée par Mora et Tarantola dans les années 80 \citep{tarantola_84, mora_87a, mora_87b}. Le hessien n'est pas calculé, mais cette méthode nécessite le calcul de deux problèmes directs supplémentaires. \\
+
+Les méthodes full-Newton et Gauss-Newton utilisent le calcul du hessien (complet pour la première, approximé pour la seconde), ce qui permet une convergence plus rapide qu'avec la méthode du gradient conjugué, sans coût excessif supplémentaire \citep{pratt_98}.
+
+Enfin, le hessien peut également être calculé à partir des gradients des itérations précédentes, par la méthode quasi-Newton \citep{nocedal}, avec l'algorithme BFGS (Broyden, Fletcher, Goldfarb, Shanno), par exemple. Cet algorithme ayant un gros coût de stockage, une version allégée qui ne stocke que quelques itérations (L-BFGS) est utilisée par \cite{brossier_2009}. Ils montrent que cette méthode est plus performante que la méthode du gradient conjugué préconditionné en terme de convergence.
+
+
+%Quasi-Newton : robuste d'après Nocedal and Wright, 1999 (vu dans brossier 2009)
+
+\subsection*{Application de la FWI}
+
+Alors que la FWI est initialement développée pour exploiter les ondes sismiques, elle est également appliquée à d'autres domaines que la géophysique.
+Par exemple, \cite{oberai_03,oberai_04} exploitent la méthode de l'état adjoint pour déterminer le module d'élasticité en cisaillement en vue d'imager des tissus humains. Ils testent la robustesse de la méthode face au bruit d'instrumentation sur une imitation de tissu humain, et obtiennent des résultats sujets aux artefacts. \\
+
+
+
+La méthode est aussi appliquée par \cite{rodriguez} pour du contrôle de pièce par ondes de Lamb. Des défauts sont imagés avec une résolution de l'ordre d'une longueur d'onde.
+
+
+\subsection*{Améliorations de la FWI}
+La FWI a vu son temps de calcul diminuer grâce à l'évolution des calculateurs et aux choix des algorithmes cités précédemment. D'autre perspectives d'amélioration sont étudiées récemment. \cite{valensi} comparent, par exemple, différentes fonctions de coûts. Ils montrent que l'une d'elle a une meilleure sensibilité en proche surface, tandis qu'une autre permet de mieux retrouver les paramètres de la vitesse de cisaillement.\\
+
+
+
+
+Dans le cas où quelques informations sont connues d'avance sur le milieu à imager, il peut intéressant de les prendre en compte lors de l'inversion. Il est cependant risqué de les intégrer au modèle initial, car si elles ne sont pas tout à fait exactes (i.e. si les conditions ne sont pas cinématiquement vérifiées), la solution calculée peut converger vers un minimum local. \cite{asnaashari} proposent donc d'ajouter un terme de correction à la fonction de coût de façon à contraindre l'inversion sans modifier le modèle initial. Ainsi, le problème est mieux posé et les résultats de l'inversion sont améliorés.
+
+
+
+%\subsection*{optimisation}
+%least-squares optimization tarantola 1987 ; métivier ; 
+
+
+
+%\bigskip
+%\subsection*{à intégrer ?}
+
+%thèse bretaudeau pour explication FWI
+
+%\todo[inline]{essayer de trouver "Prediction of elastic material properties via an adjoint formulation","A Study of Total Focusing Method for Ultrasonic Nondestructive Testing"}~\\
+
+%quasi-Newton : DFP (David–Fletcher–Powell) (see Gill et al (2000) , vu dans oberai 04
+
+%A intégrer ? 
+%\begin{itemize}
+%	\item anisotropie : Thomsen, L. A. (1986). Weak elastic anisotropy. Geophysics, 51:1954–1966.
+%
+%	\item Review sur phased array : Ultrasonic arrays for non-destructive evaluation: A review 2006 Drinkwater.
+%
+%	\item développer radiographie ?
+%	
+%	\item inversion de l'atténuation : B. Smithyman, R.G. Pratt, J. Hayles, and R. Wittebolle. Near surface void detection using seismic Q-factor waveform tomography. In Proceedings of the 70th EAGE Conference \&
+%Exhibiltion 2008, Rome, 2008.
+%
+%\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%	REFERENCE LIST
+%----------------------------------------------------------------------------------------
+\newpage
+
+\bibliographystyle{plainnat}%\bibliographystyle{unsrt}
+\bibliography{biblio}
+
+\vfill
+Les références en gras correspondent aux documents majeurs et/ou ayant le plus contribué à ma compréhension du sujet. Je souhaite aussi citer la thèse de F. Bretaudeau dont les deux premiers chapitres sont une bonne introduction à la FWI : \\~\\
+F. Bretaudeau. \textbf{\emph{Modélisation physique à échelle réduite pour l’adaptation de l’inversion des formes d’ondes sismiques au génie civil et à la subsurface}}. PhD thesis, Université de Nantes, 2010.
+\bigskip\bigskip
+
+%----------------------------------------------------------------------------------------
+
+%\end{multicols}
+
+\end{document}

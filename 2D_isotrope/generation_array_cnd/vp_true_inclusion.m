@@ -22,9 +22,20 @@ function []=vp_true_inclusion(vp1,vp2,r,xpos_center,zpos_center, nz, nx,h)
 	
 	end
 	
-	imagesc(m)
+%%%%%%%%%% Simulation de surface libre %%%%%%%%%%
+
+	%e_sl=10; 		%10 points d'épaisseur pour la simulation de surface libre
+	%v_sl=1500;		%vitesse dans le second milieu
+	%m(end-10:end,:)=v_sl;
+	
+%%%%%%%%%% Illustration %%%%%%%%%%
+	
+	figure
+	imagesc([0 nx*h-1],[0 nz*h-1],m)
 	colorbar
-	title('inclusion')
+	title('vp\_true')
+	
+%%%%%%%%%% Sauvegarde dans le fichier vp_true_inclusion %%%%%%%%%%
 
 	fid=fopen('vp_true_inclusion','w+');
 	fwrite(fid, m(:,:),'single');

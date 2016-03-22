@@ -1,0 +1,28 @@
+NOTE STAGE M2
+
+Connection au cluster FROGGY (ciment)
+
+depuis reseau fac:
+ssh arnaudpladys@froggy.ciment
+
+depuis extérieur:
+ssh arnaudpladys@froggy.ujf-grenoble.fr.ciment
+
+
+Commandes utiles
+chandler > voir l'utilisation de froggy 
+oarsub -S oar.run > soumettre un job
+oarstat -u > voir job en cours
+tail -f out > voir fichier texte au fur et à mesure
+scp froggy.ciment:/scratch/arnaudpladys/ > copier depuis froggy
+
+Monter volumes :
+sshfs -o IdentityFile=/Users/arnaudpladys/.ssh/id_rsa froggy.ciment:/scratch/arnaudpladys ~/Remotes/Devbox
+
+sshfs -o IdentityFile=/Users/arnaudpladys/.ssh/id_rsa froggy.ciment:/scratch/thurinj ~/Remotes/Devbox2
+
+
+ifort -C -g -DEBUG -check -assume byterecl -check all -gen_interfaces
+-traceback    -assume byterecl  -fpe0 -warn all SCRIPT.F90 -c
+ifort -C -g -DEBUG -check -assume byterecl -check all -gen_interfaces
+-traceback    -assume byterecl  -fpe0 -warn all SCRIPT.F90 -o SORTIE

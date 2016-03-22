@@ -15,29 +15,36 @@
 %the probe is along the x axis, emitting along z axis
 %one element for excitation, all the elements for reception
 
-function []= acqui_generation_multielement(nb_elements,pitch, zpos,xpos, nz, nx, h)
+%zpos_ et xpos_ sont les positions en m du centre des transducteurs multi-elements
+
+function []= acqui_generation_multielement(nb_elements,pitch, zpos_sources,xpos_sources, zpos_recep,xpos_recep,nz, nx, h)
 
 	aperture = (nb_elements-1)*pitch; %total length of the probe
 	
-	if (xpos+aperture/2 >= nx*h || zpos > nz*h)
-		disp("Au moins un élément se trouve hors de la zone d'étude \n\n")
+	if (xpos_sources+aperture/2 > nx*h || zpos_sources > nz*h || xpos_recep +aperture/2 > nx*h || zpos_recep > nz*h )
+		disp("!!! ATTENTION !!! \n Au moins un élément se trouve hors de la zone d'étude \n\n")
 	end
 
-%%%%%%%%%% Position des elements en m %%%%%%%%%%
-	x_elements= xpos-(nb_elements-1)*pitch/2 : pitch : xpos+(nb_elements-1)*pitch/2; 			
+%%%%%%%%%% Positionnement des elements en m %%%%%%%%%%
+	x_sources= xpos_sources-(nb_elements-1)*pitch/2 : pitch : xpos_sources+(nb_elements-1)*pitch/2; 			
 
-	z_elements=zpos*ones(1,nb_elements);
+	z_sources=zpos_sources*ones(1,nb_elements);
+	
+	x_recep= xpos_recep-(nb_elements-1)*pitch/2 : pitch : xpos_recep+(nb_elements-1)*pitch/2; 			
+
+	z_recep=zpos_recep*ones(1,nb_elements);
 	
 	y_elements=zeros(1,nb_elements); %2D	
 
 
 %%%%%%%%%% Generation de la matrice %%%%%%%%%%
 	for i=1:nb_elements
-		acqui(i+(i-1)*nb_elements,1:6) = [z_elements(i) x_elements(i) y_elements(i) 0 0 0];
-		acqui(i+(i-1)*nb_elements+1 : i+(i-1)*nb_elements+nb_elements, 1:6) = [z_elements' x_elements' y_elements' zeros(nb_elements,1) zeros(nb_elements,1) ones(nb_elements,1)];		
+		acqui(i+(i-1)*nb_elements,1:6) = [z_sources(i) x_sources(i) y_elements(i) 0 0 0];
+		acqui(i+(i-1)*nb_elements+1 : i+(i-1)*nb_elements+nb_elements, 1:6) = [z_recep' x_recep' y_elements' zeros(nb_elements,1) zeros(nb_elements,1) ones(nb_elements,1)];		
 	end
 	
 	acqui=acqui';
+	
 	
 %%%%%%%%%% Impression dans un fichier, en ascii, single precision %%%%%%%%%%
 	fid=fopen('acqui_file','w+');
@@ -47,11 +54,12 @@ function []= acqui_generation_multielement(nb_elements,pitch, zpos,xpos, nz, nx,
 	%save("-ascii","acqui_file","acqui")
 
 %%%%%%%%%% Schema donnant la disposition des transducteurs %%%%%%%%%%
-	figure;
-	scatter3(x_elements, y_elements,-z_elements,'black','s','filled');
+	figure
+	scatter3(x_sources, y_elements,-z_sources,'black','s','filled');
+	hold on
+	scatter3(x_recep, y_elements,-z_recep,'blue','s','filled');
 	view([0 0])
 	axis([0 nx*h 0 1 -nz*h 0.3*nz*h])
-	
-	
+
 end
 
