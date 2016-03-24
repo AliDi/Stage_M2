@@ -1,0 +1,2 @@
+en transmission, 48 sources/recept, type de source : 2 (ie force normale), nx=400, nz=500, nt=4096
+, rayon de la source = longueur d'onde

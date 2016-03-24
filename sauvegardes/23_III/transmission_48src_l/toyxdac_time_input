@@ -1,0 +1,4 @@
+1           ! mode 0->FWM, 1->FWI, 2->RTM, 3-> FWI for source estimation, 4-> Single FWI gradient
+1           ! pbdir%tool 1-> isotropic modeling, 2->anisotropic modeling 
+1           ! acquisition mode 1-> standard acqui file, 2->acqui read in SU header (only for FWI and RTM) 
+acqui_file       ! acquisition file for acquisition  mode = 1

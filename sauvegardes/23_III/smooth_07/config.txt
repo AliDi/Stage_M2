@@ -1,0 +1,1 @@
+en transmission, nx=nz=100, 16 sources, lambda_x=lambda_y=lambda_z=0.7

@@ -1,0 +1,11 @@
+0 0          !front mute, tail mute
+3 20         !front mute number of xmute/tmute values, number of points for taper
+0 4000 6000  ! xmute
+0.5 1.5 3.5    !tmute
+4 25         !tail mute number of xmute/tmute values, number of points for taper
+0 4000 6000 7000 ! xmute
+1.5 2.5 3.5 8.5 !tmute
+
+
+
+

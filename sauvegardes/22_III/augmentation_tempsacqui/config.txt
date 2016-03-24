@@ -1,0 +1,1 @@
+r=l, 32 sources, 32 receps, nz=500, nx=300
