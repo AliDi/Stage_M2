@@ -11,14 +11,14 @@ f=3.5e6*R;			% frequence centrale du transducteur en Hz
 vp=3000;			%vitesse du milieu en m/s
 l=vp/f;				%longueur d'onde en m
 
-nz=500;				%nb de points en z
-nx=300;				%nb de points en x
+nz=100;				%nb de points en z
+nx=100;				%nb de points en x
 
 h=l/15;				%pas de discrétisation : en fdtd o(4), respecter 5 pts par longueur d'onde
 
 %%%%%%%%%% Milieu : generation du fichier vp_true %%%%%%%%%%
 
-vp_inclusion=1500;	%vitesse dans l'onclusion en m
+vp_inclusion=2500;	%vitesse dans l'onclusion en m
 
 if (min(vp,vp_inclusion)/f/h < 5) 
 	disp("!!! ATTENTION !!! \n Il n'y aura pas 5 pts par longueur d'onde. \n\n")
@@ -41,13 +41,13 @@ rho_generation(rho,nz,nx)
 
 %%%%%%%%%% Sources/recepteurs : generation du fichier acqui %%%%%%%%%%
 %sonde immobile et chaque element est considere ponctuel
-nb_elements=48;		%number of active elements	
-pitch=l/2;			%center-to-center distance between 2 successive elements
-zpos_sources =nz*h-l; 			%z position of the probe (in m)
+nb_elements=16;		%number of active elements	
+pitch=l/3;			%center-to-center distance between 2 successive elements
+zpos_sources =0; 			%z position of the probe (in m)
 xpos_sources =ceil(nx/2)*h; 	%position of array center (in m)
 
 
-zpos_recep = nz*h-l;
+zpos_recep = nz*h;
 xpos_recep =  ceil(nx/2)*h;
 
 
