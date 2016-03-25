@@ -1,0 +1,13 @@
+450 250 1                ! nz,nx,ny 
+14.286     ! h
+vp_init rho    ! velocity and density files
+1 20                     ! type of boundary and size boundary
+4                        ! order of the scheme 4 or 8
+fricker                  ! source file
+1 0                        ! ihicks
+35.                      ! reference frequency
+512 0.001 4096         ! nts, dt, nt
+2                        ! type of source
+1                        ! ifreesurf
+ftopo                    ! topo file
+1 0 0 0                  ! component P, vx,vy,vz

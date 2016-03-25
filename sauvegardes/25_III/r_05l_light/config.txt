@@ -1,0 +1,3 @@
+transmission, defaut a  30*l des sources,64 elements
+r=l/2
+version all√g√e : 6 points par longueur d'onde, soit nx=210 et nz=360

@@ -1,0 +1,4 @@
+reflexion, defaut a  50*l des sources/recepx,64 elements
+r=l/3
+version allegee : 6 points par longueur d'onde, soit nx=210 et nz=360
+et nombre de points en temporel r√duit : nt=2700

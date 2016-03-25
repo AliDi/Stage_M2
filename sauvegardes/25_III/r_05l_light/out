@@ -1,0 +1,2198 @@
+Setting froggy I_MPI variables
+Setting froggy I_MPI variables
+=== Intel devel usual environment ===
+  This module loads:
+  - intel compilers version 14
+  - intel MPI
+  - intel MKL
+  - intel ITAC
+  - intel VTUNE
+  and sets the following useful variables:
+ $mpi_DIR
+ $mkl_DIR
+ $intel_DIR
+=====================================
+IMPORTANT: use 'module purge' before loading another environment!
+Setting froggy I_MPI variables
+=== Intel devel usual environment ===
+  This module loads:
+  - intel compilers version 14
+  - intel MPI
+  - intel MKL
+  - intel ITAC
+  - intel VTUNE
+  and sets the following useful variables:
+ $mpi_DIR
+ $mkl_DIR
+ $intel_DIR
+=====================================
+IMPORTANT: use 'module purge' before loading another environment!
+=== Intel devel usual environment ===
+  This module loads:
+  - intel compilers version 14
+  - intel MPI
+  - intel MKL
+  - intel ITAC
+  - intel VTUNE
+  and sets the following useful variables:
+ $mpi_DIR
+ $mkl_DIR
+ $intel_DIR
+=====================================
+IMPORTANT: use 'module purge' before loading another environment!
+Setting froggy I_MPI variables
+=== Intel devel usual environment ===
+  This module loads:
+  - intel compilers version 14
+  - intel MPI
+  - intel MKL
+  - intel ITAC
+  - intel VTUNE
+  and sets the following useful variables:
+ $mpi_DIR
+ $mkl_DIR
+ $intel_DIR
+=====================================
+IMPORTANT: use 'module purge' before loading another environment!
+Setting froggy I_MPI variables
+=== Intel devel usual environment ===
+  This module loads:
+  - intel compilers version 14
+  - intel MPI
+  - intel MKL
+  - intel ITAC
+  - intel VTUNE
+  and sets the following useful variables:
+ $mpi_DIR
+ $mkl_DIR
+ $intel_DIR
+=====================================
+IMPORTANT: use 'module purge' before loading another environment!
+Setting froggy I_MPI variables
+=== Intel devel usual environment ===
+  This module loads:
+  - intel compilers version 14
+  - intel MPI
+  - intel MKL
+  - intel ITAC
+  - intel VTUNE
+  and sets the following useful variables:
+ $mpi_DIR
+ $mkl_DIR
+ $intel_DIR
+=====================================
+IMPORTANT: use 'module purge' before loading another environment!
+ 
+ ***********************************
+   Welcome in TOYxDAC_TIME code     
+   V1.5     
+ ***********************************
+ 
+ CODE LAUNCHED IN 2D MODE
+ mype          16 ok for meisrc          17
+ mype          16 acqui%nrec          64
+  ================
+  MYPE, my source is (z,x,y)           16   28.57143       1671.429    
+  0.0000000E+00
+  ================
+ mype          18 ok for meisrc          19
+ mype          18 acqui%nrec          64
+  ================
+  MYPE, my source is (z,x,y)           18   28.57143       1842.857    
+  0.0000000E+00
+  ================
+ mype          17 ok for meisrc          18
+ mype          19 ok for meisrc          20
+ mype          17 acqui%nrec          64
+  ================
+ mype          19 acqui%nrec          64
+  ================
+ mype          28 ok for meisrc          29
+  MYPE, my source is (z,x,y)           19   28.57143       1928.571    
+  MYPE, my source is (z,x,y)           17   28.57143       1757.143    
+  0.0000000E+00
+  ================
+  0.0000000E+00
+  ================
+ mype          28 acqui%nrec          64
+  ================
+  MYPE, my source is (z,x,y)           28   28.57143       2700.000    
+  0.0000000E+00
+  ================
+ mype          30 ok for meisrc          31
+ mype          30 acqui%nrec          64
+  ================
+  MYPE, my source is (z,x,y)           30   28.57143       2871.428    
+  0.0000000E+00
+  ================
+ mype          22 ok for meisrc          23
+ mype          22 acqui%nrec          64
+  ================
+  MYPE, my source is (z,x,y)           22   28.57143       2185.714    
+  0.0000000E+00
+  ================
+ mype          26 ok for meisrc          27
+ mype          26 acqui%nrec          64
+  ================
+  MYPE, my source is (z,x,y)           26   28.57143       2528.572    
+  0.0000000E+00
+  ================
+ mype          25 ok for meisrc          26
+ mype          20 ok for meisrc          21
+ mype          25 acqui%nrec          64
+ mype          20 acqui%nrec          64
+  ================
+  ================
+  MYPE, my source is (z,x,y)           25   28.57143       2442.857    
+  0.0000000E+00
+  ================
+  MYPE, my source is (z,x,y)           20   28.57143       2014.286    
+  0.0000000E+00
+  ================
+ mype          21 ok for meisrc          22
+ mype          27 ok for meisrc          28
+ mype          24 ok for meisrc          25
+ mype          27 acqui%nrec          64
+ mype          24 acqui%nrec          64
+  ================
+ mype          21 acqui%nrec          64
+  MYPE, my source is (z,x,y)           24   28.57143       2357.143    
+  ================
+  0.0000000E+00
+  ================
+  MYPE, my source is (z,x,y)           27   28.57143       2614.286    
+  ================
+  0.0000000E+00
+  MYPE, my source is (z,x,y)           21   28.57143       2100.000    
+  0.0000000E+00
+  ================
+  ================
+ mype          23 ok for meisrc          24
+ mype          23 acqui%nrec          64
+  ================
+  MYPE, my source is (z,x,y)           23   28.57143       2271.428    
+  0.0000000E+00
+  ================
+ mype          29 ok for meisrc          30
+ mype          29 acqui%nrec          64
+  ================
+  MYPE, my source is (z,x,y)           29   28.57143       2785.714    
+  0.0000000E+00
+  ================
+ mype          31 ok for meisrc          32
+ mype          31 acqui%nrec          64
+  ================
+  MYPE, my source is (z,x,y)           31   28.57143       2957.143    
+  0.0000000E+00
+  ================
+ WITH MODELING OF ORDER           4
+ CFL VALUE  0.5197312    
+ READ ACQUISITION
+ mype           6 ok for meisrc           7
+ mype           6 acqui%nrec          64
+  ================
+  MYPE, my source is (z,x,y)            6   28.57143       814.2857    
+  0.0000000E+00
+  ================
+ mype           9 ok for meisrc          10
+ mype          11 ok for meisrc          12
+ mype           9 acqui%nrec          64
+  ================
+ mype          11 acqui%nrec          64
+  ================
+  MYPE, my source is (z,x,y)           11   28.57143       1242.857    
+  MYPE, my source is (z,x,y)            9   28.57143       1071.429    
+  0.0000000E+00
+  ================
+  0.0000000E+00
+  ================
+ mype           0 ok for meisrc           1
+ mype           5 ok for meisrc           6
+ mype           5 acqui%nrec          64
+  ================
+ mype          10 ok for meisrc          11
+ mype           0 acqui%nrec          64
+  ================
+  MYPE, my source is (z,x,y)            0   28.57143       300.0000    
+  0.0000000E+00
+  ================
+  MYPE, my source is (z,x,y)            5   28.57143       728.5714    
+  0.0000000E+00
+  ================
+ mype          10 acqui%nrec          64
+  ================
+  MYPE, my source is (z,x,y)           10   28.57143       1157.143    
+  0.0000000E+00
+  ================
+ mype          33 ok for meisrc          34
+ mype          33 acqui%nrec          64
+ mype           8 ok for meisrc           9
+  ================
+ mype           1 ok for meisrc           2
+  MYPE, my source is (z,x,y)           33   28.57143       3128.572    
+ mype           1 acqui%nrec          64
+  ================
+ mype           8 acqui%nrec          64
+  ================
+  0.0000000E+00
+  MYPE, my source is (z,x,y)            8   28.57143       985.7143    
+  ================
+  MYPE, my source is (z,x,y)            1   28.57143       385.7143    
+  0.0000000E+00
+  ================
+  0.0000000E+00
+  ================
+ mype           2 ok for meisrc           3
+ mype          12 ok for meisrc          13
+ mype           3 ok for meisrc           4
+ mype           2 acqui%nrec          64
+ mype           3 acqui%nrec          64
+  ================
+ mype          34 ok for meisrc          35
+  ================
+ mype          12 acqui%nrec          64
+ mype          34 acqui%nrec          64
+  ================
+  MYPE, my source is (z,x,y)            2   28.57143       471.4286    
+  ================
+  0.0000000E+00
+  MYPE, my source is (z,x,y)           34   28.57143       3214.286    
+  MYPE, my source is (z,x,y)            3   28.57143       557.1429    
+  0.0000000E+00
+  0.0000000E+00
+  ================
+  ================
+  MYPE, my source is (z,x,y)           12   28.57143       1328.571    
+  0.0000000E+00
+  ================
+  ================
+ mype          37 ok for meisrc          38
+ mype          48 ok for meisrc          49
+ mype          47 ok for meisrc          48
+ mype           7 ok for meisrc           8
+ mype          37 acqui%nrec          64
+  ================
+ mype          48 acqui%nrec          64
+  MYPE, my source is (z,x,y)           37   28.57143       3471.428    
+ mype          50 ok for meisrc          51
+  0.0000000E+00
+  ================
+  ================
+ mype          50 acqui%nrec          64
+ mype          32 ok for meisrc          33
+ mype          47 acqui%nrec          64
+  ================
+  MYPE, my source is (z,x,y)           48   28.57143       4414.286    
+  ================
+  MYPE, my source is (z,x,y)           47   28.57143       4328.571    
+  0.0000000E+00
+  ================
+  0.0000000E+00
+  MYPE, my source is (z,x,y)           50   28.57143       4585.714    
+  ================
+  0.0000000E+00
+ mype          32 acqui%nrec          64
+  ================
+ mype          52 ok for meisrc          53
+  ================
+ mype          52 acqui%nrec          64
+ mype           7 acqui%nrec          64
+ mype          54 ok for meisrc          55
+  MYPE, my source is (z,x,y)           32   28.57143       3042.857    
+ mype          53 ok for meisrc          54
+  0.0000000E+00
+  ================
+  ================
+ mype          54 acqui%nrec          64
+ mype          43 ok for meisrc          44
+  MYPE, my source is (z,x,y)           52   28.57143       4757.143    
+  0.0000000E+00
+  ================
+ mype          43 acqui%nrec          64
+ mype          53 acqui%nrec          64
+  ================
+  ================
+ mype          42 ok for meisrc          43
+  ================
+  MYPE, my source is (z,x,y)           43   28.57143       3985.714    
+ 
+  MYPE, my source is (z,x,y)           53   28.57143       4842.857    
+  0.0000000E+00
+  ================
+  0.0000000E+00
+  ================
+ **********************************************
+  FWI FOR MEDIUM PARAMETERS IN THE TIME DOMAIN
+ **********************************************
+ 
+  MYPE, my source is (z,x,y)           54   28.57143       4928.571    
+  0.0000000E+00
+ mype          42 acqui%nrec          64
+  ================
+ mype          38 ok for meisrc          39
+ mype          49 ok for meisrc          50
+  ================
+ mype          49 acqui%nrec          64
+  ================
+  MYPE, my source is (z,x,y)           49   28.57143       4500.000    
+ mype          38 acqui%nrec          64
+  ================
+  MYPE, my source is (z,x,y)           42   28.57143       3900.000    
+  0.0000000E+00
+  0.0000000E+00
+  ================
+ mype          55 ok for meisrc          56
+  ================
+  ================
+  MYPE, my source is (z,x,y)           38   28.57143       3557.143    
+ mype          60 ok for meisrc          61
+  0.0000000E+00
+  ================
+ mype          60 acqui%nrec          64
+ mype          39 ok for meisrc          40
+ mype          55 acqui%nrec          64
+ mype          59 ok for meisrc          60
+ mype          36 ok for meisrc          37
+  ================
+  ================
+ mype          39 acqui%nrec          64
+ mype          59 acqui%nrec          64
+ mype          36 acqui%nrec          64
+  ================
+  MYPE, my source is (z,x,y)           60   28.57143       5442.857    
+  0.0000000E+00
+  ================
+  ================
+  ================
+  MYPE, my source is (z,x,y)           36   28.57143       3385.714    
+ mype          56 ok for meisrc          57
+  0.0000000E+00
+  ================
+  MYPE, my source is (z,x,y)           59   28.57143       5357.143    
+  MYPE, my source is (z,x,y)           39   28.57143       3642.857    
+  MYPE, my source is (z,x,y)           55   28.57143       5014.286    
+  0.0000000E+00
+  ================
+  0.0000000E+00
+  ================
+  0.0000000E+00
+  ================
+ mype          46 ok for meisrc          47
+ mype          56 acqui%nrec          64
+ mype          35 ok for meisrc          36
+  ================
+ mype          46 acqui%nrec          64
+  MYPE, my source is (z,x,y)           56   28.57143       5100.000    
+ mype          35 acqui%nrec          64
+  ================
+  0.0000000E+00
+  ================
+  ================
+  MYPE, my source is (z,x,y)           35   28.57143       3300.000    
+ mype          41 ok for meisrc          42
+ mype          51 ok for meisrc          52
+  0.0000000E+00
+  ================
+ mype          57 ok for meisrc          58
+  MYPE, my source is (z,x,y)           46   28.57143       4242.857    
+ mype          51 acqui%nrec          64
+  ================
+ mype          41 acqui%nrec          64
+  MYPE, my source is (z,x,y)           51   28.57143       4671.429    
+  0.0000000E+00
+  ================
+ mype          57 acqui%nrec          64
+  ================
+  0.0000000E+00
+  ================
+  MYPE, my source is (z,x,y)           41   28.57143       3814.286    
+  ================
+  0.0000000E+00
+  MYPE, my source is (z,x,y)           57   28.57143       5185.714    
+  ================
+ mype          63 ok for meisrc          64
+ mype          58 ok for meisrc          59
+  0.0000000E+00
+  ================
+ mype           4 ok for meisrc           5
+ mype          58 acqui%nrec          64
+  ================
+  MYPE, my source is (z,x,y)           58   28.57143       5271.429    
+  MYPE, my source is (z,x,y)            7   28.57143       900.0000    
+  0.0000000E+00
+  ================
+ mype          45 ok for meisrc          46
+ mype           4 acqui%nrec          64
+ mype          40 ok for meisrc          41
+ mype          40 acqui%nrec          64
+  ================
+ mype          63 acqui%nrec          64
+ mype          44 ok for meisrc          45
+  0.0000000E+00
+  ================
+  ================
+ mype          45 acqui%nrec          64
+  MYPE, my source is (z,x,y)           63   28.57143       5700.000    
+  ================
+  0.0000000E+00
+  ================
+  MYPE, my source is (z,x,y)           40   28.57143       3728.572    
+ mype          44 acqui%nrec          64
+  ================
+  0.0000000E+00
+  ================
+  ================
+ mype          62 ok for meisrc          63
+  MYPE, my source is (z,x,y)           45   28.57143       4157.143    
+ mype          61 ok for meisrc          62
+  0.0000000E+00
+  ================
+  MYPE, my source is (z,x,y)            4   28.57143       642.8571    
+ mype          62 acqui%nrec          64
+  MYPE, my source is (z,x,y)           44   28.57143       4071.428    
+  ================
+  0.0000000E+00
+  ================
+  MYPE, my source is (z,x,y)           62   28.57143       5614.286    
+  0.0000000E+00
+  ================
+ mype          61 acqui%nrec          64
+  ================
+  MYPE, my source is (z,x,y)           61   28.57143       5528.571    
+  0.0000000E+00
+  ================
+  0.0000000E+00
+  ================
+ mype          13 ok for meisrc          14
+ mype          14 ok for meisrc          15
+ mype          13 acqui%nrec          64
+ mype          15 ok for meisrc          16
+  ================
+ mype          14 acqui%nrec          64
+  MYPE, my source is (z,x,y)           13   28.57143       1414.286    
+ mype          15 acqui%nrec          64
+  0.0000000E+00
+  ================
+  ================
+  ================
+  MYPE, my source is (z,x,y)           14   28.57143       1500.000    
+  MYPE, my source is (z,x,y)           15   28.57143       1585.714    
+  0.0000000E+00
+  ================
+  0.0000000E+00
+  ================
+ *********************************************************
+ ELAPSED TIME FOR read_sismo  2.539896965026855E-002 s
+ *********************************************************
+ ****************************************
+  pbdir%it_boundary           1
+  pbdir%nt_boundary        4096
+ FREQUENCY UP TO   333.3333     HZ
+        CAN BE CONSIDERED  !!!! 
+ ****************************************
+ START OPTIMIZATION LOOP
+ COMPUTING BOX         -31         392         -31         242           1
+           1
+ CFL VALUE  0.5197312    
+ vpmod   6000.000       6000.000    
+ rhomod   1000.000       1000.000    
+ epsilonmod  0.0000000E+00  0.0000000E+00
+ deltamod  0.0000000E+00  0.0000000E+00
+ buxmod  1.0000000E-03  1.0000000E-03
+ buymod  1.0000000E-03  1.0000000E-03
+ buzmod  1.0000000E-03  1.0000000E-03
+ COEFFICIENT ALPHA_MAX IN CPML   109.9557    
+ COEFFICIENT d0 IN CPML   67.99924       67.99924       67.99924    
+ IT----         100
+ IT----         200
+ IT----         300
+ IT----         400
+ IT----         500
+ IT----         600
+ IT----         700
+ IT----         800
+ IT----         900
+ IT----        1000
+ IT----        1100
+ IT----        1200
+ IT----        1300
+ IT----        1400
+ IT----        1500
+ IT----        1600
+ IT----        1700
+ IT----        1800
+ IT----        1900
+ IT----        2000
+ IT----        2100
+ IT----        2200
+ IT----        2300
+ IT----        2400
+ IT----        2500
+ IT----        2600
+ IT----        2700
+ IT----        2800
+ IT----        2900
+ IT----        3000
+ IT----        3100
+ IT----        3200
+ IT----        3300
+ IT----        3400
+ IT----        3500
+ IT----        3600
+ IT----        3700
+ IT----        3800
+ IT----        3900
+ IT----        4000
+ IT----         100
+ IT----         200
+ IT----         300
+ IT----         400
+ IT----         500
+ IT----         600
+ IT----         700
+ IT----         800
+ IT----         900
+ IT----        1000
+ IT----        1100
+ IT----        1200
+ IT----        1300
+ IT----        1400
+ IT----        1500
+ IT----        1600
+ IT----        1700
+ IT----        1800
+ IT----        1900
+ IT----        2000
+ IT----        2100
+ IT----        2200
+ IT----        2300
+ IT----        2400
+ IT----        2500
+ IT----        2600
+ IT----        2700
+ IT----        2800
+ IT----        2900
+ IT----        3000
+ IT----        3100
+ IT----        3200
+ IT----        3300
+ IT----        3400
+ IT----        3500
+ IT----        3600
+ IT----        3700
+ IT----        3800
+ IT----        3900
+ IT----        4000
+ in gaussian smoothing         360         210   28.57100      0.7000000    
+  0.7000000       219.9115    
+ inv%scalingfactor  1.7608656E+11
+ dot product before and after precond  1.2270626E-05
+ fcost  8.8170000E+07
+ *********************************************************
+ ELASPSED TIME FOR GRADIENT BUILDING STEPS
+ INIT OF 1st FORWARD SIMUL      1.484990119934082E-002 s
+ 1st FORWARD SIMUL               11.8815281391144      s
+ WRITE DATA                     4.976034164428711E-003 s
+ COST FUNCTION                  0.432997941970825      s
+ INIT ADJOINT                   4.676103591918945E-003 s
+ 2nd FORWARD + ADJOINT SIMUL     27.5428078174591      s
+ GLOBAL COMM FOR GRADIENT       4.716157913208008E-003 s
+ FINALIZE WORK                   1.30461788177490      s
+ ---------------------------------------------------------
+ GLOBAL TIME FOR GRADIENT        41.1911699771881      s
+ *********************************************************
+ COMPUTING BOX         -31         392         -31         242           1
+           1
+ CFL VALUE  0.5197560    
+ vpmod   5966.291       6000.285    
+ rhomod   1000.000       1000.000    
+ epsilonmod  0.0000000E+00  0.0000000E+00
+ deltamod  0.0000000E+00  0.0000000E+00
+ buxmod  1.0000000E-03  1.0000000E-03
+ buymod  1.0000000E-03  1.0000000E-03
+ buzmod  1.0000000E-03  1.0000000E-03
+ COEFFICIENT ALPHA_MAX IN CPML   109.9557    
+ COEFFICIENT d0 IN CPML   68.00247       68.00247       68.00247    
+ IT----         100
+ IT----         200
+ IT----         300
+ IT----         400
+ IT----         500
+ IT----         600
+ IT----         700
+ IT----         800
+ IT----         900
+ IT----        1000
+ IT----        1100
+ IT----        1200
+ IT----        1300
+ IT----        1400
+ IT----        1500
+ IT----        1600
+ IT----        1700
+ IT----        1800
+ IT----        1900
+ IT----        2000
+ IT----        2100
+ IT----        2200
+ IT----        2300
+ IT----        2400
+ IT----        2500
+ IT----        2600
+ IT----        2700
+ IT----        2800
+ IT----        2900
+ IT----        3000
+ IT----        3100
+ IT----        3200
+ IT----        3300
+ IT----        3400
+ IT----        3500
+ IT----        3600
+ IT----        3700
+ IT----        3800
+ IT----        3900
+ IT----        4000
+ IT----         100
+ IT----         200
+ IT----         300
+ IT----         400
+ IT----         500
+ IT----         600
+ IT----         700
+ IT----         800
+ IT----         900
+ IT----        1000
+ IT----        1100
+ IT----        1200
+ IT----        1300
+ IT----        1400
+ IT----        1500
+ IT----        1600
+ IT----        1700
+ IT----        1800
+ IT----        1900
+ IT----        2000
+ IT----        2100
+ IT----        2200
+ IT----        2300
+ IT----        2400
+ IT----        2500
+ IT----        2600
+ IT----        2700
+ IT----        2800
+ IT----        2900
+ IT----        3000
+ IT----        3100
+ IT----        3200
+ IT----        3300
+ IT----        3400
+ IT----        3500
+ IT----        3600
+ IT----        3700
+ IT----        3800
+ IT----        3900
+ IT----        4000
+ in gaussian smoothing         360         210   28.57100      0.7000000    
+  0.7000000       219.9115    
+ dot product before and after precond  5.3290045E-03
+ fcost  1.4668629E+10
+ *********************************************************
+ ELASPSED TIME FOR GRADIENT BUILDING STEPS
+ INIT OF 1st FORWARD SIMUL      1.046204566955566E-002 s
+ 1st FORWARD SIMUL               11.7380290031433      s
+ WRITE DATA                     2.377986907958984E-003 s
+ COST FUNCTION                  7.059574127197266E-004 s
+ INIT ADJOINT                   3.210067749023438E-003 s
+ 2nd FORWARD + ADJOINT SIMUL     27.0579319000244      s
+ GLOBAL COMM FOR GRADIENT       9.140968322753906E-004 s
+ FINALIZE WORK                  1.325893402099609E-002 s
+ ---------------------------------------------------------
+ GLOBAL TIME FOR GRADIENT        38.8268899917603      s
+ *********************************************************
+ COMPUTING BOX         -31         392         -31         242           1
+           1
+ CFL VALUE  0.5197436    
+ vpmod   5983.145       6000.143    
+ rhomod   1000.000       1000.000    
+ epsilonmod  0.0000000E+00  0.0000000E+00
+ deltamod  0.0000000E+00  0.0000000E+00
+ buxmod  1.0000000E-03  1.0000000E-03
+ buymod  1.0000000E-03  1.0000000E-03
+ buzmod  1.0000000E-03  1.0000000E-03
+ COEFFICIENT ALPHA_MAX IN CPML   109.9557    
+ COEFFICIENT d0 IN CPML   68.00085       68.00085       68.00085    
+ IT----         100
+ IT----         200
+ IT----         300
+ IT----         400
+ IT----         500
+ IT----         600
+ IT----         700
+ IT----         800
+ IT----         900
+ IT----        1000
+ IT----        1100
+ IT----        1200
+ IT----        1300
+ IT----        1400
+ IT----        1500
+ IT----        1600
+ IT----        1700
+ IT----        1800
+ IT----        1900
+ IT----        2000
+ IT----        2100
+ IT----        2200
+ IT----        2300
+ IT----        2400
+ IT----        2500
+ IT----        2600
+ IT----        2700
+ IT----        2800
+ IT----        2900
+ IT----        3000
+ IT----        3100
+ IT----        3200
+ IT----        3300
+ IT----        3400
+ IT----        3500
+ IT----        3600
+ IT----        3700
+ IT----        3800
+ IT----        3900
+ IT----        4000
+ IT----         100
+ IT----         200
+ IT----         300
+ IT----         400
+ IT----         500
+ IT----         600
+ IT----         700
+ IT----         800
+ IT----         900
+ IT----        1000
+ IT----        1100
+ IT----        1200
+ IT----        1300
+ IT----        1400
+ IT----        1500
+ IT----        1600
+ IT----        1700
+ IT----        1800
+ IT----        1900
+ IT----        2000
+ IT----        2100
+ IT----        2200
+ IT----        2300
+ IT----        2400
+ IT----        2500
+ IT----        2600
+ IT----        2700
+ IT----        2800
+ IT----        2900
+ IT----        3000
+ IT----        3100
+ IT----        3200
+ IT----        3300
+ IT----        3400
+ IT----        3500
+ IT----        3600
+ IT----        3700
+ IT----        3800
+ IT----        3900
+ IT----        4000
+ in gaussian smoothing         360         210   28.57100      0.7000000    
+  0.7000000       219.9115    
+ dot product before and after precond  1.1850047E-03
+ fcost  3.2952120E+09
+ *********************************************************
+ ELASPSED TIME FOR GRADIENT BUILDING STEPS
+ INIT OF 1st FORWARD SIMUL      1.040911674499512E-002 s
+ 1st FORWARD SIMUL               11.7435250282288      s
+ WRITE DATA                     3.933906555175781E-003 s
+ COST FUNCTION                  6.980895996093750E-004 s
+ INIT ADJOINT                   3.224849700927734E-003 s
+ 2nd FORWARD + ADJOINT SIMUL     27.0964319705963      s
+ GLOBAL COMM FOR GRADIENT       8.192062377929688E-004 s
+ FINALIZE WORK                  1.217699050903320E-002 s
+ ---------------------------------------------------------
+ GLOBAL TIME FOR GRADIENT        38.8712191581726      s
+ *********************************************************
+ COMPUTING BOX         -31         392         -31         242           1
+           1
+ CFL VALUE  0.5197374    
+ vpmod   5991.573       6000.071    
+ rhomod   1000.000       1000.000    
+ epsilonmod  0.0000000E+00  0.0000000E+00
+ deltamod  0.0000000E+00  0.0000000E+00
+ buxmod  1.0000000E-03  1.0000000E-03
+ buymod  1.0000000E-03  1.0000000E-03
+ buzmod  1.0000000E-03  1.0000000E-03
+ COEFFICIENT ALPHA_MAX IN CPML   109.9557    
+ COEFFICIENT d0 IN CPML   68.00005       68.00005       68.00005    
+ IT----         100
+ IT----         200
+ IT----         300
+ IT----         400
+ IT----         500
+ IT----         600
+ IT----         700
+ IT----         800
+ IT----         900
+ IT----        1000
+ IT----        1100
+ IT----        1200
+ IT----        1300
+ IT----        1400
+ IT----        1500
+ IT----        1600
+ IT----        1700
+ IT----        1800
+ IT----        1900
+ IT----        2000
+ IT----        2100
+ IT----        2200
+ IT----        2300
+ IT----        2400
+ IT----        2500
+ IT----        2600
+ IT----        2700
+ IT----        2800
+ IT----        2900
+ IT----        3000
+ IT----        3100
+ IT----        3200
+ IT----        3300
+ IT----        3400
+ IT----        3500
+ IT----        3600
+ IT----        3700
+ IT----        3800
+ IT----        3900
+ IT----        4000
+ IT----         100
+ IT----         200
+ IT----         300
+ IT----         400
+ IT----         500
+ IT----         600
+ IT----         700
+ IT----         800
+ IT----         900
+ IT----        1000
+ IT----        1100
+ IT----        1200
+ IT----        1300
+ IT----        1400
+ IT----        1500
+ IT----        1600
+ IT----        1700
+ IT----        1800
+ IT----        1900
+ IT----        2000
+ IT----        2100
+ IT----        2200
+ IT----        2300
+ IT----        2400
+ IT----        2500
+ IT----        2600
+ IT----        2700
+ IT----        2800
+ IT----        2900
+ IT----        3000
+ IT----        3100
+ IT----        3200
+ IT----        3300
+ IT----        3400
+ IT----        3500
+ IT----        3600
+ IT----        3700
+ IT----        3800
+ IT----        3900
+ IT----        4000
+ in gaussian smoothing         360         210   28.57100      0.7000000    
+  0.7000000       219.9115    
+ dot product before and after precond  2.4138211E-04
+ fcost  6.7908672E+08
+ *********************************************************
+ ELASPSED TIME FOR GRADIENT BUILDING STEPS
+ INIT OF 1st FORWARD SIMUL      1.042294502258301E-002 s
+ 1st FORWARD SIMUL               11.7414371967316      s
+ WRITE DATA                     2.502918243408203E-003 s
+ COST FUNCTION                  7.028579711914062E-004 s
+ INIT ADJOINT                   3.203153610229492E-003 s
+ 2nd FORWARD + ADJOINT SIMUL     27.0896630287170      s
+ GLOBAL COMM FOR GRADIENT       8.809566497802734E-004 s
+ FINALIZE WORK                  1.208400726318359E-002 s
+ ---------------------------------------------------------
+ GLOBAL TIME FOR GRADIENT        38.8608970642090      s
+ *********************************************************
+ COMPUTING BOX         -31         392         -31         242           1
+           1
+ CFL VALUE  0.5197343    
+ vpmod   5995.786       6000.036    
+ rhomod   1000.000       1000.000    
+ epsilonmod  0.0000000E+00  0.0000000E+00
+ deltamod  0.0000000E+00  0.0000000E+00
+ buxmod  1.0000000E-03  1.0000000E-03
+ buymod  1.0000000E-03  1.0000000E-03
+ buzmod  1.0000000E-03  1.0000000E-03
+ COEFFICIENT ALPHA_MAX IN CPML   109.9557    
+ COEFFICIENT d0 IN CPML   67.99964       67.99964       67.99964    
+ IT----         100
+ IT----         200
+ IT----         300
+ IT----         400
+ IT----         500
+ IT----         600
+ IT----         700
+ IT----         800
+ IT----         900
+ IT----        1000
+ IT----        1100
+ IT----        1200
+ IT----        1300
+ IT----        1400
+ IT----        1500
+ IT----        1600
+ IT----        1700
+ IT----        1800
+ IT----        1900
+ IT----        2000
+ IT----        2100
+ IT----        2200
+ IT----        2300
+ IT----        2400
+ IT----        2500
+ IT----        2600
+ IT----        2700
+ IT----        2800
+ IT----        2900
+ IT----        3000
+ IT----        3100
+ IT----        3200
+ IT----        3300
+ IT----        3400
+ IT----        3500
+ IT----        3600
+ IT----        3700
+ IT----        3800
+ IT----        3900
+ IT----        4000
+ IT----         100
+ IT----         200
+ IT----         300
+ IT----         400
+ IT----         500
+ IT----         600
+ IT----         700
+ IT----         800
+ IT----         900
+ IT----        1000
+ IT----        1100
+ IT----        1200
+ IT----        1300
+ IT----        1400
+ IT----        1500
+ IT----        1600
+ IT----        1700
+ IT----        1800
+ IT----        1900
+ IT----        2000
+ IT----        2100
+ IT----        2200
+ IT----        2300
+ IT----        2400
+ IT----        2500
+ IT----        2600
+ IT----        2700
+ IT----        2800
+ IT----        2900
+ IT----        3000
+ IT----        3100
+ IT----        3200
+ IT----        3300
+ IT----        3400
+ IT----        3500
+ IT----        3600
+ IT----        3700
+ IT----        3800
+ IT----        3900
+ IT----        4000
+ in gaussian smoothing         360         210   28.57100      0.7000000    
+  0.7000000       219.9115    
+ dot product before and after precond  3.9530358E-05
+ fcost  1.3175268E+08
+ *********************************************************
+ ELASPSED TIME FOR GRADIENT BUILDING STEPS
+ INIT OF 1st FORWARD SIMUL      1.037883758544922E-002 s
+ 1st FORWARD SIMUL               11.7365560531616      s
+ WRITE DATA                     2.779960632324219E-003 s
+ COST FUNCTION                  6.990432739257812E-004 s
+ INIT ADJOINT                   3.242015838623047E-003 s
+ 2nd FORWARD + ADJOINT SIMUL     27.0966999530792      s
+ GLOBAL COMM FOR GRADIENT       7.169246673583984E-004 s
+ FINALIZE WORK                  1.171302795410156E-002 s
+ ---------------------------------------------------------
+ GLOBAL TIME FOR GRADIENT        38.8627858161926      s
+ *********************************************************
+ COMPUTING BOX         -31         392         -31         242           1
+           1
+ CFL VALUE  0.5197328    
+ vpmod   5997.893       6000.018    
+ rhomod   1000.000       1000.000    
+ epsilonmod  0.0000000E+00  0.0000000E+00
+ deltamod  0.0000000E+00  0.0000000E+00
+ buxmod  1.0000000E-03  1.0000000E-03
+ buymod  1.0000000E-03  1.0000000E-03
+ buzmod  1.0000000E-03  1.0000000E-03
+ COEFFICIENT ALPHA_MAX IN CPML   109.9557    
+ COEFFICIENT d0 IN CPML   67.99944       67.99944       67.99944    
+ IT----         100
+ IT----         200
+ IT----         300
+ IT----         400
+ IT----         500
+ IT----         600
+ IT----         700
+ IT----         800
+ IT----         900
+ IT----        1000
+ IT----        1100
+ IT----        1200
+ IT----        1300
+ IT----        1400
+ IT----        1500
+ IT----        1600
+ IT----        1700
+ IT----        1800
+ IT----        1900
+ IT----        2000
+ IT----        2100
+ IT----        2200
+ IT----        2300
+ IT----        2400
+ IT----        2500
+ IT----        2600
+ IT----        2700
+ IT----        2800
+ IT----        2900
+ IT----        3000
+ IT----        3100
+ IT----        3200
+ IT----        3300
+ IT----        3400
+ IT----        3500
+ IT----        3600
+ IT----        3700
+ IT----        3800
+ IT----        3900
+ IT----        4000
+ IT----         100
+ IT----         200
+ IT----         300
+ IT----         400
+ IT----         500
+ IT----         600
+ IT----         700
+ IT----         800
+ IT----         900
+ IT----        1000
+ IT----        1100
+ IT----        1200
+ IT----        1300
+ IT----        1400
+ IT----        1500
+ IT----        1600
+ IT----        1700
+ IT----        1800
+ IT----        1900
+ IT----        2000
+ IT----        2100
+ IT----        2200
+ IT----        2300
+ IT----        2400
+ IT----        2500
+ IT----        2600
+ IT----        2700
+ IT----        2800
+ IT----        2900
+ IT----        3000
+ IT----        3100
+ IT----        3200
+ IT----        3300
+ IT----        3400
+ IT----        3500
+ IT----        3600
+ IT----        3700
+ IT----        3800
+ IT----        3900
+ IT----        4000
+ in gaussian smoothing         360         210   28.57100      0.7000000    
+  0.7000000       219.9115    
+ dot product before and after precond  4.3486598E-06
+ fcost  4.7180788E+07
+ *********************************************************
+ ELASPSED TIME FOR GRADIENT BUILDING STEPS
+ INIT OF 1st FORWARD SIMUL      1.042699813842773E-002 s
+ 1st FORWARD SIMUL               11.7387149333954      s
+ WRITE DATA                     2.399921417236328E-003 s
+ COST FUNCTION                  7.040500640869141E-004 s
+ INIT ADJOINT                   3.219127655029297E-003 s
+ 2nd FORWARD + ADJOINT SIMUL     27.0905768871307      s
+ GLOBAL COMM FOR GRADIENT       7.319450378417969E-004 s
+ FINALIZE WORK                  1.271295547485352E-002 s
+ ---------------------------------------------------------
+ GLOBAL TIME FOR GRADIENT        38.8594868183136      s
+ *********************************************************
+ NEW ITERATE           0
+ COMPUTING BOX         -31         392         -31         242           1
+           1
+ CFL VALUE  0.5197334    
+ vpmod   5997.854       6000.025    
+ rhomod   1000.000       1000.000    
+ epsilonmod  0.0000000E+00  0.0000000E+00
+ deltamod  0.0000000E+00  0.0000000E+00
+ buxmod  1.0000000E-03  1.0000000E-03
+ buymod  1.0000000E-03  1.0000000E-03
+ buzmod  1.0000000E-03  1.0000000E-03
+ COEFFICIENT ALPHA_MAX IN CPML   109.9557    
+ COEFFICIENT d0 IN CPML   67.99953       67.99953       67.99953    
+ IT----         100
+ IT----         200
+ IT----         300
+ IT----         400
+ IT----         500
+ IT----         600
+ IT----         700
+ IT----         800
+ IT----         900
+ IT----        1000
+ IT----        1100
+ IT----        1200
+ IT----        1300
+ IT----        1400
+ IT----        1500
+ IT----        1600
+ IT----        1700
+ IT----        1800
+ IT----        1900
+ IT----        2000
+ IT----        2100
+ IT----        2200
+ IT----        2300
+ IT----        2400
+ IT----        2500
+ IT----        2600
+ IT----        2700
+ IT----        2800
+ IT----        2900
+ IT----        3000
+ IT----        3100
+ IT----        3200
+ IT----        3300
+ IT----        3400
+ IT----        3500
+ IT----        3600
+ IT----        3700
+ IT----        3800
+ IT----        3900
+ IT----        4000
+ IT----         100
+ IT----         200
+ IT----         300
+ IT----         400
+ IT----         500
+ IT----         600
+ IT----         700
+ IT----         800
+ IT----         900
+ IT----        1000
+ IT----        1100
+ IT----        1200
+ IT----        1300
+ IT----        1400
+ IT----        1500
+ IT----        1600
+ IT----        1700
+ IT----        1800
+ IT----        1900
+ IT----        2000
+ IT----        2100
+ IT----        2200
+ IT----        2300
+ IT----        2400
+ IT----        2500
+ IT----        2600
+ IT----        2700
+ IT----        2800
+ IT----        2900
+ IT----        3000
+ IT----        3100
+ IT----        3200
+ IT----        3300
+ IT----        3400
+ IT----        3500
+ IT----        3600
+ IT----        3700
+ IT----        3800
+ IT----        3900
+ IT----        4000
+ in gaussian smoothing         360         210   28.57100      0.7000000    
+  0.7000000       219.9115    
+ dot product before and after precond  4.0727446E-06
+ fcost  4.6010068E+07
+ *********************************************************
+ ELASPSED TIME FOR GRADIENT BUILDING STEPS
+ INIT OF 1st FORWARD SIMUL      1.050686836242676E-002 s
+ 1st FORWARD SIMUL               11.7609431743622      s
+ WRITE DATA                     2.452850341796875E-003 s
+ COST FUNCTION                  6.999969482421875E-004 s
+ INIT ADJOINT                   3.209114074707031E-003 s
+ 2nd FORWARD + ADJOINT SIMUL     27.0994858741760      s
+ GLOBAL COMM FOR GRADIENT       7.350444793701172E-004 s
+ FINALIZE WORK                  1.181507110595703E-002 s
+ ---------------------------------------------------------
+ GLOBAL TIME FOR GRADIENT        38.8898479938507      s
+ *********************************************************
+ COMPUTING BOX         -31         392         -31         242           1
+           1
+ CFL VALUE  0.5197419    
+ vpmod   5997.495       6000.124    
+ rhomod   1000.000       1000.000    
+ epsilonmod  0.0000000E+00  0.0000000E+00
+ deltamod  0.0000000E+00  0.0000000E+00
+ buxmod  1.0000000E-03  1.0000000E-03
+ buymod  1.0000000E-03  1.0000000E-03
+ buzmod  1.0000000E-03  1.0000000E-03
+ COEFFICIENT ALPHA_MAX IN CPML   109.9557    
+ COEFFICIENT d0 IN CPML   68.00064       68.00064       68.00064    
+ IT----         100
+ IT----         200
+ IT----         300
+ IT----         400
+ IT----         500
+ IT----         600
+ IT----         700
+ IT----         800
+ IT----         900
+ IT----        1000
+ IT----        1100
+ IT----        1200
+ IT----        1300
+ IT----        1400
+ IT----        1500
+ IT----        1600
+ IT----        1700
+ IT----        1800
+ IT----        1900
+ IT----        2000
+ IT----        2100
+ IT----        2200
+ IT----        2300
+ IT----        2400
+ IT----        2500
+ IT----        2600
+ IT----        2700
+ IT----        2800
+ IT----        2900
+ IT----        3000
+ IT----        3100
+ IT----        3200
+ IT----        3300
+ IT----        3400
+ IT----        3500
+ IT----        3600
+ IT----        3700
+ IT----        3800
+ IT----        3900
+ IT----        4000
+ IT----         100
+ IT----         200
+ IT----         300
+ IT----         400
+ IT----         500
+ IT----         600
+ IT----         700
+ IT----         800
+ IT----         900
+ IT----        1000
+ IT----        1100
+ IT----        1200
+ IT----        1300
+ IT----        1400
+ IT----        1500
+ IT----        1600
+ IT----        1700
+ IT----        1800
+ IT----        1900
+ IT----        2000
+ IT----        2100
+ IT----        2200
+ IT----        2300
+ IT----        2400
+ IT----        2500
+ IT----        2600
+ IT----        2700
+ IT----        2800
+ IT----        2900
+ IT----        3000
+ IT----        3100
+ IT----        3200
+ IT----        3300
+ IT----        3400
+ IT----        3500
+ IT----        3600
+ IT----        3700
+ IT----        3800
+ IT----        3900
+ IT----        4000
+ in gaussian smoothing         360         210   28.57100      0.7000000    
+  0.7000000       219.9115    
+ dot product before and after precond  2.0794109E-06
+ fcost  3.7050552E+07
+ *********************************************************
+ ELASPSED TIME FOR GRADIENT BUILDING STEPS
+ INIT OF 1st FORWARD SIMUL      1.041197776794434E-002 s
+ 1st FORWARD SIMUL               11.7369019985199      s
+ WRITE DATA                     2.423048019409180E-003 s
+ COST FUNCTION                  7.021427154541016E-004 s
+ INIT ADJOINT                   3.224849700927734E-003 s
+ 2nd FORWARD + ADJOINT SIMUL     27.1078550815582      s
+ GLOBAL COMM FOR GRADIENT       6.830692291259766E-004 s
+ FINALIZE WORK                  1.264595985412598E-002 s
+ ---------------------------------------------------------
+ GLOBAL TIME FOR GRADIENT        38.8748481273651      s
+ *********************************************************
+ NEW ITERATE           1
+ COMPUTING BOX         -31         392         -31         242           1
+           1
+ CFL VALUE  0.5197825    
+ vpmod   5996.167       6000.592    
+ rhomod   1000.000       1000.000    
+ epsilonmod  0.0000000E+00  0.0000000E+00
+ deltamod  0.0000000E+00  0.0000000E+00
+ buxmod  1.0000000E-03  1.0000000E-03
+ buymod  1.0000000E-03  1.0000000E-03
+ buzmod  1.0000000E-03  1.0000000E-03
+ COEFFICIENT ALPHA_MAX IN CPML   109.9557    
+ COEFFICIENT d0 IN CPML   68.00595       68.00595       68.00595    
+ IT----         100
+ IT----         200
+ IT----         300
+ IT----         400
+ IT----         500
+ IT----         600
+ IT----         700
+ IT----         800
+ IT----         900
+ IT----        1000
+ IT----        1100
+ IT----        1200
+ IT----        1300
+ IT----        1400
+ IT----        1500
+ IT----        1600
+ IT----        1700
+ IT----        1800
+ IT----        1900
+ IT----        2000
+ IT----        2100
+ IT----        2200
+ IT----        2300
+ IT----        2400
+ IT----        2500
+ IT----        2600
+ IT----        2700
+ IT----        2800
+ IT----        2900
+ IT----        3000
+ IT----        3100
+ IT----        3200
+ IT----        3300
+ IT----        3400
+ IT----        3500
+ IT----        3600
+ IT----        3700
+ IT----        3800
+ IT----        3900
+ IT----        4000
+ IT----         100
+ IT----         200
+ IT----         300
+ IT----         400
+ IT----         500
+ IT----         600
+ IT----         700
+ IT----         800
+ IT----         900
+ IT----        1000
+ IT----        1100
+ IT----        1200
+ IT----        1300
+ IT----        1400
+ IT----        1500
+ IT----        1600
+ IT----        1700
+ IT----        1800
+ IT----        1900
+ IT----        2000
+ IT----        2100
+ IT----        2200
+ IT----        2300
+ IT----        2400
+ IT----        2500
+ IT----        2600
+ IT----        2700
+ IT----        2800
+ IT----        2900
+ IT----        3000
+ IT----        3100
+ IT----        3200
+ IT----        3300
+ IT----        3400
+ IT----        3500
+ IT----        3600
+ IT----        3700
+ IT----        3800
+ IT----        3900
+ IT----        4000
+ in gaussian smoothing         360         210   28.57100      0.7000000    
+  0.7000000       219.9115    
+ dot product before and after precond  5.2527992E-07
+ fcost  2.4312966E+07
+ *********************************************************
+ ELASPSED TIME FOR GRADIENT BUILDING STEPS
+ INIT OF 1st FORWARD SIMUL      1.043701171875000E-002 s
+ 1st FORWARD SIMUL               11.7497029304504      s
+ WRITE DATA                     2.535104751586914E-003 s
+ COST FUNCTION                  7.019042968750000E-004 s
+ INIT ADJOINT                   3.221035003662109E-003 s
+ 2nd FORWARD + ADJOINT SIMUL     27.1260719299316      s
+ GLOBAL COMM FOR GRADIENT       7.531642913818359E-004 s
+ FINALIZE WORK                  1.199293136596680E-002 s
+ ---------------------------------------------------------
+ GLOBAL TIME FOR GRADIENT        38.9054160118103      s
+ *********************************************************
+ NEW ITERATE           2
+ COMPUTING BOX         -31         392         -31         242           1
+           1
+ CFL VALUE  0.5198236    
+ vpmod   5994.863       6001.066    
+ rhomod   1000.000       1000.000    
+ epsilonmod  0.0000000E+00  0.0000000E+00
+ deltamod  0.0000000E+00  0.0000000E+00
+ buxmod  1.0000000E-03  1.0000000E-03
+ buymod  1.0000000E-03  1.0000000E-03
+ buzmod  1.0000000E-03  1.0000000E-03
+ COEFFICIENT ALPHA_MAX IN CPML   109.9557    
+ COEFFICIENT d0 IN CPML   68.01132       68.01132       68.01132    
+ IT----         100
+ IT----         200
+ IT----         300
+ IT----         400
+ IT----         500
+ IT----         600
+ IT----         700
+ IT----         800
+ IT----         900
+ IT----        1000
+ IT----        1100
+ IT----        1200
+ IT----        1300
+ IT----        1400
+ IT----        1500
+ IT----        1600
+ IT----        1700
+ IT----        1800
+ IT----        1900
+ IT----        2000
+ IT----        2100
+ IT----        2200
+ IT----        2300
+ IT----        2400
+ IT----        2500
+ IT----        2600
+ IT----        2700
+ IT----        2800
+ IT----        2900
+ IT----        3000
+ IT----        3100
+ IT----        3200
+ IT----        3300
+ IT----        3400
+ IT----        3500
+ IT----        3600
+ IT----        3700
+ IT----        3800
+ IT----        3900
+ IT----        4000
+ IT----         100
+ IT----         200
+ IT----         300
+ IT----         400
+ IT----         500
+ IT----         600
+ IT----         700
+ IT----         800
+ IT----         900
+ IT----        1000
+ IT----        1100
+ IT----        1200
+ IT----        1300
+ IT----        1400
+ IT----        1500
+ IT----        1600
+ IT----        1700
+ IT----        1800
+ IT----        1900
+ IT----        2000
+ IT----        2100
+ IT----        2200
+ IT----        2300
+ IT----        2400
+ IT----        2500
+ IT----        2600
+ IT----        2700
+ IT----        2800
+ IT----        2900
+ IT----        3000
+ IT----        3100
+ IT----        3200
+ IT----        3300
+ IT----        3400
+ IT----        3500
+ IT----        3600
+ IT----        3700
+ IT----        3800
+ IT----        3900
+ IT----        4000
+ in gaussian smoothing         360         210   28.57100      0.7000000    
+  0.7000000       219.9115    
+ dot product before and after precond  2.5330019E-07
+ fcost  1.8648234E+07
+ *********************************************************
+ ELASPSED TIME FOR GRADIENT BUILDING STEPS
+ INIT OF 1st FORWARD SIMUL      1.046204566955566E-002 s
+ 1st FORWARD SIMUL               11.7412390708923      s
+ WRITE DATA                     2.529859542846680E-003 s
+ COST FUNCTION                  7.009506225585938E-004 s
+ INIT ADJOINT                   3.208160400390625E-003 s
+ 2nd FORWARD + ADJOINT SIMUL     27.0978720188141      s
+ GLOBAL COMM FOR GRADIENT       7.939338684082031E-004 s
+ FINALIZE WORK                  1.163291931152344E-002 s
+ ---------------------------------------------------------
+ GLOBAL TIME FOR GRADIENT        38.8684389591217      s
+ *********************************************************
+ NEW ITERATE           3
+ COMPUTING BOX         -31         392         -31         242           1
+           1
+ CFL VALUE  0.5198734    
+ vpmod   5993.378       6001.642    
+ rhomod   1000.000       1000.000    
+ epsilonmod  0.0000000E+00  0.0000000E+00
+ deltamod  0.0000000E+00  0.0000000E+00
+ buxmod  1.0000000E-03  1.0000000E-03
+ buymod  1.0000000E-03  1.0000000E-03
+ buzmod  1.0000000E-03  1.0000000E-03
+ COEFFICIENT ALPHA_MAX IN CPML   109.9557    
+ COEFFICIENT d0 IN CPML   68.01785       68.01785       68.01785    
+ IT----         100
+ IT----         200
+ IT----         300
+ IT----         400
+ IT----         500
+ IT----         600
+ IT----         700
+ IT----         800
+ IT----         900
+ IT----        1000
+ IT----        1100
+ IT----        1200
+ IT----        1300
+ IT----        1400
+ IT----        1500
+ IT----        1600
+ IT----        1700
+ IT----        1800
+ IT----        1900
+ IT----        2000
+ IT----        2100
+ IT----        2200
+ IT----        2300
+ IT----        2400
+ IT----        2500
+ IT----        2600
+ IT----        2700
+ IT----        2800
+ IT----        2900
+ IT----        3000
+ IT----        3100
+ IT----        3200
+ IT----        3300
+ IT----        3400
+ IT----        3500
+ IT----        3600
+ IT----        3700
+ IT----        3800
+ IT----        3900
+ IT----        4000
+ IT----         100
+ IT----         200
+ IT----         300
+ IT----         400
+ IT----         500
+ IT----         600
+ IT----         700
+ IT----         800
+ IT----         900
+ IT----        1000
+ IT----        1100
+ IT----        1200
+ IT----        1300
+ IT----        1400
+ IT----        1500
+ IT----        1600
+ IT----        1700
+ IT----        1800
+ IT----        1900
+ IT----        2000
+ IT----        2100
+ IT----        2200
+ IT----        2300
+ IT----        2400
+ IT----        2500
+ IT----        2600
+ IT----        2700
+ IT----        2800
+ IT----        2900
+ IT----        3000
+ IT----        3100
+ IT----        3200
+ IT----        3300
+ IT----        3400
+ IT----        3500
+ IT----        3600
+ IT----        3700
+ IT----        3800
+ IT----        3900
+ IT----        4000
+ in gaussian smoothing         360         210   28.57100      0.7000000    
+  0.7000000       219.9115    
+ dot product before and after precond  1.5305210E-07
+ fcost  1.4988876E+07
+ *********************************************************
+ ELASPSED TIME FOR GRADIENT BUILDING STEPS
+ INIT OF 1st FORWARD SIMUL      1.045584678649902E-002 s
+ 1st FORWARD SIMUL               11.7466659545898      s
+ WRITE DATA                     2.402067184448242E-003 s
+ COST FUNCTION                  7.059574127197266E-004 s
+ INIT ADJOINT                   3.233194351196289E-003 s
+ 2nd FORWARD + ADJOINT SIMUL     27.1218118667603      s
+ GLOBAL COMM FOR GRADIENT       6.909370422363281E-004 s
+ FINALIZE WORK                  1.199007034301758E-002 s
+ ---------------------------------------------------------
+ GLOBAL TIME FOR GRADIENT        38.8979558944702      s
+ *********************************************************
+ NEW ITERATE           4
+ COMPUTING BOX         -31         392         -31         242           1
+           1
+ CFL VALUE  0.5199414    
+ vpmod   5991.398       6002.427    
+ rhomod   1000.000       1000.000    
+ epsilonmod  0.0000000E+00  0.0000000E+00
+ deltamod  0.0000000E+00  0.0000000E+00
+ buxmod  1.0000000E-03  1.0000000E-03
+ buymod  1.0000000E-03  1.0000000E-03
+ buzmod  1.0000000E-03  1.0000000E-03
+ COEFFICIENT ALPHA_MAX IN CPML   109.9557    
+ COEFFICIENT d0 IN CPML   68.02674       68.02674       68.02674    
+ IT----         100
+ IT----         200
+ IT----         300
+ IT----         400
+ IT----         500
+ IT----         600
+ IT----         700
+ IT----         800
+ IT----         900
+ IT----        1000
+ IT----        1100
+ IT----        1200
+ IT----        1300
+ IT----        1400
+ IT----        1500
+ IT----        1600
+ IT----        1700
+ IT----        1800
+ IT----        1900
+ IT----        2000
+ IT----        2100
+ IT----        2200
+ IT----        2300
+ IT----        2400
+ IT----        2500
+ IT----        2600
+ IT----        2700
+ IT----        2800
+ IT----        2900
+ IT----        3000
+ IT----        3100
+ IT----        3200
+ IT----        3300
+ IT----        3400
+ IT----        3500
+ IT----        3600
+ IT----        3700
+ IT----        3800
+ IT----        3900
+ IT----        4000
+ IT----         100
+ IT----         200
+ IT----         300
+ IT----         400
+ IT----         500
+ IT----         600
+ IT----         700
+ IT----         800
+ IT----         900
+ IT----        1000
+ IT----        1100
+ IT----        1200
+ IT----        1300
+ IT----        1400
+ IT----        1500
+ IT----        1600
+ IT----        1700
+ IT----        1800
+ IT----        1900
+ IT----        2000
+ IT----        2100
+ IT----        2200
+ IT----        2300
+ IT----        2400
+ IT----        2500
+ IT----        2600
+ IT----        2700
+ IT----        2800
+ IT----        2900
+ IT----        3000
+ IT----        3100
+ IT----        3200
+ IT----        3300
+ IT----        3400
+ IT----        3500
+ IT----        3600
+ IT----        3700
+ IT----        3800
+ IT----        3900
+ IT----        4000
+ in gaussian smoothing         360         210   28.57100      0.7000000    
+  0.7000000       219.9115    
+ dot product before and after precond  9.1445784E-08
+ fcost  1.2127709E+07
+ *********************************************************
+ ELASPSED TIME FOR GRADIENT BUILDING STEPS
+ INIT OF 1st FORWARD SIMUL      1.045012474060059E-002 s
+ 1st FORWARD SIMUL               11.7481858730316      s
+ WRITE DATA                     2.348184585571289E-003 s
+ COST FUNCTION                  7.019042968750000E-004 s
+ INIT ADJOINT                   3.210067749023438E-003 s
+ 2nd FORWARD + ADJOINT SIMUL     27.1561310291290      s
+ GLOBAL COMM FOR GRADIENT       7.119178771972656E-004 s
+ FINALIZE WORK                  1.178503036499023E-002 s
+ ---------------------------------------------------------
+ GLOBAL TIME FOR GRADIENT        38.9335241317749      s
+ *********************************************************
+ NEW ITERATE           5
+ COMPUTING BOX         -31         392         -31         242           1
+           1
+ CFL VALUE  0.5200337    
+ vpmod   5988.936       6003.492    
+ rhomod   1000.000       1000.000    
+ epsilonmod  0.0000000E+00  0.0000000E+00
+ deltamod  0.0000000E+00  0.0000000E+00
+ buxmod  1.0000000E-03  1.0000000E-03
+ buymod  1.0000000E-03  1.0000000E-03
+ buzmod  1.0000000E-03  1.0000000E-03
+ COEFFICIENT ALPHA_MAX IN CPML   109.9557    
+ COEFFICIENT d0 IN CPML   68.03882       68.03882       68.03882    
+ IT----         100
+ IT----         200
+ IT----         300
+ IT----         400
+ IT----         500
+ IT----         600
+ IT----         700
+ IT----         800
+ IT----         900
+ IT----        1000
+ IT----        1100
+ IT----        1200
+ IT----        1300
+ IT----        1400
+ IT----        1500
+ IT----        1600
+ IT----        1700
+ IT----        1800
+ IT----        1900
+ IT----        2000
+ IT----        2100
+ IT----        2200
+ IT----        2300
+ IT----        2400
+ IT----        2500
+ IT----        2600
+ IT----        2700
+ IT----        2800
+ IT----        2900
+ IT----        3000
+ IT----        3100
+ IT----        3200
+ IT----        3300
+ IT----        3400
+ IT----        3500
+ IT----        3600
+ IT----        3700
+ IT----        3800
+ IT----        3900
+ IT----        4000
+ IT----         100
+ IT----         200
+ IT----         300
+ IT----         400
+ IT----         500
+ IT----         600
+ IT----         700
+ IT----         800
+ IT----         900
+ IT----        1000
+ IT----        1100
+ IT----        1200
+ IT----        1300
+ IT----        1400
+ IT----        1500
+ IT----        1600
+ IT----        1700
+ IT----        1800
+ IT----        1900
+ IT----        2000
+ IT----        2100
+ IT----        2200
+ IT----        2300
+ IT----        2400
+ IT----        2500
+ IT----        2600
+ IT----        2700
+ IT----        2800
+ IT----        2900
+ IT----        3000
+ IT----        3100
+ IT----        3200
+ IT----        3300
+ IT----        3400
+ IT----        3500
+ IT----        3600
+ IT----        3700
+ IT----        3800
+ IT----        3900
+ IT----        4000
+ in gaussian smoothing         360         210   28.57100      0.7000000    
+  0.7000000       219.9115    
+ dot product before and after precond  7.6278624E-08
+ fcost  1.0110828E+07
+ *********************************************************
+ ELASPSED TIME FOR GRADIENT BUILDING STEPS
+ INIT OF 1st FORWARD SIMUL      1.043915748596191E-002 s
+ 1st FORWARD SIMUL               11.7463688850403      s
+ WRITE DATA                     2.351999282836914E-003 s
+ COST FUNCTION                  7.040500640869141E-004 s
+ INIT ADJOINT                   3.237962722778320E-003 s
+ 2nd FORWARD + ADJOINT SIMUL     27.1169810295105      s
+ GLOBAL COMM FOR GRADIENT       7.030963897705078E-004 s
+ FINALIZE WORK                  1.192283630371094E-002 s
+ ---------------------------------------------------------
+ GLOBAL TIME FOR GRADIENT        38.8927090167999      s
+ *********************************************************
+ NEW ITERATE           6
+ COMPUTING BOX         -31         392         -31         242           1
+           1
+ CFL VALUE  0.5201126    
+ vpmod   5986.917       6004.402    
+ rhomod   1000.000       1000.000    
+ epsilonmod  0.0000000E+00  0.0000000E+00
+ deltamod  0.0000000E+00  0.0000000E+00
+ buxmod  1.0000000E-03  1.0000000E-03
+ buymod  1.0000000E-03  1.0000000E-03
+ buzmod  1.0000000E-03  1.0000000E-03
+ COEFFICIENT ALPHA_MAX IN CPML   109.9557    
+ COEFFICIENT d0 IN CPML   68.04913       68.04913       68.04913    
+ IT----         100
+ IT----         200
+ IT----         300
+ IT----         400
+ IT----         500
+ IT----         600
+ IT----         700
+ IT----         800
+ IT----         900
+ IT----        1000
+ IT----        1100
+ IT----        1200
+ IT----        1300
+ IT----        1400
+ IT----        1500
+ IT----        1600
+ IT----        1700
+ IT----        1800
+ IT----        1900
+ IT----        2000
+ IT----        2100
+ IT----        2200
+ IT----        2300
+ IT----        2400
+ IT----        2500
+ IT----        2600
+ IT----        2700
+ IT----        2800
+ IT----        2900
+ IT----        3000
+ IT----        3100
+ IT----        3200
+ IT----        3300
+ IT----        3400
+ IT----        3500
+ IT----        3600
+ IT----        3700
+ IT----        3800
+ IT----        3900
+ IT----        4000
+ IT----         100
+ IT----         200
+ IT----         300
+ IT----         400
+ IT----         500
+ IT----         600
+ IT----         700
+ IT----         800
+ IT----         900
+ IT----        1000
+ IT----        1100
+ IT----        1200
+ IT----        1300
+ IT----        1400
+ IT----        1500
+ IT----        1600
+ IT----        1700
+ IT----        1800
+ IT----        1900
+ IT----        2000
+ IT----        2100
+ IT----        2200
+ IT----        2300
+ IT----        2400
+ IT----        2500
+ IT----        2600
+ IT----        2700
+ IT----        2800
+ IT----        2900
+ IT----        3000
+ IT----        3100
+ IT----        3200
+ IT----        3300
+ IT----        3400
+ IT----        3500
+ IT----        3600
+ IT----        3700
+ IT----        3800
+ IT----        3900
+ IT----        4000
+ in gaussian smoothing         360         210   28.57100      0.7000000    
+  0.7000000       219.9115    
+ dot product before and after precond  3.4550052E-08
+ fcost   9007983.    
+ *********************************************************
+ ELASPSED TIME FOR GRADIENT BUILDING STEPS
+ INIT OF 1st FORWARD SIMUL      1.048994064331055E-002 s
+ 1st FORWARD SIMUL               11.7509691715240      s
+ WRITE DATA                     2.322912216186523E-003 s
+ COST FUNCTION                  7.050037384033203E-004 s
+ INIT ADJOINT                   3.212928771972656E-003 s
+ 2nd FORWARD + ADJOINT SIMUL     27.1354680061340      s
+ GLOBAL COMM FOR GRADIENT       6.821155548095703E-004 s
+ FINALIZE WORK                  1.165890693664551E-002 s
+ ---------------------------------------------------------
+ GLOBAL TIME FOR GRADIENT        38.9155089855194      s
+ *********************************************************
+ NEW ITERATE           7
+ COMPUTING BOX         -31         392         -31         242           1
+           1
+ CFL VALUE  0.5201654    
+ vpmod   5985.496       6005.012    
+ rhomod   1000.000       1000.000    
+ epsilonmod  0.0000000E+00  0.0000000E+00
+ deltamod  0.0000000E+00  0.0000000E+00
+ buxmod  1.0000000E-03  1.0000000E-03
+ buymod  1.0000000E-03  1.0000000E-03
+ buzmod  1.0000000E-03  1.0000000E-03
+ COEFFICIENT ALPHA_MAX IN CPML   109.9557    
+ COEFFICIENT d0 IN CPML   68.05604       68.05604       68.05604    
+ IT----         100
+ IT----         200
+ IT----         300
+ IT----         400
+ IT----         500
+ IT----         600
+ IT----         700
+ IT----         800
+ IT----         900
+ IT----        1000
+ IT----        1100
+ IT----        1200
+ IT----        1300
+ IT----        1400
+ IT----        1500
+ IT----        1600
+ IT----        1700
+ IT----        1800
+ IT----        1900
+ IT----        2000
+ IT----        2100
+ IT----        2200
+ IT----        2300
+ IT----        2400
+ IT----        2500
+ IT----        2600
+ IT----        2700
+ IT----        2800
+ IT----        2900
+ IT----        3000
+ IT----        3100
+ IT----        3200
+ IT----        3300
+ IT----        3400
+ IT----        3500
+ IT----        3600
+ IT----        3700
+ IT----        3800
+ IT----        3900
+ IT----        4000
+ IT----         100
+ IT----         200
+ IT----         300
+ IT----         400
+ IT----         500
+ IT----         600
+ IT----         700
+ IT----         800
+ IT----         900
+ IT----        1000
+ IT----        1100
+ IT----        1200
+ IT----        1300
+ IT----        1400
+ IT----        1500
+ IT----        1600
+ IT----        1700
+ IT----        1800
+ IT----        1900
+ IT----        2000
+ IT----        2100
+ IT----        2200
+ IT----        2300
+ IT----        2400
+ IT----        2500
+ IT----        2600
+ IT----        2700
+ IT----        2800
+ IT----        2900
+ IT----        3000
+ IT----        3100
+ IT----        3200
+ IT----        3300
+ IT----        3400
+ IT----        3500
+ IT----        3600
+ IT----        3700
+ IT----        3800
+ IT----        3900
+ IT----        4000
+ in gaussian smoothing         360         210   28.57100      0.7000000    
+  0.7000000       219.9115    
+ dot product before and after precond  2.6281022E-08
+ fcost   8375478.    
+ *********************************************************
+ ELASPSED TIME FOR GRADIENT BUILDING STEPS
+ INIT OF 1st FORWARD SIMUL      1.046705245971680E-002 s
+ 1st FORWARD SIMUL               11.7474169731140      s
+ WRITE DATA                     2.617120742797852E-003 s
+ COST FUNCTION                  7.019042968750000E-004 s
+ INIT ADJOINT                   3.226041793823242E-003 s
+ 2nd FORWARD + ADJOINT SIMUL     27.0991430282593      s
+ GLOBAL COMM FOR GRADIENT       6.878376007080078E-004 s
+ FINALIZE WORK                  1.166510581970215E-002 s
+ ---------------------------------------------------------
+ GLOBAL TIME FOR GRADIENT        38.8759250640869      s
+ *********************************************************
+ NEW ITERATE           8
+ COMPUTING BOX         -31         392         -31         242           1
+           1
+ CFL VALUE  0.5202334    
+ vpmod   5983.888       6005.797    
+ rhomod   1000.000       1000.000    
+ epsilonmod  0.0000000E+00  0.0000000E+00
+ deltamod  0.0000000E+00  0.0000000E+00
+ buxmod  1.0000000E-03  1.0000000E-03
+ buymod  1.0000000E-03  1.0000000E-03
+ buzmod  1.0000000E-03  1.0000000E-03
+ COEFFICIENT ALPHA_MAX IN CPML   109.9557    
+ COEFFICIENT d0 IN CPML   68.06493       68.06493       68.06493    
+ IT----         100
+ IT----         200
+ IT----         300
+ IT----         400
+ IT----         500
+ IT----         600
+ IT----         700
+ IT----         800
+ IT----         900
+ IT----        1000
+ IT----        1100
+ IT----        1200
+ IT----        1300
+ IT----        1400
+ IT----        1500
+ IT----        1600
+ IT----        1700
+ IT----        1800
+ IT----        1900
+ IT----        2000
+ IT----        2100
+ IT----        2200
+ IT----        2300
+ IT----        2400
+ IT----        2500
+ IT----        2600
+ IT----        2700
+ IT----        2800
+ IT----        2900
+ IT----        3000
+ IT----        3100
+ IT----        3200
+ IT----        3300
+ IT----        3400
+ IT----        3500
+ IT----        3600
+ IT----        3700
+ IT----        3800
+ IT----        3900
+ IT----        4000
+ IT----         100
+ IT----         200
+ IT----         300
+ IT----         400
+ IT----         500
+ IT----         600
+ IT----         700
+ IT----         800

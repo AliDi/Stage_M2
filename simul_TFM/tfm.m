@@ -4,10 +4,12 @@ nt=4096;		%nombre de points en temps ->nb de ligne
 dt=0.0005;		%echantillonage temporel
 t=(0:1:nt-1).*dt;  %reconstitution de l'axe temporel
 
-nb_recep=32; 	%nombre de recepteurs -> nb de colonnes
-nb_src=32;
+nb_recep=96; 	%nombre de recepteurs -> nb de colonnes
+nb_src=96;
 
-vp=3000; 		%vitesse du milieu en m/s
+cL_steel = 5600;
+cL_weld = 5400;
+vp=(cL_weld+cL_steel)/2; 		%vitesse du milieu en m/s
 
 
 pitch=42.857; 	%distance entre les éléments en m
@@ -53,7 +55,7 @@ z_recep=zpos_recep*ones(1,nb_recep);
 
 
 %%%%%%%%%% Calcul de l'intensité par l'équation 1 de Moreau_2009 %%%%%%%%%%
-hh = waitbar(0,'generating image');
+%hh = waitbar(0,'');
 %points d'observation
 x_obs=(1:nx)*h;
 z_obs=(1:nz)*h;
@@ -82,7 +84,7 @@ parfor x=1:nx
 			I(x,:)=I(x,:) + interp1(t , y , t_interp); 
 		end 
 	end
-	waitbar(x/nx,hh);
+	%waitbar(x/nx,hh);
 end
 
 figure
