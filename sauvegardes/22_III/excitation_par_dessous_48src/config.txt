@@ -1,1 +1,0 @@
-src et recept du meme cote, avec simulation d'interface en bas, 48 éléments, nz=500, nx=400, nt=4096

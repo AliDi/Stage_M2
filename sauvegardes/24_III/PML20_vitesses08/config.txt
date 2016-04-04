@@ -1,2 +1,0 @@
-pour savoir ce qui a amélioré les résultats
-calcul avec 20 pts PML et rapport des vitesse à 0.8 (vp=3000, vinclusion=2500)

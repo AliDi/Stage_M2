@@ -32,9 +32,9 @@ zpos_center=50*l;
 %r=l/4;						%rayon de l'inclusion en m
 %vp_true_inclusion(vp,vp_inclusion,r,xpos_center,zpos_center, nz, nx,h); %generation du fichier 'vp_true_inclusion'
 
-Larg=10*l; 			%longueur du crack en m
-long=l/2;				%largeur du crack en m
-angl= 0;			%angle du crack en degres
+Larg=6*l; 			%longueur du crack en m
+long=l;				%largeur du crack en m
+angl= 45;			%angle du crack en degres
 vp_true_crack(vp,vp_inclusion,  long ,Larg , angl, xpos_center,zpos_center,nz, nx,h);
 
 %nb_inclusion=5;

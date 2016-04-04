@@ -1,2 +1,0 @@
-transmission, defaut a  30*l des sources,64 elements
-r=l/2

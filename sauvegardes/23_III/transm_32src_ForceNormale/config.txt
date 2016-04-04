@@ -1,2 +1,0 @@
-transmission, 32 src, force normale, pour comparaison avec 'augmetation_tpsacqui' du 23/III
-nx=300, nz=500, nt=4096

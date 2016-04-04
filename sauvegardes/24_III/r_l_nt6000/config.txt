@@ -1,3 +1,0 @@
-étude de résolution
-paramètres : 64 elements, transmission, 100l de hauteur, pml=20, nx=300, nz=600, nt=4096
-rayon défaut r=l

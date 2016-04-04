@@ -1,4 +1,0 @@
-1 0 0 0 ! data component P, vx,vy,vz
-fsismos_P titi toto tata   ! name of observed data
-0.001                     ! dt for saving field on boundary
-
