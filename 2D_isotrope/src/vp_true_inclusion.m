@@ -6,9 +6,9 @@
 
 function []=vp_true_inclusion(vp1,vp2,r,xpos_center,zpos_center, nz, nx,h)
 
-	n_r=floor(r/h);						%nombre de points du rayon
-	n_xpos_center=floor(xpos_center/h); %position du centre en nb de points
-	n_zpos_center=floor(zpos_center/h);
+	n_r=round(r/h);						%nombre de points du rayon
+	n_xpos_center=round(xpos_center/h); %position du centre en nb de points
+	n_zpos_center=round(zpos_center/h);
 	
 	%formation de l'inclusion en disque
 	for (x=1:nx)
@@ -31,7 +31,7 @@ function []=vp_true_inclusion(vp1,vp2,r,xpos_center,zpos_center, nz, nx,h)
 %%%%%%%%%% Illustration %%%%%%%%%%
 	
 	figure
-	imagesc([0 nx*h-1],[0 nz*h-1],m)
+	imagesc([0 nx*h-h],[0 nz*h-h],m)
 	colorbar
 	title('vp\_true')
 	
@@ -41,6 +41,7 @@ function []=vp_true_inclusion(vp1,vp2,r,xpos_center,zpos_center, nz, nx,h)
 	fwrite(fid, m(:,:),'single');
 	fclose(fid);
 	
+
 end
 
 %save("-binary","vp_binaire","vp") 

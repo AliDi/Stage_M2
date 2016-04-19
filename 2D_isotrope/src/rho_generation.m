@@ -7,7 +7,7 @@ function []=rho_generation(d,nz, nx)
 		end
 	end
 
-	fid=fopen('rho','w+');
+	fid=fopen('rho_uniforme','w+');
 	fwrite(fid, rho(:,:,:),'single');
 	fclose(fid);
 

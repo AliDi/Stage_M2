@@ -12,7 +12,12 @@ function []=vp_init_generation(vp1, vp2, nz, nx,h)
 
 	vp=vp'*ones(1,nx);
 	
+%%%%%%%%%% Simulation de surface libre %%%%%%%%%%
 
+	%e_sl=10; 		%10 points d'épaisseur pour la simulation de surface libre
+	%v_sl=1500;		%vitesse dans le second milieu
+	%vp(end-10:end,:)=v_sl;
+	
 %%%%%%%%%% Illustration %%%%%%%%%%
 	
 	figure
@@ -28,3 +33,7 @@ function []=vp_init_generation(vp1, vp2, nz, nx,h)
 	
 end
 
+%fid=fopen
+%fwrite(fid, matrice(:, :,:),'single')
+
+%save("-binary","vp_binaire","vp") 

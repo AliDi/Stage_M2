@@ -6,9 +6,9 @@
 
 function []=vp_true_inclusion(vp1,vp2,r,xpos_center,zpos_center, nz, nx,h)
 
-	n_r=floor(r/h);						%nombre de points du rayon
-	n_xpos_center=floor(xpos_center/h); %position du centre en nb de points
-	n_zpos_center=floor(zpos_center/h);
+	n_r=round(r/h);						%nombre de points du rayon
+	n_xpos_center=round(xpos_center/h); %position du centre en nb de points
+	n_zpos_center=round(zpos_center/h);
 	
 	%formation de l'inclusion en disque
 	for (x=1:nx)
@@ -40,6 +40,12 @@ function []=vp_true_inclusion(vp1,vp2,r,xpos_center,zpos_center, nz, nx,h)
 	fid=fopen('vp_true_inclusion','w+');
 	fwrite(fid, m(:,:),'single');
 	fclose(fid);
+	
+%%%%%%%%%% Sauvegarde du cercle pour plot tfm %%%%%%%%%%
+
+theta=0:0.001:2*pi;
+
+plot(r*cos(theta)+xpos_center, r*sin(theta)+zpos_center);
 	
 end
 

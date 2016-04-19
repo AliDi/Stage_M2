@@ -19,13 +19,9 @@
 
 %cette fonction place les éléments de manière à tomber exactement sur les points de la grille définie par nz,nx et h si grille=='on'
 
-function []= acqui_generation_multielement(nb_elements,pitch, zpos_sources,xpos_sources, zpos_recep,xpos_recep,nz, nx, h, grille)
+function [x_sources z_sources x_recep z_recep]= acqui_generation_multielement(nb_elements,pitch, zpos_sources,xpos_sources, zpos_recep,xpos_recep,nz, nx, h, grille)
 
 	aperture = (nb_elements-1)*pitch; %total length of the probe
-	
-	if (xpos_sources+aperture/2 > nx*h || zpos_sources > nz*h || xpos_recep +aperture/2 > nx*h || zpos_recep > nz*h )
-		disp("!!! ATTENTION !!! \n Au moins un élément se trouve hors de la zone d'étude \n\n")
-	end
 
 %%%%%%%%%% Positionnement des elements en m %%%%%%%%%%
 	x_sources= xpos_sources-(nb_elements-1)*pitch/2 : pitch : xpos_sources+(nb_elements-1)*pitch/2; 			
@@ -42,9 +38,9 @@ function []= acqui_generation_multielement(nb_elements,pitch, zpos_sources,xpos_
 %%%%%%%%%% Placement des sources/recep sur la grille d'échantillonnage %%%%%%%%%%
 
 	if(grille=='on')
-		x_sources = round(x_sources./h).*h;
+		x_sources = floor(x_sources./h).*h;
 		z_sources = round(z_sources./h).*h;	
-		x_recep = round(x_recep./h).*h;
+		x_recep = floor(x_recep./h).*h;
 		z_recep = round(z_recep./h).*h;	
 	end
 

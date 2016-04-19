@@ -1,7 +1,7 @@
 %%%%%%% milieu : soudure en V %%%%%%%
 %angl est en degre
 %rg : root gap (m)
-function []=vp_epsilon_weld_generation(vp1, vp2,C1,C2,angl, rg, nz, nx,h)
+function []=vp_epsilon_weld_generation(vp, vp_weld_h, vp_weld_v,angl, rg, nz, nx,h)
 
 	a1=-tan(abs(angl*pi/180)); 	%coefficient directeur du bord droit de la sourdure
 	a2 = -a1;
@@ -16,11 +16,11 @@ function []=vp_epsilon_weld_generation(vp1, vp2,C1,C2,angl, rg, nz, nx,h)
 		for (i=1:nz)
 						
 			if ( ((z(i)-a1*x(j))<= b1) && ((z(i)-a2*x(j))<= b2 ) ) %ie au niveau de la soudure
-				m(i,j)=vp2;
-				espilon(i,j)= ( C2(1,1) - C2(3,3) ) / ( 2*C2(3,3));
+				m(i,j)=vp_weld_v;
+				epsilon(i,j)= (vp_weld_h - vp_weld_v ) / vp_weld_v;
 			else
-				m(i,j)=vp1;
-				espilon(i,j)= ( C1(1,1) - C1(3,3) ) / ( 2*C1(3,3));
+				m(i,j)=vp;
+				epsilon(i,j)= 0; %isotrope hors de la soudure
 			end
 		end
 	end
@@ -31,14 +31,16 @@ x=0:h:nx*h;
 %%%%%%%%%% Illustration %%%%%%%%%%
 	
 	figure
-	imagesc([0 nx*h-1],[0 nz*h-1],m)
-	colorbar
-	title('vp\_true')
+	subplot(2,1,1);
+	imagesc([0 nx*h-h],[0 nz*h-h],m);
+	colorbar;
+	title('vpV\_true');
 	
-	figure
-	imagesc([0 nx*h-1],[0 nz*h-1],epsilon)
-	colorbar
-	title('epsilon')
+	subplot(2,1,2);
+	imagesc([0 nx*h-h],[0 nz*h-h],epsilon*100);
+	c=colorbar;
+	set(c,'title','%');
+	title('epsilon\_true');
 	
 %%%%%%%%%% Sauvegarde dans le fichier vp_true_inclusion %%%%%%%%%%
 
@@ -48,7 +50,6 @@ x=0:h:nx*h;
 	
 	fid= fopen('epsilon', 'w+');
 	fwrite(fid,epsilon(:,:), 'single')
-	fclose(fid);
-	
+	fclose(fid);	
 	
 end

@@ -19,13 +19,10 @@
 
 %cette fonction place les éléments de manière à tomber exactement sur les points de la grille définie par nz,nx et h si grille=='on'
 
-function []= acqui_generation_multielement(nb_elements,pitch, zpos_sources,xpos_sources, zpos_recep,xpos_recep,nz, nx, h, grille)
+function [x_sources, z_sources, x_recep, z_recep]= acqui_generation_multielement(nb_elements,pitch, zpos_sources,xpos_sources, zpos_recep,xpos_recep,nz, nx, h, grille)
 
 	aperture = (nb_elements-1)*pitch; %total length of the probe
 	
-	if (xpos_sources+aperture/2 > nx*h || zpos_sources > nz*h || xpos_recep +aperture/2 > nx*h || zpos_recep > nz*h )
-		disp("!!! ATTENTION !!! \n Au moins un élément se trouve hors de la zone d'étude \n\n")
-	end
 
 %%%%%%%%%% Positionnement des elements en m %%%%%%%%%%
 	x_sources= xpos_sources-(nb_elements-1)*pitch/2 : pitch : xpos_sources+(nb_elements-1)*pitch/2; 			
@@ -67,7 +64,7 @@ function []= acqui_generation_multielement(nb_elements,pitch, zpos_sources,xpos_
 
 %%%%%%%%%% Schema donnant la disposition des transducteurs %%%%%%%%%%
 	figure
-	scatter3(x_sources, y_elements,-z_sources,'black','v','filled');
+	scatter3(x_sources, y_elements,-z_sources,'black','s','filled');
 	hold on
 	scatter3(x_recep, y_elements,-z_recep,'blue','s','filled');
 	view([0 0])

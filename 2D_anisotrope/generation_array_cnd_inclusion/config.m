@@ -2,7 +2,7 @@
 
 clear all; close all;
 
-R=10^-5; 			%rapport d'echelle  : 10^5 pour passer de CND->Geophys
+R=1;%10^-5; 			%rapport d'echelle  : 10^5 pour passer de CND->Geophys
 					%n'est a changer que sur la frequence, puisque les autres dimensions sont definies a partir de la longueur d'onde l
 
 %%%%%%%%%% Constantes du probleme %%%%%%%%%%
@@ -17,13 +17,12 @@ h=l/6;				%pas de discrétisation : en fdtd o(4), respecter 5 pts par longueur d
 nz=floor(60*l /h)				%nb de points en z
 nx=floor(34*l/2 /h)				%nb de points en x
 
+dt=1.45e-8/R;
+
 %%%%%%%%%% Milieu : generation du fichier vp_true %%%%%%%%%%
 
-vp_inclusion=5800;	%vitesse dans l'inclusion en m
+vp_inclusion=5800;
 
-if (min(vp,vp_inclusion)/f/h < 5) 
-	disp("!!! ATTENTION !!! \n Il n'y aura pas 5 pts par longueur d'onde. \n\n")
-end
 
 xpos_center=ceil(nx/2)*h;   %position du centre du défaut en m
 zpos_center=50*l;
@@ -77,7 +76,7 @@ disp(["Avec h=" num2str(h) " m, il faut que dt <= " num2str(dt_max) "s.\n\n"])
 %%%%%%%%%% Generation du signal d'excitation fricker %%%%%%%%%%
 
 
-fricker_generation(f,1024)
+fricker_generation(f,1024,dt)
 
 
 

@@ -29,7 +29,7 @@ x=0:h:nx*h;
 %%%%%%%%%% Illustration %%%%%%%%%%
 	
 	figure
-	imagesc([0 nx*h-1],[0 nz*h-1],m)
+	imagesc([0 nx*h-h],[0 nz*h-h],m)
 	colorbar
 	title('vp\_true')
 	
