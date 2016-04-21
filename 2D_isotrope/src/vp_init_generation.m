@@ -1,26 +1,20 @@
 %%%%%%% milieu : 2 couches lissées %%%%%%%
-function []=vp_init_generation(vp1, vp2, nz, nx,h)
+function [vp,rho]=vp_init_generation(vp,rho, nz, nx,h)
 	
-	vp=[vp1*ones(1,floor(nz/2)) vp2*ones(1,ceil(nz/2))];	
+	vp=vp*ones(nz,nx);
+	rho=rho*ones(nz,nx);
 	
-	N=floor(nz/10); 	% number of points of the local averaging
-	vp=[vp1*ones(1,N) vp]; %rajout de N points en amont pour ce qui sera coupé au filtre
-	F=4/nz; 			%frequence spatiale de coupure (normalisée)
-	h2=fir1(N,F);
-	vp = filter(h2,1,vp);
-	vp=vp(1,(N+1):end); 
 
-	vp=vp'*ones(1,nx);
-	
-%%%%%%%%%% Simulation de surface libre %%%%%%%%%%
-
-	%e_sl=10; 		%10 points d'épaisseur pour la simulation de surface libre
-	%v_sl=1500;		%vitesse dans le second milieu
-	%vp(end-10:end,:)=v_sl;
-	
 %%%%%%%%%% Illustration %%%%%%%%%%
 	
-	figure
+	figure(101)
+	subplot(211)
+	imagesc([0 nx*h-h],[0 nz*h-h],rho)
+	colorbar
+	title('rho\_init')
+	
+	figure(100)
+	subplot(211)
 	imagesc([0 nx*h-h],[0 nz*h-h],vp)
 	colorbar
 	title('vp\_init')
@@ -29,6 +23,12 @@ function []=vp_init_generation(vp1, vp2, nz, nx,h)
 
 	fid=fopen('vp_init','w+');
 	fwrite(fid, vp(:,:,:),'single');
+	fclose(fid);
+
+%%%%%%%%%% Sauvegarde dans le fichier rho_init %%%%%%%%%%
+
+	fid=fopen('rho_init','w+');
+	fwrite(fid, rho(:,:,:),'single');
 	fclose(fid);
 	
 end
