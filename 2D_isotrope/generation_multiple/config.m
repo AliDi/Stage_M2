@@ -8,15 +8,15 @@ R=1;%e-5; 			%rapport d'echelle  : 10^5 pour passer de CND->Geophys
 %%%%%%%%%% Constantes du probleme %%%%%%%%%%
 
 f=2e6*R;			% frequence centrale du transducteur en Hz
-vp=5800;			%vitesse du milieu en m/s
+vp=6000;			%vitesse du milieu en m/s
 l=vp/f;				%longueur d'onde en m
 
-h=vp/(1.5*2e6)/5;				%pas de discrétisation : en fdtd o(4), respecter 5 pts par longueur d'onde
+h=vp/(2*2e6)/6;				%pas de discrétisation : en fdtd o(4), respecter 5 pts par longueur d'onde
 
 nz=floor(0.05/h) %floor(10*l /h)				%nb de points en z
-nx=floor(0.1/h) %floor(50*l/2 /h)				%nb de points en x
+nx=floor(0.24/h) %floor(50*l/2 /h)				%nb de points en x
 
-dt=2.4e-8/R;
+dt=1.5e-8/R;
 
 
 
@@ -35,7 +35,7 @@ rho=8000;
 %%%%%%%%%% Milieu : ajout d'une soudure %%%%%%%%%%
 
 vp_weld= 5500;
-rho_weld=6000;
+rho_weld=8000;
 angl = 65;			%angle du bord droit de la soudure en degre
 rg = l;			%root gap en m
 [vp_true rho_true]=vp_weld_generation(vp_true , vp_weld , rho_true , rho_weld , angl , rg , nz , nx , h );
@@ -45,12 +45,12 @@ rg = l;			%root gap en m
 
 %%%%%%%%%% Milieu : ajout d'une fissure %%%%%%%%%%
 
-xpos_center=ceil(nx/2)*h;   %position du centre du défaut en m
+xpos_center=nx/2*h-0.0108;   %position du centre du défaut en m
 zpos_center=10*l;
 
 Larg=6*l; 			%longueur du crack en m
-long=l;				%largeur du crack en m
-angl= 45;
+long=h;				%largeur du crack en m
+angl= 65;
 vp_crack=5000;
 rho_crack=5000;
 
@@ -63,7 +63,7 @@ rho_crack=5000;
 %%%%%%%%%% Milieu : ajout d'une inclusion %%%%%%%%%%
 
 xpos_center=ceil(nx/2)*h;   %position du centre du défaut en m
-zpos_center=3*l;
+zpos_center=10*l;
 
 vp_inclusion=5000;
 rho_inclusion=5000;
@@ -75,17 +75,17 @@ r=l/4;						%rayon de l'inclusion en m
 
 %%%%%%%%% Milieu : ajout d'un alignement d'inclusions %%%%%%%%%%
 
-xpos_center=ceil(nx/2)*h;   %position du centre du défaut en m
-zpos_center=7*l;
+#xpos_center=ceil(nx/2)*h;   %position du centre du défaut en m
+#zpos_center=7*l;
 
-vp_inclusion=5000;
-rho_inclusion=5000;
-r=l/4;
+#vp_inclusion=5000;
+#rho_inclusion=5000;
+#r=l/4;
 
-pitch_inclusion=2*l;
-nb_inclusion=5;
+#pitch_inclusion=2*l;
+#nb_inclusion=5;
 
-[vp_true rho_true]=vp_true_Ninclusions(vp_true , vp_inclusion , rho_true , rho_inclusion , r , pitch_inclusion , xpos_center , zpos_center , nz , nx , h , nb_inclusion);
+#[vp_true rho_true]=vp_true_Ninclusions(vp_true , vp_inclusion , rho_true , rho_inclusion , r , pitch_inclusion , xpos_center , zpos_center , nz , nx , h , nb_inclusion);
 
 
 
@@ -96,36 +96,45 @@ nb_inclusion=5;
 %%%%%%%%%% Sources/recepteurs : generation du fichier acqui %%%%%%%%%%
 %sonde immobile et chaque element est considere ponctuel
 nb_elements=64;		%number of active elements	
-pitch=0.0013;
+pitch=0.001;
 			%center-to-center distance between 2 successive elements
-zpos_sources =h; 			%z position of the probe (in m)
-xpos_sources =ceil(nx/2)*h; 	%position of array center (in m)
+zpos_sources1 =h; 			%z position of the probe (in m)
+xpos_sources1 =5.35e-2; 	%position of array center (in m)
 
-zpos_recep = h;
-xpos_recep =  ceil(nx/2)*h;
+zpos_recep1 = h;
+xpos_recep1 =  xpos_sources1;
 
+zpos_sources2 = (nz-2)*h;
+xpos_sources2 = 18.65e-2;
 
-[x_sources, z_sources, x_recep, z_recep]=acqui_generation_multielement(nb_elements , pitch , zpos_sources , xpos_sources , zpos_recep , xpos_recep , nz , nx , h , 'on');
+zpos_recep2 = (nz-2)*h;
+xpos_recep2 =  xpos_sources2;
 
-%acqui_generation_multielement(nb_elements,pitch,zpos_sources,xpos_sources, zpos_recep, xpos_recep, nz, nx, h,'on');
+%[x_sources, z_sources, x_recep, z_recep]=acqui_generation_multielement(nb_elements , pitch , zpos_sources , xpos_sources , zpos_recep , xpos_recep , nz , nx , h , 'on');
+
+[x_sources z_sources x_recep z_recep]= acqui_generation_multielement_2trans(nb_elements , pitch ,  zpos_sources1 , xpos_sources1 , zpos_sources2 , xpos_sources2 , zpos_recep1 , xpos_recep1 , zpos_recep2 , xpos_recep2 , nz , nx , h , 'on');
+
+%[x_sources z_sources x_recep z_recep]= acqui_generation_multielement_reflex_trans(nb_elements , pitch , zpos_sources1 , xpos_sources1 , zpos_recep1 , xpos_recep1 , zpos_recep2 , xpos_recep2 , nz , nx , h , 'on' );
+
 
 
 %%%%%%%%%%% Vérification du critère de courant %%%%%%%%%%
 a1=1.125; 			%d'apres le code TOY2DAC.......
 a2 = -1/24;
-dt_max=0.606*h/(sqrt(2)*(abs(a1)+abs(a2))) / max([vp]);
+dt_max=h/(sqrt(2)*(abs(a1)+abs(a2))) / max(max([vp_true]));
 
 
 disp(["Avec h=" num2str(h) " m, il faut que dt <= " num2str(dt_max) "s.\n\n"])
 
 %%%%%%%%%% Generation du signal d'excitation fricker %%%%%%%%%%
 
-fricker_generation(2e6,500,dt)
+fricker_generation(f,2048,dt)
 title('excitation')
 
 
 
 
-
+figure(100)
+colorbar("EastOutside")
 
 

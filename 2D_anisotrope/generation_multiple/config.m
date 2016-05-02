@@ -8,15 +8,15 @@ R=1;%e-5; 			%rapport d'echelle  : 10^5 pour passer de CND->Geophys
 %%%%%%%%%% Constantes du probleme %%%%%%%%%%
 
 f=2e6*R;			% frequence centrale du transducteur en Hz
-vp=5800;			%vitesse du milieu en m/s
+vp=6000;			%vitesse du milieu en m/s
 l=vp/f;				%longueur d'onde en m
 
-h=vp/(1.5*2e6)/5;				%pas de discrétisation : en fdtd o(4), respecter 5 pts par longueur d'onde
+h=vp/(2*2e6)/5;				%pas de discrétisation : en fdtd o(4), respecter 5 pts par longueur d'onde
 
 nz=floor(0.05/h) %floor(10*l /h)				%nb de points en z
 nx=floor(0.1/h) %floor(50*l/2 /h)				%nb de points en x
 
-dt=2.4e-8/R;
+dt=1.8e-8/R;
 
 
 
@@ -35,14 +35,14 @@ epsilon = epsilon_init_generation(epsilon_init, nz, nx,h);
 %%%%%%%%%% Milieu : ajout d'une soudure %%%%%%%%%%
 
 vp_weld= 5500;
-rho_weld=6000;
+rho_weld=5000;
 angl = 65;			%angle du bord droit de la soudure en degre
 rg = l;			%root gap en m
 [vp_true rho_true]=vp_weld_generation(vp_true , vp_weld , rho_true , rho_weld , angl , rg , nz , nx , h );
 
 %anisotropie elliptique : vitesse horizontale différente de la verticale
 vp_weld_v=vp_weld;
-vp_weld_h = 5000
+vp_weld_h = 5555;
 epsilon=epsilon_weld_generation(vp_weld_h , vp_weld_v , angl , rg , nz , nx , h);
 
 
@@ -60,7 +60,7 @@ vp_crack=5000;
 rho_crack=5000;
 
 
-[vp_true rho_true]=vp_true_crack(vp_true , vp_crack , rho_true , rho_crack , long , Larg , angl , xpos_center , zpos_center , nz , nx , h);
+%[vp_true rho_true]=vp_true_crack(vp_true , vp_crack , rho_true , rho_crack , long , Larg , angl , xpos_center , zpos_center , nz , nx , h);
 
 
 
@@ -74,7 +74,7 @@ vp_inclusion=5000;
 rho_inclusion=5000;
 r=l/4;						%rayon de l'inclusion en m
 
-[vp_true rho_true]=vp_true_inclusion(vp_true , vp_inclusion , rho_true , rho_inclusion , r , xpos_center , zpos_center , nz , nx , h);
+%[vp_true rho_true]=vp_true_inclusion(vp_true , vp_inclusion , rho_true , rho_inclusion , r , xpos_center , zpos_center , nz , nx , h);
 
 
 
@@ -90,18 +90,14 @@ r=l/4;
 pitch_inclusion=2*l;
 nb_inclusion=5;
 
-[vp_true rho_true]=vp_true_Ninclusions(vp_true , vp_inclusion , rho_true , rho_inclusion , r , pitch_inclusion , xpos_center , zpos_center , nz , nx , h , nb_inclusion);
+%[vp_true rho_true]=vp_true_Ninclusions(vp_true , vp_inclusion , rho_true , rho_inclusion , r , pitch_inclusion , xpos_center , zpos_center , nz , nx , h , nb_inclusion);
 
 
-
-%%%%%%%%%% Generation du fichier contenant les masses volumiques %%%%%%%%%%
-%rho=8000;
-%rho_generation(rho,nz,nx);
 
 %%%%%%%%%% Sources/recepteurs : generation du fichier acqui %%%%%%%%%%
 %sonde immobile et chaque element est considere ponctuel
 nb_elements=64;		%number of active elements	
-pitch=0.0013;
+pitch=0.001;
 			%center-to-center distance between 2 successive elements
 zpos_sources =h; 			%z position of the probe (in m)
 xpos_sources =ceil(nx/2)*h; 	%position of array center (in m)
@@ -125,8 +121,12 @@ disp(["Avec h=" num2str(h) " m, il faut que dt <= " num2str(dt_max) "s.\n\n"])
 
 %%%%%%%%%% Generation du signal d'excitation fricker %%%%%%%%%%
 
-fricker_generation(2e6,500,dt)
+fricker_generation(2e6,2048,dt)
 title('excitation')
+
+%%%%%%%%%% Generation du fichier delta (contenant que des zeros) %%%%%%%%%%
+
+delta_zero_generation(nz, nx,h);
 
 
 

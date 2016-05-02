@@ -13,36 +13,45 @@
 
 %the probe is fixed
 %the probe is along the x axis, emitting along z axis
-%one element for excitation, all the elements for reception
+%2 transducers for excitation, all the elements for reception
 
 %zpos_ et xpos_ sont les positions en m du centre des transducteurs multi-elements
 
 %cette fonction place les éléments de manière à tomber exactement sur les points de la grille définie par nz,nx et h si grille=='on'
 
-function [x_sources z_sources x_recep z_recep]= acqui_generation_multielement_reflex_trans(nb_elements,pitch, zpos_sources,xpos_sources, zpos_recep1,xpos_recep1,zpos_recep2,xpos_recep2,nz, nx, h, grille)
+function [x_sources z_sources x_recep z_recep]= acqui_generation_multielement_2trans(nb_elements , pitch ,  zpos_sources1 , xpos_sources1 , zpos_sources2 , xpos_sources2 , zpos_recep1 , xpos_recep1 , zpos_recep2 , xpos_recep2 , nz , nx , h , grille)
 
 	aperture = (nb_elements-1)*pitch; %total length of the probe
 	
-	nb_source=nb_elements;
+	nb_source=2*nb_elements;
 	nb_recep=2*nb_elements;
 
 %%%%%%%%%% Positionnement des elements en m %%%%%%%%%%
-	x_sources= xpos_sources-(nb_elements-1)*pitch/2 : pitch : xpos_sources+(nb_elements-1)*pitch/2; 			
 
-	z_sources=zpos_sources*ones(1,nb_elements);
+%pour le premier transducteur
+	x_sources= xpos_sources1-(nb_elements-1)*pitch/2 : pitch : xpos_sources1+(nb_elements-1)*pitch/2; 			
+
+	z_sources=zpos_sources1*ones(1,nb_elements);
 	
 	x_recep= xpos_recep1-(nb_elements-1)*pitch/2 : pitch : xpos_recep1+(nb_elements-1)*pitch/2;
 	
 	z_recep=zpos_recep1*ones(1,nb_elements);
 	
-	y_sources=zeros(1,nb_source); %2D
+
 	
-%pour les recep en transmission
+%pour le second transducteur
+	x_sources = [x_sources xpos_sources2-(nb_elements-1)*pitch/2 : pitch : xpos_sources2+(nb_elements-1)*pitch/2];
+
+	z_sources = [z_sources zpos_sources2*ones(1,nb_elements)];
+
 	x_recep= [x_recep  xpos_recep2-(nb_elements-1)*pitch/2 : pitch : xpos_recep2+(nb_elements-1)*pitch/2]; 
 	
 	z_recep=[z_recep zpos_recep2*ones(1,nb_elements)];
 	
-	y_recep=zeros(1,nb_recep); %2D
+	
+%en y
+	y_recep=zeros(1,2*nb_elements); %2D
+	y_sources=zeros(1,2*nb_elements); %2D
 	
 	
 %%%%%%%%%% Placement des sources/recep sur la grille d'échantillonnage %%%%%%%%%%
@@ -53,7 +62,6 @@ function [x_sources z_sources x_recep z_recep]= acqui_generation_multielement_re
 		x_recep = round(x_recep./h).*h;
 		z_recep = round(z_recep./h).*h;	
 	end
-
 
 %%%%%%%%%% Generation de la matrice %%%%%%%%%%
 	for i=1:nb_source
@@ -72,12 +80,12 @@ function [x_sources z_sources x_recep z_recep]= acqui_generation_multielement_re
 	%save("-ascii","acqui_file","acqui")
 
 %%%%%%%%%% Schema donnant la disposition des transducteurs %%%%%%%%%%
-	figure(100)
+	figure
+	scatter3(x_sources, y_sources,-z_sources,'green','o','filled');
 	hold on
-	scatter(x_sources,z_sources,'black','s','filled');
-	scatter(x_recep,z_recep,'blue','s','filled');
-	%axis([0 nx*h 0 1 -nz*h 0.3*nz*h])
-	hold off
+	scatter3(x_recep, y_recep,-z_recep,'black','o','filled');
+	view([0 0])
+	axis([0 nx*h 0 1 -nz*h 0.3*nz*h])
 
 end
 
