@@ -104,10 +104,10 @@ xpos_sources1 =5.35e-2; 	%position of array center (in m)
 zpos_recep1 = h;
 xpos_recep1 =  xpos_sources1;
 
-zpos_sources2 = (nz-2)*h;
-xpos_sources2 = 18.65e-2;
+zpos_sources2 = (nz-1)*h-h;
+xpos_sources2 = 7.65e-2;
 
-zpos_recep2 = (nz-2)*h;
+zpos_recep2 = zpos_sources2;
 xpos_recep2 =  xpos_sources2;
 
 %[x_sources, z_sources, x_recep, z_recep]=acqui_generation_multielement(nb_elements , pitch , zpos_sources , xpos_sources , zpos_recep , xpos_recep , nz , nx , h , 'on');
@@ -128,7 +128,7 @@ disp(["Avec h=" num2str(h) " m, il faut que dt <= " num2str(dt_max) "s.\n\n"])
 
 %%%%%%%%%% Generation du signal d'excitation fricker %%%%%%%%%%
 
-fricker_generation(f,2048,dt)
+fricker_generation(f,3000,dt)
 title('excitation')
 
 
@@ -136,5 +136,6 @@ title('excitation')
 
 figure(100)
 colorbar("EastOutside")
+print -dpng config.png
 
 

@@ -33,7 +33,7 @@ function [epsilon]=epsilon_weld_generation(vp_weld_h , vp_weld_v , angl , rg , n
 	set(c,'title','%');
 	title('epsilon\_true');
 	
-%%%%%%%%%% Sauvegarde dans le fichier vp_true_inclusion %%%%%%%%%%
+%%%%%%%%%% Sauvegarde dans le fichier epsilon_true %%%%%%%%%%
 
 	fid= fopen('epsilon_true', 'w+');
 	fwrite(fid,epsilon(:,:), 'single');

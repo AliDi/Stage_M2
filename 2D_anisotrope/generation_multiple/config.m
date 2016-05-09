@@ -11,12 +11,12 @@ f=2e6*R;			% frequence centrale du transducteur en Hz
 vp=6000;			%vitesse du milieu en m/s
 l=vp/f;				%longueur d'onde en m
 
-h=vp/(2*2e6)/5;				%pas de discrétisation : en fdtd o(4), respecter 5 pts par longueur d'onde
+h=vp/(2*2e6)/6;				%pas de discrétisation : en fdtd o(4), respecter 5 pts par longueur d'onde
 
 nz=floor(0.05/h) %floor(10*l /h)				%nb de points en z
-nx=floor(0.1/h) %floor(50*l/2 /h)				%nb de points en x
+nx=floor(0.1/h) %floor(50*l/2 /h)					%nb de points en x
 
-dt=1.8e-8/R;
+dt=1.5e-8/R;
 
 
 
@@ -38,12 +38,12 @@ vp_weld= 5500;
 rho_weld=5000;
 angl = 65;			%angle du bord droit de la soudure en degre
 rg = l;			%root gap en m
-[vp_true rho_true]=vp_weld_generation(vp_true , vp_weld , rho_true , rho_weld , angl , rg , nz , nx , h );
+%[vp_true rho_true]=vp_weld_generation(vp_true , vp_weld , rho_true , rho_weld , angl , rg , nz , nx , h );
 
 %anisotropie elliptique : vitesse horizontale différente de la verticale
 vp_weld_v=vp_weld;
 vp_weld_h = 5555;
-epsilon=epsilon_weld_generation(vp_weld_h , vp_weld_v , angl , rg , nz , nx , h);
+%epsilon=epsilon_weld_generation(vp_weld_h , vp_weld_v , angl , rg , nz , nx , h);
 
 
 
@@ -68,14 +68,17 @@ rho_crack=5000;
 %%%%%%%%%% Milieu : ajout d'une inclusion %%%%%%%%%%
 
 xpos_center=ceil(nx/2)*h;   %position du centre du défaut en m
-zpos_center=3*l;
+zpos_center=10*l;
 
 vp_inclusion=5000;
 rho_inclusion=5000;
-r=l/4;						%rayon de l'inclusion en m
+r=l;						%rayon de l'inclusion en m
 
-%[vp_true rho_true]=vp_true_inclusion(vp_true , vp_inclusion , rho_true , rho_inclusion , r , xpos_center , zpos_center , nz , nx , h);
+[vp_true rho_true]=vp_true_inclusion(vp_true , vp_inclusion , rho_true , rho_inclusion , r , xpos_center , zpos_center , nz , nx , h);
 
+vp_inclusion_v=vp_inclusion;
+vp_inclusion_h=vp_inclusion+10/100*vp_inclusion;
+epsilon_inclusion_generation(vp_inclusion_h,vp_inclusion_v , r,xpos_center,zpos_center, nz, nx,h)
 
 
 %%%%%%%%% Milieu : ajout d'un alignement d'inclusions %%%%%%%%%%
@@ -102,11 +105,15 @@ pitch=0.001;
 zpos_sources =h; 			%z position of the probe (in m)
 xpos_sources =ceil(nx/2)*h; 	%position of array center (in m)
 
-zpos_recep = h;
-xpos_recep =  ceil(nx/2)*h;
+zpos_recep1 = h;
+xpos_recep1 =  ceil(nx/2)*h;
 
+zpos_recep2 = (nz-1)*h-h;
+xpos_recep2 = ceil(nx/2)*h;
 
-[x_sources, z_sources, x_recep, z_recep]=acqui_generation_multielement(nb_elements , pitch , zpos_sources , xpos_sources , zpos_recep , xpos_recep , nz , nx , h , 'on');
+%[x_sources, z_sources, x_recep, z_recep]=acqui_generation_multielement(nb_elements , pitch , zpos_sources , xpos_sources , zpos_recep , xpos_recep , nz , nx , h , 'on');
+
+[x_sources z_sources x_recep z_recep]= acqui_generation_multielement_reflex_trans(nb_elements , pitch , zpos_sources , xpos_sources , zpos_recep1 , xpos_recep1 , zpos_recep2 ,  xpos_recep2 , nz , nx , h , 'on');
 
 %acqui_generation_multielement(nb_elements,pitch,zpos_sources,xpos_sources, zpos_recep, xpos_recep, nz, nx, h,'on');
 
@@ -123,10 +130,6 @@ disp(["Avec h=" num2str(h) " m, il faut que dt <= " num2str(dt_max) "s.\n\n"])
 
 fricker_generation(2e6,2048,dt)
 title('excitation')
-
-%%%%%%%%%% Generation du fichier delta (contenant que des zeros) %%%%%%%%%%
-
-delta_zero_generation(nz, nx,h);
 
 
 

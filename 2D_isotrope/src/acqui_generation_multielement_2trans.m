@@ -80,12 +80,12 @@ function [x_sources z_sources x_recep z_recep]= acqui_generation_multielement_2t
 	%save("-ascii","acqui_file","acqui")
 
 %%%%%%%%%% Schema donnant la disposition des transducteurs %%%%%%%%%%
-	figure
-	scatter3(x_sources, y_sources,-z_sources,'green','o','filled');
+	figure(100)
 	hold on
-	scatter3(x_recep, y_recep,-z_recep,'black','o','filled');
-	view([0 0])
-	axis([0 nx*h 0 1 -nz*h 0.3*nz*h])
+	scatter(x_sources, z_sources,'green','o','filled');
+	hold on
+	scatter(x_recep, z_recep,'black','o','filled');
+	hold off
 
 end
 

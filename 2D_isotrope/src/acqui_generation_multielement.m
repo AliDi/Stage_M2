@@ -19,7 +19,7 @@
 
 %cette fonction place les éléments de manière à tomber exactement sur les points de la grille définie par nz,nx et h si grille=='on'
 
-function [x_sources z_sources x_recep z_recep]= acqui_generation_multielement(nb_elements , pitch , zpos_sources , xpos_sources , zpos_recep , xpos_recep , nz , nx , h , grilles )
+function [x_sources z_sources x_recep z_recep]= acqui_generation_multielement(nb_elements , pitch , zpos_sources , xpos_sources , zpos_recep , xpos_recep , nz , nx , h , grille )
 
 	aperture = (nb_elements-1)*pitch; %total length of the probe
 
