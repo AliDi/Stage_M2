@@ -1,0 +1,142 @@
+\documentclass[a4paper,11pt]{report} % ligne de classe
+% preambule
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[frenchb]{babel}
+\usepackage{textcomp} 
+\usepackage[top=3cm,left=3cm,right=3cm,bottom=2cm]{geometry}
+\usepackage{lmodern}
+\usepackage{sectsty}
+%\usepackage{nicefrac}
+\usepackage{graphicx}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{capt-of}
+\usepackage{caption}
+\usepackage{tikz}
+\usepackage{multirow}
+    
+    
+\usepackage{fancyvrb} % pour forcer les verbatim sur une seule page
+\usepackage{url}
+    
+\usepackage{subfigure}
+%\usepackage{subcaption}
+    
+%\newcommand\matlab{MATLab\textsuperscript{\textregistered}}
+
+\renewcommand{\baselinestretch}{1.1}
+
+\usepackage[colorinlistoftodos]{todonotes}
+
+%\usepackage{cite} 
+\usepackage[round,authoryear,numbers]{natbib}
+
+
+\usepackage{hyperref}
+\hypersetup{
+     colorlinks   = true,
+     citecolor    = blue!90
+}
+
+
+
+\begin{document} % début du doc
+% corps du doc
+
+\begin{titlepage}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+
+\center % Center everything on the page
+ 
+%----------------------------------------------------------------------------------------
+%	HEADING SECTIONS
+%----------------------------------------------------------------------------------------
+
+\textsc{\large Université du Maine \\ UFR Sciences et Techniques}\\[0.5cm] % Name of your university/college
+
+\textsc{ \large Master Acoustique 2\textsuperscript{ème} année}\\[3.0cm] % Major heading such as course name
+\textsc{\Large Rapport de Stage}\\[0.5cm] % Minor heading such as course title
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\HRule \\[0.7cm]
+{ \huge \bfseries Imagerie ultrasonore par inversion de formes d'onde}\\[0.4cm] % Title of your document
+\HRule \\[1.5cm]
+ 
+%----------------------------------------------------------------------------------------
+%	AUTHOR SECTION
+%----------------------------------------------------------------------------------------
+
+
+{\Large Alice \textsc{Dinsenmeyer}}\\[3cm]
+
+\Large encadrée par : \\[1cm]
+Romain \textsc{Brossier} et
+Ludovic \textsc{Moreau}\\
+Maîtres de conférence, ISTerre
+
+% If you don't want a supervisor, uncomment the two lines below and remove the section above
+%\Large \emph{Author:}\\
+%John \textsc{Smith}\\[3cm] % Your name
+
+%----------------------------------------------------------------------------------------
+%	DATE SECTION
+%----------------------------------------------------------------------------------------
+\vfill
+{\large Année universitaire 2015-2016}\\[3cm] % Date, change the \today to a set date if you want to be precise
+ 
+
+
+%----------------------------------------------------------------------------------------
+%	LOGO SECTION
+%----------------------------------------------------------------------------------------
+\begin{minipage}{0.3\textwidth}
+	\centering
+	\includegraphics[height=2.5cm]{img/univ.png}	
+\end{minipage}
+\begin{minipage}{0.3\textwidth}
+	\centering	
+	\includegraphics[height=2.5cm]{img/cnrs.jpg}
+\end{minipage}
+\begin{minipage}{0.3\textwidth}
+	\centering
+	\includegraphics[height=2.5cm]{img/isterre.jpg}
+\end{minipage}
+ % Include a department/university logo - this will require the graphicx package
+
+ 
+
+
+%----------------------------------------------------------------------------------------
+%\vfill % Fill the rest of the page with whitespace
+
+\end{titlepage}
+
+
+\newpage
+%\input{remerciements}
+\vspace{2cm}
+%\input{abstract}
+
+%\tableofcontents
+
+\include{introduction}
+
+\include{fwi}
+
+\include{application}
+
+%\bibliographystyle{plain}
+%\bibliography{biblio}
+
+\end{document} % fin doc
+
+
