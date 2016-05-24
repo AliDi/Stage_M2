@@ -12,7 +12,7 @@ structure :
 
 \todo[inline]{enjeux et applications du cnd}
 
-Dans l'industrie ou le domaine médical, il est nécessaire de connaître les propriétés et contrôler l'évolution de matériaux élastiques. Pour cela, en complément des ondes éléctromagnétiques,  les ondes ultrasonores sont utilisées en raison de leur faible atténuation.\\~\\
+Dans l'industrie ou le domaine médical, il est nécessaire de connaître les propriétés et contrôler l'évolution de matériaux élastiques. Pour cela, en complément des ondes éléctromagnétiques,  les ondes ultrasonores sont utilisées en raison de leur plus faible atténuation.\\~\\
 
 
 \todo[inline]{méthodes vieilles et actuelles (principe et résultats, avantages et limites)}
@@ -24,20 +24,25 @@ D'autre méthode d'imagerie utilisant des transducteurs multi-éléments sont é
 résolution limitée par le nombre d'éléments et leur espacement
 
 
-Pour toutes ces méthodes, il est important de connaître la vitesse du milieu observé, afin de localiser le réflecteur à l'origine de l'écho observé. C'est pour cette raison que l'efficacité de ces méthodes est fortement réduite en milieux anisotrope.  
-De plus, la résolution de ces méthodes est limitée par la capacité à séparer les échos et est donc de l'ordre de la longueur d'onde du signal d'excitation. 
-  
+Pour toutes ces méthodes, il est important de connaître la vitesse du milieu observé, afin de localiser le réflecteur à l'origine de l'écho observé. C'est pour cette raison que leur efficacité est fortement réduite en milieux anisotrope.  
+De plus, la résolution de ces méthodes est limitée par la capacité à séparer les échos et est donc de l'ordre de la longueur d'onde du signal d'excitation. \\
+
+
+Dépassant ces limitations, d'autres méthodes de formation de voies dites "haute résolution" utilisent les techniques de retournement temporel telles que la méthode de Décomposition de l'Opérateur de Retournement Temporel \citep{prada_dort} ou la méthode Capon \citep{capon} dont est issu notamment l'algorithme MUltiple SIgnal Classification \citep{schmidt}. Ces méthodes sont basées sur la décomposition en valeurs propres de la matrice interspectrale et permettent ainsi de minimiser la contribution énergétique du bruit. Cependant, ces méthodes restent sensibles au bruit. De plus, tout comme les méthodes de formation de voies classiques, elles nécessitent de connaître a priori les propriétés élastiques du milieu de propagation des ondes.
 
 
 
-Donc méthodes inverses (du temps de vol est déduit la vitesse et donc les propriétés élastiques) dite hautes résolution :
-dort
 
 
 \todo[inline]{points communs avec imagerie de la terre}
 Le domaine de la prospection géophysique utilise également les ondes mécaniques pour établir les propriétés de la Terre. Si le matériel et les gammes de  fréquence diffèrent, la physique et les méthodes sont proches
 
+
+tomographie (basée sur rais, ie hf, pas de réfraction, isotrope), migration (sensible au bruit, ondes réfléchies seulement, , optimisation topologique (? Tarantola ?)
+
 \todo[inline]{fwi, son contexte}
+topological optimization
+oberai
 
 \todo[inline]{présentation travail de stage et plan du rapport}
 

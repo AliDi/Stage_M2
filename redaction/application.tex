@@ -1,1 +1,16 @@
 \chapter{Application de la FWI à des données simulées}
+
+
+\section{anisotrope}
+
+anisotrope est plus problématique que isotrope car : 
+-modélisation plus complexe,
+-problème moins bien posé
+
+Gholami 2011 : la vitesse a beaucoup plus d'inflence sur les données que les paramètre delta et epsilon (delta étant le plus faible). D'après ses schémas, on va donc avoir une maj de la vitesse mais pas des autres paramètres
+
+\subsection{VTI}
+Pose quelques problèmes (Duveneck 2008) notamment génération d'onde S (sur données "vrai simulée"  et sur problème direct, mais pas la même car différente grille, PML, ... donc on la mute sur le résidu) qui n'a pas de sens physique. Proposer les solutions (taper Epsilon, en sismo on est dans l'eau donc c'est fait naturellement).
+
+
+Solution : sources/recep qui apportent le plus d'info. Aller voir Jean à ce sujet

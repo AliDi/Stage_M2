@@ -1,7 +1,7 @@
 %%%%%%% milieu : soudure en V %%%%%%%
 %angl est en degre
 %rg : root gap (m)
-function [epsilon]=epsilon_weld_generation(vp_weld_h , vp_weld_v , angl , rg , nz , nx , h)
+function [epsilon]=epsilon_weld_generation(epsilon_weld , epsilon , angl , rg , nz , nx , h)
 
 	a1=-tan(abs(angl*pi/180)); 	%coefficient directeur du bord droit de la sourdure
 	a2 = -a1;
@@ -16,9 +16,7 @@ function [epsilon]=epsilon_weld_generation(vp_weld_h , vp_weld_v , angl , rg , n
 		for (i=1:nz)
 						
 			if ( ((z(i)-a1*x(j))<= b1) && ((z(i)-a2*x(j))<= b2 ) ) %ie au niveau de la soudure
-				epsilon(i,j)= (vp_weld_h - vp_weld_v ) / vp_weld_v;
-			else
-				epsilon(i,j)= 0; %isotrope hors de la soudure
+				epsilon(i,j)= epsilon_weld;
 			end
 		end
 	end

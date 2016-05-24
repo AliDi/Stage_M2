@@ -4,7 +4,7 @@
 %xpos, ypos : coordonnees du centre de l'inclusion 
 %nx,nz : taille du milieu
 
-function []=epsilon_inclusion_generation(vp_inclusion_h,vp_inclusion_v , r,xpos_center,zpos_center, nz, nx,h)
+function [epsilon]=epsilon_inclusion_generation(epsilon_inclusion , epsilon ,  r,xpos_center,zpos_center, nz, nx,h)
 
 	n_r=round(r/h);						%nombre de points du rayon
 	n_xpos_center=round(xpos_center/h); %position du centre en nb de points
@@ -14,9 +14,7 @@ function []=epsilon_inclusion_generation(vp_inclusion_h,vp_inclusion_v , r,xpos_
 	for (x=1:nx)
 		for (z=1:nz)
 			if (((x-n_xpos_center)^2 +(z-n_zpos_center)^2) <= (n_r^2)) %i.e. dans l'inclusion
-				epsilon(z,x)= (vp_inclusion_h - vp_inclusion_v ) / vp_inclusion_v;
-			else
-				epsilon(z,x)= 0; %isotrope hors de la soudure
+				epsilon(z,x)= epsilon_inclusion;
 			end
 		end
 	
