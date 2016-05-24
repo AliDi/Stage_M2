@@ -7,39 +7,39 @@ I was expecting a `,' or a `}'---line 200 of file biblio.bib
  :     pages =        {~p.~WCC105}
  :                                --WCC118}
 I'm skipping whatever remains of this entry
-Warning--empty year in valensi
-Warning--empty year in valensi
 Warning--there's a number but no volume in holmes_tfm
+Warning--empty year in valensi
+Warning--empty year in valensi
 You've used 34 entries,
             2773 wiz_defined-function locations,
-            792 strings with 10009 characters,
-and the built_in function-call counts, 16155 in all, are:
-= -- 1522
-> -- 709
-< -- 25
-+ -- 248
-- -- 213
-* -- 1320
-:= -- 2427
+            792 strings with 10013 characters,
+and the built_in function-call counts, 16270 in all, are:
+= -- 1530
+> -- 729
+< -- 24
++ -- 254
+- -- 219
+* -- 1339
+:= -- 2445
 add.period$ -- 102
 call.type$ -- 34
-change.case$ -- 169
+change.case$ -- 171
 chr.to.int$ -- 33
 cite$ -- 71
-duplicate$ -- 708
-empty$ -- 1428
-format.name$ -- 259
-if$ -- 3378
+duplicate$ -- 709
+empty$ -- 1429
+format.name$ -- 265
+if$ -- 3400
 int.to.chr$ -- 2
 int.to.str$ -- 1
 missing$ -- 33
 newline$ -- 178
 num.names$ -- 136
-pop$ -- 314
+pop$ -- 317
 preamble$ -- 1
-purify$ -- 139
+purify$ -- 141
 quote$ -- 0
-skip$ -- 515
+skip$ -- 517
 stack$ -- 0
 substring$ -- 1152
 swap$ -- 63

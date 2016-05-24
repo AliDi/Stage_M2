@@ -7,7 +7,7 @@ nb_src=input(sprintf('nb src \n'));
 N=input(sprintf('nb de coeff du filtre \n'));
 
 nb_recep=128;
-dt=1.5e-8;
+dt=1.4e-8;
 
 %%%%%%%%%% Calcul du nb de point sur le signal temporel
 fid=fopen(['fsismos_P0000'],'r','l');
@@ -33,20 +33,20 @@ end
 t=(0:nt-1)*dt;
 freqs=(0:nt-1)*1/max(t);
 
-figure
-subplot(2,1,1)
-plot(t,s(1,:,1));
-title('Signal temporel pour le couple 0-0')
+#figure
+#subplot(2,1,1)
+#plot(t,s(1,:,1));
+#title('Signal temporel pour le couple 0-0')
 
 fft_s=abs(fft(s(1,:,1)));
-subplot(2,1,2)
-plot(freqs(1:nt/2),20*log10(fft_s(1:nt/2)))
+#subplot(2,1,2)
+#plot(freqs(1:nt/2),20*log10(fft_s(1:nt/2)))
 
 %%%%%%%%%% filtrage des données %%%%%%%%%%
 h=fir1(N,[2.5*freq/max(freqs)],"low");
 [filtre ff]=freqz(h,1,nt/2,1/max(t));
-figure
-plot(freqs(1:nt/2),20*log10(abs(filtre)))
+#figure
+#plot(freqs(1:nt/2),20*log10(abs(filtre)))
 
 for i=1:nb_src
 	for j=1:nb_recep
@@ -65,21 +65,21 @@ fclose(fid);
 
 fricker=filter(h,1,excitation);
 
-figure
-subplot(2,1,1)
-plot(t,excitation,'o');
-subplot(2,1,2)
+#figure
+#subplot(2,1,1)
+#plot(t,excitation,'o');
+#subplot(2,1,2)
 fft_exci=abs(fft(excitation));
-plot(freqs(1:nt/2),20*log10(fft_exci(1:nt/2)))
-title('Excitation d origine')
+#plot(freqs(1:nt/2),20*log10(fft_exci(1:nt/2)))
+#title('Excitation d origine')
 
-figure
-subplot(2,1,1)
-plot(t,fricker,'o');
-subplot(2,1,2)
+#figure
+#subplot(2,1,1)
+#plot(t,fricker,'o');
+#subplot(2,1,2)
 fft_ricker=abs(fft(fricker));
-plot(freqs(1:nt/2),20*log10(fft_ricker(1:nt/2)))
-title('Excitation filtrée')
+#plot(freqs(1:nt/2),20*log10(fft_ricker(1:nt/2)))
+#title('Excitation filtrée')
 
 fid=fopen('filtre_fricker','w+');
 fwrite(fid, fricker(:,:,:),'single');
@@ -90,14 +90,14 @@ fclose(fid);
 
 
 %%%%%%%%%% tracer du signal 0-0 filtre %%%%%%%%%%%
-figure
-subplot(2,1,1)
-plot(t,s_filtre(1,:,1));
-title('Signal temporel pour le couple 0-0 FILTRÉ')
+#figure
+#subplot(2,1,1)
+#plot(t,s_filtre(1,:,1));
+#title('Signal temporel pour le couple 0-0 FILTRÉ')
 
 fft_s_filtre=abs(fft(s_filtre(1,:,1)));
-subplot(2,1,2)
-plot(freqs(1:nt/2),20*log10(fft_s_filtre(1:nt/2)))
+#subplot(2,1,2)
+#plot(freqs(1:nt/2),20*log10(fft_s_filtre(1:nt/2)))
 
 %%%%%%%%% Ecriture des donnees filtrees %%%%%%%%%%
 

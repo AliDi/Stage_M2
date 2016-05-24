@@ -57,6 +57,12 @@ O.~Gauthier, J.~Virieux, and A.~Tarantola.
   results.
 \newblock \emph{Geophysics}, 51\penalty0 (7):\penalty0 ~p.~1387--1403, 1986.
 
+\bibitem[Holmes et~al.(2005)Holmes, Drinkwater, and Wilcox]{holmes_tfm}
+C~Holmes, B.~W. Drinkwater, and P.~D. Wilcox.
+\newblock Post-processing of the full matrix of ultrasonic transmit–receive
+  array data for non-destructive evaluation.
+\newblock \emph{NDT\&E International}, \penalty0 (38):\penalty0 701--711, 2005.
+
 \bibitem[Kolb et~al.(1986)Kolb, Collino, and Lailly]{kolb}
 P.~Kolb, F.~Collino, and P~Lailly.
 \newblock Pre-stack inversion of a 1-{D} medium.
@@ -200,12 +206,6 @@ J.~Virieux and S.~Operto.
 \newblock \textbf{An overview of full-waveform inversion in exploration
   geophysics}.
 \newblock \emph{Geophysics}, 74\penalty0 (6):\penalty0 ~p.~WCC1--WCC26, 2009.
-
-\bibitem[Wilcox(2005)]{holmes_tfm}
-C.~Holmes{,} B. W. Drinkwater{,} P.~D. Wilcox.
-\newblock Post-processing of the full matrix of ultrasonic transmit–receive
-  array data for non-destructive evaluation.
-\newblock \emph{NDT\&E International}, \penalty0 (38):\penalty0 701--711, 2005.
 
 \bibitem[Zhang et~al.(2012)Zhang, Hunter, Drinkwater, and Wilcox]{zhang}
 J.~Zhang, A.~Hunter, B.~W. Drinkwater, and P.~D. Wilcox.
