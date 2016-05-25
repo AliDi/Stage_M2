@@ -1,0 +1,102 @@
+\chapter{Techniques d'imagerie par ultrason}
+
+ L'objectif de ce chapitre est de présenter les principales méthodes multi-éléments utilisées pour l'imagerie ultrasonore. \\
+
+Les transducteurs multi-éléments sont d'abord utilisés dans les années 70 pour l'imagerie médicale et sont aujourd'hui largement utilisés en contrôle de pièces industriels. Les éléments étant pilotables indépendamment, il est possible de leur appliquer une loi de retard permettant d'orienter le front d'onde ou de focaliser le faisceau excitateur. Cela permet notamment d'améliorer le rapport signal sur bruit et peut représenter un gain de temps car le balayage d'une pièce à inspecter peut être réalisé sans déplacement du transducteur.
+
+En réception, ces transducteurs permettent de réaliser de la formation de voie dont on distingue trois principaux types de méthodes : 
+\begin{itemize}
+	\item les méthodes par retard et sommation,
+	\item les méthodes dites "haute résolution",
+	\item les méthodes basées sur la résolution de problème d'optimisation.
+\end{itemize} 
+
+
+\section{Représentation des données temporelles}
+
+Lorsque l'onde est perturbée par un changement des propriétés élastiques de son support, il est possible de l'observer directement sur les signaux temporels mesurés. Pour cela, différents modes de représentation sont utilisés. Les échographies peuvent être représentées en un point d'observation (Ascan), sur une ligne de balayage (Bscan) équivalent à une coupe transversale de la pièce,  sur un plan de balayage (Cscan et Dscan) donnant un vue de surface et ne permettant pas une localisation en profondeur d'un réflecteur (cf figure~\ref{scan}).\\
+ 
+Ce type d'analyse peut être réalisé avec des transducteurs mono-éléments. L'obtention d'une image 2D nécessite alors un balayage sur l'ensemble d'une surface de la pièce à contrôler. 
+
+%\begin{figure}[!h]
+%	\includegraphics[scale=0.7]{img/scan.png}
+%	\caption{\label{scan} Schéma des différents modes de représentation des signaux temporels (extrait de \cite{chassignole}).}
+%\end{figure} 
+
+\begin{figure}
+	\centering
+	\includegraphics[scale=0.7]{img/scan2.png}
+	\caption{\label{scan2} Schéma des différents modes de représentation des signaux temporels (extrait de \cite{bannouf}).}
+\end{figure}
+
+En revanche, le Sscan ne peut être réalisé qu'avec des transducteurs multi-éléments. Il correspond a un ensemble de Ascans réalisés sans déplacement du transducteur mais en appliquant une loi de retard aux éléments permettant de réaliser un balayage du point focal. Le Sscan permet donc d'imager des pièces partiellement accessible, et augmente la probabilité de repérer un défaut en offrant plusieurs angle d'observation.\\
+
+Cependant, la localisation dans la pièce des réflecteurs à l'origine des différents échos visibles sur les signaux temporels mesurés n'est possible que si la vitesse de propagation des ondes est connue.
+
+Si la vitesse du milieu de propagation est connue, il est possible de localiser les réflecteurs à l'origine des différents échos visibles sur es signaux temporels mesurés. Les Bsans dits "vrais" sont des Bscans sur lesquels des corrections liées à la vitesse ou à l'angle d'incidence sont appliqués.
+
+
+\section{Méthodes par retard et sommation}
+Ces données temporelles peuvent aussi être post-traitées de manière à obtenir une représentation spatiale de la pièce. Si la vitesse du milieu de propagation est connue, une analyse des temps de vol des échos permet en effet d'établir une carte du milieu. \\
+
+Il est aussi possible de sommer un ensemble de Ascan de façon cohérente, permettant ainsi de reproduire une focalisation en tous points de la zone à inspecter. C'est que proposent la méthode Synthetic Aperture Focusing Technique \citep{doctor_saft} à partir des signaux recueillis par un mono-éléments. Ce procédé est généralisé à un ensemble de capteurs et d'émetteurs dans la méthode Total Focusing Method \citep{holmes_tfm}. 
+
+L'intensité $I$ de l'image obtenue au point de coordonnées $\bm{r}$ est alors donnée par la relation suivante : 
+
+\begin{equation*}
+	I(\bm{r})= \displaystyle\sum_{r} \displaystyle\sum_{t} s_{r,t}\left( \frac{|\bm{r} - \bm{r}_r| + |\bm{r} - \bm{r}_t|}{c}\right) \text{,}
+\end{equation*}
+où $\bm{r}_r$ et $\bm{r}_t$ sont les positions des récepteurs et des émetteurs, $s_{r,t}$ sont les signaux temporels pour chaque couple émetteur-récepteur et $c$ est la vitesse de l'onde dans le milieu de propagation.
+
+Cette focalisation permet donc de couvrir l'ensemble du volume de la pièce car tous les angles peuvent être balayés, indépendamment de l'ouverture du capteur, ce qui permet une bonne résolution.\\
+
+
+
+
+
+
+\section{Méthodes hautes résolution}
+
+
+Des méthodes de localisation de sources dites "hautes résolutions" exploitent l'ensemble des covariances des signaux temporels. Les méthodes telles que MUltiple Signal Classification \citep{schmidt} et Capon \citep{capon} proposent une décomposition en valeurs propres de cette matrice de covariance afin d'en extraire deux sous-espaces bruit et signal, diminuant ainsi la contribution énergétique du bruit. \\
+
+La méthode de Décomposition de l'Opérateur de Retournement Temporel \citep{prada_2002} propose, de la même façon, d'interpréter l'opérateur de retournement temporel comme une matrice de covariance et de la décomposer. Cette dernière méthode est particulièrement adaptée aux milieux hétérogènes et/ou à géométrie complexe , puisqu'elle tire profit des réflexions multiples. 
+
+Tous comme les méthode de formation de voies classiques, il est nécessaire de connaître les propriétés élastiques du milieu de propagation pour pouvoir localiser précisément les réflecteurs.
+
+%(billette de titane, par exemple https://www.institut-langevin.espci.fr/IMG/pdf/jasakerbrat-2002.pdf)
+%(plaque mince : ondes de lamb https://www.institut-langevin.espci.fr/IMG/pdf/JASAlamb-1998.pdf)
+
+spectral decomposition of a covariance matrix
+
+dort : permet de distinguer 2 sources
+dort : opérateur de retournement temporel peut être interprété comme une matrice de covariance
+dort : adapté en milieu hétérogène a géométrie complexe, puisque tire profit des réflexions multiples. "They are all based on an a priori
+knowledge of the geometry and acoustic properties of the sample and assume that the ultrasound
+velocity is known and constant in each medium" prada 2002 complexe=environnement diffus, ou plaque mince (onde de lamb)
+
+
+amélioration de résolution et de RSB
+limitation par la taille de l'antenne
+
+\section{Résolution de problème d'optimisation}
+
+TDTE
+
+bayesian
+
+
+Antenne réseau à phase variable
+
+
+
+hohne\_2012 pour images SAFT
+
+
+gardahaut pour porpagation de rai CIVA
+
+
++acoustique non-linéaire : Nonlinear signal processing for ultrasonic imaging of material complexity (dos santos) par ex
+
+\section{Imagerie de soudure}
+Lesquelles marchent, lesquelles marchent pas

@@ -1,54 +1,54 @@
 This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: stage_m2.aux
-A level-1 auxiliary file: introduction.aux
-A level-1 auxiliary file: fwi.aux
-A level-1 auxiliary file: application.aux
+A level-1 auxiliary file: imagerie.aux
 The style file: plainnat.bst
 Database file #1: biblio.bib
 I was expecting a `,' or a `}'---line 200 of file biblio.bib
  :     pages =        {~p.~WCC105}
  :                                --WCC118}
 I'm skipping whatever remains of this entry
-You've used 1 entry,
+Warning--I didn't find a database entry for "holmes"
+Warning--there's a number but no volume in holmes_tfm
+You've used 2 entries,
             2773 wiz_defined-function locations,
-            600 strings with 5044 characters,
-and the built_in function-call counts, 310 in all, are:
-= -- 27
-> -- 10
+            606 strings with 5267 characters,
+and the built_in function-call counts, 818 in all, are:
+= -- 73
+> -- 40
 < -- 1
-+ -- 4
-- -- 3
-* -- 18
-:= -- 60
-add.period$ -- 3
-call.type$ -- 1
-change.case$ -- 3
-chr.to.int$ -- 1
-cite$ -- 2
-duplicate$ -- 16
-empty$ -- 23
-format.name$ -- 4
-if$ -- 55
++ -- 14
+- -- 12
+* -- 67
+:= -- 137
+add.period$ -- 6
+call.type$ -- 2
+change.case$ -- 9
+chr.to.int$ -- 2
+cite$ -- 5
+duplicate$ -- 37
+empty$ -- 64
+format.name$ -- 14
+if$ -- 159
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 0
-newline$ -- 13
-num.names$ -- 4
-pop$ -- 6
+missing$ -- 1
+newline$ -- 18
+num.names$ -- 8
+pop$ -- 17
 preamble$ -- 1
-purify$ -- 3
+purify$ -- 8
 quote$ -- 0
-skip$ -- 13
+skip$ -- 26
 stack$ -- 0
-substring$ -- 2
-swap$ -- 1
+substring$ -- 29
+swap$ -- 2
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 11
-warning$ -- 0
-while$ -- 3
+type$ -- 22
+warning$ -- 1
+while$ -- 8
 width$ -- 0
-write$ -- 20
+write$ -- 33
 (There was 1 error message)

@@ -1,9 +1,6 @@
-\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 1
-\BOOKMARK [0][-]{chapter.2}{L'inversion de formes d'onde}{}% 2
-\BOOKMARK [1][-]{section.2.1}{ce que c'est}{chapter.2}% 3
-\BOOKMARK [1][-]{section.2.2}{Probl\350me direct}{chapter.2}% 4
-\BOOKMARK [2][-]{subsection.2.2.1}{Acoustique isotrope}{section.2.2}% 5
-\BOOKMARK [2][-]{subsection.2.2.2}{Acoustique VTI}{section.2.2}% 6
-\BOOKMARK [1][-]{section.2.3}{application au cnd : les probl\351matiques}{chapter.2}% 7
-\BOOKMARK [0][-]{chapter.3}{Application de la FWI \340 des donn\351es simul\351es}{}% 8
-\BOOKMARK [1][-]{section.3.1}{anisotrope}{chapter.3}% 9
+\BOOKMARK [0][-]{chapter.1}{Techniques d'imagerie par ultrason}{}% 1
+\BOOKMARK [1][-]{section.1.1}{Repr\351sentation des donn\351es temporelles}{chapter.1}% 2
+\BOOKMARK [1][-]{section.1.2}{M\351thodes par retard et sommation}{chapter.1}% 3
+\BOOKMARK [1][-]{section.1.3}{M\351thodes hautes r\351solution}{chapter.1}% 4
+\BOOKMARK [1][-]{section.1.4}{R\351solution de probl\350me d'optimisation}{chapter.1}% 5
+\BOOKMARK [1][-]{section.1.5}{Imagerie de soudure}{chapter.1}% 6
