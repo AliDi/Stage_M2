@@ -29,17 +29,15 @@ Ce type d'analyse peut être réalisé avec des transducteurs mono-éléments. L
 	\caption{\label{scan2} Schéma des différents modes de représentation des signaux temporels (extrait de \cite{bannouf}).}
 \end{figure}
 
-En revanche, le Sscan ne peut être réalisé qu'avec des transducteurs multi-éléments. Il correspond a un ensemble de Ascans réalisés sans déplacement du transducteur mais en appliquant une loi de retard aux éléments permettant de réaliser un balayage du point focal. Le Sscan permet donc d'imager des pièces partiellement accessible, et augmente la probabilité de repérer un défaut en offrant plusieurs angle d'observation.\\
+En revanche, le Sscan ne peut être réalisé qu'avec des transducteurs multi-éléments. Il correspond a un ensemble de Ascans réalisés sans déplacement du transducteur mais en appliquant une loi de retard aux éléments permettant de réaliser un balayage du point focal. Le Sscan permet donc d'imager des pièces partiellement accessible, et augmente la probabilité de repérer un défaut en offrant plusieurs angles d'observation.\\
 
-Cependant, la localisation dans la pièce des réflecteurs à l'origine des différents échos visibles sur les signaux temporels mesurés n'est possible que si la vitesse de propagation des ondes est connue.
-
-Si la vitesse du milieu de propagation est connue, il est possible de localiser les réflecteurs à l'origine des différents échos visibles sur es signaux temporels mesurés. Les Bsans dits "vrais" sont des Bscans sur lesquels des corrections liées à la vitesse ou à l'angle d'incidence sont appliqués.
+Cependant, la localisation dans la pièce des réflecteurs à l'origine des différents échos visibles sur les signaux temporels mesurés n'est possible que si la vitesse de propagation des ondes est connue. Les Bsans dits "vrais" sont des Bscans sur lesquels des corrections liées à la vitesse ou à l'angle d'incidence sont appliqués.
 
 
 \section{Méthodes par retard et sommation}
 Ces données temporelles peuvent aussi être post-traitées de manière à obtenir une représentation spatiale de la pièce. Si la vitesse du milieu de propagation est connue, une analyse des temps de vol des échos permet en effet d'établir une carte du milieu. \\
 
-Il est aussi possible de sommer un ensemble de Ascan de façon cohérente, permettant ainsi de reproduire une focalisation en tous points de la zone à inspecter. C'est que proposent la méthode Synthetic Aperture Focusing Technique \citep{doctor_saft} à partir des signaux recueillis par un mono-éléments. Ce procédé est généralisé à un ensemble de capteurs et d'émetteurs dans la méthode Total Focusing Method \citep{holmes_tfm}. 
+Il est aussi possible de sommer un ensemble de Ascans de façon cohérente, permettant ainsi de reproduire une focalisation en tous points de la zone à inspecter. C'est que proposent la méthode Synthetic Aperture Focusing Technique \citep{doctor_saft} à partir des signaux recueillis par un mono-éléments. Ce procédé est généralisé à un ensemble de capteurs et d'émetteurs dans la méthode Total Focusing Method \citep{holmes_tfm}. 
 
 L'intensité $I$ de l'image obtenue au point de coordonnées $\bm{r}$ est alors donnée par la relation suivante : 
 
@@ -48,7 +46,7 @@ L'intensité $I$ de l'image obtenue au point de coordonnées $\bm{r}$ est alors 
 \end{equation*}
 où $\bm{r}_r$ et $\bm{r}_t$ sont les positions des récepteurs et des émetteurs, $s_{r,t}$ sont les signaux temporels pour chaque couple émetteur-récepteur et $c$ est la vitesse de l'onde dans le milieu de propagation.
 
-Cette focalisation permet donc de couvrir l'ensemble du volume de la pièce car tous les angles peuvent être balayés, indépendamment de l'ouverture du capteur, ce qui permet une bonne résolution.\\
+Cette focalisation permet donc de couvrir l'ensemble du volume de la pièce car tous les angles peuvent être balayés, indépendamment de l'ouverture du capteur, ce qui permet une meilleure résolution que celle obtenue avec des Bscans.\\
 
 
 
@@ -62,7 +60,7 @@ Des méthodes de localisation de sources dites "hautes résolutions" exploitent 
 
 La méthode de Décomposition de l'Opérateur de Retournement Temporel \citep{prada_2002} propose, de la même façon, d'interpréter l'opérateur de retournement temporel comme une matrice de covariance et de la décomposer. Cette dernière méthode est particulièrement adaptée aux milieux hétérogènes et/ou à géométrie complexe , puisqu'elle tire profit des réflexions multiples. 
 
-Tous comme les méthode de formation de voies classiques, il est nécessaire de connaître les propriétés élastiques du milieu de propagation pour pouvoir localiser précisément les réflecteurs.
+Tous comme les méthode de formation de voies classiques, il est nécessaire de connaître les propriétés élastiques du milieu de propagation pour pouvoir localiser précisément les réflecteurs.\\
 
 %(billette de titane, par exemple https://www.institut-langevin.espci.fr/IMG/pdf/jasakerbrat-2002.pdf)
 %(plaque mince : ondes de lamb https://www.institut-langevin.espci.fr/IMG/pdf/JASAlamb-1998.pdf)
@@ -81,6 +79,52 @@ limitation par la taille de l'antenne
 
 \section{Résolution de problème d'optimisation}
 
+L'objectif de ces méthodes est de résoudre un problème inverse en minimisant une fonction coût traduisant l'écart entre le modèle calculé et le modèle vrai \citep{tarantola_book}. Le modèle est décrit par un nombre fini de paramètres $\bm{m}$ qui sont liés à des observables $\bm{d}_{obs}$ par l'intermédiaire de lois physiques $\bm{g}$. La résolution du problème inverse consiste donc à trouver les paramètres $\bm{m}$ optimaux à partir des données $\bm{d}_{obs}(\bm{m})$ (cf schéma de la figure~\ref{pb_inv}). 
+
+\begin{figure}[!h]
+	\centering
+	\begin{tikzpicture}
+		\node (param) [draw=black, align=center] at (0,0) {Paramètres initiaux \\ $\bm{m}_{0}$};
+		\node (dir) [below=1cm of param , draw=black,align=center] {Problème direct \\ $\bm{g}(\bm{m})$};
+		\path[->, thick,shorten <=2pt,shorten >=2pt] (param) edge (dir);
+		\node (fc) [draw=black,right=2cm of dir, align=center] {Fonction de coût \\ $\text{écart}\hspace{-1mm}\left(\bm{d}_{obs}, \bm{d}_{cal}(\bm{m})\right)$};
+		\path[->, thick,shorten <=2pt,shorten >=2pt] (dir) edge (fc);
+		\node (m) [draw=black, below right= and -0.5cm of dir, align=center] {Problème inverse \\$\bm{m}+\Delta\bm{m}$};
+		\path[->, thick,shorten <=2pt,shorten >=2pt] (fc) edge (m);
+		\path[->, thick,shorten <=2pt,shorten >=2pt] (m) edge (dir);
+	\end{tikzpicture} 
+	\caption{\label{pb_inv} Schéma de résolution d'un problème d'optimisation.}
+\end{figure}
+
+Ces problèmes sont en général non-linéaire, car les observables ne dépendent pas linéairement des paramètres du modèle. De plus, si le nombre de paramètre est grand, ils sont également mal posés.\\
+
+\subsection{Résolution du problème direct}
+
+Le problème direct peut être résolu soit par des méthodes analytiques (représentation intégrale, méthodes modales,\ldots) soit par des méthodes numériques. Parmi les méthodes numériques les plus usitées figurent : les méthodes de différences finies (\citealp{virieux_86}, à l'ordre 2 et \citealp{levander}, à l'ordre 4), les méthodes des éléments finis (Galerkin discontinu par exemple : \citealp{brossier_these}) ou volumes finis \citep{brossier_2008}, les lancers de rayons \citep{virieux_ray}. 
+
+\subsection{Résolution du problème inverse}
+Si le problème direct possède une solution unique, ce n'est pas le cas du problème inverse.
+Lorsque le nombre de paramètres est grand, le problème inverse ne peut pas être résolu par une recherche exhaustive dans l'espace des solutions. LA recherche de solution peut donc se faire de manière semi-globale ou locale.\\
+
+\subsubsection{Les méthodes semi-globales}
+Les méthodes semi-globales les plus connues sont les améliorations de celle de Monte Carlo comme le recuit simulé \citep{tarantola_book, sen} ou  la méthode de Monte-Carlo par chaînes de Markov \citep{zhang}, ainsi que les algorithmes génétiques.\\
+
+\subsubsection{Les méthodes locales}
+Lorsque que le modèle initial comporte suffisamment d'informations pour que le problème se situe proche du minimum global recherché, des méthodes d'optimisation moins coûteuses sont envisageables. Ces méthodes se basent sur l'estimation du gradient et du hessien de la fonction coût pour estimer sa plus forte pente et sa courbure.\\
+
+La méthode du gradient conjugué permet de déterminer le pas de descente optimal, en linéarisant le problème inverse. Cette méthode populaire est celle utilisée par Mora et Tarantola dans les années 80 \citep{tarantola_84, mora_87a, mora_87b}. Le hessien n'est pas calculé, mais cette méthode nécessite le calcul de deux problèmes directs supplémentaires. \\
+
+Les méthodes full-Newton et Gauss-Newton utilisent le calcul du hessien (complet pour la première, approximé pour la seconde), ce qui permet une convergence plus rapide qu'avec la méthode du gradient conjugué, sans coût excessif supplémentaire \citep{pratt_98}.
+
+Enfin, le hessien peut également être calculé à partir des gradients des itérations précédentes, par la méthode quasi-Newton \citep{nocedal}, avec l'algorithme BFGS (Broyden, Fletcher, Goldfarb, Shanno), par exemple. Cet algorithme ayant un gros coût de stockage, une version allégée qui ne stocke que quelques itérations (L-BFGS) est utilisée par \cite{brossier_2009}. Ils montrent que cette méthode est plus performante que la méthode du gradient conjugué préconditionné en terme de convergence. 
+
+\todo[inline]{}
+
+
+-mais aussi : diffraction tomograhy, filtered backpropagation... : techniques basées sur une version linéarisée des équations, born approx par ex, kirchhoff approx
+
+
+
 TDTE
 
 bayesian
@@ -95,6 +139,7 @@ hohne\_2012 pour images SAFT
 
 gardahaut pour porpagation de rai CIVA
 
+Born : linéarise le pb ? (pour faible contraste, adapté au cnd ?) brossier these dit que c'est pas linéarisé et qu'on a donc le champ d'onde complet
 
 +acoustique non-linéaire : Nonlinear signal processing for ultrasonic imaging of material complexity (dos santos) par ex
 

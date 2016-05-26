@@ -1,4 +1,4 @@
-\begin{thebibliography}{2}
+\begin{thebibliography}{22}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -6,16 +6,138 @@
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
 \bibitem[Bannouf(2013)]{bannouf}
-Souad Bannouf.
+S~Bannouf.
 \newblock \emph{Développement et optimisation de méthodes d’imagerie
   synthétique pour le contrôle non-destructif par ultrasons de composants
   industriels complexes}.
 \newblock PhD thesis, {Univerist{\'e} Paris Diderot Paris 7}, 2013.
+
+\bibitem[Brossier(2009)]{brossier_these}
+R.~Brossier.
+\newblock \emph{\textbf{Imagerie sismique à deux dimensions des milieux
+  visco-élastiques par inversion des formes d’ondes : développements
+  méethodologiques et applications}}.
+\newblock PhD thesis, Université de Nice-Sophia Antipolis, 2009.
+
+\bibitem[Brossier et~al.(2008)Brossier, Virieux, and Operto]{brossier_2008}
+R.~Brossier, J.~Virieux, and S.~Operto.
+\newblock Parsimonious finite-volume frequency-domain method for 2-{D}
+  {P-SV}-wave modelling.
+\newblock \emph{Geophys. J. Int.}, 175:\penalty0 ~p.~541--559, 2008.
+
+\bibitem[Brossier et~al.(2009)Brossier, Operto, and Virieux]{brossier_2009}
+R.~Brossier, S.~Operto, and J.~Virieux.
+\newblock Seismic imaging of complex onshore structures by 2{D} elastic
+  frequency-domain full-waveform inversion.
+\newblock \emph{Geophysics}, 74\penalty0 (6):\penalty0 ~p.~WCC105, 2009.
+
+\bibitem[Capon(1969)]{capon}
+J.~Capon.
+\newblock High-resolution frequency-wavenumber spectrum analysis.
+\newblock \emph{Proceedings of the IEEE}, 57\penalty0 (8):\penalty0
+  ~p.~1408--1418, 1969.
+
+\bibitem[Chassignole(1999)]{chassignole}
+B.~Chassignole.
+\newblock \emph{Influence de la structure métallurgique des soudures en acier
+  inoxydable austénitique sur le contrôle non-destructif par ultrasons}.
+\newblock PhD thesis, INSA Lyon, 1999.
+
+\bibitem[Doctor et~al.(1986)Doctor, Hall, and Reid]{doctor_saft}
+S.R. Doctor, T.E. Hall, and L.D. Reid.
+\newblock {SAFT} - the evolution of a signal processing technology for
+  ultrasonic testing.
+\newblock \emph{NDT International}, \penalty0 (19):\penalty0 ~p.~163--167,
+  1986.
 
 \bibitem[Holmes et~al.(2005)Holmes, Drinkwater, and Wilcox]{holmes_tfm}
 C~Holmes, B.~W. Drinkwater, and P.~D. Wilcox.
 \newblock Post-processing of the full matrix of ultrasonic transmit–receive
   array data for non-destructive evaluation.
 \newblock \emph{NDT\&E International}, \penalty0 (38):\penalty0 701--711, 2005.
+
+\bibitem[Levander(1988)]{levander}
+A.~R. Levander.
+\newblock Fourth-order finite-difference {P-SV} seismograms.
+\newblock \emph{Geophysics}, 53\penalty0 (11):\penalty0 ~p.~1425--1436, 1988.
+
+\bibitem[Mora(1987{\natexlab{a}})]{mora_87a}
+P.~Mora.
+\newblock Nonlinear two-dimensional elastic inversion of multioffset seismic
+  data.
+\newblock \emph{Geophysics}, 52\penalty0 (9):\penalty0 ~p.~1211--1228,
+  1987{\natexlab{a}}.
+
+\bibitem[Mora(1987{\natexlab{b}})]{mora_87b}
+P.~Mora.
+\newblock Nonlinear elastic inversion of real data.
+\newblock \emph{SEG Technical Program Expanded Abstracts}, pages 430--432,
+  1987{\natexlab{b}}.
+
+\bibitem[Nocedal(1980)]{nocedal}
+J.~Nocedal.
+\newblock Updating quasi-newton matrices with limited storage.
+\newblock \emph{Mathematics of computation}, 35\penalty0 (151):\penalty0
+  ~p.~773--782, 1980.
+
+\bibitem[Ogilvy(1986)]{ogilvy}
+J.~A. Ogilvy.
+\newblock Ultrasonic beam profiles and beam propagation in an austenitic weld
+  using a theoretical ray tracing model.
+\newblock \emph{Ultrasonics}, 24:\penalty0 ~p.~337--347, 1986.
+
+\bibitem[Prada et~al.(2002)Prada, Kerbrat, Cassereau, and Fink]{prada_2002}
+C~Prada, E~Kerbrat, D~Cassereau, and M~Fink.
+\newblock Time reversal techniques in ultrasonic nondestructive testing of
+  scattering media.
+\newblock \emph{Inverse Problems}, 18\penalty0 (6):\penalty0 ~p.~1761--1773,
+  2002.
+
+\bibitem[Pratt et~al.(1998)Pratt, Shin, and Hicks]{pratt_98}
+R.~G. Pratt, C.~Shin, and G.~J. Hicks.
+\newblock Gauss-newton and full newton methods in frequency-space seismic
+  waveform inversion.
+\newblock \emph{Geophys. J. Int.}, 133:\penalty0 ~p.~341--362, 1998.
+
+\bibitem[Schmidt(1986)]{schmidt}
+R.~0. Schmidt.
+\newblock Multiple emitter location and signal parameter estimation.
+\newblock \emph{IEEE Transactions on antennas and propagation}, AP-34\penalty0
+  (3):\penalty0 ~p.~276--280, 1986.
+
+\bibitem[Sen and Stoffa(1995)]{sen}
+M.~K. Sen and P.L. Stoffa.
+\newblock \emph{Global Optimization Methods in Geophysical Inversion}.
+\newblock Elsevier, 1995.
+
+\bibitem[Tarantola(1984)]{tarantola_84}
+A.~Tarantola.
+\newblock \textbf{Inversion of seismic reflection data in the acoustic
+  approximation}.
+\newblock \emph{Geophysics}, 49\penalty0 (8):\penalty0 ~p.~1259--1266, 1984.
+
+\bibitem[Tarantola(2005)]{tarantola_book}
+A~Tarantola.
+\newblock \emph{{Inverse Problem Theory and Methods for Model Parameter
+  Estimation}}.
+\newblock Society for Industrial and Applied Mathematics, 2005.
+\newblock ISBN 0898715725.
+
+\bibitem[Virieux(1986)]{virieux_86}
+J.~Virieux.
+\newblock {P-SV} wave propagation in heterogeneous media, velocity-stress
+  finite difference method.
+\newblock \emph{Geophysics}, 51\penalty0 (4):\penalty0 ~p.~889--901, 1986.
+
+\bibitem[Virieux(1996)]{virieux_ray}
+J.~Virieux.
+\newblock \emph{Seismic modelling of earth structure}.
+\newblock Editrice compositori, 1996.
+
+\bibitem[Zhang et~al.(2012)Zhang, Hunter, Drinkwater, and Wilcox]{zhang}
+J.~Zhang, A.~Hunter, B.~W. Drinkwater, and P.~D. Wilcox.
+\newblock Monte {C}arlo inversion of ultrasonic array data to map anisotropic
+  weld properties.
+\newblock \emph{IEEE}, 59\penalty0 (11):\penalty0 ~p.~2487--2497, 2012.
 
 \end{thebibliography}

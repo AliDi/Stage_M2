@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.3.4)  25 MAY 2016 13:37
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.3.4)  26 MAY 2016 16:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1226,7 +1226,7 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 65.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<img/univ.png, id=31, 609.27625pt x 282.05376pt>
+<img/univ.png, id=39, 609.27625pt x 282.05376pt>
 File: img/univ.png Graphic file (type png)
  <use img/univ.png>
 Package pdftex.def Info: img/univ.png used on input line 105.
@@ -1242,13 +1242,13 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10> on input line 106.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 106.
-<img/cnrs.jpg, id=33, 170.7981pt x 170.7981pt>
+<img/cnrs.jpg, id=41, 170.7981pt x 170.7981pt>
 File: img/cnrs.jpg Graphic file (type jpg)
  <use img/cnrs.jpg>
 Package pdftex.def Info: img/cnrs.jpg used on input line 109.
 (pdftex.def)             Requested size: 71.13007pt x 71.13188pt.
 
-<img/isterre.jpg, id=34, 592.2125pt x 428.60126pt>
+<img/isterre.jpg, id=42, 592.2125pt x 428.60126pt>
 File: img/isterre.jpg Graphic file (type jpg)
  <use img/isterre.jpg>
 Package pdftex.def Info: img/isterre.jpg used on input line 113.
@@ -1275,7 +1275,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 17--18
 
  []
 
-<img/scan2.png, id=44, 349.0641pt x 261.6174pt>
+<img/scan2.png, id=52, 349.0641pt x 261.6174pt>
 File: img/scan2.png Graphic file (type png)
  <use img/scan2.png>
 Package pdftex.def Info: img/scan2.png used on input line 28.
@@ -1294,32 +1294,83 @@ l.35
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 40--41
+Underfull \hbox (badness 10000) in paragraph at lines 38--39
 
  []
 
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10.95> on input line 42.
 
-Package natbib Warning: Citation `holmes' on page 2 undefined on input line 51.
+Underfull \hbox (badness 10000) in paragraph at lines 49--50
+
+ []
 
 
-[2 <./img/scan2.png>]) [3] (./stage_m2.bbl) 
+Underfull \hbox (badness 10000) in paragraph at lines 59--60
+
+ []
+
+[2 <./img/scan2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 63--64
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--100
+
+ []
+
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 106--108
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 110--111
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 113--114
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 115--116
+
+ []
+
+[4]
+Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
+ine 121.
+
+Underfull \hbox (badness 10000) in paragraph at lines 128--129
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 131--132
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 133--134
+
+ []
+
+) [5] (./stage_m2.bbl [6
+
+
+]) 
 AED: lastpage setting LastPage
-[4
-
-
-]
-
-Package natbib Warning: There were undefined citations.
-
+[7]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 149.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 149.
-(./stage_m2.aux (./imagerie.aux))
+ (./stage_m2.aux (./imagerie.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 149.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 149.
 Package rerunfilecheck Info: File `stage_m2.out' has not changed.
-(rerunfilecheck)             Checksum: 9BC76C895B1DA331002802D100CA12B5;472.
+(rerunfilecheck)             Checksum: D47CD8FBC3E788C03CC523ACEF1C7791;649.
 
 
 LaTeX Warning: There were undefined references.
@@ -1327,28 +1378,29 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 149.
  ) 
 Here is how much of TeX's memory you used:
- 19218 strings out of 493304
- 325950 string characters out of 6139872
- 411260 words of memory out of 5000000
- 22241 multiletter control sequences out of 15000+600000
- 106676 words of font info for 89 fonts, out of 8000000 for 9000
+ 19396 strings out of 493304
+ 329164 string characters out of 6139872
+ 413130 words of memory out of 5000000
+ 22389 multiletter control sequences out of 15000+600000
+ 113945 words of font info for 91 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 56i,7n,77p,617b,482s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,9n,82p,617b,717s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
-ips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/s
-hare/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/l
-m/lm-rm.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texm
-f/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmcs
-c10.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fo
-nts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pf
-b></usr/share/texmf/fonts/type1/public/lm/lmmib10.pfb></usr/share/texmf/fonts/t
-ype1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></us
-r/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/pu
-blic/lm/lmsy10.pfb>
-Output written on stage_m2.pdf (5 pages, 1916394 bytes).
+ips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share
+/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm
+-mathex.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texm
+f/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx
+i10.pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/f
+onts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.
+pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/t
+ype1/public/lm/lmmib10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></
+usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/p
+ublic/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/shar
+e/texmf/fonts/type1/public/lm/lmsy10.pfb>
+Output written on stage_m2.pdf (8 pages, 1976342 bytes).
 PDF statistics:
- 127 PDF objects out of 1000 (max. 8388607)
- 100 compressed objects within 1 object stream
- 15 named destinations out of 1000 (max. 500000)
- 81 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 250 PDF objects out of 1000 (max. 8388607)
+ 216 compressed objects within 3 object streams
+ 44 named destinations out of 1000 (max. 500000)
+ 97 words of extra memory for PDF output out of 10000 (max. 10000000)
 

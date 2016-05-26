@@ -1,5 +1,8 @@
 \chapter{Application de la FWI à des données simulées}
 
+\section{problématiques des inversions multiparamètres}
+
+
 
 \section{Résolution}
 En théorie, si l'éclairage est parfait, on est limité en résolution par lambda/2 (cf review virieux). En pratique, tout comme en ray-tomo (cf wiliamson cité dans review virieux), on est très limité par l'éclairage.
@@ -22,4 +25,8 @@ Solution : sources/recep qui apportent le plus d'info. Aller voir Jean à ce suj
 
 
 VTI elliptique ne gène pas l'inversion car beaucoup d'info portées par la transmission (vecteurs d'ondes verticaux non affectés par l'anisotropie elliptique VTI)  -> pas assez proche du modèle réel
-Passer en non-elliptique, avec delta qui donne la near vertical anisotropy.
+
+le flop du vti montre que l'inversion des paramètres est tributaire de l'acquisition
+
+Passer en non-elliptique, avec delta qui donne la near vertical anisotropy. Romain : passer en TTI
+
