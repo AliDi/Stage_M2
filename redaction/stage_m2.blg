@@ -8,47 +8,51 @@ I was expecting a `,' or a `}'---line 200 of file biblio.bib
  :     pages =        {~p.~WCC105}
  :                                --WCC118}
 I'm skipping whatever remains of this entry
+You're missing a field part---line 374 of file biblio.bib
+ :    eid = 
+ :          ,
+I'm skipping whatever remains of this entry
 Warning--there's a number but no volume in doctor_saft
 Warning--there's a number but no volume in holmes_tfm
-You've used 22 entries,
+You've used 24 entries,
             2773 wiz_defined-function locations,
-            729 strings with 8096 characters,
-and the built_in function-call counts, 9653 in all, are:
-= -- 901
-> -- 389
-< -- 16
-+ -- 140
-- -- 117
-* -- 773
-:= -- 1476
-add.period$ -- 67
-call.type$ -- 22
-change.case$ -- 99
-chr.to.int$ -- 21
-cite$ -- 46
-duplicate$ -- 444
-empty$ -- 879
-format.name$ -- 141
-if$ -- 2005
+            740 strings with 8491 characters,
+and the built_in function-call counts, 10877 in all, are:
+= -- 1003
+> -- 496
+< -- 15
++ -- 175
+- -- 150
+* -- 897
+:= -- 1670
+add.period$ -- 73
+call.type$ -- 24
+change.case$ -- 116
+chr.to.int$ -- 23
+cite$ -- 50
+duplicate$ -- 486
+empty$ -- 956
+format.name$ -- 176
+if$ -- 2251
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 22
-newline$ -- 119
-num.names$ -- 88
-pop$ -- 195
+missing$ -- 24
+newline$ -- 129
+num.names$ -- 96
+pop$ -- 224
 preamble$ -- 1
-purify$ -- 83
+purify$ -- 98
 quote$ -- 0
-skip$ -- 305
+skip$ -- 341
 stack$ -- 0
-substring$ -- 648
-swap$ -- 33
+substring$ -- 689
+swap$ -- 35
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 227
+type$ -- 249
 warning$ -- 2
-while$ -- 98
+while$ -- 106
 width$ -- 0
-write$ -- 292
-(There was 1 error message)
+write$ -- 318
+(There were 2 error messages)

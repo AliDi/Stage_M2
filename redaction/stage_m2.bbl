@@ -1,4 +1,4 @@
-\begin{thebibliography}{22}
+\begin{thebibliography}{24}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -14,7 +14,7 @@ S~Bannouf.
 
 \bibitem[Brossier(2009)]{brossier_these}
 R.~Brossier.
-\newblock \emph{\textbf{Imagerie sismique à deux dimensions des milieux
+\newblock \emph{{Imagerie sismique à deux dimensions des milieux
   visco-élastiques par inversion des formes d’ondes : développements
   méethodologiques et applications}}.
 \newblock PhD thesis, Université de Nice-Sophia Antipolis, 2009.
@@ -43,12 +43,25 @@ B.~Chassignole.
   inoxydable austénitique sur le contrôle non-destructif par ultrasons}.
 \newblock PhD thesis, INSA Lyon, 1999.
 
+\bibitem[Chassignole et~al.(2009)Chassignole, Dupond, Doudet, Duwig, and
+  Etchegaray]{chassignole_beam}
+B.~Chassignole, O.~Dupond, L.~Doudet, V.~Duwig, and N.~Etchegaray.
+\newblock Ultrasonic examination of an austenitic weld: Illustration of the
+  disturbances of the ultrasonic beam.
+\newblock \emph{AIP Conference Proceedings}, 1096\penalty0 (1), 2009.
+
 \bibitem[Doctor et~al.(1986)Doctor, Hall, and Reid]{doctor_saft}
 S.R. Doctor, T.E. Hall, and L.D. Reid.
 \newblock {SAFT} - the evolution of a signal processing technology for
   ultrasonic testing.
 \newblock \emph{NDT International}, \penalty0 (19):\penalty0 ~p.~163--167,
   1986.
+
+\bibitem[Dominguez et~al.(2005)Dominguez, Gibiat, and Esquerre]{dominguez}
+N.~Dominguez, V.~Gibiat, and Y.~Esquerre.
+\newblock Time domain topological gradient and time reversal analogy : an
+  inverse method for ultrasonic target detection.
+\newblock \emph{Wave Motion}, 42:\penalty0 ~p.~31--52, 2005.
 
 \bibitem[Holmes et~al.(2005)Holmes, Drinkwater, and Wilcox]{holmes_tfm}
 C~Holmes, B.~W. Drinkwater, and P.~D. Wilcox.
@@ -80,12 +93,6 @@ J.~Nocedal.
 \newblock \emph{Mathematics of computation}, 35\penalty0 (151):\penalty0
   ~p.~773--782, 1980.
 
-\bibitem[Ogilvy(1986)]{ogilvy}
-J.~A. Ogilvy.
-\newblock Ultrasonic beam profiles and beam propagation in an austenitic weld
-  using a theoretical ray tracing model.
-\newblock \emph{Ultrasonics}, 24:\penalty0 ~p.~337--347, 1986.
-
 \bibitem[Prada et~al.(2002)Prada, Kerbrat, Cassereau, and Fink]{prada_2002}
 C~Prada, E~Kerbrat, D~Cassereau, and M~Fink.
 \newblock Time reversal techniques in ultrasonic nondestructive testing of
@@ -98,6 +105,12 @@ R.~G. Pratt, C.~Shin, and G.~J. Hicks.
 \newblock Gauss-newton and full newton methods in frequency-space seismic
   waveform inversion.
 \newblock \emph{Geophys. J. Int.}, 133:\penalty0 ~p.~341--362, 1998.
+
+\bibitem[Rodriguez et~al.(2013)Rodriguez, Deschamps, Castaings, and
+  Ducasse]{rodriguez}
+S.~Rodriguez, M.~Deschamps, M.~Castaings, and E.~Ducasse.
+\newblock Guided wave topological imaging of isotropic plates.
+\newblock \emph{Ultrasonics}, 54:\penalty0 ~p.~1880--1890, 2013.
 
 \bibitem[Schmidt(1986)]{schmidt}
 R.~0. Schmidt.
@@ -112,8 +125,7 @@ M.~K. Sen and P.L. Stoffa.
 
 \bibitem[Tarantola(1984)]{tarantola_84}
 A.~Tarantola.
-\newblock \textbf{Inversion of seismic reflection data in the acoustic
-  approximation}.
+\newblock {Inversion of seismic reflection data in the acoustic approximation}.
 \newblock \emph{Geophysics}, 49\penalty0 (8):\penalty0 ~p.~1259--1266, 1984.
 
 \bibitem[Tarantola(2005)]{tarantola_book}

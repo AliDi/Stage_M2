@@ -1,4 +1,4 @@
-\chapter{Techniques d'imagerie par ultrason}
+\chapter{Techniques d'imagerie par ultrasons}
 
  L'objectif de ce chapitre est de présenter les principales méthodes multi-éléments utilisées pour l'imagerie ultrasonore. \\
 
@@ -26,7 +26,7 @@ Ce type d'analyse peut être réalisé avec des transducteurs mono-éléments. L
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.7]{img/scan2.png}
-	\caption{\label{scan2} Schéma des différents modes de représentation des signaux temporels (extrait de \cite{bannouf}).}
+	\caption{\label{scan} Schéma des différents modes de représentation des signaux temporels (extrait de \cite{bannouf}).}
 \end{figure}
 
 En revanche, le Sscan ne peut être réalisé qu'avec des transducteurs multi-éléments. Il correspond a un ensemble de Ascans réalisés sans déplacement du transducteur mais en appliquant une loi de retard aux éléments permettant de réaliser un balayage du point focal. Le Sscan permet donc d'imager des pièces partiellement accessible, et augmente la probabilité de repérer un défaut en offrant plusieurs angles d'observation.\\
@@ -104,35 +104,83 @@ Le problème direct peut être résolu soit par des méthodes analytiques (repr�
 
 \subsection{Résolution du problème inverse}
 Si le problème direct possède une solution unique, ce n'est pas le cas du problème inverse.
-Lorsque le nombre de paramètres est grand, le problème inverse ne peut pas être résolu par une recherche exhaustive dans l'espace des solutions. LA recherche de solution peut donc se faire de manière semi-globale ou locale.\\
+Lorsque le nombre de paramètres est grand, le problème inverse ne peut pas être résolu par une recherche exhaustive dans l'espace des solutions. La recherche de solution peut donc se faire de manière semi-globale ou locale.\\
 
 \subsubsection{Les méthodes semi-globales}
-Les méthodes semi-globales les plus connues sont les améliorations de celle de Monte Carlo comme le recuit simulé \citep{tarantola_book, sen} ou  la méthode de Monte-Carlo par chaînes de Markov \citep{zhang}, ainsi que les algorithmes génétiques.\\
+Les méthodes semi-globales consiste a parcourir l'espace des solutions avec une approche statistiques. Les plus connues sont les améliorations de celle de Monte Carlo comme le recuit simulé \citep{tarantola_book, sen} ou  la méthode de Monte-Carlo par chaînes de Markov \citep{zhang}, ainsi que les algorithmes génétiques. Elles permettent d'assurer une convergence avec peu d'\emph{a priori} sur le modèle initial.\\
 
 \subsubsection{Les méthodes locales}
 Lorsque que le modèle initial comporte suffisamment d'informations pour que le problème se situe proche du minimum global recherché, des méthodes d'optimisation moins coûteuses sont envisageables. Ces méthodes se basent sur l'estimation du gradient et du hessien de la fonction coût pour estimer sa plus forte pente et sa courbure.\\
 
 La méthode du gradient conjugué permet de déterminer le pas de descente optimal, en linéarisant le problème inverse. Cette méthode populaire est celle utilisée par Mora et Tarantola dans les années 80 \citep{tarantola_84, mora_87a, mora_87b}. Le hessien n'est pas calculé, mais cette méthode nécessite le calcul de deux problèmes directs supplémentaires. \\
 
-Les méthodes full-Newton et Gauss-Newton utilisent le calcul du hessien (complet pour la première, approximé pour la seconde), ce qui permet une convergence plus rapide qu'avec la méthode du gradient conjugué, sans coût excessif supplémentaire \citep{pratt_98}.
+Les méthodes full-Newton et Gauss-Newton utilisent le calcul du hessien (complet pour la première, approximé pour la seconde), ce qui permet une convergence plus rapide qu'avec la méthode du gradient conjugué, sans coût excessif supplémentaire \citep{pratt_98}.\\
 
-Enfin, le hessien peut également être calculé à partir des gradients des itérations précédentes, par la méthode quasi-Newton \citep{nocedal}, avec l'algorithme BFGS (Broyden, Fletcher, Goldfarb, Shanno), par exemple. Cet algorithme ayant un gros coût de stockage, une version allégée qui ne stocke que quelques itérations (L-BFGS) est utilisée par \cite{brossier_2009}. Ils montrent que cette méthode est plus performante que la méthode du gradient conjugué préconditionné en terme de convergence. 
+Enfin, le hessien peut également être calculé à partir des gradients des itérations précédentes, par la méthode quasi-Newton \citep{nocedal}, avec l'algorithme BFGS (Broyden, Fletcher, Goldfarb, Shanno), par exemple. Cet algorithme ayant un gros coût de stockage, une version allégée qui ne stocke que quelques itérations (L-BFGS) est utilisée par \cite{brossier_2009}. Ils montrent que cette méthode est plus performante que la méthode du gradient conjugué préconditionné en terme de convergence. \\
+
+\subsection{Cartographie ou contour}
+Comme le souligne les auteurs du chapitre 1.4 de BruneauPotel, le problème inverse peut être résolu suivant deux approches : 
+\begin{itemize}
+	\item un formalisme en intégrales de contour où les paramètres reconstruits sont ceux décrivant ces contours. Cela revient donc à déterminer la topologie d'un milieu. Le gradient, donné par la dérivée de la fonction coût par rapport à la topologie, indique donc directement la position d'un défaut à fort contraste. \cite{dominguez} et \cite{rodriguez} utilisent par exemple cette approche pour des applications en contrôle non destructif.
+	\item une reconstruction pixelisées d'un ensemble de paramètres. C'est l'approche adoptée pour la FWI et qui est décrite au chapitre~\ref{fwi}.
+\end{itemize}
+
+
+%-mais aussi : diffraction tomograhy, filtered backpropagation... : techniques basées sur une version linéarisée des équations, born approx par ex, kirchhoff approx
+
+
+\section{Spécificités de l'imagerie de soudure}
+
+Nombre de ces méthodes sont peu adaptées à l'imagerie de soudure. En effet, comme le montrent les macrographies de la figure~\ref{soudure}, les passes multiples et la cristallisation inhomogène rendent la soudure fortement anisotrope \citep{chassignole}. Cette anisotropie varie d'unes soudure à une autre puisqu'elle dépend des paramètres de soudage. En conséquence, cette anisotropie engendre une courbure voire une division du faisceau ultrasonore. Les scans sont alors difficiles à analyser (cf figure \ref{echos}), les méthodes par retard et sommation ne permettent pas de relocaliser précisément un réflecteur et les images obtenues sont très sujettes aux artefacts provenant d'échos mal interprétés.
+
+\begin{figure}[!h]
+	\hspace{-2cm}
+    \centering
+    \begin{subfigure}[c]{0.25\textwidth}
+    	\centering
+        \includegraphics[height=3.5cm]{./img/soudure3.png}
+        \vspace{0.03cm}
+        \caption{\centering  Définition des plans de coupe.}
+    \end{subfigure}
+    \hspace{1cm}
+    \begin{subfigure}[c]{0.25\textwidth}
+    	\centering
+        \includegraphics[height=4cm]{./img/soudure1.png}
+        \caption{\centering  Coupe dans le plan (TV).}
+    \end{subfigure}
+        \hspace{1.5cm}
+    \begin{subfigure}[c]{0.25\textwidth}
+    	\centering
+		\includegraphics[height=4cm]{./img/soudure2.png}
+        \caption{\centering Coupe dans le plan (SV).}
+    \end{subfigure}
+    \caption{Macrographie d'une soudure industrielle en acier inoxydable en acier austénitique \citep{chassignole}. À gauche : coupe dans le plan $(x,z)$, à droite : coupe dans le plan $(x,y)$.\label{soudure}}
+\end{figure}
+
+\begin{figure}[!h]
+    \centering
+    \begin{subfigure}[c]{0.3\textwidth}
+    	\centering
+        \includegraphics[height=4cm]{img/chassignole_echos_config.png}
+        \caption{Configuration de mesure. En rouge : encoche de 15~mm de haut dans la soudure.}
+    \end{subfigure}
+    \hspace{1cm}
+    \begin{subfigure}[c]{0.3\textwidth}
+    	\centering
+        \includegraphics[height=4cm]{img/chassignole_echos.png}
+        \caption{Bscan}
+    \end{subfigure}
+    \caption{Illustration de la perturbation du faisceau ultrasonore dans une sourdure. Images extraites de \cite{chassignole_beam}. LLT echo : Réplection de l'onde longitudinale (L) sur le bord de soudure puis réflection de cette onde L sur l'encoche avec conversion de en mode transverse (T).  }\label{echos}
+\end{figure}
+
+
+champ pas assez diffus pour bénéficier des qualités du retournement temporel.
+
+
+
+
 
 \todo[inline]{}
-
-
--mais aussi : diffraction tomograhy, filtered backpropagation... : techniques basées sur une version linéarisée des équations, born approx par ex, kirchhoff approx
-
-
-
-TDTE
-
-bayesian
-
-
-Antenne réseau à phase variable
-
-
 
 hohne\_2012 pour images SAFT
 
@@ -142,6 +190,3 @@ gardahaut pour porpagation de rai CIVA
 Born : linéarise le pb ? (pour faible contraste, adapté au cnd ?) brossier these dit que c'est pas linéarisé et qu'on a donc le champ d'onde complet
 
 +acoustique non-linéaire : Nonlinear signal processing for ultrasonic imaging of material complexity (dos santos) par ex
-
-\section{Imagerie de soudure}
-Lesquelles marchent, lesquelles marchent pas
