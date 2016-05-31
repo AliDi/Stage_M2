@@ -1,32 +1,106 @@
 \chapter{L'inversion de formes d'onde \label{fwi}}
-par opposition à des inversion type tomo qui n'utilisent que partiellement les infos, fwi ne fait pas d'hypothèse sur le champ d'onde. s
+
+L'inversion de forme d'ondes (ou FWI, pour \emph{Full Waveform Inversion}) est une méthode quantitative d'imagerie développée dans un contexte géophysique permettant de reconstruire des paramètres élastiques par résolution d'un problème inverse posé dans les années 80 par \cite{lailly} et \cite{tarantola_84}. Par opposition à des inversions du type tomographie qui n'utilisent que partiellement les informations contenues dans les champs mesurés, l'inversion de formes d'onde utilise l'ensemble des données sans hypothèses. \\
+
+Le principe général est de calculer des données $\bm{d}_{cal}$ issues d'un modèle (résolution du problème direct)  puis de minimiser l'écart entre ces données et les données réelles $\bm{d}_{obs}$ issues de la mesure en modifiant les paramètres du modèle \citep{virieux_review}. Cette démarche est résumée en figure~\ref{schema_fwi} et l'ensemble des étapes est détaillé par la suite.
 
 
-\section{ce que c'est}
-"inversion approach resembles prestack, reverse-time mi-
-gration but differs in that the problem is formulated in
-terms of velocity (not reflectivity), and the method is
-fully iterative."PRATT99
+\begin{figure}[!h]
+	\begin{tikzpicture}
+		\node (init) [draw=black, align=center] at (0,0) {Paramètres initiaux \\ $\bm{m}_{0}$};
+		\node (dir) [below=1cm of init , draw=black,align=center] {Problème direct :\\ éléments finis ou différences finies};
+		\path[->, thick,shorten <=2pt,shorten >=2pt] (init) edge (dir);
+		\node (fc) [draw=black,right=2cm of dir, align=center] {Fonction de coût \\ $C(\bm{m})=\frac{1}{2}||\bm{d}_{obs}-\bm{d}_{cal}(\bm{m})||^{2}$};
+		\path[->, thick,shorten <=2pt,shorten >=2pt] (dir) edge (fc);
+		\node (m) [draw=black, below right= and -5.5cm of dir, align=center] {Problème inverse : \\~\\ 
+			\begin{minipage}{0.3\textwidth}
+				\centering
+				Calcul du gradient $C'(\bm{m})$
+				Calcul du hessien $C''(\bm{m})$
+			\end{minipage}
+			\vline
+			\begin{minipage}{0.2\textwidth}
+				\centering
+				~$\bm{\Delta m}=-C''C'$
+			\end{minipage}
+			\vline
+			\begin{minipage}{0.3\textwidth}
+				\centering
+				Mise à jour du modèle : \\ $\bm{m} := \bm{m}+ \bm{\Delta m}$
+			\end{minipage}
+		};
+		\path[->, thick,shorten <=2pt,shorten >=2pt] (fc) edge (m);
+		\path[->, thick,shorten <=2pt,shorten >=2pt] (m) edge (dir);		
+	\end{tikzpicture} 
+	\caption{Schéma du principe de la FWI.\label{schema_fwi}}
+\end{figure}
 
-rodirguez 2014 : Full waveform
-inversion should not to be mistaken for migration techniques that
-are based on Claerbout’s ‘‘imaging principle’’ : J.F. Claerbout, Toward a unified theory of reflector mapping, Geophysics 36 (3)
-(1971) 467–481.which defines a
-reflectivity field by the ratio of upgoing and downgoing wave
-fields. Neverthelesss
+%"inversion approach resembles prestack, reverse-time mi-
+%gration but differs in that the problem is formulated in
+%terms of velocity (not reflectivity), and the method is
+%fully iterative."PRATT99
+
+%rodirguez 2014 : Full waveform
+%inversion should not to be mistaken for migration techniques that
+%are based on Claerbout’s ‘‘imaging principle’’ : J.F. Claerbout, Toward a unified theory of reflector mapping, Geophysics 36 (3)
+%(1971) 467–481.which defines a
+%reflectivity field by the ratio of upgoing and downgoing wave
+%fields. Neverthelesss
 
 \section{Problème direct}
-formulation forte ou faible : 
-FDTD, FEM,...
+
+Dans le cas de l'imagerie par ultrason, résoudre le problème direct revient à trouver la solution de l'équation d'onde linéarisée. Il est fréquent que l'hypothèse d'une propagation acoustique soit faite en prospection géophysique. Cette approximation a pour but de réduire fortement le coût des calculs et est justifiée par le fait que la trace des ondes de compression soit dominante dans les données de mesures. De plus, en réduisant le nombre de paramètres du modèle, le problème est rendu moins non-linéaire. Cependant, cette approximation ne permet pas une caractérisation complète du milieu et, pour une application en CND, demande un pré-traitement précis des données et retire notamment la précision qu'offrent les ondes de cisaillement par leur faible longueur d'onde.\\~\\
+Le problème peut-être résolu dans le domaine temporel ou dans le domaine fréquentiel \citep{vigh_2008}. Le domaine temporel laisse la possibilité d'effectuer une sélection des arrivées d'ondes par fenêtrage temporel mais présente une plus forte susceptibilité au phénomène de saut de phase (décrit dans le paragraphe ????). \\~\\
+
+
+ Pour résoudre l'équation d'onde, parmi les approches qui nécessitent de faire le moins d'hypothèse sur le champ d'onde et sur le milieu de propagation figurent les différences finies et les éléments finis. Les différences finies sont les plus faciles à "écrire" et à implémenter. Elles permettent de discrétiser les dérivées temporelles et spatiales par des différences d'ordre 2 \citep{virieux_86} ou d'ordre 4 \citep{levander}. Cependant, contrairement aux éléments finis, elles imposent l'utilisation de grilles régulières et ne permettent donc pas d'adapter localement le pas de grille à la géométrie ou à la complexité du milieu. \\ Les éléments finis se prêtent mieux aux maillages non-structurés. Leur solution est développée sur des basent de fonction (d'ordre élevé pour les éléments finis spectraux) et permettent de prendre simplement en compte les conditions limites.\\
+ 
+Deux types de conditions limites sont nécessaires pour le modèle de soudure : une condition parfaitement réfléchissante au niveau des surfaces de la plaque (en considérant une mesure dans l'air, le couplage fluide structure est négligeable) et une condition absorbante pour représenter la plaque loin de la zone d'étude (cf figure~\ref{BC}).
+
+\begin{figure}[!h]
+	\centering
+	\begin{tikzpicture}
+		\draw (0,0) -- (9,0) ;
+		\draw (0,-2) -- (9,-2) ;
+		\filldraw [fill=gray, fill opacity=0.5, draw=none] (3.5,0) -- (4.5,-2) -- (5.5,0)  ;
+		\node (centre) at (4.3,-1) {};
+		\node (soudure) at (7,-2.5) {soudure};
+		\draw[<-,thick] (centre) -- (soudure);
+		\node (fs) [align=left] at (2.5,0.3) {Condition de Dirichlet}	;
+		\node (fs2)[align=left] at (2.5,-2.3) {Condition de Dirichlet};
+		\draw[dotted] (0,0) -- (0,-2);
+		\draw[dotted] (9,0) -- (9,-2);
+		\node (g) [align=center] at (-1.3,-1) {Conditions \\ absorbantes \\ (PML)};
+		\node (d) [align=center] at (10.3	,-1	) {Conditions \\ absorbantes \\ (PML)};
+		\draw[dashed] (0,0) -- (-1,0);
+		\draw[dashed] (0,-2) -- (-1,-2);
+		\draw[dashed] (9,0) -- (10,0);
+		\draw[dashed] (9,-2) -- (10,-2);
+	\end{tikzpicture}
+	\caption{Représentation des deux types de conditions limites du modèle de soudure 2D.\label{BC}}
+\end{figure}
+
+\todo[inline]{Questions : qu'est-ce qui est fait en fréquence, qu'est qui est fait en temps ?}
+
+Dans le domaine fréquentiel, l'équation d'onde étant réduite à un système d'équation linéaires, il est possible d'utiliser des méthodes de résolution directe du type décomposition LU bien qu'en pratique, les performances de ces méthodes soient limitées pour des problèmes comportant un grand nombre d'inconnues.  Les principaux avantages d'une résolution du problème direct dans le domaine temporel sont donc d'intégrer facilement les phénomènes d'atténuation et de permettre une sélection fine des fréquences d'intérêt. Cependant, la résolution par différences finies dans le domaine temporel impose un critère de stabilité Courant-Friedrichs-Lewy (CFL) qui peut-être contraignant, surtout en 3D.
+
+
+
+
 
 \section{le pb inverse}
 
 \section{Optimisation}
 
-brossier : explication du choix de la norme l2
+brossier these: explication du choix de la norme l2
 
+Algo choisi pour le quasi-newton : Enfin, le hessien peut également être calculé à partir des gradients des itérations précédentes, par la méthode quasi-Newton \citep{nocedal}, avec l'algorithme BFGS (Broyden, Fletcher, Goldfarb, Shanno), par exemple. Cet algorithme ayant un gros coût de stockage, une version allégée qui ne stocke que quelques itérations (L-BFGS) est utilisée par \cite{brossier_2009}. Ils montrent que cette méthode est plus performante que la méthode du gradient conjugué préconditionné en terme de convergence. \\
+
+regularisation : limiter les artefacts haute-fréquence : pondération compliquée (cf brossier thèse) ou opérateur de lissage appliqué à $\bm{\Delta m}$ sous forme de filtre spatial adapté à la longueur d'onde correspondant à la fréquence d'inversion.
 
 \section{resultats en geophy}
+
+...et aussi appliqué en médical et à des ondes électromagnétiques, rayon X : natterer ?
 
 \section{application au cnd de soudure : les problématiques}
 
@@ -43,6 +117,7 @@ brossier : explication du choix de la norme l2
 	\includegraphics[height=5cm]{./img/soudure2.png}
 	\caption{Macrographie d'une soudure industrielle en acier inoxydable en acier austénitique \citep{chassignole}. À gauche : coupe dans le plan $(x,z)$, à droite : coupe dans le plan $(x,y)$.}
 \end{figure}
+
 \todo[inline]{préciser les plans sur un schéma et l'orientation des photos}
 
 grains colonnaires
@@ -50,3 +125,11 @@ grains colonnaires
 p91 potel bruneau : données "d'aspect limité" : il n'es tpas possible de tourner autour de l'obstace. On colpense la perte d'info en réalisant les mesures sur plusieurs freq et possibilité de déplacer capteur.
 
 
+\section{problématiques}
+\subsection{choix du modèle initial}
+\subsection{saut de phase}
+taille de l'offset, longueur des données tmporelles
+
+\subsection{inversion multi-paramètres}
+
+\subsection{sensibilité au bruit ?}

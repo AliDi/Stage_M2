@@ -1,4 +1,5 @@
 \chapter{Techniques d'imagerie par ultrasons}
+\linenumbers
 
  L'objectif de ce chapitre est de présenter les principales méthodes multi-éléments utilisées pour l'imagerie ultrasonore. \\
 
@@ -58,24 +59,12 @@ Cette focalisation permet donc de couvrir l'ensemble du volume de la pièce car 
 
 Des méthodes de localisation de sources dites "hautes résolutions" exploitent l'ensemble des covariances des signaux temporels. Les méthodes telles que MUltiple Signal Classification \citep{schmidt} et Capon \citep{capon} proposent une décomposition en valeurs propres de cette matrice de covariance afin d'en extraire deux sous-espaces bruit et signal, diminuant ainsi la contribution énergétique du bruit. \\
 
-La méthode de Décomposition de l'Opérateur de Retournement Temporel \citep{prada_2002} propose, de la même façon, d'interpréter l'opérateur de retournement temporel comme une matrice de covariance et de la décomposer. Cette dernière méthode est particulièrement adaptée aux milieux hétérogènes et/ou à géométrie complexe , puisqu'elle tire profit des réflexions multiples. 
+La méthode de Décomposition de l'Opérateur de Retournement Temporel \citep{prada_2002} propose, de la même façon, d'interpréter l'opérateur de retournement temporel comme une matrice de covariance et de la décomposer. Cette dernière méthode est particulièrement adaptée aux milieux hétérogènes et/ou à géométrie complexe , puisqu'elle tire profit des réflexions multiples.  
 
 Tous comme les méthode de formation de voies classiques, il est nécessaire de connaître les propriétés élastiques du milieu de propagation pour pouvoir localiser précisément les réflecteurs.\\
 
 %(billette de titane, par exemple https://www.institut-langevin.espci.fr/IMG/pdf/jasakerbrat-2002.pdf)
 %(plaque mince : ondes de lamb https://www.institut-langevin.espci.fr/IMG/pdf/JASAlamb-1998.pdf)
-
-spectral decomposition of a covariance matrix
-
-dort : permet de distinguer 2 sources
-dort : opérateur de retournement temporel peut être interprété comme une matrice de covariance
-dort : adapté en milieu hétérogène a géométrie complexe, puisque tire profit des réflexions multiples. "They are all based on an a priori
-knowledge of the geometry and acoustic properties of the sample and assume that the ultrasound
-velocity is known and constant in each medium" prada 2002 complexe=environnement diffus, ou plaque mince (onde de lamb)
-
-
-amélioration de résolution et de RSB
-limitation par la taille de l'antenne
 
 \section{Résolution de problème d'optimisation}
 
@@ -96,7 +85,7 @@ L'objectif de ces méthodes est de résoudre un problème inverse en minimisant 
 	\caption{\label{pb_inv} Schéma de résolution d'un problème d'optimisation.}
 \end{figure}
 
-Ces problèmes sont en général non-linéaire, car les observables ne dépendent pas linéairement des paramètres du modèle. De plus, si le nombre de paramètre est grand, ils sont également mal posés.\\
+Ces problèmes sont, en général, non-linéaires, car les observables ne dépendent pas linéairement des paramètres du modèle. De plus, si le nombre de paramètres est grand devant le nombre d'observables, ils sont également mal posés.\\
 
 \subsection{Résolution du problème direct}
 
@@ -112,16 +101,16 @@ Les méthodes semi-globales consiste a parcourir l'espace des solutions avec une
 \subsubsection{Les méthodes locales}
 Lorsque que le modèle initial comporte suffisamment d'informations pour que le problème se situe proche du minimum global recherché, des méthodes d'optimisation moins coûteuses sont envisageables. Ces méthodes se basent sur l'estimation du gradient et du hessien de la fonction coût pour estimer sa plus forte pente et sa courbure.\\
 
-La méthode du gradient conjugué permet de déterminer le pas de descente optimal, en linéarisant le problème inverse. Cette méthode populaire est celle utilisée par Mora et Tarantola dans les années 80 \citep{tarantola_84, mora_87a, mora_87b}. Le hessien n'est pas calculé, mais cette méthode nécessite le calcul de deux problèmes directs supplémentaires. \\
+La méthode de recherche linéaire la plus simple est celle du gradient (ou algorithme de la plus forte pente), qui permet d'effectuer au point courant, un pas de descente dans la direction opposée au gradient. Les directions de descentes successives sont alors orthogonales, ce qui ne permet pas une convergence très rapide. \\
+La méthode du gradient conjugué propose de combiner les directions de descente des itérations précédentes de façon à accélérer la convergence. Cette méthode populaire est celle utilisée par Mora et Tarantola dans les années 80 \citep{tarantola_84, mora_87a, mora_87b}. Le hessien n'est pas calculé, mais cette méthode nécessite le calcul de deux problèmes directs supplémentaires. \\
 
 Les méthodes full-Newton et Gauss-Newton utilisent le calcul du hessien (complet pour la première, approximé pour la seconde), ce qui permet une convergence plus rapide qu'avec la méthode du gradient conjugué, sans coût excessif supplémentaire \citep{pratt_98}.\\
 
-Enfin, le hessien peut également être calculé à partir des gradients des itérations précédentes, par la méthode quasi-Newton \citep{nocedal}, avec l'algorithme BFGS (Broyden, Fletcher, Goldfarb, Shanno), par exemple. Cet algorithme ayant un gros coût de stockage, une version allégée qui ne stocke que quelques itérations (L-BFGS) est utilisée par \cite{brossier_2009}. Ils montrent que cette méthode est plus performante que la méthode du gradient conjugué préconditionné en terme de convergence. \\
-
+Enfin, le hessien peut également être estimé à partir des gradients des itérations précédentes, par la méthode quasi-Newton \citep{nocedal}, avec l'algorithme BFGS (Broyden, Fletcher, Goldfarb, Shanno), par exemple. Cet algorithme ayant un gros coût de stockage, il existe des versions allégées fournissant une estimation du hessien à partir du stockage de quelques itérations seulement (L-BFGS). 
 \subsection{Cartographie ou contour}
 Comme le souligne les auteurs du chapitre 1.4 de BruneauPotel, le problème inverse peut être résolu suivant deux approches : 
 \begin{itemize}
-	\item un formalisme en intégrales de contour où les paramètres reconstruits sont ceux décrivant ces contours. Cela revient donc à déterminer la topologie d'un milieu. Le gradient, donné par la dérivée de la fonction coût par rapport à la topologie, indique donc directement la position d'un défaut à fort contraste. \cite{dominguez} et \cite{rodriguez} utilisent par exemple cette approche pour des applications en contrôle non destructif.
+	\item un formalisme en intégrales de contour où les paramètres reconstruits sont ceux décrivant ces contours. Cela revient donc à déterminer la topologie d'un milieu. Le gradient, donné par la dérivée de la fonction coût par rapport à la topologie, indique donc directement la position d'un défaut à fort contraste. \cite{dominguez} et \cite{rodriguez} utilisent par exemple cette approche pour des applications en contrôle non destructif. Cette approche permet par exemple d'imager des défauts liés à une absence de matière (porosité, fissure, délaminage,\ldots) mais ne permet pas de caractériser des défauts de contraste plus faible (inclusion, corps étranger,\ldots).
 	\item une reconstruction pixelisées d'un ensemble de paramètres. C'est l'approche adoptée pour la FWI et qui est décrite au chapitre~\ref{fwi}.
 \end{itemize}
 
@@ -170,23 +159,21 @@ Nombre de ces méthodes sont peu adaptées à l'imagerie de soudure. En effet, c
         \includegraphics[height=4cm]{img/chassignole_echos.png}
         \caption{Bscan}
     \end{subfigure}
-    \caption{Illustration de la perturbation du faisceau ultrasonore dans une sourdure. Images extraites de \cite{chassignole_beam}. LLT echo : Réplection de l'onde longitudinale (L) sur le bord de soudure puis réflection de cette onde L sur l'encoche avec conversion de en mode transverse (T).  }\label{echos}
+    \caption{Illustration de la perturbation du faisceau ultrasonore dans une sourdure. Images extraites de \cite{chassignole_beam}. LLT echo : Réflexion de l'onde longitudinale (L) sur le bord de soudure puis réflexion de cette onde L sur l'encoche avec conversion en mode transverse (T).  }\label{echos}
 \end{figure}
 
-
-champ pas assez diffus pour bénéficier des qualités du retournement temporel.
-
+De manière générale, les méthodes nécessitant une bonne connaissance du matériau ne sont pas adaptées à l'imagerie de soudure ; tenter de reconstruire les paramètres élastiques de la soudure par une résolution de problème inverse semble être une approche plus appropriée.
 
 
 
 
 \todo[inline]{}
 
-hohne\_2012 pour images SAFT
+%hohne\_2012 pour images SAFT
 
 
-gardahaut pour porpagation de rai CIVA
+%gardahaut pour porpagation de rai CIVA
 
-Born : linéarise le pb ? (pour faible contraste, adapté au cnd ?) brossier these dit que c'est pas linéarisé et qu'on a donc le champ d'onde complet
+%Born : linéarise le pb ? (pour faible contraste, adapté au cnd ?) brossier these dit que c'est pas linéarisé et qu'on a donc le champ d'onde complet
 
-+acoustique non-linéaire : Nonlinear signal processing for ultrasonic imaging of material complexity (dos santos) par ex
+%+acoustique non-linéaire : Nonlinear signal processing for ultrasonic imaging of material complexity (dos santos) par ex
