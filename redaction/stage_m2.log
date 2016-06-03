@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.3.4)  31 MAY 2016 11:25
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.3.4)  2 JUN 2016 16:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -877,16 +877,47 @@ Package: bm 2004/02/26 v1.1c Bold Symbol Support (DPC/FMi)
 LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 138.
 LaTeX Info: Redefining \bm on input line 204.
 )
+(/usr/share/texlive/texmf-dist/tex/latex/mh/mathtools.sty
+Package: mathtools 2013/02/12 v1.13 mathematical typesetting tools
+
+(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count128
+\calc@Bcount=\count129
+\calc@Adimen=\dimen176
+\calc@Bdimen=\dimen177
+\calc@Askip=\skip58
+\calc@Bskip=\skip59
+LaTeX Info: Redefining \setlength on input line 76.
+LaTeX Info: Redefining \addtolength on input line 77.
+\calc@Ccount=\count130
+\calc@Cskip=\skip60
+)
+(/usr/share/texlive/texmf-dist/tex/latex/mh/mhsetup.sty
+Package: mhsetup 2010/01/21 v1.2a programming setup (MH)
+)
+LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
+LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
+\g_MT_multlinerow_int=\count131
+\l_MT_multwidth_dim=\dimen178
+\origjot=\skip61
+\l_MT_shortvdotswithinadjustabove_dim=\dimen179
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen180
+\l_MT_above_intertext_sep=\dimen181
+\l_MT_below_intertext_sep=\dimen182
+\l_MT_above_shortintertext_sep=\dimen183
+\l_MT_below_shortintertext_sep=\dimen184
+)
 (/usr/share/texlive/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
 Package: fancyvrb 2008/02/07
 
 Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix 
 <2008/02/07> (tvz)
-\FV@CodeLineNo=\count128
+\FV@CodeLineNo=\count132
 \FV@InFile=\read2
 \FV@TabBox=\box37
-\c@FancyVerbLine=\count129
-\FV@StepNumber=\count130
+\c@FancyVerbLine=\count133
+\FV@StepNumber=\count134
 \FV@OutFile=\write4
 ) (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip11
@@ -894,8 +925,8 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
 Package: subcaption 2013/02/03 v1.1-62 Sub-captions (AR)
-\c@subfigure=\count131
-\c@subtable=\count132
+\c@subfigure=\count135
+\c@subtable=\count136
 )
 (/usr/share/texlive/texmf-dist/tex/latex/todonotes/todonotes.sty
 Package: todonotes 2012/07/25 .dtx Todonotes source and documentation.
@@ -910,33 +941,20 @@ Package: xkeyval 2012/10/14 v2.6b package option processing (HA)
 (/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
 \XKV@toks=\toks32
 \XKV@tempa@toks=\toks33
-\XKV@depth=\count133
+\XKV@depth=\count137
 File: xkeyval.tex 2012/10/14 v2.6b key=value parser (HA)
 ))
 (/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryposit
 ioning.code.tex
 File: tikzlibrarypositioning.code.tex 2008/10/06 v2.10 (rcs-revision 1.7)
-) (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
-Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count134
-\calc@Bcount=\count135
-\calc@Adimen=\dimen176
-\calc@Bdimen=\dimen177
-\calc@Askip=\skip58
-\calc@Bskip=\skip59
-LaTeX Info: Redefining \setlength on input line 76.
-LaTeX Info: Redefining \addtolength on input line 77.
-\calc@Ccount=\count136
-\calc@Cskip=\skip60
 )
-\c@@todonotes@numberoftodonotes=\count137
-)
-(/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
+\c@@todonotes@numberoftodonotes=\count138
+) (/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
-\bibhang=\skip61
-\bibsep=\skip62
+\bibhang=\skip62
+\bibsep=\skip63
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count138
+\c@NAT@ctr=\count139
 )
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
@@ -990,16 +1008,16 @@ Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 )
-\@linkdim=\dimen178
-\Hy@linkcounter=\count139
-\Hy@pagecounter=\count140
+\@linkdim=\dimen185
+\Hy@linkcounter=\count140
+\Hy@pagecounter=\count141
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-\Hy@SavedSpaceFactor=\count141
+\Hy@SavedSpaceFactor=\count142
 
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
@@ -1011,12 +1029,12 @@ Package hyperref Info: Plain pages OFF on input line 4458.
 Package hyperref Info: Backreferencing OFF on input line 4463.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4688.
-\c@Hy@tempcnt=\count142
+\c@Hy@tempcnt=\count143
 LaTeX Info: Redefining \url on input line 5041.
-\XeTeXLinkMargin=\dimen179
-\Fld@menulength=\count143
-\Field@Width=\dimen180
-\Fld@charsize=\dimen181
+\XeTeXLinkMargin=\dimen186
+\Fld@menulength=\count144
+\Field@Width=\dimen187
+\Fld@charsize=\dimen188
 Package hyperref Info: Hyper figures OFF on input line 6295.
 Package hyperref Info: Link nesting OFF on input line 6300.
 Package hyperref Info: Hyper index ON on input line 6303.
@@ -1026,76 +1044,77 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6320.
 Package hyperref Info: PDF/A mode OFF on input line 6325.
 LaTeX Info: Redefining \ref on input line 6365.
 LaTeX Info: Redefining \pageref on input line 6369.
-\Hy@abspage=\count144
-\c@Item=\count145
-\c@Hfootnote=\count146
+\Hy@abspage=\count145
+\c@Item=\count146
+\c@Hfootnote=\count147
 )
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
-\Fld@listcount=\count147
-\c@bookmark@seq@number=\count148
+\Fld@listcount=\count148
+\c@bookmark@seq@number=\count149
 
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
-\Hy@SectionHShift=\skip63
+\Hy@SectionHShift=\skip64
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 46.
+Package hyperref Info: Option `colorlinks' set `true' on input line 49.
 
 (/usr/share/texlive/texmf-dist/tex/latex/lineno/lineno.sty
 Package: lineno 2005/11/02 line numbers on paragraphs v4.41
-\linenopenalty=\count149
+\linenopenalty=\count150
 \output=\toks34
-\linenoprevgraf=\count150
-\linenumbersep=\dimen182
-\linenumberwidth=\dimen183
-\c@linenumber=\count151
-\c@pagewiselinenumber=\count152
-\c@LN@truepage=\count153
-\c@internallinenumber=\count154
-\c@internallinenumbers=\count155
-\quotelinenumbersep=\dimen184
-\bframerule=\dimen185
-\bframesep=\dimen186
+\linenoprevgraf=\count151
+\linenumbersep=\dimen189
+\linenumberwidth=\dimen190
+\c@linenumber=\count152
+\c@pagewiselinenumber=\count153
+\c@LN@truepage=\count154
+\c@internallinenumber=\count155
+\c@internallinenumbers=\count156
+\quotelinenumbersep=\dimen191
+\bframerule=\dimen192
+\bframesep=\dimen193
 \bframebox=\box38
 LaTeX Info: Redefining \\ on input line 3056.
 ) (./stage_m2.aux
-(./fwi.aux))
+(./imagerie.aux) (./fwi.aux) (./annexes.aux))
 \openout1 = `stage_m2.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 51.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 51.
- (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 56.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 56.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 51.
-LaTeX Font Info:    ... okay on input line 51.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 51.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 56.
+LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 56.
 
 (/usr/share/texmf/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Info: Redefining \degres on input line 51.
-LaTeX Info: Redefining \dots on input line 51.
-LaTeX Info: Redefining \up on input line 51.
+LaTeX Info: Redefining \degres on input line 56.
+LaTeX Info: Redefining \dots on input line 56.
+LaTeX Info: Redefining \up on input line 56.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1133,16 +1152,16 @@ LaTeX Info: Redefining \up on input line 51.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count156
-\scratchdimen=\dimen187
+\scratchcounter=\count157
+\scratchdimen=\dimen194
 \scratchbox=\box39
-\nofMPsegments=\count157
-\nofMParguments=\count158
+\nofMPsegments=\count158
+\nofMParguments=\count159
 \everyMPshowfont=\toks35
-\MPscratchCnt=\count159
-\MPscratchDim=\dimen188
-\MPnumerator=\count160
-\makeMPintoPDFobject=\count161
+\MPscratchCnt=\count160
+\MPscratchDim=\dimen195
+\MPnumerator=\count161
+\makeMPintoPDFobject=\count162
 \everyMPtoPDFconversion=\toks36
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
@@ -1165,14 +1184,14 @@ Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             or
 (lastpage)             http://www.ctan.org/tex-archive/ 
 (lastpage)             install/macros/latex/contrib/pageslts.tds.zip
-(lastpage)             ! on input line 51.
+(lastpage)             ! on input line 56.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
 
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box40
-Package hyperref Info: Link coloring ON on input line 51.
+Package hyperref Info: Link coloring ON on input line 56.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1180,79 +1199,79 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count162
+\c@section@level=\count163
 )
-LaTeX Info: Redefining \ref on input line 51.
-LaTeX Info: Redefining \pageref on input line 51.
-LaTeX Info: Redefining \nameref on input line 51.
+LaTeX Info: Redefining \ref on input line 56.
+LaTeX Info: Redefining \pageref on input line 56.
+LaTeX Info: Redefining \nameref on input line 56.
 
 (./stage_m2.out) (./stage_m2.out)
 \@outlinefile=\write5
 \openout5 = `stage_m2.out'.
 
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 66.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 71.
  (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 66.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 71.
 
 (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 66.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 71.
 
 
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 66.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 71.
 
 
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 66.
+(Font)              <12> on input line 71.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 66.
+(Font)              <8> on input line 71.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 66.
-LaTeX Font Info:    Try loading font information for U+msa on input line 66.
+(Font)              <6> on input line 71.
+LaTeX Font Info:    Try loading font information for U+msa on input line 71.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 66.
+LaTeX Font Info:    Try loading font information for U+msb on input line 71.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<img/univ.png, id=51, 609.27625pt x 282.05376pt>
+<img/univ.png, id=103, 609.27625pt x 282.05376pt>
 File: img/univ.png Graphic file (type png)
  <use img/univ.png>
-Package pdftex.def Info: img/univ.png used on input line 106.
+Package pdftex.def Info: img/univ.png used on input line 111.
 (pdftex.def)             Requested size: 153.65742pt x 71.13188pt.
 
-Overfull \hbox (25.61873pt too wide) in paragraph at lines 106--107
+Overfull \hbox (25.61873pt too wide) in paragraph at lines 111--112
  [][] 
  []
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 107.
+(Font)              <14.4> on input line 112.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 107.
+(Font)              <10> on input line 112.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 107.
-<img/cnrs.jpg, id=53, 170.7981pt x 170.7981pt>
+(Font)              <7> on input line 112.
+<img/cnrs.jpg, id=105, 170.7981pt x 170.7981pt>
 File: img/cnrs.jpg Graphic file (type jpg)
  <use img/cnrs.jpg>
-Package pdftex.def Info: img/cnrs.jpg used on input line 110.
+Package pdftex.def Info: img/cnrs.jpg used on input line 115.
 (pdftex.def)             Requested size: 71.13007pt x 71.13188pt.
 
-<img/isterre.jpg, id=54, 592.2125pt x 428.60126pt>
+<img/isterre.jpg, id=106, 592.2125pt x 428.60126pt>
 File: img/isterre.jpg Graphic file (type jpg)
  <use img/isterre.jpg>
-Package pdftex.def Info: img/isterre.jpg used on input line 114.
+Package pdftex.def Info: img/isterre.jpg used on input line 119.
 (pdftex.def)             Requested size: 98.28014pt x 71.13188pt.
 
 [1
@@ -1272,15 +1291,11 @@ LaTeX Font Info:    Try loading font information for T1+lmss on input line 5.
 (/usr/share/texmf/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-
-LaTeX Warning: Reference `scan' on page 1 undefined on input line 18.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 18--19
 
  []
 
-<img/scan2.png, id=64, 349.0641pt x 261.6174pt>
+<img/scan2.png, id=117, 349.0641pt x 261.6174pt>
 File: img/scan2.png Graphic file (type png)
  <use img/scan2.png>
 Package pdftex.def Info: img/scan2.png used on input line 29.
@@ -1316,12 +1331,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 60--61
  []
 
 
+Package natbib Warning: Citation `prada_dort' on page 3 undefined on input line
+ 62.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 64--65
 
  []
-
-
-LaTeX Warning: Reference `pb_inv' on page 3 undefined on input line 71.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 88--89
@@ -1353,14 +1369,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 107--108
 
  []
 
-[4]
-
-LaTeX Warning: Reference `soudure' on page 5 undefined on input line 123.
-
-
-LaTeX Warning: Reference `echos' on page 5 undefined on input line 123.
-
-<./img/soudure3.png, id=164, 243.91125pt x 177.42285pt>
+[4] <./img/soudure3.png, id=216, 243.91125pt x 177.42285pt>
 File: ./img/soudure3.png Graphic file (type png)
 
 <use ./img/soudure3.png>
@@ -1371,7 +1380,7 @@ Overfull \hbox (30.20416pt too wide) in paragraph at lines 130--132
  [][] 
  []
 
-<./img/soudure1.png, id=165, 213.55785pt x 161.1621pt>
+<./img/soudure1.png, id=217, 213.55785pt x 161.1621pt>
 File: ./img/soudure1.png Graphic file (type png)
 
 <use ./img/soudure1.png>
@@ -1382,7 +1391,7 @@ Overfull \hbox (44.11789pt too wide) in paragraph at lines 137--138
  [][] 
  []
 
-<./img/soudure2.png, id=166, 203.44005pt x 152.4897pt>
+<./img/soudure2.png, id=218, 203.44005pt x 152.4897pt>
 File: ./img/soudure2.png Graphic file (type png)
 
 <use ./img/soudure2.png>
@@ -1393,7 +1402,7 @@ Overfull \hbox (45.143pt too wide) in paragraph at lines 143--144
  [][] 
  []
 
-<img/chassignole_echos_config.png, id=171, 144.90135pt x 114.9093pt>
+<img/chassignole_echos_config.png, id=223, 144.90135pt x 114.9093pt>
 File: img/chassignole_echos_config.png Graphic file (type png)
 
 <use img/chassignole_echos_config.png>
@@ -1405,7 +1414,7 @@ Overfull \hbox (15.4804pt too wide) in paragraph at lines 153--154
  [][] 
  []
 
-<img/chassignole_echos.png, id=172, 168.3891pt x 140.56516pt>
+<img/chassignole_echos.png, id=224, 168.3891pt x 140.56516pt>
 File: img/chassignole_echos.png Graphic file (type png)
 
 <use img/chassignole_echos.png>
@@ -1422,75 +1431,159 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [5 <./img/soudure3.png> <./img/soudure1.png> <./img/soudure2.png>]
 Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
 ine 170.
-) [6 <./img/chassignole_echos_config.png> <./img/chassignole_echos.png>] (./sta
-ge_m2.bbl
+) [6 <./img/chassignole_echos_config.png> <./img/chassignole_echos.png>]
+\openout2 = `fwi.aux'.
+
+ (./fwi.tex
+Chapitre 2.
+
+Package natbib Warning: Citation `lailly' on page 7 undefined on input line 3.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
+
+ []
+
+
+Package natbib Warning: Citation `virieux_review' on page 7 undefined on input 
+line 5.
+
+
+Package natbib Warning: Citation `vigh_2008' on page 7 undefined on input line 
+53.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--54
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--54
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--54
+
+ []
+
 [7
+
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 56--57
+
+ []
+
+[8]
+Overfull \hbox (16.97389pt too wide) in paragraph at lines 98--98
+[][][][]\T1/lmr/m/n/10.95 développer?  
+ []
+
+
+Overfull \hbox (16.97389pt too wide) in paragraph at lines 98--98
+[][][][]\T1/lmr/m/n/10.95 développer?  
+ []
+
+
+Overfull \hbox (16.97389pt too wide) in paragraph at lines 98--98
+[][][][]\T1/lmr/m/n/10.95 développer?  
+ []
+
+
+Overfull \hbox (16.97389pt too wide) in paragraph at lines 98--98
+[][][][]\T1/lmr/m/n/10.95 développer?  
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 105--108
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 117--118
+
+ []
+
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 144--145
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 158--159
+
+ []
+
+[10]
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 187.
+
+ (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+File: ./img/soudure1.png Graphic file (type png)
+ <use ./img/soudure1.png>
+Package pdftex.def Info: ./img/soudure1.png used on input line 191.
+(pdftex.def)             Requested size: 188.52129pt x 142.26378pt.
+File: ./img/soudure2.png Graphic file (type png)
+
+<use ./img/soudure2.png>
+Package pdftex.def Info: ./img/soudure2.png used on input line 192.
+(pdftex.def)             Requested size: 189.80261pt x 142.26378pt.
+) [11]
+\openout2 = `annexes.aux'.
+
+ (./annexes.tex
+Chapitre 3.
+) [12
+
+
+
+] (./stage_m2.bbl [13
 
 
 ]) 
 AED: lastpage setting LastPage
-[8]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 150.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 150.
- (./stage_m2.aux (./imagerie.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 150.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 150.
+[14]
 
+Package natbib Warning: There were undefined citations.
 
-Package rerunfilecheck Warning: File `stage_m2.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `stage_m2.out':
-(rerunfilecheck)             Before: 1FA2CCB5CBE8379DDD328DAE5D60D423;779
-(rerunfilecheck)             After:  E81F92354211B9BA847CAD0DA3E88600;750.
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 150.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 157.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 157.
+(./stage_m2.aux (./imagerie.aux) (./fwi.aux) (./annexes.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 157.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 157.
+Package rerunfilecheck Info: File `stage_m2.out' has not changed.
+(rerunfilecheck)             Checksum: F1B218AE6135A91DED6783908F6733D7;1835.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 157.
  ) 
 Here is how much of TeX's memory you used:
- 19587 strings out of 493304
- 332689 string characters out of 6139872
- 417752 words of memory out of 5000000
- 22560 multiletter control sequences out of 15000+600000
- 115435 words of font info for 92 fonts, out of 8000000 for 9000
+ 20260 strings out of 493304
+ 344457 string characters out of 6139872
+ 432434 words of memory out of 5000000
+ 23177 multiletter control sequences out of 15000+600000
+ 115800 words of font info for 93 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 56i,9n,82p,775b,727s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{subsection.1.6.4} has been referenced but does no
-t exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.1.6.3} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.1.6.2} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.1.6.1} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.1.6} has been referenced but does not exist
-, replaced by a fixed one
-
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvip
-s/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/t
-exmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-m
-athex.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/
-fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc1
-0.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/font
-s/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb>
-</usr/share/texmf/fonts/type1/public/lm/lmmib10.pfb></usr/share/texmf/fonts/typ
-e1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/
-share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public
-/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss8.pfb></usr/share/te
-xmf/fonts/type1/public/lm/lmsy10.pfb>
-Output written on stage_m2.pdf (9 pages, 2807952 bytes).
+ 56i,11n,82p,963b,782s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/d
+vips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/shar
+e/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/l
+m-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}</usr/share/texmf/f
+onts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.
+pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts
+/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb>
+</usr/share/texmf/fonts/type1/public/lm/lmmi6.pfb></usr/share/texmf/fonts/type1
+/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmmib10.pfb></usr/
+share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/publi
+c/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/tex
+mf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lms
+s8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fon
+ts/type1/public/lm/lmsy8.pfb>
+Output written on stage_m2.pdf (15 pages, 2852960 bytes).
 PDF statistics:
- 275 PDF objects out of 1000 (max. 8388607)
- 226 compressed objects within 3 object streams
- 55 named destinations out of 1000 (max. 500000)
- 146 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 413 PDF objects out of 1000 (max. 8388607)
+ 353 compressed objects within 4 object streams
+ 87 named destinations out of 1000 (max. 500000)
+ 250 words of extra memory for PDF output out of 10000 (max. 10000000)
 

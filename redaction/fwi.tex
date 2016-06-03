@@ -47,7 +47,7 @@ Le principe général est de calculer des données $\bm{d}_{cal}$ issues d'un mo
 %reflectivity field by the ratio of upgoing and downgoing wave
 %fields. Neverthelesss
 
-\section{Problème direct}
+\section{Problème direct \label{pd_dir}}
 
 Dans le cas de l'imagerie par ultrason, résoudre le problème direct revient à trouver la solution de l'équation d'onde linéarisée. Il est fréquent que l'hypothèse d'une propagation acoustique soit faite en prospection géophysique. Cette approximation a pour but de réduire fortement le coût des calculs et est justifiée par le fait que la trace des ondes de compression soit dominante dans les données de mesures. De plus, en réduisant le nombre de paramètres du modèle, le problème est rendu moins non-linéaire. Cependant, cette approximation ne permet pas une caractérisation complète du milieu et, pour une application en CND, demande un pré-traitement précis des données et retire notamment la précision qu'offrent les ondes de cisaillement par leur faible longueur d'onde.\\~\\
 Le problème peut-être résolu dans le domaine temporel ou dans le domaine fréquentiel \citep{vigh_2008}. Le domaine temporel laisse la possibilité d'effectuer une sélection des arrivées d'ondes par fenêtrage temporel mais présente une plus forte susceptibilité au phénomène de saut de phase (décrit dans le paragraphe ????). \\~\\
@@ -55,7 +55,7 @@ Le problème peut-être résolu dans le domaine temporel ou dans le domaine fré
 
  Pour résoudre l'équation d'onde, parmi les approches qui nécessitent de faire le moins d'hypothèse sur le champ d'onde et sur le milieu de propagation figurent les différences finies et les éléments finis. Les différences finies sont les plus faciles à "écrire" et à implémenter. Elles permettent de discrétiser les dérivées temporelles et spatiales par des différences d'ordre 2 \citep{virieux_86} ou d'ordre 4 \citep{levander}. Cependant, contrairement aux éléments finis, elles imposent l'utilisation de grilles régulières et ne permettent donc pas d'adapter localement le pas de grille à la géométrie ou à la complexité du milieu. \\ Les éléments finis se prêtent mieux aux maillages non-structurés. Leur solution est développée sur des basent de fonction (d'ordre élevé pour les éléments finis spectraux) et permettent de prendre simplement en compte les conditions limites.\\
  
-Deux types de conditions limites sont nécessaires pour le modèle de soudure : une condition parfaitement réfléchissante au niveau des surfaces de la plaque (en considérant une mesure dans l'air, le couplage fluide structure est négligeable) et une condition absorbante pour représenter la plaque loin de la zone d'étude (cf figure~\ref{BC}).
+Deux types de conditions limites sont nécessaires pour le modèle de soudure à 2 dimensions (2D) : une condition parfaitement réfléchissante (Dirichlet) au niveau des surfaces de la plaque (en considérant une mesure dans l'air, le couplage fluide structure est négligeable) et une condition absorbante pour représenter la plaque loin de la zone d'étude (cf figure~\ref{BC}). Les conditions absorbantes sont modélisées à l'aide de \emph{Perfectly Matched Layers} (PML) qui simulent une forte atténuation dans une zone restreinte de manière anisotrope (seule la composante normale de l'onde est atténuée).
 
 \begin{figure}[!h]
 	\centering
@@ -82,13 +82,75 @@ Deux types de conditions limites sont nécessaires pour le modèle de soudure : 
 
 \todo[inline]{Questions : qu'est-ce qui est fait en fréquence, qu'est qui est fait en temps ?}
 
-Dans le domaine fréquentiel, l'équation d'onde étant réduite à un système d'équation linéaires, il est possible d'utiliser des méthodes de résolution directe du type décomposition LU bien qu'en pratique, les performances de ces méthodes soient limitées pour des problèmes comportant un grand nombre d'inconnues.  Les principaux avantages d'une résolution du problème direct dans le domaine temporel sont donc d'intégrer facilement les phénomènes d'atténuation et de permettre une sélection fine des fréquences d'intérêt. Cependant, la résolution par différences finies dans le domaine temporel impose un critère de stabilité Courant-Friedrichs-Lewy (CFL) qui peut-être contraignant, surtout en 3D.
+Dans le domaine fréquentiel, l'équation d'onde étant réduite à un système d'équations linéaires, il est possible d'utiliser des méthodes de résolution directe du type décomposition LU bien qu'en pratique, les performances de ces méthodes soient limitées pour des problèmes comportant un grand nombre d'inconnues.  Les principaux avantages d'une résolution du problème direct dans le domaine fréquentiel sont donc d'intégrer facilement les phénomènes d'atténuation et de permettre une sélection fine des fréquences d'intérêt. Cependant, la résolution par différences finies dans le domaine temporel impose un critère de stabilité Courant-Friedrichs-Lewy (CFL) qui peut-être contraignant, surtout en 3D.
 
 
 
 
 
-\section{le pb inverse}
+\section{Problème inverse}
+
+Le problème inverse est un problème d'optimisation locale visant à réduire l'écart entre les données observées $\bm{d}_{obs}$ et les données calculées $\bm{d}_{cal}(\bm{m})$ pour chaque couple source-récepteur, en ajustant le modèle constitué de M paramètres $\bm{m}$. L'idée est donc de minimiser la norme au sens des moindres carrés de la différence $\bm{d}_{obs}-\bm{d}_{cal}(\bm{m})$ définie comme suit : 
+\begin{equation}
+	C(\bm{m})=\frac{1}{2}||\bm{d}_{obs}-\bm{d}_{cal}(\bm{m})||^{2}\text{.}
+	\label{norm}
+\end{equation}
+ Le minimum de cette fonction de coût est atteint lorsque la dérivée par rapport aux paramètres du modèle s'annule. Un développement de Taylor au second ordre de $C(\bm{m}+ \bm{\Delta m})$ \todo{développer ?} permet d'écrire : 
+ \begin{equation}
+ 	\frac{\dd C(\bm{m}+\bm{\Delta m})}{\dd m_{i}}= \frac{\dd C(\bm{m})}{\dd m_{i}} + \displaystyle\sum_{j}^{M} \frac{\dd^{2} C(\bm{m})}{\dd m_{j} \dd m_{i}}\Delta m_{j}\text{.}
+ \end{equation}
+Les termes d'ordres plus élevés sont nuls si le problème direct est linéaire. Le minimum de la fonction de coût est alors atteint en une seule itération en annulant la dérivée : 
+\begin{equation}
+	\frac{\dd C(\bm{m}+\bm{\Delta m})}{\dd m_{i}} = 0 ~~~~~\Leftrightarrow ~~~~~ \Delta m _{j} = -\left( \frac{\dd ^{2} C(\bm{m})}{\dd m_{j} \dd m_{i} }\right)^{-1} \frac{\dd C (\bm{m})}{\dd m_{i}} \text{.}
+\end{equation}
+En FWI, le problème inverse n'étant pas linéaire, cette inversion est réalisée sur plusieurs itérations.\\
+La direction de descente est donc donnée par le gradient et la dérivée seconde (hessien) donne la courbure de la fonction de coût.\\
+
+Une des difficultés de l'inversion réside donc dans le calcul du hessien. La méthode présentant le plus de qualité en terme de convergence et de temps de calcul est la méthode de Gauss-Newton qui propose d'utiliser une version approximée de l'inverse du hessien, calculée à partir de valeurs précédentes du gradient.
+
+\subsection{Calcul du gradient}
+
+D'après l'expression de la norme~\ref{norm}, sa dérivée par rapport aux paramètres $\bm{m}$ (le gradient) est donc : 
+\begin{equation}
+	 \frac{\dd C (\bm{m})}{\dd m_{i}} = -\tr{\left( \frac{\dd \bm{d}_{cal}(\bm{m}) }{\dd m_{i}} \right)} ( \bm{d}_{obs} - \bm{d}_{cal}(\bm{m})) \text{.}
+	 \label{eq_grad}
+\end{equation}\\
+
+
+
+Le problème direct décrit au paragraphe précédent~(\ref{pd_dir}) peut se mettre sous la forme :
+\begin{equation}
+	\bm{A}(\bm{m},\bm{r},\xi)\bm{d}_{cal}(\bm{m},\bm{r},\xi)=\bm{s}(\bm{r},\xi)\text{,}
+	\label{eq_pb_dir}
+\end{equation}
+
+où $\bm{r}$ est la variable d'espace et $\xi$ est le temps ou la fréquence. $\bm{A}$ est un opérateur correspondant à l'équation d'onde et $\bm{s}$ est le terme source. Notons que le vecteur de données $\bm{d}_{cal}$ a une longueur égale au nombre de récepteur et doit donc être étendu de façon a avoir la même longueur que l'espace du problème direct. La dérivée de l'équation~\ref{eq_pb_dir} par rapport à $\bm{m}$ s'écrit : 
+\begin{equation}
+	\bm{A} \frac{\dd \bm{d}_{cal}(\bm{m})}{\dd m_{i}} + \frac{\dd A}{\dd m_{i}}\bm{d}_{cal}(\bm{m}) = \bm{0} \text{.}
+\end{equation}
+
+On a donc : 
+\begin{equation}
+	\tr{\left( \frac{\dd \bm{d}_{cal}(\bm{m})}{\dd \bm{m}}  \right)} = - \tr{\bm{d}_{cal}(\bm{m})} \tr{\left( \frac{\dd \bm{A}}{\dd \bm{m}} \right)} \tr{A^{-1}}
+	\label{sub}
+\end{equation} 	
+
+Finalement, en reportant cette expression dans l'équation~\ref{eq_grad}, on obtient l'expression du gradient : 
+\begin{equation}
+	 \frac{\dd C (\bm{m})}{\dd m_{i}} = \tr{\bm{d}_{cal}(\bm{m})}  \tr{\left( \frac{\dd \bm{A}}{\dd m_{i}}\right)} \tr{\bm{A}} (\bm{d}_{obs} - \bm{d}_{cal}(\bm{m}))^* = \tr{\bm{d}_{cal}(\bm{m})} \tr{\left( \frac{\dd \bm{A}}{\dd m_{i}}\right)} \lambda^*
+\end{equation}
+\todo[inline]{conjugué de $\Delta d $ ?}
+
+Le champ $\lambda^*$ correspond donc à la rétropopagation des résidus $( \bm{d}_{obs} - \bm{d}_{cal}(\bm{m}))^*$. L'opérateur conjugué $^*$ indique une propagation en temps inverse, ce qui permet, comme en retournement temporel \citep{prada_2002}, une focalisation sur les éléments diffractant absents du modèle initial. Cette expression du gradient peut également être obtenu par le formalise de l'état adjoint \citep{plessix}.\\
+\todo[inline]{quid de dA/dm ? Diagramme de rayonnement ?}
+
+La substitution~\ref{sub} permet donc d'éviter le calcul de la matrice de sensibilité $\tr{\left( \frac{\dd \bm{d}_{cal}(\bm{m}) }{\dd m_{i}} \right)}$ . Le calcul du gradient découle donc du calcul de deux problèmes directs : 
+\begin{equation*}
+	\bm{A}(\bm{m})\bm{d}_{cal}(\bm{m})=\bm{s} ~~~~~~~\text{et}~~~~~~~\bm{A}(\bm{m}) \lambda^*(\bm{m})=( \bm{d}_{obs} - \bm{d}_{cal}(\bm{m}))^*
+\end{equation*}
+
+
+
 
 \section{Optimisation}
 
@@ -97,6 +159,20 @@ brossier these: explication du choix de la norme l2
 Algo choisi pour le quasi-newton : Enfin, le hessien peut également être calculé à partir des gradients des itérations précédentes, par la méthode quasi-Newton \citep{nocedal}, avec l'algorithme BFGS (Broyden, Fletcher, Goldfarb, Shanno), par exemple. Cet algorithme ayant un gros coût de stockage, une version allégée qui ne stocke que quelques itérations (L-BFGS) est utilisée par \cite{brossier_2009}. Ils montrent que cette méthode est plus performante que la méthode du gradient conjugué préconditionné en terme de convergence. \\
 
 regularisation : limiter les artefacts haute-fréquence : pondération compliquée (cf brossier thèse) ou opérateur de lissage appliqué à $\bm{\Delta m}$ sous forme de filtre spatial adapté à la longueur d'onde correspondant à la fréquence d'inversion.
+
+
+
+\section{problématiques}
+
+\subsection{choix du modèle initial}
+\subsection{saut de phase}
+taille de l'offset, longueur des données tmporelles
+\subsection{inversion multi-paramètres}
+\subsection{estimation de la source}
+
+
+
+
 
 \section{resultats en geophy}
 
@@ -125,11 +201,10 @@ grains colonnaires
 p91 potel bruneau : données "d'aspect limité" : il n'es tpas possible de tourner autour de l'obstace. On colpense la perte d'info en réalisant les mesures sur plusieurs freq et possibilité de déplacer capteur.
 
 
-\section{problématiques}
-\subsection{choix du modèle initial}
-\subsection{saut de phase}
-taille de l'offset, longueur des données tmporelles
 
-\subsection{inversion multi-paramètres}
 
 \subsection{sensibilité au bruit ?}
+
+\todo[inline]{Les impasses volontairement faites : \\
+	- détail de la discrétisation différences finies / détail des calculs FEM\\	
+}

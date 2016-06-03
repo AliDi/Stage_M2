@@ -20,6 +20,7 @@
 \usepackage{tikz}
 \usepackage{multirow}
 \usepackage{bm}
+\usepackage{mathtools}
     
     
 \usepackage{fancyvrb} % pour forcer les verbatim sur une seule page
@@ -31,7 +32,9 @@
 %\newcommand\matlab{MATLab\textsuperscript{\textregistered}}
 
 \renewcommand{\baselinestretch}{1.1}
-\renewcommand{\mathbf}{\mb}
+\newcommand{\dd}{\partial}
+\newcommand{\tr}[1]{\prescript{t\hspace{-0.08cm}}{}{#1}}
+
 
 \usepackage[colorinlistoftodos]{todonotes}
 
@@ -47,6 +50,8 @@
 
 %numerotation des lignes (pour la relecture)
 \usepackage{lineno} 
+
+
 
 \begin{document} % début du doc
 % corps du doc
@@ -135,9 +140,11 @@ Maîtres de conférence, ISTerre
 
 \include{imagerie}
 
-%\include{fwi}
+\include{fwi}
 
 %\include{application}
+
+\include{annexes}
 
 
 

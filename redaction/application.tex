@@ -2,6 +2,16 @@
 
 p91 potel bruneau en francais: données "d'aspect limité" : il n'est pas possible de tourner autour de l'obstacle. On compense la perte d'info en réalisant les mesures sur plusieurs freq et possibilité de déplacer capteur.
 
+\section{génération de données "vraies"}
+Le signal d'excitation choisi est une fonction de Ricker qui correspond à la dérivée seconde d'une Gaussienne et qui est définie de la manière suivante : 
+\begin{equation}
+	(1-(t-t_{0}f\pi))^2e^{-((t-t_{0})\pi f)^2}
+\end{equation}
+
+\section{Discrétisation}
+2 conditions sur la discrétisation : 
+CFL et ..points par longueur d'onde pour les schéma d'ordre ... et...
+
 \section{problématiques des inversions multiparamètres}
 
 
@@ -17,7 +27,7 @@ anisotrope est plus problématique que isotrope car :
 -modélisation plus complexe,
 -problème moins bien posé
 
-Gholami 2011 : la vitesse a beaucoup plus d'inflence sur les données que les paramètre delta et epsilon (delta étant le plus faible). D'après ses schémas, on va donc avoir une maj de la vitesse mais pas des autres paramètres
+Gholami 2011 : la vitesse a beaucoup plus d'influence sur les données que les paramètre delta et epsilon (delta étant le plus faible). D'après ses schémas, on va donc avoir une maj de la vitesse mais pas des autres paramètres
 
 \subsection{VTI}
 Pose quelques problèmes (Duveneck 2008) notamment génération d'onde S (sur données "vrai simulée"  et sur problème direct, mais pas la même car différente grille, PML, ... donc on la mute sur le résidu) qui n'a pas de sens physique. Proposer les solutions (taper Epsilon, en sismo on est dans l'eau donc c'est fait naturellement).
