@@ -1,4 +1,4 @@
-\begin{thebibliography}{24}
+\begin{thebibliography}{28}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -69,6 +69,12 @@ C~Holmes, B.~W. Drinkwater, and P.~D. Wilcox.
   array data for non-destructive evaluation.
 \newblock \emph{NDT\&E International}, \penalty0 (38):\penalty0 701--711, 2005.
 
+\bibitem[Lailly(1983)]{lailly}
+P.~Lailly.
+\newblock The seismic inverse problem as a sequence of before stack migrations.
+\newblock In \emph{Conference on Inverse Scattering--Theory and Application},
+  pages ~p.~206--220, 1983.
+
 \bibitem[Levander(1988)]{levander}
 A.~R. Levander.
 \newblock Fourth-order finite-difference {P-SV} seismograms.
@@ -92,6 +98,18 @@ J.~Nocedal.
 \newblock Updating quasi-newton matrices with limited storage.
 \newblock \emph{Mathematics of computation}, 35\penalty0 (151):\penalty0
   ~p.~773--782, 1980.
+
+\bibitem[Plessix(2006)]{plessix}
+R.-E. Plessix.
+\newblock A review of the adjoint-state method for computing the gradient of a
+  functional with geophysical applications.
+\newblock \emph{Geophys. J. Int.}, 167:\penalty0 ~p.~495--503, 2006.
+
+\bibitem[Prada and Fink(1994)]{prada_dort}
+C.~Prada and M.~Fink.
+\newblock Eigenmodes of the time reversal operator: A solution to selective
+  focusing in multiple-target media.
+\newblock \emph{Wave Motion}, 20:\penalty0 ~p.~151--163, 1994.
 
 \bibitem[Prada et~al.(2002)Prada, Kerbrat, Cassereau, and Fink]{prada_2002}
 C~Prada, E~Kerbrat, D~Cassereau, and M~Fink.
@@ -145,6 +163,11 @@ J.~Virieux.
 J.~Virieux.
 \newblock \emph{Seismic modelling of earth structure}.
 \newblock Editrice compositori, 1996.
+
+\bibitem[Virieux and Operto(2009)]{virieux_review}
+J.~Virieux and S.~Operto.
+\newblock {An overview of full-waveform inversion in exploration geophysics}.
+\newblock \emph{Geophysics}, 74\penalty0 (6):\penalty0 ~p.~WCC1--WCC26, 2009.
 
 \bibitem[Zhang et~al.(2012)Zhang, Hunter, Drinkwater, and Wilcox]{zhang}
 J.~Zhang, A.~Hunter, B.~W. Drinkwater, and P.~D. Wilcox.

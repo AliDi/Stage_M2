@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.3.4)  1 JUN 2016 17:28
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.3.4)  6 JUN 2016 16:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1076,41 +1076,43 @@ LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
 <./img/soudure1.png, id=47, 213.55785pt x 161.1621pt>
 File: ./img/soudure1.png Graphic file (type png)
  <use ./img/soudure1.png>
-Package pdftex.def Info: ./img/soudure1.png used on input line 127.
+Package pdftex.def Info: ./img/soudure1.png used on input line 126.
 (pdftex.def)             Requested size: 101.79947pt x 76.82234pt.
-LaTeX Font Info:    Try loading font information for U+msa on input line 127.
+LaTeX Font Info:    Try loading font information for U+msa on input line 126.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 127.
+LaTeX Font Info:    Try loading font information for U+msb on input line 126.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<./img/soudure2.png, id=49, 203.44005pt x 152.4897pt>
-File: ./img/soudure2.png Graphic file (type png)
- <use ./img/soudure2.png>
-Package pdftex.def Info: ./img/soudure2.png used on input line 127.
-(pdftex.def)             Requested size: 102.49272pt x 76.82234pt.
+<img/gardahaut.png, id=49, 409.0482pt x 125.0271pt>
+File: img/gardahaut.png Graphic file (type png)
+ <use img/gardahaut.png>
+Package pdftex.def Info: img/gardahaut.png used on input line 126.
+(pdftex.def)             Requested size: 204.52359pt x 62.51338pt.
 
-Overfull \vbox (2.8892pt too high) detected at line 127
+Overfull \hbox (66.31804pt too wide) detected at line 126
+[][][] $[]$[][][][][][][] $[]$[][][][][][] $[]$[][][][][] 
  []
 
 [2
 
- <./img/soudure1.png> <./img/soudure2.png>]
+ <./img/soudure1.png> <./img/gardahaut.png>]
 File: ./img/soudure1.png Graphic file (type png)
  <use ./img/soudure1.png>
-Package pdftex.def Info: ./img/soudure1.png used on input line 127.
+Package pdftex.def Info: ./img/soudure1.png used on input line 126.
 (pdftex.def)             Requested size: 101.79947pt x 76.82234pt.
-File: ./img/soudure2.png Graphic file (type png)
+File: img/gardahaut.png Graphic file (type png)
 
-<use ./img/soudure2.png>
-Package pdftex.def Info: ./img/soudure2.png used on input line 127.
-(pdftex.def)             Requested size: 102.49272pt x 76.82234pt.
+<use img/gardahaut.png>
+Package pdftex.def Info: img/gardahaut.png used on input line 126.
+(pdftex.def)             Requested size: 204.52359pt x 62.51338pt.
 
-Overfull \vbox (2.8892pt too high) detected at line 127
+Overfull \hbox (66.31804pt too wide) detected at line 126
+[][][] $[]$[][][][][][][][] $[]$[][][][][][][][] $[]$[][][][][][] 
  []
 
 [3
@@ -1118,22 +1120,23 @@ Overfull \vbox (2.8892pt too high) detected at line 127
 ]
 File: ./img/soudure1.png Graphic file (type png)
  <use ./img/soudure1.png>
-Package pdftex.def Info: ./img/soudure1.png used on input line 127.
+Package pdftex.def Info: ./img/soudure1.png used on input line 126.
 (pdftex.def)             Requested size: 101.79947pt x 76.82234pt.
-File: ./img/soudure2.png Graphic file (type png)
- <use ./img/soudure2.png>
-Package pdftex.def Info: ./img/soudure2.png used on input line 127.
-(pdftex.def)             Requested size: 102.49272pt x 76.82234pt.
+File: img/gardahaut.png Graphic file (type png)
+ <use img/gardahaut.png>
+Package pdftex.def Info: img/gardahaut.png used on input line 126.
+(pdftex.def)             Requested size: 204.52359pt x 62.51338pt.
 
-Overfull \vbox (2.8892pt too high) detected at line 127
+Overfull \hbox (66.31804pt too wide) detected at line 126
+[][][] $[]$[][][][][][][][] $[]$[][][][][][][][] $[]$[][][][][][] 
  []
 
 [4
 
-] <img/soud1.pdf, id=86, 223.34843pt x 49.09743pt>
+] <img/soud1.pdf, id=88, 223.34843pt x 49.09743pt>
 File: img/soud1.pdf Graphic file (type pdf)
  <use img/soud1.pdf>
-Package pdftex.def Info: img/soud1.pdf used on input line 144.
+Package pdftex.def Info: img/soud1.pdf used on input line 145.
 (pdftex.def)             Requested size: 223.34787pt x 49.0973pt.
 
 [5
@@ -1142,27 +1145,41 @@ Package pdftex.def Info: img/soud1.pdf used on input line 144.
 File: img/soud2.pdf Graphic file (type pdf)
 
 <use img/soud2.pdf>
-Package pdftex.def Info: img/soud2.pdf used on input line 144.
+Package pdftex.def Info: img/soud2.pdf used on input line 145.
 (pdftex.def)             Requested size: 223.34787pt x 52.29724pt.
  [6
 
  <./img/soud2.pdf>]
-<img/soud3.pdf, id=116, 223.34843pt x 54.72948pt>
+<img/soud3.pdf, id=116, 223.34843pt x 54.58894pt>
 File: img/soud3.pdf Graphic file (type pdf)
  <use img/soud3.pdf>
-Package pdftex.def Info: img/soud3.pdf used on input line 144.
-(pdftex.def)             Requested size: 223.34787pt x 54.72934pt.
+Package pdftex.def Info: img/soud3.pdf used on input line 145.
+(pdftex.def)             Requested size: 223.34787pt x 54.58879pt.
  [7
 
- <./img/soud3.pdf>] [8
+ <./img/soud3.pdf>] <img/soud4.pdf, id=135, 223.34843pt x 54.58894pt>
+File: img/soud4.pdf Graphic file (type pdf)
 
-] [9
+<use img/soud4.pdf>
+Package pdftex.def Info: img/soud4.pdf used on input line 145.
+(pdftex.def)             Requested size: 223.34787pt x 54.58879pt.
+ [8
+
+ <./img/soud4.pdf>] [9
 
 ] [10
 
 ] [11
 
 ]
+<img/vp.png, id=183, 770.75955pt x 549.9747pt>
+File: img/vp.png Graphic file (type png)
+ <use img/vp.png>
+Package pdftex.def Info: img/vp.png used on input line 187.
+(pdftex.def)             Requested size: 231.22964pt x 164.99368pt.
+ [12
+
+ <./img/vp.png>]
 \tf@nav=\write6
 \openout6 = `projet_m1.nav'.
 
@@ -1172,11 +1189,11 @@ Package pdftex.def Info: img/soud3.pdf used on input line 144.
 \tf@snm=\write8
 \openout8 = `projet_m1.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 182.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 182.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 189.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 189.
  (./projet_m1.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 182.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 182.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 189.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 189.
 Package rerunfilecheck Info: File `projet_m1.out' has not changed.
 (rerunfilecheck)             Checksum: A1396B805C6DEC58A24E8BE051878DD4;156.
 
@@ -1184,16 +1201,16 @@ Package rerunfilecheck Info: File `projet_m1.out' has not changed.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 182.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 189.
  ) 
 Here is how much of TeX's memory you used:
- 20125 strings out of 493304
- 374827 string characters out of 6139872
- 489392 words of memory out of 5000000
- 23020 multiletter control sequences out of 15000+600000
- 20138 words of font info for 72 fonts, out of 8000000 for 9000
+ 20170 strings out of 493304
+ 375795 string characters out of 6139872
+ 490392 words of memory out of 5000000
+ 23061 multiletter control sequences out of 15000+600000
+ 20498 words of font info for 73 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 50i,15n,53p,426b,629s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 50i,15n,53p,426b,896s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></u
 sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texl
@@ -1206,10 +1223,10 @@ lic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
 sfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
 fonts/symbols/msam7.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/zapfding
 /uzdr.pfb>
-Output written on projet_m1.pdf (11 pages, 864603 bytes).
+Output written on projet_m1.pdf (12 pages, 2138491 bytes).
 PDF statistics:
- 220 PDF objects out of 1000 (max. 8388607)
- 174 compressed objects within 2 object streams
- 27 named destinations out of 1000 (max. 500000)
- 92 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 239 PDF objects out of 1000 (max. 8388607)
+ 187 compressed objects within 2 object streams
+ 29 named destinations out of 1000 (max. 500000)
+ 102 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -2,6 +2,8 @@ This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: stage_m2.aux
 A level-1 auxiliary file: imagerie.aux
+A level-1 auxiliary file: fwi.aux
+A level-1 auxiliary file: annexes.aux
 The style file: plainnat.bst
 Database file #1: biblio.bib
 I was expecting a `,' or a `}'---line 200 of file biblio.bib
@@ -12,47 +14,48 @@ You're missing a field part---line 374 of file biblio.bib
  :    eid = 
  :          ,
 I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "vigh_2008"
 Warning--there's a number but no volume in doctor_saft
 Warning--there's a number but no volume in holmes_tfm
-You've used 24 entries,
+You've used 28 entries,
             2773 wiz_defined-function locations,
-            740 strings with 8491 characters,
-and the built_in function-call counts, 10877 in all, are:
-= -- 1003
-> -- 496
-< -- 15
-+ -- 175
-- -- 150
-* -- 897
-:= -- 1670
-add.period$ -- 73
-call.type$ -- 24
-change.case$ -- 116
-chr.to.int$ -- 23
-cite$ -- 50
-duplicate$ -- 486
-empty$ -- 956
-format.name$ -- 176
-if$ -- 2251
+            765 strings with 9093 characters,
+and the built_in function-call counts, 12928 in all, are:
+= -- 1210
+> -- 558
+< -- 20
++ -- 197
+- -- 168
+* -- 1040
+:= -- 1953
+add.period$ -- 85
+call.type$ -- 28
+change.case$ -- 134
+chr.to.int$ -- 27
+cite$ -- 58
+duplicate$ -- 586
+empty$ -- 1150
+format.name$ -- 202
+if$ -- 2704
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 24
-newline$ -- 129
-num.names$ -- 96
-pop$ -- 224
+missing$ -- 28
+newline$ -- 149
+num.names$ -- 112
+pop$ -- 259
 preamble$ -- 1
-purify$ -- 98
+purify$ -- 112
 quote$ -- 0
-skip$ -- 341
+skip$ -- 424
 stack$ -- 0
-substring$ -- 689
-swap$ -- 35
-text.length$ -- 1
+substring$ -- 869
+swap$ -- 57
+text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 249
+type$ -- 293
 warning$ -- 2
-while$ -- 106
+while$ -- 127
 width$ -- 0
-write$ -- 318
+write$ -- 370
 (There were 2 error messages)

@@ -49,11 +49,12 @@ Le principe général est de calculer des données $\bm{d}_{cal}$ issues d'un mo
 
 \section{Problème direct \label{pd_dir}}
 
-Dans le cas de l'imagerie par ultrason, résoudre le problème direct revient à trouver la solution de l'équation d'onde linéarisée. Il est fréquent que l'hypothèse d'une propagation acoustique soit faite en prospection géophysique. Cette approximation a pour but de réduire fortement le coût des calculs et est justifiée par le fait que la trace des ondes de compression soit dominante dans les données de mesures. De plus, en réduisant le nombre de paramètres du modèle, le problème est rendu moins non-linéaire. Cependant, cette approximation ne permet pas une caractérisation complète du milieu et, pour une application en CND, demande un pré-traitement précis des données et retire notamment la précision qu'offrent les ondes de cisaillement par leur faible longueur d'onde.\\~\\
-Le problème peut-être résolu dans le domaine temporel ou dans le domaine fréquentiel \citep{vigh_2008}. Le domaine temporel laisse la possibilité d'effectuer une sélection des arrivées d'ondes par fenêtrage temporel mais présente une plus forte susceptibilité au phénomène de saut de phase (décrit dans le paragraphe ????). \\~\\
+Dans le cas de l'imagerie par ultrason, résoudre le problème direct revient à trouver la solution de l'équation d'onde linéarisée. Il est fréquent que l'hypothèse d'une propagation acoustique soit faite en prospection géophysique. Cette approximation a pour but de réduire fortement le coût des calculs et est justifiée par le fait que la trace des ondes de compression soit dominante dans les données de mesures. De plus, en réduisant le nombre de paramètres du modèle, le problème est rendu moins non-linéaire. Cependant, cette approximation ne permet pas une caractérisation complète du milieu et, pour une application en CND, demande un pré-traitement parcimonieux des données et retire notamment la précision qu'offrent les ondes de cisaillement par leur faible longueur d'onde.\\~\\
 
 
- Pour résoudre l'équation d'onde, parmi les approches qui nécessitent de faire le moins d'hypothèse sur le champ d'onde et sur le milieu de propagation figurent les différences finies et les éléments finis. Les différences finies sont les plus faciles à "écrire" et à implémenter. Elles permettent de discrétiser les dérivées temporelles et spatiales par des différences d'ordre 2 \citep{virieux_86} ou d'ordre 4 \citep{levander}. Cependant, contrairement aux éléments finis, elles imposent l'utilisation de grilles régulières et ne permettent donc pas d'adapter localement le pas de grille à la géométrie ou à la complexité du milieu. \\ Les éléments finis se prêtent mieux aux maillages non-structurés. Leur solution est développée sur des basent de fonction (d'ordre élevé pour les éléments finis spectraux) et permettent de prendre simplement en compte les conditions limites.\\
+
+
+ Pour résoudre l'équation d'onde, parmi les approches qui nécessitent de faire le moins d'hypothèse sur le champ d'onde et sur le milieu de propagation figurent les différences finies et les éléments finis. Les différences finies sont les plus faciles à développer et à implémenter. Elles permettent de discrétiser les dérivées temporelles et spatiales par des différences d'ordre 2 \citep{virieux_86} ou d'ordre 4 \citep{levander}. Cependant, contrairement aux éléments finis, elles imposent l'utilisation de grilles régulières et ne permettent donc pas d'adapter localement le pas de grille à la géométrie ou à la complexité du milieu. \\ Les éléments finis se prêtent mieux aux maillages non-structurés. Leur solution est développée sur des basent de fonction (d'ordre élevé pour les éléments finis spectraux) et permettent de prendre simplement en compte les conditions limites.\\
  
 Deux types de conditions limites sont nécessaires pour le modèle de soudure à 2 dimensions (2D) : une condition parfaitement réfléchissante (Dirichlet) au niveau des surfaces de la plaque (en considérant une mesure dans l'air, le couplage fluide structure est négligeable) et une condition absorbante pour représenter la plaque loin de la zone d'étude (cf figure~\ref{BC}). Les conditions absorbantes sont modélisées à l'aide de \emph{Perfectly Matched Layers} (PML) qui simulent une forte atténuation dans une zone restreinte de manière anisotrope (seule la composante normale de l'onde est atténuée).
 
@@ -80,9 +81,11 @@ Deux types de conditions limites sont nécessaires pour le modèle de soudure à
 	\caption{Représentation des deux types de conditions limites du modèle de soudure 2D.\label{BC}}
 \end{figure}
 
-\todo[inline]{Questions : qu'est-ce qui est fait en fréquence, qu'est qui est fait en temps ?}
+\todo[inline]{Questions : qu'est-ce qui est fait en fréquence, qu'est qui est fait en temps (modèle, inversion) ?}
 
-Dans le domaine fréquentiel, l'équation d'onde étant réduite à un système d'équations linéaires, il est possible d'utiliser des méthodes de résolution directe du type décomposition LU bien qu'en pratique, les performances de ces méthodes soient limitées pour des problèmes comportant un grand nombre d'inconnues.  Les principaux avantages d'une résolution du problème direct dans le domaine fréquentiel sont donc d'intégrer facilement les phénomènes d'atténuation et de permettre une sélection fine des fréquences d'intérêt. Cependant, la résolution par différences finies dans le domaine temporel impose un critère de stabilité Courant-Friedrichs-Lewy (CFL) qui peut-être contraignant, surtout en 3D.
+Le problème peut-être résolu dans le domaine temporel ou dans le domaine fréquentiel \citep{vigh_2008}. Le domaine temporel laisse la possibilité d'effectuer une sélection des arrivées d'ondes par fenêtrage temporel mais présente une plus forte susceptibilité au phénomène de saut de phase (décrit dans le paragraphe ????).  De plus, la résolution par différences finies dans le domaine temporel impose un critère de stabilité Courant-Friedrichs-Lewy (CFL) qui peut-être contraignant, surtout en 3D. Dans le domaine fréquentiel, l'équation d'onde étant réduite à un système d'équations linéaires, il est possible d'utiliser des méthodes de résolution directe du type décomposition LU bien qu'en pratique, les performances de ces méthodes soient limitées pour des problèmes comportant un grand nombre d'inconnues.  Les principaux avantages d'une résolution du problème direct dans le domaine fréquentiel sont donc d'intégrer facilement les phénomènes d'atténuation et de permettre une sélection fine des fréquences d'intérêt. \\~\\
+
+
 
 
 
@@ -95,7 +98,7 @@ Le problème inverse est un problème d'optimisation locale visant à réduire l
 	C(\bm{m})=\frac{1}{2}||\bm{d}_{obs}-\bm{d}_{cal}(\bm{m})||^{2}\text{.}
 	\label{norm}
 \end{equation}
- Le minimum de cette fonction de coût est atteint lorsque la dérivée par rapport aux paramètres du modèle s'annule. Un développement de Taylor au second ordre de $C(\bm{m}+ \bm{\Delta m})$ \todo{développer ?} permet d'écrire : 
+ Le minimum de cette fonction de coût est atteint lorsque la dérivée par rapport aux paramètres du modèle s'annule. Un développement de Taylor au second ordre de $C(\bm{m}+ \bm{\Delta m})$ permet d'écrire : 
  \begin{equation}
  	\frac{\dd C(\bm{m}+\bm{\Delta m})}{\dd m_{i}}= \frac{\dd C(\bm{m})}{\dd m_{i}} + \displaystyle\sum_{j}^{M} \frac{\dd^{2} C(\bm{m})}{\dd m_{j} \dd m_{i}}\Delta m_{j}\text{.}
  \end{equation}
@@ -106,7 +109,7 @@ Les termes d'ordres plus élevés sont nuls si le problème direct est linéaire
 En FWI, le problème inverse n'étant pas linéaire, cette inversion est réalisée sur plusieurs itérations.\\
 La direction de descente est donc donnée par le gradient et la dérivée seconde (hessien) donne la courbure de la fonction de coût.\\
 
-Une des difficultés de l'inversion réside donc dans le calcul du hessien. La méthode présentant le plus de qualité en terme de convergence et de temps de calcul est la méthode de Gauss-Newton qui propose d'utiliser une version approximée de l'inverse du hessien, calculée à partir de valeurs précédentes du gradient.
+
 
 \subsection{Calcul du gradient}
 
@@ -144,31 +147,52 @@ Finalement, en reportant cette expression dans l'équation~\ref{eq_grad}, on obt
 Le champ $\lambda^*$ correspond donc à la rétropopagation des résidus $( \bm{d}_{obs} - \bm{d}_{cal}(\bm{m}))^*$. L'opérateur conjugué $^*$ indique une propagation en temps inverse, ce qui permet, comme en retournement temporel \citep{prada_2002}, une focalisation sur les éléments diffractant absents du modèle initial. Cette expression du gradient peut également être obtenu par le formalise de l'état adjoint \citep{plessix}.\\
 \todo[inline]{quid de dA/dm ? Diagramme de rayonnement ?}
 
-La substitution~\ref{sub} permet donc d'éviter le calcul de la matrice de sensibilité $\tr{\left( \frac{\dd \bm{d}_{cal}(\bm{m}) }{\dd m_{i}} \right)}$ . Le calcul du gradient découle donc du calcul de deux problèmes directs : 
+La substitution~\ref{sub} permet d'éviter le calcul de la matrice de sensibilité $\tr{\left( \frac{\dd \bm{d}_{cal}(\bm{m}) }{\dd m_{i}} \right)}$ . Le calcul du gradient découle donc du calcul de deux problèmes directs : 
 \begin{equation*}
 	\bm{A}(\bm{m})\bm{d}_{cal}(\bm{m})=\bm{s} ~~~~~~~\text{et}~~~~~~~\bm{A}(\bm{m}) \lambda^*(\bm{m})=( \bm{d}_{obs} - \bm{d}_{cal}(\bm{m}))^*
 \end{equation*}
 
+\subsection{Calcul du hessien}
+
+La méthode d'optimisation choisie pour la FWI est une méthode quasi-Newton qui propose d'utiliser une version approximée de l'inverse du hessien, calculée à partir de valeurs précédentes du gradient.  \cite{brossier_2009} montrent que cette méthode, développée avec l'algorithme L-BFGS, est plus performante que la méthode du gradient conjugué préconditionné en terme de convergence. 
+
+\subsection{Régularisation}
+
+Le problème étant mal-posé, il est nécessaire de limiter les artefacts haute-fréquences venant perturber $\bm{\Delta m}$. Pour cela, il est possible d'ajouter un terme de pondération à la fonction de coût qui permet de lisser le modèle. Ce lissage peut aussi être directement appliqué à $\bm{\Delta m}$ sous forme de filtre spatial adapté à la longueur d'onde correspondant à la fréquence d'inversion.
+
+\section{Problématiques liées à l'inversion}
+
+\subsection{Choix du modèle initial}
+Afin d'assurer une convergence vers le minimum global, il est nécessaire que le modèle initial se situe dans le bassin d'attraction de la fonctionnelle. Pour cela, il faut s'assurer que le modèle soit cinématiquement acceptable en levant l’ambiguïté sur la phase. Les données temporelles issues de ce modèle doivent donc avoir un retard de moins d'une demi-longueur d'onde par rapport aux données observées vraies. Si cette condition n'est pas respectée, l'algorithme ne permettra pas un bon réajustement des phases et convergera vers un minimum local (cf~\ref{ambig_phase}).
+
+\begin{figure}[!h]
+	\includegraphics[scale=0.8]{img/ambig_phase.png}
+	\caption{Illustration de l'ambiguïté sur la phase (extraite de \cite{brossier_these}). En haut, le déphasage est supérieur à $T/2$, les arches sont mal ajustées. En bas, le déphasage est inférieur à $T/2$, les phases sont bien ajustées. \label{ambig_phase}}
+\end{figure}
+
+ Dans cette étude, 
+
+À défaut de disposer à un modèle initial cinématiquement acceptable, il est possible de d'appliquer un ensemble de stratégies permettant de limiter ces artefacts : introduire progressivement les sources ou récepteurs les plus éloignés, rallonger progressivement les temps d'acquisition, et inverser prioritairement les données basses fréquences.
 
 
+En sismologie, une image issue de tomographie peut fournir un modèle initial assez précis. Dans cette étude, on considère que peu d'informations sont connues sur les paramètres élastiques de la soudure et le modèle initial choisi est uniforme (cf chapitre~\ref{applications}). Cependant, il serait intéressant d'envisager l'utilisation d'un modèle initial construit statistiquement à partir des résultats d'inversion d'un grand nombre de soudure.
 
-\section{Optimisation}
+\subsection{Inversion multi-paramètres}
 
-brossier these: explication du choix de la norme l2
+Chaque changement de variable donne une nouvelle expression des différentielles des paramètres. 
 
-Algo choisi pour le quasi-newton : Enfin, le hessien peut également être calculé à partir des gradients des itérations précédentes, par la méthode quasi-Newton \citep{nocedal}, avec l'algorithme BFGS (Broyden, Fletcher, Goldfarb, Shanno), par exemple. Cet algorithme ayant un gros coût de stockage, une version allégée qui ne stocke que quelques itérations (L-BFGS) est utilisée par \cite{brossier_2009}. Ils montrent que cette méthode est plus performante que la méthode du gradient conjugué préconditionné en terme de convergence. \\
+choix des paramètres à inverser : ils ont différentes amplitudes et différents effets sur le champ d'onde, 
+diagramme de rayonnement
+citer forgues p.156 \citep{forgues}
 
-regularisation : limiter les artefacts haute-fréquence : pondération compliquée (cf brossier thèse) ou opérateur de lissage appliqué à $\bm{\Delta m}$ sous forme de filtre spatial adapté à la longueur d'onde correspondant à la fréquence d'inversion.
+\begin{figure}[!h]
+	\includegraphics[scale=0.5]{img/rayonnement.png}
+	\caption{Diagrammes de rayonnement pour différentes paramétrisations d'un milieu acoustique.\label{rayonnement}}
+\end{figure}
 
 
-
-\section{problématiques}
-
-\subsection{choix du modèle initial}
-\subsection{saut de phase}
-taille de l'offset, longueur des données tmporelles
-\subsection{inversion multi-paramètres}
 \subsection{estimation de la source}
+
 
 
 
@@ -188,13 +212,11 @@ taille de l'offset, longueur des données tmporelles
 -geophysique, dispositif de surface, donc on ne considère que les diffractions rayonnant vers la surface (soit angle de diffraction de max 180°)(Forgues, pages 160). En CND, on illumine des deux côté
 
 
-\begin{figure}
-	\includegraphics[height=5cm]{./img/soudure1.png}
-	\includegraphics[height=5cm]{./img/soudure2.png}
-	\caption{Macrographie d'une soudure industrielle en acier inoxydable en acier austénitique \citep{chassignole}. À gauche : coupe dans le plan $(x,z)$, à droite : coupe dans le plan $(x,y)$.}
-\end{figure}
-
-\todo[inline]{préciser les plans sur un schéma et l'orientation des photos}
+%\begin{figure}
+%	\includegraphics[height=5cm]{./img/soudure1.png}
+%	\includegraphics[height=5cm]{./img/soudure2.png}
+%	\caption{Macrographie d'une soudure industrielle en acier inoxydable en acier austénitique \citep{chassignole}. À gauche : coupe dans le plan $(x,z)$, à droite : coupe dans le plan $(x,y)$.}
+%\end{figure}
 
 grains colonnaires
 
@@ -208,3 +230,6 @@ p91 potel bruneau : données "d'aspect limité" : il n'es tpas possible de tourn
 \todo[inline]{Les impasses volontairement faites : \\
 	- détail de la discrétisation différences finies / détail des calculs FEM\\	
 }
+
+
+\todo[inline]{born approx}

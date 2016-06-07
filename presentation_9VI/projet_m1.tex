@@ -63,30 +63,38 @@
 
 \section*{NDT for Welds}
 \begin{frame}{\insertsectionhead}
-\vspace{0.3cm}
-	\begin{minipage}[c]{0.49\textwidth}
-		\centering
-		\begin{figure}
-			\includegraphics[height=2.7cm,right]{./img/soudure1.png}
-			%\caption{\tiny (TV plane)}
-		\end{figure}
-	\end{minipage}
-	%\hspace{0.3cm}
-	\begin{minipage}[c]{0.49\textwidth}
-		\centering
-		\begin{figure}
-			\includegraphics[height=2.7cm,left]{./img/soudure2.png}\\
-			%\caption{\tiny (SV plane)}
-		\end{figure}
-	\end{minipage}
-	\raggedleft{ \tiny Pictures from Chassignole 2000, PhD thesis}
-	
+\vspace{-1cm}
+\hspace{1cm}
+	\begin{columns}[c]
+			\column{.5\textwidth}<1->
+			\centering
+			\begin{figure}
+				\includegraphics[height=2.7cm]{./img/soudure1.png}\\
+				{\centering \tiny Macrography of a weld*}
+			\end{figure}
+			\column{.001\textwidth}<2->
+			\hspace{-3cm}
+			\vspace{2cm}
+			\begin{tikzpicture}
+					\draw[<-, thick,shorten <=2pt,shorten >=2pt,red] (-1.5,3)--(0.5,4);
+			\end{tikzpicture}
+			\column{.9\textwidth}<2->
+			%\vfill
+			\hspace{-1cm}
+			\textcolor{red}{Strong unknown anisotropy}\\
+			$\hookrightarrow$ distorsion and splitting of the beam\\[0.2cm]
+			\hspace{-0.5cm}
+			\includegraphics[scale=0.5]{img/gardahaut.png}\\
+			{\centering \tiny Comparison of ray based model and experiment result**}
+				
+	\end{columns}
+	\vspace{0.3cm}
 	\begin{columns}[c]
 			\column{.5\textwidth}<1->
 			%\begin{block}{}
 				\begin{itemize}
 					\item[$\bullet$] delay and sum methods
-					\item[$\bullet$] SVD decomposition of covariance matrix 
+					\item[$\bullet$] decomposition of covariance matrix (DORT)
 				\end{itemize}
 			%\end{block}
 			\column{.05\textwidth}<2->
@@ -94,13 +102,12 @@
 			\column{.5\textwidth}<2->
 			%\begin{block}{}
 				\begin{itemize}
-					\item[\ding{55}] need to know $c$ in advance
+					\item[\ding{55}] need to know $c$ in advance\\
 					\item[\ding{55}] strong artefacts
 				\end{itemize}
 			%\end{block}
 			
 	\end{columns}
-	\vspace{0.5cm}
 	\begin{columns}[c]
 		\column{.5\textwidth}<3->
 			\begin{itemize}
@@ -110,28 +117,21 @@
 			\ding{222}
 		\column{.5\textwidth}<3->
 			\begin{itemize}
-				\item[\ding{51}] elastic parameters reconstruction
-			\end{itemize}			
+			\item contour reconstruction :\\\hspace{-0.5cm}\small{\emph{Dominguez et al.}, \emph{Rodriguez et al.}}\\[0.1cm]
+			\item[\ding{51}] \normalsize{$C_{ij}$ reconstruction : FWI}
+		\end{itemize}		
 	\end{columns}
-	
-	\vspace{0.5cm}
-	\begin{itemize}
-		\item[~]
-		\begin{itemize}
-			\item contour reconstruction : \emph{Dominguez et al.}, \emph{Rodriguez et al.}
-			\item cartography : FWI
-		\end{itemize}
-	\end{itemize}
-
-
+\vfill
+{\tiny Pictures from *Chassignole 2000, PhD thesis \& **Gardahaut \emph{et al.} 2014}\vspace{-0.5cm}
 \end{frame} 
 
 \section{What is specific to weld imaging ?}
 \begin{frame}{\insertsectionhead}
 	\begin{itemize}
-		\item <1-> 2 free surfaces : more information $\leftrightarrow$ more non-linearities
+		\item <1-> 2 free surfaces : more information $\leftrightarrow$ non-linear inversion
 		\item <2-> surface acquisition only 
-		\item <3-> anisotropy $\rightarrow$ multi-parameter inversion ($C_{ij}\times$6)
+		\item <3-> anisotropy $\rightarrow$ multi-parameter inversion ($C_{ij}^{w}\times$6)
+		\item <4-> defects $\rightarrow$ multi-scale inversion ($C_{ij}^{d}\times$6)
 	\end{itemize}
 	\vfill
 	\begin{figure}[!h]
@@ -139,6 +139,7 @@
 		\includegraphics<1-1>[scale=1]{img/soud1.pdf}
 		\includegraphics<2-2>[scale=1]{img/soud2.pdf}
 		\includegraphics<3-3>[scale=1]{img/soud3.pdf}
+		\includegraphics<4-4>[scale=1]{img/soud4.pdf}
 	\end{figure}
 
 \end{frame}
@@ -146,17 +147,16 @@
 \section{To do}
 \begin{frame}{\insertsectionhead}
 	\begin{itemize}
-		\item <1-> acoustic approximation (mono/multiparameter)
+		\item <1-> 2D acoustic approximation (mono/multiparameter)
 		\begin{itemize}
 			\item isotropic weld ($v_{p}$, $\rho$)
-			\item VTI weld	~~~~~~($v_{p}$, $\rho$, $\epsilon$, $\delta$)
-			\item TTI weld	~~~~~~($v_{p}$, $\rho$, $\epsilon$, $\delta$, $\theta$)
+			\item transverse isotropic weld ($v_{p}$, $\rho$, $\epsilon$, $\delta$, $\theta$)
 		\end{itemize}
-		\item <2-> elastic inversion (mono/multiparameter : $C_{ij}\times$6)
+		\item <2-> 3D elastic inversion (mono/multiparameter : $C_{ij}\times$6)
 		\begin{itemize}
 			\item isotropic weld
 			\item anisotropic weld
-			\item true data
+			\item real data
 		\end{itemize}		
 	\end{itemize}
 \end{frame}
@@ -164,19 +164,26 @@
 \section{Ongoing work}
 \begin{frame}{\insertsectionhead}
 	\begin{itemize}
-		\item <1-> 2D acoustic approximation (mono/multiparameter)
+		\item 2D acoustic approximation (mono/multiparameter)
 		\begin{itemize}
-			\item isotropic weld (\fcolorbox{DeepSkyBlue4!40}{DeepSkyBlue4!10}{$v_{p}$}, $\rho$)
-			\item VTI weld	~~~~~~($v_{p}$, $\rho$, \fcolorbox{DeepSkyBlue4!40}{DeepSkyBlue4!10}{$\epsilon$}, $\delta$)
-			\item TTI weld	~~~~~~($v_{p}$, $\rho$, $\epsilon$, $\delta$, $\theta$)
+			\item isotropic weld (\fcolorbox{DeepSkyBlue4}{DeepSkyBlue4!10}{$v_{p}$}, \fcolorbox{DeepSkyBlue4}{DeepSkyBlue4!10}{$\rho$})
+			\item transverse isotropic weld ($v_{p}$, $\rho$, \fcolorbox{DeepSkyBlue4}{DeepSkyBlue4!10}{$\epsilon$}, $\delta$, $\theta$)
 		\end{itemize}
-		\item <2-> elastic inversion (mono/multiparameter : $C_{ij}\times$6)
+		\item 3D elastic inversion (mono/multiparameter : $C_{ij}\times$6)
 		\begin{itemize}
-			\item isotropic weld
+			\item isotropic weld : \fcolorbox{DeepSkyBlue4}{DeepSkyBlue4!10}{$v_{p}$}
 			\item anisotropic weld
-			\item true data
+			\item real data
 		\end{itemize}		
 	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\begin{figure}
+		\includegraphics[scale=0.3]{img/vp.png}\\[0.5cm]
+		{2D isotropic case :\\  monoparameter inversion of $v_{p}$}
+	\end{figure}
+	
 \end{frame}
 
 \end{document}

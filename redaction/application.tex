@@ -1,4 +1,4 @@
-\chapter{Application de la FWI à des données simulées}
+\chapter{Application de la FWI à des données simulées \label{applications}}
 
 p91 potel bruneau en francais: données "d'aspect limité" : il n'est pas possible de tourner autour de l'obstacle. On compense la perte d'info en réalisant les mesures sur plusieurs freq et possibilité de déplacer capteur.
 
@@ -12,16 +12,28 @@ Le signal d'excitation choisi est une fonction de Ricker qui correspond à la d�
 2 conditions sur la discrétisation : 
 CFL et ..points par longueur d'onde pour les schéma d'ordre ... et...
 
+\section{Gestion des non-linéarités}
+Approches multiéchelle
+	
+
 \section{problématiques des inversions multiparamètres}
 
 
 
-\section{Résolution}
-En théorie, si l'éclairage est parfait, on est limité en résolution par lambda/2 (cf review virieux). En pratique, tout comme en ray-tomo (cf wiliamson cité dans review virieux), on est très limité par l'éclairage.
+\section{Résolution spatiale}
+En théorie, si l'éclairage est parfait, on est limité en résolution par lambda/2 (cf review virieux ou thèse de romain : "pouvoir de résolution du gradient"). En pratique, tout comme en ray-tomo (cf wiliamson cité dans review virieux), on est très limité par l'éclairage.
 
 image du remplissage en nb d'onde -> dépendance des sources et du nombre de réflexion surfaces libres.
 
-\section{anisotrope}
+\section{Acoustique}
+\subsection{Problème direct}
+Les équations 
+
+\subsection{isotrope}
+
+\subsection{anisotrope}
+
+
 
 anisotrope est plus problématique que isotrope car : 
 -modélisation plus complexe,
@@ -29,7 +41,7 @@ anisotrope est plus problématique que isotrope car :
 
 Gholami 2011 : la vitesse a beaucoup plus d'influence sur les données que les paramètre delta et epsilon (delta étant le plus faible). D'après ses schémas, on va donc avoir une maj de la vitesse mais pas des autres paramètres
 
-\subsection{VTI}
+\subsubsection{VTI}
 Pose quelques problèmes (Duveneck 2008) notamment génération d'onde S (sur données "vrai simulée"  et sur problème direct, mais pas la même car différente grille, PML, ... donc on la mute sur le résidu) qui n'a pas de sens physique. Proposer les solutions (taper Epsilon, en sismo on est dans l'eau donc c'est fait naturellement).
 
 
