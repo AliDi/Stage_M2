@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.3.4)  6 JUN 2016 17:52
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.3.4)  7 JUN 2016 17:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1278,10 +1278,50 @@ Package pdftex.def Info: img/isterre.jpg used on input line 119.
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./img/univ.png> <./img/cnr
 s.jpg> <./img/isterre.jpg>]
+\openout2 = `introduction.aux'.
+
+ (./introduction.tex
+Chapitre 1.
+Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
+ine 18.
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--21
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--21
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--25
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--27
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--34
+
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.37 
+      [1
+
+
+]) [2]
 \openout2 = `imagerie.aux'.
 
  (./imagerie.tex
-Chapitre 1.
+Chapitre 2.
 
 Underfull \hbox (badness 10000) in paragraph at lines 4--5
 
@@ -1295,7 +1335,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 18--19
 
  []
 
-<img/scan2.png, id=117, 349.0641pt x 261.6174pt>
+<img/scan2.png, id=144, 349.0641pt x 261.6174pt>
 File: img/scan2.png Graphic file (type png)
  <use img/scan2.png>
 Package pdftex.def Info: img/scan2.png used on input line 29.
@@ -1305,12 +1345,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--34
 
  []
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.34 
-      [1
+[3
+
 
 
 ]
@@ -1325,7 +1361,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 50--51
 
  []
 
-[2 <./img/scan2.png>]
+[4 <./img/scan2.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 60--61
 
  []
@@ -1340,7 +1376,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 88--89
 
  []
 
-[3]
+[5]
 Underfull \hbox (badness 10000) in paragraph at lines 95--97
 
  []
@@ -1365,7 +1401,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 107--108
 
  []
 
-[4] <./img/soudure3.png, id=221, 243.91125pt x 177.42285pt>
+[6] <./img/soudure3.png, id=250, 243.91125pt x 177.42285pt>
 File: ./img/soudure3.png Graphic file (type png)
 
 <use ./img/soudure3.png>
@@ -1376,7 +1412,7 @@ Overfull \hbox (30.20416pt too wide) in paragraph at lines 130--132
  [][] 
  []
 
-<./img/soudure1.png, id=222, 213.55785pt x 161.1621pt>
+<./img/soudure1.png, id=251, 213.55785pt x 161.1621pt>
 File: ./img/soudure1.png Graphic file (type png)
 
 <use ./img/soudure1.png>
@@ -1387,7 +1423,7 @@ Overfull \hbox (44.11789pt too wide) in paragraph at lines 137--138
  [][] 
  []
 
-<./img/soudure2.png, id=223, 203.44005pt x 152.4897pt>
+<./img/soudure2.png, id=252, 203.44005pt x 152.4897pt>
 File: ./img/soudure2.png Graphic file (type png)
 
 <use ./img/soudure2.png>
@@ -1398,7 +1434,7 @@ Overfull \hbox (45.143pt too wide) in paragraph at lines 143--144
  [][] 
  []
 
-<img/chassignole_echos_config.png, id=228, 144.90135pt x 114.9093pt>
+<img/chassignole_echos_config.png, id=257, 144.90135pt x 114.9093pt>
 File: img/chassignole_echos_config.png Graphic file (type png)
 
 <use img/chassignole_echos_config.png>
@@ -1410,7 +1446,7 @@ Overfull \hbox (15.4804pt too wide) in paragraph at lines 153--154
  [][] 
  []
 
-<img/chassignole_echos.png, id=229, 168.3891pt x 140.56516pt>
+<img/chassignole_echos.png, id=258, 168.3891pt x 140.56516pt>
 File: img/chassignole_echos.png Graphic file (type png)
 
 <use img/chassignole_echos.png>
@@ -1424,14 +1460,12 @@ Overfull \hbox (8.30176pt too wide) in paragraph at lines 159--160
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[5 <./img/soudure3.png> <./img/soudure1.png> <./img/soudure2.png>]
-Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 170.
-) [6 <./img/chassignole_echos_config.png> <./img/chassignole_echos.png>]
+[7 <./img/soudure3.png> <./img/soudure1.png> <./img/soudure2.png>]) [8 <./img/c
+hassignole_echos_config.png> <./img/chassignole_echos.png>]
 \openout2 = `fwi.aux'.
 
  (./fwi.tex
-Chapitre 2.
+Chapitre 3.
 
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
@@ -1447,7 +1481,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 52--53
 
  []
 
-[7
+[9
 
 
 
@@ -1457,10 +1491,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 57--58
  []
 
 
-Package natbib Warning: Citation `vigh_2008' on page 8 undefined on input line 
-86.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 86--87
 
  []
@@ -1470,7 +1500,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 86--87
 
  []
 
-[8]
+[10]
 Underfull \hbox (badness 10000) in paragraph at lines 108--111
 
  []
@@ -1480,58 +1510,101 @@ Underfull \hbox (badness 10000) in paragraph at lines 120--121
 
  []
 
-[9] [10] <img/ambig_phase.png, id=317, 269.20575pt x 225.12105pt>
+[11] [12] <img/ambig_phase.png, id=364, 269.20575pt x 225.12105pt>
 File: img/ambig_phase.png Graphic file (type png)
 
 <use img/ambig_phase.png>
-Package pdftex.def Info: img/ambig_phase.png used on input line 169.
+Package pdftex.def Info: img/ambig_phase.png used on input line 170.
 (pdftex.def)             Requested size: 215.36488pt x 180.09706pt.
 
 
-LaTeX Warning: Reference `applications' on page 11 undefined on input line 178.
+LaTeX Warning: Reference `applications' on page 13 undefined on input line 177.
 
 
-<img/rayonnement.png, id=322, 368.21565pt x 292.6935pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 183--184
+
+ []
+
+[13 <./img/ambig_phase.png>]
+<img/rayonnement.png, id=382, 456.0237pt x 340.3917pt>
 File: img/rayonnement.png Graphic file (type png)
 
 <use img/rayonnement.png>
-Package pdftex.def Info: img/rayonnement.png used on input line 188.
-(pdftex.def)             Requested size: 368.21475pt x 292.69278pt.
+Package pdftex.def Info: img/rayonnement.png used on input line 193.
+(pdftex.def)             Requested size: 319.2144pt x 238.27255pt.
+ <img/geophy1.png, id=390, 248.6088pt x 150.68295pt>
+File: img/geophy1.png Graphic file (type png)
+
+<use img/geophy1.png>
+Package pdftex.def Info: img/geophy1.png used on input line 214.
+(pdftex.def)             Requested size: 170.71393pt x 103.4747pt.
+
+Underfull \hbox (badness 5217) in paragraph at lines 215--215
+[]\T1/lmr/m/n/10 (a) |Par to-mo-gra-phie en ré-flexion.
+ []
+
+<img/geophy2.png, id=391, 239.2137pt x 149.5989pt>
+File: img/geophy2.png Graphic file (type png)
+ <use img/geophy2.png>
+Package pdftex.def Info: img/geophy2.png used on input line 219.
+(pdftex.def)             Requested size: 170.71393pt x 106.7638pt.
+
+Underfull \hbox (badness 4886) in paragraph at lines 220--220
+[]\T1/lmr/m/n/10 (b) |Par to-mo-gra-phie en ré-flexion.
+ []
+
+<img/geophy3.png, id=392, 242.1045pt x 140.56516pt>
+File: img/geophy3.png Graphic file (type png)
+ <use img/geophy3.png>
+Package pdftex.def Info: img/geophy3.png used on input line 224.
+(pdftex.def)             Requested size: 170.71393pt x 99.11989pt.
+
+<img/geophy4.png, id=393, 238.491pt x 140.56516pt>
+File: img/geophy4.png Graphic file (type png)
+ <use img/geophy4.png>
+Package pdftex.def Info: img/geophy4.png used on input line 229.
+(pdftex.def)             Requested size: 170.71393pt x 100.61914pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 211.
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 246.
 
 (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [11 <./img/ambig_phase.png>])
-[12 <./img/rayonnement.png>]
+) [14 <./img/rayonnement.png>])
+[15 <./img/geophy1.png> <./img/geophy2.png> <./img/geophy3.png> <./img/geophy4.
+png>]
 \openout2 = `annexes.aux'.
 
  (./annexes.tex
-Chapitre 3.
-) [13
+Chapitre 4.
+) [16
 
 
 
-] (./stage_m2.bbl [14
+] (./stage_m2.bbl [17
 
 
-]) 
+] [18]) 
 AED: lastpage setting LastPage
-[15]
-
-Package natbib Warning: There were undefined citations.
-
+[19]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 157.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 157.
-(./stage_m2.aux (./imagerie.aux) (./fwi.aux) (./annexes.aux))
+ (./stage_m2.aux (./introduction.aux) (./imagerie.aux) (./fwi.aux)
+(./annexes.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 157.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 157.
-Package rerunfilecheck Info: File `stage_m2.out' has not changed.
-(rerunfilecheck)             Checksum: 5B4A4C49D5B7DBE211413109150E2375;1877.
 
+
+Package rerunfilecheck Warning: File `stage_m2.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `stage_m2.out':
+(rerunfilecheck)             Before: 278E04CC7EE39E52AFDB3710B057F3A4;1888
+(rerunfilecheck)             After:  EC562D6D52A502EA05CD479968AE00CF;1936.
 
 LaTeX Warning: There were undefined references.
 
@@ -1541,31 +1614,106 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 157.
  ) 
 Here is how much of TeX's memory you used:
- 20256 strings out of 493304
- 344355 string characters out of 6139872
- 432775 words of memory out of 5000000
- 23165 multiletter control sequences out of 15000+600000
+ 20386 strings out of 493304
+ 346508 string characters out of 6139872
+ 433294 words of memory out of 5000000
+ 23238 multiletter control sequences out of 15000+600000
  115800 words of font info for 93 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 56i,11n,82p,1120b,782s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/d
-vips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/shar
-e/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/l
-m-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}</usr/share/texmf/f
-onts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.
-pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts
-/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb>
-</usr/share/texmf/fonts/type1/public/lm/lmmi6.pfb></usr/share/texmf/fonts/type1
-/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmmib10.pfb></usr/
-share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/publi
-c/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/tex
-mf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lms
-s8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fon
-ts/type1/public/lm/lmsy8.pfb>
-Output written on stage_m2.pdf (16 pages, 2970061 bytes).
+ 56i,11n,82p,1119b,782s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{figure.caption.15} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{equation.2.2.7} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{equation.2.2.4} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{equation.2.2.5} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{equation.2.2.1} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.9} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.8} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.5} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.2} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.1} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.2.5.1} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.2.3.3} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.2.3.2} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.2.3.1} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.2.2.3} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.2.2.2} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.2.2.1} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.1.5} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.1.4.3} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.1.4.2} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.1.4.1} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.1.4} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.1.3} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.1.2} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.1.1} has been referenced but does not exist
+, replaced by a fixed one
+
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/dvi
+ps/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/
+texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-
+ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}</usr/share/texmf/fon
+ts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pf
+b></usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/t
+ype1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></
+usr/share/texmf/fonts/type1/public/lm/lmmi6.pfb></usr/share/texmf/fonts/type1/p
+ublic/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmmib10.pfb></usr/sh
+are/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/
+lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf
+/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss8
+.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts
+/type1/public/lm/lmsy8.pfb>
+Output written on stage_m2.pdf (20 pages, 3431430 bytes).
 PDF statistics:
- 436 PDF objects out of 1000 (max. 8388607)
- 371 compressed objects within 4 object streams
- 93 named destinations out of 1000 (max. 500000)
- 260 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 536 PDF objects out of 1000 (max. 8388607)
+ 456 compressed objects within 5 object streams
+ 141 named destinations out of 1000 (max. 500000)
+ 280 words of extra memory for PDF output out of 10000 (max. 10000000)
 

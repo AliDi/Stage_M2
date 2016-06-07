@@ -14,48 +14,47 @@ You're missing a field part---line 374 of file biblio.bib
  :    eid = 
  :          ,
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "vigh_2008"
 Warning--there's a number but no volume in doctor_saft
 Warning--there's a number but no volume in holmes_tfm
-You've used 28 entries,
+You've used 33 entries,
             2773 wiz_defined-function locations,
-            765 strings with 9093 characters,
-and the built_in function-call counts, 12928 in all, are:
-= -- 1210
-> -- 558
-< -- 20
-+ -- 197
-- -- 168
-* -- 1040
-:= -- 1953
-add.period$ -- 85
-call.type$ -- 28
-change.case$ -- 134
-chr.to.int$ -- 27
-cite$ -- 58
-duplicate$ -- 586
-empty$ -- 1150
-format.name$ -- 202
-if$ -- 2704
+            789 strings with 9913 characters,
+and the built_in function-call counts, 15181 in all, are:
+= -- 1421
+> -- 668
+< -- 23
++ -- 235
+- -- 201
+* -- 1220
+:= -- 2300
+add.period$ -- 101
+call.type$ -- 33
+change.case$ -- 159
+chr.to.int$ -- 32
+cite$ -- 68
+duplicate$ -- 687
+empty$ -- 1346
+format.name$ -- 242
+if$ -- 3174
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 28
-newline$ -- 149
-num.names$ -- 112
-pop$ -- 259
+missing$ -- 32
+newline$ -- 174
+num.names$ -- 132
+pop$ -- 308
 preamble$ -- 1
-purify$ -- 112
+purify$ -- 133
 quote$ -- 0
-skip$ -- 424
+skip$ -- 494
 stack$ -- 0
-substring$ -- 869
-swap$ -- 57
+substring$ -- 996
+swap$ -- 63
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 293
+type$ -- 348
 warning$ -- 2
-while$ -- 127
+while$ -- 148
 width$ -- 0
-write$ -- 370
+write$ -- 435
 (There were 2 error messages)

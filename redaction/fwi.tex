@@ -142,7 +142,7 @@ Finalement, en reportant cette expression dans l'équation~\ref{eq_grad}, on obt
 \begin{equation}
 	 \frac{\dd C (\bm{m})}{\dd m_{i}} = \tr{\bm{d}_{cal}(\bm{m})}  \tr{\left( \frac{\dd \bm{A}}{\dd m_{i}}\right)} \tr{\bm{A}} (\bm{d}_{obs} - \bm{d}_{cal}(\bm{m}))^* = \tr{\bm{d}_{cal}(\bm{m})} \tr{\left( \frac{\dd \bm{A}}{\dd m_{i}}\right)} \lambda^*
 \end{equation}
-\todo[inline]{conjugué de $\Delta d $ ?}
+\todo[inline]{conjugué de $\Delta d $ ? p.95 These Romain}
 
 Le champ $\lambda^*$ correspond donc à la rétropopagation des résidus $( \bm{d}_{obs} - \bm{d}_{cal}(\bm{m}))^*$. L'opérateur conjugué $^*$ indique une propagation en temps inverse, ce qui permet, comme en retournement temporel \citep{prada_2002}, une focalisation sur les éléments diffractant absents du modèle initial. Cette expression du gradient peut également être obtenu par le formalise de l'état adjoint \citep{plessix}.\\
 \todo[inline]{quid de dA/dm ? Diagramme de rayonnement ?}
@@ -166,41 +166,75 @@ Le problème étant mal-posé, il est nécessaire de limiter les artefacts haute
 Afin d'assurer une convergence vers le minimum global, il est nécessaire que le modèle initial se situe dans le bassin d'attraction de la fonctionnelle. Pour cela, il faut s'assurer que le modèle soit cinématiquement acceptable en levant l’ambiguïté sur la phase. Les données temporelles issues de ce modèle doivent donc avoir un retard de moins d'une demi-longueur d'onde par rapport aux données observées vraies. Si cette condition n'est pas respectée, l'algorithme ne permettra pas un bon réajustement des phases et convergera vers un minimum local (cf~\ref{ambig_phase}).
 
 \begin{figure}[!h]
+	\centering
 	\includegraphics[scale=0.8]{img/ambig_phase.png}
 	\caption{Illustration de l'ambiguïté sur la phase (extraite de \cite{brossier_these}). En haut, le déphasage est supérieur à $T/2$, les arches sont mal ajustées. En bas, le déphasage est inférieur à $T/2$, les phases sont bien ajustées. \label{ambig_phase}}
 \end{figure}
 
- Dans cette étude, 
-
 À défaut de disposer à un modèle initial cinématiquement acceptable, il est possible de d'appliquer un ensemble de stratégies permettant de limiter ces artefacts : introduire progressivement les sources ou récepteurs les plus éloignés, rallonger progressivement les temps d'acquisition, et inverser prioritairement les données basses fréquences.
 
 
-En sismologie, une image issue de tomographie peut fournir un modèle initial assez précis. Dans cette étude, on considère que peu d'informations sont connues sur les paramètres élastiques de la soudure et le modèle initial choisi est uniforme (cf chapitre~\ref{applications}). Cependant, il serait intéressant d'envisager l'utilisation d'un modèle initial construit statistiquement à partir des résultats d'inversion d'un grand nombre de soudure.
+En sismologie, une image issue de tomographie peut fournir un modèle initial assez précis. Dans cette étude, on considère que peu d'informations sont connues sur les paramètres élastiques de la soudure et le modèle initial choisi est uniforme (cf chapitre~\ref{applications}).
+
 
 \subsection{Inversion multi-paramètres}
+\todo{Passer cette section dans les applications ?}
+ 
+L'inversion multi-paramètres impliques plus de degrés de liberté dans le problème et rend donc l'inversion plus difficile. De plus, ces paramètres peuvent avoir des effets couplés ou non de différentes natures (cinématique ou dynamique) et de différentes amplitudes sur les données. Il faut donc choisir les paramètres à inverser de manière à ce qu'ils décrivent au mieux (de manière complémentaire) les propriétés du milieu à imager. Par exemple, les paramètres de vitesse influencent le champ en terme de temps de vol, tandis que la densité ou l'impédance jouent davantage sur l'amplitude du champ.\\
 
-Chaque changement de variable donne une nouvelle expression des différentielles des paramètres. 
-
-choix des paramètres à inverser : ils ont différentes amplitudes et différents effets sur le champ d'onde, 
-diagramme de rayonnement
-citer forgues p.156 \citep{forgues}
+À chaque ensemble de paramètres est associé un diagramme de rayonnement lié à l'expression de leur différentielle~\citep{forgues}. Ajouté à l'illumination restreinte  par le système d'acquisition, ce rayonnement peut filtrer le spectre en nombre d'onde du milieu reconstitué. Quelques exemples de diagrammes de rayonnement sont présentés en figure~\ref{rayonnement}, où $\kappa$ est le module d'incompressibilité, $\rho$ est la densité, $v_{p}$ est la vitesse des ondes longitudinales se propageant suivant $z$ et $I_{p}$ est l'impédance, tels que : 
+\begin{equation*}
+	I_{p}=\sqrt{\kappa \rho}~~~~~\text{et}~~~~~\kappa=\rho v_{p}\text{.}
+\end{equation*}
+Ces diagrammes correspondent au rayonnement des paramètres acoustiques dans un milieu isotrope. En milieu anisotrope, ces diagrammes sont plus difficiles à estimer analytiquement et nécessite une bonne connaissance de l'anisotropie du milieu.
 
 \begin{figure}[!h]
-	\includegraphics[scale=0.5]{img/rayonnement.png}
-	\caption{Diagrammes de rayonnement pour différentes paramétrisations d'un milieu acoustique.\label{rayonnement}}
+	\centering
+	\includegraphics[scale=0.7]{img/rayonnement.png}
+	\caption{Diagrammes de rayonnement pour différentes paramétrisations d'un milieu acoustique (amplitudes relatives) tracés d'après \cite{forgues}.\label{rayonnement}}
 \end{figure}
+%forgues : p.156
+
+\subsection{Estimation de la source}
+Pour que les données calculées puissent être comparées aux données observées, il est nécessaire que les termes sources à l'origine des deux champs soit semblables. Ce terme source est linéairement lié au champ (cf équation~\ref{eq_pb_dir}) et il peut donc être calculé par la résolution d'un problème linéaire \citep{pratt_99} dont la solution est : 
+$$ s=\frac{\tr{\bm{d}_{cal}(\bm{m})^{*}}\bm{d}_{obs}^{*}}{\bm{d}_{cal}(\tr{\bm{m})^{*}}\bm{d}_{cal}(\bm{m})^{*}}\text{.}$$
 
 
-\subsection{estimation de la source}
 
+\section{Applications en géophysique}
 
+Dans cette section, on se propose de présenter un exemple d'application de la FWI à des données sismologiques dans le cadre de la prospection pétrolière. Dans ce domaine, les mesures étant rares et coûteuses, l'exploitation des données doit être efficace en terme de qualité d'image. C'est pourquoi une méthode comme la FWI y est adaptée, bien qu'elle nécessite beaucoup de ressource informatique.\\
+Les images de la figure~\ref{valhall} sont issues des mesures en fond d'océan (Ocean Bottom Cable) par hydrophones.
 
+\todo[inline]{à compléter à partir de l'abstract Sirgue 2009}
 
+\begin{figure}[!h]
+    \centering
+    \begin{subfigure}[b]{0.4\textwidth}
+        \includegraphics[width=\textwidth]{img/geophy1.png}
+        \caption{Par tomographie en réflexion. Coupe à 150 m de profondeur.}
+        \label{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.4\textwidth}
+        \includegraphics[width=\textwidth]{img/geophy2.png}
+        \caption{Par tomographie en réflexion. Coupe à plus de 1000 m de profondeur.}
+        \label{}
+    \end{subfigure}\\
+    \begin{subfigure}[b]{0.4\textwidth}
+        \includegraphics[width=\textwidth]{img/geophy3.png}
+        \caption{Par FWI. Coupe à 150 m de profondeur.}
+        \label{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.4\textwidth}
+        \includegraphics[width=\textwidth]{img/geophy4.png}
+        \caption{Par FWI. Coupe à plus de 1000 m de profondeur.}
+        \label{}
+    \end{subfigure}
+    \caption{Images des vitesses dans le champ de Valhall.\label{valhall}}
+\end{figure} 
+    \todo[inline]{champ ?}
 
-
-\section{resultats en geophy}
-
-...et aussi appliqué en médical et à des ondes électromagnétiques, rayon X : natterer ?
+De manière très semblable, imagerie médicale du module d'élasticité \citep{oberai_03,oberai_04} par la méthode de l'adjoint et à des ondes électromagnétiques, rayon X : natterer ?
 
 \section{application au cnd de soudure : les problématiques}
 

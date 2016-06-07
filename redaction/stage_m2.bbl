@@ -1,4 +1,4 @@
-\begin{thebibliography}{28}
+\begin{thebibliography}{33}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -63,6 +63,13 @@ N.~Dominguez, V.~Gibiat, and Y.~Esquerre.
   inverse method for ultrasonic target detection.
 \newblock \emph{Wave Motion}, 42:\penalty0 ~p.~31--52, 2005.
 
+\bibitem[Forgues(1996)]{forgues}
+É~Forgues.
+\newblock \emph{Inversion linéarisée multi-paramètres via la théorie des
+  rais (application aux données de sismique réflexion de surface)}.
+\newblock PhD thesis, Institut Fran cais du Pétrole - University Paris VII,
+  1996.
+
 \bibitem[Holmes et~al.(2005)Holmes, Drinkwater, and Wilcox]{holmes_tfm}
 C~Holmes, B.~W. Drinkwater, and P.~D. Wilcox.
 \newblock Post-processing of the full matrix of ultrasonic transmit–receive
@@ -99,6 +106,18 @@ J.~Nocedal.
 \newblock \emph{Mathematics of computation}, 35\penalty0 (151):\penalty0
   ~p.~773--782, 1980.
 
+\bibitem[Oberai et~al.(2003)Oberai, Gokhale, and Feijoo]{oberai_03}
+A.~A. Oberai, N.~H. Gokhale, and G.~R. Feijoo.
+\newblock Solution of inverse problems in elasticity imaging using the adjoint
+  method.
+\newblock \emph{Inverse Problems}, 19:\penalty0 ~p.~297--313, 2003.
+
+\bibitem[Oberai et~al.(2004)Oberai, Gokhale, Doyley, and Bamber]{oberai_04}
+A.~A. Oberai, N.~H. Gokhale, M.~M. Doyley, and J.~C. Bamber.
+\newblock Evaluation of the adjoint equation based algorithm for elasticity
+  imaging.
+\newblock \emph{Phys. Med. Biol.}, 49:\penalty0 ~p.~2955--2974, 2004.
+
 \bibitem[Plessix(2006)]{plessix}
 R.-E. Plessix.
 \newblock A review of the adjoint-state method for computing the gradient of a
@@ -117,6 +136,12 @@ C~Prada, E~Kerbrat, D~Cassereau, and M~Fink.
   scattering media.
 \newblock \emph{Inverse Problems}, 18\penalty0 (6):\penalty0 ~p.~1761--1773,
   2002.
+
+\bibitem[Pratt(1999)]{pratt_99}
+R~G Pratt.
+\newblock Seismic waveform inversion in the frequency domain, part 1: Theory
+  and verification in a physical scale model.
+\newblock \emph{Geophysics}, 64\penalty0 (3):\penalty0 ~p.~888--901, 1999.
 
 \bibitem[Pratt et~al.(1998)Pratt, Shin, and Hicks]{pratt_98}
 R.~G. Pratt, C.~Shin, and G.~J. Hicks.
@@ -152,6 +177,12 @@ A~Tarantola.
   Estimation}}.
 \newblock Society for Industrial and Applied Mathematics, 2005.
 \newblock ISBN 0898715725.
+
+\bibitem[Vigh and Starr(2008)]{vigh_2008}
+D~Vigh and E~W Starr.
+\newblock Comparisons for waveform inversion, time domain or frequency domain?
+\newblock In \emph{2008 SEG Annual Meeting}. Society of Exploration
+  Geophysicists, 2008.
 
 \bibitem[Virieux(1986)]{virieux_86}
 J.~Virieux.

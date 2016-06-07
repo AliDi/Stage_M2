@@ -1,0 +1,4 @@
+\beamer@endinputifotherversion {3.24pt}
+\select@language {UKenglish}
+\beamer@sectionintoc {2}{What is specific to weld imaging ?}{6}{0}{1}
+\beamer@sectionintoc {3}{To do}{9}{0}{2}
