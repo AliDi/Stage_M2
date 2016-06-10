@@ -61,6 +61,7 @@ Deux types de conditions limites sont nécessaires pour le modèle de soudure à
 \begin{figure}[!h]
 	\centering
 	\begin{tikzpicture}
+		\node at(4.3,-1) {\includegraphics[scale=0.0365]{img/anisotrope2.png}};
 		\draw (0,0) -- (9,0) ;
 		\draw (0,-2) -- (9,-2) ;
 		\filldraw [fill=gray, fill opacity=0.5, draw=none] (3.5,0) -- (4.5,-2) -- (5.5,0)  ;
@@ -201,12 +202,19 @@ $$ s=\frac{\tr{\bm{d}_{cal}(\bm{m})^{*}}\bm{d}_{obs}^{*}}{\bm{d}_{cal}(\tr{\bm{m
 
 
 
-\section{Applications en géophysique}
+\section{Exemple d'application en géophysique}
 
 Dans cette section, on se propose de présenter un exemple d'application de la FWI à des données sismologiques dans le cadre de la prospection pétrolière. Dans ce domaine, les mesures étant rares et coûteuses, l'exploitation des données doit être efficace en terme de qualité d'image. C'est pourquoi une méthode comme la FWI y est adaptée, bien qu'elle nécessite beaucoup de ressource informatique.\\
-Les images de la figure~\ref{valhall} sont issues des mesures en fond d'océan (Ocean Bottom Cable) par hydrophones.
 
-\todo[inline]{à compléter à partir de l'abstract Sirgue 2009}
+L'exemple choisi est issu d'une acquisition en fond ce mer du Nord (Ocean Bottom Cable) par hydrophones, au niveau de Valhall en Norvège. Ce dispositif est constitué de 120 km de câbles équipés de 2414 récepteurs, espacés de 50 m, couvrant 45 km$^{2}$ (cf figure~\ref{dispositif_valhall}).
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[height=6cm]{img/dispo_valhall.jpg}
+	\caption{Schéma du dispositif d'acquisition pour les mesure sur Valhall. L'antenne de récepteur est représenté en rouge (l'espacement entre les câble est d'environ 300 m) et les positions des sources sont données par les points gris.\label{dispositif_valhall}}
+\end{figure}
+
+Le résultat du post-traitement des données  est présenté en figure~\ref{valhall}. Cette figure confronte les images obtenues par une méthode d'imagerie conventionnelle (tomographie en réflexion) et celles obtenues par FWI de 3.5 à 7 Hz, avec pour modèle initial la carte de vitesse donnée par tomographie.
 
 \begin{figure}[!h]
     \centering
@@ -215,28 +223,46 @@ Les images de la figure~\ref{valhall} sont issues des mesures en fond d'océan (
         \caption{Par tomographie en réflexion. Coupe à 150 m de profondeur.}
         \label{}
     \end{subfigure}
+    \hspace{0.5cm}
     \begin{subfigure}[b]{0.4\textwidth}
         \includegraphics[width=\textwidth]{img/geophy2.png}
-        \caption{Par tomographie en réflexion. Coupe à plus de 1000 m de profondeur.}
+        \caption{Par tomographie en réflexion. Coupe à 1050 m de profondeur.}
         \label{}
-    \end{subfigure}\\
+    \end{subfigure}\\[0.5cm]
     \begin{subfigure}[b]{0.4\textwidth}
         \includegraphics[width=\textwidth]{img/geophy3.png}
         \caption{Par FWI. Coupe à 150 m de profondeur.}
         \label{}
     \end{subfigure}
+    \hspace{0.5cm}
     \begin{subfigure}[b]{0.4\textwidth}
         \includegraphics[width=\textwidth]{img/geophy4.png}
-        \caption{Par FWI. Coupe à plus de 1000 m de profondeur.}
+        \caption{Par FWI. Coupe à 1050 m de profondeur.}
         \label{}
     \end{subfigure}
     \caption{Images des vitesses dans le champ de Valhall.\label{valhall}}
 \end{figure} 
-    \todo[inline]{champ ?}
+    \todo[inline]{terminologie : field : champ ? / ray-based reflection tomography : tomographie en réflexion ?}
+    \todo[inline]{quelles types de sources ?}
+    
+La FWI permet de faire apparaître des galeries à 150 m de profondeur, invisible en tomographie. À 1050 m, les contours du nuage de gaz (en noir) sont également mieux défini par la FWI. Cette méthode d'imagerie eut donc constituer une aide précieuse pour l'analyse des sous-sols et pour la mise en place des stratégies de forage.\\
 
-De manière très semblable, imagerie médicale du module d'élasticité \citep{oberai_03,oberai_04} par la méthode de l'adjoint et à des ondes électromagnétiques, rayon X : natterer ?
+On comprend par la qualité d'image qu'offre la FWI qu'il est intéressant de varier ses applications. On peut citer l'utilisation des ondes électromagnétiques (données radar, par exemple ~\cite{lopes}) ou encore l'imagerie médicale. Dans ce domaine, \cite{oberai_03,oberai_04} reconstruit le module d'élasticité en équilibre statique d'une imitation de tissu humain.
 
-\section{application au cnd de soudure : les problématiques}
+\section{Application au CND de soudure : les problématiques}
+
+Les problématiques du CND de soudure par FWI sont liées à quelques nouvelles spécificités, propre à cette application, qui sont : 
+\begin{itemize}
+	\item la forte anisotropie,
+	\item la forme guide d'onde du milieu qui offres de multiples réflexions,
+	\item le système d'acquisition limité par la géométrie de la pièce (cf figure~\ref{acqui_soudure}).
+\end{itemize}
+
+
+
+Pour des acquisitions de surface en sismologie, seules les diffractions rayonnant vers la surface sont considérées (soit un angle de diffraction n'excédant pas 180°). Dans la cas de l'imagerie de soudure, il n'est pas non plus possible de tourner autour de l'obstacle, mais un éclairage bilatéral est possible, avec déplacement éventuel des transducteurs.
+
+
 
 -guide d'onde
 -acquisition en surface seulement, et problématique de la soudure bombée
