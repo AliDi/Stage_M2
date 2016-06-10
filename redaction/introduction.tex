@@ -1,55 +1,60 @@
 \chapter{Introduction}
 
-acronymes à définir :
-ECND
-
-
-
-structure :
-\begin{enumerate}
-	\item enjeux et application du cnd
-	\item méthodes vieilles et actuelles (principe et résultats, avantages et limites)
-	\item points communs avec imagerie de la terre
-	\item fwi, son contexte
-	\item présentation travail de stage et plan du rapport
-\end{enumerate}
-
-
-\todo[inline]{enjeux et applications du cnd}
-
 Dans l'industrie ou le domaine médical, il est nécessaire de connaître les propriétés et contrôler l'évolution de matériaux élastiques. Pour cela, en complément des ondes éléctromagnétiques,  les ondes ultrasonores sont utilisées en raison de leur plus faible atténuation.\\~\\
 
-
-\todo[inline]{méthodes vieilles et actuelles (principe et résultats, avantages et limites)}
-Différentes méthodes de reconstruction d'image à partir de données de mesures peuvent être utilisées.\\
-
-Les échographies obtenues à l'aide de transducteurs mono-éléments représentent directement les échos en un point (A-Scan), sur une coupe (B-Scan) ou une tranche (C-Scan) du matériau (image type annexe k thèse chassignol ?). L'obtention d'une image 2D nécessite donc un balayage sur l'ensemble d'une surface de la pièce à contrôler. \\
-
-D'autre méthode d'imagerie utilisant des transducteurs multi-éléments sont également basées sur les temps d'arrivée des ondes.  tfm, saft; tofd\\
-résolution limitée par le nombre d'éléments et leur espacement
+Le contrôle non-destructif (CND) de soudures présentent des enjeux majeurs en terme de sécurité. Une bonne qualité d'image est donc indispensable pour des soudures de système de refroidissement de centrale nucléaire ou encore de pipelines. \\
+Les méthodes actuelles d'imageries de soudures, présentées en première partie, ne fournissent pas d'identifier de manière précise les défauts de soudure car elles prennent mal en compte l'anisotropie induite par la cristallisation du métal. \\
 
 
-Pour toutes ces méthodes, il est important de connaître la vitesse du milieu observé, afin de localiser le réflecteur à l'origine de l'écho observé. C'est pour cette raison que leur efficacité est fortement réduite en milieux anisotrope.  
-De plus, la résolution de ces méthodes est limitée par la capacité à séparer les échos et est donc de l'ordre de la longueur d'onde du signal d'excitation. \\
+Ce stage a donc pour but de tester et d'adapter la méthode d'inversion complête de formes d'ondes (Full Waveform Inversion en anglais, notée FWI) à l'imagerie de soudure par ultrasons. La FWI est une méthode d'imagerie quantitative haute résolution, principalement développée dans un contexte de prospection géophysique. Elle est basée sur la résolution d'un problème d'optimisation par la méthode de l'adjoint et permet une reconstruction des paramètres élastiques en tout point d'un milieu discrétisé. Le deuxième chapitre de ce rapport revient sur le principe et les problématiques liées à cette méthode.\\
 
 
-Dépassant ces limitations, d'autres méthodes de formation de voies dites "haute résolution" utilisent les techniques de retournement temporel telles que la méthode de Décomposition de l'Opérateur de Retournement Temporel \citep{prada_dort} ou la méthode Capon \citep{capon} dont est issu notamment l'algorithme MUltiple SIgnal Classification \citep{schmidt}. Ces méthodes sont basées sur la décomposition en valeurs propres de la matrice interspectrale et permettent ainsi de minimiser la contribution énergétique du bruit. Cependant, ces méthodes restent sensibles au bruit. De plus, tout comme les méthodes de formation de voies classiques, elles nécessitent de connaître a priori les propriétés élastiques du milieu de propagation des ondes.
+introduire la troisième partie (applications)
 
 
 
 
 
-\todo[inline]{points communs avec imagerie de la terre}
-Le domaine de la prospection géophysique utilise également les ondes mécaniques pour établir les propriétés de la Terre. Si le matériel et les gammes de  fréquence diffèrent, la physique et les méthodes sont proches
+\todo[inline]{ne pas oublier d'ajouter : \begin{itemize}
+	\item un mot sur born approx
+	\item modele ogilvy
+\end{itemize}
 
 
-tomographie (basée sur rais, ie hf, pas de réfraction, isotrope), migration (sensible au bruit, ondes réfléchies seulement, , optimisation topologique (? Tarantola ?)
 
-\todo[inline]{fwi, son contexte}
-topological optimization
-oberai
 
-\todo[inline]{présentation travail de stage et plan du rapport}
+
+
+%\todo[inline]{méthodes vieilles et actuelles (principe et résultats, avantages et limites)}
+%Différentes méthodes de reconstruction d'image à partir de données de mesures peuvent être utilisées.\\
+%
+%Les échographies obtenues à l'aide de transducteurs mono-éléments représentent directement les échos en un point (A-Scan), sur une coupe (B-Scan) ou une tranche (C-Scan) du matériau (image type annexe k thèse chassignol ?). L'obtention d'une image 2D nécessite donc un balayage sur l'ensemble d'une surface de la pièce à contrôler. \\
+%
+%D'autre méthode d'imagerie utilisant des transducteurs multi-éléments sont également basées sur les temps d'arrivée des ondes.  tfm, saft; tofd\\
+%résolution limitée par le nombre d'éléments et leur espacement
+%
+%
+%Pour toutes ces méthodes, il est important de connaître la vitesse du milieu observé, afin de localiser le réflecteur à l'origine de l'écho observé. C'est pour cette raison que leur efficacité est fortement réduite en milieux anisotrope.  
+%De plus, la résolution de ces méthodes est limitée par la capacité à séparer les échos et est donc de l'ordre de la longueur d'onde du signal d'excitation. \\
+%
+%
+%Dépassant ces limitations, d'autres méthodes de formation de voies dites "haute résolution" utilisent les techniques de retournement temporel telles que la méthode de Décomposition de l'Opérateur de Retournement Temporel \citep{prada_dort} ou la méthode Capon \citep{capon} dont est issu notamment l'algorithme MUltiple SIgnal Classification \citep{schmidt}. Ces méthodes sont basées sur la décomposition en valeurs propres de la matrice interspectrale et permettent ainsi de minimiser la contribution énergétique du bruit. Cependant, ces méthodes restent sensibles au bruit. De plus, tout comme les méthodes de formation de voies classiques, elles nécessitent de connaître a priori les propriétés élastiques du milieu de propagation des ondes.
+%
+%
+%
+%
+%
+%\todo[inline]{points communs avec imagerie de la terre}
+%Le domaine de la prospection géophysique utilise également les ondes mécaniques pour établir les propriétés de la Terre. Si le matériel et les gammes de  fréquence diffèrent, la physique et les méthodes sont proches
+%
+%
+%tomographie (basée sur rais, ie hf, pas de réfraction, isotrope), migration (sensible au bruit, ondes réfléchies seulement, , optimisation topologique (? Tarantola ?)
+%
+%\todo[inline]{fwi, son contexte}
+%topological optimization
+%oberai
+%
+%\todo[inline]{présentation travail de stage et plan du rapport}
 
 
 	
