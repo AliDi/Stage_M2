@@ -15,8 +15,8 @@ l=vp/f;				%longueur d'onde en m
 h=vp/(2*2e6)/6;				%pas de discrétisation : en fdtd o(4), respecter 5 pts par longueur d'onde
 
 nz=floor(0.05/h) %floor(10*l /h)				%nb de points en z
-nx=floor(0.10/h) %floor(50*l/2 /h)	
-ny=floor(0.01/h)			%nb de points en x
+nx=floor(0.05/h) %floor(50*l/2 /h)	
+ny=floor(0.05/h)			%nb de points en x
 
 dt=4e-9/R;
 
@@ -73,7 +73,7 @@ xpos_center=ceil(nx/2)*h;   %position du centre du défaut en m
 zpos_center=10*l;
 
 vp_inclusion=5000;
-vs_inclusion = 6500;
+vs_inclusion = 2000;
 rho_inclusion=5000;
 r=l/4;						%rayon de l'inclusion en m
 

@@ -27,7 +27,7 @@ fclose(fid);
 
 for ix=1:nx
 	for iz=1:nz
-		if (ix==149 || ix==150) && (iz==49 || iz==50)%( sum(ix==pos_x) && sum(iz==pos_z) )
+		if ( sum(ix==pos_x) && sum(iz==pos_z) ) %(ix==149 || ix==150) && (iz==49 || iz==50)
 			vp_init(iz,ix)=vp_diff;
 		end		
 	end

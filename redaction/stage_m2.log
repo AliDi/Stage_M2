@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.3.4)  7 JUN 2016 17:39
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.3.4)  8 JUN 2016 13:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1083,7 +1083,26 @@ Package: lineno 2005/11/02 line numbers on paragraphs v4.41
 \bframebox=\box38
 LaTeX Info: Redefining \\ on input line 3056.
 ) (./stage_m2.aux
-(./imagerie.aux) (./fwi.aux) (./annexes.aux))
+(./fwi.aux
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `sub@' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `sub@' multiply defined.
+
+
+LaTeX Warning: Label `' multiply defined.
+
+
+LaTeX Warning: Label `sub@' multiply defined.
+
+))
 \openout1 = `stage_m2.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 56.
@@ -1100,8 +1119,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 56.
 LaTeX Font Info:    ... okay on input line 56.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 56.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 56.
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 56.
@@ -1124,15 +1142,15 @@ LaTeX Info: Redefining \up on input line 56.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(85.35826pt, 426.79135pt, 85.35826pt)
-* v-part:(T,H,B)=(85.35826pt, 702.78308pt, 56.9055pt)
+* h-part:(L,W,R)=(71.13188pt, 455.24411pt, 71.13188pt)
+* v-part:(T,H,B)=(56.9055pt, 731.23584pt, 56.9055pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=426.79135pt
-* \textheight=702.78308pt
-* \oddsidemargin=13.08827pt
-* \evensidemargin=13.08827pt
-* \topmargin=-23.91173pt
+* \textwidth=455.24411pt
+* \textheight=731.23584pt
+* \oddsidemargin=-1.1381pt
+* \evensidemargin=-1.1381pt
+* \topmargin=-52.36449pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=11.0pt
@@ -1246,13 +1264,13 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 71.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<img/univ.png, id=103, 609.27625pt x 282.05376pt>
+<img/univ.png, id=59, 609.27625pt x 282.05376pt>
 File: img/univ.png Graphic file (type png)
  <use img/univ.png>
 Package pdftex.def Info: img/univ.png used on input line 111.
 (pdftex.def)             Requested size: 153.65742pt x 71.13188pt.
 
-Overfull \hbox (25.61873pt too wide) in paragraph at lines 111--112
+Overfull \hbox (17.08281pt too wide) in paragraph at lines 111--112
  [][] 
  []
 
@@ -1262,13 +1280,13 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10> on input line 112.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 112.
-<img/cnrs.jpg, id=105, 170.7981pt x 170.7981pt>
+<img/cnrs.jpg, id=61, 170.7981pt x 170.7981pt>
 File: img/cnrs.jpg Graphic file (type jpg)
  <use img/cnrs.jpg>
 Package pdftex.def Info: img/cnrs.jpg used on input line 115.
 (pdftex.def)             Requested size: 71.13007pt x 71.13188pt.
 
-<img/isterre.jpg, id=106, 592.2125pt x 428.60126pt>
+<img/isterre.jpg, id=62, 592.2125pt x 428.60126pt>
 File: img/isterre.jpg Graphic file (type jpg)
  <use img/isterre.jpg>
 Package pdftex.def Info: img/isterre.jpg used on input line 119.
@@ -1278,34 +1296,24 @@ Package pdftex.def Info: img/isterre.jpg used on input line 119.
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./img/univ.png> <./img/cnr
 s.jpg> <./img/isterre.jpg>]
-\openout2 = `introduction.aux'.
+\openout2 = `fwi.aux'.
 
- (./introduction.tex
+ (./fwi.tex
 Chapitre 1.
-Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 18.
 
-Underfull \hbox (badness 10000) in paragraph at lines 20--21
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
+
+ []
+
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 5.
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--53
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 20--21
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 24--25
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 26--27
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 32--34
+Underfull \hbox (badness 10000) in paragraph at lines 52--53
 
  []
 
@@ -1313,176 +1321,8 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.37 
+l.53 
       [1
-
-
-]) [2]
-\openout2 = `imagerie.aux'.
-
- (./imagerie.tex
-Chapitre 2.
-
-Underfull \hbox (badness 10000) in paragraph at lines 4--5
-
- []
-
-LaTeX Font Info:    Try loading font information for T1+lmss on input line 5.
-(/usr/share/texmf/tex/latex/lm/t1lmss.fd
-File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-Underfull \hbox (badness 10000) in paragraph at lines 18--19
-
- []
-
-<img/scan2.png, id=144, 349.0641pt x 261.6174pt>
-File: img/scan2.png Graphic file (type png)
- <use img/scan2.png>
-Package pdftex.def Info: img/scan2.png used on input line 29.
-(pdftex.def)             Requested size: 244.3432pt x 183.13092pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 33--34
-
- []
-
-[3
-
-
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 39--40
-
- []
-
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 43.
-
-Underfull \hbox (badness 10000) in paragraph at lines 50--51
-
- []
-
-[4 <./img/scan2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 60--61
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 64--65
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 88--89
-
- []
-
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 95--97
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 99--100
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 102--103
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 104--106
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 107--108
-
- []
-
-[6] <./img/soudure3.png, id=250, 243.91125pt x 177.42285pt>
-File: ./img/soudure3.png Graphic file (type png)
-
-<use ./img/soudure3.png>
-Package pdftex.def Info: ./img/soudure3.png used on input line 130.
-(pdftex.def)             Requested size: 136.902pt x 99.58464pt.
-
-Overfull \hbox (30.20416pt too wide) in paragraph at lines 130--132
- [][] 
- []
-
-<./img/soudure1.png, id=251, 213.55785pt x 161.1621pt>
-File: ./img/soudure1.png Graphic file (type png)
-
-<use ./img/soudure1.png>
-Package pdftex.def Info: ./img/soudure1.png used on input line 137.
-(pdftex.def)             Requested size: 150.81572pt x 113.81102pt.
-
-Overfull \hbox (44.11789pt too wide) in paragraph at lines 137--138
- [][] 
- []
-
-<./img/soudure2.png, id=252, 203.44005pt x 152.4897pt>
-File: ./img/soudure2.png Graphic file (type png)
-
-<use ./img/soudure2.png>
-Package pdftex.def Info: ./img/soudure2.png used on input line 143.
-(pdftex.def)             Requested size: 151.84084pt x 113.81102pt.
-
-Overfull \hbox (45.143pt too wide) in paragraph at lines 143--144
- [][] 
- []
-
-<img/chassignole_echos_config.png, id=257, 144.90135pt x 114.9093pt>
-File: img/chassignole_echos_config.png Graphic file (type png)
-
-<use img/chassignole_echos_config.png>
-Package pdftex.def Info: img/chassignole_echos_config.png used on input line 15
-3.
-(pdftex.def)             Requested size: 143.51909pt x 113.81102pt.
-
-Overfull \hbox (15.4804pt too wide) in paragraph at lines 153--154
- [][] 
- []
-
-<img/chassignole_echos.png, id=258, 168.3891pt x 140.56516pt>
-File: img/chassignole_echos.png Graphic file (type png)
-
-<use img/chassignole_echos.png>
-Package pdftex.def Info: img/chassignole_echos.png used on input line 159.
-(pdftex.def)             Requested size: 136.34045pt x 113.81102pt.
-
-Overfull \hbox (8.30176pt too wide) in paragraph at lines 159--160
- [][] 
- []
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[7 <./img/soudure3.png> <./img/soudure1.png> <./img/soudure2.png>]) [8 <./img/c
-hassignole_echos_config.png> <./img/chassignole_echos.png>]
-\openout2 = `fwi.aux'.
-
- (./fwi.tex
-Chapitre 3.
-
-Underfull \hbox (badness 10000) in paragraph at lines 3--4
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 52--53
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 52--53
-
- []
-
-[9
-
 
 
 ]
@@ -1490,230 +1330,167 @@ Underfull \hbox (badness 10000) in paragraph at lines 57--58
 
  []
 
+<img/anisotrope2.png, id=101, 1943.26pt x 1923.185pt>
+File: img/anisotrope2.png Graphic file (type png)
 
-Underfull \hbox (badness 10000) in paragraph at lines 86--87
+<use img/anisotrope2.png>
+Package pdftex.def Info: img/anisotrope2.png used on input line 64.
+(pdftex.def)             Requested size: 70.92691pt x 70.1942pt.
+Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
+ine 85.
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 86--87
-
- []
-
-[10]
-Underfull \hbox (badness 10000) in paragraph at lines 108--111
+Underfull \hbox (badness 10000) in paragraph at lines 87--88
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 120--121
+Underfull \hbox (badness 10000) in paragraph at lines 87--88
 
  []
 
-[11] [12] <img/ambig_phase.png, id=364, 269.20575pt x 225.12105pt>
+[2 <./img/anisotrope2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 109--112
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 121--122
+
+ []
+
+[3] <img/ambig_phase.png, id=140, 269.20575pt x 225.12105pt>
 File: img/ambig_phase.png Graphic file (type png)
 
 <use img/ambig_phase.png>
-Package pdftex.def Info: img/ambig_phase.png used on input line 170.
+Package pdftex.def Info: img/ambig_phase.png used on input line 171.
 (pdftex.def)             Requested size: 215.36488pt x 180.09706pt.
-
-
-LaTeX Warning: Reference `applications' on page 13 undefined on input line 177.
-
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 183--184
-
- []
-
-[13 <./img/ambig_phase.png>]
-<img/rayonnement.png, id=382, 456.0237pt x 340.3917pt>
-File: img/rayonnement.png Graphic file (type png)
-
-<use img/rayonnement.png>
-Package pdftex.def Info: img/rayonnement.png used on input line 193.
-(pdftex.def)             Requested size: 319.2144pt x 238.27255pt.
- <img/geophy1.png, id=390, 248.6088pt x 150.68295pt>
-File: img/geophy1.png Graphic file (type png)
-
-<use img/geophy1.png>
-Package pdftex.def Info: img/geophy1.png used on input line 214.
-(pdftex.def)             Requested size: 170.71393pt x 103.4747pt.
-
-Underfull \hbox (badness 5217) in paragraph at lines 215--215
-[]\T1/lmr/m/n/10 (a) |Par to-mo-gra-phie en ré-flexion.
- []
-
-<img/geophy2.png, id=391, 239.2137pt x 149.5989pt>
-File: img/geophy2.png Graphic file (type png)
- <use img/geophy2.png>
-Package pdftex.def Info: img/geophy2.png used on input line 219.
-(pdftex.def)             Requested size: 170.71393pt x 106.7638pt.
-
-Underfull \hbox (badness 4886) in paragraph at lines 220--220
-[]\T1/lmr/m/n/10 (b) |Par to-mo-gra-phie en ré-flexion.
- []
-
-<img/geophy3.png, id=392, 242.1045pt x 140.56516pt>
-File: img/geophy3.png Graphic file (type png)
- <use img/geophy3.png>
-Package pdftex.def Info: img/geophy3.png used on input line 224.
-(pdftex.def)             Requested size: 170.71393pt x 99.11989pt.
-
-<img/geophy4.png, id=393, 238.491pt x 140.56516pt>
-File: img/geophy4.png Graphic file (type png)
- <use img/geophy4.png>
-Package pdftex.def Info: img/geophy4.png used on input line 229.
-(pdftex.def)             Requested size: 170.71393pt x 100.61914pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-LaTeX Font Info:    Try loading font information for TS1+lmr on input line 246.
+
+LaTeX Warning: Reference `applications' on page 4 undefined on input line 178.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 184--185
+
+ []
+
+[4] <img/rayonnement.png, id=161, 456.0237pt x 340.3917pt>
+File: img/rayonnement.png Graphic file (type png)
+
+<use img/rayonnement.png>
+Package pdftex.def Info: img/rayonnement.png used on input line 194.
+(pdftex.def)             Requested size: 319.2144pt x 238.27255pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 207--208
+
+ []
+
+[5 <./img/ambig_phase.png>]
+<img/dispo_valhall.jpg, id=180, 1230.5975pt x 731.73375pt>
+File: img/dispo_valhall.jpg Graphic file (type jpg)
+
+<use img/dispo_valhall.jpg>
+Package pdftex.def Info: img/dispo_valhall.jpg used on input line 213.
+(pdftex.def)             Requested size: 287.10617pt x 170.71652pt.
+ [6 <./img/rayonnement.png> <./img/dispo_valhall.jpg>] <img/geophy1.png, id=190
+, 241.3818pt x 151.0443pt>
+File: img/geophy1.png Graphic file (type png)
+ <use img/geophy1.png>
+Package pdftex.def Info: img/geophy1.png used on input line 222.
+(pdftex.def)             Requested size: 182.09486pt x 113.9467pt.
+
+<img/geophy2.png, id=191, 239.2137pt x 149.5989pt>
+File: img/geophy2.png Graphic file (type png)
+ <use img/geophy2.png>
+Package pdftex.def Info: img/geophy2.png used on input line 228.
+(pdftex.def)             Requested size: 182.09486pt x 113.88123pt.
+
+<img/geophy3.png, id=192, 242.1045pt x 140.56516pt>
+File: img/geophy3.png Graphic file (type png)
+ <use img/geophy3.png>
+Package pdftex.def Info: img/geophy3.png used on input line 233.
+(pdftex.def)             Requested size: 182.09486pt x 105.72601pt.
+
+<img/geophy4.png, id=193, 238.491pt x 140.56516pt>
+File: img/geophy4.png Graphic file (type png)
+ <use img/geophy4.png>
+Package pdftex.def Info: img/geophy4.png used on input line 239.
+(pdftex.def)             Requested size: 182.09486pt x 107.32822pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 248--249
+
+ []
+
+
+Package natbib Warning: Citation `lopes' on page 7 undefined on input line 250.
+
+
+
+LaTeX Warning: Reference `acqui_soudure' on page 7 undefined on input line 258.
+
+
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 263.
 
 (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [14 <./img/rayonnement.png>])
-[15 <./img/geophy1.png> <./img/geophy2.png> <./img/geophy3.png> <./img/geophy4.
-png>]
-\openout2 = `annexes.aux'.
-
- (./annexes.tex
-Chapitre 4.
-) [16
+) [7 <./img/geophy1.png> <./img/geophy2.png> <./img/geophy3.png> <./img/geophy4
+.png>]) [8] (./stage_m2.bbl [9
 
 
+])
 
-] (./stage_m2.bbl [17
-
-
-] [18]) 
 AED: lastpage setting LastPage
-[19]
+[10]
+
+Package natbib Warning: There were undefined citations.
+
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 157.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 157.
- (./stage_m2.aux (./introduction.aux) (./imagerie.aux) (./fwi.aux)
-(./annexes.aux))
+(./stage_m2.aux (./fwi.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 157.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 157.
+Package rerunfilecheck Info: File `stage_m2.out' has not changed.
+(rerunfilecheck)             Checksum: 70DE6AB36770860E0301181AB60333D9;997.
 
-
-Package rerunfilecheck Warning: File `stage_m2.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `stage_m2.out':
-(rerunfilecheck)             Before: 278E04CC7EE39E52AFDB3710B057F3A4;1888
-(rerunfilecheck)             After:  EC562D6D52A502EA05CD479968AE00CF;1936.
 
 LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 157.
  ) 
 Here is how much of TeX's memory you used:
- 20386 strings out of 493304
- 346508 string characters out of 6139872
- 433294 words of memory out of 5000000
- 23238 multiletter control sequences out of 15000+600000
- 115800 words of font info for 93 fonts, out of 8000000 for 9000
+ 20221 strings out of 493304
+ 343893 string characters out of 6139872
+ 432040 words of memory out of 5000000
+ 23162 multiletter control sequences out of 15000+600000
+ 113029 words of font info for 92 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 56i,11n,82p,1119b,782s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{figure.caption.15} has been referenced but does n
-ot exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{equation.2.2.7} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{equation.2.2.4} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{equation.2.2.5} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{equation.2.2.1} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.caption.9} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.caption.8} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.caption.5} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.caption.2} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.caption.1} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.2.5.1} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.2.3.3} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.2.3.2} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.2.3.1} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.2.2.3} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.2.2.2} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.2.2.1} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.1.5} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.1.4.3} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.1.4.2} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.1.4.1} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.1.4} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.1.3} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.1.2} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.1.1} has been referenced but does not exist
-, replaced by a fixed one
-
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/dvi
-ps/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/
-texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-
-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}</usr/share/texmf/fon
-ts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pf
-b></usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/t
-ype1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></
-usr/share/texmf/fonts/type1/public/lm/lmmi6.pfb></usr/share/texmf/fonts/type1/p
-ublic/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmmib10.pfb></usr/sh
-are/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/
-lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf
-/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmss8
-.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts
-/type1/public/lm/lmsy8.pfb>
-Output written on stage_m2.pdf (20 pages, 3431430 bytes).
+ 56i,11n,82p,1119b,776s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/d
+vips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/shar
+e/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/l
+m-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/share/texmf/f
+onts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.
+pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts
+/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb>
+</usr/share/texmf/fonts/type1/public/lm/lmmi6.pfb></usr/share/texmf/fonts/type1
+/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmmib10.pfb></usr/
+share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/publi
+c/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/tex
+mf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lms
+y10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb>
+Output written on stage_m2.pdf (11 pages, 3042863 bytes).
 PDF statistics:
- 536 PDF objects out of 1000 (max. 8388607)
- 456 compressed objects within 5 object streams
- 141 named destinations out of 1000 (max. 500000)
- 280 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 319 PDF objects out of 1000 (max. 8388607)
+ 267 compressed objects within 3 object streams
+ 80 named destinations out of 1000 (max. 500000)
+ 172 words of extra memory for PDF output out of 10000 (max. 10000000)
 

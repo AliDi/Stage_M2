@@ -12,7 +12,7 @@
 
 %permet de placer des sources et recepteurs en donnant leurs coordonnées en m
 
-function []= acqui_generation(z_sources,x_sources,y_sources,z_recepts,x_recepts,y_recepts, nz, nx,h)
+function []= acqui_generation(z_sources,x_sources,y_sources,z_recepts,x_recepts,y_recepts, nz, nx,h , grille)
 
 	nb_sources = length(z_sources);
 	nb_recepts = length(z_recepts);
@@ -20,6 +20,18 @@ function []= acqui_generation(z_sources,x_sources,y_sources,z_recepts,x_recepts,
 	if ( max(z_sources)>nz*h || max(x_sources)>nx*h || max(z_recepts)>nz*h || max(x_recepts)>nx*h  )
 		disp("Au moins une source ou un récepteur se trouve hors de la zone d'étude")
 	end
+	
+%%%%%%%%%% Placement des sources/recep sur la grille d'échantillonnage %%%%%%%%%%
+
+	if(grille=='on')
+		x_sources = round(x_sources./h).*h;
+		z_sources = round(z_sources./h).*h;	
+		x_recepts = round(x_recepts./h).*h;
+		z_recepts = round(z_recepts./h).*h;	
+	end	
+
+
+
 
 
 	for i=1:nb_sources
@@ -31,15 +43,18 @@ function []= acqui_generation(z_sources,x_sources,y_sources,z_recepts,x_recepts,
 	fid=fopen('acqui_file','w+');
 	fprintf(fid,'%f %f %f %f %f %f\n', acqui(:, :,:));
 	fclose(fid);
+	
 
 	%save("-ascii","acqui_file","acqui")
+	
+	
 
 %%%% schema donnant la disposition %%%%
-	figure(1)
-	scatter3(x_sources, y_sources,-z_sources, 10,'blue','*','filled');
-	hold on 
-	scatter3(x_recepts,y_recepts,-z_recepts,10,'black','v','filled');
-	view([0 0])
-	axis([0 nx*h 0 1 -nz*h 0])
+	figure(100)
+	hold on
+	scatter(x_sources, z_sources,'green','o','filled');
+	hold on
+	scatter(x_recepts, z_recepts,'black','o','filled');
+	hold off
 end
 

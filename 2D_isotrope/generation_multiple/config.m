@@ -14,9 +14,9 @@ l=vp/f;				%longueur d'onde en m
 h=vp/(2*2e6)/6;				%pas de discrétisation : en fdtd o(4), respecter 5 pts par longueur d'onde
 
 nz=floor(0.05/h) %floor(10*l /h)				%nb de points en z
-nx=floor(0.24/h) %floor(50*l/2 /h)				%nb de points en x
+nx=floor(0.10/h) %floor(50*l/2 /h)				%nb de points en x
 
-dt=1.5e-8/R;
+dt=1.4e-8/R;
 
 
 
@@ -99,13 +99,13 @@ nb_elements=64;		%number of active elements
 pitch=0.001;
 			%center-to-center distance between 2 successive elements
 zpos_sources1 =h; 			%z position of the probe (in m)
-xpos_sources1 =5.35e-2; 	%position of array center (in m)
+xpos_sources1 =nx/2*h;%7.7e-2; 	%position of array center (in m)
 
-zpos_recep1 = h;
+zpos_recep1 = zpos_sources1;
 xpos_recep1 =  xpos_sources1;
 
 zpos_sources2 = (nz-1)*h-h;
-xpos_sources2 = 7.65e-2;
+xpos_sources2 = nx/2*h;
 
 zpos_recep2 = zpos_sources2;
 xpos_recep2 =  xpos_sources2;
@@ -128,7 +128,7 @@ disp(["Avec h=" num2str(h) " m, il faut que dt <= " num2str(dt_max) "s.\n\n"])
 
 %%%%%%%%%% Generation du signal d'excitation fricker %%%%%%%%%%
 
-fricker_generation(f,3000,dt)
+fricker_generation(f,1024,dt)
 title('excitation')
 
 
