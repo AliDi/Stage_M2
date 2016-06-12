@@ -33,12 +33,46 @@ Afin de déterminer le pouvoir de résolution du gradient, \cite{sirgue} réalis
 La résolution est donc maximale quand $\theta=0$ et elle est alors de $\lambda/2$. La résolution s'améliore en hautes fréquences et pour des petits angles de diffraction. La géométrie du système d'acquisition a donc un impact direct sur la résolution spatiale. De plus, les surfaces libres simulent la présence de sources miroirs, d'autant plus nombreuses que le nombre de réflexions dans le guide est important. \\
 
 
+supposés sans interaction
 
-Une illustration du lien entre la couverture en nombres d'onde du milieu et l'acquisition ainsi que les sources miroirs est proposée en figure~\ref{}. Pour différentes configurations, des transformée de Fourier spatiales du gradient sont réalisées au niveau de points diffractant.
+Une illustration du lien entre la couverture en nombres d'onde du milieu et l'acquisition ainsi que les sources miroirs est réalisée ci-après. Pour différentes configurations, des transformée de Fourier spatiales du gradient sont réalisées au niveau de dix-huit points diffractant, le paramètre du modèle étant la vitesse verticale (cf figure~\ref{app:config_reso}).
 
+\begin{figure}
+	\centering
+	\includegraphics[height=5cm]{img/vp_scat.png}
+	\caption{Configuration pour l'étude de résolution. La vitesse dans les inclusions est de 3000 m/s et de 6000 m/s ailleurs. \label{app:config_reso}}
+\end{figure}
 
+Le gradient est calculé en présence des dix-huit inclusions, sous l'hypothèse pour chaque inclusion, que la présence des autres n'intervient pas.\todo[inline]{à reformuler}
 
-image du remplissage en nb d'onde -> dépendance des sources, de la fréquence et du nombre de réflexion surfaces libres.
+\subsection{Influence de la fréquence d'excitation}
+
+Dans un premier temps, le milieu est entouré de conditions absorbantes. Les figures~\ref{app:150k} et~\ref{app:2M} montre la couverture en nombre d'onde obtenue dans une configuration avec une barrette excitatrice et pour deux gammes de fréquence différentes. 
+    
+\begin{figure}[!h]
+    \centering
+    \begin{subfigure}[b]{0.05\textwidth}
+ 		\hspace{-2cm}\includegraphics[width=0.5cm]{img/echelle_fft.png}\vspace{2.1cm}
+	\end{subfigure}
+    \begin{subfigure}[b]{0.4\textwidth}
+		\hspace{-3cm}\includegraphics[width=1.5\textwidth]{img/ssfreesurf_150k}
+		\caption{Excitation centrée à 150 kHz.}
+		\label{app:150k}
+	\end{subfigure}	
+	%\hspace{0.7cm}
+	\begin{subfigure}[b]{0.4\textwidth}
+		\includegraphics[width=1.5\textwidth]{img/ssfreesurf_2M}
+		\caption{Excitation centrée à 2 MHz.}
+		\label{app:2M}
+	\end{subfigure}
+	\caption{Transformées de Fourier spatiales locales pour 2 gammes de fréquence d'excitation.}
+\end{figure}
+
+Dans le cas d'une excitation basse fréquence, le gradient est pauvre en hauts nombres d'onde. Inversement, l'excitation haute fréquence ne permet pas de reconstruire les bas nombres d'onde.\\
+La couverture en nombre d'onde est également très liée à l'acquisition. Elle est meilleure aux abords et en direction de la barrette. Les nombres d'onde verticaux seront globalement mieux reconstruits avec cette acquisition, tandis que la couverture en nombres d'ondes horizontaux est très faible.
+
+\subsection{Influence des surfaces libres}
+
 
 \section{Gestion des non-linéarités}
 Une stratégie pour limiter la non-linéarité de l'inversion consiste à réaliser l'inversion en plusieurs temps, en injectant progressivement le contenu haute fréquence dans les données. L'inversion à basse fréquence permet ainsi de reconstruire la structure grossière avant d'ajouter les détails grâce à la résolution qu'offre le gradient en haute fréquence.\\
