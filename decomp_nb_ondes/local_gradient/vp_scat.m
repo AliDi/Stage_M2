@@ -4,20 +4,20 @@ nx=400;
 nz=200;
 
 %pour les carrés
-n=100;
+n=200/3;
 
 %position des diffractants
-pos_x=n/2:n:nx-n/2;
+pos_x=round(n/2:n:nx-n/2);
 pos_x= [pos_x pos_x-1];
 
-pos_z=n/2:n:nz-n/2;
+pos_z=round(n/2:n:nz-n/2);
 pos_z= [pos_z pos_z-1];
 
 %milieu uniforme
 vp=6000;
 vp_diff=3000;
 
-vp_init=vp*ones(200,400);
+vp_init=vp*ones(nz,nx);
 
 fid=fopen('vp_init','w+');
 fwrite(fid, vp_init(:,:),'single');
