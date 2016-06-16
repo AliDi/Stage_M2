@@ -1,14 +1,14 @@
 clear all; close all;
 
-nz=200;
-nx=400;
+nz=300;
+nx=600;
 
 %pour les carrés
-n=floor(200/3);
+n=floor(nz/3);
 
 
 %recup du gradient
-fid=fopen('gradient_18inclus_2freesurf_nt4200_2MHz');
+fid=fopen('gradient_test');
 g=fread(fid,'single');
 fclose(fid);
 
@@ -17,7 +17,7 @@ g=reshape(g,nz,nx);
 imagesc(g);
 
 %calcul des fft2D
-h=2.5000e-04;
+h=1.6e-4%2.5000e-04;
 
 z=(0:(n-1))*h;
 x=(0:(n-1))*h;
@@ -54,10 +54,10 @@ end
 
 figure(35)
 colorbar
-print -dsvg 'gradient_18inclus_2freesurf_nt4200_2MHz.svg'
+print -dpng 'gradient_test.png'
 
 figure(36)
-print -dsvg 'fft2d_18inclus_2freesurf_nt4200_2MHz.svg'
+print -dpng 'fft2d_test.png'
 
 
 

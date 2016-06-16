@@ -1,16 +1,16 @@
 clear all; close all;
 
-nx=400;
-nz=200;
+nx=600;
+nz=300;
 
 %pour les carrés
-n=200/3;
+n=300/3;
 
 %position des diffractants
-pos_x=n/2:n:nx-n/2;
+pos_x=round(n/2:n:nx-n/2);
 pos_x= [pos_x pos_x-1];
 
-pos_z=n/2:n:nz-n/2;
+pos_z=round(n/2:n:nz-n/2);
 pos_z= [pos_z pos_z-1];
 
 %milieu uniforme

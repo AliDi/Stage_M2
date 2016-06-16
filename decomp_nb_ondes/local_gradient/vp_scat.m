@@ -1,10 +1,10 @@
 clear all; close all;
 
-nx=400;
-nz=200;
+nx=600;
+nz=300;
 
 %pour les carrés
-n=200/3;
+n=300/3;
 
 %position des diffractants
 pos_x=round(n/2:n:nx-n/2);
@@ -39,3 +39,10 @@ colorbar
 fid=fopen('vp_scat','w+');
 fwrite(fid, vp_init(:,:),'single');
 fclose(fid);
+
+
+
+fid=fopen('rho','w+');
+fwrite(fid, 8000*ones(nz,nx),'single');
+fclose(fid);
+
