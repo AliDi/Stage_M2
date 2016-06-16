@@ -1,13 +1,13 @@
-\BOOKMARK [0][-]{chapter.1}{L'inversion de formes d'onde }{}% 1
-\BOOKMARK [1][-]{section.1.1}{Probl\350me direct }{chapter.1}% 2
-\BOOKMARK [1][-]{section.1.2}{Probl\350me inverse}{chapter.1}% 3
-\BOOKMARK [2][-]{subsection.1.2.1}{Calcul du gradient}{section.1.2}% 4
-\BOOKMARK [2][-]{subsection.1.2.2}{Calcul du hessien}{section.1.2}% 5
-\BOOKMARK [2][-]{subsection.1.2.3}{R\351gularisation}{section.1.2}% 6
-\BOOKMARK [1][-]{section.1.3}{Probl\351matiques li\351es \340 l'inversion}{chapter.1}% 7
-\BOOKMARK [2][-]{subsection.1.3.1}{Choix du mod\350le initial}{section.1.3}% 8
-\BOOKMARK [2][-]{subsection.1.3.2}{Inversion multi-param\350tres}{section.1.3}% 9
-\BOOKMARK [2][-]{subsection.1.3.3}{Estimation de la source}{section.1.3}% 10
-\BOOKMARK [1][-]{section.1.4}{Exemple d'application en g\351ophysique}{chapter.1}% 11
-\BOOKMARK [1][-]{section.1.5}{Application au CND de soudure : les probl\351matiques}{chapter.1}% 12
-\BOOKMARK [2][-]{subsection.1.5.1}{sensibilit\351 au bruit ?}{section.1.5}% 13
+\BOOKMARK [0][-]{chapter.1}{Application de la FWI \340 des donn\351es simul\351es }{}% 1
+\BOOKMARK [1][-]{section.1.1}{G\351n\351ration des donn\351es observ\351es}{chapter.1}% 2
+\BOOKMARK [1][-]{section.1.2}{\311tude de r\351solution spatiale }{chapter.1}% 3
+\BOOKMARK [2][-]{subsection.1.2.1}{Influence de la fr\351quence d'excitation}{section.1.2}% 4
+\BOOKMARK [2][-]{subsection.1.2.2}{Influence des surfaces libres}{section.1.2}% 5
+\BOOKMARK [1][-]{section.1.3}{Gestion des non-lin\351arit\351s}{chapter.1}% 6
+\BOOKMARK [1][-]{section.1.4}{\311quations de propagation pour le probl\350me direct}{chapter.1}% 7
+\BOOKMARK [2][-]{subsection.1.4.1}{Propagation acoustique}{section.1.4}% 8
+\BOOKMARK [1][-]{section.1.5}{Inversions en mat\351riau acoustique }{chapter.1}% 9
+\BOOKMARK [2][-]{subsection.1.5.1}{Isotrope}{section.1.5}% 10
+\BOOKMARK [2][-]{subsection.1.5.2}{VTI}{section.1.5}% 11
+\BOOKMARK [1][-]{section.1.6}{Inversions en mat\351riau \351lastique isotrope}{chapter.1}% 12
+\BOOKMARK [2][-]{subsection.1.6.1}{anisotrope}{section.1.6}% 13

@@ -1,2 +1,18 @@
 \select@language {french}
-\contentsline {section}{\numberline {1.}Introduction}{3}
+\contentsline {chapter}{\numberline {1}Application de la FWI \IeC {\`a} des donn\IeC {\'e}es simul\IeC {\'e}es }{2}{chapter.1}
+\contentsline {section}{\numberline {1.1}G\IeC {\'e}n\IeC {\'e}ration des donn\IeC {\'e}es observ\IeC {\'e}es}{2}{section.1.1}
+\contentsline {section}{\numberline {1.2}\IeC {\'E}tude de r\IeC {\'e}solution spatiale }{2}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}Influence de la fr\IeC {\'e}quence d'excitation}{3}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.2.2}Influence des surfaces libres}{4}{subsection.1.2.2}
+\contentsline {section}{\numberline {1.3}Gestion des non-lin\IeC {\'e}arit\IeC {\'e}s}{5}{section.1.3}
+\contentsline {section}{\numberline {1.4}\IeC {\'E}quations de propagation pour le probl\IeC {\`e}me direct}{5}{section.1.4}
+\contentsline {subsection}{\numberline {1.4.1}Propagation acoustique}{5}{subsection.1.4.1}
+\contentsline {subsubsection}{Isotrope}{5}{section*.8}
+\contentsline {subsubsection}{Transverse isotrope}{6}{section*.9}
+\contentsline {section}{\numberline {1.5}Inversions en mat\IeC {\'e}riau acoustique }{6}{section.1.5}
+\contentsline {subsection}{\numberline {1.5.1}Isotrope}{6}{subsection.1.5.1}
+\contentsline {subsubsection}{Inversions monoparam\IeC {\`e}tres}{6}{section*.11}
+\contentsline {subsubsection}{multiparam\IeC {\`e}tre}{7}{section*.15}
+\contentsline {subsection}{\numberline {1.5.2}VTI}{8}{subsection.1.5.2}
+\contentsline {section}{\numberline {1.6}Inversions en mat\IeC {\'e}riau \IeC {\'e}lastique isotrope}{9}{section.1.6}
+\contentsline {subsection}{\numberline {1.6.1}anisotrope}{9}{subsection.1.6.1}

@@ -16,11 +16,12 @@
 \usepackage{amssymb}
 \usepackage{amsfonts}
 \usepackage{capt-of}
-\usepackage{caption}
+\usepackage[justification=centering]{caption}
 \usepackage{tikz}
 \usepackage{multirow}
 \usepackage{bm}
 \usepackage{mathtools}
+\usepackage{xcolor}
     
     
 \usepackage{fancyvrb} % pour forcer les verbatim sur une seule page
@@ -45,7 +46,8 @@
 \usepackage{hyperref}
 \hypersetup{
      colorlinks   = true,
-     citecolor    = blue!90
+     citecolor    = blue!90,
+     linkcolor = red
 }
 
 %numerotation des lignes (pour la relecture)
@@ -131,18 +133,18 @@ Maîtres de conférence, ISTerre
 
 \newpage
 %\input{remerciements}
-\vspace{2cm}
+%\vspace{2cm}
 %\input{abstract}
-
-%\tableofcontents
+{\hypersetup{hidelinks}
+\tableofcontents}
 
 %\include{introduction}
 
 %\include{imagerie}
 
-\include{fwi}
+%\include{fwi}
 
-%\include{application}
+\include{application}
 
 %\include{annexes}
 

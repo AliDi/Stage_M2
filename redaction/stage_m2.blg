@@ -1,9 +1,7 @@
 This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: stage_m2.aux
-A level-1 auxiliary file: imagerie.aux
-A level-1 auxiliary file: fwi.aux
-A level-1 auxiliary file: annexes.aux
+A level-1 auxiliary file: application.aux
 The style file: plainnat.bst
 Database file #1: biblio.bib
 I was expecting a `,' or a `}'---line 200 of file biblio.bib
@@ -14,47 +12,49 @@ You're missing a field part---line 374 of file biblio.bib
  :    eid = 
  :          ,
 I'm skipping whatever remains of this entry
-Warning--there's a number but no volume in doctor_saft
-Warning--there's a number but no volume in holmes_tfm
-You've used 33 entries,
+Repeated entry---line 443 of file biblio.bib
+ : @article{ogilvy
+ :                ,
+I'm skipping whatever remains of this entry
+You've used 6 entries,
             2773 wiz_defined-function locations,
-            789 strings with 9913 characters,
-and the built_in function-call counts, 15181 in all, are:
-= -- 1421
-> -- 668
-< -- 23
-+ -- 235
-- -- 201
-* -- 1220
-:= -- 2300
-add.period$ -- 101
-call.type$ -- 33
-change.case$ -- 159
-chr.to.int$ -- 32
-cite$ -- 68
-duplicate$ -- 687
-empty$ -- 1346
-format.name$ -- 242
-if$ -- 3174
-int.to.chr$ -- 2
+            632 strings with 5629 characters,
+and the built_in function-call counts, 2409 in all, are:
+= -- 227
+> -- 71
+< -- 6
++ -- 27
+- -- 21
+* -- 174
+:= -- 375
+add.period$ -- 19
+call.type$ -- 6
+change.case$ -- 23
+chr.to.int$ -- 6
+cite$ -- 12
+duplicate$ -- 116
+empty$ -- 234
+format.name$ -- 29
+if$ -- 500
+int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 32
-newline$ -- 174
-num.names$ -- 132
-pop$ -- 308
+missing$ -- 6
+newline$ -- 39
+num.names$ -- 24
+pop$ -- 46
 preamble$ -- 1
-purify$ -- 133
+purify$ -- 19
 quote$ -- 0
-skip$ -- 494
+skip$ -- 80
 stack$ -- 0
-substring$ -- 996
-swap$ -- 63
-text.length$ -- 2
+substring$ -- 168
+swap$ -- 6
+text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 348
-warning$ -- 2
-while$ -- 148
+type$ -- 61
+warning$ -- 0
+while$ -- 25
 width$ -- 0
-write$ -- 435
-(There were 2 error messages)
+write$ -- 86
+(There were 3 error messages)

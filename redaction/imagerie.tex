@@ -3,7 +3,7 @@
 
  L'objectif de ce chapitre est de présenter les principales méthodes multi-éléments utilisées pour l'imagerie ultrasonore. \\
 
-Les transducteurs multi-éléments sont d'abord utilisés dans les années 70 pour l'imagerie médicale et sont aujourd'hui largement utilisés en contrôle de pièces industriels. Les éléments étant pilotables indépendamment, il est possible de leur appliquer une loi de retard permettant d'orienter le front d'onde ou de focaliser le faisceau excitateur. Cela permet notamment d'améliorer le rapport signal sur bruit et peut représenter un gain de temps car le balayage d'une pièce à inspecter peut être réalisé sans déplacement du transducteur.
+Les transducteurs multi-éléments sont d'abord utilisés dans les années 70 pour l'imagerie médicale et sont aujourd'hui répandus en contrôle de pièces industriels. Les éléments étant pilotables indépendamment, il est possible de leur appliquer une loi de retard permettant d'orienter le front d'onde ou de focaliser le faisceau excitateur. Cela permet notamment d'améliorer le rapport signal sur bruit et peut représenter un gain de temps car le balayage d'une pièce à inspecter peut être réalisé sans déplacement du transducteur.
 
 En réception, ces transducteurs permettent de réaliser de la formation de voie dont on distingue trois principaux types de méthodes : 
 \begin{itemize}
@@ -38,7 +38,7 @@ Cependant, la localisation dans la pièce des réflecteurs à l'origine des diff
 \section{Méthodes par retard et sommation}
 Ces données temporelles peuvent aussi être post-traitées de manière à obtenir une représentation spatiale de la pièce. Si la vitesse du milieu de propagation est connue, une analyse des temps de vol des échos permet en effet d'établir une carte du milieu. \\
 
-Il est aussi possible de sommer un ensemble de Ascans de façon cohérente, permettant ainsi de reproduire une focalisation en tous points de la zone à inspecter. C'est que proposent la méthode Synthetic Aperture Focusing Technique \citep{doctor_saft} à partir des signaux recueillis par un mono-éléments. Ce procédé est généralisé à un ensemble de capteurs et d'émetteurs dans la méthode Total Focusing Method \citep{holmes_tfm}. 
+Il est aussi possible de sommer un ensemble de Ascans de façon cohérente, permettant ainsi de reproduire une focalisation en tous points de la zone à inspecter. C'est que propose la méthode Synthetic Aperture Focusing Technique \citep{doctor_saft} à partir des signaux recueillis par un mono-éléments. Ce procédé est généralisé à un ensemble de capteurs et d'émetteurs dans la méthode Total Focusing Method \citep{holmes_tfm}. 
 
 L'intensité $I$ de l'image obtenue au point de coordonnées $\bm{r}$ est alors donnée par la relation suivante : 
 
@@ -61,14 +61,14 @@ Des méthodes de localisation de sources dites "hautes résolutions" exploitent 
 
 La méthode de Décomposition de l'Opérateur de Retournement Temporel \citep{prada_dort} propose, de la même façon, d'interpréter l'opérateur de retournement temporel comme une matrice de covariance et de la décomposer. Cette dernière méthode est particulièrement adaptée aux milieux hétérogènes et/ou à géométrie complexe , puisqu'elle tire profit des réflexions multiples.  
 
-Tous comme les méthode de formation de voies classiques, il est nécessaire de connaître les propriétés élastiques du milieu de propagation pour pouvoir localiser précisément les réflecteurs.\\
+Tout comme les méthodes de formation de voies classiques, il est nécessaire de connaître les propriétés élastiques du milieu de propagation pour pouvoir localiser précisément les réflecteurs.\\
 
 %(billette de titane, par exemple https://www.institut-langevin.espci.fr/IMG/pdf/jasakerbrat-2002.pdf)
 %(plaque mince : ondes de lamb https://www.institut-langevin.espci.fr/IMG/pdf/JASAlamb-1998.pdf)
 
 \section{Résolution de problème d'optimisation}
 
-L'objectif de ces méthodes est de résoudre un problème inverse en minimisant une fonction coût traduisant l'écart entre le modèle calculé et le modèle vrai \citep{tarantola_book}. Le modèle est décrit par un nombre fini de paramètres $\bm{m}$ qui sont liés à des observables $\bm{d}_{obs}$ par l'intermédiaire de lois physiques $\bm{g}$. La résolution du problème inverse consiste donc à trouver les paramètres $\bm{m}$ optimaux à partir des données $\bm{d}_{obs}(\bm{m})$ (cf schéma de la figure~\ref{pb_inv}). 
+L'objectif de ces méthodes est de résoudre un problème inverse en minimisant une fonction coût traduisant l'écart entre le modèle calculé et le modèle vrai \citep{tarantola_book}. Le modèle est décrit par un nombre fini de paramètres $\bm{m}$ qui sont liés à des observables $\bm{d}_{obs}$ par l'intermédiaire de lois physiques $\bm{g}$. La résolution du problème inverse consiste donc à trouver les paramètres $\bm{m}$ optimaux à partir des données calculées $\bm{d}_{cal}(\bm{m})$ (cf schéma de la figure~\ref{pb_inv}). 
 
 \begin{figure}[!h]
 	\centering
@@ -96,7 +96,7 @@ Si le problème direct possède une solution unique, ce n'est pas le cas du prob
 Lorsque le nombre de paramètres est grand, le problème inverse ne peut pas être résolu par une recherche exhaustive dans l'espace des solutions. La recherche de solution peut donc se faire de manière semi-globale ou locale.\\
 
 \subsubsection{Les méthodes semi-globales}
-Les méthodes semi-globales consiste a parcourir l'espace des solutions avec une approche statistiques. Les plus connues sont les améliorations de celle de Monte Carlo comme le recuit simulé \citep{tarantola_book, sen} ou  la méthode de Monte-Carlo par chaînes de Markov \citep{zhang}, ainsi que les algorithmes génétiques. Elles permettent d'assurer une convergence avec peu d'\emph{a priori} sur le modèle initial.\\
+Les méthodes semi-globales consistent à parcourir l'espace des solutions avec une approche statistiques. Les plus connues sont les améliorations de celle de Monte Carlo comme le recuit simulé \citep{tarantola_book, sen} ou  la méthode de Monte-Carlo par chaînes de Markov \citep{zhang}, ainsi que les algorithmes génétiques. Elles permettent d'assurer une convergence avec peu d'\emph{a priori} sur le modèle initial.\\
 
 \subsubsection{Les méthodes locales}
 Lorsque que le modèle initial comporte suffisamment d'informations pour que le problème se situe proche du minimum global recherché, des méthodes d'optimisation moins coûteuses sont envisageables. Ces méthodes se basent sur l'estimation du gradient et du hessien de la fonction coût pour estimer sa plus forte pente et sa courbure.\\
@@ -108,10 +108,10 @@ Les méthodes full-Newton et Gauss-Newton utilisent le calcul du hessien (comple
 
 Enfin, le hessien peut également être estimé à partir des gradients des itérations précédentes, par la méthode quasi-Newton \citep{nocedal}, avec l'algorithme BFGS (Broyden, Fletcher, Goldfarb, Shanno), par exemple. Cet algorithme ayant un gros coût de stockage, il existe des versions allégées fournissant une estimation du hessien à partir du stockage de quelques itérations seulement (L-BFGS). 
 \subsection{Cartographie ou contour}
-Comme le souligne les auteurs du chapitre 1.4 de BruneauPotel, le problème inverse peut être résolu suivant deux approches : 
+Comme le souligne les auteurs du chapitre 1.4 de \cite{mat_ac}, le problème inverse peut être résolu suivant deux approches : 
 \begin{itemize}
 	\item un formalisme en intégrales de contour où les paramètres reconstruits sont ceux décrivant ces contours. Cela revient donc à déterminer la topologie d'un milieu. Le gradient, donné par la dérivée de la fonction coût par rapport à la topologie, indique donc directement la position d'un défaut à fort contraste. \cite{dominguez} et \cite{rodriguez} utilisent par exemple cette approche pour des applications en contrôle non destructif. Cette approche permet par exemple d'imager des défauts liés à une absence de matière (porosité, fissure, délaminage,\ldots) mais ne prend pas en compte les variations de contraste plus faible (anisotropie de la soudure, inclusion, corps étranger,\ldots).
-	\item une reconstruction pixelisées d'un ensemble de paramètres. C'est l'approche adoptée pour la FWI et qui est décrite au chapitre~\ref{fwi}.
+	\item une reconstruction pixelisée d'un ensemble de paramètres. C'est l'approche adoptée pour la FWI et qui est décrite au chapitre~\ref{fwi}.
 \end{itemize}
 
 
@@ -120,7 +120,7 @@ Comme le souligne les auteurs du chapitre 1.4 de BruneauPotel, le problème inve
 
 \section{Spécificités de l'imagerie de soudure}
 
-Nombre de ces méthodes sont peu adaptées à l'imagerie de soudure. En effet, comme le montrent les macrographies de la figure~\ref{soudure}, les passes multiples et la cristallisation inhomogène rendent la soudure fortement anisotrope \citep{chassignole}. Cette anisotropie varie d'unes soudure à une autre puisqu'elle dépend des paramètres de soudage. En conséquence, cette anisotropie engendre une courbure voire une division du faisceau ultrasonore. Les scans sont alors difficiles à analyser (cf figure \ref{echos}), les méthodes par retard et sommation ne permettent pas de relocaliser précisément un réflecteur et les images obtenues sont très sujettes aux artefacts provenant d'échos mal interprétés.
+Nombre de ces méthodes sont peu adaptées à l'imagerie de soudure. En effet, comme le montrent les macrographies de la figure~\ref{soudure}, les passes multiples et la cristallisation inhomogène rendent la soudure fortement anisotrope \citep{chassignole}. Cette anisotropie varie d'une soudure à une autre puisqu'elle dépend des paramètres de soudage. En conséquence, cette anisotropie engendre une courbure voire une division du faisceau ultrasonore. Les scans sont alors difficiles à analyser (cf figure \ref{echos}), les méthodes par retard et sommation ne permettent pas de relocaliser précisément un réflecteur et les images obtenues sont très sujettes aux artefacts provenant d'échos mal interprétés.
 
 \begin{figure}[!h]
 	\hspace{-2cm}
@@ -129,21 +129,21 @@ Nombre de ces méthodes sont peu adaptées à l'imagerie de soudure. En effet, c
     	\centering
         \includegraphics[height=3.5cm]{./img/soudure3.png}
         \vspace{0.03cm}
-        \caption{\centering  Définition des plans de coupe.}
+        \caption{ Définition des plans de coupe.}
     \end{subfigure}
     \hspace{1cm}
     \begin{subfigure}[c]{0.25\textwidth}
     	\centering
         \includegraphics[height=4cm]{./img/soudure1.png}
-        \caption{\centering  Coupe dans le plan (TV).}
+        \caption{ Coupe dans le plan (TV).}
     \end{subfigure}
         \hspace{1.5cm}
     \begin{subfigure}[c]{0.25\textwidth}
     	\centering
 		\includegraphics[height=4cm]{./img/soudure2.png}
-        \caption{\centering Coupe dans le plan (SV).}
+        \caption{Coupe dans le plan (SV).}
     \end{subfigure}
-    \caption{Macrographie d'une soudure industrielle en acier inoxydable en acier austénitique \citep{chassignole}. À gauche : coupe dans le plan $(x,z)$, à droite : coupe dans le plan $(x,y)$.\label{soudure}}
+    \caption{ Macrographie d'une soudure industrielle en acier austénitique \citep{chassignole}.\label{soudure}}
 \end{figure}
 
 \begin{figure}[!h]
@@ -151,7 +151,7 @@ Nombre de ces méthodes sont peu adaptées à l'imagerie de soudure. En effet, c
     \begin{subfigure}[c]{0.3\textwidth}
     	\centering
         \includegraphics[height=4cm]{img/chassignole_echos_config.png}
-        \caption{Configuration de mesure. En rouge : encoche de 15~mm de haut dans la soudure.}
+        \caption{ Configuration de mesure. En rouge : encoche de 15~mm de haut dans la soudure.}
     \end{subfigure}
     \hspace{1cm}
     \begin{subfigure}[c]{0.3\textwidth}
@@ -164,10 +164,6 @@ Nombre de ces méthodes sont peu adaptées à l'imagerie de soudure. En effet, c
 
 De manière générale, les méthodes nécessitant une bonne connaissance du matériau ne sont pas adaptées à l'imagerie de soudure ; tenter de reconstruire les paramètres élastiques de la soudure par une résolution de problème inverse semble être une approche plus appropriée.
 
-
-
-
-\todo[inline]{}
 
 %hohne\_2012 pour images SAFT
 

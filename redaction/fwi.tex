@@ -1,8 +1,9 @@
 \chapter{L'inversion de formes d'onde \label{fwi}}
+\linenumbers
 
 L'inversion de forme d'ondes (ou FWI, pour \emph{Full Waveform Inversion}) est une méthode quantitative d'imagerie développée dans un contexte géophysique permettant de reconstruire des paramètres élastiques par résolution d'un problème inverse posé dans les années 80 par \cite{lailly} et \cite{tarantola_84}. Par opposition à des inversions du type tomographie qui n'utilisent que partiellement les informations contenues dans les champs mesurés, l'inversion de formes d'onde utilise l'ensemble des données sans hypothèses. \\
 
-Le principe général est de calculer des données $\bm{d}_{cal}$ issues d'un modèle (résolution du problème direct)  puis de minimiser l'écart entre ces données et les données réelles $\bm{d}_{obs}$ issues de la mesure en modifiant les paramètres du modèle \citep{virieux_review}. Cette démarche est résumée en figure~\ref{schema_fwi} et l'ensemble des étapes est détaillé par la suite.
+Le principe général est de calculer des données $\bm{d}_{cal}$ issues d'un modèle (résolution du problème direct)  puis de minimiser l'écart entre ces données et les données réelles $\bm{d}_{obs}$ issues de la mesure en modifiant les paramètres du modèle \citep{virieux_review}. Cette démarche est résumée en figure~\ref{schema_fwi} et l'ensemble des étapes est détaillé par la suite.\\
 
 
 \begin{figure}[!h]
@@ -32,7 +33,7 @@ Le principe général est de calculer des données $\bm{d}_{cal}$ issues d'un mo
 		\path[->, thick,shorten <=2pt,shorten >=2pt] (fc) edge (m);
 		\path[->, thick,shorten <=2pt,shorten >=2pt] (m) edge (dir);		
 	\end{tikzpicture} 
-	\caption{Schéma du principe de la FWI.\label{schema_fwi}}
+	\caption{ Schéma du principe de la FWI.\label{schema_fwi}}
 \end{figure}
 
 %"inversion approach resembles prestack, reverse-time mi-
@@ -54,22 +55,22 @@ Dans le cas de l'imagerie par ultrason, résoudre le problème direct revient à
 
 
 
- Pour résoudre l'équation d'onde, parmi les approches qui nécessitent de faire le moins d'hypothèse sur le champ d'onde et sur le milieu de propagation figurent les différences finies et les éléments finis. Les différences finies sont les plus faciles à développer et à implémenter. Elles permettent de discrétiser les dérivées temporelles et spatiales par des différences d'ordre 2 \citep{virieux_86} ou d'ordre 4 \citep{levander}. Cependant, contrairement aux éléments finis, elles imposent l'utilisation de grilles régulières et ne permettent donc pas d'adapter localement le pas de grille à la géométrie ou à la complexité du milieu. \\ Les éléments finis se prêtent mieux aux maillages non-structurés. Leur solution est développée sur des basent de fonction (d'ordre élevé pour les éléments finis spectraux) et permettent de prendre simplement en compte les conditions limites.\\
+ Pour résoudre l'équation d'onde, parmi les approches qui nécessitent de faire le moins d'hypothèse sur le champ d'onde et sur le milieu de propagation figurent les différences finies et les éléments finis. Les différences finies sont les plus faciles à développer et à implémenter. Elles permettent de discrétiser les dérivées temporelles et spatiales par des différences d'ordre 2 \citep{virieux_86} ou d'ordre 4 \citep{levander}. Cependant, contrairement aux éléments finis, elles imposent l'utilisation de grilles régulières et ne permettent donc pas d'adapter localement le pas de grille à la géométrie ou à la complexité du milieu. \\ Les éléments finis se prêtent mieux aux maillages non-structurés. Leur solution est développée sur des bases de fonction (d'ordre élevé pour les éléments finis spectraux) et permettent de prendre simplement en compte les conditions limites.\\
  
-Deux types de conditions limites sont nécessaires pour le modèle de soudure à 2 dimensions (2D) : une condition parfaitement réfléchissante (Dirichlet) au niveau des surfaces de la plaque (en considérant une mesure dans l'air, le couplage fluide structure est négligeable) et une condition absorbante pour représenter la plaque loin de la zone d'étude (cf figure~\ref{BC}). Les conditions absorbantes sont modélisées à l'aide de \emph{Perfectly Matched Layers} (PML) qui simulent une forte atténuation dans une zone restreinte de manière anisotrope (seule la composante normale de l'onde est atténuée).
+Deux types de conditions limites sont nécessaires pour le modèle de soudure à 2 dimensions (2D) : une condition parfaitement réfléchissante (Dirichlet) au niveau des surfaces de la plaque (en considérant une mesure dans l'air, le couplage fluide structure est négligeable) et une condition absorbante pour représenter la plaque loin de la zone d'étude (cf figure~\ref{BC}). Les conditions absorbantes sont modélisées à l'aide de \emph{Perfectly Matched Layers} (PML) qui simulent une forte atténuation dans une zone restreinte de manière anisotrope (seule la composante normale de l'onde est atténuée).\\
 
 \begin{figure}[!h]
 	\centering
 	\begin{tikzpicture}
-		\node at(4.3,-1) {\includegraphics[scale=0.0365]{img/anisotrope2.png}};
+		\node at(5,-1) {\includegraphics[scale=0.0365]{img/anisotrope2.png}};
 		\draw (0,0) -- (9,0) ;
 		\draw (0,-2) -- (9,-2) ;
-		\filldraw [fill=gray, fill opacity=0.5, draw=none] (3.5,0) -- (4.5,-2) -- (5.5,0)  ;
-		\node (centre) at (4.3,-1) {};
+		%\filldraw [fill=gray, fill opacity=0.5, draw=none] (3.5,0) -- (4.5,-2) -- (5.5,0)  ;
+		\node (centre) at (5,-1) {};
 		\node (soudure) at (7,-2.5) {soudure};
 		\draw[<-,thick] (centre) -- (soudure);
-		\node (fs) [align=left] at (2.5,0.3) {Condition de Dirichlet}	;
-		\node (fs2)[align=left] at (2.5,-2.3) {Condition de Dirichlet};
+		\node (fs) [align=left] at (1.8,0.3) {Condition de Dirichlet}	;
+		\node (fs2)[align=left] at (1.8,-2.3) {Condition de Dirichlet};
 		\draw[dotted] (0,0) -- (0,-2);
 		\draw[dotted] (9,0) -- (9,-2);
 		\node (g) [align=center] at (-1.3,-1) {Conditions \\ absorbantes \\ (PML)};
@@ -82,9 +83,8 @@ Deux types de conditions limites sont nécessaires pour le modèle de soudure à
 	\caption{Représentation des deux types de conditions limites du modèle de soudure 2D.\label{BC}}
 \end{figure}
 
-\todo[inline]{Questions : qu'est-ce qui est fait en fréquence, qu'est qui est fait en temps (modèle, inversion) ?}
 
-Le problème peut-être résolu dans le domaine temporel ou dans le domaine fréquentiel \citep{vigh_2008}. Le domaine temporel laisse la possibilité d'effectuer une sélection des arrivées d'ondes par fenêtrage temporel mais présente une plus forte susceptibilité au phénomène de saut de phase (décrit dans le paragraphe ????).  De plus, la résolution par différences finies dans le domaine temporel impose un critère de stabilité Courant-Friedrichs-Lewy (CFL) qui peut-être contraignant, surtout en 3D. Dans le domaine fréquentiel, l'équation d'onde étant réduite à un système d'équations linéaires, il est possible d'utiliser des méthodes de résolution directe du type décomposition LU bien qu'en pratique, les performances de ces méthodes soient limitées pour des problèmes comportant un grand nombre d'inconnues.  Les principaux avantages d'une résolution du problème direct dans le domaine fréquentiel sont donc d'intégrer facilement les phénomènes d'atténuation et de permettre une sélection fine des fréquences d'intérêt. \\~\\
+Le problème peut-être résolu dans le domaine temporel ou dans le domaine fréquentiel \citep{vigh_2008}. Le domaine temporel laisse la possibilité d'effectuer une sélection des arrivées d'ondes par fenêtrage temporel mais présente une plus forte susceptibilité au phénomène de saut de phase (décrit dans le paragraphe~\ref{fwi:choix_modele}).  De plus, la résolution par différences finies dans le domaine temporel impose un critère de stabilité Courant-Friedrichs-Lewy (CFL) qui peut-être contraignant, surtout en 3D. Dans le domaine fréquentiel, l'équation d'onde étant réduite à un système d'équations linéaires, il est possible d'utiliser des méthodes de résolution directe du type décomposition LU bien qu'en pratique, les performances de ces méthodes soient limitées pour des problèmes comportant un grand nombre d'inconnues.  Les principaux avantages d'une résolution du problème direct dans le domaine fréquentiel sont donc d'intégrer facilement les phénomènes d'atténuation et de permettre une sélection fine des fréquences d'intérêt. 
 
 
 
@@ -114,7 +114,7 @@ La direction de descente est donc donnée par le gradient et la dérivée second
 
 \subsection{Calcul du gradient}
 
-D'après l'expression de la norme~\ref{norm}, sa dérivée par rapport aux paramètres $\bm{m}$ (le gradient) est donc : 
+D'après l'expression de la norme~\ref{norm}, sa dérivée par rapport aux paramètres $\bm{m}$ (le gradient) est : 
 \begin{equation}
 	 \frac{\dd C (\bm{m})}{\dd m_{i}} = -\tr{\left( \frac{\dd \bm{d}_{cal}(\bm{m}) }{\dd m_{i}} \right)} ( \bm{d}_{obs} - \bm{d}_{cal}(\bm{m})) \text{.}
 	 \label{eq_grad}
@@ -122,13 +122,13 @@ D'après l'expression de la norme~\ref{norm}, sa dérivée par rapport aux param
 
 
 
-Le problème direct décrit au paragraphe précédent~(\ref{pd_dir}) peut se mettre sous la forme :
+Dans le domaine temporel, le problème direct décrit au paragraphe précédent~(\ref{pd_dir}) peut se mettre sous la forme :
 \begin{equation}
-	\bm{A}(\bm{m},\bm{r},\xi)\bm{d}_{cal}(\bm{m},\bm{r},\xi)=\bm{s}(\bm{r},\xi)\text{,}
+	\bm{A}(\bm{m},\bm{r},t)\bm{d}_{cal}(\bm{m},\bm{r},t)=\bm{s}(\bm{r},t)\text{,}
 	\label{eq_pb_dir}
 \end{equation}
 
-où $\bm{r}$ est la variable d'espace et $\xi$ est le temps ou la fréquence. $\bm{A}$ est un opérateur correspondant à l'équation d'onde et $\bm{s}$ est le terme source. Notons que le vecteur de données $\bm{d}_{cal}$ a une longueur égale au nombre de récepteur et doit donc être étendu de façon a avoir la même longueur que l'espace du problème direct. La dérivée de l'équation~\ref{eq_pb_dir} par rapport à $\bm{m}$ s'écrit : 
+où $\bm{r}$ est la variable d'espace. $\bm{A}$ est un opérateur correspondant à l'équation d'onde et $\bm{s}$ est le terme source. Notons que le vecteur de données $\bm{d}_{cal}$ a une longueur égale au nombre de récepteur et doit donc être étendu de façon a avoir la même longueur que l'espace du problème direct. La dérivée de l'équation~\ref{eq_pb_dir} par rapport à $\bm{m}$ s'écrit : 
 \begin{equation}
 	\bm{A} \frac{\dd \bm{d}_{cal}(\bm{m})}{\dd m_{i}} + \frac{\dd A}{\dd m_{i}}\bm{d}_{cal}(\bm{m}) = \bm{0} \text{.}
 \end{equation}
@@ -141,17 +141,18 @@ On a donc :
 
 Finalement, en reportant cette expression dans l'équation~\ref{eq_grad}, on obtient l'expression du gradient : 
 \begin{equation}
-	 \frac{\dd C (\bm{m})}{\dd m_{i}} = \tr{\bm{d}_{cal}(\bm{m})}  \tr{\left( \frac{\dd \bm{A}}{\dd m_{i}}\right)} \tr{\bm{A}} (\bm{d}_{obs} - \bm{d}_{cal}(\bm{m}))^* = \tr{\bm{d}_{cal}(\bm{m})} \tr{\left( \frac{\dd \bm{A}}{\dd m_{i}}\right)} \lambda^*
+	 \frac{\dd C (\bm{m})}{\dd m_{i}} = \tr{\bm{d}_{cal}(\bm{m})}  \tr{\left( \frac{\dd \bm{A}}{\dd m_{i}}\right)} \tr{\bm{A}^{-1}} (\bm{d}_{obs} - \bm{d}_{cal}(\bm{m})) = \tr{\bm{d}_{cal}(\bm{m})} \tr{\left( \frac{\dd \bm{A}}{\dd m_{i}}\right)} \lambda
 \end{equation}
-\todo[inline]{conjugué de $\Delta d $ ? p.95 These Romain}
 
-Le champ $\lambda^*$ correspond donc à la rétropopagation des résidus $( \bm{d}_{obs} - \bm{d}_{cal}(\bm{m}))^*$. L'opérateur conjugué $^*$ indique une propagation en temps inverse, ce qui permet, comme en retournement temporel \citep{prada_2002}, une focalisation sur les éléments diffractant absents du modèle initial. Cette expression du gradient peut également être obtenu par le formalise de l'état adjoint \citep{plessix}.\\
-\todo[inline]{quid de dA/dm ? Diagramme de rayonnement ?}
 
-La substitution~\ref{sub} permet d'éviter le calcul de la matrice de sensibilité $\tr{\left( \frac{\dd \bm{d}_{cal}(\bm{m}) }{\dd m_{i}} \right)}$ . Le calcul du gradient découle donc du calcul de deux problèmes directs : 
+Le champ $\lambda$ correspond donc à la rétropopagation des résidus $( \bm{d}_{obs} - \bm{d}_{cal}(\bm{m}))$ qui, de manière comparable au retournement temporel \citep{prada_2002}, permet une focalisation sur les éléments diffractant absents du modèle initial. Cette expression du gradient peut également être obtenu par le formalise de l'état adjoint \citep{plessix}.\\
+Finalement, le gradient découle donc du calcul de deux problèmes directs : 
 \begin{equation*}
-	\bm{A}(\bm{m})\bm{d}_{cal}(\bm{m})=\bm{s} ~~~~~~~\text{et}~~~~~~~\bm{A}(\bm{m}) \lambda^*(\bm{m})=( \bm{d}_{obs} - \bm{d}_{cal}(\bm{m}))^*
+	\bm{A}(\bm{m})\bm{d}_{cal}(\bm{m})=\bm{s} ~~~~~~~\text{et}~~~~~~~\bm{A}(\bm{m}) \lambda(\bm{m})=( \bm{d}_{obs} - \bm{d}_{cal}(\bm{m})).
 \end{equation*}
+
+La substitution~\ref{sub} permet d'éviter le calcul de la matrice de sensibilité $\tr{\left( \frac{\dd \bm{d}_{cal}(\bm{m}) }{\dd m_{i}} \right)}$, en le remplaçant par le terme $\frac{\dd \bm{A}}{\dd m_{i}}$ qui est très creux et dont on connaît les solutions analytiques. Ce dernier terme agit comme une pondération du champ $\lambda$ liée au diagramme de rayonnement pour chaque paramètre.
+
 
 \subsection{Calcul du hessien}
 
@@ -163,25 +164,24 @@ Le problème étant mal-posé, il est nécessaire de limiter les artefacts haute
 
 \section{Problématiques liées à l'inversion}
 
-\subsection{Choix du modèle initial}
+\subsection{Choix du modèle initial \label{fwi:choix_modele}}
 Afin d'assurer une convergence vers le minimum global, il est nécessaire que le modèle initial se situe dans le bassin d'attraction de la fonctionnelle. Pour cela, il faut s'assurer que le modèle soit cinématiquement acceptable en levant l’ambiguïté sur la phase. Les données temporelles issues de ce modèle doivent donc avoir un retard de moins d'une demi-longueur d'onde par rapport aux données observées vraies. Si cette condition n'est pas respectée, l'algorithme ne permettra pas un bon réajustement des phases et convergera vers un minimum local (cf~\ref{ambig_phase}).
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[scale=0.8]{img/ambig_phase.png}
+	\includegraphics[height=6cm]{img/ambig_phase.png}
 	\caption{Illustration de l'ambiguïté sur la phase (extraite de \cite{brossier_these}). En haut, le déphasage est supérieur à $T/2$, les arches sont mal ajustées. En bas, le déphasage est inférieur à $T/2$, les phases sont bien ajustées. \label{ambig_phase}}
 \end{figure}
 
 À défaut de disposer à un modèle initial cinématiquement acceptable, il est possible de d'appliquer un ensemble de stratégies permettant de limiter ces artefacts : introduire progressivement les sources ou récepteurs les plus éloignés, rallonger progressivement les temps d'acquisition, et inverser prioritairement les données basses fréquences.
 
 
-En sismologie, une image issue de tomographie peut fournir un modèle initial assez précis. Dans cette étude, on considère que peu d'informations sont connues sur les paramètres élastiques de la soudure et le modèle initial choisi est uniforme (cf chapitre~\ref{applications}).
+En sismologie, une image issue de tomographie peut fournir un modèle initial assez précis. Dans cette étude, on considère que peu d'informations sont connues sur les paramètres élastiques de la soudure et le modèle initial choisi est uniforme (cf chapitre~\ref{applications}).\todo{Chapitre "Applications"}
 
 
 \subsection{Inversion multi-paramètres}
-\todo{Passer cette section dans les applications ?}
- 
-L'inversion multi-paramètres impliques plus de degrés de liberté dans le problème et rend donc l'inversion plus difficile. De plus, ces paramètres peuvent avoir des effets couplés ou non de différentes natures (cinématique ou dynamique) et de différentes amplitudes sur les données. Il faut donc choisir les paramètres à inverser de manière à ce qu'ils décrivent au mieux (de manière complémentaire) les propriétés du milieu à imager. Par exemple, les paramètres de vitesse influencent le champ en terme de temps de vol, tandis que la densité ou l'impédance jouent davantage sur l'amplitude du champ.\\
+L'inversion multi-paramètres implique plus de degrés de liberté dans le problème et rend donc l'inversion plus difficile. De plus, ces paramètres peuvent avoir des effets, couplés ou non, de différentes natures (cinématiques ou dynamiques) et de différentes amplitudes sur les données. Il faut donc choisir les paramètres à inverser de manière à ce qu'ils décrivent au mieux (de manière complémentaire) les propriétés du milieu à imager. Par exemple, les paramètres de vitesse influencent le champ en terme de temps de vol, tandis que la densité ou l'impédance jouent davantage sur l'amplitude du champ.\\
+
 
 À chaque ensemble de paramètres est associé un diagramme de rayonnement lié à l'expression de leur différentielle~\citep{forgues}. Ajouté à l'illumination restreinte  par le système d'acquisition, ce rayonnement peut filtrer le spectre en nombre d'onde du milieu reconstitué. Quelques exemples de diagrammes de rayonnement sont présentés en figure~\ref{rayonnement}, où $\kappa$ est le module d'incompressibilité, $\rho$ est la densité, $v_{p}$ est la vitesse des ondes longitudinales se propageant suivant $z$ et $I_{p}$ est l'impédance, tels que : 
 \begin{equation*}
@@ -190,8 +190,8 @@ L'inversion multi-paramètres impliques plus de degrés de liberté dans le prob
 Ces diagrammes correspondent au rayonnement des paramètres acoustiques dans un milieu isotrope. En milieu anisotrope, ces diagrammes sont plus difficiles à estimer analytiquement et nécessite une bonne connaissance de l'anisotropie du milieu.
 
 \begin{figure}[!h]
-	\centering
-	\includegraphics[scale=0.7]{img/rayonnement.png}
+	%\centering
+	\hspace{-1cm}\includegraphics[width=1.1\textwidth]{img/rayonnement.png}
 	\caption{Diagrammes de rayonnement pour différentes paramétrisations d'un milieu acoustique (amplitudes relatives) tracés d'après \cite{forgues}.\label{rayonnement}}
 \end{figure}
 %forgues : p.156
@@ -206,11 +206,11 @@ $$ s=\frac{\tr{\bm{d}_{cal}(\bm{m})^{*}}\bm{d}_{obs}^{*}}{\bm{d}_{cal}(\tr{\bm{m
 
 Dans cette section, on se propose de présenter un exemple d'application de la FWI à des données sismologiques dans le cadre de la prospection pétrolière. Dans ce domaine, les mesures étant rares et coûteuses, l'exploitation des données doit être efficace en terme de qualité d'image. C'est pourquoi une méthode comme la FWI y est adaptée, bien qu'elle nécessite beaucoup de ressource informatique.\\
 
-L'exemple choisi est issu d'une acquisition en fond ce mer du Nord (Ocean Bottom Cable) par hydrophones, au niveau de Valhall en Norvège. Ce dispositif est constitué de 120 km de câbles équipés de 2414 récepteurs, espacés de 50 m, couvrant 45 km$^{2}$ (cf figure~\ref{dispositif_valhall}).
+L'exemple choisi est issu d'une acquisition en fond ce mer du Nord (\emph{Ocean Bottom Cable}) par hydrophones, au niveau de Valhall en Norvège. Ce dispositif est constitué de 120 km de câbles équipés de 2414 récepteurs, espacés de 50 m, couvrant 45 km$^{2}$ (cf figure~\ref{dispositif_valhall}). 50000 points sources sot excités par canon à air.
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[height=6cm]{img/dispo_valhall.jpg}
+	\includegraphics[height=5cm]{img/dispo_valhall.jpg}
 	\caption{Schéma du dispositif d'acquisition pour les mesure sur Valhall. L'antenne de récepteur est représenté en rouge (l'espacement entre les câble est d'environ 300 m) et les positions des sources sont données par les points gris.\label{dispositif_valhall}}
 \end{figure}
 
@@ -220,7 +220,7 @@ Le résultat du post-traitement des données  est présenté en figure~\ref{valh
     \centering
     \begin{subfigure}[b]{0.4\textwidth}
         \includegraphics[width=\textwidth]{img/geophy1.png}
-        \caption{Par tomographie en réflexion. Coupe à 150 m de profondeur.}
+        \caption{ Par tomographie en réflexion. Coupe à 150 m de profondeur.}
         \label{}
     \end{subfigure}
     \hspace{0.5cm}
@@ -242,34 +242,29 @@ Le résultat du post-traitement des données  est présenté en figure~\ref{valh
     \end{subfigure}
     \caption{Images des vitesses dans le champ de Valhall.\label{valhall}}
 \end{figure} 
-    \todo[inline]{terminologie : field : champ ? / ray-based reflection tomography : tomographie en réflexion ?}
-    \todo[inline]{quelles types de sources ?}
-    
-La FWI permet de faire apparaître des galeries à 150 m de profondeur, invisible en tomographie. À 1050 m, les contours du nuage de gaz (en noir) sont également mieux défini par la FWI. Cette méthode d'imagerie eut donc constituer une aide précieuse pour l'analyse des sous-sols et pour la mise en place des stratégies de forage.\\
+   
+La FWI permet de faire apparaître des galeries à 150 m de profondeur, invisible en tomographie. À 1050 m, les contours du nuage de gaz (en noir) sont également mieux défini par la FWI. Cette méthode d'imagerie peut donc constituer une aide précieuse pour l'analyse des sous-sols et pour la mise en place des stratégies de forage.\\
 
 On comprend par la qualité d'image qu'offre la FWI qu'il est intéressant de varier ses applications. On peut citer l'utilisation des ondes électromagnétiques (données radar, par exemple ~\cite{lopes}) ou encore l'imagerie médicale. Dans ce domaine, \cite{oberai_03,oberai_04} reconstruit le module d'élasticité en équilibre statique d'une imitation de tissu humain.
 
+\todo[inline]{terminologie : Valhall field = champ de Valhall ? / ray-based reflection tomography = tomographie en réflexion ?}
+
 \section{Application au CND de soudure : les problématiques}
 
-Les problématiques du CND de soudure par FWI sont liées à quelques nouvelles spécificités, propre à cette application, qui sont : 
-\begin{itemize}
-	\item la forte anisotropie,
-	\item la forme guide d'onde du milieu qui offres de multiples réflexions,
-	\item le système d'acquisition limité par la géométrie de la pièce (cf figure~\ref{acqui_soudure}).
-\end{itemize}
+Les problématiques du CND de soudure par FWI sont liées à quelques spécificités, propres à cette application. Par exemple, il semble indispensable de prendre l'anisotropie en compte dans l'inversion, pour expliquer les déviations de faisceau.\\
+
+De plus, on peut citer la géométrie de la plaque offre de multiples réflexions. Ces réflexions devraient permettre un meilleur éclairage du milieu mais risquent d'apporter trop d'information en transmission dans les données. Une étude de l'influence de ces réflexions sur l'inversion est proposée dans le paragraphe~\ref{app:section_reso}. \todo{section "Étude de résolution" de la partie "Applications"}\\
+
+Enfin, la possibilité de disposer des capteurs de part et d'autre de la pièce devrait permettre de réaliser des inversions avec des signaux temporels plus courts et des angles de diffraction plus variés. Pour des acquisitions de surface en sismologie, seules les diffractions rayonnant vers la surface sont considérées (soit un angle de diffraction n'excédant pas 180°). Dans la cas de l'imagerie de soudure, il n'est pas non plus possible de tourner autour de l'obstacle, mais un éclairage bilatéral est possible, avec déplacement éventuel des transducteurs.
 
 
-
-Pour des acquisitions de surface en sismologie, seules les diffractions rayonnant vers la surface sont considérées (soit un angle de diffraction n'excédant pas 180°). Dans la cas de l'imagerie de soudure, il n'est pas non plus possible de tourner autour de l'obstacle, mais un éclairage bilatéral est possible, avec déplacement éventuel des transducteurs.
-
-
-
--guide d'onde
--acquisition en surface seulement, et problématique de la soudure bombée
--anisotropie (cf image soudure) forte, qui touche not. les ondes S.
--acquisition horizontale pas idéale pour inverser la vitesse horizontale (car petits offsets et peu de courbure de rayon comme en géophys) (discuter le choix des paramètres à inverser compte-tenu de la configuration)
--sources et récepteurs mobiles 
--geophysique, dispositif de surface, donc on ne considère que les diffractions rayonnant vers la surface (soit angle de diffraction de max 180°)(Forgues, pages 160). En CND, on illumine des deux côté
+%
+%-guide d'onde
+%-acquisition en surface seulement, et problématique de la soudure bombée
+%-anisotropie (cf image soudure) forte, qui touche not. les ondes S.
+%-acquisition horizontale pas idéale pour inverser la vitesse horizontale (car petits offsets et peu de courbure de rayon comme en géophys) (discuter le choix des paramètres à inverser compte-tenu de la configuration)
+%-sources et récepteurs mobiles 
+%-geophysique, dispositif de surface, donc on ne considère que les diffractions rayonnant vers la surface (soit angle de diffraction de max 180°)(Forgues, pages 160). En CND, on illumine des deux côté
 
 
 %\begin{figure}
@@ -278,18 +273,18 @@ Pour des acquisitions de surface en sismologie, seules les diffractions rayonnan
 %	\caption{Macrographie d'une soudure industrielle en acier inoxydable en acier austénitique \citep{chassignole}. À gauche : coupe dans le plan $(x,z)$, à droite : coupe dans le plan $(x,y)$.}
 %\end{figure}
 
-grains colonnaires
+%grains colonnaires
 
-p91 potel bruneau : données "d'aspect limité" : il n'es tpas possible de tourner autour de l'obstace. On colpense la perte d'info en réalisant les mesures sur plusieurs freq et possibilité de déplacer capteur.
-
-
+%p91 potel bruneau : données "d'aspect limité" : il n'es tpas possible de tourner autour de l'obstace. On colpense la perte d'info en réalisant les mesures sur plusieurs freq et possibilité de déplacer capteur.
 
 
-\subsection{sensibilité au bruit ?}
-
-\todo[inline]{Les impasses volontairement faites : \\
-	- détail de la discrétisation différences finies / détail des calculs FEM\\	
-}
 
 
-\todo[inline]{born approx}
+%\subsection{sensibilité au bruit ?}
+%
+%\todo[inline]{Les impasses volontairement faites : \\
+%	- détail de la discrétisation différences finies / détail des calculs FEM\\	
+%}
+%
+%
+%\todo[inline]{born approx}

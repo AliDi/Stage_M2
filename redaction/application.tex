@@ -1,5 +1,6 @@
 \chapter{Application de la FWI à des données simulées \label{applications}}
 
+
 p91 potel bruneau en francais: données "d'aspect limité" : il n'est pas possible de tourner autour de l'obstacle. On compense la perte d'info en réalisant les mesures sur plusieurs freq et possibilité de déplacer capteur.
 
 \section{Génération des données observées}
@@ -9,9 +10,8 @@ Le signal d'excitation choisi est une fonction de Ricker qui correspond à la d�
 \begin{equation}
 	s(t)=(1-(t-t_{0}f\pi))^2e^{-((t-t_{0})\pi f)^2}\text{.}
 \end{equation}
-\todo[inline]{Est-ce réaliste ?}
 
-Deux barrettes de 64 éléments sont utilisées en réception et en transmission. La fréquence centrale d'excitation est 2 MHz.
+Deux barrettes de 64 éléments sont utilisées en réception et en transmission. La fréquence centrale d'excitation est 2 MHz, ce qui équivaut à une longueur d'onde de 3 mm pour les ondes longitudinales en considérant que leur vitesse dans l'acier est de 6000 m/s.
 
 
 
@@ -21,33 +21,37 @@ Deux barrettes de 64 éléments sont utilisées en réception et en transmission
 %2 conditions sur la discrétisation : 
 %CFL et ..points par longueur d'onde pour les schéma d'ordre ... et... (en différences finies)
 
-\section{Analyse de résolution spatiale}
-En théorie, si l'éclairage est parfait, on est limité en résolution par lambda/2 (cf review virieux ou thèse de romain : "pouvoir de résolution du gradient"). En pratique, tout comme en ray-tomo (cf wiliamson cité dans review virieux), on est très limité par l'éclairage.
+\section{Étude de résolution spatiale \label{app:section_reso}}
+%En théorie, si l'éclairage est parfait, on est limité en résolution par lambda/2 (cf review virieux ou thèse de romain : "pouvoir de résolution du gradient"). En pratique, tout comme en ray-tomo (cf wiliamson cité dans review virieux), on est très limité par l'éclairage.
 
 Afin de déterminer le pouvoir de résolution du gradient, \cite{sirgue} réalise une analyse en onde plane comme suit. Considérons une onde plane incidente se propageant vers un point diffractant (suivant $\bm{s}$), donnant naissance en ce point à une autre onde plane se propageant suivant $\bm{r}$ (cf figure~\ref{}).\todo[inline]{pourquoi pas vers le récep ? i e Sirgue 2004 p.3 : pourquoi tous ces conjugués ?}
 
 \begin{equation}
 	k= \frac{\omega}{c} 2 \cos\left( \frac{\theta}{2}\right)
+	\label{app:nb_onde}
 \end{equation}
 
-La résolution est donc maximale quand $\theta=0$ et elle est alors de $\lambda/2$. La résolution s'améliore en hautes fréquences et pour des petits angles de diffraction. La géométrie du système d'acquisition a donc un impact direct sur la résolution spatiale. De plus, les surfaces libres simulent la présence de sources miroirs, d'autant plus nombreuses que le nombre de réflexions dans le guide est important. \\
+La résolution est donc maximale quand $\theta=0$ et elle est alors de $\lambda/2$. La résolution s'améliore en hautes fréquences et pour des petits angles de diffraction. La géométrie du système d'acquisition a donc un impact direct sur la résolution spatiale (figure~\ref{app:reso}). Les surfaces libres simulent la présence de sources images, d'autant plus nombreuses que le nombre de réflexions dans le guide est important. \\
+
+\begin{figure}[!h]
+	\centering
+	\includegraphics[height=3cm]{img/reso.png}
+	\caption{Illustration de l'impact de l'angle de diffraction sur la résolution spatiale du gradient.}
+\end{figure}
 
 
-supposés sans interaction
+Une illustration du lien entre la couverture en nombres d'onde du milieu et l'acquisition ainsi que les sources miroirs est réalisée ci-après. Pour différentes configurations, des transformées de Fourier spatiales du gradient sont réalisées au niveau de 18 points diffractant, le paramètre du modèle étant la vitesse verticale (cf figure~\ref{app:config_reso}).
 
-Une illustration du lien entre la couverture en nombres d'onde du milieu et l'acquisition ainsi que les sources miroirs est réalisée ci-après. Pour différentes configurations, des transformée de Fourier spatiales du gradient sont réalisées au niveau de dix-huit points diffractant, le paramètre du modèle étant la vitesse verticale (cf figure~\ref{app:config_reso}).
-
-\begin{figure}
+\begin{figure}[!h]
 	\centering
 	\includegraphics[height=5cm]{img/vp_scat.png}
 	\caption{Configuration pour l'étude de résolution. La vitesse dans les inclusions est de 3000 m/s et de 6000 m/s ailleurs. \label{app:config_reso}}
 \end{figure}
 
-Le gradient est calculé en présence des dix-huit inclusions, sous l'hypothèse pour chaque inclusion, que la présence des autres n'intervient pas.\todo[inline]{à reformuler}
 
 \subsection{Influence de la fréquence d'excitation}
 
-Dans un premier temps, le milieu est entouré de conditions absorbantes. Les figures~\ref{app:150k} et~\ref{app:2M} montre la couverture en nombre d'onde obtenue dans une configuration avec une barrette excitatrice et pour deux gammes de fréquence différentes. 
+Dans un premier temps, le milieu est entouré de conditions absorbantes. Les figures~\ref{app:150k} et~\ref{app:2M} montrent la couverture en nombre d'onde obtenue dans une configuration avec une barrette excitatrice et pour deux gammes de fréquence différentes. 
     
 \begin{figure}[!h]
     \centering
@@ -61,17 +65,50 @@ Dans un premier temps, le milieu est entouré de conditions absorbantes. Les fig
 	\end{subfigure}	
 	%\hspace{0.7cm}
 	\begin{subfigure}[b]{0.4\textwidth}
-		\includegraphics[width=1.5\textwidth]{img/ssfreesurf_2M}
+		\includegraphics[width=1.5\textwidth]{img/fft2d_nofreesurf_2MHz.png}
 		\caption{Excitation centrée à 2 MHz.}
 		\label{app:2M}
 	\end{subfigure}
 	\caption{Transformées de Fourier spatiales locales pour 2 gammes de fréquence d'excitation.}
 \end{figure}
 
-Dans le cas d'une excitation basse fréquence, le gradient est pauvre en hauts nombres d'onde. Inversement, l'excitation haute fréquence ne permet pas de reconstruire les bas nombres d'onde.\\
-La couverture en nombre d'onde est également très liée à l'acquisition. Elle est meilleure aux abords et en direction de la barrette. Les nombres d'onde verticaux seront globalement mieux reconstruits avec cette acquisition, tandis que la couverture en nombres d'ondes horizontaux est très faible.
+Comme l'indique l'expression de $k$~\ref{app:nb_onde}, pour une excitation basse fréquence, le gradient est pauvre en hauts nombres d'onde. Inversement, l'excitation haute fréquence ne permet pas de reconstruire les bas nombres d'onde.\\
+La couverture en nombre d'onde est également très liée à l'acquisition. Elle est meilleure aux abords et en direction de la barrette. Les nombres d'onde verticaux seront globalement mieux reconstruits avec cette acquisition qui favorise les petits angles de diffraction, tandis que la couverture en nombres d'ondes horizontaux est très faible.
 
 \subsection{Influence des surfaces libres}
+
+Deux surfaces libres sont maintenant ajoutées à la soudure de référence et au modèle initial. L'objectif est d'illustrer l'influence de la longueur du signal d'acquisition, soit le nombre de réflexions dans la plaques prises en compte dans les données. Les figures~\ref{app:1400pt} et~\ref{app:4200pt} montrent la couverture en nombres d'onde obtenue  pour 1 et 6 réflexions dans la plaque, pour une excitation à 2 MHz.
+
+\begin{figure}[!h]
+    \centering
+    \begin{subfigure}[b]{0.05\textwidth}
+ 		\hspace{-2cm}\includegraphics[width=0.5cm]{img/echelle_fft.png}\vspace{2.1cm}
+	\end{subfigure}
+    \begin{subfigure}[b]{0.4\textwidth}
+		\hspace{-3cm}\includegraphics[width=1.5\textwidth]{img/1400pt.png}
+		\caption{Pour une réflexion, soit un trajet de 1 aller-retour dans l'épaisseur de la plaque.}
+		\label{app:1400pt}
+	\end{subfigure}	
+	\hspace{0.7cm}
+	\begin{subfigure}[b]{0.4\textwidth}
+		\hspace{-0.7cm}\includegraphics[width=1.5\textwidth]{img/4200pt.png}
+		\caption{Pour 6 réflexions, soit un trajet de 3 aller-retours dans l'épaisseur de la plaque.}
+		\label{app:4200pt}
+	\end{subfigure}
+	\caption{Transformées de Fourier spatiales locales pour 2 longueurs d'acquisition. La fréquence d'excitation est 2 MHz.}
+\end{figure}
+
+Les surfaces libres sont assimilables à l'ajout de sources images qui favorisent une propagation verticale et de grands angles de diffraction (figure~\ref{app:reso_surf_libre}). Ainsi, les nombres d'onde horizontaux sont beaucoup mieux couverts avec, en contrepartie, une perte sur les nombres d'onde verticaux.  \\
+Lorsque 6 réflexions sont prises en compte, l'ensemble des nombres d'ondes purement horizontaux est reconstruit, mais la résolution verticale est presque nulle.
+\begin{figure}[!h]
+	\centering
+	\includegraphics[height=5cm]{img/reso_surf_libre.png}
+	\caption{Illustration de l'impact d'une surface libre sur la résolution spatiale du gradient.\label{app:reso_surf_libre}}
+\end{figure}
+
+
+
+Finalement, la prise en compte d'une réflexion dans les données d'acquisition permet d'améliorer la reconstruction des nombres d'onde horizontaux et donc la résolution latérale des défauts, tout en assurant une bonne couverture en nombres d'onde verticaux.
 
 
 \section{Gestion des non-linéarités}
@@ -134,15 +171,87 @@ Le paramètre $\epsilon$ est donc lié à la différence entre la composante ver
 
 Dans un premier temps, la méthode d'imagerie est appliquée à des milieux acoustiques, ce qui simplifie le problème et réduit les coût de calcul. Les études proposées dans cette section sont menées en approximation 2D : on suppose que le problème ne dépend pas du tout de la dimension données par $\bm{e}_{y}$.\\
 
-Le code utilisé est \emph{TOYxDacTIME} développé dans le cadre du projet \emph{Seiscope}\footnote{http://seiscope2.osug.fr}. Le problème direct y est résolu par différences finies, ce qui contraint 
+Le code utilisé est \emph{TOYxDacTIME} développé dans le cadre du projet \emph{Seiscope}\footnote{http://seiscope2.osug.fr}. Le problème direct y est résolu par différences finies d'ordre 2.
+
+%, ce qui impose deux contraintes de discrétisation : dispersion numérique, cfl 
 
 \subsection{Isotrope}
 
+Les données observées sont calculées à partir du milieu dont la densité et  la vitesse verticale sont présentés en figure~\ref{app:iso:model}. On considère une configuration d'acquisition favorable à un bon éclairage de la soudure : deux barrettes de 64 éléments (en émission et réception) sont situées de part et d'autre de la soudure. Cette configuration ne correspond pas à celle d'une inspection de soudure conventionnelle, puisque en pratique, le relief de la soudure ne permet pas de placer les barrettes directement dessus.\\
+
+\begin{figure}[!h]
+	\centering
+	\begin{subfigure}[b]{0.45\textwidth}
+		\includegraphics[width=\textwidth]{img/milieux_ps/vp_true.png}
+		\caption{Vitesse vraie.}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.45\textwidth}
+		\includegraphics[width=\textwidth]{img/milieux_ps/rho_true.png}
+		\caption{Masse volumique vraie.}
+	\end{subfigure}
+	\label{app:iso:model}
+	\caption{Milieux en vitesse et masse volumique pour la génération des données observées.}
+\end{figure}
+
+%Les modèles initiaux pour l'inversion sont uniformes, avec $v_{p}=6000$~m/s et $\rho=8000$~kg/m$^3$.
+
+\subsubsection{Inversions monoparamètres}
+
+
+Une première inversion est réalisée, en gardant $\rho$ à sa valeur initiale et en ne mettant à jour que le modèle de vitesse, pour 9 bandes de fréquences allant de 100 kHz à 3,4 MHz. La modèle initial de vitesse pour cette inversion est pris uniforme avec $v_{p}=6000$~m/s.\\
+
+Une seconde inversion monoparamètre est proposée pour une reconstruction de la masse volumique. Cependant, il est très difficile d'assurer une convergence en prenant des modèles initiaux de vitesse et de densité uniformes, car la seule mise à jour du modèle de densité ne peut expliquer la majeure partie des données en terme de cinématique. En effet, la figure~\ref{app:traces_rho} montre que la différence de densité au niveau des défauts n'impacte pas les temps de vol mais l'amplitude des diffractions sur les défauts. Il est donc nécessaire de disposer d'un modèle de vitesse suffisamment précis pour expliquer les différentes arrivées, puis la densité sera reconstruite par correction des amplitudes. La vitesse initiale utilisée pour cette inversion est issue d'une première inversion de la vitesse avec une régularisation forçant fortement le lissage de la reconstruction.\\
+
+Les modèles initiaux de vitesse et le résultats de ces inversions se trouvent figure~\ref{app:inv_mono}. 
+\todo[inline]{commenter résultat}
+
+\begin{figure}[!h]
+	\centering
+	\begin{subfigure}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=0.8\textwidth]{img/rho_sur_donnees/data_rho_uni.png}
+		\caption{Pour une densité uniforme.}
+	\end{subfigure}
+		\begin{subfigure}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=0.8\textwidth]{img/rho_sur_donnees/data_rho_vrai.png}
+		\caption{Pour $\rho=3000$~kg/m$^{3}$ dans les défauts.}
+	\end{subfigure}
+	\caption{Effet du contraste de densité sur les données observées (même échelle d'amplitude).\label{app:traces_rho}}	
+\end{figure}
+
+\begin{figure}[!h]
+	\centering
+	\begin{subfigure}[b]{0.45\textwidth}
+		\includegraphics[width=\textwidth]{img/mono_param/vp_uni.png}
+		\caption{Vitesse initiale pour l'inversion de la vitesse.}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.45\textwidth}
+		\includegraphics[width=\textwidth]{img/mono_param/vp_smooth.png}
+		\caption{Vitesse initiale pour l'inversion de la densité. }
+	\end{subfigure}
+	\begin{subfigure}[b]{0.45\textwidth}
+		\includegraphics[width=\textwidth]{img/mono_param/vp_mono.png}
+		\caption{Modèle de vitesse obtenu par FWI monoparamètre.}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.45\textwidth}
+		\includegraphics[width=\textwidth]{img/mono_param/rho_mono.png}
+		\caption{Modèle pour la densité obtenu par FWI monoparamètre. }
+	\end{subfigure}
+	\caption{\label{app:inv_mono} Modèle initiaux et résultat d'inversion monoparamètre de la vitesse et de la densité.}
+\end{figure}
 
 
 
-monoparamètre : vp
-multi paramètre ?
+
+
+\subsubsection{multiparamètre}
+
+
+
+multi paramètre  : c'est dur de savoir ce qui doit être interprété en vitesse et ce qui doit l'être en densité. Le risque est donc qu'une part de l'information soit attribuée à un paramètre alors qu'elle est induite par un autre paramètre. Il vaut donc mieux inverser la paramètre dominant dans les données : ici c'est vp, par son influence sur la cinématique et parce que rho ne change pas beaucoup dans la soudure et est plutôt HF (que au niveau des défauts). La stratégie est donc d'inverser la vitesse seule dans un premier temps pour construire un bon modèle de vitesse qui explique les arrivées puis inverser vp+rho (ou que rho ?) (au moment où on voit le défaut arriver ?)
+stratégie : inverser vp avec fort smoothing pour n'expliquer que la cinématique en premier.
+le but : voir si on améliore vp et info complémentaire pour la caractérisation donnée par rho ?
 
 
 
