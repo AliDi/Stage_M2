@@ -12,13 +12,13 @@ vp=6000;			%vitesse des ondes p en m/s
 vs=3200;			%vitesse des ondes T
 l=vp/f;				%longueur d'onde en m
 
-h=vp/(2*2e6)/6;				%pas de discrétisation : en fdtd o(4), respecter 5 pts par longueur d'onde
+h=vp/(2*2e6)/6				%pas de discrétisation : en fdtd o(4), respecter 5 pts par longueur d'onde
 
-nz=floor(0.05/h) %floor(10*l /h)				%nb de points en z
+nz=floor(0.10/h) %floor(10*l /h)				%nb de points en z
 nx=floor(0.05/h) %floor(50*l/2 /h)	
-ny=floor(0.05/h)			%nb de points en x
+ny=floor(0.01/h)			%nb de points en x
 
-dt=4e-9/R;
+dt=8e-9/R;
 
 
 
