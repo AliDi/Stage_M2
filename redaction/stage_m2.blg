@@ -1,7 +1,7 @@
 This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: stage_m2.aux
-A level-1 auxiliary file: application.aux
+A level-1 auxiliary file: imagerie.aux
 The style file: plainnat.bst
 Database file #1: biblio.bib
 I was expecting a `,' or a `}'---line 200 of file biblio.bib
@@ -12,49 +12,47 @@ You're missing a field part---line 374 of file biblio.bib
  :    eid = 
  :          ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 443 of file biblio.bib
- : @article{ogilvy
- :                ,
-I'm skipping whatever remains of this entry
-You've used 6 entries,
+Warning--there's a number but no volume in doctor_saft
+Warning--there's a number but no volume in holmes_tfm
+You've used 24 entries,
             2773 wiz_defined-function locations,
-            632 strings with 5629 characters,
-and the built_in function-call counts, 2409 in all, are:
-= -- 227
-> -- 71
-< -- 6
-+ -- 27
-- -- 21
-* -- 174
-:= -- 375
-add.period$ -- 19
-call.type$ -- 6
-change.case$ -- 23
-chr.to.int$ -- 6
-cite$ -- 12
-duplicate$ -- 116
-empty$ -- 234
-format.name$ -- 29
-if$ -- 500
-int.to.chr$ -- 1
+            739 strings with 8402 characters,
+and the built_in function-call counts, 10604 in all, are:
+= -- 982
+> -- 469
+< -- 17
++ -- 166
+- -- 141
+* -- 849
+:= -- 1631
+add.period$ -- 74
+call.type$ -- 24
+change.case$ -- 112
+chr.to.int$ -- 23
+cite$ -- 50
+duplicate$ -- 484
+empty$ -- 940
+format.name$ -- 171
+if$ -- 2199
+int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 6
-newline$ -- 39
-num.names$ -- 24
-pop$ -- 46
+missing$ -- 25
+newline$ -- 130
+num.names$ -- 96
+pop$ -- 222
 preamble$ -- 1
-purify$ -- 19
+purify$ -- 95
 quote$ -- 0
-skip$ -- 80
+skip$ -- 341
 stack$ -- 0
-substring$ -- 168
-swap$ -- 6
-text.length$ -- 0
+substring$ -- 653
+swap$ -- 35
+text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 61
-warning$ -- 0
-while$ -- 25
+type$ -- 244
+warning$ -- 2
+while$ -- 105
 width$ -- 0
-write$ -- 86
-(There were 3 error messages)
+write$ -- 319
+(There were 2 error messages)

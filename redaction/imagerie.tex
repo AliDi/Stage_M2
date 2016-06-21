@@ -1,23 +1,29 @@
 \chapter{Techniques d'imagerie par ultrasons}
 \linenumbers
 
- L'objectif de ce chapitre est de présenter les principales méthodes multi-éléments utilisées pour l'imagerie ultrasonore. \\
+ L'objectif de ce chapitre est de présenter les principales méthodes multi-éléments utilisées pour l'imagerie ultrasonore.\todo{à développer en fonction de l'intro} \\
 
-Les transducteurs multi-éléments sont d'abord utilisés dans les années 70 pour l'imagerie médicale et sont aujourd'hui répandus en contrôle de pièces industriels. Les éléments étant pilotables indépendamment, il est possible de leur appliquer une loi de retard permettant d'orienter le front d'onde ou de focaliser le faisceau excitateur. Cela permet notamment d'améliorer le rapport signal sur bruit et peut représenter un gain de temps car le balayage d'une pièce à inspecter peut être réalisé sans déplacement du transducteur.
+Les transducteurs multi-éléments sont d'abord utilisés dans les années 70 pour l'imagerie médicale et sont aujourd'hui répandus en contrôle de pièces industriels.\\
 
-En réception, ces transducteurs permettent de réaliser de la formation de voie dont on distingue trois principaux types de méthodes : 
+Chaque élément piézoélectrique d'un transducteur peut être utilisé en émission puis en réception. Ces éléments étant pilotables indépendamment, il est possible d'appliquer une loi de retard permettant d'orienter le front d'onde source ou de focaliser le faisceau excitateur. Cela permet notamment d'améliorer le rapport signal sur bruit et peut représenter un gain de temps car le balayage d'une pièce à inspecter peut être réalisé sans déplacement du transducteur, par simple focalisation du faisceau.
+
+En réception de l'onde sonore, ces transducteurs permettent de réaliser de la formation de voie, dont on distingue trois principaux types de méthodes : 
 \begin{itemize}
-	\item les méthodes par retard et sommation,
+	\item les méthodes par retard et sommation des signaux,
 	\item les méthodes dites "haute résolution",
-	\item les méthodes basées sur la résolution de problème d'optimisation.
+	\item les méthodes basées sur un problème d'optimisation.
 \end{itemize} 
+
+On décrit ici le principe de ces méthodes après avoir présenté les différents modes de représentation des données temporelles.
+
+
 
 
 \section{Représentation des données temporelles}
 
-Lorsque l'onde est perturbée par un changement des propriétés élastiques de son support, il est possible de l'observer directement sur les signaux temporels mesurés. Pour cela, différents modes de représentation sont utilisés. Les échographies peuvent être représentées en un point d'observation (Ascan), sur une ligne de balayage (Bscan) équivalent à une coupe transversale de la pièce,  sur un plan de balayage (Cscan et Dscan) donnant un vue de surface et ne permettant pas une localisation en profondeur d'un réflecteur (cf figure~\ref{scan}).\\
+Lorsque l'onde est perturbée par un changement des propriétés élastiques de son support, il est possible de l'observer directement sur les signaux temporels mesurés. Pour cela, différents modes de représentation sont utilisés. Les échographies peuvent être représentées en un point d'observation (Ascan), sur une ligne de balayage (Bscan) équivalent à une coupe transversale de la pièce,  sur un plan de balayage (Cscan) donnant un vue de surface et ne permettant pas une localisation en profondeur d'un réflecteur. La figure~\ref{scan} (extraite de \cite{bannouf}) montre le type d'images obtenues d'une pièce perforée, pour ces trois modes de représentation des données. \\
  
-Ce type d'analyse peut être réalisé avec des transducteurs mono-éléments. L'obtention d'une image 2D nécessite alors un balayage sur l'ensemble d'une surface de la pièce à contrôler. 
+Ce type d'analyse peut être réalisé avec des transducteurs mono-éléments. L'obtention d'une image 2D nécessite alors un balayage sur l'ensemble d'une surface de la pièce à contrôler. \\
 
 %\begin{figure}[!h]
 %	\includegraphics[scale=0.7]{img/scan.png}
@@ -27,25 +33,29 @@ Ce type d'analyse peut être réalisé avec des transducteurs mono-éléments. L
 \begin{figure}
 	\centering
 	\includegraphics[scale=0.7]{img/scan2.png}
-	\caption{\label{scan} Schéma des différents modes de représentation des signaux temporels (extrait de \cite{bannouf}).}
+	\caption{\label{scan} Schéma des différents modes de représentation des signaux temporels (extrait de \cite{bannouf}). Le Ascan représente l'amplitude du signal en fonction du temps (en bas à gauche). L'abscisse du Bscan (en bas à droite) donne le balayage, ses ordonnée est le temps et l'échelle de couleurs donne l'amplitude du signal temporel. En haut à droite, le Cscan a pour abscisse l'axe de balayage et en ordonnée les incréments, tandis que l'échelle de couleurs donne l'amplitude du maximum de chaque signal temporel.}
 \end{figure}
 
-En revanche, le Sscan ne peut être réalisé qu'avec des transducteurs multi-éléments. Il correspond a un ensemble de Ascans réalisés sans déplacement du transducteur mais en appliquant une loi de retard aux éléments permettant de réaliser un balayage du point focal. Le Sscan permet donc d'imager des pièces partiellement accessible, et augmente la probabilité de repérer un défaut en offrant plusieurs angles d'observation.\\
+Il existe une autre représentation, le Sscan, qui ne peut être réalisé qu'avec des transducteurs multi-éléments : il correspond a un ensemble de Ascans réalisés sans déplacement du transducteur mais en appliquant une loi de retard aux éléments permettant de réaliser un balayage du point focal. Le Sscan permet donc d'imager des pièces partiellement accessible, et augmente la probabilité de repérer un défaut en offrant plusieurs angles d'auscultation.\\
 
-Cependant, la localisation dans la pièce des réflecteurs à l'origine des différents échos visibles sur les signaux temporels mesurés n'est possible que si la vitesse de propagation des ondes est connue. Les Bsans dits "vrais" sont des Bscans sur lesquels des corrections liées à la vitesse ou à l'angle d'incidence sont appliqués.
+Cependant, la localisation dans la pièce des réflecteurs à l'origine des différents échos visibles sur les signaux temporels mesurés n'est possible que si la vitesse de propagation des ondes est connue. Les Bsans dits "vrais" sont des Bscans sur lesquels des corrections des temps de vol liées à la vitesse ou à l'angle d'incidence du faisceau sont appliquées.
 
 
-\section{Méthodes par retard et sommation}
-Ces données temporelles peuvent aussi être post-traitées de manière à obtenir une représentation spatiale de la pièce. Si la vitesse du milieu de propagation est connue, une analyse des temps de vol des échos permet en effet d'établir une carte du milieu. \\
+\section{Méthodes par retard et sommation des signaux}
+Les données temporelles acquises peuvent aussi être traitées de manière à obtenir une représentation spatiale des propriétés de la pièce. Si la vitesse du milieu de propagation est connue, une analyse des temps de vol des échos permet en effet d'établir une carte des vitesses de propagation du milieu. \\
 
-Il est aussi possible de sommer un ensemble de Ascans de façon cohérente, permettant ainsi de reproduire une focalisation en tous points de la zone à inspecter. C'est que propose la méthode Synthetic Aperture Focusing Technique \citep{doctor_saft} à partir des signaux recueillis par un mono-éléments. Ce procédé est généralisé à un ensemble de capteurs et d'émetteurs dans la méthode Total Focusing Method \citep{holmes_tfm}. 
+Il est aussi possible de sommer un ensemble de Ascans de façon cohérente, permettant ainsi de reproduire une focalisation en tous points de la zone à inspecter. C'est ce que propose la méthode Synthetic Aperture Focusing Technique \citep{doctor_saft} à partir des signaux recueillis par un mono-élément. Ce procédé est généralisé à un ensemble de capteurs et d'émetteurs dans la méthode Total Focusing Method \citep{holmes_tfm}. 
 
 L'intensité $I$ de l'image obtenue au point de coordonnées $\bm{r}$ est alors donnée par la relation suivante : 
 
-\begin{equation*}
-	I(\bm{r})= \displaystyle\sum_{r} \displaystyle\sum_{t} s_{r,t}\left( \frac{|\bm{r} - \bm{r}_r| + |\bm{r} - \bm{r}_t|}{c}\right) \text{,}
-\end{equation*}
-où $\bm{r}_r$ et $\bm{r}_t$ sont les positions des récepteurs et des émetteurs, $s_{r,t}$ sont les signaux temporels pour chaque couple émetteur-récepteur et $c$ est la vitesse de l'onde dans le milieu de propagation.
+\begin{equation}
+	I(\bm{r})= \displaystyle\sum_{r} \displaystyle\sum_{e} s_{r,e}\left( T_{\bm{r}\bm{r}_{r}+T_{\bm{r}\bm{r}_{e}}} \right) \text{,}	
+\end{equation}
+avec $s_{r,e}$ les signaux temporels pour chaque couple émetteur-récepteur. $T_{\bm{r}\bm{r}_{r}}$ et $T_{\bm{r}\bm{r}_{e}}$ sont les temps de vol pour aller du point d'observation $\bm{r}$ au point de réception $\bm{r}_{r} $ et d'émission $\bm{r}_{e}$. Dans le cas d'un milieu de vitesse homogène $c$, cette expression peut donc se réduire à :
+
+\begin{equation}
+	I(\bm{r})= \displaystyle\sum_{r} \displaystyle\sum_{e} s_{r,e}\left( \frac{|\bm{r} - \bm{r}_r| + |\bm{r} - \bm{r}_t|}{c}\right) \text{,}
+\end{equation}
 
 Cette focalisation permet donc de couvrir l'ensemble du volume de la pièce car tous les angles peuvent être balayés, indépendamment de l'ouverture du capteur, ce qui permet une meilleure résolution que celle obtenue avec des Bscans.\\
 
@@ -57,18 +67,22 @@ Cette focalisation permet donc de couvrir l'ensemble du volume de la pièce car 
 \section{Méthodes hautes résolution}
 
 
-Des méthodes de localisation de sources dites "hautes résolutions" exploitent l'ensemble des covariances des signaux temporels. Les méthodes telles que MUltiple Signal Classification \citep{schmidt} et Capon \citep{capon} proposent une décomposition en valeurs propres de cette matrice de covariance afin d'en extraire deux sous-espaces bruit et signal, diminuant ainsi la contribution énergétique du bruit. \\
+Des méthodes de localisation de sources dites "hautes résolutions" exploitent l'ensemble des covariances des signaux temporels. Les méthodes telles que MUltiple Signal Classification \citep{schmidt} et Capon \citep{capon} proposent une décomposition en valeurs propres de cette matrice de covariance afin d'en extraire deux sous-espaces distincts, l'un associé au signal et l'autre au bruit, diminuant ainsi la contribution énergétique du bruit. \\
 
-La méthode de Décomposition de l'Opérateur de Retournement Temporel \citep{prada_dort} propose, de la même façon, d'interpréter l'opérateur de retournement temporel comme une matrice de covariance et de la décomposer. Cette dernière méthode est particulièrement adaptée aux milieux hétérogènes et/ou à géométrie complexe , puisqu'elle tire profit des réflexions multiples.  
+La méthode de Décomposition de l'Opérateur de Retournement Temporel \citep{prada_dort} propose, de la même façon, d'interpréter l'opérateur de retournement temporel comme une matrice de covariance et de la décomposer. Cette dernière méthode est particulièrement adaptée aux milieux hétérogènes et/ou à géométrie complexe , car sa résolution est améliorée si le signal mesuré a été mulitplement réfléchi. En effet, le retournement temporel permet une focalisation de l'énergie au niveau d'un point source et cette focalisation est d'autant plus précise que le nombre de sources images est important. \\
+  
 
-Tout comme les méthodes de formation de voies classiques, il est nécessaire de connaître les propriétés élastiques du milieu de propagation pour pouvoir localiser précisément les réflecteurs.\\
+Tout comme pour les méthodes de formation de voies classiques, il est nécessaire de connaître les propriétés élastiques du milieu de propagation pour pouvoir localiser précisément les réflecteurs.\\
 
 %(billette de titane, par exemple https://www.institut-langevin.espci.fr/IMG/pdf/jasakerbrat-2002.pdf)
 %(plaque mince : ondes de lamb https://www.institut-langevin.espci.fr/IMG/pdf/JASAlamb-1998.pdf)
 
-\section{Résolution de problème d'optimisation}
+\section{Problème d'optimisation}
 
-L'objectif de ces méthodes est de résoudre un problème inverse en minimisant une fonction coût traduisant l'écart entre le modèle calculé et le modèle vrai \citep{tarantola_book}. Le modèle est décrit par un nombre fini de paramètres $\bm{m}$ qui sont liés à des observables $\bm{d}_{obs}$ par l'intermédiaire de lois physiques $\bm{g}$. La résolution du problème inverse consiste donc à trouver les paramètres $\bm{m}$ optimaux à partir des données calculées $\bm{d}_{cal}(\bm{m})$ (cf schéma de la figure~\ref{pb_inv}). 
+L'objectif de ces méthodes est de résoudre un problème inverse en minimisant une fonction coût traduisant l'écart entre les données observées issu du milieu recherché et les données calculées à partir d'un modèle courant \citep{tarantola_book}. Le milieu courant correspond à une évolution d'un modèle initial vers un milieu que l'on identifie comme final suivant le critère de convergence de l'optimisation.\\
+
+
+Le modèle est décrit par un nombre fini de paramètres $\bm{m}$ qui sont liés à des observables $\bm{d}_{obs}$ par l'intermédiaire de lois physiques $\bm{g}$. La résolution du problème inverse consiste donc à trouver les paramètres $\bm{m}$ qui interprètent le mieux les données observées par les données calculées $\bm{d}_{cal}(\bm{m})$ (cf schéma de la figure~\ref{pb_inv}). 
 
 \begin{figure}[!h]
 	\centering
@@ -82,10 +96,13 @@ L'objectif de ces méthodes est de résoudre un problème inverse en minimisant 
 		\path[->, thick,shorten <=2pt,shorten >=2pt] (fc) edge (m);
 		\path[->, thick,shorten <=2pt,shorten >=2pt] (m) edge (dir);
 	\end{tikzpicture} 
-	\caption{\label{pb_inv} Schéma de résolution d'un problème d'optimisation.}
+	\caption{\label{pb_inv} Schéma de résolution d'un problème d'optimisation. Le modèle courant décrit par les paramètres $\bm{m}$ est mis à jour tant que la fonction de coût n'a pas atteint le minimum donné par le critère de convergence.}
 \end{figure}
 
-Ces problèmes sont, en général, non-linéaires, car les observables ne dépendent pas linéairement des paramètres du modèle. De plus, si le nombre de paramètres est grand devant le nombre d'observables, ils sont également mal posés.\\
+Ces problèmes sont, en général, non-linéaires, car les observables ne dépendent pas linéairement des paramètres du modèle, ce qu l'on note $\bm{d}_{obs}=\bm{g}(\bm{m})$. De plus, ce problème est mal posé si ce système d'équation n'est pas de rang plein et la solution n'est alors pas unique
+
+
+ si le nombre de paramètres est grand devant le nombre d'observables, ils sont également mal posés.\\
 
 \subsection{Résolution du problème direct}
 

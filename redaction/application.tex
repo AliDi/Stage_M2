@@ -11,7 +11,7 @@ Le signal d'excitation choisi est une fonction de Ricker qui correspond à la d�
 	s(t)=(1-(t-t_{0}f\pi))^2e^{-((t-t_{0})\pi f)^2}\text{.}
 \end{equation}
 
-Deux barrettes de 64 éléments sont utilisées en réception et en transmission. La fréquence centrale d'excitation est 2 MHz, ce qui équivaut à une longueur d'onde de 3 mm pour les ondes longitudinales en considérant que leur vitesse dans l'acier est de 6000 m/s.
+Deux barrettes de 64 éléments sont utilisées en réception et en transmission. La fréquence centrale d'excitation est 2 MHz, ce qui équivaut à une longueur d'onde de 3 mm pour les ondes longitudinales en considérant que leur vitesse $v_{p}$ dans l'acier est de 6000 m/s et 1,6 mm pour les ondes de cisaillement dont la vitesse $v_{s}$ est supposée proche de 3200 m/s par la suite.
 
 
 
@@ -24,7 +24,20 @@ Deux barrettes de 64 éléments sont utilisées en réception et en transmission
 \section{Étude de résolution spatiale \label{app:section_reso}}
 %En théorie, si l'éclairage est parfait, on est limité en résolution par lambda/2 (cf review virieux ou thèse de romain : "pouvoir de résolution du gradient"). En pratique, tout comme en ray-tomo (cf wiliamson cité dans review virieux), on est très limité par l'éclairage.
 
-Afin de déterminer le pouvoir de résolution du gradient, \cite{sirgue} réalise une analyse en onde plane comme suit. Considérons une onde plane incidente se propageant vers un point diffractant (suivant $\bm{s}$), donnant naissance en ce point à une autre onde plane se propageant suivant $\bm{r}$ (cf figure~\ref{}).\todo[inline]{pourquoi pas vers le récep ? i e Sirgue 2004 p.3 : pourquoi tous ces conjugués ?}
+Afin de déterminer le pouvoir de résolution du gradient, \cite{sirgue} réalisent une analyse en ondes planes comme suit. Considérons une onde plane incidente se propageant vers un point diffractant (suivant $\bm{s}$), donnant naissance en ce point à une autre onde plane se propageant suivant vers un récepteur. Dans l'expression du gradient CITER, on a alors : 
+\begin{align}
+	\bm{d}_{cal} &= \Re{(e^{jk_{0}\bm{s}.\bm{x}})},\\
+	\lambda &= \Re{(\bm{\Delta d} e^{jk_{0}\bm{r}.\bm{x}})},\\
+	\frac{\dd \bm{A}}{\dd m} &= -\omega^2,
+\end{align}
+avec $ \bm{\Delta d}$ les résidus $(\bm{d}_{obs}-\bm{d}_{cal}$) et où le paramètre $m$ est $\nicefrac{1}{c^2(\bm{x})}$.
+
+
+
+
+ (cf figure~\ref{}).\todo[inline]{pourquoi pas vers le récep ? i e Sirgue 2004 p.3 : pourquoi tous ces conjugués ?}
+
+param : 1/c2(r)
 
 \begin{equation}
 	k= \frac{\omega}{c} 2 \cos\left( \frac{\theta}{2}\right)
@@ -253,6 +266,27 @@ multi paramètre  : c'est dur de savoir ce qui doit être interprété en vitess
 stratégie : inverser vp avec fort smoothing pour n'expliquer que la cinématique en premier.
 le but : voir si on améliore vp et info complémentaire pour la caractérisation donnée par rho ?
 
+
+\begin{figure}[!h]
+	\centering
+	\begin{subfigure}[b]{0.45\textwidth}
+		\includegraphics[width=\textwidth]{img/multi_param/vp_smooth.png}
+		\caption{}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.45\textwidth}
+		\includegraphics[width=\textwidth]{img/multi_param/rho_init.png}
+		\caption{}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.45\textwidth}
+		\includegraphics[width=\textwidth]{img/multi_param/vp_multi_6000k.png}
+		\caption{}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.45\textwidth}
+		\includegraphics[width=\textwidth]{img/multi_param/rho_6000k.png}
+		\caption{}
+	\end{subfigure}
+	\caption{\label{app:inv_multi} }
+\end{figure}
 
 
 \subsection{VTI}
