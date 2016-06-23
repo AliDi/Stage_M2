@@ -64,7 +64,7 @@ Cette focalisation permet donc de couvrir l'ensemble du volume de la pièce car 
 
 
 
-\section{Méthodes hautes résolution}
+\section{Méthodes haute résolution}
 
 
 Des méthodes de localisation de sources dites "hautes résolutions" exploitent l'ensemble des covariances des signaux temporels. Les méthodes telles que MUltiple Signal Classification \citep{schmidt} et Capon \citep{capon} proposent une décomposition en valeurs propres de cette matrice de covariance afin d'en extraire deux sous-espaces distincts, l'un associé au signal et l'autre au bruit, diminuant ainsi la contribution énergétique du bruit. \\
@@ -99,36 +99,33 @@ Le modèle est décrit par un nombre fini de paramètres $\bm{m}$ qui sont liés
 	\caption{\label{pb_inv} Schéma de résolution d'un problème d'optimisation. Le modèle courant décrit par les paramètres $\bm{m}$ est mis à jour tant que la fonction de coût n'a pas atteint le minimum donné par le critère de convergence.}
 \end{figure}
 
-Ces problèmes sont, en général, non-linéaires, car les observables ne dépendent pas linéairement des paramètres du modèle, ce qu l'on note $\bm{d}_{obs}=\bm{g}(\bm{m})$. De plus, ce problème est mal posé si ce système d'équation n'est pas de rang plein et la solution n'est alors pas unique
-
-
- si le nombre de paramètres est grand devant le nombre d'observables, ils sont également mal posés.\\
+Ces problèmes sont, en général, non-linéaires, car les observables ne dépendent pas linéairement des paramètres du modèle, ce que l'on note $\bm{d}_{obs}=\bm{g}(\bm{m})$. De plus, le problème est mal posé si ce système d'équation n'est pas de rang plein et la solution n'est alors pas unique.
 
 \subsection{Résolution du problème direct}
 
-Le problème direct peut être résolu soit par des méthodes analytiques (représentation intégrale, méthodes modales,\ldots) soit par des méthodes numériques. Parmi les méthodes numériques les plus usitées figurent : les méthodes de différences finies (\citealp{virieux_86}, à l'ordre 2 et \citealp{levander}, à l'ordre 4), les méthodes des éléments finis (Galerkin discontinu par exemple : \citealp{brossier_these}) ou volumes finis \citep{brossier_2008}, les lancers de rayons \citep{virieux_ray}. 
+Le problème direct peut être résolu soit par des méthodes semi-analytiques (représentation intégrale, méthodes modales,\ldots) soit par des méthodes numériques. Parmi les méthodes numériques les plus usitées figurent : les méthodes de différences finies (\citealp{virieux_86}, à l'ordre 2 et \citealp{levander}, à l'ordre 4), les méthodes des éléments finis (Galerkin discontinu par exemple : \citealp{brossier_these}) ou volumes finis \citep{brossier_2008}, les lancers de rayons \citep{virieux_ray}. \todo[inline]{avantages/inconvénients}
 
 \subsection{Résolution du problème inverse}
-Si le problème direct possède une solution unique, ce n'est pas le cas du problème inverse.
-Lorsque le nombre de paramètres est grand, le problème inverse ne peut pas être résolu par une recherche exhaustive dans l'espace des solutions. La recherche de solution peut donc se faire de manière semi-globale ou locale.\\
+Si le problème direct possède une solution unique, le problème inverse peut conduire à plusieurs solutions.
+Lorsque le nombre de paramètres est grand, le problème inverse ne peut pas être résolu par une recherche exhaustive dans l'espace des solutions. La recherche de solution peut donc se faire par des méthodes semi-globales ou locales, dont quelques unes sont décrites ci-après.\\
 
 \subsubsection{Les méthodes semi-globales}
-Les méthodes semi-globales consistent à parcourir l'espace des solutions avec une approche statistiques. Les plus connues sont les améliorations de celle de Monte Carlo comme le recuit simulé \citep{tarantola_book, sen} ou  la méthode de Monte-Carlo par chaînes de Markov \citep{zhang}, ainsi que les algorithmes génétiques. Elles permettent d'assurer une convergence avec peu d'\emph{a priori} sur le modèle initial.\\
+Les méthodes semi-globales consistent à parcourir l'espace des solutions avec une approche statistiques. Les plus connues sont les améliorations de celle de Monte Carlo comme le recuit simulé \citep{tarantola_book, sen} ou  la méthode de Monte-Carlo par chaînes de Markov \citep{zhang}, ainsi que les algorithmes génétiques \citep{stoffa}. Elles permettent d'obtenir une solution avec peu d'\emph{a priori} sur le modèle initial, mais avec une convergence lente.\\
 
 \subsubsection{Les méthodes locales}
-Lorsque que le modèle initial comporte suffisamment d'informations pour que le problème se situe proche du minimum global recherché, des méthodes d'optimisation moins coûteuses sont envisageables. Ces méthodes se basent sur l'estimation du gradient et du hessien de la fonction coût pour estimer sa plus forte pente et sa courbure.\\
+Lorsque que le modèle initial peu être construit avec suffisamment d'informations pour que le problème se situe proche du minimum global recherché, des méthodes d'optimisation moins coûteuses sont envisageables. Ces méthodes se basent sur l'estimation du gradient et du hessien de la fonction coût pour estimer sa plus forte pente et sa courbure.\\
 
-La méthode de recherche linéaire la plus simple est celle du gradient (ou algorithme de la plus forte pente), qui permet d'effectuer au point courant, un pas de descente dans la direction opposée au gradient. Les directions de descentes successives sont alors orthogonales, ce qui ne permet pas une convergence très rapide. \\
+La méthode de recherche linéarisée la plus simple est celle du gradient (ou algorithme de la plus forte pente), qui permet d'effectuer au point courant, un pas de descente dans la direction opposée au gradient. Les directions de descentes successives sont alors orthogonales, ce qui ne permet pas une convergence très rapide. \\
 La méthode du gradient conjugué propose de combiner les directions de descente des itérations précédentes de façon à accélérer la convergence. Cette méthode populaire est celle utilisée par Mora et Tarantola dans les années 80 \citep{tarantola_84, mora_87a, mora_87b}. Le hessien n'est pas calculé, mais cette méthode nécessite le calcul de deux problèmes directs supplémentaires. \\
 
-Les méthodes full-Newton et Gauss-Newton utilisent le calcul du hessien (complet pour la première, approximé pour la seconde), ce qui permet une convergence plus rapide qu'avec la méthode du gradient conjugué, sans coût excessif supplémentaire \citep{pratt_98}.\\
+Les méthodes de Newton et de Gauss-Newton utilisent un calcul du hessien (complet pour la première, approximé pour la seconde). Le hessien est difficile à calculer car sa complexité est celle du gradient au carré, mais il permet une convergence plus rapide qu'avec la méthode du gradient conjugué \citep{pratt_98}.\\
 
 Enfin, le hessien peut également être estimé à partir des gradients des itérations précédentes, par la méthode quasi-Newton \citep{nocedal}, avec l'algorithme BFGS (Broyden, Fletcher, Goldfarb, Shanno), par exemple. Cet algorithme ayant un gros coût de stockage, il existe des versions allégées fournissant une estimation du hessien à partir du stockage de quelques itérations seulement (L-BFGS). 
 \subsection{Cartographie ou contour}
-Comme le souligne les auteurs du chapitre 1.4 de \cite{mat_ac}, le problème inverse peut être résolu suivant deux approches : 
+Comme le souligne \cite{mat_ac}, le problème inverse peut être résolu suivant deux approches : 
 \begin{itemize}
-	\item un formalisme en intégrales de contour où les paramètres reconstruits sont ceux décrivant ces contours. Cela revient donc à déterminer la topologie d'un milieu. Le gradient, donné par la dérivée de la fonction coût par rapport à la topologie, indique donc directement la position d'un défaut à fort contraste. \cite{dominguez} et \cite{rodriguez} utilisent par exemple cette approche pour des applications en contrôle non destructif. Cette approche permet par exemple d'imager des défauts liés à une absence de matière (porosité, fissure, délaminage,\ldots) mais ne prend pas en compte les variations de contraste plus faible (anisotropie de la soudure, inclusion, corps étranger,\ldots).
-	\item une reconstruction pixelisée d'un ensemble de paramètres. C'est l'approche adoptée pour la FWI et qui est décrite au chapitre~\ref{fwi}.
+	\item un formalisme en intégrales de contour où les paramètres reconstruits sont ceux décrivant ces contours. Cela revient donc à déformer ces contours, fonction d'une structure topologique du milieu. Le gradient, donné par la dérivée de la fonction coût par rapport à la topologie, indique donc directement la position d'un défaut à fort contraste. \cite{dominguez} et \cite{rodriguez} utilisent par exemple cette approche pour des applications en contrôle non destructif. Cette approche permet par exemple d'imager des défauts liés à une absence de matière (porosité, fissure, délaminage,\ldots) mais ne prend pas en compte les variations de contraste plus faible (anisotropie de la soudure, inclusion, corps étranger,\ldots).
+	\item une reconstruction pixelisée d'un ensemble de paramètres. C'est l'approche explorée dans ce rapport et qui est décrite au chapitre~\ref{fwi}.
 \end{itemize}
 
 
@@ -137,7 +134,7 @@ Comme le souligne les auteurs du chapitre 1.4 de \cite{mat_ac}, le problème inv
 
 \section{Spécificités de l'imagerie de soudure}
 
-Nombre de ces méthodes sont peu adaptées à l'imagerie de soudure. En effet, comme le montrent les macrographies de la figure~\ref{soudure}, les passes multiples et la cristallisation inhomogène rendent la soudure fortement anisotrope \citep{chassignole}. Cette anisotropie varie d'une soudure à une autre puisqu'elle dépend des paramètres de soudage. En conséquence, cette anisotropie engendre une courbure voire une division du faisceau ultrasonore. Les scans sont alors difficiles à analyser (cf figure \ref{echos}), les méthodes par retard et sommation ne permettent pas de relocaliser précisément un réflecteur et les images obtenues sont très sujettes aux artefacts provenant d'échos mal interprétés.
+Les méthodes basées sur des analyses de temps de vol, qui nécessitent de connaître la vitesse de propagation de l'onde sont peu adaptées à l'imagerie de soudure. En effet, comme le montrent les macrographies de la figure~\ref{soudure}, les passes multiples et la cristallisation inhomogène rendent la soudure fortement anisotrope \citep{chassignole}. Cette anisotropie varie d'une soudure à une autre puisqu'elle dépend des paramètres de soudage. En conséquence, cette anisotropie engendre une courbure voire une division du faisceau ultrasonore (cf figure \ref{echos}). Les scans sont alors difficiles à analyser et les méthodes par retard et sommation ne permettent pas de relocaliser précisément un réflecteur et les images obtenues sont très sujettes aux artefacts provenant d'échos mal interprétés.
 
 \begin{figure}[!h]
 	\hspace{-2cm}
@@ -160,7 +157,7 @@ Nombre de ces méthodes sont peu adaptées à l'imagerie de soudure. En effet, c
 		\includegraphics[height=4cm]{./img/soudure2.png}
         \caption{Coupe dans le plan (SV).}
     \end{subfigure}
-    \caption{ Macrographie d'une soudure industrielle en acier austénitique \citep{chassignole}.\label{soudure}}
+    \caption{ Macrographie d'une soudure industrielle en acier austénitique  : illustration de la forte anisotropie obtenue par la cristallisation et les passes multiples (images extraites de \cite{chassignole} ). \label{soudure}}
 \end{figure}
 
 \begin{figure}[!h]
@@ -176,10 +173,10 @@ Nombre de ces méthodes sont peu adaptées à l'imagerie de soudure. En effet, c
         \includegraphics[height=4cm]{img/chassignole_echos.png}
         \caption{Bscan}
     \end{subfigure}
-    \caption{Illustration de la perturbation du faisceau ultrasonore dans une sourdure. Images extraites de \cite{chassignole_beam}. LLT echo : Réflexion de l'onde longitudinale (L) sur le bord de soudure puis réflexion de cette onde L sur l'encoche avec conversion en mode transverse (T).  }\label{echos}
+    \caption{Illustration de la perturbation du faisceau ultrasonore dans une sourdure comportant une encoche.  LLT echo : Réflexion de l'onde longitudinale (L) sur le bord de soudure puis réflexion de cette onde L sur l'encoche avec conversion en mode transverse (T).Images extraites de \cite{chassignole_beam}  }\label{echos}
 \end{figure}
 
-De manière générale, les méthodes nécessitant une bonne connaissance du matériau ne sont pas adaptées à l'imagerie de soudure ; tenter de reconstruire les paramètres élastiques de la soudure par une résolution de problème inverse semble être une approche plus appropriée.
+De manière générale, les méthodes nécessitant une bonne connaissance \emph{a priori} du matériau ne sont pas adaptées à l'imagerie de soudure. Tenter de reconstruire les paramètres élastiques de la soudure par une résolution de problème inverse semble être une approche plus appropriée et intéressante à explorer.
 
 
 %hohne\_2012 pour images SAFT

@@ -54,6 +54,20 @@
 %numerotation des lignes (pour la relecture)
 \usepackage{lineno} 
 
+%%%% changement de marge local
+\newenvironment{changemargin}[2]{\begin{list}{}{%
+\setlength{\topsep}{0pt}%
+\setlength{\leftmargin}{0pt}%
+\setlength{\rightmargin}{0pt}%
+\setlength{\listparindent}{\parindent}%
+\setlength{\itemindent}{\parindent}%
+\setlength{\parsep}{0pt plus 1pt}%
+\addtolength{\leftmargin}{#1}%
+\addtolength{\rightmargin}{#2}%
+\setlength{\textwidth}{21cm}
+}\item }{\end{list}}
+
+
 
 
 \begin{document} % début du doc
@@ -141,11 +155,13 @@ Maîtres de conférence, ISTerre
 
 %\include{introduction}
 
-\include{imagerie}
+%\include{imagerie}
 
 %\include{fwi}
 
 \include{application}
+
+%\include{conclusion}
 
 %\include{annexes}
 

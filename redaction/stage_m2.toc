@@ -1,29 +1,14 @@
 \select@language {french}
-\contentsline {chapter}{\numberline {1}Techniques d'imagerie par ultrasons}{2}{chapter.1}
-\contentsline {section}{\numberline {1.1}Repr\IeC {\'e}sentation des donn\IeC {\'e}es temporelles}{2}{section.1.1}
-\contentsline {section}{\numberline {1.2}M\IeC {\'e}thodes par retard et sommation des signaux}{3}{section.1.2}
-\contentsline {section}{\numberline {1.3}M\IeC {\'e}thodes hautes r\IeC {\'e}solution}{4}{section.1.3}
-\contentsline {section}{\numberline {1.4}Probl\IeC {\`e}me d'optimisation}{4}{section.1.4}
-\contentsline {subsection}{\numberline {1.4.1}R\IeC {\'e}solution du probl\IeC {\`e}me direct}{5}{subsection.1.4.1}
-\contentsline {subsection}{\numberline {1.4.2}R\IeC {\'e}solution du probl\IeC {\`e}me inverse}{5}{subsection.1.4.2}
-\contentsline {subsubsection}{Les m\IeC {\'e}thodes semi-globales}{5}{section*.5}
-\contentsline {subsubsection}{Les m\IeC {\'e}thodes locales}{5}{section*.6}
-\contentsline {subsection}{\numberline {1.4.3}Cartographie ou contour}{6}{subsection.1.4.3}
-\contentsline {section}{\numberline {1.5}Sp\IeC {\'e}cificit\IeC {\'e}s de l'imagerie de soudure}{6}{section.1.5}
-\contentsline {chapter}{\numberline {2}Application de la FWI \IeC {\`a} des donn\IeC {\'e}es simul\IeC {\'e}es }{8}{chapter.2}
-\contentsline {section}{\numberline {2.1}G\IeC {\'e}n\IeC {\'e}ration des donn\IeC {\'e}es observ\IeC {\'e}es}{8}{section.2.1}
-\contentsline {section}{\numberline {2.2}\IeC {\'E}tude de r\IeC {\'e}solution spatiale }{8}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Influence de la fr\IeC {\'e}quence d'excitation}{9}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}Influence des surfaces libres}{10}{subsection.2.2.2}
-\contentsline {section}{\numberline {2.3}Gestion des non-lin\IeC {\'e}arit\IeC {\'e}s}{11}{section.2.3}
-\contentsline {section}{\numberline {2.4}\IeC {\'E}quations de propagation pour le probl\IeC {\`e}me direct}{11}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}Propagation acoustique}{11}{subsection.2.4.1}
-\contentsline {subsubsection}{Isotrope}{12}{section*.15}
-\contentsline {subsubsection}{Transverse isotrope}{12}{section*.16}
-\contentsline {section}{\numberline {2.5}Inversions en mat\IeC {\'e}riau acoustique }{12}{section.2.5}
-\contentsline {subsection}{\numberline {2.5.1}Isotrope}{12}{subsection.2.5.1}
-\contentsline {subsubsection}{Inversions monoparam\IeC {\`e}tres}{13}{section*.18}
-\contentsline {subsubsection}{multiparam\IeC {\`e}tre}{13}{section*.22}
-\contentsline {subsection}{\numberline {2.5.2}VTI}{14}{subsection.2.5.2}
-\contentsline {section}{\numberline {2.6}Inversions en mat\IeC {\'e}riau \IeC {\'e}lastique isotrope}{15}{section.2.6}
-\contentsline {subsection}{\numberline {2.6.1}anisotrope}{16}{subsection.2.6.1}
+\contentsline {chapter}{\numberline {1}Application de la FWI \IeC {\`a} des donn\IeC {\'e}es synth\IeC {\'e}tiques }{2}{chapter.1}
+\contentsline {section}{\numberline {1.1}\IeC {\'E}tude de r\IeC {\'e}solution spatiale }{2}{section.1.1}
+\contentsline {subsection}{\numberline {1.1.1}Influence de la fr\IeC {\'e}quence d'excitation}{4}{subsection.1.1.1}
+\contentsline {subsection}{\numberline {1.1.2}Influence des surfaces libres}{4}{subsection.1.1.2}
+\contentsline {section}{\numberline {1.2}Gestion des non-lin\IeC {\'e}arit\IeC {\'e}s}{5}{section.1.2}
+\contentsline {section}{\numberline {1.3}Inversions en milieu acoustique}{5}{section.1.3}
+\contentsline {subsection}{\numberline {1.3.1}Isotrope}{6}{subsection.1.3.1}
+\contentsline {subsubsection}{Inversions monoparam\IeC {\`e}tres}{6}{section*.9}
+\contentsline {subsubsection}{multiparam\IeC {\`e}tre}{7}{section*.13}
+\contentsline {subsection}{\numberline {1.3.2}Transverse isotrope}{8}{subsection.1.3.2}
+\contentsline {subsection}{\numberline {1.3.3}VTI}{9}{subsection.1.3.3}
+\contentsline {section}{\numberline {1.4}Inversions en mat\IeC {\'e}riau \IeC {\'e}lastique isotrope}{10}{section.1.4}
+\contentsline {subsection}{\numberline {1.4.1}anisotrope}{10}{subsection.1.4.1}
