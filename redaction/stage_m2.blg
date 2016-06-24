@@ -1,10 +1,7 @@
 This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: stage_m2.aux
-A level-1 auxiliary file: imagerie.aux
-A level-1 auxiliary file: fwi.aux
 A level-1 auxiliary file: application.aux
-A level-1 auxiliary file: conclusion.aux
 The style file: plainnat.bst
 Database file #1: biblio.bib
 I was expecting a `,' or a `}'---line 200 of file biblio.bib
@@ -15,51 +12,49 @@ You're missing a field part---line 374 of file biblio.bib
  :    eid = 
  :          ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 447 of file biblio.bib
+Repeated entry---line 459 of file biblio.bib
  : @article{ogilvy
  :                ,
 I'm skipping whatever remains of this entry
-Warning--there's a number but no volume in doctor_saft
-Warning--there's a number but no volume in holmes_tfm
-You've used 42 entries,
+You've used 6 entries,
             2773 wiz_defined-function locations,
-            841 strings with 11190 characters,
-and the built_in function-call counts, 19557 in all, are:
-= -- 1837
-> -- 855
-< -- 32
-+ -- 300
-- -- 257
-* -- 1578
-:= -- 2957
-add.period$ -- 130
-call.type$ -- 42
-change.case$ -- 203
-chr.to.int$ -- 41
-cite$ -- 86
-duplicate$ -- 877
-empty$ -- 1737
-format.name$ -- 311
-if$ -- 4097
-int.to.chr$ -- 2
+            635 strings with 5770 characters,
+and the built_in function-call counts, 2830 in all, are:
+= -- 268
+> -- 108
+< -- 7
++ -- 38
+- -- 32
+* -- 220
+:= -- 431
+add.period$ -- 20
+call.type$ -- 6
+change.case$ -- 27
+chr.to.int$ -- 6
+cite$ -- 12
+duplicate$ -- 129
+empty$ -- 257
+format.name$ -- 40
+if$ -- 596
+int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 40
-newline$ -- 220
-num.names$ -- 170
-pop$ -- 388
+missing$ -- 5
+newline$ -- 39
+num.names$ -- 26
+pop$ -- 51
 preamble$ -- 1
-purify$ -- 169
+purify$ -- 22
 quote$ -- 0
-skip$ -- 632
+skip$ -- 93
 stack$ -- 0
-substring$ -- 1314
-swap$ -- 80
-text.length$ -- 4
+substring$ -- 195
+swap$ -- 14
+text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 447
-warning$ -- 2
-while$ -- 192
+type$ -- 66
+warning$ -- 0
+while$ -- 29
 width$ -- 0
-write$ -- 555
+write$ -- 88
 (There were 3 error messages)

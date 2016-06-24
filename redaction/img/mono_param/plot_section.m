@@ -10,7 +10,7 @@ figure(2)
 imagesc(data)
 
 figure(1)
-plot(0:0.25e-3:10e-2-0.25e-3, data(120,:))
+plot(data(:,200),-(0:0.25:50-0.25))
 
 fid=fopen('../milieux_ps/vp_true')
 data=fread(fid,'single');
@@ -18,11 +18,11 @@ fclose(fid)
 data=reshape(data,200,400);
 figure(1)
 hold on
-plot(0:0.25e-3:10e-2-0.25e-3, data(120,:),'r')
+plot(data(:,200),-(0:0.25:50-0.25),'r')
 xlabel('mm');
 ylabel('Vitesse en m/s');
 legend('Reconstruite','Vraie')
-print -dsvg coupe_vp_mono.svg
+print -dsvg coupe_vp_mono_vert.svg
 
 %%%%%densité
 fid=fopen('rho_2200k_mono')
@@ -34,7 +34,7 @@ figure(3)
 imagesc(data)
 
 figure(4)
-plot(0:0.25e-3:10e-2-0.25e-3, data(120,:))
+plot(data(:,200),-(0:0.25:50-0.25))
 
 fid=fopen('../milieux_ps/rho_true')
 data=fread(fid,'single');
@@ -42,8 +42,8 @@ fclose(fid)
 data=reshape(data,200,400);
 figure(4)
 hold on
-plot(0:0.25e-3:10e-2-0.25e-3, data(120,:),'r')
+plot(data(:,200),-(0:0.25:50-0.25),'r')
 xlabel('mm');
 ylabel('Masse volumique en kg/m3');
 legend('Reconstruite','Vraie')
-print -dsvg coupe_rho_mono.svg
+print -dsvg coupe_rho_mono_vert.svg
