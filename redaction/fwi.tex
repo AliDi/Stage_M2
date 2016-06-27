@@ -1,5 +1,5 @@
 \chapter{L'inversion de formes d'onde \label{fwi}}
-\linenumbers
+
 
 L'inversion de forme d'ondes (ou FWI, pour \emph{Full Waveform Inversion}) est une méthode quantitative d'imagerie développée dans un contexte géophysique permettant de reconstruire des paramètres élastiques par résolution d'un problème inverse posé dans les années 80 par \cite{lailly} et \cite{tarantola_84}. Par opposition à des inversions du type tomographie qui n'utilisent que partiellement les informations contenues dans les champs mesurés, l'inversion de formes d'onde utilise l'ensemble des données sans interprétation préalable des signaux enregistrés. \\\todo{revoir en fonction de l'intro}
 
@@ -81,6 +81,13 @@ Deux types de conditions limites sont nécessaires pour le modèle de soudure à
 		\draw[dashed] (0,-2) -- (-1,-2);
 		\draw[dashed] (9,0) -- (10,0);
 		\draw[dashed] (9,-2) -- (10,-2);
+		\node (x) at (-3,0) {$\bm{e}_{x}$};
+		\draw[<-,thick] (x)-- +(-1,0);
+		\node (z) at (-4,-1)  {$\bm{e}_{z}$};
+		\draw[<-,thick] (z)--+(0,1);
+		\node (z) at (-5,0)  {$\bm{e}_{y}$};
+		\draw[thick] (z)+(0.5,0) circle [radius=0.1];
+		\draw (z)+(0.5,0) node[cross=2.2pt,rotate=0,black] {};
 	\end{tikzpicture}
 	\caption{Représentation des deux types de conditions limites du modèle de soudure 2D.\label{BC}}
 \end{figure}\todo{Figure superflue ?}

@@ -7,13 +7,11 @@ De plus, la possibilité de disposer des capteurs de part et d'autre de la pièc
 
 Enfin, on peut citer la géométrie de la plaque qui offre de multiples réflexions. Ces réflexions devraient permettre un meilleur éclairage du milieu mais risquent d'apporter trop d'informations en transmission dans les données. Une étude de l'influence de ces réflexions sur la résolution est d'abord proposée dans ce chapitre. Une explication de la stratégie d'inversion pour limiter les non-linéarités est ensuite proposée, avant de présenter quelques résultats d'inversion à partir de données observées synthétiques.\\
 
-Ces données sont générées par la résolution d'un problème direct à partir d'un signal d'excitation de type Ricker.
+Ces données sont générées par la résolution d'un problème direct à partir d'une force suivant $\bm{e}_{z}$ dont le signal d'excitation est une fonction de Ricker. La fréquence centrale d'excitation est 2 MHz,  ce qui équivaut à une longueur d'onde de 3 mm pour les ondes longitudinales en considérant que leur vitesse $v_{p}$ dans l'acier est de 6000 m/s et 1,6 mm pour les ondes de cisaillement dont la vitesse $v_{s}$ est supposée proche de 3200 m/s par la suite.
 % qui correspond à la dérivée seconde d'une Gaussienne et qui est définie de la manière suivante : 
 %\begin{equation}
 %	s(t)=(1-(t-t_{0}f\pi))^2e^{-((t-t_{0})\pi f)^2}\text{.}
 %\end{equation}
-
-Deux barrettes de 64 éléments sont utilisées en réception et en transmission, dont les éléments sont considérés ponctuels et espacés de 1,3 mm.\todo{suppérieur à l/2 en hf et pour les ondes T} La fréquence centrale d'excitation est 2 MHz, ce qui équivaut à une longueur d'onde de 3 mm pour les ondes longitudinales en considérant que leur vitesse $v_{p}$ dans l'acier est de 6000 m/s et 1,6 mm pour les ondes de cisaillement dont la vitesse $v_{s}$ est supposée proche de 3200 m/s par la suite.
 
 %\section{Discrétisation}
 
@@ -63,7 +61,7 @@ Une illustration du lien entre la couverture en nombres d'onde du milieu et l'ac
 
 \subsection{Influence de la fréquence d'excitation}
 
-Dans un premier temps, le milieu est entouré de conditions absorbantes. Les figures~\ref{app:150k} et~\ref{app:2M} montrent la couverture en nombres d'onde obtenue dans une configuration avec une barrette excitatrice et pour deux gammes de fréquence différentes. 
+Dans un premier temps, le milieu est entouré de conditions absorbantes. Les figures~\ref{app:150k} et~\ref{app:2M} montrent la couverture en nombres d'onde obtenue pour deux gammes de fréquence différentes. 
     
 \begin{figure}[!h]
     \centering
@@ -150,7 +148,7 @@ La propagation des ondes élastiques est décrite par les équations linéarisé
 	\rho \frac{\dd^2 u_{i}}{\dd t^2} &=& \displaystyle\sum_{j}\frac{\dd T_{ij}}{\dd x_{j}}	\label{prop1}\\
 	T_{ij}&=&\displaystyle\sum_{kl}C_{ijkl}\left( \frac{\dd u_{k}}{\dd x_{l}} + \frac{\dd u_{l}}{\dd x_{k}}\right)\text{,}	\label{prop2}
 \end{eqnarray}
-avec $C_{ijkl}$ le tenseur des constantes élastiques. Les études en milieu acoustique sont menées en approximation 2D : on suppose que le problème ne dépend pas de la dimension données par $\bm{\overrightarrow{x_3}}$.\\
+avec $C_{ijkl}$ le tenseur des constantes élastiques. Les études en milieu acoustique sont menées en approximation 2D : on suppose que le problème ne dépend pas de la dimension données par $\bm{e}_{y}$ (cf figure~\ref{BC} pour .\\
 
 Les équations de la propagation acoustique peuvent être déduite de~\ref{prop1} et \ref{prop2} en considérant un module de cisaillement nul. On a alors $T_{ij}=0$ si $i\neq j$, ce qui donne le système :
 \begin{eqnarray}

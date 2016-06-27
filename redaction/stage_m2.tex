@@ -25,7 +25,10 @@
 \usepackage{nicefrac}
 \usepackage{wrapfig}
 \usepackage{ragged2e}
-    
+\usetikzlibrary{shapes.misc}
+\tikzset{cross/.style={cross out, draw=black, minimum size=2*(#1-\pgflinewidth), inner sep=0pt, outer sep=0pt},
+%default radius will be 1pt. 
+cross/.default={1pt}}
     
 \usepackage{fancyvrb} % pour forcer les verbatim sur une seule page
 \usepackage{url}
@@ -159,9 +162,9 @@ Maîtres de conférence, ISTerre
 
 %\include{imagerie}
 
-%\include{fwi}
+\include{fwi}
 
-\include{application}
+%\include{application}
 
 %\include{conclusion}
 
