@@ -1,9 +1,32 @@
-\BOOKMARK [0][-]{chapter.1}{Application de la FWI \340 des donn\351es synth\351tiques }{}% 1
-\BOOKMARK [1][-]{section.1.1}{\311tude de r\351solution spatiale }{chapter.1}% 2
-\BOOKMARK [2][-]{subsection.1.1.1}{Influence de la fr\351quence d'excitation}{section.1.1}% 3
-\BOOKMARK [2][-]{subsection.1.1.2}{Influence des surfaces libres}{section.1.1}% 4
-\BOOKMARK [1][-]{section.1.2}{Gestion des non-lin\351arit\351s}{chapter.1}% 5
-\BOOKMARK [1][-]{section.1.3}{Inversions en milieu acoustique}{chapter.1}% 6
-\BOOKMARK [2][-]{subsection.1.3.1}{Isotrope}{section.1.3}% 7
-\BOOKMARK [2][-]{subsection.1.3.2}{Transverse isotrope}{section.1.3}% 8
-\BOOKMARK [1][-]{section.1.4}{Inversions en mat\351riau \351lastique isotrope}{chapter.1}% 9
+\BOOKMARK [1][-]{chapter*.3}{Introduction}{}% 1
+\BOOKMARK [0][-]{chapter.1}{Techniques d'imagerie par ultrasons}{}% 2
+\BOOKMARK [1][-]{section.1.1}{Repr\351sentation des donn\351es temporelles}{chapter.1}% 3
+\BOOKMARK [1][-]{section.1.2}{M\351thodes par retard et sommation des signaux}{chapter.1}% 4
+\BOOKMARK [1][-]{section.1.3}{M\351thodes haute r\351solution}{chapter.1}% 5
+\BOOKMARK [1][-]{section.1.4}{Probl\350me d'optimisation}{chapter.1}% 6
+\BOOKMARK [2][-]{subsection.1.4.1}{R\351solution du probl\350me direct}{section.1.4}% 7
+\BOOKMARK [2][-]{subsection.1.4.2}{R\351solution du probl\350me inverse}{section.1.4}% 8
+\BOOKMARK [2][-]{subsection.1.4.3}{Cartographie ou contour}{section.1.4}% 9
+\BOOKMARK [1][-]{section.1.5}{Sp\351cificit\351s de l'imagerie de soudure}{chapter.1}% 10
+\BOOKMARK [0][-]{chapter.2}{L'inversion de formes d'onde }{}% 11
+\BOOKMARK [1][-]{section.2.1}{Probl\350me direct }{chapter.2}% 12
+\BOOKMARK [1][-]{section.2.2}{Probl\350me inverse}{chapter.2}% 13
+\BOOKMARK [2][-]{subsection.2.2.1}{Calcul du gradient}{section.2.2}% 14
+\BOOKMARK [2][-]{subsection.2.2.2}{Estimation du hessien}{section.2.2}% 15
+\BOOKMARK [2][-]{subsection.2.2.3}{R\351gularisation}{section.2.2}% 16
+\BOOKMARK [1][-]{section.2.3}{Probl\351matiques li\351es \340 l'inversion}{chapter.2}% 17
+\BOOKMARK [2][-]{subsection.2.3.1}{Choix du mod\350le initial }{section.2.3}% 18
+\BOOKMARK [2][-]{subsection.2.3.2}{Choix de la param\351trisation et inversion multi-param\350tres}{section.2.3}% 19
+\BOOKMARK [2][-]{subsection.2.3.3}{Estimation de la source}{section.2.3}% 20
+\BOOKMARK [1][-]{section.2.4}{Exemple d'application en g\351ophysique}{chapter.2}% 21
+\BOOKMARK [0][-]{chapter.3}{Application de la FWI \340 des donn\351es synth\351tiques }{}% 22
+\BOOKMARK [1][-]{section.3.1}{\311tude de r\351solution spatiale }{chapter.3}% 23
+\BOOKMARK [2][-]{subsection.3.1.1}{Influence de la fr\351quence d'excitation}{section.3.1}% 24
+\BOOKMARK [2][-]{subsection.3.1.2}{Influence des surfaces libres}{section.3.1}% 25
+\BOOKMARK [1][-]{section.3.2}{Gestion des non-lin\351arit\351s}{chapter.3}% 26
+\BOOKMARK [1][-]{section.3.3}{Inversions en milieu acoustique isotrope}{chapter.3}% 27
+\BOOKMARK [2][-]{subsection.3.3.1}{Inversions monoparam\350tres}{section.3.3}% 28
+\BOOKMARK [2][-]{subsection.3.3.2}{Inversion multiparam\350tre}{section.3.3}% 29
+\BOOKMARK [1][-]{section.3.4}{Inversions en milieu acoustique transverse isotrope}{chapter.3}% 30
+\BOOKMARK [1][-]{section.3.5}{Enjeux et probl\351matiques de l'inversion 3D \351lastique}{chapter.3}% 31
+\BOOKMARK [1][-]{section*.34}{Conclusion}{chapter.3}% 32

@@ -1,7 +1,7 @@
 \chapter{L'inversion de formes d'onde \label{fwi}}
 
 
-L'inversion de forme d'ondes (ou FWI, pour \emph{Full Waveform Inversion}) est une méthode quantitative d'imagerie développée dans un contexte géophysique permettant de reconstruire des paramètres élastiques par résolution d'un problème inverse posé dans les années 80 par \cite{lailly} et \cite{tarantola_84}. Par opposition à des inversions du type tomographie qui n'utilisent que partiellement les informations contenues dans les champs mesurés, l'inversion de formes d'onde utilise l'ensemble des données sans interprétation préalable des signaux enregistrés. \\\todo{revoir en fonction de l'intro}
+L'inversion de forme d'ondes (ou FWI, pour \emph{Full Waveform Inversion}) est une méthode quantitative d'imagerie développée dans un contexte géophysique. Elle permet de reconstruire des paramètres élastiques par résolution d'un problème inverse, posé dans les années 80 par \cite{lailly} et \cite{tarantola_84}. Par opposition à des inversions du type tomographie tes temps qui n'utilisent que partiellement les informations contenues dans les champs mesurés, l'inversion de formes d'onde utilise l'ensemble des données sans interprétation préalable des signaux enregistrés.\\
 
 Le principe général est de calculer des données $\bm{d}_{cal}$ issues d'un modèle (résolution du problème direct)  puis de minimiser l'écart entre ces données et les données réelles $\bm{d}_{obs}$ issues de la mesure en modifiant les paramètres du modèle \citep{virieux_review}. Cette démarche est résumée en figure~\ref{schema_fwi}. \\
 
@@ -90,7 +90,7 @@ Deux types de conditions limites sont nécessaires pour le modèle de soudure à
 		\draw (z)+(0.5,0) node[cross=2.2pt,rotate=0,black] {};
 	\end{tikzpicture}
 	\caption{Représentation des deux types de conditions limites du modèle de soudure 2D.\label{BC}}
-\end{figure}\todo{Figure superflue ?}
+\end{figure}
 
 
 Le problème peut-être résolu dans le domaine temporel ou dans le domaine fréquentiel \citep{vigh_2008}. Le domaine temporel laisse la possibilité d'effectuer une sélection des arrivées d'ondes par fenêtrage temporel mais présente une plus forte sensibilité au phénomène de saut de phase (décrit dans le paragraphe~\ref{fwi:choix_modele}).  De plus, la résolution par méthodes numériques dans le domaine temporel impose un critère de stabilité Courant-Friedrichs-Lewy (CFL) qui peut être contraignant, surtout en 3D. Dans le domaine fréquentiel, l'équation d'onde construit la solution stationnaire, ce qui revient à résoudre un système d'équations linéaires. Il est alors possible d'utiliser des méthodes de résolution directe du type décomposition LU bien qu'en pratique, les performances de ces méthodes soient limitées (pour des raisons de mémoire) pour des problèmes comportant un grand nombre d'inconnues.  Les principaux avantages d'une résolution du problème direct dans le domaine fréquentiel sont donc d'intégrer facilement les phénomènes d'atténuation et de permettre une sélection fine des fréquences d'intérêt. 
@@ -152,6 +152,7 @@ On a donc :
 Finalement, en reportant cette expression dans l'équation~\ref{eq_grad}, on obtient l'expression du gradient : 
 \begin{equation}
 	 \frac{\dd C (\bm{m})}{\dd m_{i}} = \tr{\bm{\tilde{d}}_{cal}(\bm{m})}  \tr{\left( \frac{\dd \bm{A}}{\dd m_{i}}\right)} \tr{\bm{A}^{-1}} (\bm{\tilde{d}}_{obs} - \bm{\tilde{d}}_{cal}(\bm{m})) = \tr{\bm{\tilde{d}}_{cal}(\bm{m})} \tr{\left( \frac{\dd \bm{A}}{\dd m_{i}}\right)} \bm{\lambda}
+	 \label{fwi:eq_grad2}
 \end{equation}
 
 
@@ -178,7 +179,7 @@ Le problème étant mal-posé, il est nécessaire de limiter les artefacts haute
 \section{Problématiques liées à l'inversion}
 
 \subsection{Choix du modèle initial \label{fwi:choix_modele}}
-Afin d'assurer une convergence vers le minimum global, il est nécessaire que le modèle initial se situe dans le bassin d'attraction de la fonctionnelle. Pour cela, il faut s'assurer que le modèle soit cinématiquement acceptable en levant l’ambiguïté sur la phase. Les données temporelles issues de ce modèle doivent donc avoir un décalage de moins d'une demi-période par rapport aux données observées vraies. Si cette condition n'est pas respectée, l'algorithme ne permettra pas un bon réajustement des phases et convergera vers un minimum local, comme l'illustre la figure~\ref{ambig_phase}.\todo{application numérique : \% de retard ?}
+Afin d'assurer une convergence vers le minimum global, il est nécessaire que le modèle initial se situe dans le bassin d'attraction de la fonctionnelle. Pour cela, il faut s'assurer que le modèle soit cinématiquement acceptable en levant l’ambiguïté sur la phase. Les données temporelles issues de ce modèle doivent donc avoir un décalage de moins d'une demi-période par rapport aux données observées vraies. Si cette condition n'est pas respectée, l'algorithme ne permettra pas un bon réajustement des phases et convergera vers un minimum local, comme l'illustre la figure~\ref{ambig_phase}.%\todo{application numérique : \% de retard ?}
 
 \begin{figure}[!h]
 	\centering
@@ -189,7 +190,7 @@ Afin d'assurer une convergence vers le minimum global, il est nécessaire que le
 À défaut de disposer à un modèle initial cinématiquement acceptable, il est possible de d'appliquer un ensemble de stratégies permettant de limiter ces artefacts : introduire progressivement les sources ou récepteurs les plus éloignés, rallonger progressivement les temps d'acquisition, et inverser prioritairement les données basses fréquences.
 
 
-En sismologie, une image issue de tomographie des temps peut fournir un modèle initial assez précis. Dans cette étude, on considère que peu d'informations sont connues sur les paramètres élastiques de la soudure et le modèle initial choisi est uniforme, bien qu'il serait intéressant d'établir un modèle initial de soudure caractéristique (cf chapitre~\ref{applications}).\todo{Chapitre "Applications"}
+En sismologie, une image issue de tomographie des temps peut fournir un modèle initial assez précis. Dans cette étude, on considère que peu d'informations sont connues sur les paramètres élastiques de la soudure et le modèle initial choisi est uniforme, bien qu'il serait intéressant d'établir un modèle initial de soudure caractéristique (cf chapitre~\ref{applications}).
 
 
 \subsection{Choix de la paramétrisation et inversion multi-paramètres}

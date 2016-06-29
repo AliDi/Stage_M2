@@ -1,25 +1,33 @@
-\chapter{Conclusion}
+\addcontentsline{toc}{section}{\textbf{Conclusion}}
+\chapter*{Conclusion}
+
+L'état de l'art concernant l'imagerie de soudure montre que les images actuellement obtenues sont sujettes aux artefacts, ce qui peut poser des problèmes de sécurité pour les structures à risque. La FWI propose une approche non pas basée sur l'interprétation des temps de vol, mais sur la résolution d'un problème inverse, ce qui lui permet de s'affranchir de la connaissance précise \emph{a priori} de l'anisotropie.\\
+
+Ce travail a montré que la FWI peut donner des images de bonne résolution dans le cas d'une propagation acoustique et d'une acquisition judicieusement choisie. La description de la soudure par un modèle acoustique VTI n'est pas complète et l'inversion de l'anisotropie doit donc se faire en propagation élastique.\\
+
+
+La perspective de ce travail est l'application de la FWI à des données réelles. Il sera alors nécessaire de prendre en compte la propagation 3D ainsi que l'atténuation des ondes dans la soudure, et d'estimer les sources au cours de l'inversion. La sensibilité au bruit de la FWI doit également être évaluée et la fonction de coût éventuellement adaptée \citep{brossier_2010}. La nature mal posée du problème d'optimisation peut nécessiter d'élaborer un modèle initial plus précis, construit statistiquement à partir d'un grand nombre de résultats d'inversion ou d'incorporer des \emph{prior informations} à la formulation de la fonction de coût \citep{asnaashari}.
 
 
 
-qualité d'image très dépendante du système d'acquisition
-
-\section{ouvertures}
-
-\subsection{application a des données réelles}
--estimation de sources : pratt 99 : l'ondelette d'excitation devient un nouveau paramètre inconnu 
-
--élastique : plein de nouvelles ondes 
 
 
-\subsection{améliorations}
-Le modèle initial choisi est très simple. Cependant, il serait intéressant d'utiliser statistiquement le résultats d'inversion de soudure pour construire un modèle initial plus complet ou incorporer des "prior informations" à la phase d'optimisation (\emph{i. e.} dans la formulation de la fonction de coût : cf \cite{asnaashari}).
 
-Kirchhoff approx pour des défauts non pénétrables/gestion du contraste ? (materials and acoustics, p.421)
 
-atténuation
 
-étude de sensibilité au bruit
 
-QUESTION : 
-Comment connaitre l'incertitude, la réalité du résultat
+
+
+%\subsection{améliorations}
+%Le modèle initial choisi est très simple. Cependant, il serait intéressant d'utiliser statistiquement le résultats d'inversion de soudure pour construire un modèle initial plus complet ou incorporer des "prior informations" à la phase d'optimisation (\emph{i. e.} dans la formulation de la fonction de coût : cf \cite{asnaashari}).
+
+
+
+%atténuation
+
+%étude de sensibilité au bruit
+
+%QUESTION : 
+%Comment connaître l'incertitude, la réalité du résultat
+%sensibilité au bruit
+%Kirchhoff approx pour des défauts non pénétrables/gestion du contraste ? (materials and acoustics, p.421)

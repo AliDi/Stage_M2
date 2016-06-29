@@ -1,11 +1,10 @@
 \chapter{Application de la FWI à des données synthétiques \label{applications}}
 
-
-Les problématiques du CND de soudure par FWI sont liées à quelques spécificités, propres à cette application. Comme il a été évoqué dans la première partie de ce rapport, il semble, par exemple, indispensable de prendre l'anisotropie en compte dans l'inversion, pour expliquer les déviations de faisceau.\\
+La FWI a déjà été éprouvée dans de nombreux cas d'inversion de données sismiques pour l'imagerie terrestre. Les problématiques de l'application de la FWI au CND de soudure sont liées à quelques nouvelles spécificités, propres à cette application. Comme il a été évoqué dans la première partie de ce rapport, il semble, par exemple, indispensable de prendre l'anisotropie en compte dans l'inversion, pour expliquer les déviations de faisceau.\\
 
 De plus, la possibilité de disposer des capteurs de part et d'autre de la pièce permet de réaliser des inversions avec des signaux temporels plus courts et des angles de diffraction plus variés. Pour des acquisitions de surface en sismologie, seules les diffractions rayonnant vers la surface sont considérées (soit un angle de diffraction n'excédant pas 180°). Dans la cas de l'imagerie de soudure, il n'est pas non plus possible de tourner autour de l'obstacle, mais un éclairage bilatéral est possible, avec déplacement éventuel des transducteurs.\\
 
-Enfin, on peut citer la géométrie de la plaque qui offre de multiples réflexions. Ces réflexions devraient permettre un meilleur éclairage du milieu mais risquent d'apporter trop d'informations en transmission dans les données. Une étude de l'influence de ces réflexions sur la résolution est d'abord proposée dans ce chapitre. Une explication de la stratégie d'inversion pour limiter les non-linéarités est ensuite proposée, avant de présenter quelques résultats d'inversion à partir de données observées synthétiques.\\
+Enfin, on peut citer la géométrie de la plaque qui offre de multiples réflexions. Ces réflexions devraient permettre un meilleur éclairage du milieu mais risquent d'apporter trop d'informations en transmission dans les données. Une étude de l'influence de ces réflexions sur la résolution est d'abord menée dans ce chapitre. Une explication de la stratégie d'inversion pour limiter les non-linéarités est ensuite proposée, avant de présenter quelques résultats d'inversion à partir de données observées synthétiques.\\
 
 Ces données sont générées par la résolution d'un problème direct à partir d'une force suivant $\bm{e}_{z}$ dont le signal d'excitation est une fonction de Ricker. La fréquence centrale d'excitation est 2 MHz,  ce qui équivaut à une longueur d'onde de 3 mm pour les ondes longitudinales en considérant que leur vitesse $v_{p}$ dans l'acier est de 6000 m/s et 1,6 mm pour les ondes de cisaillement dont la vitesse $v_{s}$ est supposée proche de 3200 m/s par la suite.
 % qui correspond à la dérivée seconde d'une Gaussienne et qui est définie de la manière suivante : 
@@ -22,7 +21,7 @@ Ces données sont générées par la résolution d'un problème direct à partir
 \section{Étude de résolution spatiale \label{app:section_reso}}
 %En théorie, si l'éclairage est parfait, on est limité en résolution par lambda/2 (cf review virieux ou thèse de romain : "pouvoir de résolution du gradient"). En pratique, tout comme en ray-tomo (cf wiliamson cité dans review virieux), on est très limité par l'éclairage.
 
-Afin de déterminer le pouvoir de résolution du gradient, \cite{sirgue} réalisent une analyse en ondes planes comme suit. Considérons une onde plane incidente se propageant vers un point diffractant (suivant $\bm{s}$), donnant naissance en ce point à une autre onde plane se propageant suivant vers un récepteur. Dans l'expression du gradient CITER, on a alors : 
+Afin de déterminer le pouvoir de résolution du gradient, \cite{sirgue} réalisent une analyse en ondes planes comme suit. Considérons une onde plane incidente se propageant vers un point diffractant (suivant $\bm{s}$), donnant naissance en ce point à une autre onde plane se propageant suivant $-\bm{r}$ vers un récepteur. Dans l'expression du gradient~\ref{fwi:eq_grad2}, on a alors : 
 \begin{align}
 	\bm{\tilde{d}}_{cal} &= \Re{(e^{jk_{0}\bm{s}.\bm{x}})},\\
 	\bm{\lambda} &= \Re{(\bm{\Delta d}~e^{jk_{0}\bm{r}.\bm{x}})},\\
@@ -30,7 +29,7 @@ Afin de déterminer le pouvoir de résolution du gradient, \cite{sirgue} réalis
 \end{align}
 avec $ \bm{\Delta d}$ les résidus $(\bm{\tilde{d}}_{obs}-\bm{\tilde{d}}_{cal}$) et où le paramètre $m$ est $\nicefrac{1}{c^2(\bm{x})}$. Le gradient est alors : 
 \begin{equation}
-	G=-\omega^2 \Re(\bm{\Delta d}~e^{jk_{0}(\bm{s}+\bm{r}).x}).
+	G=-\omega^2 \Re(\bm{\Delta d}~e^{jk_{0}(\bm{s}+\bm{r}).\bm{x}}).
 \end{equation} 
 
 
@@ -87,7 +86,7 @@ La couverture en nombre d'onde est également très liée à l'acquisition. Elle
 
 \subsection{Influence des surfaces libres}
 
-Deux surfaces libres sont maintenant ajoutées à la soudure de référence et au modèle initial. L'objectif est d'illustrer l'influence de la longueur du signal d'acquisition, soit le nombre de réflexions dans la plaques prises en compte dans les données. Les figures~\ref{app:1400pt} et~\ref{app:4200pt} montrent la couverture en nombres d'onde obtenue  pour 1 et 6 réflexions dans la plaque, pour une excitation à 2 MHz.
+Deux surfaces libres sont maintenant ajoutées à la soudure de référence et au modèle initial. L'objectif est d'illustrer l'influence de la durée du signal d'acquisition, soit le nombre de réflexions dans la plaques prises en compte dans les données. Les figures~\ref{app:1400pt} et~\ref{app:4200pt} montrent la couverture en nombres d'onde obtenue  pour 1 et 6 réflexions dans la plaque, pour une excitation à 2 MHz.
 
 \begin{figure}[!h]
     \centering
@@ -96,7 +95,7 @@ Deux surfaces libres sont maintenant ajoutées à la soudure de référence et a
 	\end{subfigure}
     \begin{subfigure}[b]{0.4\textwidth}
 		\hspace{-3cm}\includegraphics[width=1.5\textwidth]{img/1400pt.png}
-		\caption{Pour une réflexion, soit un trajet de 1 aller-retour dans l'épaisseur de la plaque.}
+		\caption{Pour 1 réflexion, soit un trajet de 1 aller-retour dans l'épaisseur de la plaque.}
 		\label{app:1400pt}
 	\end{subfigure}	
 	\hspace{0.7cm}
@@ -122,50 +121,54 @@ Finalement, la prise en compte d'une réflexion dans les données d'acquisition 
 
 
 \section{Gestion des non-linéarités}
-Une stratégie pour limiter la non-linéarité de l'inversion consiste à réaliser l'inversion en plusieurs temps, en injectant progressivement le contenu haute fréquence dans les données. L'inversion à basse fréquence permet ainsi de reconstruire la structure grossière avant d'ajouter les détails grâce à la résolution qu'offre le gradient en haute fréquence.\\
+Une stratégie pour limiter la non-linéarité de l'inversion consiste à réaliser l'inversion en plusieurs temps, en injectant progressivement le contenu hautes fréquences dans les données. L'inversion à basses fréquences permet ainsi de reconstruire la structure grossière avant d'ajouter les détails grâce à la résolution qu'offre le gradient en hautes fréquences.\\
 
 
 
-Afin que les nombres imagés soient correctement échantillonnés, il faut que le plus grand nombre d'onde imagé à une fréquence soit le même que que le plus petit à la fréquence suivante \citep{sirgue}. En considérant que le plus nombre d'onde est obtenu pour une angle de diffraction de $\pi/2$ , le rapport de fréquences suivant doit donc être respecté : 
+Afin que les nombres imagés soient correctement échantillonnés, il faut que le plus grand nombre d'onde imagé à une fréquence soit le même que le plus petit à la fréquence suivante \citep{sirgue}. En considérant que le plus bas nombre d'onde soit obtenu pour une angle de diffraction de 100° , le rapport de fréquences suivant doit donc être respecté : 
 
 \begin{alignat*}{3}
 	  ~&k_{max}(f_{n}) &&= k_{min}(f_{n+1})\\
-	\Leftrightarrow~~~~~ &  f_n &&= f_{n+1}\cos \left(\frac{\pi}{2} \right)\\
+	\Leftrightarrow~~~~~ &  f_n &&= f_{n+1}\cos \left(\frac{100^\circ}{2} \right)\\
 	 \Leftrightarrow~~~~~ & \frac{f_{n+1}}{f_n} && \approx  1,5.
 \end{alignat*} 
 
 Les inversions présentées ci-après sont donc réalisées en plusieurs itérations. Entre chaque itérations, les données observées et l'ondelette d'excitation sont filtrées par un filtre passe-bas de fréquence centrale $f_{n}$ et dont la fréquence de coupure haute est de $2,5 \times f_{n}$.
 
 
-\section{Inversions en milieu acoustique}
+\section{Inversions en milieu acoustique isotrope}
 
-Dans un premier temps, la méthode d'imagerie est appliquée à des milieux acoustiques, ce qui simplifie le problème et réduit les coût de calcul. Le code utilisé est \emph{TOYxDacTIME}, développé dans le cadre du projet \emph{Seiscope}\footnote{http://seiscope2.osug.fr}. Le problème direct y est résolu par différences finies d'ordre 2 et l'inversion est réalisée dans le domaine temporel.\\
+La méthode d'imagerie est appliquée à des milieux acoustiques, ce qui simplifie le problème et réduit les coûts de calcul. Le code utilisé est \emph{TOYxDacTIME}, développé dans le cadre du projet \emph{Seiscope}\footnote{http://seiscope2.osug.fr}. Le problème direct y est résolu par différences finies d'ordre 2 et l'inversion est réalisée dans le domaine temporel.\\
 %, ce qui impose deux contraintes de discrétisation : dispersion numérique, cfl 
 
 La propagation des ondes élastiques est décrite par les équations linéarisées en déplacements $\bm{u}$ et contraintes $\bar{\bar T}$ suivantes \citep{mat_ac2} : 
 
 \begin{eqnarray}
-	\rho \frac{\dd^2 u_{i}}{\dd t^2} &=& \displaystyle\sum_{j}\frac{\dd T_{ij}}{\dd x_{j}}	\label{prop1}\\
+	\rho \frac{\dd^2 u_{i}}{\dd t^2} &=& \displaystyle\sum_{j}\frac{\dd T_{ij}}{\dd x_{j}}\text{,}	\label{prop1}\\
 	T_{ij}&=&\displaystyle\sum_{kl}C_{ijkl}\left( \frac{\dd u_{k}}{\dd x_{l}} + \frac{\dd u_{l}}{\dd x_{k}}\right)\text{,}	\label{prop2}
 \end{eqnarray}
-avec $C_{ijkl}$ le tenseur des constantes élastiques. Les études en milieu acoustique sont menées en approximation 2D : on suppose que le problème ne dépend pas de la dimension données par $\bm{e}_{y}$ (cf figure~\ref{BC} pour .\\
+avec $C_{ijkl}$ le tenseur des constantes élastiques. Les études en milieu acoustique sont menées en approximation 2D : on suppose que le problème ne dépend pas de la dimension données par $\bm{e}_{y}$ (d'après l'orientation des axes indiquée en figure~\ref{BC}).\\
 
 Les équations de la propagation acoustique peuvent être déduite de~\ref{prop1} et \ref{prop2} en considérant un module de cisaillement nul. On a alors $T_{ij}=0$ si $i\neq j$, ce qui donne le système :
 \begin{eqnarray}
-	\rho \frac{\dd^2 u_{i}}{\dd t^2} &=& \frac{\dd T_{ii}}{\dd x_{i}}\\
+	\rho \frac{\dd^2 u_{i}}{\dd t^2} &=& \frac{\dd T_{ii}}{\dd x_{i}}\text{,}\\
 	T_{ii} &=& \displaystyle\sum_{k}C_{iikk}\left( \frac{\dd u_{k}}{\dd x_{k}}\right)	.
 \end{eqnarray}
 
 
-\subsection{Isotrope}
 On considère, tout d'abord, une propagation dans un milieu acoustique isotrope. Les constantes élastiques sont alors égales dans toutes les directions et les propriétés élastiques sont donc réduites à une seule constante. Les équations~\ref{prop1} et~\ref{prop2} deviennent : 
 \begin{eqnarray}
-	\rho \frac{\dd^2 u_{i}}{\dd t^2} = -\bm{\nabla} p\\
+	\rho \frac{\dd^2 u_{i}}{\dd t^2} = -\bm{\nabla} p \text{,}\\
 	p=-\kappa \displaystyle\sum_{i} \frac{\dd u_{i}}{\dd x_{i}}\text{,}
 \end{eqnarray}
 avec $\kappa$ le module de rigidité et $p$ la pression.
 
-Les données observées sont calculées à partir du milieu dont la densité et  la vitesse verticale sont présentés en figure~\ref{app:iso:model}. On considère une configuration d'acquisition favorable à un bon éclairage de la soudure : deux barrettes de 64 éléments (en émission et réception) sont situées de part et d'autre de la soudure. Cette configuration ne correspond pas à celle d'une inspection de soudure conventionnelle, puisque en pratique, le relief de la soudure ne permet pas de placer les barrettes directement dessus. La durée d'acquisition est de 15,4 $\mu$s, ce qui correspond à une propagation sur 9 cm à 6000 m/s, soit moins d'un aller-retour dans l'épaisseur de la plaque.\\
+Deux types d'inversions sont proposée par la suite pour une paramétrisation densité-vitesse du milieu : l'inversion monoparamètre, pour laquelle le modèle d'un seul des paramètres est mis à jour pendant que l'autre est maintenu constant, et l'inversion multiparamètre, pour laquelle les deux paramètres sont variables et mis à jour.
+
+
+\subsection{Inversions monoparamètres}
+
+ Dans un premier temps, on considère une configuration d'acquisition favorable à un bon éclairage de la soudure : deux barrettes linéaires de 64 éléments (en émission et réception) sont situées de part et d'autre de la soudure. Cette configuration ne correspond pas à celle d'une inspection de soudure conventionnelle, puisque en pratique, le relief de la soudure ne permet pas de placer les barrettes directement dessus. La durée d'acquisition est de 15,4 $\mu$s, ce qui correspond à une propagation sur 9 cm à 6000 m/s, soit moins d'un aller-retour dans l'épaisseur de la plaque. Les données observées sont calculées à partir du milieu dont la densité et  la vitesse verticale sont présentés en figure~\ref{app:iso:model}.\\
 
 
 \begin{figure}[!h]
@@ -182,18 +185,16 @@ Les données observées sont calculées à partir du milieu dont la densité et 
 \end{figure}
 
 
-\subsubsection{Inversions monoparamètres}
-
 Une première inversion est réalisée, en gardant $\rho$ à sa valeur initiale et en ne mettant à jour que le modèle de vitesse, pour 9 bandes de fréquences allant de 100 kHz à 3,4 MHz. Le modèle initial de vitesse pour cette inversion est pris uniforme avec $v_{p}=6000$~m/s.\\
 
-Une seconde inversion monoparamètre est proposée pour une reconstruction de la masse volumique. Cependant, il est très difficile d'assurer une convergence en prenant des modèles initiaux de vitesse et de densité uniformes, car la seule mise à jour du modèle de densité ne peut expliquer la majeure partie des données en terme de cinématique. En effet, la figure~\ref{app:traces_rho} montre que la différence de densité au niveau des défauts n'impacte pas les temps de vol mais l'amplitude des diffractions sur les défauts. Il est donc nécessaire de disposer d'un modèle de vitesse suffisamment précis pour expliquer les différentes arrivées, puis la densité sera reconstruite par correction des amplitudes. Le modèle de vitesse initiale utilisé pour cette inversion est issue d'une première inversion de la vitesse avec un fort lissage gaussien de la perturbation sur deux longueurs d'onde.
+Une seconde inversion monoparamètre est proposée pour une reconstruction de la masse volumique. Cependant, il est très difficile d'assurer une convergence en prenant des modèles initiaux de vitesse et de densité uniformes, car la seule mise à jour du modèle de densité ne peut expliquer la majeure partie des données en terme de cinématique. En effet, la figure~\ref{app:traces_rho} montre que la différence de densité au niveau des défauts n'impacte pas les temps de vol mais l'amplitude des diffractions sur les défauts. Il est donc nécessaire de disposer d'un modèle de vitesse suffisamment précis pour expliquer les différentes arrivées, puis la densité sera reconstruite par correction des amplitudes. Le modèle de vitesse initiale utilisé pour cette inversion est issue d'une première inversion de la vitesse avec un fort lissage gaussien de la perturbation sur deux longueurs d'onde.\\
 
-Enfin, une autre inversion de la vitesse est réalisée, avec pour modèle initial ce même modèle de vitesse lissé et une densité uniforme, afin d'évaluer l'influence du modèle initial.
+Enfin, une autre inversion de la vitesse est réalisée, avec pour modèle initial ce même modèle de vitesse lissé et une densité uniforme, afin d'évaluer l'influence du modèle initial.\\
 
 Les modèles initiaux de vitesse et le résultats de ces inversions se trouvent figure~\ref{app:inv_mono}. 
 
 
-\begin{figure}[!h]
+\begin{figure}
 	\centering
 	\begin{subfigure}[b]{0.45\textwidth}
 		\centering
@@ -210,89 +211,110 @@ Les modèles initiaux de vitesse et le résultats de ces inversions se trouvent 
 
 
 
-	\begin{figure}[!h]
+	\begin{figure}[p]
 	\begin{changemargin}{-2cm}{-2cm}
 		\centering
 		\begin{subfigure}[b]{0.29\textwidth}
+			\centering
+			Première inversion de la vitesse : \\[0.2cm]
 			\includegraphics[width=\textwidth]{img/mono_param/vp_uni.png}
-			\caption{Vitesse initiale pour l'inversion de la vitesse.}
+			\caption{Modèle de vitesse initial.}
 		\end{subfigure}
 		\begin{subfigure}[b]{0.29\textwidth}
+			\centering
+			Seconde inversion de la vitesse : \\[0.2cm] 
 			\includegraphics[width=\textwidth]{img/mono_param/vp_smooth.png}
-			\caption{Vitesse initiale pour la seconde inversion de la vitesse.}
+			\caption{Modèle de vitesse initial.}
 		\end{subfigure}
 		\begin{subfigure}[b]{0.29\textwidth}
+			\centering
+			Inversion de la masse volumique :  \\[0.2cm]
 			\includegraphics[width=\textwidth]{img/mono_param/vp_smooth.png}
-			\caption{Vitesse initiale pour l'inversion de la densité. }
+			\caption{Modèle de vitesse initial.}
 		\end{subfigure}
 		\begin{subfigure}[b]{0.29\textwidth}
-			\includegraphics[width=\textwidth]{img/mono_param/vp_mono.png}
-			\caption{Modèle final de vitesse obtenu par FWI monoparamètre.}
+			\includegraphics[width=\textwidth]{img/mono_param/vp_final_uni.png}
+			\caption{Vitesse reconstruite par FWI monoparamètre.}
 		\end{subfigure}
 		\begin{subfigure}[b]{0.29\textwidth}
-			%\includegraphics[width=\textwidth]{}
-			\caption{.}
+			\includegraphics[width=\textwidth]{img/mono_param/vp_final_smooth.png}
+			\caption{Vitesse reconstruite par FWI monoparamètre.}
 		\end{subfigure}
 		\begin{subfigure}[b]{0.29\textwidth}
 			\includegraphics[width=\textwidth]{img/mono_param/rho_mono.png}
-			\caption{Modèle final pour la densité obtenu par FWI monoparamètre. }
+			\caption{Masse volumique reconstruite par FWI monoparamètre.}
 		\end{subfigure}
 		\begin{subfigure}[b]{0.29\textwidth}
-			\includegraphics[width=\textwidth]{img/mono_param/coupe_vp_mono.png}
-			\caption{Vitesses vraie et vitesse reconstruite à 30 mm de profondeur.}
+			\includegraphics[width=\textwidth]{img/mono_param/coupe_vp_mono_uni_hor.png}
+			\caption{Vitesses vraie et vitesse reconstruite à $y=30$~mm.}
 		\end{subfigure}
 		\begin{subfigure}[b]{0.29\textwidth}
-			%\includegraphics[width=\textwidth]{}
-			\caption{ }
+			\includegraphics[width=\textwidth]{img/mono_param/coupe_vp_mono_smooth_hor.png}
+			\caption{Vitesses vraie et vitesse reconstruite à $y=30$~mm.}
 		\end{subfigure}
 		\begin{subfigure}[b]{0.29\textwidth}
 			\includegraphics[width=\textwidth]{img/mono_param/coupe_rho_mono.png}
-			\caption{Masse volumiques vraie et reconstruite à 30 mm de profondeur.}
+			\caption{Masses volumiques vraie et reconstruite à $y=30$~mm.}
 		\end{subfigure}
 				\begin{subfigure}[b]{0.29\textwidth}
-			\includegraphics[width=\textwidth]{img/mono_param/coupe_vp_mono_vert.png}
-			\caption{Coupe verticale au centre de la reconstruction de la vitesse (en $x=50$~mm).}
+			\includegraphics[width=\textwidth]{img/mono_param/coupe_vp_mono_uni_vert.png}
+			\caption{Vitesses vraie et vitesse reconstruite à $x=50$~mm.}
 		\end{subfigure}
 		\begin{subfigure}[b]{0.29\textwidth}
-			%\includegraphics[width=\textwidth]{}
-			\caption{ }
+			\includegraphics[width=\textwidth]{img/mono_param/coupe_vp_mono_smooth_vert.png}
+			\caption{Vitesses vraie et vitesse reconstruite à $x=50$~mm.}
 		\end{subfigure}
 		\begin{subfigure}[b]{0.29\textwidth}
 			\includegraphics[width=\textwidth]{img/mono_param/coupe_rho_mono_vert.png}
-			\caption{Coupe verticale au centre de la reconstruction de la masse volumique (en $x=50$~mm).}
+			\caption{Masses volumiques vraie et reconstruite à $x=50$~mm.}
 		\end{subfigure}
-		\caption{\label{app:inv_mono} Modèle initiaux et résultat d'inversion monoparamètre de la vitesse et de la densité.}
+		\caption{\label{app:inv_mono} Modèle initiaux de vitesse et résultat d'inversion monoparamètre de la vitesse (deux colonnes de gauche) et de la densité (colonne de droite).}
 	\end{changemargin}
 	\end{figure}
 
-\todo[inline]{commenter résultat : influence du rayonnement \\
-même à basse fréquence, on introduit des artefacts haute fréquence}
+Pour l'inversion de la vitesse, le modèle initial plus précis permet d'obtenir des résultats d'inversion plus précis et plus rapidement, à basses fréquences seulement. À partir de 1.5 MHz, les modèles courants de vitesse deviennent semblables. C'est à cette fréquence qu'apparaissent progressivement  des artefacts hautes fréquences, malgré un lissage gaussien de 0.8 longueur d'onde. Dans ces conditions, le résultat final n'est donc pas influencé par le choix du modèle initial. La section verticale des vitesses reconstruites manque de bas nombres d'ondes en raison de la largeur limitée des barrettes.\\
+
+
+Les bords latéraux des défauts reconstruits par la masse volumique ne sont pas précisément définis. L'acquisition devrait favoriser une reconstruction des nombres d'ondes horizontaux, mais le diagramme de rayonnement de la densité pour la paramétrisation $v_{p}-\rho$ montre que la densité n'est pas prompt à décrire le rayonnement latéral de la diffraction. La coupe horizontale à 3 cm de profondeur présente donc un manque de hauts nombres d'onde. De manière générale, ce paramètre est moins bien reconstruit que la vitesse en amplitude, en raison de son faible impact sur les données observées. Une image précise de la densité pourrait permettre de caractériser plus précisément certains types de défauts, et il faudrait alors pondérer ce paramètre de façon à donner plus de poids à sa perturbation.\\
+
+
+\subsubsection{Exemple d'acquisition réaliste}
+Un exemple d'inversion monoparamètre de la vitesse est présenté ici, à partir d'une acquisition plus réaliste. Deux barrettes de 64 éléments espacés de 1 mm sont placées de chaque côté de la racine de la soudure. Les données sont générée à partir d'une soudure de densité uniforme et de vitesse présentée en figure~\ref{app:iso:reel1}. La durée des signaux acquis est de 30.7 $\mu s$, ce qui est le temps nécessaire à la propagation d'une extrémité à l'autre du système d'acquisition. Le modèle initial de vitesse est uniforme, avec $v_{p}=6000$~m/s.\\
+
+ Le résultat de l'inversion, réalisée sur des fréquences de 200 k à 5 MHz et présenté en figure~\ref{app:iso:reel2}, illustre à nouveau la dépendance de la résolution vis à vis du système d'acquisition. En effet, la racine de la soudure est mal reconstruite dans cette zone car les diffractions mesurées sont d'angle nul ou proche de $\pi$. Or, les angles de diffraction proches de $\pi$  contribuent à une reconstruction de résolution très faible, d'après l'expression du nombre d'onde~\ref{app:nb_onde}. Pour une application de la FWI à un cas réel, il est donc nécessaire de déterminer au préalable l'acquisition favorisant un éclairage adapté à la géométrie de la pièce à évaluer.
  
-Lors de l'inversion de la vitesse basée sur  un modèle initial homogène (première colonne de la figure~\ref{app:inv_mono}), des perturbations hautes fréquences sont introduites dès les premières itérations basses fréquences. Ces artefacts sont mal corrigés au fur et à mesure de l'inversion.\\\todo{pourquoi ?}
+\begin{figure}
+	\begin{subfigure}[b]{0.5\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{img/config_reelle_true.png}
+		\caption{Configuration du système d'acquisition et vitesse utilisée pour la génération des données.\label{app:iso:reel1}}	
+	\end{subfigure}
+	\hspace{0.2cm}
+	\begin{subfigure}[b]{0.5\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{img/config_reelle_rec.png}
+		\caption{Vitesse reconstruite par inversion monoparamètre. \label{app:iso:reel2}}	
+	\end{subfigure}
+	\caption{Exemple d'inversion pour une acquisition unilatérale. Chaque barrette est utilisée en excitation et en réception.}
+\end{figure}
 
-La reconstruction de la vitesse à partir d'un modèle fortement lissé, permet d'éviter ces artefacts......
-
-Les bords latéraux des défauts reconstruits par la masse volumique ne sont pas précisément définis. L'acquisition devrait favoriser une reconstruction des nombres d'ondes horizontaux, mais le diagramme de rayonnement de la densité pour la paramétrisation $rho$-$v_{p}$ montre que la densité n'est pas prompt à décrire un rayonnement latéral pour cette géométrie d'acquisition. La coupe horizontale à 3 cm de profondeur montre donc un manque de hauts nombres d'onde. \\
-
-\todo[inline]{commenter résultats 2}
-
-
-\subsubsection{Inversion multiparamètre}
+\subsection{Inversion multiparamètre}
 
 Lors d'une inversion multiparamètre, les modèles des différents paramètres sont mis à jour simultanément. Idéalement, cela permet de perturber chaque modèle de façon à expliquer au mieux l'effet de chaque paramètre sur les données. Cependant, il arrive que ces effets soient attribué à de mauvais paramètres dont le modèle est alors faussement perturbé. Dans le cas d'une paramétrisation $v_{p}-\rho$, le risque est que la densité soit perturbée de façon à expliquer des temps de vol, ce qui ne permettra jamais de tendre vers le milieu vrai. Il est donc préférable, dans un premier temps, d'inverser seul le paramètre d'effet dominant dans les données, puis d'inverser conjointement l'ensemble des paramètres.\\
 
- Dans notre cas, le paramètre dominant est $v_{p}$, comme le montre la figure~\ref{app:traces_rho}. La stratégie est donc d'inverser ce paramètre à basse fréquence et avec un fort lissage, afin d'obtenir d'un modèle qui explique la majorité des arrivées. La vitesse et la densité sont ensuite reconstruite par FWI à partir de ce modèle de vitesse grossier. \\
+ Dans notre cas, le paramètre dominant est $v_{p}$, comme le montre la figure~\ref{app:traces_rho}. La stratégie est donc d'inverser ce paramètre à basse fréquence et avec un fort lissage, afin d'obtenir d'un modèle qui explique la majorité des arrivées. La vitesse et la densité sont ensuite reconstruites par FWI à partir de ce modèle de vitesse grossier. \\
  
- Le résultat de cette inversion est présenté en figure~\ref{app:inv_multi}. 
- \todo[inline]{commenter résultat et comparer avec mmonoparam}
+Les données utilisées sont celles issues du modèle et de l'acquisition de la figure~\ref{app:iso:model}.  Le résultat de cette inversion multiparamètre est présenté en figure~\ref{app:inv_multi}. 
+\\
 
+L'inversion multiparamètre semble moins sujette aux artefacts (à lissage équivalent) \todo{Pourquoi ?} et permet une reconstruction des bords des défauts plus fine. L'inversion multiparamètre donne également plus de poids au paramètre de densité dont l'amplitude est légèrement mieux reconstruite qu'en inversion monoparamètre.  
 
 
 
 
 \begin{figure}[!h]
 	\centering
-	\begin{subfigure}[b]{0.35\textwidth}
+	\begin{subfigure}[b]{0.40\textwidth}
 		\includegraphics[width=\textwidth]{img/multi_param/vp_smooth.png}
 		\caption{Modèle initial de vitesse.}
 	\end{subfigure}\\
@@ -300,42 +322,39 @@ Lors d'une inversion multiparamètre, les modèles des différents paramètres s
 %		\includegraphics[width=\textwidth]{img/multi_param/rho_init.png}
 %		\caption{}
 %	\end{subfigure}
-	\begin{subfigure}[b]{0.35\textwidth}
+	\begin{subfigure}[b]{0.4\textwidth}
 		\includegraphics[width=\textwidth]{img/multi_param/vp_multi_6000k.png}
 		\caption{Modèle final de vitesse obtenu par FWI multiparamètre.}
 	\end{subfigure}
-	\begin{subfigure}[b]{0.35\textwidth}
+	\begin{subfigure}[b]{0.4\textwidth}
 		\includegraphics[width=\textwidth]{img/multi_param/rho_6000k.png}
 		\caption{Modèle final de densité obtenu par FWI multiparamètre.}
 	\end{subfigure}
-	\begin{subfigure}[b]{0.35\textwidth}
+	\begin{subfigure}[b]{0.4\textwidth}
 		\includegraphics[width=\textwidth]{img/multi_param/coupe_vp_multi.png}
-		\caption{Vitesses vraie et vitesse reconstruite à 3 cm de profondeur.}
+		\caption{Vitesses vraie et vitesse reconstruite à $y=30$~mm.}
 	\end{subfigure}
-	\begin{subfigure}[b]{0.35\textwidth}
+	\begin{subfigure}[b]{0.4\textwidth}
 		\includegraphics[width=\textwidth]{img/multi_param/coupe_rho_multi.png}
-		\caption{Masse volumiques vraie et reconstruite à 3 cm de profondeur.}
+		\caption{Masse volumiques vraie et reconstruite à $y=30$~mm.}
 	\end{subfigure}
-	\begin{subfigure}[b]{0.35\textwidth}
+	\begin{subfigure}[b]{0.4\textwidth}
 		\includegraphics[width=\textwidth]{img/multi_param/coupe_vp_multi_vert.png}
-		\caption{Vitesses vraie et vitesse reconstruite à 3 cm de profondeur.}
+		\caption{Vitesses vraie et reconstruite à $x=50$~mm.}
 	\end{subfigure}
-	\begin{subfigure}[b]{0.35\textwidth}
+	\begin{subfigure}[b]{0.4\textwidth}
 		\includegraphics[width=\textwidth]{img/multi_param/coupe_rho_multi_vert.png}
-		\caption{Masse volumiques vraie et reconstruite à 3 cm de profondeur.}
+		\caption{Masses volumiques vraie et reconstruite à $x=50$~mm.}
 	\end{subfigure}
 	\caption{Modèle initial de vitesse et résultats d'inversion multiparamètre de la vitesse et de la densité.\label{app:inv_multi} }
 \end{figure}
 
 
-le but : voir si on améliore vp et info complémentaire pour la caractérisation donnée par rho ?
-
-conclusion partielle : le multiparam, ça change rien à part que c'est plus dur et qu'il faut un meilleur modèle initial. La meilleure stratégie si on veut rho (qui peut donner des info pour la caractérisation du défaut) : inverser vp en mono, puis inverser rho en mono avec modèle vitesse initial venant de l'inversion
 
 
 
 
-\subsection{Transverse isotrope}
+\section{Inversions en milieu acoustique transverse isotrope}
 Afin d'introduire une anisotropie simplifiée dans la soudure, une étude dans un milieu acoustique vertical transverse isotrope est menée.
 Il est possible de formuler à partir des équations de la propagation élastique~\ref{prop1} et~\ref{prop2} des équations d'ondes acoustiques en milieu anisotrope. Bien que ce soit physiquement impossible, cette formulation permet de se rapprocher cinématiquement des équations d'ondes élastiques, de manière simplifiée \citep{alkhalifah}.\\
 En milieu transverse isotrope, la matrice des constantes élastiques est telles que  : 
@@ -355,11 +374,13 @@ L'approximation acoustique des équations élastiques en milieu vertical transve
 
 La paramétrisation du milieu peut donc se faire à l'aide de 4 constantes, que l'on choisit comme étant $v_{p}$, $\rho$ et deux constantes adimensionnelles de Thomsen~\citep{thomsen} (surtout utilisées dans le domaine des Sciences de la Terre) définies comme suit : 
 \begin{eqnarray}
-	\epsilon & =  & \frac{C_{11}-C_{33}}{2C_{33}} = \frac{\bm{v}_{p}.\bm{e}_{x} -  \bm{v}_{p}.\bm{e}_{z}}{\bm{v}_{p}.\bm{e}_{z}}\\
-	\delta & = & \frac{(C_{13}+C_{44})^2-(C_{33}-C_{44})^2}{2C_{33}(C_{33-C_{44}})}\text{.}\\
+	\epsilon & =  & \frac{C_{11}-C_{33}}{2C_{33}} = \frac{\bm{v}_{p}.\bm{e}_{x} -  \bm{v}_{p}.\bm{e}_{z}}{\bm{v}_{p}.\bm{e}_{z}},\\
+	\delta & = & \frac{(C_{13}+C_{44})^2-(C_{33}-C_{44})^2}{2C_{33}(C_{33-C_{44}})}\text{.}
 \end{eqnarray}
 
-Le paramètre $\epsilon$ est donc lié à la différence entre la composante verticale et la composante horizontale de la vitesse des onde de pression et $\delta$ décrit davantage la propagation des ondes quasi-longitudinales.\\
+Le paramètre $\epsilon$ est donc lié à la différence entre la composante verticale et la composante horizontale de la vitesse des ondes de compression et $\delta$ décrit davantage la propagation des ondes quasi-longitudinales.\\
+
+Notons que cette formulation peut notamment générer, en milieu anelliptique, un artefact d'onde de cisaillement, nettement visible sur les données synthétiques en figure~\ref{app:ani:data_true}. Il existe plusieurs stratégie pour limiter ces artefacts \citep{duveneck}, et il est choisi par la suite de simplement l'enlever des données par un filtre spatio-temporel.\\
 
 
 %Notons que cette formulation [Pose quelques problèmes (Duveneck 2008) notamment génération d'onde S (sur données "vrai simulée"  et sur problème direct, mais pas la même car différente grille, PML, ... donc on la mute sur le résidu) qui n'a pas de sens physique. Proposer les solutions (taper Epsilon, en sismo on est dans l'eau donc c'est fait naturellement -> placer les sources dans un milieu isotrope).]
@@ -367,65 +388,117 @@ Le paramètre $\epsilon$ est donc lié à la différence entre la composante ver
 
 
 
-Pour les inversions, on considère une plaque isotrope dans laquelle se trouve une soudure anisotrope VTI sans défaut. On cherche à évaluer l'influence de l'anisotropie en vue d'inverser le paramètre $\epsilon$. La valeur de $\epsilon$ dans la soudure est fixée à 20~\%, ce qui est environ deux fois plus élevé que les valeurs que l'on peut trouver dans la littérature~\citep{chassignole}. Les \textcolor{red}{deux ??????, combien d'éléments ?} barrettes excitatrices/réceptrices sont placées de manière éloignée, afin d'accentuer la propagation des ondes suivant $\bm{e}_{x}$ et de s'assurer que les temps de vol soient perturbés par l'anisotropie (figure~\ref{configuration_vti}).\\
-Les autres paramètres ($v_{p}$,$\rho$ et $\delta$) sont supposés constants et uniformes, avec $v_{p}=6000$~m/s, $\rho=8000$~kg/m$^3$ et $\delta=0$.\\
+Pour la génération des données synthétiques, on considère une plaque isotrope dans laquelle se trouve une soudure anisotrope VTI sans défaut. La valeur de $\epsilon$ dans la soudure est fixée à 20~\%, ce qui est environ deux fois plus élevé que les valeurs que l'on peut trouver dans la littérature~\citep{chassignole}. 
+Les barrettes, utilisées en réception et en transmission  sont placées de manière éloignée, afin d'accentuer la propagation des ondes suivant $\bm{e}_{x}$ et de s'assurer que les temps de vol soient perturbés par l'anisotropie (figure~\ref{configuration_vti}). Elles sont constituées de 16 éléments espacés de 1 mm.\\
+Les autres paramètres ($v_{p}$, $\rho$ et $\delta$) sont choisis uniformes pour la génération des données et sont maintenus à leur valeur vraie pendant l'inversion, avec $v_{p}=6000$~m/s, $\rho=8000$~kg/m$^3$ et $\delta=0$.\\
 
-\begin{figure}
-	\centering
-	\includegraphics[height=5cm]{img/ani/conf.png}
-	\caption{Valeur du paramètre $\epsilon$ pour la génération des données observées. \label{configuration_vti} }
-\end{figure}
 
-Une comparaison des données observées en milieu isotrope ($\epsilon = 0$) et avec la soudure anisotrope est proposée en figure~\ref{}. Il apparaît que la présence d'une anisotropie VTI a peu d'impact sur les données, car le dispositif d'acquisition favorise la mesure des ondes dont le trajet est majoritairement vertical et donc peu perturbé.\\
- L'inversion du paramètre $\epsilon$ est alors difficile : une modification grossière de la vitesse horizontale suffit à corriger les retards résiduels (cf figure~\ref{}).
- 
- \todo[inline]{figures : configurations ; traces isotrope, epsilon=20 ; inversion + données calculées}
- 
-Un modèle de soudure anisotrope VTI est donc trop restrictif pour représenter l'anisotropie d'une soudure réelle, dont on sait qu'elle impacte beaucoup le faisceau ultrasonore. 
+L'inversion est réalisée à partir d'un modèle initial pour $\epsilon$ uniformément nul. Dès les premières inversions à 100 kHz, le modèle courant est grossièrement modifié, ce qui corrige légèrement les retards dus à l'anisotropie. Les itérations suivantes ne modifient presque pas le modèle courant, ce qui implique que la vallée de la fonction est coût très large. Le résultat de l'inversion à 500 kHz est présenté en figure~\ref{app:ani:res} et les résidus, avant et après inversion, sont confrontés en figures~\ref{app:ani:data_av} et~\ref{app:ani:data_ap}. \\
 
+
+Les résidus issus du modèle initial ($\epsilon$ uniformément nul) montrent que ce paramètre change principalement la vitesse des ondes directes et réfléchies et cause peu de diffraction sur les bords de la soudure. Les trajets les plus impactés par l'anisotropie VTI, et donc les plus susceptibles de contribuer à la reconstruction du paramètre $\epsilon$, sont les trajets horizontaux, très difficiles à favoriser en excitation de surface. L'acquisition permet alors de mesurer les diffractions d'angles $\theta$ très faibles ou proches de $\pi$. Or, la résolution est très mauvaise pour $\theta=\pi$, d'après l'expression du nombre d'onde~\ref{app:nb_onde}.  
 
 \begin{figure}[!h]
-\begin{minipage}{0.34\textwidth}
-		\includegraphics[width=0.8\textwidth]{img/ogilvy_modele.png}
-		\caption{ Exemple d'orientation de grains dans la soudure (image extraite de \cite{ogilvy}).}
-\end{minipage}
-\hfill
-\begin{minipage}{0.65\textwidth}
-Pour tester la capacité de la FWI à reconstruire ces paramètres d'anisotropie, il est donc nécessaire d'utiliser un modèle plus pertinent qui se rapprocherait davantage de celui proposé par \cite{ogilvy} par exemple.\\
-\cite{ogilvy} propose de simuler l'orientation des grains de la soudure avec un angle représenté sur la figure ci-contre, tel que : 
-\begin{equation}
-	\theta(x,z) = \tan^{-1}\left( \frac{D/2 + z\tan\alpha}{x} \right),
-\end{equation}
-avec $D$ la largeur de la racine de la soudure et $\alpha$  l'angle du bord de soudure. 
-\end{minipage}
-
+	\begin{subfigure}[b]{0.5\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{img/epsilon/epsilon_true.png}
+		\caption{Valeur du paramètre $\epsilon$ pour la génération des données observées. \label{configuration_vti} }
+	\end{subfigure}
+	\begin{subfigure}[b]{0.5\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{img/epsilon/epsilon_final.png}\\
+		\vspace{0.4cm}
+		\caption{Résultat d'inversion monoparamètre du paramètre $\epsilon$.\label{app:ani:res}}
+	\end{subfigure}	
+	\caption{Milieu vrai et milieu reconstruit par FWI. L'inversion est réalisée à partir d'une valeur de $\epsilon$ uniformément nulle, de 100 à 500 kHz.}
 \end{figure}
 
+\begin{figure}[h!]
+	\begin{changemargin}{-1cm}{-2cm}
+	%donnees vraies, residus initiaux, residus finaux
+	\begin{subfigure}[b]{0.29\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{img/epsilon/e20.png}
+		\caption{Données synthétiques.\label{app:ani:data_true}}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.29\textwidth}
+		\centering
+		\includegraphics[width=0.91\textwidth]{img/epsilon/residu_init.png}
+		\caption{Résidus initiaux. \label{app:ani:data_av}}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.29\textwidth}
+		\centering
+		\includegraphics[width=0.91\textwidth]{img/epsilon/residu_final.png}
+		\caption{Résidus finaux.\label{app:ani:data_ap}}
+	\end{subfigure}
+	\caption{ Signaux temporels et résidus acquis par les 4 barrettes, dont la numérotation correspond à celle de l'acquisition présentée en figure~\ref{app:ani:data_ap}. La source est le premier élément (le plus à gauche) de la barrette n° 1 et émet une excitation à 2 MHz.   L'échelle d'amplitude est la même pour les 3 figures. \label{app:ani:data}}
+	\end{changemargin}
+\end{figure}\todo[inline]{Pourquoi l'onde direct du capteur 2 est-elle si faible comparée à la première réflexion ?}
+
+ Pour résumer, les données portent peu d'information sur l'anisotropie et ces informations permettent, au mieux, de reconstruire une image de très faible résolution. On sait qu'en pratique, le faisceau ultrasonore est très impacté par l'anisotropie. Il semble donc qu'un modèle de soudure anisotrope VTI soit donc trop restrictif pour représenter l'anisotropie d'une soudure réelle.\\
+ 
+ Pour tester la capacité de la FWI à reconstruire ces paramètres d'anisotropie, il est donc nécessaire d'utiliser un modèle plus pertinent qui se rapprocherait davantage de celui proposé par \cite{ogilvy} par exemple.\\
+	\cite{ogilvy} propose de simuler l'orientation des grains de la soudure avec un angle représenté sur la figure~\ref{ogilvy_soud}, tel que : 
+	\begin{equation}
+		\theta(x,z) = \tan^{-1}\left( \frac{D/2 + z\tan\alpha}{x} \right),
+	\end{equation}
+	avec $D$ la largeur de la racine de la soudure et $\alpha$  l'angle du bord de soudure. 
+ 
+\begin{figure}[!h]
+	\centering
+			\includegraphics[width=4cm]{img/ogilvy_modele.png}
+			\caption{ Exemple d'orientation de grains dans la soudure (image extraite de \cite{ogilvy}).\label{ogilvy_soud}}
+\end{figure} 
+ 
+%\begin{figure}[!h]
+%	\begin{minipage}{0.34\textwidth}
+%			\includegraphics[width=0.8\textwidth]{img/ogilvy_modele.png}
+%			\caption{ Exemple d'orientation de grains dans la soudure (image extraite de \cite{ogilvy}).\label{ogilvy_soud}}
+%	\end{minipage}
+%	\hfill
+%	\begin{minipage}{0.65\textwidth}
+%	Pour tester la capacité de la FWI à reconstruire ces paramètres d'anisotropie, il est donc nécessaire d'utiliser un modèle plus pertinent qui se rapprocherait davantage de celui proposé par \cite{ogilvy} par exemple.\\
+%	\cite{ogilvy} propose de simuler l'orientation des grains de la soudure avec un angle représenté sur la figure ci-contre, tel que : 
+%	\begin{equation}
+%		\theta(x,z) = \tan^{-1}\left( \frac{D/2 + z\tan\alpha}{x} \right),
+%	\end{equation}
+%	avec $D$ la largeur de la racine de la soudure et $\alpha$  l'angle du bord de soudure. 
+%	\end{minipage}
+%\end{figure}
 
 
-% Conclusion : inversion de $\epsilon$ -> dur et par pertinent
-%passer en tilted (façon ogilvy ?) ou modèle plus précis en élastique.
 
 
-\section{Inversions en matériau élastique isotrope}
+
+
+\section{Enjeux et problématiques de l'inversion 3D élastique}
+
+L'application de la FWI à des données réelles implique de prendre en compte la propagation en 3D des ondes dans la soudure. Une inversion 2D appliquée à de vraies données nécessite donc de les préconditionner de manière à limiter la trace des ondes de cisaillement et à leur appliquer une correction d'amplitude. \\
+
+L'inversion 3D permet de prendre en compte l'ensemble des phénomènes de propagation et de tirer profit des ondes de cisaillement dont la longueur d'onde est plus faible que celle des ondes de compression. Cependant, les données peuvent être marquée par des ondes de surfaces dont l'atténuation est plus faible que les ondes de volume.  L'inversion est alors déséquilibrée par cette onde de forte amplitude et le modèle n'est mis à jour qu'en surface. L'influence de cette onde de surface sur les données peut être limitée par un filtrage adapté ou par une acquisition en transmission.\\ 
+
+\todo[inline]{Mettre une image de comparaison des données 2D et 3D ? }
+%élastique : 2 à 3 ordres de grandeurs plus cher en calcul. Pb moins bien posé : impose un modèle initial bien posé, ... Plus de paramètres impliqués=plus de degrés de liberté dans l'espace des modèles
+
+L'acquisition peut être réalisée dans un plan, comme dans les cas présentés précédemment, ce qui risque de limiter la qualité de reconstruction hors de ce plan. Des structures 3D peuvent également être reconstruites par l'utilisation de transducteurs matriciels ou par déplacement d'un transducteur linéaire.
 
 
 
 
 %%%%%%%%%%%%%%%%%%%%%notes%%%%%%%%%%%%%%%
-\todo[inline]{notes : \\
-
-anisotrope est plus problématique que isotrope car :\\ 
--modélisation plus complexe,\\
--problème moins bien posé\\
-
-Gholami 2011 : la vitesse a beaucoup plus d'influence sur les données que les paramètres delta et epsilon (delta étant le plus faible). D'après ses schémas, on va donc avoir une maj de la vitesse mais pas des autres paramètres\\
-
-modèle initial de soudure : citer mina ?\\
+%\todo[inline]{notes : \\
+%
+%anisotrope est plus problématique que isotrope car :\\ 
+%-modélisation plus complexe,\\
+%-problème moins bien posé\\
+%
+%Gholami 2011 : la vitesse a beaucoup plus d'influence sur les données que les paramètres delta et epsilon (delta étant le plus faible). D'après ses schémas, on va donc avoir une maj de la vitesse mais pas des autres paramètres\\
+%
+%modèle initial de soudure : citer mina ?\\
 
 %VTI elliptique ne gène pas l'inversion car beaucoup d'info portées par la transmission (vecteurs d'ondes verticaux non affectés par l'anisotropie elliptique VTI)  -> pas assez proche du modèle réel
 
 %le flop du vti montre que l'inversion des paramètres est tributaire de l'acquisition
-}
+%}
 
 

@@ -1,7 +1,7 @@
 clear all; close all;
 
 %%%%%vitesse
-fid=fopen('vp_3370k')
+fid=fopen('vp_final_smooth')
 data=fread(fid,'single');
 fclose(fid)
 data=reshape(data,200,400);
@@ -10,7 +10,7 @@ figure(2)
 imagesc(data)
 
 figure(1)
-plot(data(:,200),-(0:0.25:50-0.25))
+plot((0:0.25:100-0.25),data(120,:))
 
 fid=fopen('../milieux_ps/vp_true')
 data=fread(fid,'single');
@@ -18,11 +18,11 @@ fclose(fid)
 data=reshape(data,200,400);
 figure(1)
 hold on
-plot(data(:,200),-(0:0.25:50-0.25),'r')
+plot((0:0.25:100-0.25),data(120,:),'r')
 xlabel('mm');
 ylabel('Vitesse en m/s');
 legend('Reconstruite','Vraie')
-print -dsvg coupe_vp_mono_vert.svg
+print -dsvg coupe_vp_mono_smooth_hor.svg
 
 %%%%%densité
 fid=fopen('rho_2200k_mono')
@@ -46,4 +46,4 @@ plot(data(:,200),-(0:0.25:50-0.25),'r')
 xlabel('mm');
 ylabel('Masse volumique en kg/m3');
 legend('Reconstruite','Vraie')
-print -dsvg coupe_rho_mono_vert.svg
+%print -dsvg coupe_rho_mono_vert.svg

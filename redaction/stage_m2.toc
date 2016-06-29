@@ -1,12 +1,36 @@
 \select@language {french}
-\contentsline {chapter}{\numberline {1}Application de la FWI \IeC {\`a} des donn\IeC {\'e}es synth\IeC {\'e}tiques }{2}{chapter.1}
-\contentsline {section}{\numberline {1.1}\IeC {\'E}tude de r\IeC {\'e}solution spatiale }{2}{section.1.1}
-\contentsline {subsection}{\numberline {1.1.1}Influence de la fr\IeC {\'e}quence d'excitation}{4}{subsection.1.1.1}
-\contentsline {subsection}{\numberline {1.1.2}Influence des surfaces libres}{4}{subsection.1.1.2}
-\contentsline {section}{\numberline {1.2}Gestion des non-lin\IeC {\'e}arit\IeC {\'e}s}{5}{section.1.2}
-\contentsline {section}{\numberline {1.3}Inversions en milieu acoustique}{5}{section.1.3}
-\contentsline {subsection}{\numberline {1.3.1}Isotrope}{6}{subsection.1.3.1}
-\contentsline {subsubsection}{Inversions monoparam\IeC {\`e}tres}{6}{section*.9}
-\contentsline {subsubsection}{Inversion multiparam\IeC {\`e}tre}{9}{section*.15}
-\contentsline {subsection}{\numberline {1.3.2}Transverse isotrope}{9}{subsection.1.3.2}
-\contentsline {section}{\numberline {1.4}Inversions en mat\IeC {\'e}riau \IeC {\'e}lastique isotrope}{11}{section.1.4}
+\contentsline {section}{\textbf {Introduction}}{3}{chapter*.3}
+\contentsline {chapter}{\numberline {1}Techniques d'imagerie par ultrasons}{4}{chapter.1}
+\contentsline {section}{\numberline {1.1}Repr\IeC {\'e}sentation des donn\IeC {\'e}es temporelles}{4}{section.1.1}
+\contentsline {section}{\numberline {1.2}M\IeC {\'e}thodes par retard et sommation des signaux}{5}{section.1.2}
+\contentsline {section}{\numberline {1.3}M\IeC {\'e}thodes haute r\IeC {\'e}solution}{6}{section.1.3}
+\contentsline {section}{\numberline {1.4}Probl\IeC {\`e}me d'optimisation}{6}{section.1.4}
+\contentsline {subsection}{\numberline {1.4.1}R\IeC {\'e}solution du probl\IeC {\`e}me direct}{6}{subsection.1.4.1}
+\contentsline {subsection}{\numberline {1.4.2}R\IeC {\'e}solution du probl\IeC {\`e}me inverse}{7}{subsection.1.4.2}
+\contentsline {subsubsection}{Les m\IeC {\'e}thodes semi-globales}{7}{section*.8}
+\contentsline {subsubsection}{Les m\IeC {\'e}thodes locales}{7}{section*.9}
+\contentsline {subsection}{\numberline {1.4.3}Cartographie ou contour}{8}{subsection.1.4.3}
+\contentsline {section}{\numberline {1.5}Sp\IeC {\'e}cificit\IeC {\'e}s de l'imagerie de soudure}{8}{section.1.5}
+\contentsline {chapter}{\numberline {2}L'inversion de formes d'onde }{10}{chapter.2}
+\contentsline {section}{\numberline {2.1}Probl\IeC {\`e}me direct }{11}{section.2.1}
+\contentsline {section}{\numberline {2.2}Probl\IeC {\`e}me inverse}{12}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Calcul du gradient}{12}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Estimation du hessien}{13}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}R\IeC {\'e}gularisation}{13}{subsection.2.2.3}
+\contentsline {section}{\numberline {2.3}Probl\IeC {\'e}matiques li\IeC {\'e}es \IeC {\`a} l'inversion}{13}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Choix du mod\IeC {\`e}le initial }{13}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Choix de la param\IeC {\'e}trisation et inversion multi-param\IeC {\`e}tres}{14}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}Estimation de la source}{14}{subsection.2.3.3}
+\contentsline {section}{\numberline {2.4}Exemple d'application en g\IeC {\'e}ophysique}{15}{section.2.4}
+\contentsline {chapter}{\numberline {3}Application de la FWI \IeC {\`a} des donn\IeC {\'e}es synth\IeC {\'e}tiques }{17}{chapter.3}
+\contentsline {section}{\numberline {3.1}\IeC {\'E}tude de r\IeC {\'e}solution spatiale }{17}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Influence de la fr\IeC {\'e}quence d'excitation}{19}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Influence des surfaces libres}{19}{subsection.3.1.2}
+\contentsline {section}{\numberline {3.2}Gestion des non-lin\IeC {\'e}arit\IeC {\'e}s}{20}{section.3.2}
+\contentsline {section}{\numberline {3.3}Inversions en milieu acoustique isotrope}{20}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Inversions monoparam\IeC {\`e}tres}{21}{subsection.3.3.1}
+\contentsline {subsubsection}{Exemple d'acquisition r\IeC {\'e}aliste}{23}{section*.26}
+\contentsline {subsection}{\numberline {3.3.2}Inversion multiparam\IeC {\`e}tre}{23}{subsection.3.3.2}
+\contentsline {section}{\numberline {3.4}Inversions en milieu acoustique transverse isotrope}{25}{section.3.4}
+\contentsline {section}{\numberline {3.5}Enjeux et probl\IeC {\'e}matiques de l'inversion 3D \IeC {\'e}lastique}{29}{section.3.5}
+\contentsline {section}{\textbf {Conclusion}}{30}{section*.34}
