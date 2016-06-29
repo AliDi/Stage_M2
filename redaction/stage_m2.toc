@@ -7,8 +7,8 @@
 \contentsline {section}{\numberline {1.4}Probl\IeC {\`e}me d'optimisation}{6}{section.1.4}
 \contentsline {subsection}{\numberline {1.4.1}R\IeC {\'e}solution du probl\IeC {\`e}me direct}{6}{subsection.1.4.1}
 \contentsline {subsection}{\numberline {1.4.2}R\IeC {\'e}solution du probl\IeC {\`e}me inverse}{7}{subsection.1.4.2}
-\contentsline {subsubsection}{Les m\IeC {\'e}thodes semi-globales}{7}{section*.8}
-\contentsline {subsubsection}{Les m\IeC {\'e}thodes locales}{7}{section*.9}
+\contentsline {subsubsection}{Les m\IeC {\'e}thodes semi-globales}{7}{section*.7}
+\contentsline {subsubsection}{Les m\IeC {\'e}thodes locales}{7}{section*.8}
 \contentsline {subsection}{\numberline {1.4.3}Cartographie ou contour}{8}{subsection.1.4.3}
 \contentsline {section}{\numberline {1.5}Sp\IeC {\'e}cificit\IeC {\'e}s de l'imagerie de soudure}{8}{section.1.5}
 \contentsline {chapter}{\numberline {2}L'inversion de formes d'onde }{10}{chapter.2}
@@ -29,8 +29,8 @@
 \contentsline {section}{\numberline {3.2}Gestion des non-lin\IeC {\'e}arit\IeC {\'e}s}{20}{section.3.2}
 \contentsline {section}{\numberline {3.3}Inversions en milieu acoustique isotrope}{20}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}Inversions monoparam\IeC {\`e}tres}{21}{subsection.3.3.1}
-\contentsline {subsubsection}{Exemple d'acquisition r\IeC {\'e}aliste}{23}{section*.26}
+\contentsline {subsubsection}{Exemple d'acquisition r\IeC {\'e}aliste}{23}{section*.25}
 \contentsline {subsection}{\numberline {3.3.2}Inversion multiparam\IeC {\`e}tre}{23}{subsection.3.3.2}
 \contentsline {section}{\numberline {3.4}Inversions en milieu acoustique transverse isotrope}{25}{section.3.4}
 \contentsline {section}{\numberline {3.5}Enjeux et probl\IeC {\'e}matiques de l'inversion 3D \IeC {\'e}lastique}{29}{section.3.5}
-\contentsline {section}{\textbf {Conclusion}}{30}{section*.34}
+\contentsline {section}{\textbf {Conclusion}}{30}{section*.33}

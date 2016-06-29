@@ -49,7 +49,7 @@ Cette résolution est donc maximale quand $\theta=0$ et elle est alors de $\lamb
 \end{figure}
 
 
-Une illustration du lien entre la couverture en nombres d'onde du milieu et l'acquisition ainsi que les sources miroirs est réalisée ci-après. Pour différentes configurations, des transformées de Fourier spatiales du gradient sont réalisées au niveau de 18 points diffractant, le paramètre du modèle étant la vitesse verticale (cf figure~\ref{app:config_reso}).
+Une illustration du lien entre la couverture en nombres d'onde du milieu et l'acquisition ainsi que les sources miroirs est réalisée ci-après. Pour différentes configurations, des transformées de Fourier spatiales du gradient sont réalisées au niveau de 18 points diffractant, le paramètre du modèle étant la vitesse des ondes de compression (cf figure~\ref{app:config_reso}).
 
 \begin{figure}[!h]
 	\centering
@@ -372,7 +372,7 @@ En milieu transverse isotrope, la matrice des constantes élastiques est telles 
 L'approximation acoustique des équations élastiques en milieu vertical transverse isotrope (VTI) impose que $c_{66}$=0, soit $c_{11}=c_{12}$.
  
 
-La paramétrisation du milieu peut donc se faire à l'aide de 4 constantes, que l'on choisit comme étant $v_{p}$, $\rho$ et deux constantes adimensionnelles de Thomsen~\citep{thomsen} (surtout utilisées dans le domaine des Sciences de la Terre) définies comme suit : 
+La paramétrisation du milieu peut donc se faire à l'aide de 4 constantes, que l'on choisit comme étant la vitesse verticale des ondes de compression $v_{p}$, la masse volumique $\rho$ et deux constantes adimensionnelles de Thomsen~\citep{thomsen} (surtout utilisées dans le domaine des Sciences de la Terre) définies comme suit : 
 \begin{eqnarray}
 	\epsilon & =  & \frac{C_{11}-C_{33}}{2C_{33}} = \frac{\bm{v}_{p}.\bm{e}_{x} -  \bm{v}_{p}.\bm{e}_{z}}{\bm{v}_{p}.\bm{e}_{z}},\\
 	\delta & = & \frac{(C_{13}+C_{44})^2-(C_{33}-C_{44})^2}{2C_{33}(C_{33-C_{44}})}\text{.}
@@ -433,12 +433,11 @@ Les résidus issus du modèle initial ($\epsilon$ uniformément nul) montrent qu
 	\end{subfigure}
 	\caption{ Signaux temporels et résidus acquis par les 4 barrettes, dont la numérotation correspond à celle de l'acquisition présentée en figure~\ref{app:ani:data_ap}. La source est le premier élément (le plus à gauche) de la barrette n° 1 et émet une excitation à 2 MHz.   L'échelle d'amplitude est la même pour les 3 figures. \label{app:ani:data}}
 	\end{changemargin}
-\end{figure}\todo[inline]{Pourquoi l'onde direct du capteur 2 est-elle si faible comparée à la première réflexion ?}
+
 
  Pour résumer, les données portent peu d'information sur l'anisotropie et ces informations permettent, au mieux, de reconstruire une image de très faible résolution. On sait qu'en pratique, le faisceau ultrasonore est très impacté par l'anisotropie. Il semble donc qu'un modèle de soudure anisotrope VTI soit donc trop restrictif pour représenter l'anisotropie d'une soudure réelle.\\
  
- Pour tester la capacité de la FWI à reconstruire ces paramètres d'anisotropie, il est donc nécessaire d'utiliser un modèle plus pertinent qui se rapprocherait davantage de celui proposé par \cite{ogilvy} par exemple.\\
-	\cite{ogilvy} propose de simuler l'orientation des grains de la soudure avec un angle représenté sur la figure~\ref{ogilvy_soud}, tel que : 
+ Pour tester la capacité de la FWI à reconstruire ces paramètres d'anisotropie, il est donc nécessaire d'utiliser un modèle plus pertinent qui se rapprocherait davantage de celui développé par \cite{ogilvy} par exemple.	\cite{ogilvy} propose de simuler l'orientation des grains de la soudure avec un angle représenté sur la figure~\ref{ogilvy_soud}, tel que : 
 	\begin{equation}
 		\theta(x,z) = \tan^{-1}\left( \frac{D/2 + z\tan\alpha}{x} \right),
 	\end{equation}

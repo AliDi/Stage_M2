@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.3.4)  28 JUN 2016 18:28
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.3.4)  29 JUN 2016 11:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1468,8 +1468,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 80--81
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 104.
 [6]
 Underfull \hbox (badness 10000) in paragraph at lines 107--109
 
@@ -1495,7 +1493,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 119--120
 
  []
 
-<./img/soudure3.png, id=306, 243.91125pt x 177.42285pt>
+<./img/soudure3.png, id=305, 243.91125pt x 177.42285pt>
 File: ./img/soudure3.png Graphic file (type png)
 
 <use ./img/soudure3.png>
@@ -1506,7 +1504,7 @@ Overfull \hbox (23.09097pt too wide) in paragraph at lines 142--144
  [][] 
  []
 
-<./img/soudure1.png, id=307, 213.55785pt x 161.1621pt>
+<./img/soudure1.png, id=306, 213.55785pt x 161.1621pt>
 File: ./img/soudure1.png Graphic file (type png)
 
 <use ./img/soudure1.png>
@@ -1517,7 +1515,7 @@ Overfull \hbox (37.0047pt too wide) in paragraph at lines 149--150
  [][] 
  []
 
-<./img/soudure2.png, id=308, 203.44005pt x 152.4897pt>
+<./img/soudure2.png, id=307, 203.44005pt x 152.4897pt>
 File: ./img/soudure2.png Graphic file (type png)
 
 <use ./img/soudure2.png>
@@ -1531,7 +1529,7 @@ Overfull \hbox (38.02982pt too wide) in paragraph at lines 155--156
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<img/chassignole_echos_config.png, id=313, 144.90135pt x 114.9093pt>
+<img/chassignole_echos_config.png, id=312, 144.90135pt x 114.9093pt>
 File: img/chassignole_echos_config.png Graphic file (type png)
 
 <use img/chassignole_echos_config.png>
@@ -1543,7 +1541,7 @@ Overfull \hbox (6.94447pt too wide) in paragraph at lines 165--166
  [][] 
  []
 
-<img/chassignole_echos.png, id=314, 168.3891pt x 140.56516pt>
+<img/chassignole_echos.png, id=313, 168.3891pt x 140.56516pt>
 File: img/chassignole_echos.png Graphic file (type png)
 
 <use img/chassignole_echos.png>
@@ -1598,7 +1596,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 62--63
 
  []
 
-<img/anisotrope2.png, id=369, 1943.26pt x 1923.185pt>
+<img/anisotrope2.png, id=368, 1943.26pt x 1923.185pt>
 File: img/anisotrope2.png Graphic file (type png)
 
 <use img/anisotrope2.png>
@@ -1619,7 +1617,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 163--165
 
  []
 
-<img/ambig_phase.png, id=407, 269.20575pt x 225.12105pt>
+<img/ambig_phase.png, id=406, 269.20575pt x 225.12105pt>
 File: img/ambig_phase.png Graphic file (type png)
 
 <use img/ambig_phase.png>
@@ -2027,6 +2025,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 307--309
 
  []
 
+Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
+ine 310.
 
 Overfull \hbox (8.91328pt too wide) in paragraph at lines 310--310
 [][][][]\T1/lmr/m/n/10.95 Pourquoi?  
@@ -2179,16 +2179,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 438--439
 File: img/ogilvy_modele.png Graphic file (type png)
 
 <use img/ogilvy_modele.png>
-Package pdftex.def Info: img/ogilvy_modele.png used on input line 449.
+Package pdftex.def Info: img/ogilvy_modele.png used on input line 448.
 (pdftex.def)             Requested size: 113.81102pt x 118.81795pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 476--477
+Underfull \hbox (badness 10000) in paragraph at lines 475--476
 
  []
 
 [28 <./img/epsilon/e20.png> <./img/epsilon/residu_init.png> <./img/epsilon/resi
 du_final.png> <./img/ogilvy_modele.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 478--479
+Underfull \hbox (badness 10000) in paragraph at lines 477--478
 
  []
 
@@ -2222,7 +2222,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 181.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 181.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 181.
 Package rerunfilecheck Info: File `stage_m2.out' has not changed.
-(rerunfilecheck)             Checksum: D2A398454D7D477D779A3575CDA78EE0;2602.
+(rerunfilecheck)             Checksum: 4BED9D55957BD24B51E9EAEA6444D6E8;2602.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -2230,10 +2230,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 181.
  ) 
 Here is how much of TeX's memory you used:
- 21047 strings out of 493304
- 361851 string characters out of 6139872
- 452466 words of memory out of 5000000
- 23785 multiletter control sequences out of 15000+600000
+ 21045 strings out of 493304
+ 361812 string characters out of 6139872
+ 452438 words of memory out of 5000000
+ 23784 multiletter control sequences out of 15000+600000
  123611 words of font info for 101 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  56i,11n,82p,1214b,776s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2243,20 +2243,21 @@ ips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share
 thit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}</usr/share/texmf/f
 onts/type1/public/lm/lmbsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx10
 .pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts
-/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb
-></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/typ
-e1/public/lm/lmmi6.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/
-share/texmf/fonts/type1/public/lm/lmmib10.pfb></usr/share/texmf/fonts/type1/pub
-lic/lm/lmmib7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share
-/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/
-lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fon
-ts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></
-usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/
-public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb>
-Output written on stage_m2.pdf (34 pages, 7340052 bytes).
+/type1/public/lm/lmbx8.pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb>
+</usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type
+1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi6.pfb></usr/
+share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/publi
+c/lm/lmmib10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmib7.pfb></usr/share
+/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/
+lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fo
+nts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb><
+/usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/p
+ublic/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/sh
+are/texmf/fonts/type1/public/lm/lmsy8.pfb>
+Output written on stage_m2.pdf (34 pages, 7349920 bytes).
 PDF statistics:
- 835 PDF objects out of 1000 (max. 8388607)
- 654 compressed objects within 7 object streams
- 168 named destinations out of 1000 (max. 500000)
+ 838 PDF objects out of 1000 (max. 8388607)
+ 656 compressed objects within 7 object streams
+ 167 named destinations out of 1000 (max. 500000)
  544 words of extra memory for PDF output out of 10000 (max. 10000000)
 
