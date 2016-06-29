@@ -1,4 +1,4 @@
-function fricker_generation(f,n,dt)
+function fricker_generation(f,n,dt,gain)
 	
 	t=(0:n-1)*dt;
 	freqs=(0:n-1)*1/max(t);
@@ -26,6 +26,7 @@ n1=n;
 %%%%%%%%%%
 	
 	%fricker=dx;
+	fricker=gain*fricker;
 
 	figure
 	subplot(2,1,1)

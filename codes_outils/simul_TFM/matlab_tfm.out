@@ -1,0 +1,1024 @@
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2014 The MathWorks, Inc.
+                   R2014b (8.4.0.150421) 64-bit (glnxa64)
+                             September 15, 2014
+
+[Warning: Directory permission denied: /home/dinsenma/.matlabrc] 
+[Warning: Directory permission denied: /home/dinsenma/.matlabrc] 
+ 
+To get started, type one of these: helpwin, helpdesk, or demo.
+For product information, visit www.mathworks.com.
+ 
+>> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> 
+nz =
+
+   160
+
+>> 
+nx =
+
+   272
+
+>> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> Starting parallel pool (parpool) using the 'local' profile ... connected to 4 workers.
+
+ans =
+
+    34
+
+
+ans =
+
+    33
+
+
+ans =
+
+   126
+
+
+ans =
+
+   125
+
+
+ans =
+
+   101
+
+
+ans =
+
+   100
+
+
+ans =
+
+    68
+
+
+ans =
+
+    67
+
+
+ans =
+
+    32
+
+
+ans =
+
+   124
+
+
+ans =
+
+    31
+
+
+ans =
+
+    99
+
+
+ans =
+
+    66
+
+
+ans =
+
+   123
+
+
+ans =
+
+    30
+
+
+ans =
+
+    98
+
+
+ans =
+
+    65
+
+
+ans =
+
+   122
+
+
+ans =
+
+    64
+
+
+ans =
+
+    29
+
+
+ans =
+
+    97
+
+
+ans =
+
+   121
+
+
+ans =
+
+    63
+
+
+ans =
+
+    28
+
+
+ans =
+
+    96
+
+
+ans =
+
+   120
+
+
+ans =
+
+    62
+
+
+ans =
+
+    27
+
+
+ans =
+
+    95
+
+
+ans =
+
+    61
+
+
+ans =
+
+   119
+
+
+ans =
+
+    26
+
+
+ans =
+
+    60
+
+
+ans =
+
+   118
+
+
+ans =
+
+    94
+
+
+ans =
+
+    59
+
+
+ans =
+
+    25
+
+
+ans =
+
+   117
+
+
+ans =
+
+    93
+
+
+ans =
+
+    58
+
+
+ans =
+
+    24
+
+
+ans =
+
+    57
+
+
+ans =
+
+   116
+
+
+ans =
+
+    92
+
+
+ans =
+
+    23
+
+
+ans =
+
+    56
+
+
+ans =
+
+   115
+
+
+ans =
+
+    91
+
+
+ans =
+
+    55
+
+
+ans =
+
+    22
+
+
+ans =
+
+   114
+
+
+ans =
+
+    90
+
+
+ans =
+
+    54
+
+
+ans =
+
+    21
+
+
+ans =
+
+    53
+
+
+ans =
+
+   113
+
+
+ans =
+
+    89
+
+
+ans =
+
+    20
+
+
+ans =
+
+    52
+
+
+ans =
+
+   112
+
+
+ans =
+
+    88
+
+
+ans =
+
+    51
+
+
+ans =
+
+    19
+
+
+ans =
+
+   111
+
+
+ans =
+
+    87
+
+
+ans =
+
+    50
+
+
+ans =
+
+    49
+
+
+ans =
+
+    18
+
+
+ans =
+
+   110
+
+
+ans =
+
+    86
+
+
+ans =
+
+    48
+
+
+ans =
+
+    17
+
+
+ans =
+
+   109
+
+
+ans =
+
+    85
+
+
+ans =
+
+    47
+
+
+ans =
+
+    16
+
+
+ans =
+
+   108
+
+
+ans =
+
+    84
+
+
+ans =
+
+    46
+
+
+ans =
+
+    45
+
+
+ans =
+
+    15
+
+
+ans =
+
+   107
+
+
+ans =
+
+    83
+
+
+ans =
+
+    44
+
+
+ans =
+
+    14
+
+
+ans =
+
+   106
+
+
+ans =
+
+    43
+
+
+ans =
+
+    82
+
+
+ans =
+
+    13
+
+
+ans =
+
+   105
+
+
+ans =
+
+    42
+
+
+ans =
+
+    81
+
+
+ans =
+
+    41
+
+
+ans =
+
+    12
+
+
+ans =
+
+   104
+
+
+ans =
+
+    80
+
+
+ans =
+
+    40
+
+
+ans =
+
+    11
+
+
+ans =
+
+   103
+
+
+ans =
+
+    39
+
+
+ans =
+
+    79
+
+
+ans =
+
+    10
+
+
+ans =
+
+   102
+
+
+ans =
+
+    38
+
+
+ans =
+
+    78
+
+
+ans =
+
+    37
+
+
+ans =
+
+     9
+
+
+ans =
+
+    77
+
+
+ans =
+
+    36
+
+
+ans =
+
+     8
+
+
+ans =
+
+   145
+
+
+ans =
+
+   144
+
+
+ans =
+
+    35
+
+
+ans =
+
+    76
+
+
+ans =
+
+     7
+
+
+ans =
+
+   143
+
+
+ans =
+
+    75
+
+
+ans =
+
+     6
+
+
+ans =
+
+   142
+
+
+ans =
+
+    74
+
+
+ans =
+
+   159
+
+
+ans =
+
+   158
+
+
+ans =
+
+     5
+
+
+ans =
+
+   141
+
+
+ans =
+
+    73
+
+
+ans =
+
+   157
+
+
+ans =
+
+    72
+
+
+ans =
+
+     4
+
+
+ans =
+
+   140
+
+
+ans =
+
+   156
+
+
+ans =
+
+    71
+
+
+ans =
+
+     3
+
+
+ans =
+
+   139
+
+
+ans =
+
+    70
+
+
+ans =
+
+   155
+
+
+ans =
+
+     2
+
+
+ans =
+
+   138
+
+
+ans =
+
+    69
+
+
+ans =
+
+   154
+
+
+ans =
+
+     1
+
+
+ans =
+
+   137
+
+
+ans =
+
+   153
+
+
+ans =
+
+   170
+
+
+ans =
+
+   169
+
+
+ans =
+
+   136
+
+
+ans =
+
+   152
+
+
+ans =
+
+   168
+
+
+ans =
+
+   178
+
+
+ans =
+
+   177
+
+
+ans =
+
+   135
+
+
+ans =
+
+   167
+
+
+ans =
+
+   151
+
+
+ans =
+
+   176
+
+
+ans =
+
+   134
+
+
+ans =
+
+   166
+
+
+ans =
+
+   150
+
+
+ans =
+
+   165
+
+
+ans =
+
+   175
+
+
+ans =
+
+   133
+
+
+ans =
+
+   149
+
+
+ans =
+
+   164
+
+
+ans =
+
+   174
+
+
+ans =
+
+   132
+
+
+ans =
+
+   163
+
+
+ans =
+
+   148
+
+
+ans =
+
+   173
+
+
+ans =
+
+   131
+
+
+ans =
+
+   162
+
+
+ans =
+
+   161
+
+
+ans =
+
+   147
+
+
+ans =
+
+   172
+
+
+ans =
+
+   130
+
+
+ans =
+
+   160
+
+
+ans =
+
+   146
+
+
+ans =
+
+   129
+
+
+ans =
+
+   171
+
+
+ans =
+
+   128
+
+
+ans =
+
+   184
+
+
+ans =
+
+   183
+
+
+ans =
+
+   189
+
+
+ans =
+
+   188
+
+
+ans =
+
+   194
+
+
+ans =
+
+   193
+
+
+ans =
+
+   127
+
+
+ans =
+
+   182
+
+
+ans =
+
+   181
+
+
+ans =
+
+   187
+
+
+ans =
+
+   192
+
+
+ans =
+
+   199
+
+
+ans =
+
+   198
+
+
+ans =
+
+   180
+
+
+ans =
+
+   186
+
+
+ans =
+
+   191
+
+
+ans =
+
+   179
+
+
+ans =
+
+   197
+
+
+ans =
+
+   185
+
+
+ans =
+
+   190
+
+
+ans =
+
+   200
+
+
+ans =
+
+   196
+
+
+ans =
+
+   195
+
+>> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> 
