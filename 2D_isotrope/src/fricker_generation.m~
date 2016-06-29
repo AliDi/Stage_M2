@@ -3,7 +3,7 @@ function fricker_generation(f,n,dt)
 	t=(0:n-1)*dt;
 	freqs=(0:n-1)*1/max(t);
 	
-	fricker=ricker(f,n,dt);
+	fricker=10^5*ricker(f,n,dt);
 	
 
 %%%%%%%%%% Fonction de Romain %%%%%%%%%%
@@ -25,7 +25,7 @@ n1=n;
  
 %%%%%%%%%%
 	
-	fricker=dx;
+	%fricker=dx;
 
 	figure
 	subplot(2,1,1)

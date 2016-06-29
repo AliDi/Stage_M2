@@ -11,12 +11,12 @@ f=2e6*R;			% frequence centrale du transducteur en Hz
 vp=6000;			%vitesse du milieu en m/s
 l=vp/f;				%longueur d'onde en m
 
-h=vp/(2*2e6)/6;				%pas de discrétisation : en fdtd o(4), respecter 5 pts par longueur d'onde
+h=0.00016;%vp/(2*2e6)/6;				%pas de discrétisation : en fdtd o(4), respecter 5 pts par longueur d'onde
 
-nz=floor(0.05/h) %floor(10*l /h)				%nb de points en z
-nx=floor(0.10/h) %floor(50*l/2 /h)				%nb de points en x
+nz=300%floor(0.05/h) %floor(10*l /h)				%nb de points en z
+nx=600%floor(0.10/h) %floor(50*l/2 /h)				%nb de points en x
 
-dt=1.4e-8/R;
+dt=9.3e-9%1.4e-8/R;
 
 
 
@@ -52,7 +52,7 @@ Larg=6*l; 			%longueur du crack en m
 long=h;				%largeur du crack en m
 angl= 65;
 vp_crack=5000;
-rho_crack=5000;
+rho_crack=3000;
 
 
 [vp_true rho_true]=vp_true_crack(vp_true , vp_crack , rho_true , rho_crack , long , Larg , angl , xpos_center , zpos_center , nz , nx , h);
@@ -66,7 +66,7 @@ xpos_center=ceil(nx/2)*h;   %position du centre du défaut en m
 zpos_center=10*l;
 
 vp_inclusion=5000;
-rho_inclusion=5000;
+rho_inclusion=3000;
 r=l/4;						%rayon de l'inclusion en m
 
 [vp_true rho_true]=vp_true_inclusion(vp_true , vp_inclusion , rho_true , rho_inclusion , r , xpos_center , zpos_center , nz , nx , h);
@@ -110,7 +110,7 @@ xpos_sources2 = nx/2*h;
 zpos_recep2 = zpos_sources2;
 xpos_recep2 =  xpos_sources2;
 
-%[x_sources, z_sources, x_recep, z_recep]=acqui_generation_multielement(nb_elements , pitch , zpos_sources , xpos_sources , zpos_recep , xpos_recep , nz , nx , h , 'on');
+%[x_sources, z_sources, x_recep, z_recep]=acqui_generation_multielement(nb_elements , pitch , zpos_sources1 , xpos_sources1 , zpos_recep1 , xpos_recep1 , nz , nx , h , 'on');
 
 [x_sources z_sources x_recep z_recep]= acqui_generation_multielement_2trans(nb_elements , pitch ,  zpos_sources1 , xpos_sources1 , zpos_sources2 , xpos_sources2 , zpos_recep1 , xpos_recep1 , zpos_recep2 , xpos_recep2 , nz , nx , h , 'on');
 
@@ -128,7 +128,7 @@ disp(["Avec h=" num2str(h) " m, il faut que dt <= " num2str(dt_max) "s.\n\n"])
 
 %%%%%%%%%% Generation du signal d'excitation fricker %%%%%%%%%%
 
-fricker_generation(f,1024,dt)
+fricker_generation(f,2000,dt)
 title('excitation')
 
 
