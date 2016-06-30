@@ -8,15 +8,15 @@ A level-1 auxiliary file: application.aux
 A level-1 auxiliary file: conclusion.aux
 The style file: plainnat.bst
 Database file #1: biblio.bib
-I was expecting a `,' or a `}'---line 200 of file biblio.bib
+I was expecting a `,' or a `}'---line 195 of file biblio.bib
  :     pages =        {~p.~WCC105}
  :                                --WCC118}
 I'm skipping whatever remains of this entry
-You're missing a field part---line 374 of file biblio.bib
+You're missing a field part---line 367 of file biblio.bib
  :    eid = 
  :          ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 459 of file biblio.bib
+Repeated entry---line 452 of file biblio.bib
  : @article{ogilvy
  :                ,
 I'm skipping whatever remains of this entry
@@ -24,16 +24,16 @@ Warning--there's a number but no volume in doctor_saft
 Warning--there's a number but no volume in holmes_tfm
 You've used 45 entries,
             2773 wiz_defined-function locations,
-            856 strings with 11683 characters,
-and the built_in function-call counts, 21549 in all, are:
-= -- 2024
+            856 strings with 11695 characters,
+and the built_in function-call counts, 21562 in all, are:
+= -- 2027
 > -- 971
 < -- 35
 + -- 338
 - -- 292
-* -- 1747
-:= -- 3243
-add.period$ -- 142
+* -- 1748
+:= -- 3246
+add.period$ -- 143
 call.type$ -- 45
 change.case$ -- 223
 chr.to.int$ -- 44
@@ -41,13 +41,13 @@ cite$ -- 92
 duplicate$ -- 966
 empty$ -- 1894
 format.name$ -- 349
-if$ -- 4534
+if$ -- 4537
 int.to.chr$ -- 2
 int.to.str$ -- 1
 missing$ -- 43
-newline$ -- 236
+newline$ -- 237
 num.names$ -- 184
-pop$ -- 431
+pop$ -- 430
 preamble$ -- 1
 purify$ -- 186
 quote$ -- 0
@@ -62,5 +62,5 @@ type$ -- 480
 warning$ -- 2
 while$ -- 210
 width$ -- 0
-write$ -- 598
+write$ -- 600
 (There were 3 error messages)

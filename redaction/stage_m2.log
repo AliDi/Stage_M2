@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.3.4)  29 JUN 2016 11:43
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.3.4)  30 JUN 2016 16:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1144,7 +1144,7 @@ LaTeX Warning: Label `' multiply defined.
 
 LaTeX Warning: Label `sub@' multiply defined.
 
-) (./application.aux) (./conclusion.aux))
+) (./application.aux) (./conclusion.aux) (./annexes.aux))
 \openout1 = `stage_m2.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 78.
@@ -1309,7 +1309,7 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 93.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<img/univ.png, id=135, 609.27625pt x 282.05376pt>
+<img/univ.png, id=143, 609.27625pt x 282.05376pt>
 File: img/univ.png Graphic file (type png)
  <use img/univ.png>
 Package pdftex.def Info: img/univ.png used on input line 133.
@@ -1325,13 +1325,13 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10> on input line 134.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 134.
-<img/cnrs.png, id=137, 170.7981pt x 170.7981pt>
+<img/cnrs.png, id=145, 170.7981pt x 170.7981pt>
 File: img/cnrs.png Graphic file (type png)
  <use img/cnrs.png>
 Package pdftex.def Info: img/cnrs.png used on input line 137.
 (pdftex.def)             Requested size: 71.13007pt x 71.13188pt.
 
-<img/isterre.png, id=138, 592.2125pt x 428.60126pt>
+<img/isterre.png, id=146, 592.2125pt x 428.60126pt>
 File: img/isterre.png Graphic file (type png)
  <use img/isterre.png>
 Package pdftex.def Info: img/isterre.png used on input line 141.
@@ -1340,8 +1340,21 @@ Package pdftex.def Info: img/isterre.png used on input line 141.
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./img/univ.png> <./img/cnr
-s.png (PNG copy)> <./img/isterre.png (PNG copy)>] (./remerciements.tex)
-(./abstract.tex
+s.png (PNG copy)> <./img/isterre.png (PNG copy)>] (./stage_m2.tdo
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 1.
+)
+\tf@tdo=\write6
+\openout6 = `stage_m2.tdo'.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.155 \newpage
+               [1
+
+] (./remerciements.tex) (./abstract.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
@@ -1351,19 +1364,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--6
 
  []
 
-)pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.159 \tableofcontents
-                      } [1] (./stage_m2.toc
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 2.
-)
-\tf@toc=\write6
-\openout6 = `stage_m2.toc'.
+) [2] (./stage_m2.toc)
+\tf@toc=\write7
+\openout7 = `stage_m2.toc'.
 
- [2
+ [3
 
 ]
 \openout2 = `introduction.aux'.
@@ -1389,11 +1394,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 8--9
  []
 
 
+Package natbib Warning: Citation `devaney_82' on page 4 undefined on input line
+ 11.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 11--12
 
  []
 
-) [3
+) [4
 
 
 ]
@@ -1421,7 +1430,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 24--25
 
  []
 
-<img/scan2.png, id=201, 349.0641pt x 261.6174pt>
+<img/scan2.png, id=225, 349.0641pt x 261.6174pt>
 File: img/scan2.png Graphic file (type png)
  <use img/scan2.png>
 Package pdftex.def Info: img/scan2.png used on input line 33.
@@ -1431,7 +1440,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 37--38
 
  []
 
-[4
+[5
 
 
 
@@ -1440,9 +1449,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 43--44
 
  []
 
-[5 <./img/scan2.png>]
+[6 <./img/scan2.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 58--59
 
+ []
+
+
+Overfull \hbox (0.55687pt too wide) in paragraph at lines 68--69
+\T1/lmr/m/n/10.95 va-riances des si-gnaux tem-po-rels. Les mé-thodes telles que
+ MUl-tiple Si-gnal Clas-si-fi-ca-tion ([][]Schmidt[][],
  []
 
 
@@ -1468,91 +1483,100 @@ Underfull \hbox (badness 10000) in paragraph at lines 80--81
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[6]
-Underfull \hbox (badness 10000) in paragraph at lines 107--109
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 111--112
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 114--115
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 116--118
-
- []
+Package natbib Warning: Citation `marfurt' on page 7 undefined on input line 10
+4.
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 119--120
+Underfull \hbox (badness 10000) in paragraph at lines 109--111
 
  []
 
-<./img/soudure3.png, id=305, 243.91125pt x 177.42285pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 113--114
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 116--117
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 118--119
+
+ []
+
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 120--121
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 122--123
+
+ []
+
+<./img/soudure3.png, id=326, 243.91125pt x 177.42285pt>
 File: ./img/soudure3.png Graphic file (type png)
 
 <use ./img/soudure3.png>
-Package pdftex.def Info: ./img/soudure3.png used on input line 142.
+Package pdftex.def Info: ./img/soudure3.png used on input line 145.
 (pdftex.def)             Requested size: 136.902pt x 99.58464pt.
 
-Overfull \hbox (23.09097pt too wide) in paragraph at lines 142--144
+Overfull \hbox (23.09097pt too wide) in paragraph at lines 145--147
  [][] 
  []
 
-<./img/soudure1.png, id=306, 213.55785pt x 161.1621pt>
+<./img/soudure1.png, id=327, 213.55785pt x 161.1621pt>
 File: ./img/soudure1.png Graphic file (type png)
 
 <use ./img/soudure1.png>
-Package pdftex.def Info: ./img/soudure1.png used on input line 149.
+Package pdftex.def Info: ./img/soudure1.png used on input line 152.
 (pdftex.def)             Requested size: 150.81572pt x 113.81102pt.
 
-Overfull \hbox (37.0047pt too wide) in paragraph at lines 149--150
+Overfull \hbox (37.0047pt too wide) in paragraph at lines 152--153
  [][] 
  []
 
-<./img/soudure2.png, id=307, 203.44005pt x 152.4897pt>
+<./img/soudure2.png, id=328, 203.44005pt x 152.4897pt>
 File: ./img/soudure2.png Graphic file (type png)
 
 <use ./img/soudure2.png>
-Package pdftex.def Info: ./img/soudure2.png used on input line 155.
+Package pdftex.def Info: ./img/soudure2.png used on input line 158.
 (pdftex.def)             Requested size: 151.84084pt x 113.81102pt.
 
-Overfull \hbox (38.02982pt too wide) in paragraph at lines 155--156
+Overfull \hbox (38.02982pt too wide) in paragraph at lines 158--159
  [][] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<img/chassignole_echos_config.png, id=312, 144.90135pt x 114.9093pt>
+<img/chassignole_echos_config.png, id=333, 144.90135pt x 114.9093pt>
 File: img/chassignole_echos_config.png Graphic file (type png)
 
 <use img/chassignole_echos_config.png>
 Package pdftex.def Info: img/chassignole_echos_config.png used on input line 16
-5.
+8.
 (pdftex.def)             Requested size: 143.51909pt x 113.81102pt.
 
-Overfull \hbox (6.94447pt too wide) in paragraph at lines 165--166
+Overfull \hbox (6.94447pt too wide) in paragraph at lines 168--169
  [][] 
  []
 
-<img/chassignole_echos.png, id=313, 168.3891pt x 140.56516pt>
+<img/chassignole_echos.png, id=334, 168.3891pt x 140.56516pt>
 File: img/chassignole_echos.png Graphic file (type png)
 
 <use img/chassignole_echos.png>
-Package pdftex.def Info: img/chassignole_echos.png used on input line 171.
+Package pdftex.def Info: img/chassignole_echos.png used on input line 174.
 (pdftex.def)             Requested size: 136.34045pt x 113.81102pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) [8] [9 <./img/soudure3.png> <./img/soudure1.png> <./img/soudure2.png> <./img/
-chassignole_echos_config.png> <./img/chassignole_echos.png>]
+) [9] [10 <./img/soudure3.png> <./img/soudure1.png> <./img/soudure2.png> <./img
+/chassignole_echos_config.png> <./img/chassignole_echos.png>]
 \openout2 = `fwi.aux'.
 
  (./fwi.tex
@@ -1582,7 +1606,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 55--56
 
  []
 
-[10
+[11
 
 
 
@@ -1596,7 +1620,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 62--63
 
  []
 
-<img/anisotrope2.png, id=368, 1943.26pt x 1923.185pt>
+<img/anisotrope2.png, id=387, 1943.26pt x 1923.185pt>
 File: img/anisotrope2.png Graphic file (type png)
 
 <use img/anisotrope2.png>
@@ -1607,85 +1631,106 @@ Overfull \hbox (21.11882pt too wide) in paragraph at lines 91--92
  [][] 
  []
 
-[11 <./img/anisotrope2.png>]
+[12 <./img/anisotrope2.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 131--132
 
  []
 
-[12]
-Underfull \hbox (badness 10000) in paragraph at lines 163--165
+[13]
+Underfull \hbox (badness 10000) in paragraph at lines 162--164
 
  []
 
-<img/ambig_phase.png, id=406, 269.20575pt x 225.12105pt>
+<img/ambig_phase.png, id=424, 269.20575pt x 225.12105pt>
 File: img/ambig_phase.png Graphic file (type png)
 
 <use img/ambig_phase.png>
-Package pdftex.def Info: img/ambig_phase.png used on input line 186.
+Package pdftex.def Info: img/ambig_phase.png used on input line 185.
 (pdftex.def)             Requested size: 204.15485pt x 170.71652pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[13]
-Underfull \hbox (badness 10000) in paragraph at lines 197--198
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 196--197
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 203--205
+Underfull \hbox (badness 10000) in paragraph at lines 202--204
 
  []
 
-<img/rayonnement.png, id=425, 766.7847pt x 145.2627pt>
+[15 <./img/ambig_phase.png>]
+<img/rayonnement.png, id=451, 766.7847pt x 145.2627pt>
 File: img/rayonnement.png Graphic file (type png)
 
 <use img/rayonnement.png>
-Package pdftex.def Info: img/rayonnement.png used on input line 211.
+Package pdftex.def Info: img/rayonnement.png used on input line 210.
 (pdftex.def)             Requested size: 500.77129pt x 94.86736pt.
 
-Overfull \hbox (17.07443pt too wide) in paragraph at lines 211--212
+Overfull \hbox (17.07443pt too wide) in paragraph at lines 210--211
 [] [] 
  []
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+Package natbib Warning: Citation `sirgue_valhall' on page 16 undefined on input
+ line 226.
 
-[14 <./img/ambig_phase.png>]
+
 Underfull \hbox (badness 10000) in paragraph at lines 226--227
 
  []
 
-<img/dispo_valhall.jpg, id=441, 1230.5975pt x 731.73375pt>
+<img/dispo_valhall.jpg, id=460, 1230.5975pt x 731.73375pt>
 File: img/dispo_valhall.jpg Graphic file (type jpg)
 
 <use img/dispo_valhall.jpg>
 Package pdftex.def Info: img/dispo_valhall.jpg used on input line 232.
 (pdftex.def)             Requested size: 239.24261pt x 142.26378pt.
- <img/geophy1.png, id=443, 241.3818pt x 151.0443pt>
-File: img/geophy1.png Graphic file (type png)
 
-<use img/geophy1.png>
+
+Package natbib Warning: Citation `sirgue_valhall' on page 16 undefined on input
+ line 233.
+
+
+Package natbib Warning: Citation `sirgue_valhall' on page 16 undefined on input
+ line 233.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<img/geophy1.png, id=462, 241.3818pt x 151.0443pt>
+File: img/geophy1.png Graphic file (type png)
+ <use img/geophy1.png>
 Package pdftex.def Info: img/geophy1.png used on input line 241.
 (pdftex.def)             Requested size: 182.09486pt x 113.9467pt.
- <img/geophy2.png, id=444, 239.2137pt x 149.5989pt>
-File: img/geophy2.png Graphic file (type png)
 
-<use img/geophy2.png>
+<img/geophy2.png, id=463, 239.2137pt x 149.5989pt>
+File: img/geophy2.png Graphic file (type png)
+ <use img/geophy2.png>
 Package pdftex.def Info: img/geophy2.png used on input line 247.
 (pdftex.def)             Requested size: 182.09486pt x 113.88123pt.
- <img/geophy3.png, id=445, 242.1045pt x 140.56516pt>
-File: img/geophy3.png Graphic file (type png)
 
-<use img/geophy3.png>
+<img/geophy3.png, id=464, 242.1045pt x 140.56516pt>
+File: img/geophy3.png Graphic file (type png)
+ <use img/geophy3.png>
 Package pdftex.def Info: img/geophy3.png used on input line 252.
 (pdftex.def)             Requested size: 182.09486pt x 105.72601pt.
- <img/geophy4.png, id=446, 238.491pt x 140.56516pt>
-File: img/geophy4.png Graphic file (type png)
 
-<use img/geophy4.png>
+<img/geophy4.png, id=465, 238.491pt x 140.56516pt>
+File: img/geophy4.png Graphic file (type png)
+ <use img/geophy4.png>
 Package pdftex.def Info: img/geophy4.png used on input line 258.
 (pdftex.def)             Requested size: 182.09486pt x 107.32822pt.
+
+
+Package natbib Warning: Citation `sirgue_valhall' on page 16 undefined on input
+ line 262.
+
+
+Package natbib Warning: Citation `sirgue_valhall' on page 16 undefined on input
+ line 262.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1695,13 +1740,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 265--266
 
  []
 
-[15 <./img/rayonnement.png> <./img/dispo_valhall.jpg>]
+[16 <./img/rayonnement.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 267--268
 
  []
 
-) [16 <./img/geophy1.png> <./img/geophy2.png> <./img/geophy3.png> <./img/geophy
-4.png>]
+) [17 <./img/dispo_valhall.jpg> <./img/geophy1.png> <./img/geophy2.png> <./img/
+geophy3.png> <./img/geophy4.png>]
 \openout2 = `application.aux'.
 
  (./application.tex
@@ -1724,7 +1769,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--8
 
  []
 
-[17
+[18
 
 
 
@@ -1733,27 +1778,29 @@ Underfull \hbox (badness 10000) in paragraph at lines 41--44
 
  []
 
-<img/reso.png, id=484, 316.90395pt x 222.23026pt>
+<img/reso.png, id=504, 316.90395pt x 222.23026pt>
 File: img/reso.png Graphic file (type png)
  <use img/reso.png>
 Package pdftex.def Info: img/reso.png used on input line 47.
 (pdftex.def)             Requested size: 121.72067pt x 85.35826pt.
 
-<img/vp_scat.png, id=486, 811.95345pt x 440.847pt>
+<img/vp_scat.png, id=506, 811.95345pt x 440.847pt>
 File: img/vp_scat.png Graphic file (type png)
  <use img/vp_scat.png>
 Package pdftex.def Info: img/vp_scat.png used on input line 56.
 (pdftex.def)             Requested size: 262.01094pt x 142.26378pt.
 
-[18 <./img/reso.png> <./img/vp_scat.png>]
-<img/echelle_fft.png, id=504, 121.05225pt x 646.8165pt>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<img/echelle_fft.png, id=509, 121.05225pt x 646.8165pt>
 File: img/echelle_fft.png Graphic file (type png)
 
 <use img/echelle_fft.png>
 Package pdftex.def Info: img/echelle_fft.png used on input line 68.
 (pdftex.def)             Requested size: 14.22636pt x 76.00587pt.
 
-<img/ssfreesurf_150k.png, id=505, 844.1136pt x 426.03165pt>
+<img/ssfreesurf_150k.png, id=510, 844.1136pt x 426.03165pt>
 File: img/ssfreesurf_150k.png Graphic file (type png)
 
 <use img/ssfreesurf_150k.png>
@@ -1764,7 +1811,7 @@ Overfull \hbox (5.68916pt too wide) in paragraph at lines 71--72
 [] [] 
  []
 
-<img/fft2d_nofreesurf_2MHz.png, id=506, 841.58415pt x 426.03165pt>
+<img/fft2d_nofreesurf_2MHz.png, id=511, 841.58415pt x 426.03165pt>
 File: img/fft2d_nofreesurf_2MHz.png Graphic file (type png)
 
 <use img/fft2d_nofreesurf_2MHz.png>
@@ -1775,14 +1822,18 @@ Overfull \hbox (91.04742pt too wide) in paragraph at lines 77--78
 [][] 
  []
 
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[19 <./img/reso.png>]
 File: img/echelle_fft.png Graphic file (type png)
-<use img/echelle_fft.png>
+ <use img/echelle_fft.png>
 Package pdftex.def Info: img/echelle_fft.png used on input line 94.
 (pdftex.def)             Requested size: 14.22636pt x 76.00587pt.
- <img/1400pt.png, id=510, 841.58415pt x 426.03165pt>
-File: img/1400pt.png Graphic file (type png)
 
-<use img/1400pt.png>
+<img/1400pt.png, id=529, 841.58415pt x 426.03165pt>
+File: img/1400pt.png Graphic file (type png)
+ <use img/1400pt.png>
 Package pdftex.def Info: img/1400pt.png used on input line 97.
 (pdftex.def)             Requested size: 273.14229pt x 138.27013pt.
 
@@ -1790,7 +1841,7 @@ Overfull \hbox (5.68916pt too wide) in paragraph at lines 97--98
 [] [] 
  []
 
-<img/4200pt.png, id=511, 842.6682pt x 426.03165pt>
+<img/4200pt.png, id=530, 842.6682pt x 426.03165pt>
 File: img/4200pt.png Graphic file (type png)
  <use img/4200pt.png>
 Package pdftex.def Info: img/4200pt.png used on input line 103.
@@ -1800,14 +1851,14 @@ Overfull \hbox (71.13058pt too wide) in paragraph at lines 103--104
 [] [] 
  []
 
-<img/reso_surf_libre.png, id=513, 417.7206pt x 347.25735pt>
+<img/reso_surf_libre.png, id=532, 417.7206pt x 347.25735pt>
 File: img/reso_surf_libre.png Graphic file (type png)
 
 <use img/reso_surf_libre.png>
 Package pdftex.def Info: img/reso_surf_libre.png used on input line 114.
 (pdftex.def)             Requested size: 171.13269pt x 142.26378pt.
- [19 <./img/echelle_fft.png> <./img/ssfreesurf_150k.png> <./img/fft2d_nofreesur
-f_2MHz.png> <./img/1400pt.png> <./img/4200pt.png>]
+ [20 <./img/vp_scat.png> <./img/echelle_fft.png> <./img/ssfreesurf_150k.png> <.
+/img/fft2d_nofreesurf_2MHz.png> <./img/1400pt.png> <./img/4200pt.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 124--125
 
  []
@@ -1817,7 +1868,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 141--143
 
  []
 
-[20 <./img/reso_surf_libre.png>]
+[21 <./img/reso_surf_libre.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 149--151
 
  []
@@ -1829,370 +1880,373 @@ lieu acous-tique iso-trope. Les constantes
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 171--172
+Overfull \hbox (1.24619pt too wide) in paragraph at lines 166--167
+[]\T1/lmr/m/n/10.95 Deux types d'in-ver-sions sont pro-po-sée par la suite pour
+ une pa-ra-mé-tri-sa-tion masse volumique-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 166--167
 
  []
 
-<img/milieux_ps/vp_true.png, id=542, 686.565pt x 370.38374pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 173--174
+
+ []
+
+[22] <img/milieux_ps/vp_true.png, id=573, 686.565pt x 370.38374pt>
 File: img/milieux_ps/vp_true.png Graphic file (type png)
 
 <use img/milieux_ps/vp_true.png>
-Package pdftex.def Info: img/milieux_ps/vp_true.png used on input line 177.
+Package pdftex.def Info: img/milieux_ps/vp_true.png used on input line 179.
 (pdftex.def)             Requested size: 204.85846pt x 110.51125pt.
 
-<img/milieux_ps/rho_true.png, id=543, 688.0104pt x 330.2739pt>
+<img/milieux_ps/rho_true.png, id=574, 688.0104pt x 330.2739pt>
 File: img/milieux_ps/rho_true.png Graphic file (type png)
 
 <use img/milieux_ps/rho_true.png>
-Package pdftex.def Info: img/milieux_ps/rho_true.png used on input line 181.
+Package pdftex.def Info: img/milieux_ps/rho_true.png used on input line 183.
 (pdftex.def)             Requested size: 204.85846pt x 98.33707pt.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 188--189
-
- []
-
-[21]
-Underfull \hbox (badness 10000) in paragraph at lines 190--191
+Underfull \hbox (badness 10000) in paragraph at lines 191--192
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 192--193
+Underfull \hbox (badness 10000) in paragraph at lines 193--194
 
  []
 
-<img/rho_sur_donnees/data_rho_uni.png, id=559, 443.0151pt x 585.387pt>
+<img/rho_sur_donnees/data_rho_uni.png, id=576, 443.0151pt x 585.387pt>
 File: img/rho_sur_donnees/data_rho_uni.png Graphic file (type png)
 
 <use img/rho_sur_donnees/data_rho_uni.png>
 Package pdftex.def Info: img/rho_sur_donnees/data_rho_uni.png used on input lin
 e 201.
 (pdftex.def)             Requested size: 163.88739pt x 216.55406pt.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 202.
 
-<img/rho_sur_donnees/data_rho_vrai.png, id=560, 449.5194pt x 585.387pt>
+<img/rho_sur_donnees/data_rho_vrai.png, id=577, 449.5194pt x 585.387pt>
 File: img/rho_sur_donnees/data_rho_vrai.png Graphic file (type png)
 
 <use img/rho_sur_donnees/data_rho_vrai.png>
 Package pdftex.def Info: img/rho_sur_donnees/data_rho_vrai.png used on input li
 ne 206.
 (pdftex.def)             Requested size: 163.88739pt x 213.41884pt.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 207.
 
-<img/mono_param/vp_uni.png, id=561, 685.1196pt x 330.63525pt>
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 214--215
+
+ []
+
+[23 <./img/milieux_ps/vp_true.png> <./img/milieux_ps/rho_true.png>]
+<img/mono_param/vp_uni.png, id=591, 685.1196pt x 330.63525pt>
 File: img/mono_param/vp_uni.png Graphic file (type png)
 
 <use img/mono_param/vp_uni.png>
-Package pdftex.def Info: img/mono_param/vp_uni.png used on input line 220.
+Package pdftex.def Info: img/mono_param/vp_uni.png used on input line 225.
 (pdftex.def)             Requested size: 173.27327pt x 83.61717pt.
 
-<img/mono_param/vp_smooth.png, id=562, 684.75826pt x 330.2739pt>
+<img/mono_param/vp_smooth.png, id=592, 684.75826pt x 330.2739pt>
 File: img/mono_param/vp_smooth.png Graphic file (type png)
 
 <use img/mono_param/vp_smooth.png>
-Package pdftex.def Info: img/mono_param/vp_smooth.png used on input line 226.
+Package pdftex.def Info: img/mono_param/vp_smooth.png used on input line 231.
 (pdftex.def)             Requested size: 173.27327pt x 83.57114pt.
 File: img/mono_param/vp_smooth.png Graphic file (type png)
  <use img/mono_param/vp_smooth.png>
-Package pdftex.def Info: img/mono_param/vp_smooth.png used on input line 232.
+Package pdftex.def Info: img/mono_param/vp_smooth.png used on input line 237.
 (pdftex.def)             Requested size: 173.27327pt x 83.57114pt.
 
-<img/mono_param/vp_final_uni.png, id=563, 685.8423pt x 330.2739pt>
+<img/mono_param/vp_final_uni.png, id=593, 685.8423pt x 330.2739pt>
 File: img/mono_param/vp_final_uni.png Graphic file (type png)
 
 <use img/mono_param/vp_final_uni.png>
-Package pdftex.def Info: img/mono_param/vp_final_uni.png used on input line 236
+Package pdftex.def Info: img/mono_param/vp_final_uni.png used on input line 241
 .
 (pdftex.def)             Requested size: 173.27327pt x 83.44011pt.
 
-<img/mono_param/vp_final_smooth.png, id=564, 688.0104pt x 330.2739pt>
+<img/mono_param/vp_final_smooth.png, id=594, 688.0104pt x 330.2739pt>
 File: img/mono_param/vp_final_smooth.png Graphic file (type png)
 
 <use img/mono_param/vp_final_smooth.png>
 Package pdftex.def Info: img/mono_param/vp_final_smooth.png used on input line 
-240.
+245.
 (pdftex.def)             Requested size: 173.27327pt x 83.17805pt.
 
-<img/mono_param/rho_mono.png, id=565, 686.20364pt x 330.2739pt>
+<img/mono_param/rho_mono.png, id=595, 686.20364pt x 330.2739pt>
 File: img/mono_param/rho_mono.png Graphic file (type png)
 
 <use img/mono_param/rho_mono.png>
-Package pdftex.def Info: img/mono_param/rho_mono.png used on input line 244.
+Package pdftex.def Info: img/mono_param/rho_mono.png used on input line 249.
 (pdftex.def)             Requested size: 173.27327pt x 83.39474pt.
 
-<img/mono_param/coupe_vp_mono_uni_hor.png, id=566, 425.6703pt x 318.7107pt>
+<img/mono_param/coupe_vp_mono_uni_hor.png, id=596, 425.6703pt x 318.7107pt>
 File: img/mono_param/coupe_vp_mono_uni_hor.png Graphic file (type png)
 
 <use img/mono_param/coupe_vp_mono_uni_hor.png>
 Package pdftex.def Info: img/mono_param/coupe_vp_mono_uni_hor.png used on input
- line 248.
+ line 253.
 (pdftex.def)             Requested size: 173.27327pt x 129.73363pt.
 
-<img/mono_param/coupe_vp_mono_smooth_hor.png, id=567, 427.47705pt x 318.34935pt
+<img/mono_param/coupe_vp_mono_smooth_hor.png, id=597, 427.47705pt x 318.34935pt
 >
 File: img/mono_param/coupe_vp_mono_smooth_hor.png Graphic file (type png)
  <use img/mono_param/coupe_vp_mono_smooth_hor.png>
 Package pdftex.def Info: img/mono_param/coupe_vp_mono_smooth_hor.png used on in
-put line 252.
+put line 257.
 (pdftex.def)             Requested size: 173.27327pt x 129.03764pt.
 
-<img/mono_param/coupe_rho_mono.png, id=568, 429.64516pt x 318.34935pt>
+<img/mono_param/coupe_rho_mono.png, id=598, 429.64516pt x 318.34935pt>
 File: img/mono_param/coupe_rho_mono.png Graphic file (type png)
 
 <use img/mono_param/coupe_rho_mono.png>
 Package pdftex.def Info: img/mono_param/coupe_rho_mono.png used on input line 2
-56.
+61.
 (pdftex.def)             Requested size: 173.27327pt x 128.38672pt.
 
-<img/mono_param/coupe_vp_mono_uni_vert.png, id=569, 415.91385pt x 323.7696pt>
+<img/mono_param/coupe_vp_mono_uni_vert.png, id=599, 415.91385pt x 323.7696pt>
 File: img/mono_param/coupe_vp_mono_uni_vert.png Graphic file (type png)
 
 <use img/mono_param/coupe_vp_mono_uni_vert.png>
 Package pdftex.def Info: img/mono_param/coupe_vp_mono_uni_vert.png used on inpu
-t line 260.
+t line 265.
 (pdftex.def)             Requested size: 173.27327pt x 134.88554pt.
 
-<img/mono_param/coupe_vp_mono_smooth_vert.png, id=570, 416.63655pt x 321.6015pt
+<img/mono_param/coupe_vp_mono_smooth_vert.png, id=600, 416.63655pt x 321.6015pt
 >
 File: img/mono_param/coupe_vp_mono_smooth_vert.png Graphic file (type png)
  <use img/mono_param/coupe_vp_mono_smooth_vert.png>
 Package pdftex.def Info: img/mono_param/coupe_vp_mono_smooth_vert.png used on i
-nput line 264.
+nput line 269.
 (pdftex.def)             Requested size: 173.27327pt x 133.75165pt.
 
-<img/mono_param/coupe_rho_mono_vert.png, id=571, 410.13225pt x 329.5512pt>
+<img/mono_param/coupe_rho_mono_vert.png, id=601, 410.13225pt x 329.5512pt>
 File: img/mono_param/coupe_rho_mono_vert.png Graphic file (type png)
 
 <use img/mono_param/coupe_rho_mono_vert.png>
 Package pdftex.def Info: img/mono_param/coupe_rho_mono_vert.png used on input l
-ine 268.
+ine 273.
 (pdftex.def)             Requested size: 173.27327pt x 139.2302pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 275--276
+Underfull \hbox (badness 10000) in paragraph at lines 280--282
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 278--279
+Underfull \hbox (badness 10000) in paragraph at lines 284--285
 
  []
 
-[22 <./img/milieux_ps/vp_true.png> <./img/milieux_ps/rho_true.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 282--283
+
+Underfull \hbox (badness 10000) in paragraph at lines 290--291
 
  []
 
-<img/config_reelle_true.png, id=583, 744.01965pt x 290.16405pt>
-File: img/config_reelle_true.png Graphic file (type png)
-
-<use img/config_reelle_true.png>
-Package pdftex.def Info: img/config_reelle_true.png used on input line 289.
-(pdftex.def)             Requested size: 227.62206pt x 88.76776pt.
-
-<img/config_reelle_rec.png, id=584, 736.06995pt x 285.10515pt>
-File: img/config_reelle_rec.png Graphic file (type png)
-
-<use img/config_reelle_rec.png>
-Package pdftex.def Info: img/config_reelle_rec.png used on input line 295.
-(pdftex.def)             Requested size: 227.62206pt x 88.16415pt.
-
-Overfull \hbox (10.55713pt too wide) in paragraph at lines 287--298
-[][]   [] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 303--304
-
- []
-
-[23 <./img/rho_sur_donnees/data_rho_uni.png> <./img/rho_sur_donnees/data_rho_vr
-ai.png>] [24 <./img/mono_param/vp_uni.png> <./img/mono_param/vp_smooth.png> <./
+[24 <./img/rho_sur_donnees/data_rho_uni.png> <./img/rho_sur_donnees/data_rho_vr
+ai.png>] [25 <./img/mono_param/vp_uni.png> <./img/mono_param/vp_smooth.png> <./
 img/mono_param/vp_final_uni.png> <./img/mono_param/vp_final_smooth.png> <./img/
 mono_param/rho_mono.png> <./img/mono_param/coupe_vp_mono_uni_hor.png> <./img/mo
 no_param/coupe_vp_mono_smooth_hor.png> <./img/mono_param/coupe_rho_mono.png> <.
 /img/mono_param/coupe_vp_mono_uni_vert.png> <./img/mono_param/coupe_vp_mono_smo
 oth_vert.png> <./img/mono_param/coupe_rho_mono_vert.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 305--306
+<img/config_reelle_true.png, id=628, 744.01965pt x 290.16405pt>
+File: img/config_reelle_true.png Graphic file (type png)
+
+<use img/config_reelle_true.png>
+Package pdftex.def Info: img/config_reelle_true.png used on input line 297.
+(pdftex.def)             Requested size: 227.62206pt x 88.76776pt.
+
+<img/config_reelle_rec.png, id=629, 736.06995pt x 285.10515pt>
+File: img/config_reelle_rec.png Graphic file (type png)
+
+<use img/config_reelle_rec.png>
+Package pdftex.def Info: img/config_reelle_rec.png used on input line 303.
+(pdftex.def)             Requested size: 227.62206pt x 88.16415pt.
+
+Overfull \hbox (10.55713pt too wide) in paragraph at lines 295--306
+[][]   [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 311--312
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 307--309
+Underfull \hbox (badness 10000) in paragraph at lines 313--314
 
  []
 
-Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 310.
 
-Overfull \hbox (8.91328pt too wide) in paragraph at lines 310--310
-[][][][]\T1/lmr/m/n/10.95 Pourquoi?  
+Underfull \hbox (badness 10000) in paragraph at lines 315--317
+
  []
 
-
-Overfull \hbox (8.91328pt too wide) in paragraph at lines 310--310
-[][][][]\T1/lmr/m/n/10.95 Pourquoi?  
- []
-
-
-Overfull \hbox (8.91328pt too wide) in paragraph at lines 310--310
-[][][][]\T1/lmr/m/n/10.95 Pourquoi?  
- []
-
-
-Overfull \hbox (8.91328pt too wide) in paragraph at lines 310--310
-[][][][]\T1/lmr/m/n/10.95 Pourquoi?  
- []
-
-<img/multi_param/vp_smooth.png, id=613, 684.75826pt x 330.2739pt>
+[26 <./img/config_reelle_true.png> <./img/config_reelle_rec.png>]
+<img/multi_param/vp_smooth.png, id=643, 684.75826pt x 330.2739pt>
 File: img/multi_param/vp_smooth.png Graphic file (type png)
 
 <use img/multi_param/vp_smooth.png>
-Package pdftex.def Info: img/multi_param/vp_smooth.png used on input line 318.
+Package pdftex.def Info: img/multi_param/vp_smooth.png used on input line 326.
 (pdftex.def)             Requested size: 182.09486pt x 87.82452pt.
 
-<img/multi_param/vp_multi_6000k.png, id=614, 688.37175pt x 330.2739pt>
+<img/multi_param/vp_multi_6000k.png, id=644, 688.37175pt x 330.2739pt>
 File: img/multi_param/vp_multi_6000k.png Graphic file (type png)
 
 <use img/multi_param/vp_multi_6000k.png>
 Package pdftex.def Info: img/multi_param/vp_multi_6000k.png used on input line 
-326.
+334.
 (pdftex.def)             Requested size: 182.09486pt x 87.36592pt.
 
-<img/multi_param/rho_6000k.png, id=615, 691.6239pt x 330.2739pt>
+<img/multi_param/rho_6000k.png, id=645, 691.6239pt x 330.2739pt>
 File: img/multi_param/rho_6000k.png Graphic file (type png)
 
 <use img/multi_param/rho_6000k.png>
-Package pdftex.def Info: img/multi_param/rho_6000k.png used on input line 330.
+Package pdftex.def Info: img/multi_param/rho_6000k.png used on input line 338.
 (pdftex.def)             Requested size: 182.09486pt x 86.95772pt.
 
-<img/multi_param/coupe_vp_multi.png, id=616, 423.5022pt x 319.07205pt>
+<img/multi_param/coupe_vp_multi.png, id=646, 423.5022pt x 319.07205pt>
 File: img/multi_param/coupe_vp_multi.png Graphic file (type png)
 
 <use img/multi_param/coupe_vp_multi.png>
 Package pdftex.def Info: img/multi_param/coupe_vp_multi.png used on input line 
-334.
+342.
 (pdftex.def)             Requested size: 182.09486pt x 137.18855pt.
 
-<img/multi_param/coupe_rho_multi.png, id=617, 426.03165pt x 318.34935pt>
+<img/multi_param/coupe_rho_multi.png, id=647, 426.03165pt x 318.34935pt>
 File: img/multi_param/coupe_rho_multi.png Graphic file (type png)
 
 <use img/multi_param/coupe_rho_multi.png>
 Package pdftex.def Info: img/multi_param/coupe_rho_multi.png used on input line
- 338.
+ 346.
 (pdftex.def)             Requested size: 182.09486pt x 136.07147pt.
 
-<img/multi_param/coupe_vp_multi_vert.png, id=618, 423.5022pt x 321.6015pt>
+<img/multi_param/coupe_vp_multi_vert.png, id=648, 423.5022pt x 321.6015pt>
 File: img/multi_param/coupe_vp_multi_vert.png Graphic file (type png)
 
 <use img/multi_param/coupe_vp_multi_vert.png>
 Package pdftex.def Info: img/multi_param/coupe_vp_multi_vert.png used on input 
-line 342.
+line 350.
 (pdftex.def)             Requested size: 182.09486pt x 138.27612pt.
 
-<img/multi_param/coupe_rho_multi_vert.png, id=619, 419.8887pt x 328.1058pt>
+<img/multi_param/coupe_rho_multi_vert.png, id=649, 419.8887pt x 328.1058pt>
 File: img/multi_param/coupe_rho_multi_vert.png Graphic file (type png)
 
 <use img/multi_param/coupe_rho_multi_vert.png>
 Package pdftex.def Info: img/multi_param/coupe_rho_multi_vert.png used on input
- line 346.
+ line 354.
 (pdftex.def)             Requested size: 182.09486pt x 142.29431pt.
+ [27 <./img/multi_param/vp_smooth.png> <./img/multi_param/vp_multi_6000k.png> <
+./img/multi_param/rho_6000k.png> <./img/multi_param/coupe_vp_multi.png> <./img/
+multi_param/coupe_rho_multi.png> <./img/multi_param/coupe_vp_multi_vert.png> <.
+/img/multi_param/coupe_rho_multi_vert.png>] <img/tfm_retouche.png, id=662, 1290
+.0195pt x 638.1441pt>
+File: img/tfm_retouche.png Graphic file (type png)
+
+<use img/tfm_retouche.png>
+Package pdftex.def Info: img/tfm_retouche.png used on input line 372.
+(pdftex.def)             Requested size: 287.5845pt x 142.26378pt.
+Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
+ine 378.
+ [28 <./img/tfm_retouche.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 408--409
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 410--411
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 418--421
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 423--424
+
+ []
+
+<img/epsilon/epsilon_true.png, id=689, 675.36314pt x 402.5439pt>
+File: img/epsilon/epsilon_true.png Graphic file (type png)
+
+<use img/epsilon/epsilon_true.png>
+Package pdftex.def Info: img/epsilon/epsilon_true.png used on input line 431.
+(pdftex.def)             Requested size: 227.62206pt x 135.6715pt.
+
+<img/epsilon/epsilon_final.png, id=690, 682.59015pt x 330.2739pt>
+File: img/epsilon/epsilon_final.png Graphic file (type png)
+
+<use img/epsilon/epsilon_final.png>
+Package pdftex.def Info: img/epsilon/epsilon_final.png used on input line 436.
+(pdftex.def)             Requested size: 227.62206pt x 110.13469pt.
+
+Overfull \hbox (2.43333pt too wide) in paragraph at lines 429--440
+[][] [] 
+ []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[25 <./img/config_reelle_true.png> <./img/config_reelle_rec.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 381--382
-
- []
-
-[26 <./img/multi_param/vp_smooth.png> <./img/multi_param/vp_multi_6000k.png> <.
-/img/multi_param/rho_6000k.png> <./img/multi_param/coupe_vp_multi.png> <./img/m
-ulti_param/coupe_rho_multi.png> <./img/multi_param/coupe_vp_multi_vert.png> <./
-img/multi_param/coupe_rho_multi_vert.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 383--384
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 391--394
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 396--397
-
- []
-
-<img/epsilon/epsilon_true.png, id=660, 675.36314pt x 402.5439pt>
-File: img/epsilon/epsilon_true.png Graphic file (type png)
-
-<use img/epsilon/epsilon_true.png>
-Package pdftex.def Info: img/epsilon/epsilon_true.png used on input line 404.
-(pdftex.def)             Requested size: 227.62206pt x 135.6715pt.
-
-<img/epsilon/epsilon_final.png, id=661, 682.59015pt x 330.2739pt>
-File: img/epsilon/epsilon_final.png Graphic file (type png)
-
-<use img/epsilon/epsilon_final.png>
-Package pdftex.def Info: img/epsilon/epsilon_final.png used on input line 409.
-(pdftex.def)             Requested size: 227.62206pt x 110.13469pt.
-
-Overfull \hbox (2.43333pt too wide) in paragraph at lines 402--413
-[][] [] 
- []
-
-<img/epsilon/e20.png, id=662, 547.0839pt x 628.0263pt>
+<img/epsilon/e20.png, id=691, 547.0839pt x 628.0263pt>
 File: img/epsilon/e20.png Graphic file (type png)
 
 <use img/epsilon/e20.png>
-Package pdftex.def Info: img/epsilon/e20.png used on input line 421.
+Package pdftex.def Info: img/epsilon/e20.png used on input line 448.
 (pdftex.def)             Requested size: 173.27327pt x 198.90262pt.
 
-<img/epsilon/residu_init.png, id=663, 499.02435pt x 628.749pt>
+<img/epsilon/residu_init.png, id=692, 499.02435pt x 628.749pt>
 File: img/epsilon/residu_init.png Graphic file (type png)
 
 <use img/epsilon/residu_init.png>
-Package pdftex.def Info: img/epsilon/residu_init.png used on input line 426.
+Package pdftex.def Info: img/epsilon/residu_init.png used on input line 453.
 (pdftex.def)             Requested size: 157.6793pt x 198.67099pt.
 
-<img/epsilon/residu_final.png, id=664, 499.3857pt x 628.749pt>
+<img/epsilon/residu_final.png, id=693, 499.3857pt x 628.749pt>
 File: img/epsilon/residu_final.png Graphic file (type png)
 
 <use img/epsilon/residu_final.png>
-Package pdftex.def Info: img/epsilon/residu_final.png used on input line 431.
+Package pdftex.def Info: img/epsilon/residu_final.png used on input line 458.
 (pdftex.def)             Requested size: 157.6793pt x 198.52708pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 438--439
+Underfull \hbox (badness 10000) in paragraph at lines 465--466
 
  []
 
-[27 <./img/epsilon/epsilon_true.png> <./img/epsilon/epsilon_final.png>]
-<img/ogilvy_modele.png, id=682, 246.4407pt x 257.2812pt>
+[29] <img/ogilvy_modele.png, id=710, 246.4407pt x 257.2812pt>
 File: img/ogilvy_modele.png Graphic file (type png)
 
 <use img/ogilvy_modele.png>
-Package pdftex.def Info: img/ogilvy_modele.png used on input line 448.
+Package pdftex.def Info: img/ogilvy_modele.png used on input line 475.
 (pdftex.def)             Requested size: 113.81102pt x 118.81795pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 475--476
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 502--503
 
  []
 
-[28 <./img/epsilon/e20.png> <./img/epsilon/residu_init.png> <./img/epsilon/resi
-du_final.png> <./img/ogilvy_modele.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 477--478
+
+Underfull \hbox (badness 10000) in paragraph at lines 504--505
 
  []
 
-) [29]
+[30 <./img/epsilon/epsilon_true.png> <./img/epsilon/epsilon_final.png> <./img/e
+psilon/e20.png> <./img/epsilon/residu_init.png> <./img/epsilon/residu_final.png
+>]) [31 <./img/ogilvy_modele.png>]
 \openout2 = `conclusion.aux'.
 
  (./conclusion.tex
@@ -2205,38 +2259,49 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--7
 
  []
 
-) [30
+) [32
 
 
 
-] (./stage_m2.bbl [31
+]
+\openout2 = `annexes.aux'.
+
+ (./annexes.tex) [33
 
 
-] [32]) 
+
+] (./stage_m2.bbl [34
+
+
+] [35])
+
 AED: lastpage setting LastPage
-[33]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 181.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 181.
- (./stage_m2.aux (./introduction.aux) (./imagerie.aux) (./fwi.aux)
-(./application.aux) (./conclusion.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 181.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 181.
+[36]
+
+Package natbib Warning: There were undefined citations.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 182.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 182.
+(./stage_m2.aux (./introduction.aux) (./imagerie.aux) (./fwi.aux)
+(./application.aux) (./conclusion.aux) (./annexes.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 182.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 182.
 Package rerunfilecheck Info: File `stage_m2.out' has not changed.
-(rerunfilecheck)             Checksum: 4BED9D55957BD24B51E9EAEA6444D6E8;2602.
+(rerunfilecheck)             Checksum: DF619CF787A1D8CC09A758CFF5228286;2743.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 181.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 182.
  ) 
 Here is how much of TeX's memory you used:
- 21045 strings out of 493304
- 361812 string characters out of 6139872
- 452438 words of memory out of 5000000
- 23784 multiletter control sequences out of 15000+600000
+ 21042 strings out of 493304
+ 361575 string characters out of 6139872
+ 450056 words of memory out of 5000000
+ 23761 multiletter control sequences out of 15000+600000
  123611 words of font info for 101 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 56i,11n,82p,1214b,776s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,11n,82p,1141b,776s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dv
 ips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share
 /texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ma
@@ -2254,10 +2319,10 @@ nts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb><
 /usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/p
 ublic/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/sh
 are/texmf/fonts/type1/public/lm/lmsy8.pfb>
-Output written on stage_m2.pdf (34 pages, 7349920 bytes).
+Output written on stage_m2.pdf (37 pages, 7625280 bytes).
 PDF statistics:
- 838 PDF objects out of 1000 (max. 8388607)
- 656 compressed objects within 7 object streams
- 167 named destinations out of 1000 (max. 500000)
- 544 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 877 PDF objects out of 1000 (max. 8388607)
+ 690 compressed objects within 7 object streams
+ 176 named destinations out of 1000 (max. 500000)
+ 565 words of extra memory for PDF output out of 10000 (max. 10000000)
 

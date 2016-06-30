@@ -34,15 +34,15 @@ Ce type d'analyse peut être réalisé avec des transducteurs mono-éléments. L
 	\caption{\label{scan} Schéma des différents modes de représentation des signaux temporels (extrait de \cite{bannouf}). Le Ascan représente l'amplitude du signal en fonction du temps (en bas à gauche). L'abscisse du Bscan (en bas à droite) donne le balayage, ses ordonnée est le temps et l'échelle de couleurs donne l'amplitude du signal temporel. En haut à droite, le Cscan a pour abscisse l'axe de balayage et en ordonnée les incréments, tandis que l'échelle de couleurs donne l'amplitude du maximum de chaque signal temporel.}
 \end{figure}
 
-Il existe une autre représentation, le Sscan, qui ne peut être réalisé qu'avec des transducteurs multi-éléments : il correspond a un ensemble de Ascans réalisés sans déplacement du transducteur mais en appliquant une loi de retard aux éléments permettant de réaliser un balayage du point focal. Le Sscan permet donc d'imager des pièces partiellement accessible, et augmente la probabilité de repérer un défaut en offrant plusieurs angles d'auscultation.\\
+Il existe une autre représentation, le Sscan, qui ne peut être réalisé qu'avec des transducteurs multi-éléments : il correspond à un ensemble de Ascans réalisés sans déplacement du transducteur mais en appliquant une loi de retard aux éléments permettant de réaliser un balayage du point focal. Le Sscan permet donc d'imager des pièces partiellement accessible, et augmente la probabilité de repérer un défaut en offrant plusieurs angles d'auscultation.\\
 
-Cependant, la localisation dans la pièce des réflecteurs à l'origine des différents échos visibles sur les signaux temporels mesurés n'est possible que si la vitesse de propagation des ondes est connue. Les Bsans dits "vrais" sont des Bscans sur lesquels des corrections des temps de vol liées à la vitesse ou à l'angle d'incidence du faisceau sont appliquées.
+Cependant, la localisation dans la pièce des réflecteurs à l'origine des différents échos visibles sur les signaux temporels mesurés n'est possible que si la vitesse de propagation des ondes est connue. Les Bscans dits "vrais" sont des Bscans sur lesquels des corrections des temps de vol liées à la vitesse ou à l'angle d'incidence du faisceau sont appliquées.
 
 
 \section{Méthodes par retard et sommation des signaux}
 Les données temporelles acquises peuvent aussi être traitées de manière à obtenir une représentation spatiale des propriétés de la pièce. Si la vitesse du milieu de propagation est connue, une analyse des temps de vol des échos permet en effet d'établir une carte des vitesses de propagation du milieu. \\
 
-Il est aussi possible de sommer un ensemble de Ascans de façon cohérente, permettant ainsi de reproduire une focalisation en tous points de la zone à inspecter. C'est ce que propose la méthode Synthetic Aperture Focusing Technique \citep{doctor_saft} à partir des signaux recueillis par un mono-élément. Ce procédé est généralisé à un ensemble de capteurs et d'émetteurs dans la méthode Total Focusing Method \citep{holmes_tfm}. 
+Il est aussi possible de sommer un ensemble de Ascans de façon cohérente, permettant ainsi de reproduire une focalisation en tous points de la zone à inspecter. C'est ce que propose la méthode Synthetic Aperture Focusing Technique \citep{doctor_saft} à partir des signaux recueillis par un mono-élément. Ce procédé est généralisé à un ensemble de capteurs et d'émetteurs dans la méthode Total Focusing Method (TFM, \cite{holmes_tfm}). 
 
 L'intensité $I$ de l'image obtenue au point de coordonnées $\bm{r}$ est alors donnée par la relation suivante : 
 
@@ -65,9 +65,9 @@ Cette focalisation permet donc de couvrir l'ensemble du volume de la pièce car 
 \section{Méthodes haute résolution}
 
 
-Des méthodes de localisation de sources dites "hautes résolutions" exploitent l'ensemble des covariances des signaux temporels. Les méthodes telles que MUltiple Signal Classification \citep{schmidt} et Capon \citep{capon} proposent une décomposition en valeurs propres de cette matrice de covariance afin d'en extraire deux sous-espaces distincts, l'un associé au signal et l'autre au bruit, diminuant ainsi la contribution énergétique du bruit. \\
+Des méthodes de localisation de sources dites "haute résolution" exploitent l'ensemble des covariances des signaux temporels. Les méthodes telles que MUltiple Signal Classification \citep{schmidt} et Capon \citep{capon} proposent une décomposition en valeurs propres de cette matrice de covariance afin d'en extraire deux sous-espaces distincts, l'un associé au signal et l'autre au bruit, diminuant ainsi la contribution énergétique du bruit. \\
 
-La méthode de Décomposition de l'Opérateur de Retournement Temporel \citep{prada_dort} propose, de la même façon, d'interpréter l'opérateur de retournement temporel comme une matrice de covariance et de la décomposer. Cette dernière méthode est particulièrement adaptée aux milieux hétérogènes et/ou à géométrie complexe , car sa résolution est améliorée si le signal mesuré a été mulitplement réfléchi. En effet, le retournement temporel permet une focalisation de l'énergie au niveau d'un point source et cette focalisation est d'autant plus précise que le nombre de sources images est important. \\
+La méthode de Décomposition de l'Opérateur de Retournement Temporel \citep{prada_dort} propose, de la même façon, d'interpréter l'opérateur de retournement temporel comme une matrice de covariance et de la décomposer. Cette dernière méthode est particulièrement adaptée aux milieux hétérogènes et/ou à géométrie complexe , car sa résolution est améliorée si le signal mesuré a été plusieurs fois réfléchi. En effet, le retournement temporel permet une focalisation de l'énergie au niveau d'un point source et cette focalisation est d'autant plus précise que le nombre de sources images est important. \\
   
 
 Tout comme pour les méthodes de formation de voies classiques, il est nécessaire de connaître les propriétés élastiques du milieu de propagation pour pouvoir localiser précisément les réflecteurs.\\
@@ -97,11 +97,13 @@ Le modèle est décrit par un nombre fini de paramètres $\bm{m}$ qui sont liés
 	\caption{\label{pb_inv} Schéma de résolution d'un problème d'optimisation. Le modèle courant décrit par les paramètres $\bm{m}$ est mis à jour tant que la fonction de coût n'a pas atteint le minimum donné par le critère de convergence.}
 \end{figure}
 
-Ces problèmes sont, en général, non-linéaires, car les observables ne dépendent pas linéairement des paramètres du modèle, ce que l'on note $\bm{d}_{obs}=\bm{g}(\bm{m})$. De plus, le problème est mal posé si ce système d'équation n'est pas de rang plein et la solution n'est alors pas unique.
+Ces problèmes sont, en général, non-linéaires, car les observables ne dépendent pas linéairement des paramètres du modèle, ce que l'on note $\bm{d}_{obs}=\bm{g}(\bm{m})$. De plus, le problème est mal posé si ce système d'équation n'est pas de rang plein : la solution n'est alors pas unique.
 
 \subsection{Résolution du problème direct}
 
-Le problème direct peut être résolu soit par des méthodes semi-analytiques (représentation intégrale, méthodes modales,\ldots) soit par des méthodes numériques. Parmi les méthodes numériques les plus usitées figurent les méthodes de différences finies (\citealp{virieux_86}, à l'ordre 2 et \citealp{levander}, à l'ordre 4) populaires par leur simplicité de formulation et d'implémentation et les méthodes des éléments finis (Galerkin discontinu par exemple : \citealp{brossier_these}) ou volumes finis \citep{brossier_2008} qui facilitent l'utilisation des maillages non-structurés. On peut aussi citer la méthode asymptotique des lancers de rayons \citep{virieux_ray} qui favorise les calculs performants et facilite l'interprétation physique des résultats, mais qui ne permet pas un contrôle précis de l'échantillonnage.
+Le problème direct peut être résolu soit par des méthodes semi-analytiques (représentation intégrale, méthodes modales,\ldots) soit par des méthodes numériques. Parmi les méthodes numériques les plus usitées figurent les méthodes de différences finies (\citealp{virieux_86}, à l'ordre 2 et \citealp{levander}, à l'ordre 4) populaires par leur simplicité de formulation et d'implémentation et les méthodes des éléments finis continus \citep{marfurt} ou discontinus (voir \citealp{brossier_these} pour une application à la FWI) qui facilitent l'utilisation des maillages non-structurés. On peut aussi citer la méthode asymptotique des lancers de rayons \citep{virieux_ray} qui favorise les calculs performants et facilite l'interprétation physique des résultats, mais qui ne permet pas un contrôle précis de l'échantillonnage.
+
+% ou volumes finis \citep{brossier_2008}
 
 \subsection{Résolution du problème inverse}
 Si le problème direct possède une solution unique, le problème inverse peut conduire à plusieurs solutions.
@@ -111,9 +113,10 @@ Lorsque le nombre de paramètres est grand, le problème inverse ne peut pas êt
 Les méthodes semi-globales consistent à parcourir l'espace des solutions avec une approche statistiques. Les plus connues sont les améliorations de celle de Monte Carlo comme le recuit simulé \citep{tarantola_book, sen} ou  la méthode de Monte-Carlo par chaînes de Markov \citep{zhang}, ainsi que les algorithmes génétiques \citep{stoffa}. Elles permettent d'obtenir une solution avec peu d'\emph{a priori} sur le modèle initial, mais avec une convergence lente.\\
 
 \subsubsection{Les méthodes locales}
-Lorsque que le modèle initial peu être construit avec suffisamment d'informations pour que le problème se situe proche du minimum global recherché, des méthodes d'optimisation moins coûteuses sont envisageables. Ces méthodes se basent sur l'estimation du gradient et du hessien de la fonction coût pour estimer sa plus forte pente et sa courbure.\\
+Lorsque que le modèle initial peut être construit avec suffisamment d'informations pour que le problème se situe proche du minimum global recherché, des méthodes d'optimisation moins coûteuses à convergence rapide sont envisageables. Ces méthodes se basent sur l'estimation du gradient et du hessien de la fonction coût pour estimer sa plus forte pente et sa courbure.\\
 
-La méthode de recherche linéarisée la plus simple est celle du gradient (ou algorithme de la plus forte pente), qui permet d'effectuer au point courant, un pas de descente dans la direction opposée au gradient. Les directions de descentes successives sont alors orthogonales, ce qui ne permet pas une convergence très rapide. \\
+La méthode de recherche linéarisée la plus simple est celle du gradient (ou algorithme de la plus forte pente), qui permet d'effectuer au point courant, un pas de descente dans la direction opposée au gradient, qui permet un convergence très rapide. \\
+
 La méthode du gradient conjugué propose de combiner les directions de descente des itérations précédentes de façon à accélérer la convergence. Cette méthode populaire est celle utilisée par Mora et Tarantola dans les années 80 \citep{tarantola_84, mora_87a, mora_87b}. Le hessien n'est pas calculé, mais cette méthode nécessite le calcul de deux problèmes directs supplémentaires. \\
 
 Les méthodes de Newton et de Gauss-Newton utilisent un calcul du hessien (complet pour la première, approximé pour la seconde). Le hessien est difficile à calculer car sa complexité est celle du gradient au carré, mais il permet une convergence plus rapide qu'avec la méthode du gradient conjugué \citep{pratt_98}.\\
@@ -122,7 +125,7 @@ Enfin, le hessien peut également être estimé à partir des gradients des ité
 \subsection{Cartographie ou contour}
 Comme le souligne \cite{mat_ac}, le problème inverse peut être résolu suivant deux approches : 
 \begin{itemize}
-	\item un formalisme en intégrales de contour où les paramètres reconstruits sont ceux décrivant ces contours. Cela revient donc à déformer ces contours, fonction d'une structure topologique du milieu. Le gradient, donné par la dérivée de la fonction coût par rapport à la topologie, indique donc directement la position d'un défaut à fort contraste. \cite{dominguez} et \cite{rodriguez} utilisent par exemple cette approche pour des applications en contrôle non destructif. Cette approche permet par exemple d'imager des défauts liés à une absence de matière (porosité, fissure, délaminage,\ldots) mais ne prend pas en compte les variations de contraste plus faible (anisotropie de la soudure, inclusion, corps étranger,\ldots).
+	\item un formalisme en intégrales de contour où les paramètres reconstruits sont ceux décrivant ces contours. Cela revient donc à déformer ces contours, fonction d'une structure topologique du milieu. Le gradient, donné par la dérivée de la fonction coût par rapport à la topologie, indique donc directement la position d'un défaut à fort contraste. \cite{dominguez} et \cite{rodriguez} utilisent, par exemple, cette approche pour des applications en contrôle non destructif. Cette approche permet par exemple d'imager des défauts liés à une absence de matière (porosité, fissure, délaminage,\ldots) mais ne prend pas en compte les variations de contraste plus faible (anisotropie de la soudure, inclusion, corps étranger,\ldots).
 	\item une reconstruction pixelisée d'un ensemble de paramètres. C'est l'approche explorée dans ce rapport et qui est décrite au chapitre~\ref{fwi}.
 \end{itemize}
 

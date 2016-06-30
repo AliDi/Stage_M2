@@ -1,8 +1,15 @@
-\chapter{Annexes}
+\addcontentsline{toc}{section}{\textbf{Annexe}}
+\chapter*{Annexe}
 
-\section{Note sur les dimensions des grandeurs du chapitre \ref{fwi}}
+discrétisation
+nombre d'itération
+temps de calcul : pb direct qques secondes
+inversion : 5 minutes pour 20 it à 1 freq avec 1 coeur par source
 
-Les matrice $A$, qui est l'opérateur de l'équation d'onde a les dimensions de l'espace du problème direct : $l\times l$, où $l=n_{x}\times n_{z}$, $n_{x}$ et $n_{z}$ étant les dimensions du milieu de propagation discrétisé.\\
- De la même façon, le champ d'onde $\bm{u}$ et le vecteur source $\bm{s}$ sont de dimension $l\times 1$.\\
-Or, les vecteurs de données $\bm{d}$ ne contiennent que les informations aux $n$ points de réception. Ils sont donc de dimension $1\times n$. Les calculs sont donc menés sur des vecteurs agrandis à l'aide de zéros de façon à ce que $\bm{d}$ soit de dimension $l\times 1$. \\
-Finalement, le gradient  $\frac{\dd C (\bm{m})}{\dd \bm{m}}$ est bien de dimension $M\times 1$ avec $M$ le nombre de paramètre du problème \citep{pratt_98}.
+
+%\section{Note sur les dimensions des grandeurs du chapitre \ref{fwi}}
+%
+%Les matrice $A$, qui est l'opérateur de l'équation d'onde a les dimensions de l'espace du problème direct : $l\times l$, où $l=n_{x}\times n_{z}$, $n_{x}$ et $n_{z}$ étant les dimensions du milieu de propagation discrétisé.\\
+% De la même façon, le champ d'onde $\bm{u}$ et le vecteur source $\bm{s}$ sont de dimension $l\times 1$.\\
+%Or, les vecteurs de données $\bm{d}$ ne contiennent que les informations aux $n$ points de réception. Ils sont donc de dimension $1\times n$. Les calculs sont donc menés sur des vecteurs agrandis à l'aide de zéros de façon à ce que $\bm{d}$ soit de dimension $l\times 1$. \\
+%Finalement, le gradient  $\frac{\dd C (\bm{m})}{\dd \bm{m}}$ est bien de dimension $M\times 1$ avec $M$ le nombre de paramètre du problème \citep{pratt_98}.

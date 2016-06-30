@@ -119,12 +119,6 @@ C.~Holmes, B.~W. Drinkwater, and P.~D. Wilcox.
 \newblock \emph{NDT\&E International}, \penalty0 (38):\penalty0 ~p.~701--711,
   2005.
 
-\bibitem[L.(2009)]{lopes}
-Fernand L.
-\newblock \emph{Inversion des formes d'ondes électromagnétiques de données
-  radar multioffsets.}
-\newblock PhD thesis, Université Paris Diderot - Paris 7, 2009.
-
 \bibitem[Lailly(1983)]{lailly}
 P.~Lailly.
 \newblock The seismic inverse problem as a sequence of before stack migrations.
@@ -142,6 +136,12 @@ M.~Lambert, M.~Bonnet, and D.~Lesselier.
 A.~R. Levander.
 \newblock Fourth-order finite-difference {P-SV} seismograms.
 \newblock \emph{Geophysics}, 53\penalty0 (11):\penalty0 ~p.~1425--1436, 1988.
+
+\bibitem[Lopes(2009)]{lopes}
+F.~Lopes.
+\newblock \emph{Inversion des formes d'ondes électromagnétiques de données
+  radar multioffsets.}
+\newblock PhD thesis, Université Paris Diderot - Paris 7, 2009.
 
 \bibitem[Mora(1987{\natexlab{a}})]{mora_87a}
 P.~Mora.
@@ -227,6 +227,7 @@ R.~0. Schmidt.
 M.~K. Sen and P.L. Stoffa.
 \newblock \emph{Global Optimization Methods in Geophysical Inversion}.
 \newblock Elsevier, 1995.
+\newblock ISBN 978-1-107-01190-8.
 
 \bibitem[Sirgue and Pratt(2004)]{sirgue}
 L.~Sirgue and R.~G. Pratt.
@@ -250,12 +251,12 @@ A.~Tarantola.
 \newblock \emph{{Inverse Problem Theory and Methods for Model Parameter
   Estimation}}.
 \newblock Society for Industrial and Applied Mathematics, 2005.
-\newblock ISBN 0898715725.
+\newblock ISBN 978-0-89871-572-9.
 
 \bibitem[Thomsen(1986)]{thomsen}
 L.~Thomsen.
 \newblock Weak elastic anisotropy.
-\newblock \emph{GEOPHYSICS}, 51\penalty0 (10):\penalty0 ~p.~1954--1966, 1986.
+\newblock \emph{Geophysics}, 51\penalty0 (10):\penalty0 ~p.~1954--1966, 1986.
 
 \bibitem[Vigh and Starr(2008)]{vigh_2008}
 D.~Vigh and E.~W Starr.
