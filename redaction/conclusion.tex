@@ -1,12 +1,23 @@
 \addcontentsline{toc}{section}{\textbf{Conclusion}}
 \chapter*{Conclusion}
 
-L'état de l'art concernant l'imagerie de soudure montre que les images actuellement obtenues sont sujettes aux artefacts, ce qui peut poser des problèmes de sécurité pour les structures à risque. La FWI propose une approche non pas basée sur l'interprétation des temps de vol, mais sur la résolution d'un problème inverse, ce qui lui permet de s'affranchir de la connaissance précise \emph{a priori} de l'anisotropie.\\
+L'état de l'art concernant l'imagerie de soudure montre que les images actuellement obtenues sont sujettes aux artefacts, ce qui peut poser des problèmes de sécurité pour les structures à risque. La FWI propose une approche non pas basée sur l'interprétation des temps de vol, mais sur l'utilisation de l'ensemble de l'enregistrement. Elle repose sur la résolution d'un problème inverse, ce qui lui permet de s'affranchir de la connaissance précise \emph{a priori} de la nature de l'anisotropie.\\
 
-Ce travail a montré que la FWI peut donner des images de bonne résolution dans le cas d'une propagation acoustique et d'une acquisition judicieusement choisie. La description de la soudure par un modèle acoustique VTI n'est pas complète et l'inversion de l'anisotropie doit donc se faire en propagation élastique.\\
+Ce travail a montré que la FWI peut donner des images d'une résolution de la moitié de la plus petite longueur d'onde propagée, dans le cas d'une propagation acoustique et d'une acquisition judicieusement choisie. L'anisotropie  décrite par un modèle acoustique transverse isotrope perturbe très peu la propagation des ondes, ce qui montre que cette anisotropie est trop éloignée de celle rencontrée dans les soudures réelles. Elle doit donc être décrite de manière plus complexe par une ensemble de constantes élastiques ou par un modèle transverse isotrope à axe de symétrie localement incliné.
 
 
-La perspective de ce travail est l'application de la FWI à des données réelles. Il sera alors nécessaire de prendre en compte la propagation 3D ainsi que l'atténuation des ondes dans la soudure, et d'estimer les sources au cours de l'inversion. La sensibilité au bruit de la FWI doit également être évaluée et la fonction de coût éventuellement adaptée \citep{brossier_2010}. La nature mal posée du problème d'optimisation peut nécessiter d'élaborer un modèle initial plus précis, construit statistiquement à partir d'un grand nombre de résultats d'inversion ou d'incorporer des \emph{prior informations} à la formulation de la fonction de coût \citep{asnaashari}.
+
+
+
+La perspective de ce travail est l'application de la FWI à des données réelles, ce qui implique de prendre en compte la propagation en 3D des ondes dans la soudure. Une inversion 2D appliquée à de vraies données nécessite donc de les préconditionner de manière à limiter la trace des ondes de cisaillement et à leur appliquer une correction d'amplitude. \\
+
+L'inversion 3D permet de prendre en compte l'ensemble des phénomènes de propagation et de tirer profit des ondes de cisaillement dont la longueur d'onde est plus faible que celle des ondes de compression. Cependant, les données peuvent être marquée par des ondes de surfaces dont l'atténuation est plus faible que les ondes de volume.  L'inversion est alors déséquilibrée par cette onde de forte amplitude et le modèle n'est mis à jour qu'en surface. L'influence de cette onde de surface sur les données peut être limitée par un filtrage adapté ou par une acquisition en transmission.\\ 
+
+
+L'acquisition peut être réalisée dans un plan, comme dans les cas présentés précédemment, ce qui risque de limiter la qualité de reconstruction hors de ce plan. Des structures 3D peuvent également être reconstruites par l'utilisation de transducteurs matriciels ou par déplacement d'un transducteur linéaire.
+
+
+L'inversion à partir de données réelles peut également nécessiter de considérer l'atténuation des ondes dans la soudure comme un nouveau paramètre du modèle, et d'estimer les sources au cours de l'inversion. La sensibilité au bruit de la FWI doit également être évaluée et la fonction de coût éventuellement adaptée \citep{brossier_2010}. La nature mal posée du problème d'optimisation peut nécessiter d'élaborer un modèle initial plus précis, construit statistiquement à partir d'un grand nombre de résultats d'inversion ou d'incorporer des \emph{prior informations} à la formulation de la fonction de coût \citep{asnaashari}.
 
 
 

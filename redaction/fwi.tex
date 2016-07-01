@@ -7,6 +7,7 @@ Le principe général est de calculer des données $\bm{d}_{cal}$ issues d'un mo
 
 
 \begin{figure}[!h]
+	\centering
 	\begin{tikzpicture}
 		\node (init) [draw=black, align=center] at (0,0) {Paramètres initiaux \\ $\bm{m}_{0}$};
 		\node (dir) [below=1cm of init , draw=black,align=center] {Problème direct :\\ éléments finis ou différences finies};
@@ -57,7 +58,7 @@ Dans le cas de l'imagerie par ultrasons, résoudre le problème direct revient �
 
 
 
- Pour résoudre l'équation d'onde, parmi les approches qui nécessitent de faire le moins d'hypothèse sur le champ d'onde et sur le milieu de propagation figurent les différences finies et les éléments finis. Les différences finies sont les plus faciles à développer et à implémenter. Elles permettent de discrétiser les dérivées temporelles et spatiales par des différences d'ordre 2 \citep{virieux_86} ou d'ordre 4 \citep{levander}. Cependant, contrairement aux éléments finis, elles imposent, en général, l'utilisation de grilles régulières et ne permettent donc pas d'adapter localement le pas de grille à la géométrie ou à la complexité du milieu. \\ Les éléments finis se prêtent mieux à une description du milieu par un maillage non-structuré. Leur solution est développée sur des bases de fonction (d'ordre élevé pour les éléments finis spectraux) et permettent de prendre simplement en compte les conditions limites.\\
+ Pour résoudre l'équation d'onde, parmi les approches qui nécessitent de faire le moins d'hypothèses sur le champ d'onde et sur le milieu de propagation figurent les différences finies et les éléments finis. Les différences finies sont les plus faciles à développer et à implémenter. Elles permettent de discrétiser les dérivées temporelles et spatiales par des différences d'ordre 2 \citep{virieux_86} ou d'ordre 4 \citep{levander}. Cependant, contrairement aux éléments finis, elles imposent, en général, l'utilisation de grilles régulières et ne permettent donc pas d'adapter localement le pas de grille à la géométrie ou à la complexité du milieu. \\ Les éléments finis se prêtent mieux à une description du milieu par un maillage non-structuré. Leur solution est développée sur des bases de fonction (d'ordre élevé pour les éléments finis spectraux) et permettent de prendre simplement en compte les conditions limites.\\
  
 Deux types de conditions limites sont nécessaires pour le modèle de soudure à 2 dimensions (2D) : une condition parfaitement réfléchissante (condition de Dirichlet) au niveau des surfaces de la plaque (en considérant une mesure dans l'air, le couplage fluide structure est négligeable) et une condition absorbante pour représenter la plaque loin de la zone d'étude (cf figure~\ref{BC}). Les conditions absorbantes sont modélisées à l'aide de zones éponges \emph{Perfectly Matched Layers} (PML,\cite{berenger}) qui simulent une forte atténuation dans cette zone de manière anisotrope (seule la composante normale de l'onde est atténuée, ce qui les rend imparfaites).\\
 
@@ -200,7 +201,7 @@ L'inversion multi-paramètres implique plus de degrés de liberté dans le probl
 \begin{equation*}
 	I_{p}=\sqrt{\kappa \rho}~~~~~\text{et}~~~~~\kappa=\rho v_{p}\text{.}
 \end{equation*}
-Ces diagrammes correspondent au rayonnement des paramètres acoustiques dans un milieu isotrope. En milieu anisotrope, ces diagrammes sont plus difficiles à estimer analytiquement et nécessite une bonne connaissance de l'anisotropie du milieu.\\
+Ces diagrammes correspondent au rayonnement des paramètres acoustiques dans un milieu isotrope. Les paramétrisations $I_{p}-\rho$ et $v_{p}-\rho$ permettent toutes deux de décrire de manière quasi-omnidirectionnelle le champ diffracté dans le cas d'un éclairage bilatéral. C'est pour cette raison que l'une d'elle ($v_{p}-\rho$) est choisie pour les applications présentées en troisième partie.\\%  En milieu anisotrope, ces diagrammes sont plus difficiles à estimer analytiquement et nécessitent une bonne connaissance de l'anisotropie du milieu -> c'est le cas aussi en isotrope, si on ne regarde pas localement.\\
 
 Ajouté à l'illumination restreinte  par le système d'acquisition, ce rayonnement peut filtrer le spectre en nombre d'onde du milieu reconstitué. 
 

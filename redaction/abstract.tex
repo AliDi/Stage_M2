@@ -4,7 +4,15 @@ Weld imaging is crucial to control health of cooling systems and pipeline. But m
 
 The full waveform inversion (FWI) attempts to build an image of elastic parameters and hence could take accurately into account anisotropic propagation. It is based on an optimisation problem that aims to reduce the misfit between recorded and computed data by perturbing the model parameters. \\
 
-A study of resolution shows that FWI can provide high resolution image depending on the acquisition system, the records duration and the scattering pattern of the different parameters. Some applications of time-domain FWI to 2D-acoustic welds are performed under isotropic and vertical isotropic propagation approximation. It appears that surface acquisition makes horizontal velocity hard to build, even with wide azimuthal data. Moreover, multiparametric FWI, which is challenging because it increases ill-posedness of the inversion, does not improve significantly the image quality, compared to vertical velocity monoparametric inversion.
+A study of resolution shows that FWI can provide high resolution image depending on the acquisition system, the records duration and the scattering pattern of the different parameters. Some applications of time-domain FWI to 2D-acoustic welds are performed under isotropic and transversal isotropic propagation approximation. When each isotropic parameter is inverted independently of the other one, wrong high frequency perturbations are introduce in the velocity model. It is due to leakage of the density perturbations over the velocity parameter. Moreover, the density parameter is poorly reconstructed, because its effect on the observed data is weaker. Multiparametric FWI is challenging because it increases ill-posedness of the inversion, but it improves the velocity reconstruction, by reducing the high frequency artefacts. In the transverse isotropic case, it appears that surface acquisition makes horizontal velocity hard to build, even with wide azimuthal data. 
+
+%t affects more weakly the observed data.
+
+
+
+
+
+ %Moreover, multiparametric FWI, which is challenging because it increases ill-posedness of the inversion, 
 
 
 %\smallskip \textbf{Mot-clés} : ECND par ultrasons, problèmes d'optimisation,  

@@ -86,7 +86,7 @@ La couverture en nombre d'onde est également très liée à l'acquisition. Elle
 
 \subsection{Influence des surfaces libres}
 
-Deux surfaces libres sont maintenant ajoutées à la soudure de référence et au modèle initial. L'objectif est d'illustrer l'influence de la durée du signal d'acquisition, soit le nombre de réflexions dans la plaques prises en compte dans les données. Les figures~\ref{app:1400pt} et~\ref{app:4200pt} montrent la couverture en nombres d'onde obtenue  pour 1 et 6 réflexions dans la plaque, pour une excitation à 2 MHz.
+Deux surfaces libres sont maintenant ajoutées à la soudure de référence et au modèle initial. L'objectif est d'illustrer l'influence de la durée du signal d'acquisition, soit le nombre de réflexions dans l'épaisseur prises en compte dans les données. Les figures~\ref{app:1400pt} et~\ref{app:4200pt} montrent la couverture en nombres d'onde obtenue  pour 1 et 6 réflexions dans la plaque, pour une excitation à 2 MHz.
 
 \begin{figure}[!h]
     \centering
@@ -163,14 +163,14 @@ On considère, tout d'abord, une propagation dans un milieu acoustique isotrope.
 \end{eqnarray}
 avec $\kappa$ le module de rigidité et $p$ la pression.
 
-Deux types d'inversions sont proposée par la suite pour une paramétrisation masse volumique-vitesse du milieu : l'inversion monoparamètre, pour laquelle le modèle d'un seul des paramètres est mis à jour pendant que l'autre est maintenu fixe, et l'inversion multiparamètre, pour laquelle les deux paramètres sont variables et mis à jour. Chaque inversion est réalisée sur 9 bandes de fréquence allant de 100 à 3,4 MHz.\\
+Deux types d'inversions sont proposée par la suite pour une paramétrisation masse volumique-vitesse du milieu : l'inversion monoparamètre, pour laquelle le modèle d'un seul des paramètres est mis à jour pendant que l'autre est maintenu fixe, et l'inversion multiparamètre, pour laquelle les deux paramètres sont variables et mis à jour. Chaque inversion est réalisée sur 9 bandes de fréquence allant de 100 à 3,4 MHz. Le détail du choix de discrétisations spatiale et temporelle utilisées pour ces applications est présenté en annexe~\ref{annexe:chiffres}, ainsi que l'ordre de grandeur du temps et des ressources de calcul qui ont été nécessaire.
 
-Le détail du choix de discrétisations spatiale et temporelle utilisés pour ces applications est présenté en annexe, ainsi que l'ordre de grandeur du temps et des ressources de calcul qui ont été nécessaire.
+\subsection{Acquisition et modèles vrais}
 
+La géométrie de l'acquisition pour les inversions en milieu isotrope est choisie de manière à favoriser un bon éclairage de la soudure : deux barrettes linéaires de 64 éléments (en émission et réception) sont situées de part et d'autre de la soudure. Cette configuration ne correspond pas à celle d'une inspection de soudure conventionnelle, puisque en pratique, le relief de la soudure ne permet pas de placer les barrettes directement dessus. La FWI est ainsi testée indépendamment des problèmes d'éclairage qu'une configuration réaliste peut générer. Une illustration de l'effet d'une acquisition réaliste sur une inversion de la vitesse se trouve en annexe~\ref{annexe:acqui}.\\
 
-\subsection{Inversions monoparamètres}
+  La durée d'acquisition est de 15,4 $\mu$s, ce qui correspond à une propagation sur 9 cm à 6000 m/s, soit moins d'un aller-retour dans l'épaisseur de la plaque. Les données observées sont calculées à partir du milieu dont la masse volumique et  la vitesse verticale sont présentés en figure~\ref{app:iso:model}.\\
 
- Dans un premier temps, on considère une configuration d'acquisition favorable à un bon éclairage de la soudure : deux barrettes linéaires de 64 éléments (en émission et réception) sont situées de part et d'autre de la soudure. Cette configuration ne correspond pas à celle d'une inspection de soudure conventionnelle, puisque en pratique, le relief de la soudure ne permet pas de placer les barrettes directement dessus. La durée d'acquisition est de 15,4 $\mu$s, ce qui correspond à une propagation sur 9 cm à 6000 m/s, soit moins d'un aller-retour dans l'épaisseur de la plaque. Les données observées sont calculées à partir du milieu dont la masse volumique et  la vitesse verticale sont présentés en figure~\ref{app:iso:model}.\\
 
 
 \begin{figure}[!h]
@@ -185,6 +185,15 @@ Le détail du choix de discrétisations spatiale et temporelle utilisés pour ce
 	\end{subfigure}
 	\caption{Milieux en vitesse et masse volumique pour la génération des données observées. Deux barrettes de 64 éléments sont utilisées en réception et en transmission, de part et d'autre de la soudure. La soudure représentée par une zone de plus faible vitesse (zone grise) présente deux défauts : une inclusion de diamètre $\lambda/2$ et un manque de fusion de largeur $\lambda/12$ et de longueur $6\times \lambda$.\label{app:iso:model}}
 \end{figure}
+
+
+
+
+\subsection{Inversions monoparamètres}
+
+Les paramètres de vitesse et de masse volumique sont d'abord inversés indépendamment l'un de l'autre. Après une présentation de la stratégie de construction des modèles initiaux, les résultats d'inversions sont proposés et seront confrontés aux résultats des inversions multiparamètres.
+
+
 
 \subsubsection{Construction du modèle initial de vitesse}
 
@@ -213,7 +222,7 @@ Un seul modèle initial de masse volumique est utilisé pour toutes les inversio
 
 Dans un premier temps, deux inversions de vitesse sont réalisées, indépendamment du paramètre $\rho$ dont la valeur est fixée à sa valeur initiale (8000 kg/m$^{3}$). L'une part du modèle initial de vitesse uniforme  et l'autre part du modèle de vitesse basse fréquence. Les modèles initiaux de vitesse et le résultat de ces inversions sont présenté en première et deuxième colonne de la figure~\ref{app:inv_mono}.\\
 
-Dans un second temps, la masse volumique est inversée, indépendamment du paramètre de vitesse, fixé à sa valeur initial. Comme évoqué précédemment, les modèles initiaux choisis pour cette inversion sont le modèle de vitesse basse fréquence et le modèle de densité uniforme. Le résultat de cette inversion est présenté en troisième colonne de la figure~\ref{app:inv_mono}. 
+Dans un second temps, la masse volumique est inversée, indépendamment du paramètre de vitesse, fixé à sa valeur initial. Comme évoqué précédemment, les modèles initiaux choisis pour cette inversion sont le modèle de vitesse basse fréquence et le modèle de densité uniforme. Le résultat de cette inversion est présenté en troisième colonne de la figure~\ref{app:inv_mono}. \\
 
 
 	\begin{figure}[p]
@@ -276,8 +285,7 @@ Dans un second temps, la masse volumique est inversée, indépendamment du param
 		\caption{\label{app:inv_mono} Modèle initiaux de vitesse et résultat d'inversion monoparamètre de la vitesse (deux colonnes de gauche) et de la densité (colonne de droite).}
 	\end{changemargin}
 	\end{figure}
-
-Pour l'inversion de la vitesse, le modèle initial basse fréquence permet d'obtenir des résultats d'inversion plus précis et plus rapidement, à basses fréquences seulement. À partir de 1.5 MHz, les modèles courants de vitesse deviennent semblables. C'est à cette fréquence qu'apparaissent progressivement  des artefacts hautes fréquences, malgré un lissage gaussien de 0.8 longueur d'onde. Dans ces conditions, le résultat final est donc très peu influencé par le choix du modèle initial. 
+Pour l'inversion de la vitesse, le modèle initial basse fréquence permet d'obtenir des résultats d'inversion plus précis et plus rapidement, à basses fréquences seulement. À partir de 1.5 MHz, les modèles courants de vitesse et les vitesses de convergence deviennent semblables. C'est à cette fréquence qu'apparaissent progressivement  des artefacts hautes fréquences, malgré un lissage gaussien de 0.8 longueur d'onde. Dans ces conditions, le résultat final est donc très peu influencé par le choix du modèle initial. Ces perturbations correspondent à des corrections du modèle effectuées dans l'espace nul du problème, en raison d'une interprétation en terme de vitesse des effets dynamiques de la masse volumique sur les données.\\ 
 \indent Les vitesses reconstruites manquent globalement de bas nombres d'ondes en raison de la largeur limitée des barrettes. Les bords des discontinuités de vitesse sont mal reconstruits également par manque de très hauts nombres d'onde. \\
 
 
@@ -286,36 +294,17 @@ Les bords latéraux des défauts reconstruits par la masse volumique ne sont pas
 Notons que le modèle initial de vitesse plus détaillé donne un résultat d'inversion pour la vitesse légèrement moins bon que celui obtenu à partir du modèle uniforme. La question du choix d'une autre stratégie pour la construction du modèle initial de vitesse se pose donc. Cette stratégie dépend de la fiabilité des informations connues \emph{a priori} sur la soudure.
 
 
-\subsubsection{Exemple d'acquisition réaliste}
-Un exemple d'inversion monoparamètre de la vitesse est présenté ici, à partir d'une acquisition plus réaliste. Deux barrettes de 64 éléments espacés de 1 mm sont placées de chaque côté de la racine de la soudure. Les données sont générée à partir d'une soudure de densité uniforme d'une valeur de 8000 kg/m$^{3}$ et de vitesse présentée en figure~\ref{app:iso:reel1}. La durée des signaux acquis est de 30.7 $\mu s$, ce qui est le temps nécessaire à la propagation d'une extrémité à l'autre du système d'acquisition. Le modèle initial de vitesse est uniforme, avec $v_{p}=6000$~m/s. Le modèle pour la masse volumique est fixé à sa valeur vraie.\\
-
- Le résultat de l'inversion, réalisée sur des fréquences allant de 200 k à 5 MHz, est présenté en figure~\ref{app:iso:reel2}. Il illustre à nouveau la dépendance de la résolution vis à vis du système d'acquisition. En effet, la racine de la soudure est mal reconstruite dans cette zone car les diffractions mesurées sont d'angle nul ou proche de $\pi$. Or, les angles de diffraction proches de $\pi$  contribuent à une reconstruction de résolution très faible, d'après l'expression du nombre d'onde~\ref{app:nb_onde}. Pour une application de la FWI à un cas réel, il est donc nécessaire de déterminer au préalable l'acquisition favorisant un éclairage adapté à la géométrie de la pièce à évaluer.
- 
-\begin{figure}
-	\begin{subfigure}[b]{0.5\textwidth}
-		\centering
-		\includegraphics[width=\textwidth]{img/config_reelle_true.png}
-		\caption{Configuration du système d'acquisition et vitesse utilisée pour la génération des données.\label{app:iso:reel1}}	
-	\end{subfigure}
-	\hspace{0.2cm}
-	\begin{subfigure}[b]{0.5\textwidth}
-		\centering
-		\includegraphics[width=\textwidth]{img/config_reelle_rec.png}
-		\caption{Vitesse reconstruite par inversion monoparamètre. \label{app:iso:reel2}}	
-	\end{subfigure}
-	\caption{Exemple d'inversion pour une acquisition unilatérale. Chaque barrette est utilisée en excitation et en réception.}
-\end{figure}
 
 \subsection{Inversion multiparamètre}
 
-Lors d'une inversion multiparamètre, les modèles des différents paramètres sont mis à jour simultanément. Idéalement, cela permet de perturber chaque modèle de façon à expliquer au mieux l'effet de chaque paramètre sur les données. Cependant, il arrive que ces effets soient attribué à de mauvais paramètres dont le modèle est alors faussement perturbé. Dans le cas d'une paramétrisation $v_{p}-\rho$, le risque est que la densité soit perturbée de façon à expliquer des temps de vol, ce qui ne permettra jamais de tendre vers le milieu vrai. Il est donc préférable, dans un premier temps, d'inverser seul le paramètre d'effet dominant dans les données, puis d'inverser conjointement l'ensemble des paramètres.\\
+Lors d'une inversion multiparamètre, les modèles des différents paramètres sont mis à jour simultanément. Idéalement, cela permet de perturber chaque modèle de façon à expliquer au mieux l'effet de chaque paramètre sur les données. Cependant, il arrive que ces effets soient attribués à de mauvais paramètres dont le modèle est alors faussement perturbé. Dans le cas d'une paramétrisation $v_{p}-\rho$, le risque est que la densité soit perturbée de façon à expliquer des temps de vol, ce qui ne permettra jamais de tendre vers le milieu vrai. Il est donc préférable, dans un premier temps, d'inverser seul le paramètre d'effet dominant dans les données, puis d'inverser conjointement l'ensemble des paramètres.\\
 
  Dans notre cas, le paramètre dominant est $v_{p}$, comme le montre la figure~\ref{app:traces_rho}. La stratégie est donc d'inverser ce paramètre à basse fréquence et avec un fort lissage, afin d'obtenir d'un modèle qui explique la majorité des temps d'arrivées. La vitesse et la densité sont ensuite reconstruites par FWI à partir de ce modèle de vitesse grossier. \\
  
 Les données utilisées sont celles issues du modèle et de l'acquisition de la figure~\ref{app:iso:model}.  Le résultat de cette inversion multiparamètre est présenté en figure~\ref{app:inv_multi}. 
 \\
 
-L'inversion multiparamètre est moins sujette aux artefacts (à lissage équivalent) car elle permet d'expliquer plus précisément les résidus, en corrigeant chaque paramètre  en lien avec ses effets sur les données. Ainsi, la reconstruction des bords des défauts plus fine.  L'inversion multiparamètre donne également plus de poids au paramètre de densité dont l'amplitude est légèrement mieux reconstruite qu'en inversion monoparamètre.  
+L'inversion multiparamètre est moins sujette aux artefacts (à lissage équivalent) car elle permet d'expliquer plus précisément les résidus, en corrigeant chaque paramètre  en lien avec ses effets sur les données. Ainsi, la reconstruction des bords des défauts plus fine.  L'inversion multiparamètre donne également plus de poids au paramètre de densité dont l'amplitude est légèrement mieux reconstruite qu'en inversion monoparamètre, bien qu'elle soit seulement, au mieux, de 10\% de la valeur vraie.
 
 
 
@@ -375,7 +364,6 @@ en prenant une vitesse moyenne de propagation $c$ égale à 5750~m/s en tout poi
 
 L'intensité est plus importante dans la zone proche des défauts, mais ils ne sont pas positionnés car la vitesse $c$ ne correspond pas à la vitesse réelle. La géométrie des défauts n'est pas distinguable et des pics sont visibles dans des zones sans défauts (sur le bord droit de la soudure, par exemple).
 
-\todo[inline]{Empreinte de l'acquisition ?}
 
 
 
@@ -477,7 +465,7 @@ Les résidus issus du modèle initial ($\epsilon$ uniformément nul) montrent qu
 			\caption{ Exemple d'orientation de grains dans la soudure (image extraite de \cite{ogilvy}).\label{ogilvy_soud}}
 \end{figure} 
 
-Ce type de modèle peut être décrit en faisant varier les constantes élastiques $C_{ijkl}$ en tout point. Cette anisotropie peut aussi être décrite en ajoutant un paramètre supplémentaire au modèle acoustique TI pour décrire une inclinaison locale de l'axe de symétrie de rotation du milieu \citep{alkhalifah_VTI}.
+Ce type de modèle peut être décrit en faisant varier les constantes élastiques $C_{ijkl}$ en tout point. Cette anisotropie peut aussi être décrite en ajoutant un paramètre supplémentaire au modèle acoustique TI pour décrire une inclinaison locale de l'axe de symétrie de rotation du milieu \citep{alkhalifah_TTI}.
 
  
 %\begin{figure}[!h]
@@ -497,20 +485,6 @@ Ce type de modèle peut être décrit en faisant varier les constantes élastiqu
 %\end{figure}
 
 
-
-
-
-
-\section{Enjeux et problématiques de l'inversion 3D élastique}
-
-L'application de la FWI à des données réelles implique de prendre en compte la propagation en 3D des ondes dans la soudure. Une inversion 2D appliquée à de vraies données nécessite donc de les préconditionner de manière à limiter la trace des ondes de cisaillement et à leur appliquer une correction d'amplitude. \\
-
-L'inversion 3D permet de prendre en compte l'ensemble des phénomènes de propagation et de tirer profit des ondes de cisaillement dont la longueur d'onde est plus faible que celle des ondes de compression. Cependant, les données peuvent être marquée par des ondes de surfaces dont l'atténuation est plus faible que les ondes de volume.  L'inversion est alors déséquilibrée par cette onde de forte amplitude et le modèle n'est mis à jour qu'en surface. L'influence de cette onde de surface sur les données peut être limitée par un filtrage adapté ou par une acquisition en transmission.\\ 
-
-\todo[inline]{Mettre une image de comparaison des données 2D et 3D ? }
-%élastique : 2 à 3 ordres de grandeurs plus cher en calcul. Pb moins bien posé : impose un modèle initial bien posé, ... Plus de paramètres impliqués=plus de degrés de liberté dans l'espace des modèles
-
-L'acquisition peut être réalisée dans un plan, comme dans les cas présentés précédemment, ce qui risque de limiter la qualité de reconstruction hors de ce plan. Des structures 3D peuvent également être reconstruites par l'utilisation de transducteurs matriciels ou par déplacement d'un transducteur linéaire.
 
 
 

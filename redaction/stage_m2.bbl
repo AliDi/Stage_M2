@@ -1,4 +1,4 @@
-\begin{thebibliography}{45}
+\begin{thebibliography}{49}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -9,6 +9,12 @@
 T.~Alkhalifah.
 \newblock An acoustic wave equation for anisotropic media.
 \newblock \emph{Geophysics}, 65\penalty0 (4):\penalty0 ~p.~1239--1250, 2000.
+
+\bibitem[Alkhalifah and Sava(2010)]{alkhalifah_TTI}
+T.~Alkhalifah and P.~Sava.
+\newblock A transversely isotropic medium with a tilted symmetry axis normal to
+  the reflector.
+\newblock \emph{Geophysics}, 75\penalty0 (3):\penalty0 ~p.~A19--A24, 2010.
 
 \bibitem[Asnaashari et~al.(2013)Asnaashari, Brossier, Garambois, Audebert,
   Thore, and Virieux]{asnaashari}
@@ -38,12 +44,6 @@ R.~Brossier.
   visco-élastiques par inversion des formes d’ondes : développements
   méethodologiques et applications}}.
 \newblock PhD thesis, Université de Nice-Sophia Antipolis, 2009.
-
-\bibitem[Brossier et~al.(2008)Brossier, Virieux, and Operto]{brossier_2008}
-R.~Brossier, J.~Virieux, and S.~Operto.
-\newblock Parsimonious finite-volume frequency-domain method for 2-{D}
-  {P-SV}-wave modelling.
-\newblock \emph{Geophys. J. Int.}, 175:\penalty0 ~p.~541--559, 2008.
 
 \bibitem[Brossier et~al.(2009)Brossier, Operto, and Virieux]{brossier_2009}
 R.~Brossier, S.~Operto, and J.~Virieux.
@@ -84,6 +84,12 @@ J.-F. De~Belleval, M.~Castaing, P.~Gatignol, and C.~Potel.
 \newblock In M.~Bruneau and C.~Potel, editors, \emph{Matériaux et acoustique,
   vol. 1}, chapter~1, pages 17--139. Hermès-Lavoisier, 2006.
 \newblock ISBN 2-7462-1450-4.
+
+\bibitem[Devaney(1982)]{devaney_82}
+A.~J. Devaney.
+\newblock A filtered backpropagation algorithm for diffraction tomography.
+\newblock \emph{Ultrasonic imaging}, 4\penalty0 (4):\penalty0 ~p.~336--350,
+  1982.
 
 \bibitem[Doctor et~al.(1986)Doctor, Hall, and Reid]{doctor_saft}
 S.R. Doctor, T.E. Hall, and L.D. Reid.
@@ -143,6 +149,12 @@ F.~Lopes.
   radar multioffsets.}
 \newblock PhD thesis, Université Paris Diderot - Paris 7, 2009.
 
+\bibitem[Marfurt(1984)]{marfurt}
+K.~J. Marfurt.
+\newblock Accuracy of finite-difference and finite-element modeling of the
+  scalar and elastic wave equations.
+\newblock \emph{Geophysics}, 49\penalty0 (5):\penalty0 ~p.~533--549, 1984.
+
 \bibitem[Mora(1987{\natexlab{a}})]{mora_87a}
 P.~Mora.
 \newblock Nonlinear two-dimensional elastic inversion of multioffset seismic
@@ -155,6 +167,13 @@ P.~Mora.
 \newblock Nonlinear elastic inversion of real data.
 \newblock \emph{SEG Technical Program Expanded Abstracts}, pages 430--432,
   1987{\natexlab{b}}.
+
+\bibitem[Moysan et~al.(2003)Moysan, Apfel, Corneloup, and Chassignole]{moysan}
+J.~Moysan, A.~Apfel, G.~Corneloup, and B.~Chassignole.
+\newblock Modelling the grain orientation of austenitic stainless steel
+  multipass welds to improve ultrasonic assessment of structural integrity.
+\newblock \emph{International Journal of Pressure Vessels and Piping},
+  80\penalty0 (2):\penalty0 ~p.~77--85, 2003.
 
 \bibitem[Nocedal(1980)]{nocedal}
 J.~Nocedal.
@@ -234,6 +253,13 @@ L.~Sirgue and R.~G. Pratt.
 \newblock Efficient waveform inversion and imaging: A strategy for selecting
   temporal frequencies.
 \newblock \emph{Geophysics}, 69\penalty0 (1):\penalty0 ~p.~231--248, 2004.
+
+\bibitem[Sirgue et~al.(2009)Sirgue, Barkved, Van~Gestel, Askim, and
+  Kommedal]{sirgue_valhall}
+L.~Sirgue, O.~I. Barkved, J.~P. Van~Gestel, O.~J. Askim, and J.~H. Kommedal.
+\newblock 3d waveform inversion on valhall wide-azimuth obc.
+\newblock In \emph{71st EAGE Conference and Exhibition incorporating SPE
+  EUROPEC 2009}, 2009.
 
 \bibitem[Stoffa and Sen(1991)]{stoffa}
 P.~L. Stoffa and M.~K. Sen.

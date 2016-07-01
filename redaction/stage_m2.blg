@@ -6,6 +6,7 @@ A level-1 auxiliary file: imagerie.aux
 A level-1 auxiliary file: fwi.aux
 A level-1 auxiliary file: application.aux
 A level-1 auxiliary file: conclusion.aux
+A level-1 auxiliary file: annexes.aux
 The style file: plainnat.bst
 Database file #1: biblio.bib
 I was expecting a `,' or a `}'---line 195 of file biblio.bib
@@ -22,45 +23,45 @@ Repeated entry---line 452 of file biblio.bib
 I'm skipping whatever remains of this entry
 Warning--there's a number but no volume in doctor_saft
 Warning--there's a number but no volume in holmes_tfm
-You've used 45 entries,
+You've used 49 entries,
             2773 wiz_defined-function locations,
-            856 strings with 11695 characters,
-and the built_in function-call counts, 21562 in all, are:
-= -- 2027
-> -- 971
-< -- 35
-+ -- 338
-- -- 292
-* -- 1748
-:= -- 3246
-add.period$ -- 143
-call.type$ -- 45
-change.case$ -- 223
-chr.to.int$ -- 44
-cite$ -- 92
-duplicate$ -- 966
-empty$ -- 1894
-format.name$ -- 349
-if$ -- 4537
+            879 strings with 12456 characters,
+and the built_in function-call counts, 23488 in all, are:
+= -- 2200
+> -- 1069
+< -- 38
++ -- 372
+- -- 322
+* -- 1909
+:= -- 3536
+add.period$ -- 155
+call.type$ -- 49
+change.case$ -- 245
+chr.to.int$ -- 48
+cite$ -- 100
+duplicate$ -- 1050
+empty$ -- 2066
+format.name$ -- 385
+if$ -- 4939
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 43
-newline$ -- 237
-num.names$ -- 184
-pop$ -- 430
+missing$ -- 47
+newline$ -- 257
+num.names$ -- 200
+pop$ -- 474
 preamble$ -- 1
-purify$ -- 186
+purify$ -- 204
 quote$ -- 0
-skip$ -- 702
+skip$ -- 762
 stack$ -- 0
-substring$ -- 1424
-swap$ -- 103
+substring$ -- 1537
+swap$ -- 108
 text.length$ -- 7
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 480
+type$ -- 524
 warning$ -- 2
-while$ -- 210
+while$ -- 228
 width$ -- 0
-write$ -- 600
+write$ -- 651
 (There were 3 error messages)
