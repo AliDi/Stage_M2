@@ -1,7 +1,7 @@
 %\addcontentsline{toc}{section}{\textbf{Annexe}}
 
 \chapter{Inversion à partir d'une acquisition réaliste \label{annexe:acqui}}
-Un exemple d'inversion monoparamètre de la vitesse est présenté ici, à partir d'une acquisition qui n'est pas en contact avec le relief de la soudure. Deux barrettes de 64 éléments espacées de 1 mm sont placées de chaque côté de la racine de la soudure. Les données sont générée à partir d'une soudure de densité uniforme d'une valeur de 8000 kg/m$^{3}$ et de vitesse présentée en figure~\ref{app:iso:reel1}. La durée des signaux acquis est de 30.7 $\mu s$, ce qui est le temps nécessaire à la propagation d'une extrémité à l'autre du système d'acquisition. Le modèle initial de vitesse est uniforme, avec $v_{p}=6000$~m/s. Le modèle pour la masse volumique est fixé à sa valeur vraie.\\
+Un exemple d'inversion monoparamètre de la vitesse est présenté ici, à partir d'une acquisition qui n'est pas en contact avec le relief de la soudure. Deux barrettes de 64 éléments espacées de 1 mm sont placées de chaque côté de la racine de la soudure. Les données sont générée à partir d'une soudure de masse volumique uniforme d'une valeur de 8000 kg/m$^{3}$ et de vitesse présentée en figure~\ref{app:iso:reel1}. La durée des signaux acquis est de 30.7 $\mu s$, ce qui est le temps nécessaire à la propagation d'une extrémité à l'autre du système d'acquisition. Le modèle initial de vitesse est uniforme, avec $v_{p}=6000$~m/s. Le modèle pour la masse volumique est fixé à sa valeur vraie.\\
 
  Le résultat de l'inversion, réalisée sur des fréquences allant de 200 k à 5 MHz, est présenté en figure~\ref{app:iso:reel2}. Il illustre à nouveau la dépendance de la résolution vis à vis du système d'acquisition. En effet, la racine de la soudure est mal reconstruite dans cette zone car les diffractions mesurées sont d'angle nul ou proche de $\pi$. Or, les angles de diffraction proches de $\pi$  contribuent à une reconstruction de résolution très faible, d'après l'expression du nombre d'onde~\ref{app:nb_onde}. Pour une application de la FWI à un cas réel, il est donc nécessaire de déterminer au préalable l'acquisition favorisant un éclairage adapté à la géométrie de la pièce à évaluer.
  
@@ -51,7 +51,6 @@ Les inversions présentées dans ce rapport sont le résultats d'une suite d'inv
 Les calculs ont été réalisé sur les machines du centre de calcul CIMENT \footnote{Calcul Intensif / Modélisation / Expérimentation Numérique et Technologique : https://ciment.ujf-grenoble.fr}. Le temps de calcul nécessaire à une inversion (pour une seule gamme de fréquence) à 128 sources, est d'environ 5 minutes sur 128 cœurs  (sur des nœuds constitués de 8 biprocesseurs\footnote{d'architecture Sandy Bridge, Intel}, soit 16 cœurs par nœud).\\
 
  À titre de comparaison,  le calcul TFM prend une dizaine de minutes sur un ordinateur personnel\footnote{2 coeurs, 4 threads (processeur i7-4600u, Intel)} (pour une discrétisation spatiale semblable à celle utilisée pour la FWI).
-
 
 
 

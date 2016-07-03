@@ -33,8 +33,8 @@
 \contentsline {subsubsection}{Construction du mod\IeC {\`e}le initial de vitesse}{22}{section*.23}
 \contentsline {subsubsection}{R\IeC {\'e}sultats d'inversion}{23}{section*.25}
 \contentsline {subsection}{\numberline {3.3.3}Inversion multiparam\IeC {\`e}tre}{25}{subsection.3.3.3}
-\contentsline {subsection}{\numberline {3.3.4}Comparaison avec la m\IeC {\'e}thode TFM}{25}{subsection.3.3.4}
-\contentsline {section}{\numberline {3.4}Inversions en milieu acoustique isotrope transverse }{26}{section.3.4}
-\contentsline {section}{\textbf {Conclusion}}{30}{figure.caption.31}
+\contentsline {subsection}{\numberline {3.3.4}Comparaison avec la m\IeC {\'e}thode TFM}{26}{subsection.3.3.4}
+\contentsline {section}{\numberline {3.4}Inversions en milieu acoustique isotrope transverse }{27}{section.3.4}
+\contentsline {section}{\textbf {Conclusions}}{30}{figure.caption.31}
 \contentsline {chapter}{\numberline {A}Inversion \IeC {\`a} partir d'une acquisition r\IeC {\'e}aliste }{31}{appendix.A}
 \contentsline {chapter}{\numberline {B}Discr\IeC {\'e}tisations et ressources n\IeC {\'e}cessaires \IeC {\`a} l'inversion }{32}{appendix.B}

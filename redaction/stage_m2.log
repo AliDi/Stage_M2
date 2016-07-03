@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.3.4)  1 JUL 2016 19:32
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.3.4)  3 JUL 2016 21:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -953,7 +953,10 @@ File: tikzlibraryshapes.misc.code.tex 2008/01/09 v2.10 (rcs-revision 1.1)
 (/usr/share/texmf/tex/generic/pgf/libraries/shapes/pgflibraryshapes.misc.code.t
 ex
 File: pgflibraryshapes.misc.code.tex 2008/10/07 v2.10 (rcs-revision 1.3)
-)) (/usr/share/texlive/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+)) (/usr/share/texlive/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
 Package: fancyvrb 2008/02/07
 
 Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix 
@@ -1105,7 +1108,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip81
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 57.
+Package hyperref Info: Option `colorlinks' set `true' on input line 58.
 
 (/usr/share/texlive/texmf-dist/tex/latex/lineno/lineno.sty
 Package: lineno 2005/11/02 line numbers on paragraphs v4.41
@@ -1147,35 +1150,35 @@ LaTeX Warning: Label `sub@' multiply defined.
 ) (./application.aux) (./conclusion.aux) (./annexes.aux))
 \openout1 = `stage_m2.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 78.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 78.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 79.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 79.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 78.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 79.
 
 (/usr/share/texmf/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Info: Redefining \degres on input line 78.
-LaTeX Info: Redefining \dots on input line 78.
-LaTeX Info: Redefining \up on input line 78.
+LaTeX Info: Redefining \degres on input line 79.
+LaTeX Info: Redefining \dots on input line 79.
+LaTeX Info: Redefining \up on input line 79.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1245,16 +1248,16 @@ Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             or
 (lastpage)             http://www.ctan.org/tex-archive/ 
 (lastpage)             install/macros/latex/contrib/pageslts.tds.zip
-(lastpage)             ! on input line 78.
+(lastpage)             ! on input line 79.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
 
 ABD: EveryShipout initializing macros ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 78.
+LaTeX Info: Redefining \selectfont on input line 79.
 \AtBeginShipoutBox=\box41
-Package hyperref Info: Link coloring ON on input line 78.
+Package hyperref Info: Link coloring ON on input line 79.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1264,47 +1267,47 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count164
 )
-LaTeX Info: Redefining \ref on input line 78.
-LaTeX Info: Redefining \pageref on input line 78.
-LaTeX Info: Redefining \nameref on input line 78.
+LaTeX Info: Redefining \ref on input line 79.
+LaTeX Info: Redefining \pageref on input line 79.
+LaTeX Info: Redefining \nameref on input line 79.
 
 (./stage_m2.out) (./stage_m2.out)
 \@outlinefile=\write5
 \openout5 = `stage_m2.out'.
 
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 93.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 94.
  (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 93.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 94.
 
 (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 93.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 94.
 
 
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 93.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 94.
 
 
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 93.
+(Font)              <12> on input line 94.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 93.
+(Font)              <8> on input line 94.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 93.
-LaTeX Font Info:    Try loading font information for U+msa on input line 93.
+(Font)              <6> on input line 94.
+LaTeX Font Info:    Try loading font information for U+msa on input line 94.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 93.
+LaTeX Font Info:    Try loading font information for U+msb on input line 94.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1312,29 +1315,29 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 <img/univ.png, id=147, 609.27625pt x 282.05376pt>
 File: img/univ.png Graphic file (type png)
  <use img/univ.png>
-Package pdftex.def Info: img/univ.png used on input line 133.
+Package pdftex.def Info: img/univ.png used on input line 134.
 (pdftex.def)             Requested size: 153.65742pt x 71.13188pt.
 
-Overfull \hbox (17.08281pt too wide) in paragraph at lines 133--134
+Overfull \hbox (17.08281pt too wide) in paragraph at lines 134--135
  [][] 
  []
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 134.
+(Font)              <14.4> on input line 135.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 134.
+(Font)              <10> on input line 135.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 134.
+(Font)              <7> on input line 135.
 <img/cnrs.png, id=149, 170.7981pt x 170.7981pt>
 File: img/cnrs.png Graphic file (type png)
  <use img/cnrs.png>
-Package pdftex.def Info: img/cnrs.png used on input line 137.
+Package pdftex.def Info: img/cnrs.png used on input line 138.
 (pdftex.def)             Requested size: 71.13007pt x 71.13188pt.
 
 <img/isterre.png, id=150, 592.2125pt x 428.60126pt>
 File: img/isterre.png Graphic file (type png)
  <use img/isterre.png>
-Package pdftex.def Info: img/isterre.png used on input line 141.
+Package pdftex.def Info: img/isterre.png used on input line 142.
 (pdftex.def)             Requested size: 98.28014pt x 71.13188pt.
 
 [1
@@ -1355,7 +1358,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--6
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.158 \tableofcontents
+l.159 \tableofcontents
                       } [1] (./stage_m2.toc
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10.95> on input line 2.
@@ -2092,30 +2095,26 @@ Package pdftex.def Info: img/multi_param/coupe_rho_multi_vert.png used on input
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<img/tfm_retouche.png, id=659, 1290.0195pt x 638.1441pt>
+[25] <img/tfm_retouche.png, id=664, 1290.0195pt x 638.1441pt>
 File: img/tfm_retouche.png Graphic file (type png)
 
 <use img/tfm_retouche.png>
 Package pdftex.def Info: img/tfm_retouche.png used on input line 361.
 (pdftex.def)             Requested size: 287.5845pt x 142.26378pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
+ [26 <./img/multi_param/vp_smooth.png> <./img/multi_param/vp_multi_6000k.png> <
+./img/multi_param/rho_6000k.png> <./img/multi_param/coupe_vp_multi.png> <./img/
+multi_param/coupe_rho_multi.png> <./img/multi_param/coupe_vp_multi_vert.png> <.
+/img/multi_param/coupe_rho_multi_vert.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 373--375
 
  []
 
-[25] [26 <./img/multi_param/vp_smooth.png> <./img/multi_param/vp_multi_6000k.pn
-g> <./img/multi_param/rho_6000k.png> <./img/multi_param/coupe_vp_multi.png> <./
-img/multi_param/coupe_rho_multi.png> <./img/multi_param/coupe_vp_multi_vert.png
-> <./img/multi_param/coupe_rho_multi_vert.png>]
+
 Underfull \hbox (badness 10000) in paragraph at lines 397--398
 
  []
 
-
+[27 <./img/tfm_retouche.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 399--400
 
  []
@@ -2125,19 +2124,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 407--410
 
  []
 
-[27 <./img/tfm_retouche.png>]
+
 Underfull \hbox (badness 10000) in paragraph at lines 412--413
 
  []
 
-<img/epsilon/epsilon_true.png, id=705, 675.36314pt x 402.5439pt>
+<img/epsilon/epsilon_true.png, id=703, 675.36314pt x 402.5439pt>
 File: img/epsilon/epsilon_true.png Graphic file (type png)
 
 <use img/epsilon/epsilon_true.png>
 Package pdftex.def Info: img/epsilon/epsilon_true.png used on input line 420.
 (pdftex.def)             Requested size: 227.62206pt x 135.6715pt.
 
-<img/epsilon/epsilon_final.png, id=706, 682.59015pt x 330.2739pt>
+<img/epsilon/epsilon_final.png, id=704, 682.59015pt x 330.2739pt>
 File: img/epsilon/epsilon_final.png Graphic file (type png)
 
 <use img/epsilon/epsilon_final.png>
@@ -2148,51 +2147,43 @@ Overfull \hbox (2.43333pt too wide) in paragraph at lines 418--429
 [][] [] 
  []
 
-<img/epsilon/e20.png, id=707, 547.0839pt x 628.0263pt>
+<img/epsilon/e20.png, id=705, 547.0839pt x 628.0263pt>
 File: img/epsilon/e20.png Graphic file (type png)
 
 <use img/epsilon/e20.png>
 Package pdftex.def Info: img/epsilon/e20.png used on input line 437.
 (pdftex.def)             Requested size: 173.27327pt x 198.90262pt.
 
-<img/epsilon/residu_init.png, id=708, 499.02435pt x 628.749pt>
+<img/epsilon/residu_init.png, id=706, 499.02435pt x 628.749pt>
 File: img/epsilon/residu_init.png Graphic file (type png)
 
 <use img/epsilon/residu_init.png>
 Package pdftex.def Info: img/epsilon/residu_init.png used on input line 442.
 (pdftex.def)             Requested size: 157.6793pt x 198.67099pt.
 
-<img/epsilon/residu_final.png, id=709, 499.3857pt x 628.749pt>
+<img/epsilon/residu_final.png, id=707, 499.3857pt x 628.749pt>
 File: img/epsilon/residu_final.png Graphic file (type png)
 
 <use img/epsilon/residu_final.png>
 Package pdftex.def Info: img/epsilon/residu_final.png used on input line 447.
 (pdftex.def)             Requested size: 157.6793pt x 198.52708pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
+ [28 <./img/epsilon/epsilon_true.png> <./img/epsilon/epsilon_final.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 454--455
 
  []
 
-<img/ogilvy_modele.png, id=717, 246.4407pt x 257.2812pt>
+<img/ogilvy_modele.png, id=724, 246.4407pt x 257.2812pt>
 File: img/ogilvy_modele.png Graphic file (type png)
 
 <use img/ogilvy_modele.png>
 Package pdftex.def Info: img/ogilvy_modele.png used on input line 464.
 (pdftex.def)             Requested size: 113.81102pt x 118.81795pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[28 <./img/epsilon/epsilon_true.png> <./img/epsilon/epsilon_final.png>])
-[29 <./img/epsilon/e20.png> <./img/epsilon/residu_init.png> <./img/epsilon/resi
-du_final.png> <./img/ogilvy_modele.png>]
+) [29 <./img/epsilon/e20.png> <./img/epsilon/residu_init.png> <./img/epsilon/re
+sidu_final.png> <./img/ogilvy_modele.png>]
 \openout2 = `conclusion.aux'.
 
- (./conclusion.tex
+
+(./conclusion.tex
 Underfull \hbox (badness 10000) in paragraph at lines 4--5
 
  []
@@ -2268,61 +2259,49 @@ Underfull \hbox (badness 10000) in paragraph at lines 51--52
 ] [35]) 
 AED: lastpage setting LastPage
 [36]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 181.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 181.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 182.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 182.
  (./stage_m2.aux (./introduction.aux) (./imagerie.aux) (./fwi.aux)
 (./application.aux) (./conclusion.aux) (./annexes.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 181.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 181.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 182.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 182.
+Package rerunfilecheck Info: File `stage_m2.out' has not changed.
+(rerunfilecheck)             Checksum: F89E0FBF99713CE903B81DB5341BBCE1;2927.
 
-
-Package rerunfilecheck Warning: File `stage_m2.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `stage_m2.out':
-(rerunfilecheck)             Before: 4C4A8A3D3BAD1D1CB67782888843C1A1;2954
-(rerunfilecheck)             After:  A81A9A5B4B4BBE972C467091557834C5;2926.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 181.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 182.
  ) 
 Here is how much of TeX's memory you used:
- 21052 strings out of 493304
- 361700 string characters out of 6139872
- 450347 words of memory out of 5000000
- 23763 multiletter control sequences out of 15000+600000
+ 21064 strings out of 493304
+ 361919 string characters out of 6139872
+ 450510 words of memory out of 5000000
+ 23774 multiletter control sequences out of 15000+600000
  123611 words of font info for 101 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  56i,11n,77p,1141b,780s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{section.Alph0.2} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.Alph0.1} has been referenced but does not e
-xist, replaced by a fixed one
-
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvip
-s/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/t
-exmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-math
-it.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}</usr/share/texmf/fon
-ts/type1/public/lm/lmbsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx10.p
-fb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/t
-ype1/public/lm/lmbx8.pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb></
-usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/
-public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi6.pfb></usr/sh
-are/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/
-lm/lmmib10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmib7.pfb></usr/share/t
-exmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lm
-r12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/font
-s/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></u
-sr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/pub
-lic/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/shar
-e/texmf/fonts/type1/public/lm/lmsy8.pfb>
-Output written on stage_m2.pdf (37 pages, 7616857 bytes).
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dv
+ips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share
+/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ma
+thit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}</usr/share/texmf/f
+onts/type1/public/lm/lmbsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx10
+.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts
+/type1/public/lm/lmbx8.pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb>
+</usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type
+1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi6.pfb></usr/
+share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/publi
+c/lm/lmmib10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmib7.pfb></usr/share
+/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/
+lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fo
+nts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb><
+/usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/p
+ublic/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/sh
+are/texmf/fonts/type1/public/lm/lmsy8.pfb>
+Output written on stage_m2.pdf (37 pages, 7617218 bytes).
 PDF statistics:
- 924 PDF objects out of 1000 (max. 8388607)
- 732 compressed objects within 8 object streams
- 187 named destinations out of 1000 (max. 500000)
+ 921 PDF objects out of 1000 (max. 8388607)
+ 729 compressed objects within 8 object streams
+ 185 named destinations out of 1000 (max. 500000)
  573 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,12 +1,12 @@
 \chapter{Application de la FWI à des données synthétiques \label{applications}}
 
-La FWI a déjà été appliquées à de nombreux cas d'inversion de données sismiques réelles pour l'imagerie terrestre. Les problématiques de l'application de la FWI au CND de soudure sont liées à quelques nouvelles spécificités propres à cette application. Comme il a été évoqué dans la première partie de ce rapport, il semble, par exemple, indispensable de prendre l'anisotropie en compte dans l'inversion, pour expliquer les déviations de faisceau.\\
+La FWI a déjà été appliquée à de nombreux cas d'inversion de données sismiques réelles pour l'imagerie terrestre. Les problématiques de l'application de la FWI au CND de soudure sont liées à quelques nouvelles spécificités propres à cette application. Comme il a été évoqué dans la première partie de ce rapport, il semble, par exemple, indispensable de prendre l'anisotropie en compte dans l'inversion, pour expliquer les déviations de faisceau.\\
 
 De plus, la possibilité de disposer des capteurs de part et d'autre de la pièce permet de réaliser des inversions avec des signaux temporels plus courts et des angles de diffraction plus variés. Pour des acquisitions de surface en sismologie, seules les diffractions rayonnant vers la surface sont considérées (soit un angle de diffraction n'excédant pas 180°). Dans la cas de l'imagerie de soudure, il n'est pas non plus possible de tourner autour de l'obstacle, mais un éclairage bilatéral est possible, avec déplacement un éventuel des transducteurs.\\
 
 Enfin, on peut citer la géométrie de la plaque qui offre de multiples réflexions. Ces réflexions devraient permettre un meilleur éclairage du milieu mais risquent d'apporter trop d'informations en transmission dans les données. Une étude de l'influence de ces réflexions sur la résolution est d'abord menée dans ce chapitre. Une explication de la stratégie d'inversion pour limiter les non-linéarités de l'inversion est ensuite proposée, avant de présenter quelques résultats d'inversion à partir de données observées construites de manière synthétique.\\
 
-Ces données sont générées par la résolution d'un problème direct à partir d'une force suivant $\bm{e}_{z}$ dont le signal d'excitation est une fonction de Ricker. La fréquence centrale d'excitation est 2 MHz,  ce qui équivaut à une longueur d'onde de 3 mm pour les ondes longitudinales en considérant que leur vitesse $v_{p}$ dans l'acier est de 6000 m/s et 1,6 mm pour les ondes de cisaillement dont la vitesse $v_{s}$ est supposée proche de 3200 m/s par la suite.
+Ces données sont générées par la résolution d'un problème direct à partir d'une force normale à la barrette multiélément dont le signal d'excitation est une fonction de Ricker. La fréquence centrale d'excitation est 2 MHz,  ce qui équivaut à une longueur d'onde de 3 mm pour les ondes longitudinales en considérant que leur vitesse $v_{p}$ dans l'acier est de 6000 m/s et 1,6 mm pour les ondes de cisaillement dont la vitesse $v_{s}$ est supposée proche de 3200 m/s par la suite.
 % qui correspond à la dérivée seconde d'une Gaussienne et qui est définie de la manière suivante : 
 %\begin{equation}
 %	s(t)=(1-(t-t_{0}f\pi))^2e^{-((t-t_{0})\pi f)^2}\text{.}
@@ -169,7 +169,7 @@ Deux types d'inversions sont proposée par la suite pour une paramétrisation ma
 
 La géométrie de l'acquisition pour les inversions en milieu isotrope est choisie de manière à favoriser un bon éclairage de la soudure : deux barrettes linéaires de 64 éléments (en émission et réception) sont situées de part et d'autre de la soudure. Cette configuration ne correspond pas à celle d'une inspection de soudure conventionnelle, puisque en pratique, le relief de la soudure ne permet pas de placer les barrettes directement dessus. La FWI est ainsi testée indépendamment des problèmes d'éclairage qu'une configuration réaliste peut générer. Une illustration de l'effet d'une acquisition réaliste sur une inversion de la vitesse se trouve en annexe~\ref{annexe:acqui}.\\
 
-  La durée d'acquisition est de 15,4 $\mu$s, ce qui correspond à une propagation sur 9 cm à 6000 m/s, soit moins d'un aller-retour dans l'épaisseur de la plaque. Les données observées sont calculées à partir du milieu dont la masse volumique et  la vitesse verticale sont présentés en figure~\ref{app:iso:model}.\\
+  La durée d'acquisition est de 15,4 $\mu$s, ce qui correspond à une propagation sur 9~cm à 6000~m/s, soit moins d'un aller-retour dans l'épaisseur de la plaque. Les données observées sont calculées à partir du milieu dont la masse volumique et  la vitesse verticale sont présentés en figure~\ref{app:iso:model}.\\
 
 
 
@@ -197,7 +197,7 @@ Les paramètres de vitesse et de masse volumique sont d'abord inversés indépen
 
 \subsubsection{Construction du modèle initial de vitesse}
 
-Un premier modèle initial de vitesse pour l'inversion des paramètre de vitesse et de masse volumique est proposé. Il est constitué d'une vitesse uniformément égale à 6000 m/s. Il s'avère que pour une inversion de la masse volumique, il est très difficile d'assurer une convergence avec ce modèle initial, car la seule mise à jour du modèle de masse volumique ne peut expliquer la majeure partie des données en terme de cinématique. En effet, la figure~\ref{app:traces_rho} montre que la différence de masse volumique au niveau des défauts n'impacte pas les temps de vol mais l'amplitude des diffractions sur les défauts. Il est donc nécessaire de disposer d'un modèle de vitesse suffisamment précis pour expliquer les différentes arrivées, puis la masse volumique sera reconstruite par correction des amplitudes. \\
+Un premier modèle initial de vitesse pour l'inversion des paramètres de vitesse et de masse volumique est proposé. Il est constitué d'une vitesse uniformément égale à 6000 m/s. Il s'avère que pour une inversion de la masse volumique, il est très difficile d'assurer une convergence avec ce modèle initial, car la seule mise à jour du modèle de masse volumique ne peut expliquer la majeure partie des données en terme de cinématique. En effet, la figure~\ref{app:traces_rho} montre que la différence de masse volumique au niveau des défauts n'impacte pas les temps de vol mais l'amplitude des diffractions sur les défauts. Il est donc nécessaire de disposer d'un modèle de vitesse suffisamment précis pour expliquer les différentes arrivées, puis la masse volumique sera reconstruite par correction des amplitudes. \\
 
 Un second modèle initial de vitesse est donc proposé pour l'inversion de la masse volumique. Ce modèle est issu d'une première inversion de la vitesse avec un fort lissage gaussien de la perturbation sur deux longueurs d'onde. Ce modèle décrit donc les variations basse fréquence d'une reconstruction de la vitesse dans la soudure vraie.\\
 
@@ -285,7 +285,7 @@ Dans un second temps, la masse volumique est inversée, indépendamment du param
 		\caption{\label{app:inv_mono} Modèle initiaux de vitesse et résultat d'inversion monoparamètre de la vitesse (deux colonnes de gauche) et de la densité (colonne de droite).}
 	\end{changemargin}
 	\end{figure}
-Pour l'inversion de la vitesse, le modèle initial basse fréquence permet d'obtenir des résultats d'inversion plus précis et plus rapidement, à basses fréquences seulement. À partir de 1.5 MHz, les modèles courants de vitesse et les vitesses de convergence deviennent semblables. C'est à cette fréquence qu'apparaissent progressivement  des artefacts hautes fréquences, malgré un lissage gaussien de 0.8 longueur d'onde. Dans ces conditions, le résultat final est donc très peu influencé par le choix du modèle initial. Ces perturbations correspondent à des corrections du modèle effectuées dans l'espace nul du problème, en raison d'une interprétation en terme de vitesse des effets dynamiques de la masse volumique sur les données.\\ 
+Pour l'inversion de la vitesse, le modèle initial basse fréquence permet d'obtenir des résultats d'inversion plus précis et plus rapidement, à basses fréquences seulement. À partir de 1.5~MHz, les modèles courants de vitesse et les vitesses de convergence deviennent semblables. C'est à cette fréquence qu'apparaissent progressivement  des artefacts hautes fréquences, malgré un lissage gaussien de 0.8 longueur d'onde. Dans ces conditions, le résultat final est donc très peu influencé par le choix du modèle initial. Ces perturbations correspondent à des corrections du modèle effectuées dans l'espace nul du problème, en raison d'une interprétation en terme de vitesse des effets dynamiques de la masse volumique sur les données.\\ 
 \indent Les vitesses reconstruites manquent globalement de bas nombres d'ondes en raison de la largeur limitée des barrettes. Les bords des discontinuités de vitesse sont mal reconstruits également par manque de très hauts nombres d'onde. \\
 
 
@@ -343,10 +343,10 @@ L'inversion multiparamètre est moins sujette aux artefacts (à lissage équival
 		\includegraphics[width=\textwidth]{img/multi_param/coupe_rho_multi_vert.png}
 		\caption{Masses volumiques vraie et reconstruite à $x=50$~mm.}
 	\end{subfigure}
-	\caption{Modèle initial de vitesse et résultats d'inversion multiparamètre de la vitesse et de la densité.\label{app:inv_multi} }
+	\caption{Modèle initial de vitesse et résultats d'inversion multiparamètre de la vitesse et de la masse volumique.\label{app:inv_multi} }
 \end{figure}
 
-
+\newpage
 
 \subsection{Comparaison avec la méthode TFM}
 
