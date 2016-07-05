@@ -48,6 +48,9 @@
 \usepackage{amsmath,mathtools}
 \usefonttheme[onlymath]{serif}
 
+\setbeamertemplate{frametitle}{\vspace{0.13cm}\hspace{-0.9cm} \insertframetitle}
+\setbeamerfont{frametitle}{size=\Large}
+
 \setlength{\fboxrule}{1pt}
 
 \setbeamertemplate{bibliography item}[]
@@ -164,9 +167,9 @@
 \section{La FWI}
 \begin{frame}{\insertsectionhead}
 	\begin{itemize}
-		\item \emph{Full waveform inversion} : utilise la totalité du champ d'onde (toutes les arrivées et les amplitudes)
-		\item Développée pour la géophysique
 		\item Méthode d'optimisation locale
+		\item Développée pour la géophysique
+		\item \emph{Full waveform inversion} : utilise la totalité du champ d'onde (toutes les arrivées et les amplitudes)
 	\end{itemize}
 
 \end{frame}
@@ -182,7 +185,7 @@
 
 \end{frame}
 
-\begin{frame}
+\begin{frame}{\insertsectionhead}
 	\begin{itemize}
 		\item Fonction de coût : $C(\bm{m})=\frac{1}{2}||\bm{d}_{obs}-\bm{d}_{cal}(\bm{m})||^{2}$ \\[0.5cm]
 		\item \only<1-1>{Perturbation du modèle : $\bm{\Delta m}=-(C'')^{-1}C'$} \onslide<2->{Perturbation du modèle : $\bm{\Delta m}=-(C'')^{-1}$\fcolorbox{DeepSkyBlue4}{white!0}{$C'$}}
@@ -242,10 +245,11 @@
 		
 	\onslide<2->{
 		\begin{itemize}
-			\item Résolution du gradient :
-			\begin{equation*}
-				|\bm{k}|=|\bm{s}+\bm{r}|=\frac{\omega}{c}2\cos\left( \frac{\theta}{2} \right)
-			\end{equation*}	
+			\item Résolution du gradient :\vspace{-0.5cm}
+			\begin{align}
+				|\bm{k}|&=|\bm{s}+\bm{r}|=\frac{\omega}{c}2\cos\left( \frac{\theta}{2} \right)\\
+				& =\lambda_{min}/2 ~~~~\text{si}~~\theta=0
+			\end{align}	\vspace{-1cm}
 	}
 	
 		\only<1-3>{
@@ -253,17 +257,19 @@
 				\column{0.4\textwidth}<1-3>
 				\begin{figure}
 					\centering
+					\vfill
 					\includegraphics[height=2.5cm]{img/reso.png}	
 				\end{figure}
 				\column{0.55\textwidth}<3-3>
 				\begin{figure}
 					\centering
-					\vspace{-0.3cm}\includegraphics[height=3.7cm]{img/reso_surf_libre.png}
+					\vfill \includegraphics[height=3.7cm]{img/reso_surf_libre.png}
 				\end{figure}		
 			\end{columns}
 		}
 	\only<4->{
-		\item Rayonnement des paramètres : 
+		
+		\vspace{0.5cm}\item Rayonnement des paramètres : 
 		\begin{figure}
 			\centering
 			\includegraphics[height=1.7cm]{img/rayonnement.png}
@@ -403,7 +409,8 @@
 
 
 \subsection{Inversion multiparamètre}
-\begin{frame}{\insertsectionhead}
+\begin{frame}{\insertsubsectionhead}
+\begin{small}
 	\centering
 	Vitesse initiale :
 	\begin{figure}
@@ -415,28 +422,89 @@
 		\column{0.5\textwidth}
 		\centering
 		Vitesse reconstruite :\\[0.2cm]
-		\includegraphics[width=0.7\textwidth]{img/multi/vp_multi_6000k.png}		
+		\includegraphics[width=0.7\textwidth]{img/multi/vp_multi_6000k.png}	\\
+		
+		Vitesse vraie : \\[0.2cm]
+		\includegraphics[width=0.7\textwidth]{img/vp_true.png}
 		\column{0.5\textwidth}
 		\centering
 		Masse volumique reconstruite :\\[0.2cm]
-		\includegraphics[width=0.7\textwidth]{img/multi/rho_6000k.png}	
-	\end{columns}
+		\includegraphics[width=0.7\textwidth]{img/multi/rho_6000k.png}\\	
+		
+		Masse volumique vraie : \\[0.2cm]
+		\includegraphics[width=0.7\textwidth]{img/rho_true.png}
+	\end{columns}	
 	
-	\begin{columns}
-		\column{}
-	
-	\end{columns}
-	
-	
-	
-	
+\end{small}
+\end{frame}
 
+\begin{frame}
+\begin{itemize}
+	\item Inversion monoparamètre : \\[0.2cm]
+	\begin{columns}
+		\column{0.5\textwidth}
+		\centering
+		Vitesse : \\[0.2cm]
+		\includegraphics[width=0.7\textwidth]{img/multi/coupe_vp_mono_smooth_hor.png}\\
+		\column{0.5\textwidth}
+		\centering
+		Masse volumique  : \\[0.2cm]
+		\includegraphics[width=0.7\textwidth]{img/multi/coupe_rho_mono.png}\\
+	\end{columns}
+	\item Inversion multiparamètre : \\[0.2cm]
+	\begin{columns}
+		\column{0.5\textwidth}
+		\centering
+		Vitesse : \\[0.2cm]
+		\includegraphics[width=0.7\textwidth]{img/multi/coupe_vp_multi.png}\\
+		\column{0.5\textwidth}
+		\centering
+		Masse volumique : \\[0.2cm]
+		\includegraphics[width=0.7\textwidth]{img/multi/coupe_rho_multi.png}\\
+	\end{columns}
+	
+\end{itemize}
 \end{frame}
 
 \section{Inversions en milieu anisotrope}
+\begin{frame}{\insertsectionhead}
+\begin{small}
+
+	\vspace{-1cm}
+	\begin{equation*}
+		\text{Paramètre d'anisotropie : }\epsilon = \frac{\bm{v}_{p}.\bm{e}_{x}-\bm{v}_{p}.\bm{e_{z}}}{\bm{v}_{p}.\bm{e}_{z}}
+	\end{equation*}
+	\begin{columns}
+		\column{0.5\textwidth}
+		\centering
+		$\epsilon$ vrai : \\[0.2cm]
+		\includegraphics[width=0.8\textwidth]{img/anisotrope/epsilon_true.png}\\
+		\includegraphics[height=4cm]{img/anisotrope/e20.png}
+		\column{0.5\textwidth}
+		\centering
+		$\epsilon$ reconstruit : \\[0.2cm]
+		\includegraphics[width=0.8\textwidth]{img/anisotrope/epsilon_final.png}\\
+		\includegraphics[height=4cm]{img/anisotrope/residu_init.png}
+		
+		
+	\end{columns}	
+
+\end{small}
+\end{frame}
 
 
 \section{Perspectives}
+\begin{frame}{\insertsectionhead}
+	\begin{itemize}
+		\item Prise en compte de l'anisotropie : 
+			\begin{itemize}
+				\item en acoustique : par un modèle transverse isotrope incliné
+				\item en élastique : par $6\times C_{ij}$ 
+			\end{itemize}
+		\item Prise en compte de la propagation 3D
+		\item Élaboration d'un modèle initial fiable 
+	\end{itemize}
+\end{frame}
 
 
 
@@ -449,7 +517,7 @@
 
 
 
-\begin{frame}[allowframebreaks]{}
+\begin{frame}[allowframebreaks]{Références}
 
 	\begin{adjustwidth}{-2em}{-2.5em}
 		\scriptsize
