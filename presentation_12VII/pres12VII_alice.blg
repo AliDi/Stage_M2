@@ -1,0 +1,55 @@
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: pres12VII_alice.aux
+The style file: abbrvnat.bst
+Database file #1: biblio.bib
+I was expecting a `,' or a `}'---line 195 of file biblio.bib
+ :     pages =        {~p.~WCC105}
+ :                                --WCC118}
+I'm skipping whatever remains of this entry
+You're missing a field part---line 367 of file biblio.bib
+ :    eid = 
+ :          ,
+I'm skipping whatever remains of this entry
+You've used 2 entries,
+            2773 wiz_defined-function locations,
+            602 strings with 4997 characters,
+and the built_in function-call counts, 853 in all, are:
+= -- 67
+> -- 58
+< -- 1
++ -- 20
+- -- 18
+* -- 65
+:= -- 145
+add.period$ -- 6
+call.type$ -- 2
+change.case$ -- 11
+chr.to.int$ -- 2
+cite$ -- 4
+duplicate$ -- 40
+empty$ -- 64
+format.name$ -- 20
+if$ -- 167
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 1
+newline$ -- 18
+num.names$ -- 8
+pop$ -- 26
+preamble$ -- 1
+purify$ -- 10
+quote$ -- 0
+skip$ -- 30
+stack$ -- 0
+substring$ -- 4
+swap$ -- 3
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 22
+warning$ -- 0
+while$ -- 6
+width$ -- 0
+write$ -- 32
+(There were 2 error messages)

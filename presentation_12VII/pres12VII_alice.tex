@@ -1,4 +1,11 @@
-\documentclass[12pt,xcolor=x11names,compress, notes=show]{beamer}% pour l'impression, tout n'apparait qu'une fois \documentclass[handout,12pt]{beamer}
+\documentclass[10pt,xcolor=x11names,compress, notes=show]{beamer}% pour l'impression, tout n'apparait qu'une fois \documentclass[handout,12pt]{beamer}
+
+%\documentclass[xcolor=x11names]{beamer}
+%\usepackage[scaled]{helvet}
+\usepackage[round]{natbib}
+
+
+
 \usepackage[utf8x]{inputenc}
 \usepackage{ucs}
 \usepackage[french]{babel}
@@ -6,6 +13,14 @@
 \usepackage{tikz}
 \usepackage{color}
 \usepackage{subfigure}
+%\usepackage[]{geometry}
+\usepackage{changepage}
+\usetikzlibrary{calc}
+
+\usepackage{bm}
+\usepackage{pifont} %pour les symbole sympa \ding{nb}
+\usepackage[export]{adjustbox}
+
 
 \setbeamertemplate{navigation symbols}{} 
 
@@ -30,35 +45,50 @@
 \setbeamercolor{itemize item}{fg=black}
 \setbeamercolor{itemize subitem}{fg=black}
 \setbeamercolor{toc}{fg=DeepSkyBlue4}
+\usepackage{amsmath,mathtools}
+\usefonttheme[onlymath]{serif}
+
+\setlength{\fboxrule}{1pt}
+
+\setbeamertemplate{bibliography item}[]
 
 %couleur table des matières
 \usepackage{hyperref}
 \hypersetup{colorlinks=true, linkcolor=DeepSkyBlue4}
+
+\setbeamertemplate{caption}{\raggedright\insertcaption\par}
 
 %Mettre la section courante en titre de diapo (pour champ de titre non-vide)
 %\addtobeamertemplate{frametitle}{\frametitle{\insertsubsectionhead}}{}
 
 \addtobeamertemplate{footline}{\hspace{11cm} \insertframenumber/\inserttotalframenumber}
 
+\newcommand{\tr}[1]{\prescript{t\hspace{-0.08cm}}{}{#1}}
+
+
+
+%page de titre
 \author{Alice \textsc{Dinsenmeyer} \\~\\ encadrée par\\ Romain \textsc{Brossier} \& Ludovic \textsc{Moreau} \\ Maîtres de conférences, ISTerre}
 
-\title{ Réseaux périodiques et modes localisés}
-\subtitle{M1 Acoustique à l'Université du Maine}
-\date{28/05/15}
+\title{Imagerie ultrasonore par inversion de formes d'onde}
+\subtitle{}
+\date{\small 12 juillet 2016}
 
+\titlegraphic{
 \begin{minipage}{0.3\textwidth}
 	\centering
-	\includegraphics[height=2.5cm]{img/univ.png}	
+	\includegraphics[height=1cm]{img/univ.png}	
 \end{minipage}
 \begin{minipage}{0.3\textwidth}
 	\centering	
-	\includegraphics[height=2.5cm]{img/cnrs.png}
+	\includegraphics[height=1cm]{img/cnrs.png}
 \end{minipage}
 \begin{minipage}{0.3\textwidth}
 	\centering
-	\includegraphics[height=2.5cm]{img/isterre.png}
+	\includegraphics[height=1cm]{img/isterre.png}
 \end{minipage}
 
+}
 
 
 \begin{document}
@@ -67,15 +97,370 @@
 	\titlepage 
 \end{frame}
 
-\begin{frame}
-	\citep{alkhalifah}
+
+\section{Contexte}
+\begin{frame}{\insertsectionhead}
+\vspace{-0.5cm}
+\hspace{1cm}
+	\begin{columns}[c]
+			\column{.5\textwidth}<1->
+			\centering
+			\begin{figure}
+				\includegraphics[height=2.7cm]{./img/soudure1.png}\\
+				{\centering \tiny Macrographie d'une soudure austénitique$^{*}$}
+			\end{figure}
+			\column{.001\textwidth}<2->
+			\hspace{-3cm}
+			\vspace{2cm}
+			\begin{tikzpicture}
+					\draw[<-, thick,shorten <=2pt,shorten >=2pt,red] (-1.5,3)--(0.5,4);
+			\end{tikzpicture}
+			\column{.9\textwidth}<2->
+			%\vfill
+			\hspace{-1cm}
+			\textcolor{red}{Forte anisotropie}\\
+			$\hookrightarrow$ déviation et division du faisceau ultrasonore\\[0.2cm]
+			\hspace{-0.5cm}
+			\includegraphics[scale=0.5]{img/gardahaut.png}\\
+			{\centering \tiny Comparaison d'un modèle (lancer de rayons) et d'une mesure$^{**}$}
+				
+	\end{columns}
+	\vspace{0.3cm}
+	\begin{columns}[c]
+			\column{.5\textwidth}<1->
+			%\begin{block}{}
+				\begin{itemize}
+					\item[$\bullet$] méthodes par sommation cohérente de signaux
+					\item[$\bullet$] Décomposition des matrices de covariance (DORT)
+				\end{itemize}
+			%\end{block}
+			\column{.05\textwidth}<2->
+			\ding{222}
+			\column{.5\textwidth}<2->
+				\begin{itemize}
+					\item[\ding{55}] requièrent une connaissance\\ \emph{a priori} de la vitesse\\
+					\item[\ding{55}] sujettes aux artefacts
+				\end{itemize}
+	\end{columns}
+	%\vspace{0.5cm}
+	\begin{columns}[c]
+		\column{.5\textwidth}<3->
+			\begin{itemize}
+				\item[$\bullet$] Résolution d'un problème d'optimisation
+			\end{itemize}
+		\column{.05\textwidth}<3->
+			\ding{222}
+		\column{.5\textwidth}<3->
+			\begin{itemize}
+			\item optimisation topologique :\\\hspace{-0.5cm}\small{\emph{Dominguez et al.}, \emph{Rodriguez et al.}}\\[0.1cm]
+			\item[\ding{51}] \normalsize{reconstruction d'un ensemble de paramètres : FWI}
+		\end{itemize}		
+	\end{columns}
+	\vfill
+	{\tiny Image extraites de $^{*}$\cite{chassignole} \& $^{**}$\cite{gardahaut} \vspace{-0.5cm}}
+\end{frame} 
+
+
+\section{La FWI}
+\begin{frame}{\insertsectionhead}
+	\begin{itemize}
+		\item \emph{Full waveform inversion} : utilise la totalité du champ d'onde (toutes les arrivées et les amplitudes)
+		\item Développée pour la géophysique
+		\item Méthode d'optimisation locale
+	\end{itemize}
+
 \end{frame}
 
 
+\begin{frame}{\insertsectionhead}
+	\vspace{-0.5cm}
+	\begin{figure}
+		\centering
+		\include{img/schema_fwi}
+	\end{figure}		
+	
 
-\begin{frame}{Bibliographie}
-\bibliographystyle{amsalpha}
-\bibliography{biblio}
+\end{frame}
+
+\begin{frame}
+	\begin{itemize}
+		\item Fonction de coût : $C(\bm{m})=\frac{1}{2}||\bm{d}_{obs}-\bm{d}_{cal}(\bm{m})||^{2}$ \\[0.5cm]
+		\item \only<1-1>{Perturbation du modèle : $\bm{\Delta m}=-(C'')^{-1}C'$} \onslide<2->{Perturbation du modèle : $\bm{\Delta m}=-(C'')^{-1}$\fcolorbox{DeepSkyBlue4}{white!0}{$C'$}}
+
+	\end{itemize}
+	\onslide<2-> {
+		\begin{figure}
+			\vspace{-0.85cm}\hspace{2.8cm}\begin{tikzpicture}	
+					\node (grad) at (10,0) {};
+					\node (exp) at ($(grad)+(-1.5,-1.3)$) {};
+					\draw[->, thick,shorten <=2pt,shorten >=2pt,DeepSkyBlue4] (grad) -- (exp);		
+				\end{tikzpicture}
+		\end{figure}
+	}
+	
+	\only<2-2>{
+		\vspace{-0.8cm}\begin{equation}
+			\frac{\partial C}{\partial m_{i}}= \tr{\tilde{\bm{d}}_{cal}} \tr{\left( \frac{\partial\bm{A}}{\partial m_{i}} \right)}\bm{A}^{-1} (\tilde{\bm{d}}_{obs} - \tilde{\bm{d}}_{cal}) 
+		\end{equation}
+	}
+	\only<3-3>{
+		\vspace{-0.8cm}\begin{equation}
+			\frac{\partial C}{\partial m_{i}}= \tr{\tilde{\bm{d}}_{cal}} \tr{\left( \frac{\partial\bm{A}}{\partial m_{i}} \right)} \textcolor{DeepSkyBlue4}{\underbrace{\textcolor{black}{\bm{A}^{-1} (\tilde{\bm{d}}_{obs} - \tilde{\bm{d}}_{cal})}}_{\text{résidus rétropopagés}}}
+		\end{equation}
+	}
+	\onslide<2->{
+			$\bm{A}$ : opérateur équation d'onde (élastique ou acoustique)
+	}
+\end{frame}
+
+\section{Résolution de la FWI}
+\begin{frame}{\insertsectionhead}
+	\only<1-3>{
+		\begin{equation*}
+			\frac{\partial C}{\partial m_{i}}= \textcolor{DeepSkyBlue4}{\underbrace{\textcolor{black}{\tr{\tilde{\bm{d}}_{cal}}}}_{\substack{\text{champ incident}}}}
+			 \tr{\left( \frac{\partial\bm{A}}{\partial m_{i}} \right)} 
+			 \textcolor{DeepSkyBlue4}{\underbrace{\textcolor{black}{\bm{\lambda}}}_{\substack{\text{résidus rétropopagés}}}}
+		\end{equation*}
+	}
+	\only<4->{
+		\begin{equation*}
+			\frac{\partial C}{\partial m_{i}}= \textcolor{DeepSkyBlue4}{\underbrace{\textcolor{black}{\tr{\tilde{\bm{d}}_{cal}}}}_{\substack{\text{champ incident}}}}
+			 \text{\fcolorbox{DeepSkyBlue4}{white!0}{$\tr{\left( \frac{\partial\bm{A}}{\partial m_{i}} \right)}$ }}
+			 \textcolor{DeepSkyBlue4}{\underbrace{\textcolor{black}{\bm{\lambda}}}_{\substack{\text{résidus rétropopagés}}}}
+		\end{equation*}		
+%	\begin{picture}(0,0)(0,0)\put(155,-105){
+%		\begin{tikzpicture}	
+%					\node (A) at (6,0) {};
+%					\node (ray) at ($(A)+(0,-4)$) {};
+%					\draw[->, thick,shorten <=2pt,shorten >=2pt,DeepSkyBlue4] (A) -- (ray);		
+%		\end{tikzpicture}
+%	}\end{picture}
+	}
+	\begin{equation*}
+		~~~~~~~~\sim~ \Re\left( e^{j k_{0} \bm{s.x}} \right)~~~~~~~~~\sim~ \Re\left( e^{j k_{0} \bm{r.x}} \right)
+	\end{equation*}
+		
+	\onslide<2->{
+		\begin{itemize}
+			\item Résolution du gradient :
+			\begin{equation*}
+				|\bm{k}|=|\bm{s}+\bm{r}|=\frac{\omega}{c}2\cos\left( \frac{\theta}{2} \right)
+			\end{equation*}	
+	}
+	
+		\only<1-3>{
+			\begin{columns}
+				\column{0.4\textwidth}<1-3>
+				\begin{figure}
+					\centering
+					\includegraphics[height=2.5cm]{img/reso.png}	
+				\end{figure}
+				\column{0.55\textwidth}<3-3>
+				\begin{figure}
+					\centering
+					\vspace{-0.3cm}\includegraphics[height=3.7cm]{img/reso_surf_libre.png}
+				\end{figure}		
+			\end{columns}
+		}
+	\only<4->{
+		\item Rayonnement des paramètres : 
+		\begin{figure}
+			\centering
+			\includegraphics[height=1.7cm]{img/rayonnement.png}
+		\end{figure}		
+	}
+	\end{itemize}
+\end{frame}
+
+\section{Inversions en milieu isotrope}
+\begin{frame}{Génération des données de référence}
+	\begin{columns}
+		\column{0.5\textwidth}
+		\begin{figure}
+			\includegraphics[width=\textwidth]{img/vp_true.png}
+			\caption{Vitesse vraie}
+		\end{figure}
+		\column{0.5\textwidth}
+		\begin{figure}
+			\includegraphics[width=\textwidth]{img/rho_true.png}
+			\caption{Masse volumique vraie}
+		\end{figure}
+	\end{columns}
+
+\end{frame}
+
+\subsection{Inversion monoparamètre}
+
+\begin{frame}{\insertsectionhead}
+\begin{small}
+\centering
+	\begin{adjustwidth}{-2em}{-2.5em}
+	%\centering{Reconstruction de la vitesse}
+	\begin{columns}
+		\column{0.5\textwidth}
+		\centering
+		\vspace{0.1cm}\\	
+		Modèle initial de vitesse : \\[0.2cm]
+		\includegraphics[width=0.7\textwidth]{img/vp_mono_uni/vp_uni.png}\\
+			\only<2->{\vspace{0.3cm}  Vitesse Reconstruite :\\[0.2cm]}
+			\only<1-1>{\vspace{2.7cm}}
+			\only<2-2>{
+				\includegraphics[width=0.7\textwidth]{img/vp_mono_uni/vp_450k.png}\\		
+			}
+		
+			\only<3-3>{
+				\includegraphics[width=0.7\textwidth]{img/vp_mono_uni/vp_1000k.png}\\		
+			}
+			\only<4-4>{
+				\includegraphics[width=0.7\textwidth]{img/vp_mono_uni/vp_1500k.png}\\		
+			}
+			\only<5-5>{
+				\includegraphics[width=0.7\textwidth]{img/vp_mono_uni/vp_2250k.png}\\		
+			}
+			\only<6->{
+				\includegraphics[width=0.7\textwidth]{img/vp_mono_uni/vp_3300k.png}\\		
+			}
+		
+
+		\column{0.5\textwidth}
+		\centering
+		\vspace{0.1cm}\\
+		Modèle initial de vitesse :\\[0.2cm]
+		\includegraphics[width=0.7\textwidth]{img/vp_mono_smooth/vp_smooth.png}\\
+		\only<2->{\vspace{0.3cm} Vitesse Reconstruite :\\[0.2cm]}
+		\only<1-1>{\vspace{2.7cm}}
+		\only<2-2>{
+			\includegraphics[width=0.7\textwidth]{img/vp_mono_smooth/vp_400k.png}\\		
+		}
+		\only<3-3>{
+			\includegraphics[width=0.7\textwidth]{img/vp_mono_smooth/vp_900k.png}\\		
+		}
+		\only<4-4>{
+			\includegraphics[width=0.7\textwidth]{img/vp_mono_smooth/vp_1300k.png}\\		
+		}
+		\only<5-5>{
+			\includegraphics[width=0.7\textwidth]{img/vp_mono_smooth/vp_1950k.png}\\		
+		}
+		\only<6->{
+			\includegraphics[width=0.7\textwidth]{img/vp_mono_smooth/vp_2900k.png}\\		
+		}
+		
+		
+	\end{columns}
+	\end{adjustwidth}
+	%\vspace{0.3cm} 
+	Vitesse vraie :
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.35\textwidth]{img/vp_true_sans_acqui.png}\\
+	\end{figure}
+	
+	\begin{picture}(0,0)(0,0)\put(127,120){
+		\only<2-2>{f$\approx$ 400 kHz}
+		\only<3-3>{f$\approx$ 1 MHz~}
+		\only<4-4>{\hspace{-0.1cm}f$\approx$ 1,4 MHz~~}
+		\only<5-5>{\hspace{-0.2cm}f$\approx$ 2 MHz~~~}
+		\only<6-6>{\hspace{-0.2cm}f$\approx$ 3 MHz}
+	}\end{picture}
+\end{small}
+\end{frame}
+
+\begin{frame}{\insertsubsectionhead}
+\begin{footnotesize}
+
+		\centering
+		\begin{columns}
+			\column{0.5\textwidth}
+			\raggedleft
+			\includegraphics[width=3cm]{img/rho_mono/data_rho_uni.png}\\
+			Signaux issus de $\rho$ homogène\hspace{-0.5cm}
+			\column{0.5\textwidth}
+			\raggedright
+			\includegraphics[width=3cm]{img/rho_mono/data_rho_vrai.png}\\
+			~~~Signaux issus de $\rho$ vraie
+		\end{columns}		
+		\vfill
+		
+		\begin{columns}
+			\column{0.35\textwidth}	
+			\centering
+			Modèle initial de vitesse : \\[0.2cm]
+			\includegraphics[width=\textwidth]{img/vp_mono_smooth/vp_smooth.png}\\
+			
+			\column{0.35\textwidth}
+			\centering
+			Masse volumique reconstruite :  \\[0.2cm]
+			\includegraphics[width=\textwidth]{img/rho_mono/rho_mono.png}\\
+	
+			\column{0.35\textwidth}
+			\centering
+			Masse volumique vraie : \\[0.2cm]
+			\includegraphics[width=\textwidth]{img/rho_true.png}
+		\end{columns}
+
+\end{footnotesize}		
+\end{frame}
+
+
+\subsection{Inversion multiparamètre}
+\begin{frame}{\insertsectionhead}
+	\centering
+	Vitesse initiale :
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.35\textwidth]{img/vp_mono_smooth/vp_smooth.png}\\
+	\end{figure}
+	
+	\begin{columns}
+		\column{0.5\textwidth}
+		\centering
+		Vitesse reconstruite :\\[0.2cm]
+		\includegraphics[width=0.7\textwidth]{img/multi/vp_multi_6000k.png}		
+		\column{0.5\textwidth}
+		\centering
+		Masse volumique reconstruite :\\[0.2cm]
+		\includegraphics[width=0.7\textwidth]{img/multi/rho_6000k.png}	
+	\end{columns}
+	
+	\begin{columns}
+		\column{}
+	
+	\end{columns}
+	
+	
+	
+	
+
+\end{frame}
+
+\section{Inversions en milieu anisotrope}
+
+
+\section{Perspectives}
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{frame}[allowframebreaks]{}
+
+	\begin{adjustwidth}{-2em}{-2.5em}
+		\scriptsize
+		\bibliographystyle{abbrvnat}
+		\bibliography{biblio}
+	\end{adjustwidth}
+\end{frame}
+
+\begin{frame}
+	questions : différence avec tomo diffraction\\
+	défaut : air
 \end{frame}
 
 
