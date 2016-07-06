@@ -1,0 +1,10 @@
+\beamer@endinputifotherversion {3.24pt}
+\select@language {french}
+\beamer@sectionintoc {1}{NDT for welds}{2}{0}{1}
+\beamer@sectionintoc {2}{What is specific to weld imaging ?}{6}{0}{2}
+\beamer@sectionintoc {3}{Resolution analysis}{9}{0}{3}
+\beamer@sectionintoc {4}{Inversions en milieu isotrope}{14}{0}{4}
+\beamer@subsectionintoc {4}{2}{Inversion monoparam\IeC {\`e}tre}{15}{0}{4}
+\beamer@subsectionintoc {4}{4}{Inversion multiparam\IeC {\`e}tre}{22}{0}{4}
+\beamer@sectionintoc {5}{Inversions en milieu anisotrope}{24}{0}{5}
+\beamer@sectionintoc {6}{Conclusions et perspectives}{25}{0}{6}

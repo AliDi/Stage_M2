@@ -1,0 +1,616 @@
+\documentclass[10pt,xcolor=x11names,compress, notes=show]{beamer}% pour l'impression, tout n'apparait qu'une fois \documentclass[handout,12pt]{beamer}
+
+%\documentclass[xcolor=x11names]{beamer}
+%\usepackage[scaled]{helvet}
+\usepackage[round]{natbib}
+
+
+
+\usepackage[utf8x]{inputenc}
+\usepackage{ucs}
+\usepackage[french]{babel}
+\usepackage{todonotes}
+\usepackage{tikz}
+\usepackage{color}
+%\usepackage{subfigure}
+%\usepackage[]{geometry}
+\usepackage{changepage}
+\usetikzlibrary{calc}
+
+\usepackage{bm}
+\usepackage{pifont} %pour les symbole sympa \ding{nb}
+\usepackage[export]{adjustbox}
+\usepackage{subcaption}
+
+
+\setbeamertemplate{navigation symbols}{} 
+
+
+%\usepackage{palatino}
+
+%pour le theme
+%\usetheme{CambridgeUS}
+
+%\usetheme{Goettingen}
+\useinnertheme{default}
+\useoutertheme[subsection=false]{miniframes}
+\setbeamertemplate{blocks}[rounded][shadow=true]
+\setbeamercolor{block title}{fg=DeepSkyBlue4,bg=DeepSkyBlue4!10}
+\setbeamercolor{block title alerted}{bg=DeepSkyBlue4!0} 
+\setbeamercolor{block title example}{bg=DeepSkyBlue4!20}
+\setbeamercolor*{lower separation line head}{bg=DeepSkyBlue4} 
+
+\setbeamerfont{title like}{shape=\scshape}
+\setbeamercolor{frametitle}{fg=DeepSkyBlue4}
+\setbeamercolor{title}{fg=DeepSkyBlue4}
+\setbeamercolor{itemize item}{fg=black}
+\setbeamercolor{itemize subitem}{fg=black}
+\setbeamercolor{toc}{fg=DeepSkyBlue4}
+\usepackage{amsmath,mathtools}
+\usefonttheme[onlymath]{serif}
+
+\setbeamertemplate{frametitle}{\vspace{0.13cm}\hspace{-0.9cm} \insertframetitle}
+\setbeamerfont{frametitle}{size=\Large}
+
+\setlength{\fboxrule}{1pt}
+
+\setbeamertemplate{bibliography item}[]
+
+%couleur table des matières
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=DeepSkyBlue4}
+
+\setbeamertemplate{caption}{\raggedright\insertcaption\par}
+
+%Mettre la section courante en titre de diapo (pour champ de titre non-vide)
+%\addtobeamertemplate{frametitle}{\frametitle{\insertsubsectionhead}}{}
+
+\addtobeamertemplate{footline}{\hspace{11cm} \insertframenumber/\inserttotalframenumber}
+
+\newcommand{\tr}[1]{\prescript{t\hspace{-0.08cm}}{}{#1}}
+
+
+
+%page de titre
+\author{Alice \textsc{Dinsenmeyer} \\~\\ supervised by\\ Romain \textsc{Brossier} \& Ludovic \textsc{Moreau} \\ Maîtres de conférences, ISTerre}
+
+\title{FWI for Ultrasonic Imaging}
+\subtitle{Flaw detection in steel weld}
+\date{July 8, 2016}
+
+\titlegraphic{
+\begin{minipage}{0.3\textwidth}
+	\centering
+	\includegraphics[height=1cm]{img/univ.png}	
+\end{minipage}
+\begin{minipage}{0.3\textwidth}
+	\centering	
+	\includegraphics[height=1cm]{img/cnrs.png}
+\end{minipage}
+\begin{minipage}{0.3\textwidth}
+	\centering
+	\includegraphics[height=1cm]{img/isterre.png}
+\end{minipage}
+
+}
+
+
+\begin{document}
+
+\begin{frame}
+	\titlepage 
+\end{frame}
+
+
+\section{NDT for welds}
+
+\subsection*{}
+\begin{frame}{\insertsectionhead}
+\vspace{-0.7cm}
+		\begin{columns}
+			\column{0.5\textwidth}
+			\centering
+			\begin{figure}
+				\includegraphics[height=3cm]{img/us_test.jpg}\\
+				{\tiny{\raggedright \itshape Picture from Davidmack}\\ \centering \scriptsize{Pipeline test}}
+			\end{figure}		
+			\column{0.5\textwidth}
+			\begin{figure}
+				\includegraphics[height=3cm]{img/olympus.jpg}\\
+				 {\tiny{\itshape Picture from Olympus}\\ \centering			\scriptsize{Echo mode testing}}
+			\end{figure}
+		\end{columns}	
+		\vspace{0.6cm}	
+
+	%\begin{columns}
+			%\column{.5\textwidth}
+			Non destructive testing for weld in :\\
+			\begin{itemize}
+				\item nuclear reactors (cooling system)
+				\item oil and gaz pipelines 
+			\end{itemize}
+			%\column{.05\textwidth}
+			%\ding{222}
+			%\column{.45\textwidth}
+			%\centering
+			\vspace{0.6cm}
+ 			\indent \ding{222} porosity, cracks, lack of fusion, corrosion, inclusions,. . .
+	%\end{columns}
+\end{frame}
+
+\begin{frame}{\insertsectionhead}
+\vspace{-1cm}
+\hspace{1cm}
+	\begin{columns}[c]
+			\column{.5\textwidth}<1->
+			\centering
+			\begin{figure}
+				\includegraphics[height=2.7cm]{./img/soudure1.png}\\
+				{\tiny{ \itshape Picture from Chassignole, 2010} \\ \centering \scriptsize Macrography of a weld }
+			\end{figure}
+			\column{.001\textwidth}<2->
+			\hspace{-3cm}
+			\vspace{2cm}
+			\begin{tikzpicture}
+					\draw[<-, thick,shorten <=2pt,shorten >=2pt,red] (-1.5,3)--(0.5,4);
+			\end{tikzpicture}
+			\column{.9\textwidth}<2->
+			%\vfill
+			\hspace{-1cm}
+			\textcolor{red}{Strong unknown anisotropy}\\
+			$\hookrightarrow$ distorsion and splitting of the beam\\[0.2cm]
+			\hspace{-0.5cm}
+			\includegraphics[scale=0.5]{img/gardahaut.png}\\
+			{\tiny{ \itshape Picture from Gardahaut, 2014} \\ \centering \scriptsize Comparison of ray based model and experiment result } 
+				
+	\end{columns}
+	\vspace{0.3cm}
+	\begin{columns}[c]
+			\column{.5\textwidth}<1->
+			%\begin{block}{}
+				\begin{itemize}
+					\item[$\bullet$] delay and sum methods
+					\item[$\bullet$] decomposition of covariance matrix (DORT)
+				\end{itemize}
+			%\end{block}
+			\column{.05\textwidth}<2->
+			\ding{222}
+			\column{.5\textwidth}<2->
+			%\begin{block}{}
+				\begin{itemize}
+					\item[\ding{55}] need to know $c$ in advance\\
+					\item[\ding{55}] strong artefacts
+				\end{itemize}
+			%\end{block}
+			
+	\end{columns}
+	\begin{columns}[c]
+		\column{.5\textwidth}<3->
+			\begin{itemize}
+				\item[$\bullet$] solving NL optimization problem
+			\end{itemize}
+		\column{.05\textwidth}<3->
+			\ding{222}
+		\column{.5\textwidth}<3->
+			\begin{itemize}
+			\item contour reconstruction :\\\hspace{-0.5cm}\small{\emph{Dominguez et al.}, \emph{Rodriguez et al.}}\\[0.1cm]
+			\item[\ding{51}] \normalsize{$C_{ij}$ reconstruction : FWI}
+		\end{itemize}		
+	\end{columns}
+\end{frame} 
+
+\section{What is specific to weld imaging ?}
+\begin{frame}{\insertsectionhead}
+	\begin{itemize}
+		\item <1-> 2 free surfaces : more information $\leftrightarrow$ non-linear inversion
+		\item <2-> surface acquisition only 
+		\item <3-> anisotropy $\rightarrow$ multi-parameter inversion \\\hspace{2.3cm}($C_{ij}\times$6 : weld + defects)
+		%\item <4-> defects $\rightarrow$ multi-scale inversion ($C_{ij}^{d}\times$6)
+	\end{itemize}
+	\vfill
+	\begin{figure}[!h]
+		\centering
+		\includegraphics<1-1>[scale=1]{img/soud1.pdf}
+		\includegraphics<2-2>[scale=1]{img/soud2.pdf}
+		%\includegraphics<3-3>[scale=1]{img/soud3.pdf}
+		\includegraphics<3-3>[scale=1]{img/soud4_bis.pdf}
+	\end{figure}
+
+\end{frame}
+
+\begin{frame}{Synthetic case}
+	ideal acquisiation
+	vp true, rho true
+	freq + nb of prop wavelength
+
+\end{frame}
+
+\section{Resolution analysis}
+
+\begin{frame}{\insertsectionhead}
+	\only<1-3>{
+		\begin{equation*}
+			\frac{\partial C}{\partial m_{i}}= \textcolor{DeepSkyBlue4}{\underbrace{\textcolor{black}{\tr{\tilde{\bm{d}}_{cal}}}}_{\substack{\text{champ incident}}}}
+			 \tr{\left( \frac{\partial\bm{A}}{\partial m_{i}} \right)} 
+			 \textcolor{DeepSkyBlue4}{\underbrace{\textcolor{black}{\bm{\lambda}}}_{\substack{\text{résidus rétropopagés}}}}
+		\end{equation*}
+	}
+	\only<4->{
+		\vspace{-0.06cm}\begin{equation*}
+			\frac{\partial C}{\partial m_{i}}= \textcolor{DeepSkyBlue4}{\underbrace{\textcolor{black}{\tr{\tilde{\bm{d}}_{cal}}}}_{\substack{\text{champ incident}}}}
+			 \text{\fcolorbox{DeepSkyBlue4}{white!0}{$\tr{\left( \frac{\partial\bm{A}}{\partial m_{i}} \right)}$ }}
+			 \textcolor{DeepSkyBlue4}{\underbrace{\textcolor{black}{\bm{\lambda}}}_{\substack{\text{résidus rétropopagés}}}}
+		\end{equation*}		
+%	\begin{picture}(0,0)(0,0)\put(155,-105){
+%		\begin{tikzpicture}	
+%					\node (A) at (6,0) {};
+%					\node (ray) at ($(A)+(0,-4)$) {};
+%					\draw[->, thick,shorten <=2pt,shorten >=2pt,DeepSkyBlue4] (A) -- (ray);		
+%		\end{tikzpicture}
+%	}\end{picture}
+	}
+	\begin{equation*}
+		~~~~~~~~\sim~ \Re\left( e^{j k_{0} \bm{s.x}} \right)~~~~~~~~~\sim~ \Re\left( e^{j k_{0} \bm{r.x}} \right)
+	\end{equation*}
+		
+	\onslide<2->{
+		\begin{itemize}
+			\item Gradient resolution : \vspace{-0.34cm}
+			\begin{align}
+				k=|\bm{s}+\bm{r}|=&\frac{\omega}{c}2\cos\left( \frac{\theta}{2} \right)~~~~~~~~\\
+			\end{align}	\vspace{-1cm}		
+	}
+		\only<1-3>{
+			\begin{columns}
+				\column{0.4\textwidth}<1-3>
+				\begin{figure}
+					\centering
+					\vfill
+					\includegraphics[height=2.5cm]{img/reso.png}	
+				\end{figure}
+				\column{0.55\textwidth}<3-3>
+				\begin{figure}
+					\centering
+					\vspace{0.4cm} \includegraphics[height=3.7cm]{img/reso_surf_libre.png}
+				\end{figure}		
+			\end{columns}
+		}
+	
+%
+%	\only<4->{		
+%		\vspace{0.7cm}\item Radiation patterns :\\[0.2cm] 
+%		\begin{figure}
+%			\hspace{-1cm}\includegraphics[height=2cm]{img/rayonnement.png}
+%		\end{figure}		
+%	}
+
+	\end{itemize}
+	\vspace{1cm}
+\end{frame}
+
+\begin{frame}{\insertsectionhead~-- Local 2DFT}
+	\begin{figure}
+		\includegraphics[height=2cm]{img/vp_scat.png}
+	\end{figure}
+	\begin{columns}
+		\column{0.5\textwidth}
+		\begin{figure}
+			\includegraphics[height=2cm]{img/1400pt.png}
+			\caption{1 reflexion}
+		\end{figure}
+		\column{0.5\textwidth}
+		\begin{figure}
+			\includegraphics[height=2cm]{img/4200pt.png}
+			\caption{6 reflexions}
+		\end{figure}
+	\end{columns}
+
+\end{frame}
+
+
+\section{Inversions en milieu isotrope}
+\subsection*{}
+\begin{frame}{\insertsectionhead}
+	\begin{itemize}
+		\item Milieu 2D, isotrope, acoustique
+		\item Paramétrisation : vitesse + masse volumique
+		\item Excitation : Ricker centré à 2 MHz 
+	\begin{columns}
+		\column{0.5\textwidth}
+		\begin{figure}
+			\includegraphics[width=\textwidth]{img/vp_true.png}\\
+			{\small Vitesse vraie}
+		\end{figure}
+		\column{0.5\textwidth}
+		\begin{figure}
+			\includegraphics[width=\textwidth]{img/rho_true.png}\\
+			{\small Masse volumique vraie}
+		\end{figure}
+	\end{columns}
+	\vspace{1cm}
+		\item 9 inversions successives de 200 kHz à 3 MHz pour
+			\begin{itemize}
+				\item mieux contraindre le problème
+				\item lever les ambiguïtés de déphasage 
+			\end{itemize}
+	\end{itemize}
+
+\end{frame}
+
+\subsection{Inversion monoparamètre}
+\begin{frame}{\insertsectionhead~-- Vitesse}
+\begin{small}
+\centering
+	\begin{adjustwidth}{-2em}{-2.5em}
+	%\centering{Reconstruction de la vitesse}
+	\begin{columns}
+		\column{0.5\textwidth}
+		\centering
+		\vspace{0.1cm}\\	
+		Modèle initial de vitesse : \\[0.2cm]
+		\includegraphics[width=0.7\textwidth]{img/vp_mono_uni/vp_uni.png}\\
+			\only<2->{\vspace{0.3cm}  Vitesse Reconstruite :\\[0.2cm]}
+			\only<1-1>{\vspace{2.7cm}}
+			\only<2-2>{
+				\includegraphics[width=0.7\textwidth]{img/vp_mono_uni/vp_450k.png}\\		
+			}
+		
+			\only<3-3>{
+				\includegraphics[width=0.7\textwidth]{img/vp_mono_uni/vp_1000k.png}\\		
+			}
+			\only<4-4>{
+				\includegraphics[width=0.7\textwidth]{img/vp_mono_uni/vp_1500k.png}\\		
+			}
+			\only<5-5>{
+				\includegraphics[width=0.7\textwidth]{img/vp_mono_uni/vp_2250k.png}\\		
+			}
+			\only<6->{
+				\includegraphics[width=0.7\textwidth]{img/vp_mono_uni/vp_3300k.png}\\		
+			}
+		
+
+		\column{0.5\textwidth}
+		\centering
+		\vspace{0.1cm}\\
+		Modèle initial de vitesse :\\[0.2cm]
+		\includegraphics[width=0.7\textwidth]{img/vp_mono_smooth/vp_smooth.png}\\
+		\only<2->{\vspace{0.3cm} Vitesse Reconstruite :\\[0.2cm]}
+		\only<1-1>{\vspace{2.7cm}}
+		\only<2-2>{
+			\includegraphics[width=0.7\textwidth]{img/vp_mono_smooth/vp_400k.png}\\		
+		}
+		\only<3-3>{
+			\includegraphics[width=0.7\textwidth]{img/vp_mono_smooth/vp_900k.png}\\		
+		}
+		\only<4-4>{
+			\includegraphics[width=0.7\textwidth]{img/vp_mono_smooth/vp_1300k.png}\\		
+		}
+		\only<5-5>{
+			\includegraphics[width=0.7\textwidth]{img/vp_mono_smooth/vp_1950k.png}\\		
+		}
+		\only<6->{
+			\includegraphics[width=0.7\textwidth]{img/vp_mono_smooth/vp_2900k.png}\\		
+		}
+		
+		
+	\end{columns}
+	\end{adjustwidth}
+	%\vspace{0.3cm} 
+	Vitesse vraie :
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.35\textwidth]{img/vp_true_sans_acqui.png}\\
+	\end{figure}
+	
+	\begin{picture}(0,0)(0,0)\put(127,120){
+		\only<2-2>{f$\approx$ 400 kHz}
+		\only<3-3>{f$\approx$ 1 MHz~}
+		\only<4-4>{\hspace{-0.1cm}f$\approx$ 1,4 MHz~~}
+		\only<5-5>{\hspace{-0.2cm}f$\approx$ 2 MHz~~~}
+		\only<6-6>{\hspace{-0.2cm}f$\approx$ 3 MHz}
+	}\end{picture}
+\end{small}
+\end{frame}
+
+\subsection*{}
+\begin{frame}{\insertsectionhead~-- Densité}
+\begin{footnotesize}
+
+		\centering
+		\begin{columns}
+			\column{0.5\textwidth}
+			\raggedleft
+			\includegraphics[width=3cm]{img/rho_mono/data_rho_uni.png}\\
+			Signaux issus de $\rho$ homogène\hspace{-0.5cm}
+			\column{0.5\textwidth}
+			\raggedright
+			\includegraphics[width=3cm]{img/rho_mono/data_rho_vrai.png}\\
+			~~~Signaux issus de $\rho$ vraie
+		\end{columns}		
+		\vfill
+		
+		\begin{columns}
+			\column{0.35\textwidth}	
+			\centering
+			Modèle initial de vitesse : \\[0.2cm]
+			\includegraphics[width=\textwidth]{img/vp_mono_smooth/vp_smooth.png}\\
+			
+			\column{0.35\textwidth}
+			\centering
+			Masse volumique reconstruite :  \\[0.2cm]
+			\includegraphics[width=\textwidth]{img/rho_mono/rho_mono.png}\\
+	
+			\column{0.35\textwidth}
+			\centering
+			Masse volumique vraie : \\[0.2cm]
+			\includegraphics[width=\textwidth]{img/rho_true.png}
+		\end{columns}
+
+\end{footnotesize}		
+\end{frame}
+
+
+\subsection{Inversion multiparamètre}
+\begin{frame}{\insertsectionhead~ -- Multiparamètre}
+\begin{small}
+	\centering
+	Vitesse initiale :
+	\begin{figure}
+		\centering
+		\includegraphics[width=0.35\textwidth]{img/vp_mono_smooth/vp_smooth.png}\\
+	\end{figure}
+	
+	\begin{columns}
+		\column{0.5\textwidth}
+		\centering
+		Vitesse reconstruite :\\[0.2cm]
+		\includegraphics[width=0.7\textwidth]{img/multi/vp_multi_6000k.png}	\\
+		
+		Vitesse vraie : \\[0.2cm]
+		\includegraphics[width=0.7\textwidth]{img/vp_true.png}
+		\column{0.5\textwidth}
+		\centering
+		Masse volumique reconstruite :\\[0.2cm]
+		\includegraphics[width=0.7\textwidth]{img/multi/rho_6000k.png}\\	
+		
+		Masse volumique vraie : \\[0.2cm]
+		\includegraphics[width=0.7\textwidth]{img/rho_true.png}
+	\end{columns}	
+	
+\end{small}
+\end{frame}
+
+\subsection*{}
+\begin{frame}
+\begin{itemize}
+	\item Inversion monoparamètre : \\[0.2cm]
+	\begin{columns}
+		\column{0.5\textwidth}
+		\centering
+		Vitesse : \\[0.2cm]
+		\includegraphics[width=0.7\textwidth]{img/multi/coupe_vp_mono_smooth_hor.png}\\
+		\column{0.5\textwidth}
+		\centering
+		Masse volumique  : \\[0.2cm]
+		\includegraphics[width=0.7\textwidth]{img/multi/coupe_rho_mono.png}\\
+	\end{columns}
+	\item Inversion multiparamètre : \\[0.2cm]
+	\begin{columns}
+		\column{0.5\textwidth}
+		\centering
+		Vitesse : \\[0.2cm]
+		\includegraphics[width=0.7\textwidth]{img/multi/coupe_vp_multi.png}\\
+		\column{0.5\textwidth}
+		\centering
+		Masse volumique : \\[0.2cm]
+		\includegraphics[width=0.7\textwidth]{img/multi/coupe_rho_multi.png}\\
+	\end{columns}
+	
+\end{itemize}
+\end{frame}
+
+\section{Inversions en milieu anisotrope}
+\subsection*{}
+\begin{frame}{\insertsectionhead}
+%\begin{small}
+	\begin{columns}
+		\centering
+		\column{0.5\textwidth}
+		\centering
+		\begin{itemize}
+			\item  Milieu acoustique,\\ isotrope transverse\\ (axe de symétrie horizontal)\\[0.3cm]
+			\item Paramètre d'anisotropie :
+		\end{itemize}			 
+		\begin{equation*}
+			\epsilon = \frac{\bm{v}_{p}.\bm{e}_{x}-\bm{v}_{p}.\bm{e_{z}}}{\bm{v}_{p}.\bm{e}_{z}}
+		\end{equation*}
+		\column{0.3\textwidth}
+		\hspace{-0.5cm}\includegraphics[height=4cm]{img/anisotrope/e20.png}
+		\column{0.3\textwidth}
+		\hspace{-0.3cm}\includegraphics[height=4cm]{img/anisotrope/residu_init.png}
+	\end{columns}	
+	\vspace{0.6cm}
+	\begin{columns}
+		\column{0.5\textwidth}
+		\centering
+		$\epsilon$ vrai : \\[0.2cm]
+		\includegraphics[width=0.8\textwidth]{img/anisotrope/epsilon_true.png}\\
+		
+		\column{0.5\textwidth}
+		\centering
+		$\epsilon$ reconstruit : \\[0.2cm]
+		\includegraphics[width=0.8\textwidth]{img/anisotrope/epsilon_final.png}\\
+		
+		
+		
+	\end{columns}	
+%\end{small}
+\end{frame}
+
+
+\section{Conclusions et perspectives}
+\subsection*{}
+\begin{frame}{\insertsectionhead}
+\setlength{\leftmargin}{-1cm}
+\setlength{\rightmargin}{-1cm}
+
+	\begin{itemize}
+		\item<1-> Inversion multiparamètre : corrige les artefacts
+		\item<2-> Prise en compte de l'anisotropie : 
+		\begin{itemize}
+			\item en acoustique : par un modèle isotrope transverse incliné
+			\item en élastique : par $6\times C_{ij}$
+		\end{itemize} 
+		\begin{figure}[!h]
+		    \centering
+		    \hspace{-1cm}\begin{subfigure}[b]{0.25\textwidth}
+		    	\centering
+		 		\includegraphics[height=2cm]{img/ogilvy_model.png}
+		 		\vspace{0.2cm}\caption{\centering \scriptsize Modèle d'orientation des grains}
+			\end{subfigure}
+			\begin{subfigure}[b]{0.7\textwidth}
+				\centering
+		 		\includegraphics[height=2cm]{img/ogilvy_ray1.png}
+		 		\includegraphics[height=2cm]{img/ogilvy_ray2.png}\\
+		 		\raggedright{\vspace{-0.25cm}\tiny{\itshape Images extraites de~Ogilvy, 1986}}
+		 		\caption{\scriptsize Courbure des rayons (ondes de compressions) \\~}
+			\end{subfigure}\\
+				
+		\end{figure}	
+		\item<3-> Élaboration d'un modèle initial fiable 
+		\item<4-> Prise en compte de la propagation 3D
+		\item<5-> Géométrie d'acquisition à adapter
+			\begin{itemize}
+				\item à la géométrie de la soudure réelle
+				\item pour une une bonne illumination/résolution
+			\end{itemize}
+	\end{itemize}
+	\begin{picture}(0,0)(0,0)\put(240,0){
+		\only<4->{
+		\begin{tikzpicture}
+			\node (a) at (0,0) {\includegraphics[width=2.5cm]{img/linear_array.png}};
+			\node (b) [below=-0.2cm of a] {\tiny \itshape Image Olympus};
+		\end{tikzpicture}
+		}
+	}\end{picture}
+	
+\end{frame}
+
+
+%\begin{frame}[hide,allowframebreaks]{Références}
+%
+%	\begin{adjustwidth}{-2em}{-2.5em}
+%		\scriptsize
+%		\bibliographystyle{abbrvnat}
+%		\bibliography{biblio}
+%	\end{adjustwidth}
+%\end{frame}
+
+\begin{frame}
+	questions :\\
+	défaut : air\\
+	focalisation
+\end{frame}
+
+
+\end{document}

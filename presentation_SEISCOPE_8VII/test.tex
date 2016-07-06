@@ -1,0 +1,152 @@
+\documentclass[10pt,xcolor=x11names,compress, notes=show]{beamer}% pour l'impression, tout n'apparait qu'une fois \documentclass[handout,12pt]{beamer}
+
+%\documentclass[xcolor=x11names]{beamer}
+%\usepackage[scaled]{helvet}
+\usepackage[round]{natbib}
+
+
+
+\usepackage[utf8x]{inputenc}
+\usepackage{ucs}
+\usepackage[french]{babel}
+\usepackage{todonotes}
+\usepackage{tikz}
+\usepackage{color}
+%\usepackage{subfigure}
+%\usepackage[]{geometry}
+\usepackage{changepage}
+\usetikzlibrary{calc}
+
+\usepackage{bm}
+\usepackage{pifont} %pour les symbole sympa \ding{nb}
+\usepackage[export]{adjustbox}
+\usepackage{subcaption}
+
+
+\setbeamertemplate{navigation symbols}{} 
+
+
+%\usepackage{palatino}
+
+%pour le theme
+%\usetheme{CambridgeUS}
+
+%\usetheme{Goettingen}
+\useinnertheme{default}
+\useoutertheme[subsection=false]{miniframes}
+\setbeamertemplate{blocks}[rounded][shadow=true]
+\setbeamercolor{block title}{fg=DeepSkyBlue4,bg=DeepSkyBlue4!10}
+\setbeamercolor{block title alerted}{bg=DeepSkyBlue4!0} 
+\setbeamercolor{block title example}{bg=DeepSkyBlue4!20}
+\setbeamercolor*{lower separation line head}{bg=DeepSkyBlue4} 
+
+\setbeamerfont{title like}{shape=\scshape}
+\setbeamercolor{frametitle}{fg=DeepSkyBlue4}
+\setbeamercolor{title}{fg=DeepSkyBlue4}
+\setbeamercolor{itemize item}{fg=black}
+\setbeamercolor{itemize subitem}{fg=black}
+\setbeamercolor{toc}{fg=DeepSkyBlue4}
+\usepackage{amsmath,mathtools}
+\usefonttheme[onlymath]{serif}
+
+\setbeamertemplate{frametitle}{\vspace{0.13cm}\hspace{-0.9cm} \insertframetitle}
+\setbeamerfont{frametitle}{size=\Large}
+
+\setlength{\fboxrule}{1pt}
+
+\setbeamertemplate{bibliography item}[]
+
+%couleur table des matières
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=DeepSkyBlue4}
+
+\setbeamertemplate{caption}{\raggedright\insertcaption\par}
+
+%Mettre la section courante en titre de diapo (pour champ de titre non-vide)
+%\addtobeamertemplate{frametitle}{\frametitle{\insertsubsectionhead}}{}
+
+\addtobeamertemplate{footline}{\hspace{11cm} \insertframenumber/\inserttotalframenumber}
+
+\newcommand{\tr}[1]{\prescript{t\hspace{-0.08cm}}{}{#1}}
+
+
+
+%page de titre
+\author{Alice \textsc{Dinsenmeyer} \\~\\ encadrée par\\ Romain \textsc{Brossier} \& Ludovic \textsc{Moreau} \\ Maîtres de conférences, ISTerre}
+
+\title{Imagerie ultrasonore par inversion de formes d'onde}
+\subtitle{}
+\date{\small 12 juillet 2016}
+
+\titlegraphic{
+\begin{minipage}{0.3\textwidth}
+	\centering
+	\includegraphics[height=1cm]{img/univ.png}	
+\end{minipage}
+\begin{minipage}{0.3\textwidth}
+	\centering	
+	\includegraphics[height=1cm]{img/cnrs.png}
+\end{minipage}
+\begin{minipage}{0.3\textwidth}
+	\centering
+	\includegraphics[height=1cm]{img/isterre.png}
+\end{minipage}
+
+}
+
+
+\begin{document}
+
+\begin{frame}
+	\titlepage 
+\end{frame}
+
+
+
+\subsection*{}
+\begin{frame}{\insertsectionhead}
+	\begin{itemize}
+		\item<1-> Fonction de coût : $C(\bm{m})=\frac{1}{2}||\bm{d}_{obs}-\bm{d}_{cal}(\bm{m})||^{2}$ \\[0.5cm]
+		\item \only<1-1>{Perturbation du modèle : $\bm{\Delta m}=-(C'')^{-1}$\fcolorbox{white!0}{white!0}{$C'$}} \onslide<2->{Perturbation du modèle : $\bm{\Delta m}=-(C'')^{-1}$\fcolorbox{DeepSkyBlue4}{white!0}{$C'$}}
+	\end{itemize}
+	\onslide<2-> {
+		\begin{figure}
+			\vspace{-0.84cm}\hspace{2.8cm}\begin{tikzpicture}	
+					\node (grad) at (10,0) {};
+					\node (exp) at ($(grad)+(-1.5,-1.1)$) {};
+					\draw[->, thick,shorten <=2pt,shorten >=2pt,DeepSkyBlue4] (grad) -- (exp);		
+				\end{tikzpicture}
+		\end{figure}
+	
+	
+%	\only<2-2>{
+%		\vspace{-0.8cm}\begin{equation}
+%			\frac{\partial C}{\partial m_{i}}= \tr{\tilde{\bm{d}}_{cal}} \tr{\left( \frac{\partial\bm{A}}{\partial m_{i}} \right)}\bm{A}^{-1} (\tilde{\bm{d}}_{obs} - \tilde{\bm{d}}_{cal}) 
+%		\end{equation}
+%	}
+
+		\vspace{-0.8cm}\begin{equation}
+			\frac{\partial C}{\partial m_{i}}= \tr{\tilde{\bm{d}}_{cal}} \tr{\left( \frac{\partial\bm{A}}{\partial m_{i}} \right)} \textcolor{DeepSkyBlue4}{\underbrace{\textcolor{black}{\bm{A}^{-1} (\tilde{\bm{d}}_{obs} - \tilde{\bm{d}}_{cal})}}_{\text{résidus rétropopagés}}}
+		\end{equation}
+
+			~\\$\bm{A}$ : opérateur équation d'onde (élastique ou acoustique)
+	}
+\end{frame}
+
+
+\begin{frame}[allowframebreaks]{Références}
+
+	\begin{adjustwidth}{-2em}{-2.5em}
+		\scriptsize
+		\bibliographystyle{abbrvnat}
+		\bibliography{biblio}
+	\end{adjustwidth}
+\end{frame}
+
+\begin{frame}
+	questions : différence avec tomo diffraction\\
+	défaut : air
+\end{frame}
+
+
+\end{document}
