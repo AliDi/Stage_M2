@@ -12,7 +12,7 @@
 \usepackage{todonotes}
 \usepackage{tikz}
 \usepackage{color}
-\usepackage{subfigure}
+%\usepackage{subfigure}
 %\usepackage[]{geometry}
 \usepackage{changepage}
 \usetikzlibrary{calc}
@@ -20,6 +20,7 @@
 \usepackage{bm}
 \usepackage{pifont} %pour les symbole sympa \ding{nb}
 \usepackage[export]{adjustbox}
+\usepackage{subcaption}
 
 
 \setbeamertemplate{navigation symbols}{} 
@@ -73,7 +74,7 @@
 %page de titre
 \author{Alice \textsc{Dinsenmeyer} \\~\\ encadrée par\\ Romain \textsc{Brossier} \& Ludovic \textsc{Moreau} \\ Maîtres de conférences, ISTerre}
 
-\title{Imagerie ultrasonore par inversion de formes d'onde}
+\title{Imagerie ultrasonore de soudure\\par inversion de formes d'onde}
 \subtitle{}
 \date{\small 12 juillet 2016}
 
@@ -102,6 +103,43 @@
 
 
 \section{Contexte}
+
+\subsection*{}
+\begin{frame}{\insertsectionhead}
+\vspace{-0.7cm}
+		\begin{columns}
+			\column{0.5\textwidth}
+			\centering
+			\begin{figure}
+				\includegraphics[height=3cm]{img/us_test.jpg}\\
+				{\tiny{\raggedright \itshape Image Davidmack}\\ \centering \scriptsize{Contrôle sur pipeline}}
+			\end{figure}		
+			\column{0.5\textwidth}
+			\begin{figure}
+				\includegraphics[height=3cm]{img/olympus.jpg}\\
+				 {\tiny{\itshape Image Olympus}\\ \centering			\scriptsize{Exemple de test en réflexion}}
+			\end{figure}
+		\end{columns}	
+		\vspace{0.6cm}	
+
+	%\begin{columns}
+			%\column{.5\textwidth}
+			Contrôle et évaluation de soudure :\\
+			\begin{itemize}
+				\item de centrales nucléaires (système de refroidissement)
+				\item de pipelines 
+			\end{itemize}
+			%\column{.05\textwidth}
+			%\ding{222}
+			%\column{.45\textwidth}
+			%\centering
+			\vspace{0.6cm}
+ 			\indent \ding{222} porosité, fissure, manque de fusion, corrosion, corps étrangers,\ldots
+	%\end{columns}
+\end{frame}
+
+
+\subsection*{}
 \begin{frame}{\insertsectionhead}
 \vspace{-0.5cm}
 \hspace{1cm}
@@ -110,7 +148,7 @@
 			\centering
 			\begin{figure}
 				\includegraphics[height=2.7cm]{./img/soudure1.png}\\
-				{\centering \tiny Macrographie d'une soudure austénitique$^{*}$}
+				{\tiny{ \itshape Image extraite de Chassignole, 2010} \\ \centering \scriptsize Macrographie d'une soudure austénitique  }
 			\end{figure}
 			\column{.001\textwidth}<2->
 			\hspace{-3cm}
@@ -125,7 +163,7 @@
 			$\hookrightarrow$ déviation et division du faisceau ultrasonore\\[0.2cm]
 			\hspace{-0.5cm}
 			\includegraphics[scale=0.5]{img/gardahaut.png}\\
-			{\centering \tiny Comparaison d'un modèle (lancer de rayons) et d'une mesure$^{**}$}
+			{\tiny{ \itshape Images extraites de Gardahaut, 2014} \\ \centering \scriptsize Comparaison d'un modèle (lancer de rayons) et d'une mesure }
 				
 	\end{columns}
 	\vspace{0.3cm}
@@ -133,7 +171,7 @@
 			\column{.5\textwidth}<1->
 			%\begin{block}{}
 				\begin{itemize}
-					\item[$\bullet$] méthodes par sommation cohérente de signaux
+					\item[$\bullet$] méthodes par sommation cohérente des signaux
 					\item[$\bullet$] Décomposition des matrices de covariance (DORT)
 				\end{itemize}
 			%\end{block}
@@ -159,22 +197,21 @@
 			\item[\ding{51}] \normalsize{reconstruction d'un ensemble de paramètres : FWI}
 		\end{itemize}		
 	\end{columns}
-	\vfill
-	{\tiny Image extraites de $^{*}$\cite{chassignole} \& $^{**}$\cite{gardahaut} \vspace{-0.5cm}}
 \end{frame} 
 
 
 \section{La FWI}
-\begin{frame}{\insertsectionhead}
+\subsection*{}
+\begin{frame}{La Full Waveform Inversion}
 	\begin{itemize}
-		\item Méthode d'optimisation locale
+		\item Estimation des paramètres acoustiques ou élastiques\\ $~~~~~~\hookrightarrow$ optimisation locale
 		\item Développée pour la géophysique
-		\item \emph{Full waveform inversion} : utilise la totalité du champ d'onde (toutes les arrivées et les amplitudes)
+		\item Utilise la totalité du champ d'onde (toutes les arrivées et amplitudes)
 	\end{itemize}
 
 \end{frame}
 
-
+\subsection*{}
 \begin{frame}{\insertsectionhead}
 	\vspace{-0.5cm}
 	\begin{figure}
@@ -184,39 +221,39 @@
 	
 
 \end{frame}
-
+\section{Résolution de la FWI}
+\subsection*{}
 \begin{frame}{\insertsectionhead}
 	\begin{itemize}
-		\item Fonction de coût : $C(\bm{m})=\frac{1}{2}||\bm{d}_{obs}-\bm{d}_{cal}(\bm{m})||^{2}$ \\[0.5cm]
-		\item \only<1-1>{Perturbation du modèle : $\bm{\Delta m}=-(C'')^{-1}C'$} \onslide<2->{Perturbation du modèle : $\bm{\Delta m}=-(C'')^{-1}$\fcolorbox{DeepSkyBlue4}{white!0}{$C'$}}
-
+		\item<1-> Fonction de coût : $C(\bm{m})=\frac{1}{2}||\bm{d}_{obs}-\bm{d}_{cal}(\bm{m})||^{2}$ \\[0.5cm]
+		\item \only<1-1>{Perturbation du modèle : $\bm{\Delta m}=-(C'')^{-1}$\fcolorbox{white!0}{white!0}{$C'$}} \onslide<2->{Perturbation du modèle : $\bm{\Delta m}=-(C'')^{-1}$\fcolorbox{DeepSkyBlue4}{white!0}{$C'$}}
 	\end{itemize}
 	\onslide<2-> {
 		\begin{figure}
-			\vspace{-0.85cm}\hspace{2.8cm}\begin{tikzpicture}	
+			\vspace{-0.84cm}\hspace{2.8cm}\begin{tikzpicture}	
 					\node (grad) at (10,0) {};
-					\node (exp) at ($(grad)+(-1.5,-1.3)$) {};
+					\node (exp) at ($(grad)+(-1.5,-1.1)$) {};
 					\draw[->, thick,shorten <=2pt,shorten >=2pt,DeepSkyBlue4] (grad) -- (exp);		
 				\end{tikzpicture}
 		\end{figure}
-	}
 	
-	\only<2-2>{
-		\vspace{-0.8cm}\begin{equation}
-			\frac{\partial C}{\partial m_{i}}= \tr{\tilde{\bm{d}}_{cal}} \tr{\left( \frac{\partial\bm{A}}{\partial m_{i}} \right)}\bm{A}^{-1} (\tilde{\bm{d}}_{obs} - \tilde{\bm{d}}_{cal}) 
-		\end{equation}
-	}
-	\only<3-3>{
+	
+%	\only<2-2>{
+%		\vspace{-0.8cm}\begin{equation}
+%			\frac{\partial C}{\partial m_{i}}= \tr{\tilde{\bm{d}}_{cal}} \tr{\left( \frac{\partial\bm{A}}{\partial m_{i}} \right)}\bm{A}^{-1} (\tilde{\bm{d}}_{obs} - \tilde{\bm{d}}_{cal}) 
+%		\end{equation}
+%	}
+
 		\vspace{-0.8cm}\begin{equation}
 			\frac{\partial C}{\partial m_{i}}= \tr{\tilde{\bm{d}}_{cal}} \tr{\left( \frac{\partial\bm{A}}{\partial m_{i}} \right)} \textcolor{DeepSkyBlue4}{\underbrace{\textcolor{black}{\bm{A}^{-1} (\tilde{\bm{d}}_{obs} - \tilde{\bm{d}}_{cal})}}_{\text{résidus rétropopagés}}}
 		\end{equation}
-	}
-	\onslide<2->{
-			$\bm{A}$ : opérateur équation d'onde (élastique ou acoustique)
+
+			~\\$\bm{A}$ : opérateur équation d'onde (élastique ou acoustique)
 	}
 \end{frame}
 
-\section{Résolution de la FWI}
+
+\subsection*{}
 \begin{frame}{\insertsectionhead}
 	\only<1-3>{
 		\begin{equation*}
@@ -226,7 +263,7 @@
 		\end{equation*}
 	}
 	\only<4->{
-		\begin{equation*}
+		\vspace{-0.06cm}\begin{equation*}
 			\frac{\partial C}{\partial m_{i}}= \textcolor{DeepSkyBlue4}{\underbrace{\textcolor{black}{\tr{\tilde{\bm{d}}_{cal}}}}_{\substack{\text{champ incident}}}}
 			 \text{\fcolorbox{DeepSkyBlue4}{white!0}{$\tr{\left( \frac{\partial\bm{A}}{\partial m_{i}} \right)}$ }}
 			 \textcolor{DeepSkyBlue4}{\underbrace{\textcolor{black}{\bm{\lambda}}}_{\substack{\text{résidus rétropopagés}}}}
@@ -245,13 +282,12 @@
 		
 	\onslide<2->{
 		\begin{itemize}
-			\item Résolution du gradient :\vspace{-0.5cm}
+			\item Résolution du gradient :\vspace{-0.34cm}
 			\begin{align}
-				|\bm{k}|&=|\bm{s}+\bm{r}|=\frac{\omega}{c}2\cos\left( \frac{\theta}{2} \right)\\
-				& =\lambda_{min}/2 ~~~~\text{si}~~\theta=0
-			\end{align}	\vspace{-1cm}
+				k=|\bm{s}+\bm{r}|=&\frac{\omega}{c}2\cos\left( \frac{\theta}{2} \right)~~~~~~~~\\
+				\hookrightarrow \text{~ maximale ($\lambda$/2) en HF et pour}~&\theta=0 \nonumber
+			\end{align}	\vspace{-1cm}		
 	}
-	
 		\only<1-3>{
 			\begin{columns}
 				\column{0.4\textwidth}<1-3>
@@ -263,41 +299,54 @@
 				\column{0.55\textwidth}<3-3>
 				\begin{figure}
 					\centering
-					\vfill \includegraphics[height=3.7cm]{img/reso_surf_libre.png}
+					\vspace{0.4cm} \includegraphics[height=3.7cm]{img/reso_surf_libre.png}
 				\end{figure}		
 			\end{columns}
 		}
-	\only<4->{
-		
-		\vspace{0.5cm}\item Rayonnement des paramètres : 
+	
+
+	\only<4->{		
+		\vspace{0.7cm}\item Rayonnement des paramètres :\\[0.2cm] 
 		\begin{figure}
-			\centering
-			\includegraphics[height=1.7cm]{img/rayonnement.png}
+			\hspace{-1cm}\includegraphics[height=2cm]{img/rayonnement.png}
 		\end{figure}		
 	}
+
 	\end{itemize}
+	\vspace{1cm}
 \end{frame}
 
 \section{Inversions en milieu isotrope}
-\begin{frame}{Génération des données de référence}
+\subsection*{}
+\begin{frame}{\insertsectionhead}
+	\begin{itemize}
+		\item Milieu 2D, isotrope, acoustique
+		\item Paramétrisation : vitesse + masse volumique
+		\item Excitation : Ricker centré à 2 MHz 
 	\begin{columns}
 		\column{0.5\textwidth}
 		\begin{figure}
-			\includegraphics[width=\textwidth]{img/vp_true.png}
-			\caption{Vitesse vraie}
+			\includegraphics[width=\textwidth]{img/vp_true.png}\\
+			{\small Vitesse vraie}
 		\end{figure}
 		\column{0.5\textwidth}
 		\begin{figure}
-			\includegraphics[width=\textwidth]{img/rho_true.png}
-			\caption{Masse volumique vraie}
+			\includegraphics[width=\textwidth]{img/rho_true.png}\\
+			{\small Masse volumique vraie}
 		\end{figure}
 	\end{columns}
+	\vspace{1cm}
+		\item 9 inversions successives de 200 kHz à 3 MHz pour
+			\begin{itemize}
+				\item mieux contraindre le problème
+				\item lever les ambiguïtés de déphasage 
+			\end{itemize}
+	\end{itemize}
 
 \end{frame}
 
 \subsection{Inversion monoparamètre}
-
-\begin{frame}{\insertsectionhead}
+\begin{frame}{\insertsectionhead~-- Vitesse}
 \begin{small}
 \centering
 	\begin{adjustwidth}{-2em}{-2.5em}
@@ -371,7 +420,8 @@
 \end{small}
 \end{frame}
 
-\begin{frame}{\insertsubsectionhead}
+\subsection*{}
+\begin{frame}{\insertsectionhead~-- Densité}
 \begin{footnotesize}
 
 		\centering
@@ -409,7 +459,7 @@
 
 
 \subsection{Inversion multiparamètre}
-\begin{frame}{\insertsubsectionhead}
+\begin{frame}{\insertsectionhead~ -- Multiparamètre}
 \begin{small}
 	\centering
 	Vitesse initiale :
@@ -438,6 +488,7 @@
 \end{small}
 \end{frame}
 
+\subsection*{}
 \begin{frame}
 \begin{itemize}
 	\item Inversion monoparamètre : \\[0.2cm]
@@ -467,68 +518,106 @@
 \end{frame}
 
 \section{Inversions en milieu anisotrope}
+\subsection*{}
 \begin{frame}{\insertsectionhead}
-\begin{small}
-
-	\vspace{-1cm}
-	\begin{equation*}
-		\text{Paramètre d'anisotropie : }\epsilon = \frac{\bm{v}_{p}.\bm{e}_{x}-\bm{v}_{p}.\bm{e_{z}}}{\bm{v}_{p}.\bm{e}_{z}}
-	\end{equation*}
+%\begin{small}
+	\begin{columns}
+		\centering
+		\column{0.5\textwidth}
+		\centering
+		\begin{itemize}
+			\item  Milieu acoustique,\\ isotrope transverse\\ (axe de symétrie horizontal)\\[0.3cm]
+			\item Paramètre d'anisotropie :
+		\end{itemize}			 
+		\begin{equation*}
+			\epsilon = \frac{\bm{v}_{p}.\bm{e}_{x}-\bm{v}_{p}.\bm{e_{z}}}{\bm{v}_{p}.\bm{e}_{z}}
+		\end{equation*}
+		\column{0.3\textwidth}
+		\hspace{-0.5cm}\includegraphics[height=4cm]{img/anisotrope/e20.png}
+		\column{0.3\textwidth}
+		\hspace{-0.3cm}\includegraphics[height=4cm]{img/anisotrope/residu_init.png}
+	\end{columns}	
+	\vspace{0.6cm}
 	\begin{columns}
 		\column{0.5\textwidth}
 		\centering
 		$\epsilon$ vrai : \\[0.2cm]
 		\includegraphics[width=0.8\textwidth]{img/anisotrope/epsilon_true.png}\\
-		\includegraphics[height=4cm]{img/anisotrope/e20.png}
+		
 		\column{0.5\textwidth}
 		\centering
 		$\epsilon$ reconstruit : \\[0.2cm]
 		\includegraphics[width=0.8\textwidth]{img/anisotrope/epsilon_final.png}\\
-		\includegraphics[height=4cm]{img/anisotrope/residu_init.png}
+		
 		
 		
 	\end{columns}	
-
-\end{small}
+%\end{small}
 \end{frame}
 
 
-\section{Perspectives}
+\section{Conclusions et perspectives}
+\subsection*{}
 \begin{frame}{\insertsectionhead}
+\setlength{\leftmargin}{-1cm}
+\setlength{\rightmargin}{-1cm}
+
 	\begin{itemize}
-		\item Prise en compte de l'anisotropie : 
+		\item<1-> Inversion multiparamètre : corrige les artefacts
+		\item<2-> Prise en compte de l'anisotropie : 
+		\begin{itemize}
+			\item en acoustique : par un modèle isotrope transverse incliné
+			\item en élastique : par $6\times C_{ij}$
+		\end{itemize} 
+		\begin{figure}[!h]
+		    \centering
+		    \hspace{-1cm}\begin{subfigure}[b]{0.25\textwidth}
+		    	\centering
+		 		\includegraphics[height=2cm]{img/ogilvy_model.png}
+		 		\vspace{0.2cm}\caption{\centering \scriptsize Modèle d'orientation des grains}
+			\end{subfigure}
+			\begin{subfigure}[b]{0.7\textwidth}
+				\centering
+		 		\includegraphics[height=2cm]{img/ogilvy_ray1.png}
+		 		\includegraphics[height=2cm]{img/ogilvy_ray2.png}\\
+		 		\raggedright{\vspace{-0.25cm}\tiny{\itshape Images extraites de~Ogilvy, 1986}}
+		 		\caption{\scriptsize Courbure des rayons (ondes de compressions) \\~}
+			\end{subfigure}\\
+				
+		\end{figure}	
+		\item<3-> Élaboration d'un modèle initial fiable 
+		\item<4-> Prise en compte de la propagation 3D
+		\item<5-> Géométrie d'acquisition à adapter
 			\begin{itemize}
-				\item en acoustique : par un modèle transverse isotrope incliné
-				\item en élastique : par $6\times C_{ij}$ 
+				\item à la géométrie de la soudure réelle
+				\item pour une une bonne illumination/résolution
 			\end{itemize}
-		\item Prise en compte de la propagation 3D
-		\item Élaboration d'un modèle initial fiable 
 	\end{itemize}
+	\begin{picture}(0,0)(0,0)\put(240,0){
+		\only<4->{
+		\begin{tikzpicture}
+			\node (a) at (0,0) {\includegraphics[width=2.5cm]{img/linear_array.png}};
+			\node (b) [below=-0.2cm of a] {\tiny \itshape Image Olympus};
+		\end{tikzpicture}
+		}
+	}\end{picture}
+	
 \end{frame}
 
 
-
-
-
-
-
-
-
-
-
-
-\begin{frame}[allowframebreaks]{Références}
-
-	\begin{adjustwidth}{-2em}{-2.5em}
-		\scriptsize
-		\bibliographystyle{abbrvnat}
-		\bibliography{biblio}
-	\end{adjustwidth}
-\end{frame}
+%\begin{frame}[hide,allowframebreaks]{Références}
+%
+%	\begin{adjustwidth}{-2em}{-2.5em}
+%		\scriptsize
+%		\bibliographystyle{abbrvnat}
+%		\bibliography{biblio}
+%	\end{adjustwidth}
+%\end{frame}
 
 \begin{frame}
-	questions : différence avec tomo diffraction\\
-	défaut : air
+	questions :\\
+	défaut : air\\
+	focalisation
 \end{frame}
 
 

@@ -22,9 +22,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.70000001"
-     inkscape:cx="1065.1873"
-     inkscape:cy="391.52046"
+     inkscape:zoom="0.35000001"
+     inkscape:cx="355.20333"
+     inkscape:cy="1003.2799"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -1193,7 +1193,7 @@
     <g
        style="fill:#c8beb7;fill-opacity:1"
        id="g5360-7-5-0"
-       transform="matrix(1.8639703,0,0,-0.62725752,-621.38018,974.43007)"
+       transform="matrix(1.8639703,0,0,-0.62725752,-609.9516,974.64543)"
        inkscape:export-filename="/home/dinsenma/Desktop/Stage_M2/presentation_12VII/img/reso_surf_libre.png"
        inkscape:export-xdpi="200"
        inkscape:export-ydpi="200">
@@ -2079,86 +2079,93 @@
        inkscape:export-filename="/home/dinsenma/Desktop/Stage_M2/redaction/img/reso.png"
        inkscape:export-xdpi="200"
        inkscape:export-ydpi="200" />
-    <path
-       style="color:#000000;fill:#000000;fill-opacity:0.35294118;fill-rule:nonzero;stroke:#000000;stroke-width:0.63134533;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       d="m 365.33811,816.83694 0,-4.41941 2.27284,0 2.27284,0 0,4.41941 0,4.41942 -2.27284,0 -2.27284,0 0,-4.41942 z"
-       id="path3297"
-       inkscape:connector-curvature="0"
+    <g
+       id="g3286"
+       transform="translate(-3.9143411,0)"
        inkscape:export-filename="/home/dinsenma/Desktop/Stage_M2/presentation_12VII/img/reso_surf_libre.png"
        inkscape:export-xdpi="200"
-       inkscape:export-ydpi="200" />
-    <path
-       style="color:#000000;fill:#000000;fill-opacity:0.35294118;fill-rule:nonzero;stroke:#000000;stroke-width:0.63134533;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       d="m 365.84318,816.83694 0,-3.91434 1.76777,0 1.76777,0 0,3.91434 0,3.91435 -1.76777,0 -1.76777,0 0,-3.91435 z"
-       id="path3299"
-       inkscape:connector-curvature="0"
-       inkscape:export-filename="/home/dinsenma/Desktop/Stage_M2/presentation_12VII/img/reso_surf_libre.png"
-       inkscape:export-xdpi="200"
-       inkscape:export-ydpi="200" />
-    <path
-       style="color:#000000;fill:#000000;fill-opacity:0.35294118;fill-rule:nonzero;stroke:#000000;stroke-width:0.63134533;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       d="m 366.34826,816.83694 0,-3.40926 1.26269,0 1.26269,0 0,3.40926 0,3.40927 -1.26269,0 -1.26269,0 0,-3.40927 z"
-       id="path3301"
-       inkscape:connector-curvature="0"
-       inkscape:export-filename="/home/dinsenma/Desktop/Stage_M2/presentation_12VII/img/reso_surf_libre.png"
-       inkscape:export-xdpi="200"
-       inkscape:export-ydpi="200" />
-    <path
-       style="color:#000000;fill:#000000;fill-opacity:0.35294118;fill-rule:nonzero;stroke:#000000;stroke-width:0.07891817;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       d="m 366.69358,816.8301 0,-3.07781 0.93123,0 0.93123,0 0,3.07781 0,3.07781 -0.93123,0 -0.93123,0 0,-3.07781 z"
-       id="path3309"
-       inkscape:connector-curvature="0"
-       inkscape:export-filename="/home/dinsenma/Desktop/Stage_M2/presentation_12VII/img/reso_surf_libre.png"
-       inkscape:export-xdpi="200"
-       inkscape:export-ydpi="200" />
-    <path
-       style="color:#000000;fill:#000000;fill-opacity:0.35294118;fill-rule:nonzero;stroke:#000000;stroke-width:0.07891817;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       d="m 366.75671,816.8301 0,-3.01467 0.8681,0 0.8681,0 0,3.01467 0,3.01468 -0.8681,0 -0.8681,0 0,-3.01468 z"
-       id="path3311"
-       inkscape:connector-curvature="0"
-       inkscape:export-filename="/home/dinsenma/Desktop/Stage_M2/presentation_12VII/img/reso_surf_libre.png"
-       inkscape:export-xdpi="200"
-       inkscape:export-ydpi="200" />
-    <path
-       style="color:#000000;fill:#000000;fill-opacity:0.35294118;fill-rule:nonzero;stroke:#000000;stroke-width:0.07891817;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       d="m 366.81984,816.8301 0,-2.95154 0.80497,0 0.80497,0 0,2.95154 0,2.95154 -0.80497,0 -0.80497,0 0,-2.95154 z"
-       id="path3313"
-       inkscape:connector-curvature="0"
-       inkscape:export-filename="/home/dinsenma/Desktop/Stage_M2/presentation_12VII/img/reso_surf_libre.png"
-       inkscape:export-xdpi="200"
-       inkscape:export-ydpi="200" />
-    <path
-       style="color:#000000;fill:#000000;fill-opacity:0.35294118;fill-rule:nonzero;stroke:#000000;stroke-width:0.07891817;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       d="m 366.88298,816.8301 0,-2.8884 0.74183,0 0.74183,0 0,2.8884 0,2.88841 -0.74183,0 -0.74183,0 0,-2.88841 z"
-       id="path3315"
-       inkscape:connector-curvature="0"
-       inkscape:export-filename="/home/dinsenma/Desktop/Stage_M2/presentation_12VII/img/reso_surf_libre.png"
-       inkscape:export-xdpi="200"
-       inkscape:export-ydpi="200" />
-    <path
-       style="color:#000000;fill:#000000;fill-opacity:0.35294118;fill-rule:nonzero;stroke:#000000;stroke-width:0.07891817;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       d="m 366.94611,816.8301 0,-2.82527 0.6787,0 0.6787,0 0,2.82527 0,2.82527 -0.6787,0 -0.6787,0 0,-2.82527 z"
-       id="path3317"
-       inkscape:connector-curvature="0"
-       inkscape:export-filename="/home/dinsenma/Desktop/Stage_M2/presentation_12VII/img/reso_surf_libre.png"
-       inkscape:export-xdpi="200"
-       inkscape:export-ydpi="200" />
-    <path
-       style="color:#000000;fill:#000000;fill-opacity:0.35294118;fill-rule:nonzero;stroke:#000000;stroke-width:0.07891817;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       d="m 367.00925,816.8301 0,-2.76213 0.61556,0 0.61556,0 0,2.76213 0,2.76214 -0.61556,0 -0.61556,0 0,-2.76214 z"
-       id="path3319"
-       inkscape:connector-curvature="0"
-       inkscape:export-filename="/home/dinsenma/Desktop/Stage_M2/presentation_12VII/img/reso_surf_libre.png"
-       inkscape:export-xdpi="200"
-       inkscape:export-ydpi="200" />
-    <path
-       style="color:#000000;fill:#000000;fill-opacity:0.35294118;fill-rule:nonzero;stroke:#000000;stroke-width:0.07891817;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       d="m 367.05563,819.52194 c -0.008,-0.0221 -0.0117,-1.24763 -0.007,-2.7234 l 0.008,-2.68322 0.56821,0 0.56821,0 0,2.71478 0,2.71479 -0.56103,0.009 c -0.43156,0.007 -0.56457,-6.5e-4 -0.57636,-0.0316 l 0,0 z"
-       id="path3321"
-       inkscape:connector-curvature="0"
-       inkscape:export-filename="/home/dinsenma/Desktop/Stage_M2/presentation_12VII/img/reso_surf_libre.png"
-       inkscape:export-xdpi="200"
-       inkscape:export-ydpi="200" />
+       inkscape:export-ydpi="200">
+      <path
+         inkscape:export-ydpi="200"
+         inkscape:export-xdpi="200"
+         inkscape:export-filename="/home/dinsenma/Desktop/Stage_M2/presentation_12VII/img/reso_surf_libre.png"
+         inkscape:connector-curvature="0"
+         id="path3297"
+         d="m 365.33811,816.83694 0,-4.41941 2.27284,0 2.27284,0 0,4.41941 0,4.41942 -2.27284,0 -2.27284,0 0,-4.41942 z"
+         style="color:#000000;fill:#000000;fill-opacity:0.35294118;fill-rule:nonzero;stroke:#000000;stroke-width:0.63134533;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+      <path
+         inkscape:export-ydpi="200"
+         inkscape:export-xdpi="200"
+         inkscape:export-filename="/home/dinsenma/Desktop/Stage_M2/presentation_12VII/img/reso_surf_libre.png"
+         inkscape:connector-curvature="0"
+         id="path3299"
+         d="m 365.84318,816.83694 0,-3.91434 1.76777,0 1.76777,0 0,3.91434 0,3.91435 -1.76777,0 -1.76777,0 0,-3.91435 z"
+         style="color:#000000;fill:#000000;fill-opacity:0.35294118;fill-rule:nonzero;stroke:#000000;stroke-width:0.63134533;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+      <path
+         inkscape:export-ydpi="200"
+         inkscape:export-xdpi="200"
+         inkscape:export-filename="/home/dinsenma/Desktop/Stage_M2/presentation_12VII/img/reso_surf_libre.png"
+         inkscape:connector-curvature="0"
+         id="path3301"
+         d="m 366.34826,816.83694 0,-3.40926 1.26269,0 1.26269,0 0,3.40926 0,3.40927 -1.26269,0 -1.26269,0 0,-3.40927 z"
+         style="color:#000000;fill:#000000;fill-opacity:0.35294118;fill-rule:nonzero;stroke:#000000;stroke-width:0.63134533;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+      <path
+         inkscape:export-ydpi="200"
+         inkscape:export-xdpi="200"
+         inkscape:export-filename="/home/dinsenma/Desktop/Stage_M2/presentation_12VII/img/reso_surf_libre.png"
+         inkscape:connector-curvature="0"
+         id="path3309"
+         d="m 366.69358,816.8301 0,-3.07781 0.93123,0 0.93123,0 0,3.07781 0,3.07781 -0.93123,0 -0.93123,0 0,-3.07781 z"
+         style="color:#000000;fill:#000000;fill-opacity:0.35294118;fill-rule:nonzero;stroke:#000000;stroke-width:0.07891817;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+      <path
+         inkscape:export-ydpi="200"
+         inkscape:export-xdpi="200"
+         inkscape:export-filename="/home/dinsenma/Desktop/Stage_M2/presentation_12VII/img/reso_surf_libre.png"
+         inkscape:connector-curvature="0"
+         id="path3311"
+         d="m 366.75671,816.8301 0,-3.01467 0.8681,0 0.8681,0 0,3.01467 0,3.01468 -0.8681,0 -0.8681,0 0,-3.01468 z"
+         style="color:#000000;fill:#000000;fill-opacity:0.35294118;fill-rule:nonzero;stroke:#000000;stroke-width:0.07891817;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+      <path
+         inkscape:export-ydpi="200"
+         inkscape:export-xdpi="200"
+         inkscape:export-filename="/home/dinsenma/Desktop/Stage_M2/presentation_12VII/img/reso_surf_libre.png"
+         inkscape:connector-curvature="0"
+         id="path3313"
+         d="m 366.81984,816.8301 0,-2.95154 0.80497,0 0.80497,0 0,2.95154 0,2.95154 -0.80497,0 -0.80497,0 0,-2.95154 z"
+         style="color:#000000;fill:#000000;fill-opacity:0.35294118;fill-rule:nonzero;stroke:#000000;stroke-width:0.07891817;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+      <path
+         inkscape:export-ydpi="200"
+         inkscape:export-xdpi="200"
+         inkscape:export-filename="/home/dinsenma/Desktop/Stage_M2/presentation_12VII/img/reso_surf_libre.png"
+         inkscape:connector-curvature="0"
+         id="path3315"
+         d="m 366.88298,816.8301 0,-2.8884 0.74183,0 0.74183,0 0,2.8884 0,2.88841 -0.74183,0 -0.74183,0 0,-2.88841 z"
+         style="color:#000000;fill:#000000;fill-opacity:0.35294118;fill-rule:nonzero;stroke:#000000;stroke-width:0.07891817;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+      <path
+         inkscape:export-ydpi="200"
+         inkscape:export-xdpi="200"
+         inkscape:export-filename="/home/dinsenma/Desktop/Stage_M2/presentation_12VII/img/reso_surf_libre.png"
+         inkscape:connector-curvature="0"
+         id="path3317"
+         d="m 366.94611,816.8301 0,-2.82527 0.6787,0 0.6787,0 0,2.82527 0,2.82527 -0.6787,0 -0.6787,0 0,-2.82527 z"
+         style="color:#000000;fill:#000000;fill-opacity:0.35294118;fill-rule:nonzero;stroke:#000000;stroke-width:0.07891817;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+      <path
+         inkscape:export-ydpi="200"
+         inkscape:export-xdpi="200"
+         inkscape:export-filename="/home/dinsenma/Desktop/Stage_M2/presentation_12VII/img/reso_surf_libre.png"
+         inkscape:connector-curvature="0"
+         id="path3319"
+         d="m 367.00925,816.8301 0,-2.76213 0.61556,0 0.61556,0 0,2.76213 0,2.76214 -0.61556,0 -0.61556,0 0,-2.76214 z"
+         style="color:#000000;fill:#000000;fill-opacity:0.35294118;fill-rule:nonzero;stroke:#000000;stroke-width:0.07891817;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+      <path
+         inkscape:export-ydpi="200"
+         inkscape:export-xdpi="200"
+         inkscape:export-filename="/home/dinsenma/Desktop/Stage_M2/presentation_12VII/img/reso_surf_libre.png"
+         inkscape:connector-curvature="0"
+         id="path3321"
+         d="m 367.05563,819.52194 c -0.008,-0.0221 -0.0117,-1.24763 -0.007,-2.7234 l 0.008,-2.68322 0.56821,0 0.56821,0 0,2.71478 0,2.71479 -0.56103,0.009 c -0.43156,0.007 -0.56457,-6.5e-4 -0.57636,-0.0316 l 0,0 z"
+         style="color:#000000;fill:#000000;fill-opacity:0.35294118;fill-rule:nonzero;stroke:#000000;stroke-width:0.07891817;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    </g>
     <path
        style="color:#000000;fill:#000000;fill-opacity:0.35294118;fill-rule:nonzero;stroke:#000000;stroke-width:0.44642857;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        d="m 407.55258,468.02673 0,-4.46429 2.32143,0 2.32143,0 0,4.46429 0,4.46429 -2.32143,0 -2.32143,0 0,-4.46429 z"

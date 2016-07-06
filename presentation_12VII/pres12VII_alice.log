@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.3.4)  5 JUL 2016 17:53
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.3.4)  6 JUL 2016 18:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -815,30 +815,10 @@ LaTeX Info: Redefining \addtolength on input line 77.
 )
 \c@@todonotes@numberoftodonotes=\count172
 )
-(/usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.sty
-Package: subfigure 2002/03/15 v2.1.5 subfigure package
-\subfigtopskip=\skip65
-\subfigcapskip=\skip66
-\subfigcaptopadj=\dimen201
-\subfigbottomskip=\skip67
-\subfigcapmargin=\dimen202
-\subfiglabelskip=\skip68
-\c@subfigure=\count173
-\c@lofdepth=\count174
-\c@subtable=\count175
-\c@lotdepth=\count176
-
-****************************************
-* Local config file subfigure.cfg used *
-****************************************
-(/usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.cfg)
-\subfig@top=\skip69
-\subfig@bottom=\skip70
-)
 (/usr/share/texlive/texmf-dist/tex/latex/changepage/changepage.sty
 Package: changepage 2009/10/20 v1.0c check page and change page layout
-\c@cp@cntr=\count177
-\cp@tempcnt=\count178
+\c@cp@cntr=\count173
+\cp@tempcnt=\count174
 )
 (/usr/share/texmf/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.
 code.tex
@@ -877,32 +857,58 @@ Package: trimclip 2012/05/16 v1.0 Trim and clip general TeX material
 Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
 \collectedbox=\box56
 )
-\tc@llx=\dimen203
-\tc@lly=\dimen204
-\tc@urx=\dimen205
-\tc@ury=\dimen206
+\tc@llx=\dimen201
+\tc@lly=\dimen202
+\tc@urx=\dimen203
+\tc@ury=\dimen204
 Package trimclip Info: Using driver 'tc-pdftex.def'.
 
 (/usr/share/texlive/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
 File: tc-pdftex.def 2012/05/13 v1.0 Clipping driver for pdftex
 ))
-\adjbox@Width=\dimen207
-\adjbox@Height=\dimen208
-\adjbox@Depth=\dimen209
-\adjbox@Totalheight=\dimen210
+\adjbox@Width=\dimen205
+\adjbox@Height=\dimen206
+\adjbox@Depth=\dimen207
+\adjbox@Totalheight=\dimen208
 
 (/usr/share/texlive/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
 Package: ifoddpage 2011/09/13 v1.0 Conditionals for odd/even page detection
-\c@checkoddpage=\count179
+\c@checkoddpage=\count175
 LaTeX Info: Redefining \checkoddpage on input line 25.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/varwidth/varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \@vwid@box=\box57
-\sift@deathcycles=\count180
-\@vwid@loff=\dimen211
-\@vwid@roff=\dimen212
+\sift@deathcycles=\count176
+\@vwid@loff=\dimen209
+\@vwid@roff=\dimen210
 ))
+(/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2013/02/03 v1.1-62 Sub-captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
+\captionmargin=\dimen211
+\captionmargin@=\dimen212
+\captionwidth=\dimen213
+\caption@tempdima=\dimen214
+\caption@indent=\dimen215
+\caption@parindent=\dimen216
+\caption@hangindent=\dimen217
+)
+\c@ContinuedFloat=\count177
+Package caption Info: beamer document class.
+Package caption Info: hyperref package is loaded.
+Package caption Info: Hyperref support is turned off
+(caption)             because hyperref has stopped early.
+)
+\c@subfigure=\count178
+\c@subtable=\count179
+)
 (/usr/share/texmf/tex/latex/beamer/base/themes/outer/beamerouterthememiniframes
 .sty
 Package: beamerouterthememiniframes 2010/06/17  (rcs-revision d02a7cf4d8ae)
@@ -914,57 +920,57 @@ Package: mhsetup 2010/01/21 v1.2a programming setup (MH)
 )
 LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
-\g_MT_multlinerow_int=\count181
-\l_MT_multwidth_dim=\dimen213
-\origjot=\skip71
-\l_MT_shortvdotswithinadjustabove_dim=\dimen214
-\l_MT_shortvdotswithinadjustbelow_dim=\dimen215
-\l_MT_above_intertext_sep=\dimen216
-\l_MT_below_intertext_sep=\dimen217
-\l_MT_above_shortintertext_sep=\dimen218
-\l_MT_below_shortintertext_sep=\dimen219
+\g_MT_multlinerow_int=\count180
+\l_MT_multwidth_dim=\dimen218
+\origjot=\skip65
+\l_MT_shortvdotswithinadjustabove_dim=\dimen219
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen220
+\l_MT_above_intertext_sep=\dimen221
+\l_MT_below_intertext_sep=\dimen222
+\l_MT_above_shortintertext_sep=\dimen223
+\l_MT_below_shortintertext_sep=\dimen224
 )
 (/usr/share/texmf/tex/latex/beamer/base/themes/font/beamerfontthemeserif.sty
 Package: beamerfontthemeserif 2010/06/17  (rcs-revision d02a7cf4d8ae)
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 60.
+Package hyperref Info: Option `colorlinks' set `true' on input line 61.
 
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-0.def
 File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 )
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\\' on input line 74.
+(hyperref)                removing `\\' on input line 75.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\\' on input line 74.
+(hyperref)                removing `\\' on input line 75.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\\' on input line 74.
+(hyperref)                removing `\\' on input line 75.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\\' on input line 74.
+(hyperref)                removing `\\' on input line 75.
 
 (./pres12VII_alice.aux (./img/schema_fwi.aux))
 \openout1 = `pres12VII_alice.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1002,16 +1008,16 @@ LaTeX Font Info:    ... okay on input line 97.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count182
-\scratchdimen=\dimen220
+\scratchcounter=\count181
+\scratchdimen=\dimen225
 \scratchbox=\box58
-\nofMPsegments=\count183
-\nofMParguments=\count184
+\nofMPsegments=\count182
+\nofMParguments=\count183
 \everyMPshowfont=\toks49
-\MPscratchCnt=\count185
-\MPscratchDim=\dimen221
-\MPnumerator=\count186
-\makeMPintoPDFobject=\count187
+\MPscratchCnt=\count184
+\MPscratchDim=\dimen226
+\MPnumerator=\count185
+\makeMPintoPDFobject=\count186
 \everyMPtoPDFconversion=\toks50
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
@@ -1030,7 +1036,7 @@ e
 ))
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box59
-Package hyperref Info: Link coloring ON on input line 97.
+Package hyperref Info: Link coloring ON on input line 98.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1038,11 +1044,11 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count188
+\c@section@level=\count187
 )
-LaTeX Info: Redefining \ref on input line 97.
-LaTeX Info: Redefining \pageref on input line 97.
-LaTeX Info: Redefining \nameref on input line 97.
+LaTeX Info: Redefining \ref on input line 98.
+LaTeX Info: Redefining \pageref on input line 98.
+LaTeX Info: Redefining \nameref on input line 98.
 
 (./pres12VII_alice.out) (./pres12VII_alice.out)
 \@outlinefile=\write5
@@ -1073,224 +1079,266 @@ Dictionary: translator-numbers-dictionary, Language: English
 tionary/translator-theorem-dictionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
-LaTeX Info: Redefining \includegraphics on input line 97.
+LaTeX Info: Redefining \includegraphics on input line 98.
 
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/ucsencs.def
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
-LaTeX Info: Redefining \degres on input line 97.
+LaTeX Info: Redefining \degres on input line 98.
 
 
 Package frenchb.ldf Warning: The definition of \@makecaption has been changed,
 (frenchb.ldf)                frenchb will NOT customise it;
-(frenchb.ldf)                reported on input line 97.
+(frenchb.ldf)                reported on input line 98.
 
-LaTeX Info: Redefining \dots on input line 97.
+LaTeX Info: Redefining \dots on input line 98.
 
 Package frenchb.ldf Warning: Setting StandardEnumerateEnv=true for
 (frenchb.ldf)                compatibility with enumerate package,
-(frenchb.ldf)                 on input line 97.
+(frenchb.ldf)                 on input line 98.
 
-LaTeX Info: Redefining \up on input line 97.
+LaTeX Info: Redefining \up on input line 98.
 
 Package frenchb.ldf Warning: OT1 encoding should not be used for French. 
 (frenchb.ldf)                Add \usepackage[T1]{fontenc} to the preamble
-(frenchb.ldf)                of your document, on input line 97.
+(frenchb.ldf)                of your document, on input line 98.
 
-(./pres12VII_alice.nav) <img/univ.png, id=56, 609.27625pt x 282.05376pt>
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+(./pres12VII_alice.nav) <img/univ.png, id=65, 609.27625pt x 282.05376pt>
 File: img/univ.png Graphic file (type png)
 
 <use img/univ.png>
-Package pdftex.def Info: img/univ.png used on input line 101.
+Package pdftex.def Info: img/univ.png used on input line 102.
 (pdftex.def)             Requested size: 61.4611pt x 28.45274pt.
-LaTeX Font Info:    Try loading font information for U+msa on input line 101.
+LaTeX Font Info:    Try loading font information for U+msa on input line 102.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 101.
+LaTeX Font Info:    Try loading font information for U+msb on input line 102.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<img/cnrs.png, id=58, 170.7981pt x 170.7981pt>
+<img/cnrs.png, id=67, 170.7981pt x 170.7981pt>
 File: img/cnrs.png Graphic file (type png)
  <use img/cnrs.png>
-Package pdftex.def Info: img/cnrs.png used on input line 101.
+Package pdftex.def Info: img/cnrs.png used on input line 102.
 (pdftex.def)             Requested size: 28.4515pt x 28.45274pt.
 
-<img/isterre.png, id=59, 592.2125pt x 428.60126pt>
+<img/isterre.png, id=68, 592.2125pt x 428.60126pt>
 File: img/isterre.png Graphic file (type png)
  <use img/isterre.png>
-Package pdftex.def Info: img/isterre.png used on input line 101.
+Package pdftex.def Info: img/isterre.png used on input line 102.
 (pdftex.def)             Requested size: 39.30844pt x 28.45274pt.
 
 
 LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
-(Font)              size <5> substituted on input line 101.
+(Font)              size <5> substituted on input line 102.
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
  <./img/univ.png> <./img/cnrs.png (PNG copy)> <./img/isterre.png (PNG copy)>]
-<./img/soudure1.png, id=94, 213.55785pt x 161.1621pt>
+<img/us_test.jpg, id=115, 2280.52pt x 1710.39pt>
+File: img/us_test.jpg Graphic file (type jpg)
+ <use img/us_test.jpg>
+Package pdftex.def Info: img/us_test.jpg used on input line 139.
+(pdftex.def)             Requested size: 113.7891pt x 85.35826pt.
+
+<img/olympus.jpg, id=116, 351.3125pt x 240.9pt>
+File: img/olympus.jpg Graphic file (type jpg)
+ <use img/olympus.jpg>
+Package pdftex.def Info: img/olympus.jpg used on input line 139.
+(pdftex.def)             Requested size: 124.47826pt x 85.35826pt.
+ [2
+
+ <./img/us_test.jpg> <./img/olympus.jpg>]
+<./img/soudure1.png, id=146, 213.55785pt x 161.1621pt>
 File: ./img/soudure1.png Graphic file (type png)
- <use ./img/soudure1.png>
-Package pdftex.def Info: ./img/soudure1.png used on input line 164.
+
+<use ./img/soudure1.png>
+Package pdftex.def Info: ./img/soudure1.png used on input line 200.
 (pdftex.def)             Requested size: 101.79947pt x 76.82234pt.
-
-<img/gardahaut.png, id=95, 409.0482pt x 125.0271pt>
-File: img/gardahaut.png Graphic file (type png)
- <use img/gardahaut.png>
-Package pdftex.def Info: img/gardahaut.png used on input line 164.
-(pdftex.def)             Requested size: 204.52359pt x 62.51338pt.
-
-Overfull \hbox (66.31804pt too wide) detected at line 164
-[][][] $[]$[][][][][][][] $[]$[][][][][][] $[]$[][][][][] 
- []
-
-[2
-
- <./img/soudure1.png> <./img/gardahaut.png>]
-File: ./img/soudure1.png Graphic file (type png)
- <use ./img/soudure1.png>
-Package pdftex.def Info: ./img/soudure1.png used on input line 164.
-(pdftex.def)             Requested size: 101.79947pt x 76.82234pt.
+ <img/gardahaut.png, id=147, 409.0482pt x 125.0271pt>
 File: img/gardahaut.png Graphic file (type png)
 
 <use img/gardahaut.png>
-Package pdftex.def Info: img/gardahaut.png used on input line 164.
+Package pdftex.def Info: img/gardahaut.png used on input line 200.
 (pdftex.def)             Requested size: 204.52359pt x 62.51338pt.
 
-Overfull \hbox (66.31804pt too wide) detected at line 164
-[][][] $[]$[][][][][][][][] $[]$[][][][][][][][] $[]$[][][][][][] 
+Overfull \hbox (66.31804pt too wide) detected at line 200
+[][][] $[]$[][][][][][][] $[]$[][][][][][] $[]$[][][][][] 
+ []
+
+
+Overfull \vbox (0.1309pt too high) detected at line 200
  []
 
 [3
 
-]
+ <./img/soudure1.png> <./img/gardahaut.png>]
 File: ./img/soudure1.png Graphic file (type png)
  <use ./img/soudure1.png>
-Package pdftex.def Info: ./img/soudure1.png used on input line 164.
+Package pdftex.def Info: ./img/soudure1.png used on input line 200.
 (pdftex.def)             Requested size: 101.79947pt x 76.82234pt.
 File: img/gardahaut.png Graphic file (type png)
- <use img/gardahaut.png>
-Package pdftex.def Info: img/gardahaut.png used on input line 164.
+
+<use img/gardahaut.png>
+Package pdftex.def Info: img/gardahaut.png used on input line 200.
 (pdftex.def)             Requested size: 204.52359pt x 62.51338pt.
 
-Overfull \hbox (66.31804pt too wide) detected at line 164
+Overfull \hbox (66.31804pt too wide) detected at line 200
 [][][] $[]$[][][][][][][][] $[]$[][][][][][][][] $[]$[][][][][][] 
+ []
+
+
+Overfull \vbox (0.1309pt too high) detected at line 200
  []
 
 [4
 
-] [5
+]
+File: ./img/soudure1.png Graphic file (type png)
+ <use ./img/soudure1.png>
+Package pdftex.def Info: ./img/soudure1.png used on input line 200.
+(pdftex.def)             Requested size: 101.79947pt x 76.82234pt.
+File: img/gardahaut.png Graphic file (type png)
+ <use img/gardahaut.png>
+Package pdftex.def Info: img/gardahaut.png used on input line 200.
+(pdftex.def)             Requested size: 204.52359pt x 62.51338pt.
+
+Overfull \hbox (66.31804pt too wide) detected at line 200
+[][][] $[]$[][][][][][][][] $[]$[][][][][][][][] $[]$[][][][][][] 
+ []
+
+
+Overfull \vbox (0.1309pt too high) detected at line 200
+ []
+
+[5
+
+] [6
 
 ]
 \openout2 = `img/schema_fwi.aux'.
 
  (./img/schema_fwi.tex)
-Overfull \hbox (14.53728pt too wide) in paragraph at lines 33--186
+Overfull \hbox (14.53728pt too wide) in paragraph at lines 33--223
  [][] 
  []
 
 
-Overfull \vbox (3.26054pt too high) detected at line 186
+Overfull \vbox (3.26054pt too high) detected at line 223
  []
 
-[6
+[7
 
 
-
-] [7
 
 ] [8
 
 ] [9
 
-] <img/reso.png, id=248, 316.90395pt x 222.23026pt>
+] <img/reso.png, id=345, 316.90395pt x 222.23026pt>
 File: img/reso.png Graphic file (type png)
 
 <use img/reso.png>
-Package pdftex.def Info: img/reso.png used on input line 279.
+Package pdftex.def Info: img/reso.png used on input line 317.
 (pdftex.def)             Requested size: 101.4355pt x 71.13188pt.
- <img/reso_surf_libre.png, id=249, 417.7206pt x 324.85365pt>
+ <img/reso_surf_libre.png, id=346, 417.7206pt x 324.85365pt>
 File: img/reso_surf_libre.png Graphic file (type png)
 
 <use img/reso_surf_libre.png>
-Package pdftex.def Info: img/reso_surf_libre.png used on input line 279.
+Package pdftex.def Info: img/reso_surf_libre.png used on input line 317.
 (pdftex.def)             Requested size: 135.36877pt x 105.2751pt.
- [10
+
+Overfull \vbox (27.86655pt too high) detected at line 317
+ []
+
+[10
 
  <./img/reso.png> <./img/reso_surf_libre.png>]
 File: img/reso.png Graphic file (type png)
-<use img/reso.png>
-Package pdftex.def Info: img/reso.png used on input line 279.
+ <use img/reso.png>
+Package pdftex.def Info: img/reso.png used on input line 317.
 (pdftex.def)             Requested size: 101.4355pt x 71.13188pt.
 File: img/reso_surf_libre.png Graphic file (type png)
- <use img/reso_surf_libre.png>
-Package pdftex.def Info: img/reso_surf_libre.png used on input line 279.
+
+<use img/reso_surf_libre.png>
+Package pdftex.def Info: img/reso_surf_libre.png used on input line 317.
 (pdftex.def)             Requested size: 135.36877pt x 105.2751pt.
- [11
+
+Overfull \vbox (27.86655pt too high) detected at line 317
+ []
+
+[11
 
 ]
 File: img/reso.png Graphic file (type png)
  <use img/reso.png>
-Package pdftex.def Info: img/reso.png used on input line 279.
+Package pdftex.def Info: img/reso.png used on input line 317.
 (pdftex.def)             Requested size: 101.4355pt x 71.13188pt.
 File: img/reso_surf_libre.png Graphic file (type png)
-
-<use img/reso_surf_libre.png>
-Package pdftex.def Info: img/reso_surf_libre.png used on input line 279.
+ <use img/reso_surf_libre.png>
+Package pdftex.def Info: img/reso_surf_libre.png used on input line 317.
 (pdftex.def)             Requested size: 135.36877pt x 105.2751pt.
- [12
 
-]
-<img/rayonnement.png, id=305, 766.7847pt x 145.2627pt>
+Overfull \vbox (27.86655pt too high) detected at line 317
+ []
+
+[12
+
+] <img/rayonnement.png, id=431, 766.7847pt x 145.2627pt>
 File: img/rayonnement.png Graphic file (type png)
 
 <use img/rayonnement.png>
-Package pdftex.def Info: img/rayonnement.png used on input line 279.
-(pdftex.def)             Requested size: 255.32126pt x 48.36958pt.
- [13
+Package pdftex.def Info: img/rayonnement.png used on input line 317.
+(pdftex.def)             Requested size: 300.37865pt x 56.9055pt.
+
+Overfull \vbox (2.4507pt too high) detected at line 317
+ []
+
+[13
 
  <./img/rayonnement.png>]
-<img/vp_true.png, id=325, 686.565pt x 370.38374pt>
+<img/vp_true.png, id=459, 686.565pt x 370.38374pt>
 File: img/vp_true.png Graphic file (type png)
  <use img/vp_true.png>
-Package pdftex.def Info: img/vp_true.png used on input line 296.
+Package pdftex.def Info: img/vp_true.png used on input line 346.
 (pdftex.def)             Requested size: 153.64493pt x 82.88626pt.
 
-<img/rho_true.png, id=326, 688.0104pt x 330.2739pt>
+<img/rho_true.png, id=460, 688.0104pt x 330.2739pt>
 File: img/rho_true.png Graphic file (type png)
  <use img/rho_true.png>
-Package pdftex.def Info: img/rho_true.png used on input line 296.
+Package pdftex.def Info: img/rho_true.png used on input line 346.
 (pdftex.def)             Requested size: 153.64493pt x 73.75406pt.
 
 [14
 
  <./img/vp_true.png> <./img/rho_true.png>]
-<img/vp_mono_uni/vp_uni.png, id=344, 685.1196pt x 330.63525pt>
+<img/vp_mono_uni/vp_uni.png, id=490, 685.1196pt x 330.63525pt>
 File: img/vp_mono_uni/vp_uni.png Graphic file (type png)
 
 <use img/vp_mono_uni/vp_uni.png>
-Package pdftex.def Info: img/vp_mono_uni/vp_uni.png used on input line 372.
+Package pdftex.def Info: img/vp_mono_uni/vp_uni.png used on input line 421.
 (pdftex.def)             Requested size: 107.55098pt x 51.89874pt.
 
-<img/vp_mono_smooth/vp_smooth.png, id=345, 684.75826pt x 330.2739pt>
+<img/vp_mono_smooth/vp_smooth.png, id=491, 684.75826pt x 330.2739pt>
 File: img/vp_mono_smooth/vp_smooth.png Graphic file (type png)
 
 <use img/vp_mono_smooth/vp_smooth.png>
-Package pdftex.def Info: img/vp_mono_smooth/vp_smooth.png used on input line 37
-2.
+Package pdftex.def Info: img/vp_mono_smooth/vp_smooth.png used on input line 42
+1.
 (pdftex.def)             Requested size: 107.55098pt x 51.87225pt.
 
-<img/vp_true_sans_acqui.png, id=346, 686.565pt x 323.0469pt>
+<img/vp_true_sans_acqui.png, id=492, 686.565pt x 323.0469pt>
 File: img/vp_true_sans_acqui.png Graphic file (type png)
 
 <use img/vp_true_sans_acqui.png>
-Package pdftex.def Info: img/vp_true_sans_acqui.png used on input line 372.
+Package pdftex.def Info: img/vp_true_sans_acqui.png used on input line 421.
 (pdftex.def)             Requested size: 107.55333pt x 50.60411pt.
 
-Overfull \vbox (12.13972pt too high) detected at line 372
+Overfull \vbox (12.13972pt too high) detected at line 421
  []
 
 [15
@@ -1299,34 +1347,34 @@ Overfull \vbox (12.13972pt too high) detected at line 372
 true_sans_acqui.png>]
 File: img/vp_mono_uni/vp_uni.png Graphic file (type png)
  <use img/vp_mono_uni/vp_uni.png>
-Package pdftex.def Info: img/vp_mono_uni/vp_uni.png used on input line 372.
+Package pdftex.def Info: img/vp_mono_uni/vp_uni.png used on input line 421.
 (pdftex.def)             Requested size: 107.55098pt x 51.89874pt.
 
-<img/vp_mono_uni/vp_450k.png, id=367, 684.75826pt x 330.2739pt>
+<img/vp_mono_uni/vp_450k.png, id=523, 684.75826pt x 330.2739pt>
 File: img/vp_mono_uni/vp_450k.png Graphic file (type png)
 
 <use img/vp_mono_uni/vp_450k.png>
-Package pdftex.def Info: img/vp_mono_uni/vp_450k.png used on input line 372.
+Package pdftex.def Info: img/vp_mono_uni/vp_450k.png used on input line 421.
 (pdftex.def)             Requested size: 107.55098pt x 51.87225pt.
 File: img/vp_mono_smooth/vp_smooth.png Graphic file (type png)
  <use img/vp_mono_smooth/vp_smooth.png>
-Package pdftex.def Info: img/vp_mono_smooth/vp_smooth.png used on input line 37
-2.
+Package pdftex.def Info: img/vp_mono_smooth/vp_smooth.png used on input line 42
+1.
 (pdftex.def)             Requested size: 107.55098pt x 51.87225pt.
 
-<img/vp_mono_smooth/vp_400k.png, id=368, 686.565pt x 330.2739pt>
+<img/vp_mono_smooth/vp_400k.png, id=524, 686.565pt x 330.2739pt>
 File: img/vp_mono_smooth/vp_400k.png Graphic file (type png)
 
 <use img/vp_mono_smooth/vp_400k.png>
-Package pdftex.def Info: img/vp_mono_smooth/vp_400k.png used on input line 372.
+Package pdftex.def Info: img/vp_mono_smooth/vp_400k.png used on input line 421.
 
 (pdftex.def)             Requested size: 107.55098pt x 51.73619pt.
 File: img/vp_true_sans_acqui.png Graphic file (type png)
  <use img/vp_true_sans_acqui.png>
-Package pdftex.def Info: img/vp_true_sans_acqui.png used on input line 372.
+Package pdftex.def Info: img/vp_true_sans_acqui.png used on input line 421.
 (pdftex.def)             Requested size: 107.55333pt x 50.60411pt.
 
-Overfull \vbox (13.416pt too high) detected at line 372
+Overfull \vbox (13.416pt too high) detected at line 421
  []
 
 [16
@@ -1335,34 +1383,34 @@ Overfull \vbox (13.416pt too high) detected at line 372
 File: img/vp_mono_uni/vp_uni.png Graphic file (type png)
 
 <use img/vp_mono_uni/vp_uni.png>
-Package pdftex.def Info: img/vp_mono_uni/vp_uni.png used on input line 372.
+Package pdftex.def Info: img/vp_mono_uni/vp_uni.png used on input line 421.
 (pdftex.def)             Requested size: 107.55098pt x 51.89874pt.
 
-<img/vp_mono_uni/vp_1000k.png, id=389, 684.75826pt x 330.2739pt>
+<img/vp_mono_uni/vp_1000k.png, id=554, 684.75826pt x 330.2739pt>
 File: img/vp_mono_uni/vp_1000k.png Graphic file (type png)
 
 <use img/vp_mono_uni/vp_1000k.png>
-Package pdftex.def Info: img/vp_mono_uni/vp_1000k.png used on input line 372.
+Package pdftex.def Info: img/vp_mono_uni/vp_1000k.png used on input line 421.
 (pdftex.def)             Requested size: 107.55098pt x 51.87225pt.
 File: img/vp_mono_smooth/vp_smooth.png Graphic file (type png)
  <use img/vp_mono_smooth/vp_smooth.png>
-Package pdftex.def Info: img/vp_mono_smooth/vp_smooth.png used on input line 37
-2.
+Package pdftex.def Info: img/vp_mono_smooth/vp_smooth.png used on input line 42
+1.
 (pdftex.def)             Requested size: 107.55098pt x 51.87225pt.
 
-<img/vp_mono_smooth/vp_900k.png, id=390, 684.75826pt x 330.2739pt>
+<img/vp_mono_smooth/vp_900k.png, id=555, 684.75826pt x 330.2739pt>
 File: img/vp_mono_smooth/vp_900k.png Graphic file (type png)
 
 <use img/vp_mono_smooth/vp_900k.png>
-Package pdftex.def Info: img/vp_mono_smooth/vp_900k.png used on input line 372.
+Package pdftex.def Info: img/vp_mono_smooth/vp_900k.png used on input line 421.
 
 (pdftex.def)             Requested size: 107.55098pt x 51.87225pt.
 File: img/vp_true_sans_acqui.png Graphic file (type png)
  <use img/vp_true_sans_acqui.png>
-Package pdftex.def Info: img/vp_true_sans_acqui.png used on input line 372.
+Package pdftex.def Info: img/vp_true_sans_acqui.png used on input line 421.
 (pdftex.def)             Requested size: 107.55333pt x 50.60411pt.
 
-Overfull \vbox (13.416pt too high) detected at line 372
+Overfull \vbox (13.416pt too high) detected at line 421
  []
 
 [17
@@ -1371,34 +1419,34 @@ Overfull \vbox (13.416pt too high) detected at line 372
 File: img/vp_mono_uni/vp_uni.png Graphic file (type png)
 
 <use img/vp_mono_uni/vp_uni.png>
-Package pdftex.def Info: img/vp_mono_uni/vp_uni.png used on input line 372.
+Package pdftex.def Info: img/vp_mono_uni/vp_uni.png used on input line 421.
 (pdftex.def)             Requested size: 107.55098pt x 51.89874pt.
 
-<img/vp_mono_uni/vp_1500k.png, id=410, 687.2877pt x 330.2739pt>
+<img/vp_mono_uni/vp_1500k.png, id=584, 687.2877pt x 330.2739pt>
 File: img/vp_mono_uni/vp_1500k.png Graphic file (type png)
 
 <use img/vp_mono_uni/vp_1500k.png>
-Package pdftex.def Info: img/vp_mono_uni/vp_1500k.png used on input line 372.
+Package pdftex.def Info: img/vp_mono_uni/vp_1500k.png used on input line 421.
 (pdftex.def)             Requested size: 107.55098pt x 51.68076pt.
 File: img/vp_mono_smooth/vp_smooth.png Graphic file (type png)
  <use img/vp_mono_smooth/vp_smooth.png>
-Package pdftex.def Info: img/vp_mono_smooth/vp_smooth.png used on input line 37
-2.
+Package pdftex.def Info: img/vp_mono_smooth/vp_smooth.png used on input line 42
+1.
 (pdftex.def)             Requested size: 107.55098pt x 51.87225pt.
 
-<img/vp_mono_smooth/vp_1300k.png, id=411, 683.6742pt x 330.2739pt>
+<img/vp_mono_smooth/vp_1300k.png, id=585, 683.6742pt x 330.2739pt>
 File: img/vp_mono_smooth/vp_1300k.png Graphic file (type png)
 
 <use img/vp_mono_smooth/vp_1300k.png>
-Package pdftex.def Info: img/vp_mono_smooth/vp_1300k.png used on input line 372
+Package pdftex.def Info: img/vp_mono_smooth/vp_1300k.png used on input line 421
 .
 (pdftex.def)             Requested size: 107.55098pt x 51.9529pt.
 File: img/vp_true_sans_acqui.png Graphic file (type png)
  <use img/vp_true_sans_acqui.png>
-Package pdftex.def Info: img/vp_true_sans_acqui.png used on input line 372.
+Package pdftex.def Info: img/vp_true_sans_acqui.png used on input line 421.
 (pdftex.def)             Requested size: 107.55333pt x 50.60411pt.
 
-Overfull \vbox (13.47015pt too high) detected at line 372
+Overfull \vbox (13.47015pt too high) detected at line 421
  []
 
 [18
@@ -1407,34 +1455,34 @@ Overfull \vbox (13.47015pt too high) detected at line 372
 File: img/vp_mono_uni/vp_uni.png Graphic file (type png)
 
 <use img/vp_mono_uni/vp_uni.png>
-Package pdftex.def Info: img/vp_mono_uni/vp_uni.png used on input line 372.
+Package pdftex.def Info: img/vp_mono_uni/vp_uni.png used on input line 421.
 (pdftex.def)             Requested size: 107.55098pt x 51.89874pt.
 
-<img/vp_mono_uni/vp_2250k.png, id=432, 685.48096pt x 330.2739pt>
+<img/vp_mono_uni/vp_2250k.png, id=614, 685.48096pt x 330.2739pt>
 File: img/vp_mono_uni/vp_2250k.png Graphic file (type png)
 
 <use img/vp_mono_uni/vp_2250k.png>
-Package pdftex.def Info: img/vp_mono_uni/vp_2250k.png used on input line 372.
+Package pdftex.def Info: img/vp_mono_uni/vp_2250k.png used on input line 421.
 (pdftex.def)             Requested size: 107.55098pt x 51.81682pt.
 File: img/vp_mono_smooth/vp_smooth.png Graphic file (type png)
  <use img/vp_mono_smooth/vp_smooth.png>
-Package pdftex.def Info: img/vp_mono_smooth/vp_smooth.png used on input line 37
-2.
+Package pdftex.def Info: img/vp_mono_smooth/vp_smooth.png used on input line 42
+1.
 (pdftex.def)             Requested size: 107.55098pt x 51.87225pt.
 
-<img/vp_mono_smooth/vp_1950k.png, id=433, 684.75826pt x 330.2739pt>
+<img/vp_mono_smooth/vp_1950k.png, id=615, 684.75826pt x 330.2739pt>
 File: img/vp_mono_smooth/vp_1950k.png Graphic file (type png)
 
 <use img/vp_mono_smooth/vp_1950k.png>
-Package pdftex.def Info: img/vp_mono_smooth/vp_1950k.png used on input line 372
+Package pdftex.def Info: img/vp_mono_smooth/vp_1950k.png used on input line 421
 .
 (pdftex.def)             Requested size: 107.55098pt x 51.87225pt.
 File: img/vp_true_sans_acqui.png Graphic file (type png)
  <use img/vp_true_sans_acqui.png>
-Package pdftex.def Info: img/vp_true_sans_acqui.png used on input line 372.
+Package pdftex.def Info: img/vp_true_sans_acqui.png used on input line 421.
 (pdftex.def)             Requested size: 107.55333pt x 50.60411pt.
 
-Overfull \vbox (13.38951pt too high) detected at line 372
+Overfull \vbox (13.38951pt too high) detected at line 421
  []
 
 [19
@@ -1443,68 +1491,68 @@ Overfull \vbox (13.38951pt too high) detected at line 372
 File: img/vp_mono_uni/vp_uni.png Graphic file (type png)
 
 <use img/vp_mono_uni/vp_uni.png>
-Package pdftex.def Info: img/vp_mono_uni/vp_uni.png used on input line 372.
+Package pdftex.def Info: img/vp_mono_uni/vp_uni.png used on input line 421.
 (pdftex.def)             Requested size: 107.55098pt x 51.89874pt.
 
-<img/vp_mono_uni/vp_3300k.png, id=454, 685.48096pt x 330.2739pt>
+<img/vp_mono_uni/vp_3300k.png, id=646, 685.48096pt x 330.2739pt>
 File: img/vp_mono_uni/vp_3300k.png Graphic file (type png)
 
 <use img/vp_mono_uni/vp_3300k.png>
-Package pdftex.def Info: img/vp_mono_uni/vp_3300k.png used on input line 372.
+Package pdftex.def Info: img/vp_mono_uni/vp_3300k.png used on input line 421.
 (pdftex.def)             Requested size: 107.55098pt x 51.81682pt.
 File: img/vp_mono_smooth/vp_smooth.png Graphic file (type png)
  <use img/vp_mono_smooth/vp_smooth.png>
-Package pdftex.def Info: img/vp_mono_smooth/vp_smooth.png used on input line 37
-2.
+Package pdftex.def Info: img/vp_mono_smooth/vp_smooth.png used on input line 42
+1.
 (pdftex.def)             Requested size: 107.55098pt x 51.87225pt.
 
-<img/vp_mono_smooth/vp_2900k.png, id=455, 683.6742pt x 330.2739pt>
+<img/vp_mono_smooth/vp_2900k.png, id=647, 683.6742pt x 330.2739pt>
 File: img/vp_mono_smooth/vp_2900k.png Graphic file (type png)
 
 <use img/vp_mono_smooth/vp_2900k.png>
-Package pdftex.def Info: img/vp_mono_smooth/vp_2900k.png used on input line 372
+Package pdftex.def Info: img/vp_mono_smooth/vp_2900k.png used on input line 421
 .
 (pdftex.def)             Requested size: 107.55098pt x 51.9529pt.
 File: img/vp_true_sans_acqui.png Graphic file (type png)
  <use img/vp_true_sans_acqui.png>
-Package pdftex.def Info: img/vp_true_sans_acqui.png used on input line 372.
+Package pdftex.def Info: img/vp_true_sans_acqui.png used on input line 421.
 (pdftex.def)             Requested size: 107.55333pt x 50.60411pt.
 
-Overfull \vbox (13.47015pt too high) detected at line 372
+Overfull \vbox (13.47015pt too high) detected at line 421
  []
 
 [20
 
  <./img/vp_mono_uni/vp_3300k.png> <./img/vp_mono_smooth/vp_2900k.png>]
-<img/rho_mono/data_rho_uni.png, id=474, 443.0151pt x 585.387pt>
+<img/rho_mono/data_rho_uni.png, id=675, 443.0151pt x 585.387pt>
 File: img/rho_mono/data_rho_uni.png Graphic file (type png)
 
 <use img/rho_mono/data_rho_uni.png>
-Package pdftex.def Info: img/rho_mono/data_rho_uni.png used on input line 408.
+Package pdftex.def Info: img/rho_mono/data_rho_uni.png used on input line 458.
 (pdftex.def)             Requested size: 85.35826pt x 112.78783pt.
 
-<img/rho_mono/data_rho_vrai.png, id=475, 449.5194pt x 585.387pt>
+<img/rho_mono/data_rho_vrai.png, id=676, 449.5194pt x 585.387pt>
 File: img/rho_mono/data_rho_vrai.png Graphic file (type png)
 
 <use img/rho_mono/data_rho_vrai.png>
-Package pdftex.def Info: img/rho_mono/data_rho_vrai.png used on input line 408.
+Package pdftex.def Info: img/rho_mono/data_rho_vrai.png used on input line 458.
 
 (pdftex.def)             Requested size: 85.35826pt x 111.15321pt.
 File: img/vp_mono_smooth/vp_smooth.png Graphic file (type png)
  <use img/vp_mono_smooth/vp_smooth.png>
-Package pdftex.def Info: img/vp_mono_smooth/vp_smooth.png used on input line 40
+Package pdftex.def Info: img/vp_mono_smooth/vp_smooth.png used on input line 45
 8.
 (pdftex.def)             Requested size: 107.55333pt x 51.87225pt.
 
-<img/rho_mono/rho_mono.png, id=476, 686.20364pt x 330.2739pt>
+<img/rho_mono/rho_mono.png, id=677, 686.20364pt x 330.2739pt>
 File: img/rho_mono/rho_mono.png Graphic file (type png)
 
 <use img/rho_mono/rho_mono.png>
-Package pdftex.def Info: img/rho_mono/rho_mono.png used on input line 408.
+Package pdftex.def Info: img/rho_mono/rho_mono.png used on input line 458.
 (pdftex.def)             Requested size: 107.55333pt x 51.76642pt.
 File: img/rho_true.png Graphic file (type png)
  <use img/rho_true.png>
-Package pdftex.def Info: img/rho_true.png used on input line 408.
+Package pdftex.def Info: img/rho_true.png used on input line 458.
 (pdftex.def)             Requested size: 107.55333pt x 51.62532pt.
  [21
 
@@ -1512,104 +1560,222 @@ Package pdftex.def Info: img/rho_true.png used on input line 408.
 o_mono/rho_mono.png>]
 File: img/vp_mono_smooth/vp_smooth.png Graphic file (type png)
 <use img/vp_mono_smooth/vp_smooth.png>
-Package pdftex.def Info: img/vp_mono_smooth/vp_smooth.png used on input line 43
+Package pdftex.def Info: img/vp_mono_smooth/vp_smooth.png used on input line 48
 9.
 (pdftex.def)             Requested size: 107.55333pt x 51.87225pt.
 
-<img/multi/vp_multi_6000k.png, id=497, 688.37175pt x 330.2739pt>
+<img/multi/vp_multi_6000k.png, id=708, 688.37175pt x 330.2739pt>
 File: img/multi/vp_multi_6000k.png Graphic file (type png)
 
 <use img/multi/vp_multi_6000k.png>
-Package pdftex.def Info: img/multi/vp_multi_6000k.png used on input line 439.
+Package pdftex.def Info: img/multi/vp_multi_6000k.png used on input line 489.
 (pdftex.def)             Requested size: 107.55098pt x 51.60011pt.
 File: img/vp_true.png Graphic file (type png)
  <use img/vp_true.png>
-Package pdftex.def Info: img/vp_true.png used on input line 439.
+Package pdftex.def Info: img/vp_true.png used on input line 489.
 (pdftex.def)             Requested size: 107.55098pt x 58.01926pt.
 
-<img/multi/rho_6000k.png, id=498, 691.6239pt x 330.2739pt>
+<img/multi/rho_6000k.png, id=709, 691.6239pt x 330.2739pt>
 File: img/multi/rho_6000k.png Graphic file (type png)
 
 <use img/multi/rho_6000k.png>
-Package pdftex.def Info: img/multi/rho_6000k.png used on input line 439.
+Package pdftex.def Info: img/multi/rho_6000k.png used on input line 489.
 (pdftex.def)             Requested size: 107.55098pt x 51.35822pt.
 File: img/rho_true.png Graphic file (type png)
  <use img/rho_true.png>
-Package pdftex.def Info: img/rho_true.png used on input line 439.
+Package pdftex.def Info: img/rho_true.png used on input line 489.
 (pdftex.def)             Requested size: 107.55098pt x 51.62532pt.
  [22
 
  <./img/multi/vp_multi_6000k.png> <./img/multi/rho_6000k.png>]
-<img/multi/coupe_vp_mono_smooth_hor.png, id=517, 427.47705pt x 318.34935pt>
+<img/multi/coupe_vp_mono_smooth_hor.png, id=737, 427.47705pt x 318.34935pt>
 File: img/multi/coupe_vp_mono_smooth_hor.png Graphic file (type png)
 
 <use img/multi/coupe_vp_mono_smooth_hor.png>
 Package pdftex.def Info: img/multi/coupe_vp_mono_smooth_hor.png used on input l
-ine 467.
+ine 518.
 (pdftex.def)             Requested size: 107.55098pt x 80.09233pt.
 
-<img/multi/coupe_rho_mono.png, id=518, 429.64516pt x 318.34935pt>
+<img/multi/coupe_rho_mono.png, id=738, 429.64516pt x 318.34935pt>
 File: img/multi/coupe_rho_mono.png Graphic file (type png)
 
 <use img/multi/coupe_rho_mono.png>
-Package pdftex.def Info: img/multi/coupe_rho_mono.png used on input line 467.
+Package pdftex.def Info: img/multi/coupe_rho_mono.png used on input line 518.
 (pdftex.def)             Requested size: 107.55098pt x 79.68915pt.
 
-<img/multi/coupe_vp_multi.png, id=519, 423.5022pt x 319.07205pt>
+<img/multi/coupe_vp_multi.png, id=739, 423.5022pt x 319.07205pt>
 File: img/multi/coupe_vp_multi.png Graphic file (type png)
 
 <use img/multi/coupe_vp_multi.png>
-Package pdftex.def Info: img/multi/coupe_vp_multi.png used on input line 467.
+Package pdftex.def Info: img/multi/coupe_vp_multi.png used on input line 518.
 (pdftex.def)             Requested size: 107.55098pt x 81.02878pt.
 
-<img/multi/coupe_rho_multi.png, id=520, 426.03165pt x 318.34935pt>
+<img/multi/coupe_rho_multi.png, id=740, 426.03165pt x 318.34935pt>
 File: img/multi/coupe_rho_multi.png Graphic file (type png)
 
 <use img/multi/coupe_rho_multi.png>
-Package pdftex.def Info: img/multi/coupe_rho_multi.png used on input line 467.
+Package pdftex.def Info: img/multi/coupe_rho_multi.png used on input line 518.
 (pdftex.def)             Requested size: 107.55098pt x 80.36435pt.
  [23
 
  <./img/multi/coupe_vp_mono_smooth_hor.png> <./img/multi/coupe_rho_mono.png> <.
 /img/multi/coupe_vp_multi.png> <./img/multi/coupe_rho_multi.png>]
-<img/anisotrope/epsilon_true.png, id=540, 675.36314pt x 402.5439pt>
-File: img/anisotrope/epsilon_true.png Graphic file (type png)
-
-<use img/anisotrope/epsilon_true.png>
-Package pdftex.def Info: img/anisotrope/epsilon_true.png used on input line 493
-.
-(pdftex.def)             Requested size: 122.9164pt x 73.25941pt.
-
-<img/anisotrope/e20.png, id=541, 547.0839pt x 628.0263pt>
+<img/anisotrope/e20.png, id=771, 547.0839pt x 628.0263pt>
 File: img/anisotrope/e20.png Graphic file (type png)
 
 <use img/anisotrope/e20.png>
-Package pdftex.def Info: img/anisotrope/e20.png used on input line 493.
+Package pdftex.def Info: img/anisotrope/e20.png used on input line 556.
 (pdftex.def)             Requested size: 99.13867pt x 113.81102pt.
 
-<img/anisotrope/epsilon_final.png, id=542, 682.59015pt x 330.2739pt>
-File: img/anisotrope/epsilon_final.png Graphic file (type png)
-
-<use img/anisotrope/epsilon_final.png>
-Package pdftex.def Info: img/anisotrope/epsilon_final.png used on input line 49
-3.
-(pdftex.def)             Requested size: 122.9164pt x 59.47192pt.
-
-<img/anisotrope/residu_init.png, id=543, 499.02435pt x 628.749pt>
+<img/anisotrope/residu_init.png, id=772, 499.02435pt x 628.749pt>
 File: img/anisotrope/residu_init.png Graphic file (type png)
 
 <use img/anisotrope/residu_init.png>
-Package pdftex.def Info: img/anisotrope/residu_init.png used on input line 493.
+Package pdftex.def Info: img/anisotrope/residu_init.png used on input line 556.
 
 (pdftex.def)             Requested size: 90.32306pt x 113.81102pt.
+
+<img/anisotrope/epsilon_true.png, id=773, 675.36314pt x 402.5439pt>
+File: img/anisotrope/epsilon_true.png Graphic file (type png)
+
+<use img/anisotrope/epsilon_true.png>
+Package pdftex.def Info: img/anisotrope/epsilon_true.png used on input line 556
+.
+(pdftex.def)             Requested size: 122.9164pt x 73.25941pt.
+
+<img/anisotrope/epsilon_final.png, id=774, 682.59015pt x 330.2739pt>
+File: img/anisotrope/epsilon_final.png Graphic file (type png)
+
+<use img/anisotrope/epsilon_final.png>
+Package pdftex.def Info: img/anisotrope/epsilon_final.png used on input line 55
+6.
+(pdftex.def)             Requested size: 122.9164pt x 59.47192pt.
  [24
 
- <./img/anisotrope/epsilon_true.png> <./img/anisotrope/e20.png> <./img/anisotro
-pe/epsilon_final.png> <./img/anisotrope/residu_init.png>] [25
+ <./img/anisotrope/e20.png> <./img/anisotrope/residu_init.png> <./img/anisotrop
+e/epsilon_true.png> <./img/anisotrope/epsilon_final.png>] <img/ogilvy_model.png
+, id=805, 251.13824pt x 256.5585pt>
+File: img/ogilvy_model.png Graphic file (type png)
 
-] (./pres12VII_alice.bbl) [26
+<use img/ogilvy_model.png>
+Package pdftex.def Info: img/ogilvy_model.png used on input line 605.
+(pdftex.def)             Requested size: 55.70276pt x 56.9055pt.
 
-] [27
+<img/ogilvy_ray1.png, id=806, 251.4996pt x 129.00195pt>
+File: img/ogilvy_ray1.png Graphic file (type png)
+
+<use img/ogilvy_ray1.png>
+Package pdftex.def Info: img/ogilvy_ray1.png used on input line 605.
+(pdftex.def)             Requested size: 110.94029pt x 56.9055pt.
+
+<img/ogilvy_ray2.png, id=807, 247.8861pt x 126.83385pt>
+File: img/ogilvy_ray2.png Graphic file (type png)
+
+<use img/ogilvy_ray2.png>
+Package pdftex.def Info: img/ogilvy_ray2.png used on input line 605.
+(pdftex.def)             Requested size: 111.21484pt x 56.9055pt.
+
+Overfull \hbox (7.05318pt too wide) in paragraph at lines 605--605
+ [][][] 
+ []
+
+[25
+
+ <./img/ogilvy_model.png> <./img/ogilvy_ray1.png> <./img/ogilvy_ray2.png>]
+File: img/ogilvy_model.png Graphic file (type png)
+
+<use img/ogilvy_model.png>
+Package pdftex.def Info: img/ogilvy_model.png used on input line 605.
+(pdftex.def)             Requested size: 55.70276pt x 56.9055pt.
+File: img/ogilvy_ray1.png Graphic file (type png)
+ <use img/ogilvy_ray1.png>
+Package pdftex.def Info: img/ogilvy_ray1.png used on input line 605.
+(pdftex.def)             Requested size: 110.94029pt x 56.9055pt.
+File: img/ogilvy_ray2.png Graphic file (type png)
+ <use img/ogilvy_ray2.png>
+Package pdftex.def Info: img/ogilvy_ray2.png used on input line 605.
+(pdftex.def)             Requested size: 111.21484pt x 56.9055pt.
+
+Overfull \hbox (7.05318pt too wide) in paragraph at lines 605--605
+ [][][] 
+ []
+
+[26
+
+]
+File: img/ogilvy_model.png Graphic file (type png)
+ <use img/ogilvy_model.png>
+Package pdftex.def Info: img/ogilvy_model.png used on input line 605.
+(pdftex.def)             Requested size: 55.70276pt x 56.9055pt.
+File: img/ogilvy_ray1.png Graphic file (type png)
+ <use img/ogilvy_ray1.png>
+Package pdftex.def Info: img/ogilvy_ray1.png used on input line 605.
+(pdftex.def)             Requested size: 110.94029pt x 56.9055pt.
+File: img/ogilvy_ray2.png Graphic file (type png)
+
+<use img/ogilvy_ray2.png>
+Package pdftex.def Info: img/ogilvy_ray2.png used on input line 605.
+(pdftex.def)             Requested size: 111.21484pt x 56.9055pt.
+
+Overfull \hbox (7.05318pt too wide) in paragraph at lines 605--605
+ [][][] 
+ []
+
+[27
+
+]
+File: img/ogilvy_model.png Graphic file (type png)
+ <use img/ogilvy_model.png>
+Package pdftex.def Info: img/ogilvy_model.png used on input line 605.
+(pdftex.def)             Requested size: 55.70276pt x 56.9055pt.
+File: img/ogilvy_ray1.png Graphic file (type png)
+ <use img/ogilvy_ray1.png>
+Package pdftex.def Info: img/ogilvy_ray1.png used on input line 605.
+(pdftex.def)             Requested size: 110.94029pt x 56.9055pt.
+File: img/ogilvy_ray2.png Graphic file (type png)
+
+<use img/ogilvy_ray2.png>
+Package pdftex.def Info: img/ogilvy_ray2.png used on input line 605.
+(pdftex.def)             Requested size: 111.21484pt x 56.9055pt.
+
+Overfull \hbox (7.05318pt too wide) in paragraph at lines 605--605
+ [][][] 
+ []
+
+<img/linear_array.png, id=895, 156.8259pt x 130.086pt>
+File: img/linear_array.png Graphic file (type png)
+
+<use img/linear_array.png>
+Package pdftex.def Info: img/linear_array.png used on input line 605.
+(pdftex.def)             Requested size: 71.13188pt x 59.00461pt.
+ [28
+
+ <./img/linear_array.png>]
+File: img/ogilvy_model.png Graphic file (type png)
+
+<use img/ogilvy_model.png>
+Package pdftex.def Info: img/ogilvy_model.png used on input line 605.
+(pdftex.def)             Requested size: 55.70276pt x 56.9055pt.
+File: img/ogilvy_ray1.png Graphic file (type png)
+ <use img/ogilvy_ray1.png>
+Package pdftex.def Info: img/ogilvy_ray1.png used on input line 605.
+(pdftex.def)             Requested size: 110.94029pt x 56.9055pt.
+File: img/ogilvy_ray2.png Graphic file (type png)
+ <use img/ogilvy_ray2.png>
+Package pdftex.def Info: img/ogilvy_ray2.png used on input line 605.
+(pdftex.def)             Requested size: 111.21484pt x 56.9055pt.
+
+Overfull \hbox (7.05318pt too wide) in paragraph at lines 605--605
+ [][][] 
+ []
+
+File: img/linear_array.png Graphic file (type png)
+<use img/linear_array.png>
+Package pdftex.def Info: img/linear_array.png used on input line 605.
+(pdftex.def)             Requested size: 71.13188pt x 59.00461pt.
+ [29
+
+] [30
 
 ]
 \tf@nav=\write6
@@ -1621,29 +1787,29 @@ pe/epsilon_final.png> <./img/anisotrope/residu_init.png>] [25
 \tf@snm=\write8
 \openout8 = `pres12VII_alice.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 535.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 535.
-
-(./pres12VII_alice.aux (./img/schema_fwi.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 535.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 535.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 624.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 624.
+ (./pres12VII_alice.aux
+(./img/schema_fwi.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 624.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 624.
 Package rerunfilecheck Info: File `pres12VII_alice.out' has not changed.
-(rerunfilecheck)             Checksum: 55FD54FBF4692FBF7BFF3441C4C59B6D;472.
+(rerunfilecheck)             Checksum: 07800D423BDBC731C99382D60239A07F;487.
 
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 535.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 624.
  ) 
 Here is how much of TeX's memory you used:
- 22313 strings out of 493304
- 408498 string characters out of 6139872
- 524365 words of memory out of 5000000
- 25091 multiletter control sequences out of 15000+600000
- 20044 words of font info for 72 fonts, out of 8000000 for 9000
+ 23306 strings out of 493304
+ 427003 string characters out of 6139872
+ 546105 words of memory out of 5000000
+ 26061 multiletter control sequences out of 15000+600000
+ 19744 words of font info for 71 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 50i,19n,57p,404b,899s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 59i,19n,94p,404b,899s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/tex
@@ -1653,29 +1819,26 @@ st/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/font
 s/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1
 /public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cmextra/cmmib6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cmextra/cmmib7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/cmextra/cmmib9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-r5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmssi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cms
-y7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam5.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on pres12VII_alice.pdf (27 pages, 4108536 bytes).
+onts/cmextra/cmmib7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmssi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+msy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msa
+m5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
+Output written on pres12VII_alice.pdf (30 pages, 5300241 bytes).
 PDF statistics:
- 731 PDF objects out of 1000 (max. 8388607)
- 579 compressed objects within 6 object streams
- 64 named destinations out of 1000 (max. 500000)
- 287 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1078 PDF objects out of 1200 (max. 8388607)
+ 903 compressed objects within 10 object streams
+ 80 named destinations out of 1000 (max. 500000)
+ 317 words of extra memory for PDF output out of 10000 (max. 10000000)
 
