@@ -159,7 +159,7 @@
 			\column{.9\textwidth}<2->
 			%\vfill
 			\hspace{-1cm}
-			\textcolor{red}{Forte anisotropie}\\
+			\textcolor{red}{Forte anisotropie imprévisible}\\
 			$\hookrightarrow$ déviation et division du faisceau ultrasonore\\[0.2cm]
 			\hspace{-0.5cm}
 			\includegraphics[scale=0.5]{img/gardahaut.png}\\
@@ -204,23 +204,28 @@
 \subsection*{}
 \begin{frame}{La Full Waveform Inversion}
 	\begin{itemize}
-		\item Estimation des paramètres acoustiques ou élastiques\\ $~~~~~~\hookrightarrow$ optimisation locale
 		\item Développée pour la géophysique
-		\item Utilise la totalité du champ d'onde (toutes les arrivées et amplitudes)
+		\item Estimation des paramètres acoustiques ou élastiques\\ $~~~~~~\hookrightarrow$ optimisation locale
 	\end{itemize}
-
-\end{frame}
-
-\subsection*{}
-\begin{frame}{\insertsectionhead}
-	\vspace{-0.5cm}
+	\vspace{1cm}
 	\begin{figure}
 		\centering
-		\include{img/schema_fwi}
-	\end{figure}		
+		\includegraphics[height=2cm]{img/schema_fwi2.png}
+	\end{figure}
 	
 
 \end{frame}
+
+%\subsection*{}
+%\begin{frame}{\insertsectionhead}
+%	\vspace{-0.5cm}
+%	\begin{figure}
+%		\centering
+%		\include{img/schema_fwi}
+%	\end{figure}
+%\end{frame}
+
+
 \section{Résolution de la FWI}
 \subsection*{}
 \begin{frame}{\insertsectionhead}
@@ -345,151 +350,213 @@
 
 \end{frame}
 
-\subsection{Inversion monoparamètre}
-\begin{frame}{\insertsectionhead~-- Vitesse}
+%\subsection{Inversion monoparamètre}
+%\begin{frame}{\insertsectionhead~-- Vitesse}
+%\begin{small}
+%\centering
+%	\begin{adjustwidth}{-2em}{-2.5em}
+%	%\centering{Reconstruction de la vitesse}
+%	\begin{columns}
+%		\column{0.5\textwidth}
+%		\centering
+%		\vspace{0.1cm}\\	
+%		Modèle initial de vitesse : \\[0.2cm]
+%		\includegraphics[width=0.7\textwidth]{img/vp_mono_uni/vp_uni.png}\\
+%			\only<2->{\vspace{0.3cm}  Vitesse Reconstruite :\\[0.2cm]}
+%			\only<1-1>{\vspace{2.7cm}}
+%			\only<2-2>{
+%				\includegraphics[width=0.7\textwidth]{img/vp_mono_uni/vp_450k.png}\\		
+%			}
+%		
+%			\only<3-3>{
+%				\includegraphics[width=0.7\textwidth]{img/vp_mono_uni/vp_1000k.png}\\		
+%			}
+%			\only<4-4>{
+%				\includegraphics[width=0.7\textwidth]{img/vp_mono_uni/vp_1500k.png}\\		
+%			}
+%			\only<5-5>{
+%				\includegraphics[width=0.7\textwidth]{img/vp_mono_uni/vp_2250k.png}\\		
+%			}
+%			\only<6->{
+%				\includegraphics[width=0.7\textwidth]{img/vp_mono_uni/vp_3300k.png}\\		
+%			}
+%		
+%
+%		\column{0.5\textwidth}
+%		\centering
+%		\vspace{0.1cm}\\
+%		Modèle initial de vitesse :\\[0.2cm]
+%		\includegraphics[width=0.7\textwidth]{img/vp_mono_smooth/vp_smooth.png}\\
+%		\only<2->{\vspace{0.3cm} Vitesse Reconstruite :\\[0.2cm]}
+%		\only<1-1>{\vspace{2.7cm}}
+%		\only<2-2>{
+%			\includegraphics[width=0.7\textwidth]{img/vp_mono_smooth/vp_400k.png}\\		
+%		}
+%		\only<3-3>{
+%			\includegraphics[width=0.7\textwidth]{img/vp_mono_smooth/vp_900k.png}\\		
+%		}
+%		\only<4-4>{
+%			\includegraphics[width=0.7\textwidth]{img/vp_mono_smooth/vp_1300k.png}\\		
+%		}
+%		\only<5-5>{
+%			\includegraphics[width=0.7\textwidth]{img/vp_mono_smooth/vp_1950k.png}\\		
+%		}
+%		\only<6->{
+%			\includegraphics[width=0.7\textwidth]{img/vp_mono_smooth/vp_2900k.png}\\		
+%		}
+%		
+%		
+%	\end{columns}
+%	\end{adjustwidth}
+%	%\vspace{0.3cm} 
+%	Vitesse vraie :
+%	\begin{figure}
+%		\centering
+%		\includegraphics[width=0.35\textwidth]{img/vp_true_sans_acqui.png}\\
+%	\end{figure}
+%	
+%	\begin{picture}(0,0)(0,0)\put(127,120){
+%		\only<2-2>{f$\approx$ 400 kHz}
+%		\only<3-3>{f$\approx$ 1 MHz~}
+%		\only<4-4>{\hspace{-0.1cm}f$\approx$ 1,4 MHz~~}
+%		\only<5-5>{\hspace{-0.2cm}f$\approx$ 2 MHz~~~}
+%		\only<6-6>{\hspace{-0.2cm}f$\approx$ 3 MHz}
+%	}\end{picture}
+%\end{small}
+%\end{frame}
+
+%\subsection*{}
+%\begin{frame}{\insertsectionhead~-- Densité}
+%\begin{footnotesize}
+%
+%		\centering
+%		\begin{columns}
+%			\column{0.5\textwidth}
+%			\raggedleft
+%			\includegraphics[width=3cm]{img/rho_mono/data_rho_uni.png}\\
+%			Signaux issus de $\rho$ homogène\hspace{-0.5cm}
+%			\column{0.5\textwidth}
+%			\raggedright
+%			\includegraphics[width=3cm]{img/rho_mono/data_rho_vrai.png}\\
+%			~~~Signaux issus de $\rho$ vraie
+%		\end{columns}		
+%		\vfill
+%		
+%		\begin{columns}
+%			\column{0.35\textwidth}	
+%			\centering
+%			Modèle initial de vitesse : \\[0.2cm]
+%			\includegraphics[width=\textwidth]{img/vp_mono_smooth/vp_smooth.png}\\
+%			
+%			\column{0.35\textwidth}
+%			\centering
+%			Masse volumique reconstruite :  \\[0.2cm]
+%			\includegraphics[width=\textwidth]{img/rho_mono/rho_mono.png}\\
+%	
+%			\column{0.35\textwidth}
+%			\centering
+%			Masse volumique vraie : \\[0.2cm]
+%			\includegraphics[width=\textwidth]{img/rho_true.png}
+%		\end{columns}
+%
+%\end{footnotesize}		
+%\end{frame}
+
+
+%\subsection{Inversion multiparamètre}
+%\begin{frame}{\insertsectionhead~ -- Multiparamètre}
+%\begin{small}
+%	\centering
+%	Vitesse initiale :
+%	\begin{figure}
+%		\centering
+%		\includegraphics[width=0.35\textwidth]{img/vp_mono_smooth/vp_smooth.png}\\
+%	\end{figure}
+%	
+%	\begin{columns}
+%		\column{0.5\textwidth}
+%		\centering
+%		Vitesse reconstruite :\\[0.2cm]
+%		\includegraphics[width=0.7\textwidth]{img/multi/vp_multi_6000k.png}	\\
+%		
+%		Vitesse vraie : \\[0.2cm]
+%		\includegraphics[width=0.7\textwidth]{img/vp_true.png}
+%		\column{0.5\textwidth}
+%		\centering
+%		Masse volumique reconstruite :\\[0.2cm]
+%		\includegraphics[width=0.7\textwidth]{img/multi/rho_6000k.png}\\	
+%		
+%		Masse volumique vraie : \\[0.2cm]
+%		\includegraphics[width=0.7\textwidth]{img/rho_true.png}
+%	\end{columns}	
+%	
+%\end{small}
+%\end{frame}
+
+
+%\subsection{}
+\begin{frame}{\insertsectionhead}
 \begin{small}
-\centering
-	\begin{adjustwidth}{-2em}{-2.5em}
-	%\centering{Reconstruction de la vitesse}
-	\begin{columns}
-		\column{0.5\textwidth}
-		\centering
-		\vspace{0.1cm}\\	
-		Modèle initial de vitesse : \\[0.2cm]
-		\includegraphics[width=0.7\textwidth]{img/vp_mono_uni/vp_uni.png}\\
-			\only<2->{\vspace{0.3cm}  Vitesse Reconstruite :\\[0.2cm]}
-			\only<1-1>{\vspace{2.7cm}}
-			\only<2-2>{
-				\includegraphics[width=0.7\textwidth]{img/vp_mono_uni/vp_450k.png}\\		
-			}
-		
-			\only<3-3>{
-				\includegraphics[width=0.7\textwidth]{img/vp_mono_uni/vp_1000k.png}\\		
-			}
-			\only<4-4>{
-				\includegraphics[width=0.7\textwidth]{img/vp_mono_uni/vp_1500k.png}\\		
-			}
-			\only<5-5>{
-				\includegraphics[width=0.7\textwidth]{img/vp_mono_uni/vp_2250k.png}\\		
-			}
-			\only<6->{
-				\includegraphics[width=0.7\textwidth]{img/vp_mono_uni/vp_3300k.png}\\		
-			}
-		
-
-		\column{0.5\textwidth}
-		\centering
-		\vspace{0.1cm}\\
-		Modèle initial de vitesse :\\[0.2cm]
-		\includegraphics[width=0.7\textwidth]{img/vp_mono_smooth/vp_smooth.png}\\
-		\only<2->{\vspace{0.3cm} Vitesse Reconstruite :\\[0.2cm]}
-		\only<1-1>{\vspace{2.7cm}}
-		\only<2-2>{
-			\includegraphics[width=0.7\textwidth]{img/vp_mono_smooth/vp_400k.png}\\		
-		}
-		\only<3-3>{
-			\includegraphics[width=0.7\textwidth]{img/vp_mono_smooth/vp_900k.png}\\		
-		}
-		\only<4-4>{
-			\includegraphics[width=0.7\textwidth]{img/vp_mono_smooth/vp_1300k.png}\\		
-		}
-		\only<5-5>{
-			\includegraphics[width=0.7\textwidth]{img/vp_mono_smooth/vp_1950k.png}\\		
-		}
-		\only<6->{
-			\includegraphics[width=0.7\textwidth]{img/vp_mono_smooth/vp_2900k.png}\\		
-		}
-		
-		
-	\end{columns}
-	\end{adjustwidth}
-	%\vspace{0.3cm} 
-	Vitesse vraie :
-	\begin{figure}
-		\centering
-		\includegraphics[width=0.35\textwidth]{img/vp_true_sans_acqui.png}\\
-	\end{figure}
-	
-	\begin{picture}(0,0)(0,0)\put(127,120){
-		\only<2-2>{f$\approx$ 400 kHz}
-		\only<3-3>{f$\approx$ 1 MHz~}
-		\only<4-4>{\hspace{-0.1cm}f$\approx$ 1,4 MHz~~}
-		\only<5-5>{\hspace{-0.2cm}f$\approx$ 2 MHz~~~}
-		\only<6-6>{\hspace{-0.2cm}f$\approx$ 3 MHz}
-	}\end{picture}
-\end{small}
-\end{frame}
-
-\subsection*{}
-\begin{frame}{\insertsectionhead~-- Densité}
-\begin{footnotesize}
-
-		\centering
+	\begin{itemize}
+		\item<1-> Modèles initiaux : \\[-0.2cm]
 		\begin{columns}
 			\column{0.5\textwidth}
-			\raggedleft
-			\includegraphics[width=3cm]{img/rho_mono/data_rho_uni.png}\\
-			Signaux issus de $\rho$ homogène\hspace{-0.5cm}
+			\begin{figure}				
+				\centering{
+				\includegraphics[height=1.7cm]{img/vp_mono_smooth/vp_smooth.png}\\
+				\footnotesize{Vitesse}
+				}
+			\end{figure}
 			\column{0.5\textwidth}
-			\raggedright
-			\includegraphics[width=3cm]{img/rho_mono/data_rho_vrai.png}\\
-			~~~Signaux issus de $\rho$ vraie
-		\end{columns}		
-		\vfill
-		
-		\begin{columns}
-			\column{0.35\textwidth}	
-			\centering
-			Modèle initial de vitesse : \\[0.2cm]
-			\includegraphics[width=\textwidth]{img/vp_mono_smooth/vp_smooth.png}\\
-			
-			\column{0.35\textwidth}
-			\centering
-			Masse volumique reconstruite :  \\[0.2cm]
-			\includegraphics[width=\textwidth]{img/rho_mono/rho_mono.png}\\
-	
-			\column{0.35\textwidth}
-			\centering
-			Masse volumique vraie : \\[0.2cm]
-			\includegraphics[width=\textwidth]{img/rho_true.png}
+			\begin{figure}				
+				\centering{
+				\includegraphics[height=1.7cm]{img/vp_mono_smooth/rho_init.png}\\
+				\footnotesize{Masse volumique}
+				}
+			\end{figure}
 		\end{columns}
-
-\end{footnotesize}		
-\end{frame}
-
-
-\subsection{Inversion multiparamètre}
-\begin{frame}{\insertsectionhead~ -- Multiparamètre}
-\begin{small}
-	\centering
-	Vitesse initiale :
-	\begin{figure}
-		\centering
-		\includegraphics[width=0.35\textwidth]{img/vp_mono_smooth/vp_smooth.png}\\
-	\end{figure}
-	
-	\begin{columns}
-		\column{0.5\textwidth}
-		\centering
-		Vitesse reconstruite :\\[0.2cm]
-		\includegraphics[width=0.7\textwidth]{img/multi/vp_multi_6000k.png}	\\
-		
-		Vitesse vraie : \\[0.2cm]
-		\includegraphics[width=0.7\textwidth]{img/vp_true.png}
-		\column{0.5\textwidth}
-		\centering
-		Masse volumique reconstruite :\\[0.2cm]
-		\includegraphics[width=0.7\textwidth]{img/multi/rho_6000k.png}\\	
-		
-		Masse volumique vraie : \\[0.2cm]
-		\includegraphics[width=0.7\textwidth]{img/rho_true.png}
-	\end{columns}	
-	
+		\item<2-> Inversions monoparamètres : \\[-0.2cm]
+		\begin{columns}
+			\column{0.5\textwidth}
+			\begin{figure}				
+				\centering{
+				\includegraphics[height=1.7cm]{img/vp_mono_smooth/vp_2900k.png}\\
+				\footnotesize{Vitesse}
+				}
+			\end{figure}
+			\column{0.5\textwidth}
+			\begin{figure}				
+				\centering{
+				\includegraphics[height=1.7cm]{img/rho_mono/rho_mono.png}\\
+				\footnotesize{Masse volumique}
+				}
+			\end{figure}
+		\end{columns}
+		\item<3-> Inversion multiparamètre : \\[-0.2cm]
+		\begin{columns}
+			\column{0.5\textwidth}
+			\begin{figure}				
+				\centering{
+				\includegraphics[height=1.7cm]{img/multi/vp_multi_6000k.png}\\
+				\footnotesize{Vitesse}
+				}
+			\end{figure}
+			\column{0.5\textwidth}
+			\begin{figure}				
+				\centering{
+				\includegraphics[height=1.7cm]{img/multi/rho_6000k.png}\\
+				\footnotesize{Masse volumique}
+				}
+			\end{figure}
+		\end{columns}
+	\end{itemize}
 \end{small}
 \end{frame}
+
 
 \subsection*{}
 \begin{frame}
+
 \begin{itemize}
 	\item Inversion monoparamètre : \\[0.2cm]
 	\begin{columns}
@@ -515,29 +582,29 @@
 	\end{columns}
 	
 \end{itemize}
+Coupes horizontales à 3cm de profondeur
 \end{frame}
 
 \section{Inversions en milieu anisotrope}
 \subsection*{}
 \begin{frame}{\insertsectionhead}
 %\begin{small}
-	\begin{columns}
+	%\begin{columns}
 		\centering
-		\column{0.5\textwidth}
-		\centering
+		%\column{0.5\textwidth}
+		%\centering
 		\begin{itemize}
-			\item  Milieu acoustique,\\ isotrope transverse\\ (axe de symétrie horizontal)\\[0.3cm]
+			\item  Milieu acoustique, isotrope transverse (axe de symétrie horizontal)
 			\item Paramètre d'anisotropie :
-		\end{itemize}			 
 		\begin{equation*}
 			\epsilon = \frac{\bm{v}_{p}.\bm{e}_{x}-\bm{v}_{p}.\bm{e_{z}}}{\bm{v}_{p}.\bm{e}_{z}}
 		\end{equation*}
-		\column{0.3\textwidth}
-		\hspace{-0.5cm}\includegraphics[height=4cm]{img/anisotrope/e20.png}
-		\column{0.3\textwidth}
-		\hspace{-0.3cm}\includegraphics[height=4cm]{img/anisotrope/residu_init.png}
-	\end{columns}	
-	\vspace{0.6cm}
+		%\column{0.3\textwidth}
+		%\hspace{-0.5cm}\includegraphics[height=4cm]{img/anisotrope/e20.png}
+		%\column{0.3\textwidth}
+		%\hspace{-0.3cm}\includegraphics[height=4cm]{img/anisotrope/residu_init.png}
+	%\end{columns}	
+	\vspace{-0.5cm}
 	\begin{columns}
 		\column{0.5\textwidth}
 		\centering
@@ -548,10 +615,13 @@
 		\centering
 		$\epsilon$ reconstruit : \\[0.2cm]
 		\includegraphics[width=0.8\textwidth]{img/anisotrope/epsilon_final.png}\\
+	\end{columns}
+	\vspace{0.3cm}
+	\item Trajets horizontaux porteurs d'information : $\theta=\pi~~\rightarrow~~k\sim 0$
+	\item Modèle peu représentatif
+	
+	\end{itemize}
 		
-		
-		
-	\end{columns}	
 %\end{small}
 \end{frame}
 

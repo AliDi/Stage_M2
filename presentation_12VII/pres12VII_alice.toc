@@ -2,9 +2,7 @@
 \select@language {french}
 \beamer@sectionintoc {1}{Contexte}{2}{0}{1}
 \beamer@sectionintoc {2}{La FWI}{6}{0}{2}
-\beamer@sectionintoc {3}{R\IeC {\'e}solution de la FWI}{8}{0}{3}
-\beamer@sectionintoc {4}{Inversions en milieu isotrope}{14}{0}{4}
-\beamer@subsectionintoc {4}{2}{Inversion monoparam\IeC {\`e}tre}{15}{0}{4}
-\beamer@subsectionintoc {4}{4}{Inversion multiparam\IeC {\`e}tre}{22}{0}{4}
-\beamer@sectionintoc {5}{Inversions en milieu anisotrope}{24}{0}{5}
-\beamer@sectionintoc {6}{Conclusions et perspectives}{25}{0}{6}
+\beamer@sectionintoc {3}{R\IeC {\'e}solution de la FWI}{7}{0}{3}
+\beamer@sectionintoc {4}{Inversions en milieu isotrope}{13}{0}{4}
+\beamer@sectionintoc {5}{Inversions en milieu anisotrope}{18}{0}{5}
+\beamer@sectionintoc {6}{Conclusions et perspectives}{19}{0}{6}
