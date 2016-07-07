@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.3.4)  6 JUL 2016 16:43
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.3.4)  7 JUL 2016 18:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1105,7 +1105,7 @@ Package frenchb.ldf Warning: OT1 encoding should not be used for French.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-(./test.nav) <img/univ.png, id=15, 609.27625pt x 282.05376pt>
+(./test.nav) <img/univ.png, id=13, 609.27625pt x 282.05376pt>
 File: img/univ.png Graphic file (type png)
 
 <use img/univ.png>
@@ -1120,13 +1120,13 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 102.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<img/cnrs.png, id=17, 170.7981pt x 170.7981pt>
+<img/cnrs.png, id=15, 170.7981pt x 170.7981pt>
 File: img/cnrs.png Graphic file (type png)
  <use img/cnrs.png>
 Package pdftex.def Info: img/cnrs.png used on input line 102.
 (pdftex.def)             Requested size: 28.4515pt x 28.45274pt.
 
-<img/isterre.png, id=18, 592.2125pt x 428.60126pt>
+<img/isterre.png, id=16, 592.2125pt x 428.60126pt>
 File: img/isterre.png Graphic file (type png)
  <use img/isterre.png>
 Package pdftex.def Info: img/isterre.png used on input line 102.
@@ -1136,19 +1136,82 @@ Package pdftex.def Info: img/isterre.png used on input line 102.
 LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
 (Font)              size <5> substituted on input line 102.
 
-[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+[1
 
- <./img/univ.png> <./img/cnrs.png (PNG copy)> <./img/isterre.png (PNG copy)>] [
-2
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./img/univ.png> <./img/cnr
+s.png (PNG copy)> <./img/isterre.png (PNG copy)>]
+<img/vp_mono_smooth/vp_smooth.png, id=29, 684.75826pt x 330.2739pt>
+File: img/vp_mono_smooth/vp_smooth.png Graphic file (type png)
 
-] [3
+<use img/vp_mono_smooth/vp_smooth.png>
+Package pdftex.def Info: img/vp_mono_smooth/vp_smooth.png used on input line 13
+5.
+(pdftex.def)             Requested size: 112.08165pt x 54.06006pt.
 
-] (./test.bbl)
-[4
+Overfull \hbox (19.89375pt too wide) in paragraph at lines 135--135
+ [] 
+ []
 
-] [5
+<img/rho_mono/rho_init.png, id=30, 688.0104pt x 330.2739pt>
+File: img/rho_mono/rho_init.png Graphic file (type png)
 
-]
+<use img/rho_mono/rho_init.png>
+Package pdftex.def Info: img/rho_mono/rho_init.png used on input line 135.
+(pdftex.def)             Requested size: 112.61397pt x 54.06006pt.
+
+Overfull \hbox (20.42607pt too wide) in paragraph at lines 135--135
+ [][] 
+ []
+
+<img/vp_mono_uni/vp_3300k.png, id=31, 685.48096pt x 330.2739pt>
+File: img/vp_mono_uni/vp_3300k.png Graphic file (type png)
+
+<use img/vp_mono_uni/vp_3300k.png>
+Package pdftex.def Info: img/vp_mono_uni/vp_3300k.png used on input line 135.
+(pdftex.def)             Requested size: 112.19995pt x 54.06006pt.
+
+Overfull \hbox (20.01205pt too wide) in paragraph at lines 135--135
+ [] 
+ []
+
+<img/rho_mono/rho_mono.png, id=32, 686.20364pt x 330.2739pt>
+File: img/rho_mono/rho_mono.png Graphic file (type png)
+
+<use img/rho_mono/rho_mono.png>
+Package pdftex.def Info: img/rho_mono/rho_mono.png used on input line 135.
+(pdftex.def)             Requested size: 112.31824pt x 54.06006pt.
+
+Overfull \hbox (20.13034pt too wide) in paragraph at lines 135--135
+ [][] 
+ []
+
+<img/multi/vp_multi_6000k.png, id=33, 688.37175pt x 330.2739pt>
+File: img/multi/vp_multi_6000k.png Graphic file (type png)
+
+<use img/multi/vp_multi_6000k.png>
+Package pdftex.def Info: img/multi/vp_multi_6000k.png used on input line 135.
+(pdftex.def)             Requested size: 112.67311pt x 54.06006pt.
+
+Overfull \hbox (20.48521pt too wide) in paragraph at lines 135--135
+ [] 
+ []
+
+<img/multi/rho_6000k.png, id=34, 691.6239pt x 330.2739pt>
+File: img/multi/rho_6000k.png Graphic file (type png)
+
+<use img/multi/rho_6000k.png>
+Package pdftex.def Info: img/multi/rho_6000k.png used on input line 135.
+(pdftex.def)             Requested size: 113.20543pt x 54.06006pt.
+
+Overfull \hbox (21.01753pt too wide) in paragraph at lines 135--135
+ [][] 
+ []
+
+[2
+
+ <./img/vp_mono_smooth/vp_smooth.png> <./img/rho_mono/rho_init.png> <./img/vp_m
+ono_uni/vp_3300k.png> <./img/rho_mono/rho_mono.png> <./img/multi/vp_multi_6000k
+.png> <./img/multi/rho_6000k.png>]
 \tf@nav=\write6
 \openout6 = `test.nav'.
 
@@ -1158,11 +1221,11 @@ LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
 \tf@snm=\write8
 \openout8 = `test.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 152.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 152.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 138.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 138.
  (./test.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 152.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 152.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 138.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 138.
 Package rerunfilecheck Info: File `test.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
@@ -1170,35 +1233,25 @@ Package rerunfilecheck Info: File `test.out' has not changed.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 152.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 138.
  ) 
 Here is how much of TeX's memory you used:
- 22798 strings out of 493304
- 417626 string characters out of 6139872
- 538935 words of memory out of 5000000
- 25692 multiletter control sequences out of 15000+600000
- 10956 words of font info for 40 fonts, out of 8000000 for 9000
+ 22670 strings out of 493304
+ 414793 string characters out of 6139872
+ 533935 words of memory out of 5000000
+ 25566 multiletter control sequences out of 15000+600000
+ 10605 words of font info for 39 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 59i,19n,94p,393b,799s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmss12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb>
-Output written on test.pdf (5 pages, 399381 bytes).
+ 59i,15n,94p,393b,627s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb>
+Output written on test.pdf (2 pages, 814857 bytes).
 PDF statistics:
- 129 PDF objects out of 1000 (max. 8388607)
- 93 compressed objects within 1 object stream
- 13 named destinations out of 1000 (max. 500000)
- 58 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 65 PDF objects out of 1000 (max. 8388607)
+ 33 compressed objects within 1 object stream
+ 5 named destinations out of 1000 (max. 500000)
+ 88 words of extra memory for PDF output out of 10000 (max. 10000000)
 

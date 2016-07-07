@@ -103,49 +103,33 @@
 
 
 
-\subsection*{}
-\begin{frame}{\insertsectionhead}
-	\begin{itemize}
-		\item<1-> Fonction de coût : $C(\bm{m})=\frac{1}{2}||\bm{d}_{obs}-\bm{d}_{cal}(\bm{m})||^{2}$ \\[0.5cm]
-		\item \only<1-1>{Perturbation du modèle : $\bm{\Delta m}=-(C'')^{-1}$\fcolorbox{white!0}{white!0}{$C'$}} \onslide<2->{Perturbation du modèle : $\bm{\Delta m}=-(C'')^{-1}$\fcolorbox{DeepSkyBlue4}{white!0}{$C'$}}
-	\end{itemize}
-	\onslide<2-> {
-		\begin{figure}
-			\vspace{-0.84cm}\hspace{2.8cm}\begin{tikzpicture}	
-					\node (grad) at (10,0) {};
-					\node (exp) at ($(grad)+(-1.5,-1.1)$) {};
-					\draw[->, thick,shorten <=2pt,shorten >=2pt,DeepSkyBlue4] (grad) -- (exp);		
-				\end{tikzpicture}
-		\end{figure}
-	
-	
-%	\only<2-2>{
-%		\vspace{-0.8cm}\begin{equation}
-%			\frac{\partial C}{\partial m_{i}}= \tr{\tilde{\bm{d}}_{cal}} \tr{\left( \frac{\partial\bm{A}}{\partial m_{i}} \right)}\bm{A}^{-1} (\tilde{\bm{d}}_{obs} - \tilde{\bm{d}}_{cal}) 
-%		\end{equation}
-%	}
-
-		\vspace{-0.8cm}\begin{equation}
-			\frac{\partial C}{\partial m_{i}}= \tr{\tilde{\bm{d}}_{cal}} \tr{\left( \frac{\partial\bm{A}}{\partial m_{i}} \right)} \textcolor{DeepSkyBlue4}{\underbrace{\textcolor{black}{\bm{A}^{-1} (\tilde{\bm{d}}_{obs} - \tilde{\bm{d}}_{cal})}}_{\text{résidus rétropopagés}}}
-		\end{equation}
-
-			~\\$\bm{A}$ : opérateur équation d'onde (élastique ou acoustique)
-	}
-\end{frame}
-
-
-\begin{frame}[allowframebreaks]{Références}
-
-	\begin{adjustwidth}{-2em}{-2.5em}
-		\scriptsize
-		\bibliographystyle{abbrvnat}
-		\bibliography{biblio}
-	\end{adjustwidth}
-\end{frame}
-
 \begin{frame}
-	questions : différence avec tomo diffraction\\
-	défaut : air
+\setlength{\leftmargin}{-2cm}
+\setlength{\rightmargin}{-2cm}
+%\setlength{\textwidth}{29cm}
+\begin{picture}(0,0)(0,0)\put(-20,-180){
+	$v_{p}$
+}\end{picture}
+\begin{picture}(0,0)(0,0)\put(-20,-180){
+	$\rho$
+}\end{picture}
+	\begin{columns}
+		\column{0.3\textwidth}
+		\centering
+		\small{Initial \\ model}
+		\includegraphics[height=1.9cm]{img/vp_mono_smooth/vp_smooth.png}\\
+		\includegraphics[height=1.9cm]{img/rho_mono/rho_init.png}		
+		\column{0.3\textwidth}
+		\centering
+		\small{Monoparameter inversion}
+		\includegraphics[height=1.9cm]{img/vp_mono_uni/vp_3300k.png}\\
+		\includegraphics[height=1.9cm]{img/rho_mono/rho_mono.png}		
+		\column{0.3\textwidth}
+		\centering
+		\small{Multiparameter inversion}
+		\includegraphics[height=1.9cm]{img/multi/vp_multi_6000k.png}\\		
+		\includegraphics[height=1.9cm]{img/multi/rho_6000k.png}\\		
+	\end{columns}
 \end{frame}
 
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.3.4)  6 JUL 2016 18:55
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.3.4)  7 JUL 2016 19:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1105,19 +1105,14 @@ Package frenchb.ldf Warning: OT1 encoding should not be used for French.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-(./pres_8VII.nav)
-Overfull \hbox (14.97757pt too wide) detected at line 98
-  [] [][][] [] [] [][][][][][] [][] [][][]  
- []
-
-<img/univ.png, id=61, 609.27625pt x 282.05376pt>
+(./pres_8VII.nav) <img/univ.png, id=51, 609.27625pt x 282.05376pt>
 File: img/univ.png Graphic file (type png)
- <use img/univ.png>
+
+<use img/univ.png>
 Package pdftex.def Info: img/univ.png used on input line 102.
 (pdftex.def)             Requested size: 61.4611pt x 28.45274pt.
 LaTeX Font Info:    Try loading font information for U+msa on input line 102.
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 102.
@@ -1125,13 +1120,13 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 102.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<img/cnrs.png, id=63, 170.7981pt x 170.7981pt>
+<img/cnrs.png, id=53, 170.7981pt x 170.7981pt>
 File: img/cnrs.png Graphic file (type png)
  <use img/cnrs.png>
 Package pdftex.def Info: img/cnrs.png used on input line 102.
 (pdftex.def)             Requested size: 28.4515pt x 28.45274pt.
 
-<img/isterre.png, id=64, 592.2125pt x 428.60126pt>
+<img/isterre.png, id=54, 592.2125pt x 428.60126pt>
 File: img/isterre.png Graphic file (type png)
  <use img/isterre.png>
 Package pdftex.def Info: img/isterre.png used on input line 102.
@@ -1141,75 +1136,56 @@ Package pdftex.def Info: img/isterre.png used on input line 102.
 LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
 (Font)              size <5> substituted on input line 102.
 
-
-Overfull \hbox (14.97757pt too wide) has occurred while \output is active
-  [] [][][] [] [] [][][][][][] [][] [][][]  
- []
-
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
  <./img/univ.png> <./img/cnrs.png (PNG copy)> <./img/isterre.png (PNG copy)>]
-<img/us_test.jpg, id=104, 2280.52pt x 1710.39pt>
+<img/us_test.jpg, id=90, 2280.52pt x 1710.39pt>
 File: img/us_test.jpg Graphic file (type jpg)
  <use img/us_test.jpg>
 Package pdftex.def Info: img/us_test.jpg used on input line 139.
 (pdftex.def)             Requested size: 113.7891pt x 85.35826pt.
 
-<img/olympus.jpg, id=105, 351.3125pt x 240.9pt>
+<img/olympus.jpg, id=91, 351.3125pt x 240.9pt>
 File: img/olympus.jpg Graphic file (type jpg)
  <use img/olympus.jpg>
 Package pdftex.def Info: img/olympus.jpg used on input line 139.
 (pdftex.def)             Requested size: 124.47826pt x 85.35826pt.
-
-Overfull \hbox (14.97757pt too wide) has occurred while \output is active
-  [] [][][] [] [] [][][][][][] [][] [][][]  
- []
-
-[2
+ [2
 
  <./img/us_test.jpg> <./img/olympus.jpg>]
-<./img/soudure1.png, id=131, 213.55785pt x 161.1621pt>
+<./img/soudure1.png, id=115, 213.55785pt x 161.1621pt>
 File: ./img/soudure1.png Graphic file (type png)
 
 <use ./img/soudure1.png>
 Package pdftex.def Info: ./img/soudure1.png used on input line 200.
 (pdftex.def)             Requested size: 101.79947pt x 76.82234pt.
- <img/gardahaut.png, id=132, 409.0482pt x 125.0271pt>
-File: img/gardahaut.png Graphic file (type png)
 
-<use img/gardahaut.png>
-Package pdftex.def Info: img/gardahaut.png used on input line 200.
-(pdftex.def)             Requested size: 204.52359pt x 62.51338pt.
+<img/chassignole_echos.png, id=116, 168.3891pt x 140.56516pt>
+File: img/chassignole_echos.png Graphic file (type png)
+
+<use img/chassignole_echos.png>
+Package pdftex.def Info: img/chassignole_echos.png used on input line 200.
+(pdftex.def)             Requested size: 68.16893pt x 56.9055pt.
 
 Overfull \hbox (66.31804pt too wide) detected at line 200
 [][][] $[]$[][][][][][][] $[]$[][][][][][] $[]$[][][][][] 
  []
 
-
-Overfull \hbox (14.97757pt too wide) has occurred while \output is active
-  [] [][][] [] [] [][][][][][] [][] [][][]  
- []
-
 [3
 
- <./img/soudure1.png> <./img/gardahaut.png>]
+ <./img/soudure1.png> <./img/chassignole_echos.png>]
 File: ./img/soudure1.png Graphic file (type png)
- <use ./img/soudure1.png>
+
+<use ./img/soudure1.png>
 Package pdftex.def Info: ./img/soudure1.png used on input line 200.
 (pdftex.def)             Requested size: 101.79947pt x 76.82234pt.
-File: img/gardahaut.png Graphic file (type png)
-
-<use img/gardahaut.png>
-Package pdftex.def Info: img/gardahaut.png used on input line 200.
-(pdftex.def)             Requested size: 204.52359pt x 62.51338pt.
+File: img/chassignole_echos.png Graphic file (type png)
+ <use img/chassignole_echos.png>
+Package pdftex.def Info: img/chassignole_echos.png used on input line 200.
+(pdftex.def)             Requested size: 68.16893pt x 56.9055pt.
 
 Overfull \hbox (66.31804pt too wide) detected at line 200
 [][][] $[]$[][][][][][][][] $[]$[][][][][][][][] $[]$[][][][][][] 
- []
-
-
-Overfull \hbox (14.97757pt too wide) has occurred while \output is active
-  [] [][][] [] [] [][][][][][] [][] [][][]  
  []
 
 [4
@@ -1219,80 +1195,57 @@ File: ./img/soudure1.png Graphic file (type png)
  <use ./img/soudure1.png>
 Package pdftex.def Info: ./img/soudure1.png used on input line 200.
 (pdftex.def)             Requested size: 101.79947pt x 76.82234pt.
-File: img/gardahaut.png Graphic file (type png)
- <use img/gardahaut.png>
-Package pdftex.def Info: img/gardahaut.png used on input line 200.
-(pdftex.def)             Requested size: 204.52359pt x 62.51338pt.
+File: img/chassignole_echos.png Graphic file (type png)
+ <use img/chassignole_echos.png>
+Package pdftex.def Info: img/chassignole_echos.png used on input line 200.
+(pdftex.def)             Requested size: 68.16893pt x 56.9055pt.
 
 Overfull \hbox (66.31804pt too wide) detected at line 200
 [][][] $[]$[][][][][][][][] $[]$[][][][][][][][] $[]$[][][][][][] 
  []
 
-
-Overfull \hbox (14.97757pt too wide) has occurred while \output is active
-  [] [][][] [] [] [][][][][][] [][] [][][]  
- []
-
 [5
 
-] <img/soud1.pdf, id=206, 223.34843pt x 49.09743pt>
+] <img/soud1.pdf, id=184, 223.34843pt x 49.09743pt>
 File: img/soud1.pdf Graphic file (type pdf)
  <use img/soud1.pdf>
 Package pdftex.def Info: img/soud1.pdf used on input line 219.
 (pdftex.def)             Requested size: 223.34787pt x 49.0973pt.
 
-Overfull \hbox (14.97757pt too wide) has occurred while \output is active
-  [] [][][] [] [] [][][][][][] [][] [][][]  
- []
-
 [6
 
- <./img/soud1.pdf>] <img/soud2.pdf, id=229, 223.34843pt x 52.29738pt>
+ <./img/soud1.pdf>] <img/soud2.pdf, id=205, 223.34843pt x 52.29738pt>
 File: img/soud2.pdf Graphic file (type pdf)
 
 <use img/soud2.pdf>
 Package pdftex.def Info: img/soud2.pdf used on input line 219.
 (pdftex.def)             Requested size: 223.34787pt x 52.29724pt.
+ [7
 
-Overfull \hbox (14.97757pt too wide) has occurred while \output is active
-  [] [][][] [] [] [][][][][][] [][] [][][]  
- []
-
-[7
-
- <./img/soud2.pdf>] <img/soud4_bis.pdf, id=259, 223.34843pt x 54.66925pt>
+ <./img/soud2.pdf>]
+<img/soud4_bis.pdf, id=233, 223.34843pt x 54.66925pt>
 File: img/soud4_bis.pdf Graphic file (type pdf)
-
-<use img/soud4_bis.pdf>
+ <use img/soud4_bis.pdf>
 Package pdftex.def Info: img/soud4_bis.pdf used on input line 219.
 (pdftex.def)             Requested size: 223.34787pt x 54.66911pt.
 
-Overfull \hbox (14.97757pt too wide) has occurred while \output is active
-  [] [][][] [] [] [][][][][][] [][] [][][]  
- []
-
 [8
 
- <./img/soud4_bis.pdf>] <img/reso.png, id=287, 242.1045pt x 222.23026pt>
+ <./img/soud4_bis.pdf>] <img/reso.png, id=259, 242.1045pt x 222.23026pt>
 File: img/reso.png Graphic file (type png)
 
 <use img/reso.png>
-Package pdftex.def Info: img/reso.png used on input line 282.
+Package pdftex.def Info: img/reso.png used on input line 284.
 (pdftex.def)             Requested size: 77.49348pt x 71.13188pt.
 
-<img/reso_surf_libre.png, id=288, 378.33345pt x 319.07205pt>
+<img/reso_surf_libre.png, id=260, 378.33345pt x 319.07205pt>
 File: img/reso_surf_libre.png Graphic file (type png)
 
 <use img/reso_surf_libre.png>
-Package pdftex.def Info: img/reso_surf_libre.png used on input line 282.
+Package pdftex.def Info: img/reso_surf_libre.png used on input line 284.
 (pdftex.def)             Requested size: 124.82733pt x 105.2751pt.
 
-Overfull \vbox (28.72209pt too high) detected at line 282
- []
-
-
-Overfull \hbox (14.97757pt too wide) has occurred while \output is active
-  [] [][][] [] [] [][][][][][] [][] [][][]  
+Overfull \vbox (34.21542pt too high) detected at line 284
  []
 
 [9
@@ -1300,20 +1253,15 @@ Overfull \hbox (14.97757pt too wide) has occurred while \output is active
  <./img/reso.png> <./img/reso_surf_libre.png>]
 File: img/reso.png Graphic file (type png)
  <use img/reso.png>
-Package pdftex.def Info: img/reso.png used on input line 282.
+Package pdftex.def Info: img/reso.png used on input line 284.
 (pdftex.def)             Requested size: 77.49348pt x 71.13188pt.
 File: img/reso_surf_libre.png Graphic file (type png)
 
 <use img/reso_surf_libre.png>
-Package pdftex.def Info: img/reso_surf_libre.png used on input line 282.
+Package pdftex.def Info: img/reso_surf_libre.png used on input line 284.
 (pdftex.def)             Requested size: 124.82733pt x 105.2751pt.
 
-Overfull \vbox (28.72209pt too high) detected at line 282
- []
-
-
-Overfull \hbox (14.97757pt too wide) has occurred while \output is active
-  [] [][][] [] [] [][][][][][] [][] [][][]  
+Overfull \vbox (34.21542pt too high) detected at line 284
  []
 
 [10
@@ -1321,621 +1269,377 @@ Overfull \hbox (14.97757pt too wide) has occurred while \output is active
 ]
 File: img/reso.png Graphic file (type png)
  <use img/reso.png>
-Package pdftex.def Info: img/reso.png used on input line 282.
+Package pdftex.def Info: img/reso.png used on input line 284.
 (pdftex.def)             Requested size: 77.49348pt x 71.13188pt.
 File: img/reso_surf_libre.png Graphic file (type png)
  <use img/reso_surf_libre.png>
-Package pdftex.def Info: img/reso_surf_libre.png used on input line 282.
+Package pdftex.def Info: img/reso_surf_libre.png used on input line 284.
 (pdftex.def)             Requested size: 124.82733pt x 105.2751pt.
 
-Overfull \vbox (28.72209pt too high) detected at line 282
- []
-
-
-Overfull \hbox (14.97757pt too wide) has occurred while \output is active
-  [] [][][] [] [] [][][][][][] [][] [][][]  
+Overfull \vbox (34.21542pt too high) detected at line 284
  []
 
 [11
 
-]
-Overfull \hbox (14.97757pt too wide) has occurred while \output is active
-  [] [][][] [] [] [][][][][][] [][] [][][]  
+] <img/vp_scat.png, id=328, 811.95345pt x 444.09915pt>
+File: img/vp_scat.png Graphic file (type png)
+
+<use img/vp_scat.png>
+Package pdftex.def Info: img/vp_scat.png used on input line 310.
+(pdftex.def)             Requested size: 130.05148pt x 71.13188pt.
+ <img/1400pt.png, id=329, 841.58415pt x 426.03165pt>
+File: img/1400pt.png Graphic file (type png)
+
+<use img/1400pt.png>
+Package pdftex.def Info: img/1400pt.png used on input line 310.
+(pdftex.def)             Requested size: 168.60919pt x 85.35826pt.
+
+Overfull \hbox (14.96426pt too wide) in paragraph at lines 310--310
+ [] 
+ []
+
+<img/1ref.png, id=330, 364.9635pt x 151.40565pt>
+File: img/1ref.png Graphic file (type png)
+ <use img/1ref.png>
+Package pdftex.def Info: img/1ref.png used on input line 310.
+(pdftex.def)             Requested size: 68.58084pt x 28.45274pt.
+
+<img/4200pt.png, id=331, 842.6682pt x 426.03165pt>
+File: img/4200pt.png Graphic file (type png)
+ <use img/4200pt.png>
+Package pdftex.def Info: img/4200pt.png used on input line 310.
+(pdftex.def)             Requested size: 168.82639pt x 85.35826pt.
+
+Overfull \hbox (15.18146pt too wide) in paragraph at lines 310--310
+ [] 
+ []
+
+<img/6ref.png, id=332, 364.9635pt x 151.40565pt>
+File: img/6ref.png Graphic file (type png)
+ <use img/6ref.png>
+Package pdftex.def Info: img/6ref.png used on input line 310.
+(pdftex.def)             Requested size: 68.58084pt x 28.45274pt.
+
+Overfull \vbox (1.89969pt too high) detected at line 310
  []
 
 [12
 
-] <img/vp_scat.png, id=384, 811.95345pt x 444.09915pt>
-File: img/vp_scat.png Graphic file (type png)
-
-<use img/vp_scat.png>
-Package pdftex.def Info: img/vp_scat.png used on input line 301.
-(pdftex.def)             Requested size: 104.03375pt x 56.9055pt.
-
-<img/ssfreesurf_150k.png, id=385, 844.1136pt x 426.03165pt>
-File: img/ssfreesurf_150k.png Graphic file (type png)
-
-<use img/ssfreesurf_150k.png>
-Package pdftex.def Info: img/ssfreesurf_150k.png used on input line 301.
-(pdftex.def)             Requested size: 112.73969pt x 56.9055pt.
-
-
-LaTeX Font Warning: Font shape `OT1/cmss/m/sc' in size <9> not available
-(Font)              Font shape `OT1/cmr/m/sc' tried instead on input line 301.
-
-<img/ssfreesurf_2M.png, id=386, 844.8363pt x 426.03165pt>
-File: img/ssfreesurf_2M.png Graphic file (type png)
-
-<use img/ssfreesurf_2M.png>
-Package pdftex.def Info: img/ssfreesurf_2M.png used on input line 301.
-(pdftex.def)             Requested size: 112.83621pt x 56.9055pt.
-
-Overfull \hbox (14.97757pt too wide) has occurred while \output is active
-  [] [][][] [] [] [][][][][][] [][] [][][]  
- []
-
-[13
-
- <./img/vp_scat.png> <./img/ssfreesurf_150k.png> <./img/ssfreesurf_2M.png>]
-<img/vp_true.png, id=414, 686.565pt x 370.38374pt>
+ <./img/vp_scat.png> <./img/1400pt.png> <./img/1ref.png> <./img/4200pt.png> <./
+img/6ref.png>] <img/vp_true.png, id=358, 686.565pt x 370.38374pt>
 File: img/vp_true.png Graphic file (type png)
- <use img/vp_true.png>
-Package pdftex.def Info: img/vp_true.png used on input line 331.
+
+<use img/vp_true.png>
+Package pdftex.def Info: img/vp_true.png used on input line 365.
 (pdftex.def)             Requested size: 153.64493pt x 82.88626pt.
-
-<img/rho_true.png, id=415, 688.0104pt x 330.2739pt>
+ <img/rho_true.png, id=359, 688.0104pt x 330.2739pt>
 File: img/rho_true.png Graphic file (type png)
- <use img/rho_true.png>
-Package pdftex.def Info: img/rho_true.png used on input line 331.
+
+<use img/rho_true.png>
+Package pdftex.def Info: img/rho_true.png used on input line 365.
 (pdftex.def)             Requested size: 153.64493pt x 73.75406pt.
-
-Overfull \hbox (14.97757pt too wide) has occurred while \output is active
-  [] [][][] [] [] [][][][][][] [][] [][][]  
- []
-
-[14
+ [13
 
  <./img/vp_true.png> <./img/rho_true.png>]
-<img/vp_mono_uni/vp_uni.png, id=441, 685.1196pt x 330.63525pt>
-File: img/vp_mono_uni/vp_uni.png Graphic file (type png)
+<img/vp_true_lambda.png, id=385, 686.565pt x 370.38374pt>
+File: img/vp_true_lambda.png Graphic file (type png)
 
-<use img/vp_mono_uni/vp_uni.png>
-Package pdftex.def Info: img/vp_mono_uni/vp_uni.png used on input line 406.
-(pdftex.def)             Requested size: 107.55098pt x 51.89874pt.
+<use img/vp_true_lambda.png>
+Package pdftex.def Info: img/vp_true_lambda.png used on input line 365.
+(pdftex.def)             Requested size: 153.64493pt x 82.88626pt.
+File: img/rho_true.png Graphic file (type png)
+ <use img/rho_true.png>
+Package pdftex.def Info: img/rho_true.png used on input line 365.
+(pdftex.def)             Requested size: 153.64493pt x 73.75406pt.
+ [14
 
-<img/vp_mono_smooth/vp_smooth.png, id=442, 684.75826pt x 330.2739pt>
+ <./img/vp_true_lambda.png>] <img/vp_mono_smooth/vp_smooth.png, id=406, 684.758
+26pt x 330.2739pt>
 File: img/vp_mono_smooth/vp_smooth.png Graphic file (type png)
 
 <use img/vp_mono_smooth/vp_smooth.png>
-Package pdftex.def Info: img/vp_mono_smooth/vp_smooth.png used on input line 40
-6.
-(pdftex.def)             Requested size: 107.55098pt x 51.87225pt.
+Package pdftex.def Info: img/vp_mono_smooth/vp_smooth.png used on input line 39
+5.
+(pdftex.def)             Requested size: 159.27779pt x 76.82234pt.
 
-<img/vp_true_sans_acqui.png, id=443, 686.565pt x 323.0469pt>
-File: img/vp_true_sans_acqui.png Graphic file (type png)
-
-<use img/vp_true_sans_acqui.png>
-Package pdftex.def Info: img/vp_true_sans_acqui.png used on input line 406.
-(pdftex.def)             Requested size: 107.55333pt x 50.60411pt.
-
-Overfull \vbox (12.13972pt too high) detected at line 406
+Overfull \hbox (5.63286pt too wide) in paragraph at lines 395--395
+ [] 
  []
 
+<img/rho_mono/data_rho_uni.png, id=407, 443.0151pt x 585.387pt>
+File: img/rho_mono/data_rho_uni.png Graphic file (type png)
 
-Overfull \hbox (14.97757pt too wide) has occurred while \output is active
-  [] [][][] [] [] [][][][][][] [][] [][][]  
- []
+<use img/rho_mono/data_rho_uni.png>
+Package pdftex.def Info: img/rho_mono/data_rho_uni.png used on input line 395.
+(pdftex.def)             Requested size: 92.1879pt x 121.80942pt.
 
-[15
+<img/rho_mono/data_rho_vrai.png, id=408, 449.5194pt x 585.387pt>
+File: img/rho_mono/data_rho_vrai.png Graphic file (type png)
 
- <./img/vp_mono_uni/vp_uni.png> <./img/vp_mono_smooth/vp_smooth.png> <./img/vp_
-true_sans_acqui.png>]
-File: img/vp_mono_uni/vp_uni.png Graphic file (type png)
- <use img/vp_mono_uni/vp_uni.png>
-Package pdftex.def Info: img/vp_mono_uni/vp_uni.png used on input line 406.
-(pdftex.def)             Requested size: 107.55098pt x 51.89874pt.
+<use img/rho_mono/data_rho_vrai.png>
+Package pdftex.def Info: img/rho_mono/data_rho_vrai.png used on input line 395.
 
-<img/vp_mono_uni/vp_450k.png, id=469, 684.75826pt x 330.2739pt>
-File: img/vp_mono_uni/vp_450k.png Graphic file (type png)
+(pdftex.def)             Requested size: 92.1879pt x 120.04976pt.
+ [15
 
-<use img/vp_mono_uni/vp_450k.png>
-Package pdftex.def Info: img/vp_mono_uni/vp_450k.png used on input line 406.
-(pdftex.def)             Requested size: 107.55098pt x 51.87225pt.
+ <./img/vp_mono_smooth/vp_smooth.png> <./img/rho_mono/data_rho_uni.png> <./img/
+rho_mono/data_rho_vrai.png>]
 File: img/vp_mono_smooth/vp_smooth.png Graphic file (type png)
- <use img/vp_mono_smooth/vp_smooth.png>
-Package pdftex.def Info: img/vp_mono_smooth/vp_smooth.png used on input line 40
-6.
-(pdftex.def)             Requested size: 107.55098pt x 51.87225pt.
 
-<img/vp_mono_smooth/vp_400k.png, id=470, 686.565pt x 330.2739pt>
-File: img/vp_mono_smooth/vp_400k.png Graphic file (type png)
+<use img/vp_mono_smooth/vp_smooth.png>
+Package pdftex.def Info: img/vp_mono_smooth/vp_smooth.png used on input line 42
+9.
+(pdftex.def)             Requested size: 112.08165pt x 54.06006pt.
 
-<use img/vp_mono_smooth/vp_400k.png>
-Package pdftex.def Info: img/vp_mono_smooth/vp_400k.png used on input line 406.
-
-(pdftex.def)             Requested size: 107.55098pt x 51.73619pt.
-File: img/vp_true_sans_acqui.png Graphic file (type png)
- <use img/vp_true_sans_acqui.png>
-Package pdftex.def Info: img/vp_true_sans_acqui.png used on input line 406.
-(pdftex.def)             Requested size: 107.55333pt x 50.60411pt.
-
-Overfull \vbox (13.416pt too high) detected at line 406
+Overfull \hbox (19.89375pt too wide) in paragraph at lines 429--429
+ [] 
  []
 
+<img/rho_mono/rho_init.png, id=432, 688.0104pt x 330.2739pt>
+File: img/rho_mono/rho_init.png Graphic file (type png)
 
-Overfull \hbox (14.97757pt too wide) has occurred while \output is active
-  [] [][][] [] [] [][][][][][] [][] [][][]  
+<use img/rho_mono/rho_init.png>
+Package pdftex.def Info: img/rho_mono/rho_init.png used on input line 429.
+(pdftex.def)             Requested size: 112.61397pt x 54.06006pt.
+
+Overfull \hbox (20.42607pt too wide) in paragraph at lines 429--429
+ [][] 
+ []
+
+<img/vp_mono_uni/vp_3300k.png, id=433, 685.48096pt x 330.2739pt>
+File: img/vp_mono_uni/vp_3300k.png Graphic file (type png)
+
+<use img/vp_mono_uni/vp_3300k.png>
+Package pdftex.def Info: img/vp_mono_uni/vp_3300k.png used on input line 429.
+(pdftex.def)             Requested size: 112.19995pt x 54.06006pt.
+
+Overfull \hbox (20.01205pt too wide) in paragraph at lines 429--429
+ [] 
+ []
+
+<img/rho_mono/rho_mono.png, id=434, 686.20364pt x 330.2739pt>
+File: img/rho_mono/rho_mono.png Graphic file (type png)
+
+<use img/rho_mono/rho_mono.png>
+Package pdftex.def Info: img/rho_mono/rho_mono.png used on input line 429.
+(pdftex.def)             Requested size: 112.31824pt x 54.06006pt.
+
+Overfull \hbox (20.13034pt too wide) in paragraph at lines 429--429
+ [][] 
+ []
+
+<img/multi/vp_multi_6000k.png, id=435, 688.37175pt x 330.2739pt>
+File: img/multi/vp_multi_6000k.png Graphic file (type png)
+
+<use img/multi/vp_multi_6000k.png>
+Package pdftex.def Info: img/multi/vp_multi_6000k.png used on input line 429.
+(pdftex.def)             Requested size: 112.67311pt x 54.06006pt.
+
+Overfull \hbox (20.48521pt too wide) in paragraph at lines 429--429
+ [] 
+ []
+
+<img/multi/rho_6000k.png, id=436, 691.6239pt x 330.2739pt>
+File: img/multi/rho_6000k.png Graphic file (type png)
+
+<use img/multi/rho_6000k.png>
+Package pdftex.def Info: img/multi/rho_6000k.png used on input line 429.
+(pdftex.def)             Requested size: 113.20543pt x 54.06006pt.
+
+Overfull \hbox (21.01753pt too wide) in paragraph at lines 429--429
+ [][] 
  []
 
 [16
 
- <./img/vp_mono_uni/vp_450k.png> <./img/vp_mono_smooth/vp_400k.png>]
-File: img/vp_mono_uni/vp_uni.png Graphic file (type png)
-
-<use img/vp_mono_uni/vp_uni.png>
-Package pdftex.def Info: img/vp_mono_uni/vp_uni.png used on input line 406.
-(pdftex.def)             Requested size: 107.55098pt x 51.89874pt.
-
-<img/vp_mono_uni/vp_1000k.png, id=496, 684.75826pt x 330.2739pt>
-File: img/vp_mono_uni/vp_1000k.png Graphic file (type png)
-
-<use img/vp_mono_uni/vp_1000k.png>
-Package pdftex.def Info: img/vp_mono_uni/vp_1000k.png used on input line 406.
-(pdftex.def)             Requested size: 107.55098pt x 51.87225pt.
-File: img/vp_mono_smooth/vp_smooth.png Graphic file (type png)
- <use img/vp_mono_smooth/vp_smooth.png>
-Package pdftex.def Info: img/vp_mono_smooth/vp_smooth.png used on input line 40
-6.
-(pdftex.def)             Requested size: 107.55098pt x 51.87225pt.
-
-<img/vp_mono_smooth/vp_900k.png, id=497, 684.75826pt x 330.2739pt>
-File: img/vp_mono_smooth/vp_900k.png Graphic file (type png)
-
-<use img/vp_mono_smooth/vp_900k.png>
-Package pdftex.def Info: img/vp_mono_smooth/vp_900k.png used on input line 406.
-
-(pdftex.def)             Requested size: 107.55098pt x 51.87225pt.
-File: img/vp_true_sans_acqui.png Graphic file (type png)
- <use img/vp_true_sans_acqui.png>
-Package pdftex.def Info: img/vp_true_sans_acqui.png used on input line 406.
-(pdftex.def)             Requested size: 107.55333pt x 50.60411pt.
-
-Overfull \vbox (13.416pt too high) detected at line 406
- []
-
-
-Overfull \hbox (14.97757pt too wide) has occurred while \output is active
-  [] [][][] [] [] [][][][][][] [][] [][][]  
- []
-
-[17
-
- <./img/vp_mono_uni/vp_1000k.png> <./img/vp_mono_smooth/vp_900k.png>]
-File: img/vp_mono_uni/vp_uni.png Graphic file (type png)
-
-<use img/vp_mono_uni/vp_uni.png>
-Package pdftex.def Info: img/vp_mono_uni/vp_uni.png used on input line 406.
-(pdftex.def)             Requested size: 107.55098pt x 51.89874pt.
-
-<img/vp_mono_uni/vp_1500k.png, id=522, 687.2877pt x 330.2739pt>
-File: img/vp_mono_uni/vp_1500k.png Graphic file (type png)
-
-<use img/vp_mono_uni/vp_1500k.png>
-Package pdftex.def Info: img/vp_mono_uni/vp_1500k.png used on input line 406.
-(pdftex.def)             Requested size: 107.55098pt x 51.68076pt.
-File: img/vp_mono_smooth/vp_smooth.png Graphic file (type png)
- <use img/vp_mono_smooth/vp_smooth.png>
-Package pdftex.def Info: img/vp_mono_smooth/vp_smooth.png used on input line 40
-6.
-(pdftex.def)             Requested size: 107.55098pt x 51.87225pt.
-
-<img/vp_mono_smooth/vp_1300k.png, id=523, 683.6742pt x 330.2739pt>
-File: img/vp_mono_smooth/vp_1300k.png Graphic file (type png)
-
-<use img/vp_mono_smooth/vp_1300k.png>
-Package pdftex.def Info: img/vp_mono_smooth/vp_1300k.png used on input line 406
-.
-(pdftex.def)             Requested size: 107.55098pt x 51.9529pt.
-File: img/vp_true_sans_acqui.png Graphic file (type png)
- <use img/vp_true_sans_acqui.png>
-Package pdftex.def Info: img/vp_true_sans_acqui.png used on input line 406.
-(pdftex.def)             Requested size: 107.55333pt x 50.60411pt.
-
-Overfull \vbox (13.47015pt too high) detected at line 406
- []
-
-
-Overfull \hbox (14.97757pt too wide) has occurred while \output is active
-  [] [][][] [] [] [][][][][][] [][] [][][]  
- []
-
-[18
-
- <./img/vp_mono_uni/vp_1500k.png> <./img/vp_mono_smooth/vp_1300k.png>]
-File: img/vp_mono_uni/vp_uni.png Graphic file (type png)
-
-<use img/vp_mono_uni/vp_uni.png>
-Package pdftex.def Info: img/vp_mono_uni/vp_uni.png used on input line 406.
-(pdftex.def)             Requested size: 107.55098pt x 51.89874pt.
-
-<img/vp_mono_uni/vp_2250k.png, id=549, 685.48096pt x 330.2739pt>
-File: img/vp_mono_uni/vp_2250k.png Graphic file (type png)
-
-<use img/vp_mono_uni/vp_2250k.png>
-Package pdftex.def Info: img/vp_mono_uni/vp_2250k.png used on input line 406.
-(pdftex.def)             Requested size: 107.55098pt x 51.81682pt.
-File: img/vp_mono_smooth/vp_smooth.png Graphic file (type png)
- <use img/vp_mono_smooth/vp_smooth.png>
-Package pdftex.def Info: img/vp_mono_smooth/vp_smooth.png used on input line 40
-6.
-(pdftex.def)             Requested size: 107.55098pt x 51.87225pt.
-
-<img/vp_mono_smooth/vp_1950k.png, id=550, 684.75826pt x 330.2739pt>
-File: img/vp_mono_smooth/vp_1950k.png Graphic file (type png)
-
-<use img/vp_mono_smooth/vp_1950k.png>
-Package pdftex.def Info: img/vp_mono_smooth/vp_1950k.png used on input line 406
-.
-(pdftex.def)             Requested size: 107.55098pt x 51.87225pt.
-File: img/vp_true_sans_acqui.png Graphic file (type png)
- <use img/vp_true_sans_acqui.png>
-Package pdftex.def Info: img/vp_true_sans_acqui.png used on input line 406.
-(pdftex.def)             Requested size: 107.55333pt x 50.60411pt.
-
-Overfull \vbox (13.38951pt too high) detected at line 406
- []
-
-
-Overfull \hbox (14.97757pt too wide) has occurred while \output is active
-  [] [][][] [] [] [][][][][][] [][] [][][]  
- []
-
-[19
-
- <./img/vp_mono_uni/vp_2250k.png> <./img/vp_mono_smooth/vp_1950k.png>]
-File: img/vp_mono_uni/vp_uni.png Graphic file (type png)
-
-<use img/vp_mono_uni/vp_uni.png>
-Package pdftex.def Info: img/vp_mono_uni/vp_uni.png used on input line 406.
-(pdftex.def)             Requested size: 107.55098pt x 51.89874pt.
-
-<img/vp_mono_uni/vp_3300k.png, id=576, 685.48096pt x 330.2739pt>
-File: img/vp_mono_uni/vp_3300k.png Graphic file (type png)
-
-<use img/vp_mono_uni/vp_3300k.png>
-Package pdftex.def Info: img/vp_mono_uni/vp_3300k.png used on input line 406.
-(pdftex.def)             Requested size: 107.55098pt x 51.81682pt.
-File: img/vp_mono_smooth/vp_smooth.png Graphic file (type png)
- <use img/vp_mono_smooth/vp_smooth.png>
-Package pdftex.def Info: img/vp_mono_smooth/vp_smooth.png used on input line 40
-6.
-(pdftex.def)             Requested size: 107.55098pt x 51.87225pt.
-
-<img/vp_mono_smooth/vp_2900k.png, id=577, 683.6742pt x 330.2739pt>
-File: img/vp_mono_smooth/vp_2900k.png Graphic file (type png)
-
-<use img/vp_mono_smooth/vp_2900k.png>
-Package pdftex.def Info: img/vp_mono_smooth/vp_2900k.png used on input line 406
-.
-(pdftex.def)             Requested size: 107.55098pt x 51.9529pt.
-File: img/vp_true_sans_acqui.png Graphic file (type png)
- <use img/vp_true_sans_acqui.png>
-Package pdftex.def Info: img/vp_true_sans_acqui.png used on input line 406.
-(pdftex.def)             Requested size: 107.55333pt x 50.60411pt.
-
-Overfull \vbox (13.47015pt too high) detected at line 406
- []
-
-
-Overfull \hbox (14.97757pt too wide) has occurred while \output is active
-  [] [][][] [] [] [][][][][][] [][] [][][]  
- []
-
-[20
-
- <./img/vp_mono_uni/vp_3300k.png> <./img/vp_mono_smooth/vp_2900k.png>]
-<img/rho_mono/data_rho_uni.png, id=601, 443.0151pt x 585.387pt>
-File: img/rho_mono/data_rho_uni.png Graphic file (type png)
-
-<use img/rho_mono/data_rho_uni.png>
-Package pdftex.def Info: img/rho_mono/data_rho_uni.png used on input line 443.
-(pdftex.def)             Requested size: 85.35826pt x 112.78783pt.
-
-<img/rho_mono/data_rho_vrai.png, id=602, 449.5194pt x 585.387pt>
-File: img/rho_mono/data_rho_vrai.png Graphic file (type png)
-
-<use img/rho_mono/data_rho_vrai.png>
-Package pdftex.def Info: img/rho_mono/data_rho_vrai.png used on input line 443.
-
-(pdftex.def)             Requested size: 85.35826pt x 111.15321pt.
-File: img/vp_mono_smooth/vp_smooth.png Graphic file (type png)
- <use img/vp_mono_smooth/vp_smooth.png>
-Package pdftex.def Info: img/vp_mono_smooth/vp_smooth.png used on input line 44
-3.
-(pdftex.def)             Requested size: 107.55333pt x 51.87225pt.
-
-<img/rho_mono/rho_mono.png, id=603, 686.20364pt x 330.2739pt>
-File: img/rho_mono/rho_mono.png Graphic file (type png)
-
-<use img/rho_mono/rho_mono.png>
-Package pdftex.def Info: img/rho_mono/rho_mono.png used on input line 443.
-(pdftex.def)             Requested size: 107.55333pt x 51.76642pt.
-File: img/rho_true.png Graphic file (type png)
- <use img/rho_true.png>
-Package pdftex.def Info: img/rho_true.png used on input line 443.
-(pdftex.def)             Requested size: 107.55333pt x 51.62532pt.
-
-Overfull \hbox (14.97757pt too wide) has occurred while \output is active
-  [] [][][] [] [] [][][][][][] [][] [][][]  
- []
-
-[21
-
- <./img/rho_mono/data_rho_uni.png> <./img/rho_mono/data_rho_vrai.png> <./img/rh
-o_mono/rho_mono.png>]
-File: img/vp_mono_smooth/vp_smooth.png Graphic file (type png)
- <use img/vp_mono_smooth/vp_smooth.png>
-Package pdftex.def Info: img/vp_mono_smooth/vp_smooth.png used on input line 47
-4.
-(pdftex.def)             Requested size: 107.55333pt x 51.87225pt.
-
-<img/multi/vp_multi_6000k.png, id=630, 688.37175pt x 330.2739pt>
-File: img/multi/vp_multi_6000k.png Graphic file (type png)
-
-<use img/multi/vp_multi_6000k.png>
-Package pdftex.def Info: img/multi/vp_multi_6000k.png used on input line 474.
-(pdftex.def)             Requested size: 107.55098pt x 51.60011pt.
-File: img/vp_true.png Graphic file (type png)
- <use img/vp_true.png>
-Package pdftex.def Info: img/vp_true.png used on input line 474.
-(pdftex.def)             Requested size: 107.55098pt x 58.01926pt.
-
-<img/multi/rho_6000k.png, id=631, 691.6239pt x 330.2739pt>
-File: img/multi/rho_6000k.png Graphic file (type png)
-
-<use img/multi/rho_6000k.png>
-Package pdftex.def Info: img/multi/rho_6000k.png used on input line 474.
-(pdftex.def)             Requested size: 107.55098pt x 51.35822pt.
-File: img/rho_true.png Graphic file (type png)
- <use img/rho_true.png>
-Package pdftex.def Info: img/rho_true.png used on input line 474.
-(pdftex.def)             Requested size: 107.55098pt x 51.62532pt.
-
-Overfull \hbox (14.97757pt too wide) has occurred while \output is active
-  [] [][][] [] [] [][][][][][] [][] [][][]  
- []
-
-[22
-
- <./img/multi/vp_multi_6000k.png> <./img/multi/rho_6000k.png>]
-<img/multi/coupe_vp_mono_smooth_hor.png, id=655, 427.47705pt x 318.34935pt>
+ <./img/rho_mono/rho_init.png> <./img/vp_mono_uni/vp_3300k.png> <./img/rho_mono
+/rho_mono.png> <./img/multi/vp_multi_6000k.png> <./img/multi/rho_6000k.png>] <i
+mg/multi/coupe_vp_mono_smooth_hor.png, id=460, 427.47705pt x 318.34935pt>
 File: img/multi/coupe_vp_mono_smooth_hor.png Graphic file (type png)
 
 <use img/multi/coupe_vp_mono_smooth_hor.png>
 Package pdftex.def Info: img/multi/coupe_vp_mono_smooth_hor.png used on input l
-ine 503.
-(pdftex.def)             Requested size: 107.55098pt x 80.09233pt.
+ine 603.
+(pdftex.def)             Requested size: 92.18788pt x 68.65265pt.
 
-<img/multi/coupe_rho_mono.png, id=656, 429.64516pt x 318.34935pt>
+<img/multi/coupe_rho_mono.png, id=461, 429.64516pt x 318.34935pt>
 File: img/multi/coupe_rho_mono.png Graphic file (type png)
 
 <use img/multi/coupe_rho_mono.png>
-Package pdftex.def Info: img/multi/coupe_rho_mono.png used on input line 503.
-(pdftex.def)             Requested size: 107.55098pt x 79.68915pt.
+Package pdftex.def Info: img/multi/coupe_rho_mono.png used on input line 603.
+(pdftex.def)             Requested size: 92.18788pt x 68.30775pt.
 
-<img/multi/coupe_vp_multi.png, id=657, 423.5022pt x 319.07205pt>
+<img/multi/coupe_vp_multi.png, id=462, 423.5022pt x 319.07205pt>
 File: img/multi/coupe_vp_multi.png Graphic file (type png)
 
 <use img/multi/coupe_vp_multi.png>
-Package pdftex.def Info: img/multi/coupe_vp_multi.png used on input line 503.
-(pdftex.def)             Requested size: 107.55098pt x 81.02878pt.
+Package pdftex.def Info: img/multi/coupe_vp_multi.png used on input line 603.
+(pdftex.def)             Requested size: 92.18788pt x 69.45116pt.
 
-<img/multi/coupe_rho_multi.png, id=658, 426.03165pt x 318.34935pt>
+<img/multi/coupe_rho_multi.png, id=463, 426.03165pt x 318.34935pt>
 File: img/multi/coupe_rho_multi.png Graphic file (type png)
 
 <use img/multi/coupe_rho_multi.png>
-Package pdftex.def Info: img/multi/coupe_rho_multi.png used on input line 503.
-(pdftex.def)             Requested size: 107.55098pt x 80.36435pt.
-
-Overfull \hbox (14.97757pt too wide) has occurred while \output is active
-  [] [][][] [] [] [][][][][][] [][] [][][]  
- []
-
-[23
+Package pdftex.def Info: img/multi/coupe_rho_multi.png used on input line 603.
+(pdftex.def)             Requested size: 92.18788pt x 68.88582pt.
+ [17
 
  <./img/multi/coupe_vp_mono_smooth_hor.png> <./img/multi/coupe_rho_mono.png> <.
 /img/multi/coupe_vp_multi.png> <./img/multi/coupe_rho_multi.png>]
-<img/anisotrope/e20.png, id=685, 547.0839pt x 628.0263pt>
+<img/anisotrope/e20.png, id=487, 547.0839pt x 628.0263pt>
 File: img/anisotrope/e20.png Graphic file (type png)
 
 <use img/anisotrope/e20.png>
-Package pdftex.def Info: img/anisotrope/e20.png used on input line 541.
+Package pdftex.def Info: img/anisotrope/e20.png used on input line 648.
 (pdftex.def)             Requested size: 99.13867pt x 113.81102pt.
 
-<img/anisotrope/residu_init.png, id=686, 499.02435pt x 628.749pt>
+<img/anisotrope/residu_init.png, id=488, 499.02435pt x 628.749pt>
 File: img/anisotrope/residu_init.png Graphic file (type png)
 
 <use img/anisotrope/residu_init.png>
-Package pdftex.def Info: img/anisotrope/residu_init.png used on input line 541.
+Package pdftex.def Info: img/anisotrope/residu_init.png used on input line 648.
 
 (pdftex.def)             Requested size: 90.32306pt x 113.81102pt.
 
-<img/anisotrope/epsilon_true.png, id=687, 675.36314pt x 402.5439pt>
+<img/anisotrope/epsilon_true.png, id=489, 675.36314pt x 402.5439pt>
 File: img/anisotrope/epsilon_true.png Graphic file (type png)
 
 <use img/anisotrope/epsilon_true.png>
-Package pdftex.def Info: img/anisotrope/epsilon_true.png used on input line 541
+Package pdftex.def Info: img/anisotrope/epsilon_true.png used on input line 648
 .
 (pdftex.def)             Requested size: 122.9164pt x 73.25941pt.
 
-<img/anisotrope/epsilon_final.png, id=688, 682.59015pt x 330.2739pt>
+<img/anisotrope/epsilon_final.png, id=490, 682.59015pt x 330.2739pt>
 File: img/anisotrope/epsilon_final.png Graphic file (type png)
 
 <use img/anisotrope/epsilon_final.png>
-Package pdftex.def Info: img/anisotrope/epsilon_final.png used on input line 54
-1.
+Package pdftex.def Info: img/anisotrope/epsilon_final.png used on input line 64
+8.
 (pdftex.def)             Requested size: 122.9164pt x 59.47192pt.
-
-Overfull \hbox (14.97757pt too wide) has occurred while \output is active
-  [] [][][] [] [] [][][][][][] [][] [][][]  
- []
-
-[24
+ [18
 
  <./img/anisotrope/e20.png> <./img/anisotrope/residu_init.png> <./img/anisotrop
-e/epsilon_true.png> <./img/anisotrope/epsilon_final.png>]
-<img/ogilvy_model.png, id=715, 251.13824pt x 256.5585pt>
+e/epsilon_true.png> <./img/anisotrope/epsilon_final.png>] <img/ogilvy_model.png
+, id=515, 251.13824pt x 256.5585pt>
 File: img/ogilvy_model.png Graphic file (type png)
 
 <use img/ogilvy_model.png>
-Package pdftex.def Info: img/ogilvy_model.png used on input line 590.
+Package pdftex.def Info: img/ogilvy_model.png used on input line 696.
 (pdftex.def)             Requested size: 55.70276pt x 56.9055pt.
 
-<img/ogilvy_ray1.png, id=716, 251.4996pt x 129.00195pt>
+<img/ogilvy_ray1.png, id=516, 251.4996pt x 129.00195pt>
 File: img/ogilvy_ray1.png Graphic file (type png)
 
 <use img/ogilvy_ray1.png>
-Package pdftex.def Info: img/ogilvy_ray1.png used on input line 590.
+Package pdftex.def Info: img/ogilvy_ray1.png used on input line 696.
 (pdftex.def)             Requested size: 110.94029pt x 56.9055pt.
 
-<img/ogilvy_ray2.png, id=717, 247.8861pt x 126.83385pt>
+<img/ogilvy_ray2.png, id=517, 247.8861pt x 126.83385pt>
 File: img/ogilvy_ray2.png Graphic file (type png)
 
 <use img/ogilvy_ray2.png>
-Package pdftex.def Info: img/ogilvy_ray2.png used on input line 590.
+Package pdftex.def Info: img/ogilvy_ray2.png used on input line 696.
 (pdftex.def)             Requested size: 111.21484pt x 56.9055pt.
 
-Overfull \hbox (7.05318pt too wide) in paragraph at lines 590--590
+Overfull \hbox (7.05318pt too wide) in paragraph at lines 696--696
  [][][] 
  []
 
-
-Overfull \hbox (14.97757pt too wide) has occurred while \output is active
-  [] [][][] [] [] [][][][][][] [][] [][][]  
- []
-
-[25
+[19
 
  <./img/ogilvy_model.png> <./img/ogilvy_ray1.png> <./img/ogilvy_ray2.png>]
 File: img/ogilvy_model.png Graphic file (type png)
 
 <use img/ogilvy_model.png>
-Package pdftex.def Info: img/ogilvy_model.png used on input line 590.
+Package pdftex.def Info: img/ogilvy_model.png used on input line 696.
 (pdftex.def)             Requested size: 55.70276pt x 56.9055pt.
 File: img/ogilvy_ray1.png Graphic file (type png)
  <use img/ogilvy_ray1.png>
-Package pdftex.def Info: img/ogilvy_ray1.png used on input line 590.
+Package pdftex.def Info: img/ogilvy_ray1.png used on input line 696.
 (pdftex.def)             Requested size: 110.94029pt x 56.9055pt.
 File: img/ogilvy_ray2.png Graphic file (type png)
  <use img/ogilvy_ray2.png>
-Package pdftex.def Info: img/ogilvy_ray2.png used on input line 590.
+Package pdftex.def Info: img/ogilvy_ray2.png used on input line 696.
 (pdftex.def)             Requested size: 111.21484pt x 56.9055pt.
 
-Overfull \hbox (7.05318pt too wide) in paragraph at lines 590--590
+Overfull \hbox (7.05318pt too wide) in paragraph at lines 696--696
  [][][] 
  []
 
-
-Overfull \hbox (14.97757pt too wide) has occurred while \output is active
-  [] [][][] [] [] [][][][][][] [][] [][][]  
- []
-
-[26
+[20
 
 ]
 File: img/ogilvy_model.png Graphic file (type png)
  <use img/ogilvy_model.png>
-Package pdftex.def Info: img/ogilvy_model.png used on input line 590.
+Package pdftex.def Info: img/ogilvy_model.png used on input line 696.
 (pdftex.def)             Requested size: 55.70276pt x 56.9055pt.
 File: img/ogilvy_ray1.png Graphic file (type png)
  <use img/ogilvy_ray1.png>
-Package pdftex.def Info: img/ogilvy_ray1.png used on input line 590.
+Package pdftex.def Info: img/ogilvy_ray1.png used on input line 696.
 (pdftex.def)             Requested size: 110.94029pt x 56.9055pt.
 File: img/ogilvy_ray2.png Graphic file (type png)
 
 <use img/ogilvy_ray2.png>
-Package pdftex.def Info: img/ogilvy_ray2.png used on input line 590.
+Package pdftex.def Info: img/ogilvy_ray2.png used on input line 696.
 (pdftex.def)             Requested size: 111.21484pt x 56.9055pt.
 
-Overfull \hbox (7.05318pt too wide) in paragraph at lines 590--590
+Overfull \hbox (7.05318pt too wide) in paragraph at lines 696--696
  [][][] 
  []
 
-
-Overfull \hbox (14.97757pt too wide) has occurred while \output is active
-  [] [][][] [] [] [][][][][][] [][] [][][]  
- []
-
-[27
+[21
 
 ]
 File: img/ogilvy_model.png Graphic file (type png)
  <use img/ogilvy_model.png>
-Package pdftex.def Info: img/ogilvy_model.png used on input line 590.
+Package pdftex.def Info: img/ogilvy_model.png used on input line 696.
 (pdftex.def)             Requested size: 55.70276pt x 56.9055pt.
 File: img/ogilvy_ray1.png Graphic file (type png)
  <use img/ogilvy_ray1.png>
-Package pdftex.def Info: img/ogilvy_ray1.png used on input line 590.
+Package pdftex.def Info: img/ogilvy_ray1.png used on input line 696.
 (pdftex.def)             Requested size: 110.94029pt x 56.9055pt.
 File: img/ogilvy_ray2.png Graphic file (type png)
 
 <use img/ogilvy_ray2.png>
-Package pdftex.def Info: img/ogilvy_ray2.png used on input line 590.
+Package pdftex.def Info: img/ogilvy_ray2.png used on input line 696.
 (pdftex.def)             Requested size: 111.21484pt x 56.9055pt.
 
-Overfull \hbox (7.05318pt too wide) in paragraph at lines 590--590
+Overfull \hbox (7.05318pt too wide) in paragraph at lines 696--696
  [][][] 
  []
 
-<img/linear_array.png, id=793, 156.8259pt x 130.086pt>
+<img/linear_array.png, id=589, 156.8259pt x 130.086pt>
 File: img/linear_array.png Graphic file (type png)
 
 <use img/linear_array.png>
-Package pdftex.def Info: img/linear_array.png used on input line 590.
+Package pdftex.def Info: img/linear_array.png used on input line 696.
 (pdftex.def)             Requested size: 71.13188pt x 59.00461pt.
-
-Overfull \hbox (14.97757pt too wide) has occurred while \output is active
-  [] [][][] [] [] [][][][][][] [][] [][][]  
- []
-
-[28
+ [22
 
  <./img/linear_array.png>]
 File: img/ogilvy_model.png Graphic file (type png)
- <use img/ogilvy_model.png>
-Package pdftex.def Info: img/ogilvy_model.png used on input line 590.
+
+<use img/ogilvy_model.png>
+Package pdftex.def Info: img/ogilvy_model.png used on input line 696.
 (pdftex.def)             Requested size: 55.70276pt x 56.9055pt.
 File: img/ogilvy_ray1.png Graphic file (type png)
-
-<use img/ogilvy_ray1.png>
-Package pdftex.def Info: img/ogilvy_ray1.png used on input line 590.
+ <use img/ogilvy_ray1.png>
+Package pdftex.def Info: img/ogilvy_ray1.png used on input line 696.
 (pdftex.def)             Requested size: 110.94029pt x 56.9055pt.
 File: img/ogilvy_ray2.png Graphic file (type png)
  <use img/ogilvy_ray2.png>
-Package pdftex.def Info: img/ogilvy_ray2.png used on input line 590.
+Package pdftex.def Info: img/ogilvy_ray2.png used on input line 696.
 (pdftex.def)             Requested size: 111.21484pt x 56.9055pt.
 
-Overfull \hbox (7.05318pt too wide) in paragraph at lines 590--590
+Overfull \hbox (7.05318pt too wide) in paragraph at lines 696--696
  [][][] 
  []
 
 File: img/linear_array.png Graphic file (type png)
 <use img/linear_array.png>
-Package pdftex.def Info: img/linear_array.png used on input line 590.
+Package pdftex.def Info: img/linear_array.png used on input line 696.
 (pdftex.def)             Requested size: 71.13188pt x 59.00461pt.
-
-Overfull \hbox (14.97757pt too wide) has occurred while \output is active
-  [] [][][] [] [] [][][][][][] [][] [][][]  
- []
-
-[29
-
-]
-Overfull \hbox (14.97757pt too wide) has occurred while \output is active
-  [] [][][] [] [] [][][][][][] [][] [][][]  
- []
-
-[30
+ [23
 
 ]
 \tf@nav=\write6
@@ -1947,54 +1651,55 @@ Overfull \hbox (14.97757pt too wide) has occurred while \output is active
 \tf@snm=\write8
 \openout8 = `pres_8VII.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 609.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 609.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 710.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 710.
  (./pres_8VII.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 609.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 609.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 710.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 710.
 Package rerunfilecheck Info: File `pres_8VII.out' has not changed.
-(rerunfilecheck)             Checksum: 67EA8EE7FC8ECDA3525883FF3F62ED98;516.
+(rerunfilecheck)             Checksum: 367657AD0B7E625B585D4D4018EF2B2B;319.
 
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 609.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 710.
  ) 
 Here is how much of TeX's memory you used:
- 23248 strings out of 493304
- 426297 string characters out of 6139872
- 543942 words of memory out of 5000000
- 26011 multiletter control sequences out of 15000+600000
- 19689 words of font info for 71 fonts, out of 8000000 for 9000
+ 23161 strings out of 493304
+ 424536 string characters out of 6139872
+ 542942 words of memory out of 5000000
+ 25954 multiletter control sequences out of 15000+600000
+ 16977 words of font info for 61 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 59i,19n,94p,398b,910s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cmextra/cmmib7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-r9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmssi9.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/symbols/msam5.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/symbols/msam7.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/z
-apfding/uzdr.pfb>
-Output written on pres_8VII.pdf (30 pages, 6687879 bytes).
+ 59i,19n,94p,398b,899s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cmextra/cmmib7.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mr9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmssi9.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/symbols/msam5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/symbols/msam7.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/zapfd
+ing/uzdr.pfb>
+Output written on pres_8VII.pdf (23 pages, 5646037 bytes).
 PDF statistics:
- 949 PDF objects out of 1000 (max. 8388607)
- 776 compressed objects within 8 object streams
- 75 named destinations out of 1000 (max. 500000)
- 342 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 720 PDF objects out of 1000 (max. 8388607)
+ 571 compressed objects within 6 object streams
+ 58 named destinations out of 1000 (max. 500000)
+ 291 words of extra memory for PDF output out of 10000 (max. 10000000)
 
