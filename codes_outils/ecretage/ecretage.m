@@ -1,30 +1,38 @@
+%Ecretage puis filtrage du premier fichier lu
+
 clear all;
-%close all;
+close all;
 
 nx=400;
 nz=200;
 
 
-fid=fopen('vp_ecrete_filtre')
+fid=fopen('vp_final_smooth')
 data=fread(fid, 'single');
 fclose(fid);
 vp=reshape(data,nz,nx);
 
+figure(5)
+plot(vp(120,:),'b')
+
+%%%%%%%%% Ecretage %%%%%%%%%%
+
 seuil=5750;
 
-#for i=1:nx
-#	for j=1:nz
-#		if (vp(j,i)>= seuil)
-#			vp(j,i)=6000;
-#		elseif (vp(j,i)< seuil)
-#			vp(j,i)=5500;
-#		end
-#	end	
-#end
+for i=1:nx
+	for j=1:nz
+		if (vp(j,i)>= seuil)
+			vp(j,i)=6000;
+		elseif (vp(j,i)< seuil)
+			vp(j,i)=5500;
+		end
+	end	
+end
 
 fid=fopen('vp_ecrete','w+');
 fwrite(fid, vp  ,'single');
 fclose(fid);
+
 
 
 %%%%%%%%%% filtrage
@@ -41,9 +49,9 @@ M2=round(M/2);
 N2=round(N/2);
 H0(M2-D0:M2+D0,N2-D0:N2+D0)=1;
 for i=1:M
-for j=1:N
-G(i,j)=F(i,j)*H0(i,j);
-end
+	for j=1:N
+		G(i,j)=F(i,j)*H0(i,j);
+	end
 end
 g=ifft2(G);
 subplot(1,2,1);imagesc(I);title('image originale');
@@ -52,5 +60,12 @@ subplot(1,2,2);imagesc(abs(g));title('image filtrée');
 fid=fopen('vp_ecrete_filtre','w+')
 fwrite(fid, abs(g),'single');
 fclose(fid);
+
+figure(5)
+hold on
+plot(vp(120,:),'r')
+hold on
+plot(abs(g(120,:)),'k')
+legend('original','ecrete','ecrete+filtre')
 
 

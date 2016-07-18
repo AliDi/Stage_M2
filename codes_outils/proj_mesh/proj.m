@@ -1,3 +1,5 @@
+%Interpolation linéaire 3D : projette le plan (:,:,1) de nom_lecture d'une grille régulière sur une grille irrégulière 
+
 clear all; close all; 
 
 nom_lecture=input("nom des donnees a interpoler : ","s");
@@ -53,6 +55,7 @@ Areg=interp2( xirreg , zirreg  ,  A2D , xreg , zreg  , "linear");
 figure
 imagesc(Areg)
 
+%invariance suivant y :
 Areg=ones(1,1,ny).*Areg;
 
 

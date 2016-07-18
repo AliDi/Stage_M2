@@ -1,20 +1,21 @@
+%applique un filtre FIR aux données et au signal d'excitation
+
 clear all;
 close all;
 
+freq=input(sprintf('freq \n'));  %lecture de la frequence centrale du filtre
+nb_src=input(sprintf('nb src \n')); %lecture du nombre de source
+nb_recep=input(sprintf('nb de coeff du filtre \n')); %lecture du nombre de récepteur
+N=input(sprintf('nb de coeff du filtre \n')); %lecture du nombre de coefficient du filtre FIR
 
-freq=input(sprintf('freq \n')); 		%lecture de la frequence centrale du filtre
-nb_src=input(sprintf('nb src \n'));
-N=input(sprintf('nb de coeff du filtre \n'));
+dt=1.5e-8; %pas temporel
 
-nb_recep=128;
-dt=1.4e-8;
-
-%%%%%%%%%% Calcul du nb de point sur le signal temporel
+%%%%%%%%%% Calcul du nb de point nt sur le signal temporel
 fid=fopen(['fsismos_P0000'],'r','l');
 A = fread(fid,'single');
 nt=length(A)/nb_recep;
 
-
+%%%%%%%%%% Lecture des fichiers de données %%%%%%%%%% 
 for i=0:nb_src-1
 
 		if (i <= 9)
@@ -54,7 +55,6 @@ for i=1:nb_src
 		s_filtre(i,:,j) = filter(h,1,y);
 	end
 end
-
 
 
 %%%%%%%%%% Filtrage du signal d'excitation %%%%%%%%%%

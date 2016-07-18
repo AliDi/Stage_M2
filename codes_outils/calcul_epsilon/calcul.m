@@ -1,3 +1,5 @@
+%calcul d'epsilon à partir des données de constantes élastiques de la littérature
+
 clear all; close all;
 
 %coeff d'apres these chassignol

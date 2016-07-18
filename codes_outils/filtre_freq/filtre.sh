@@ -25,7 +25,7 @@ then
 	#ximage < filtre_fricker n1=1 title='excitation filtree' &
 	
 else
-  echo "Frequence Nsources Nrecepteurs NbFIR"
+  echo "4 argument doivent être donnés (nombres séparés par des espaces) : Fréquence centrale du filtre + Nombre de sources + Nombre de récepteurs + Nombre de coefficients du filtre FIR"
 fi
 
 exit 0
