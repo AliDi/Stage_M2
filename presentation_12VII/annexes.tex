@@ -1,0 +1,95 @@
+\documentclass[10pt,xcolor=x11names,compress, notes=show]{beamer}% pour l'impression, tout n'apparait qu'une fois \documentclass[handout,12pt]{beamer}
+
+%\documentclass[xcolor=x11names]{beamer}
+%\usepackage[scaled]{helvet}
+\usepackage[round]{natbib}
+
+
+
+\usepackage[utf8x]{inputenc}
+\usepackage{ucs}
+\usepackage[french]{babel}
+\usepackage{todonotes}
+\usepackage{tikz}
+\usepackage{color}
+%\usepackage{subfigure}
+%\usepackage[]{geometry}
+\usepackage{changepage}
+\usetikzlibrary{calc}
+
+\usepackage{bm}
+\usepackage{pifont} %pour les symbole sympa \ding{nb}
+\usepackage[export]{adjustbox}
+\usepackage{subcaption}
+
+
+\setbeamertemplate{navigation symbols}{} 
+
+
+%\usepackage{palatino}
+
+%pour le theme
+%\usetheme{CambridgeUS}
+
+%\usetheme{Goettingen}
+\useinnertheme{default}
+\useoutertheme[subsection=false]{miniframes}
+\setbeamertemplate{blocks}[rounded][shadow=true]
+\setbeamercolor{block title}{fg=DeepSkyBlue4,bg=DeepSkyBlue4!10}
+\setbeamercolor{block title alerted}{bg=DeepSkyBlue4!0} 
+\setbeamercolor{block title example}{bg=DeepSkyBlue4!20}
+\setbeamercolor*{lower separation line head}{bg=DeepSkyBlue4} 
+
+\setbeamerfont{title like}{shape=\scshape}
+\setbeamercolor{frametitle}{fg=DeepSkyBlue4}
+\setbeamercolor{title}{fg=DeepSkyBlue4}
+\setbeamercolor{itemize item}{fg=black}
+\setbeamercolor{itemize subitem}{fg=black}
+\setbeamercolor{toc}{fg=DeepSkyBlue4}
+\usepackage{amsmath,mathtools}
+\usefonttheme[onlymath]{serif}
+
+\setbeamertemplate{frametitle}{\vspace{0.13cm}\hspace{-0.9cm} \insertframetitle}
+\setbeamerfont{frametitle}{size=\Large}
+
+\setlength{\fboxrule}{1pt}
+
+\setbeamertemplate{bibliography item}[]
+
+%couleur table des matières
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=DeepSkyBlue4}
+
+\setbeamertemplate{caption}{\raggedright\insertcaption\par}
+
+%Mettre la section courante en titre de diapo (pour champ de titre non-vide)
+%\addtobeamertemplate{frametitle}{\frametitle{\insertsubsectionhead}}{}
+
+%\addtobeamertemplate{footline}{\hspace{11cm} \insertframenumber/\inserttotalframenumber}
+
+\newcommand{\tr}[1]{\prescript{t\hspace{-0.08cm}}{}{#1}}
+
+
+
+\begin{document}
+\begin{frame}
+	\centering{\hfill \textsc{ Annexes} \hfill}
+\end{frame}
+
+\begin{frame}{TFM}
+	\centering
+	 \begin{columns}
+	 	\column{0.5\textwidth}
+	 	\centering
+	 	\includegraphics[height=4cm]{img/image_tfm.png}\\
+	 	Barrette du haut
+	 	\column{0.5\textwidth}
+	 	\centering
+	 	\includegraphics[height=4cm]{img/image_tfm2.png}\\
+	 	Barrette du bas
+	 \end{columns}
+	 
+\end{frame}
+
+
+\end{document}

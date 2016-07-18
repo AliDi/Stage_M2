@@ -1,8 +1,0 @@
-\beamer@endinputifotherversion {3.24pt}
-\select@language {french}
-\beamer@sectionintoc {1}{Contexte}{2}{0}{1}
-\beamer@sectionintoc {2}{La FWI}{6}{0}{2}
-\beamer@sectionintoc {3}{R\IeC {\'e}solution de la FWI}{7}{0}{3}
-\beamer@sectionintoc {4}{Inversions en milieu isotrope}{13}{0}{4}
-\beamer@sectionintoc {5}{Inversions en milieu anisotrope}{18}{0}{5}
-\beamer@sectionintoc {6}{Conclusions et perspectives}{19}{0}{6}

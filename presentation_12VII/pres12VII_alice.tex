@@ -22,6 +22,8 @@
 \usepackage[export]{adjustbox}
 \usepackage{subcaption}
 
+\usepackage{pdfpages}
+
 
 \setbeamertemplate{navigation symbols}{} 
 
@@ -74,7 +76,7 @@
 %page de titre
 \author{Alice \textsc{Dinsenmeyer} \\~\\ encadrée par\\ Romain \textsc{Brossier} \& Ludovic \textsc{Moreau} \\ Maîtres de conférences, ISTerre}
 
-\title{Imagerie ultrasonore de soudure\\par inversion de formes d'onde}
+\title{Imagerie ultrasonore de soudures\\par inversion de formes d'onde}
 \subtitle{}
 \date{\small 12 juillet 2016}
 
@@ -106,7 +108,7 @@
 
 \subsection*{}
 \begin{frame}{\insertsectionhead}
-\vspace{-0.7cm}
+\vspace{-0.2cm}
 		\begin{columns}
 			\column{0.5\textwidth}
 			\centering
@@ -120,11 +122,11 @@
 				 {\tiny{\itshape Image Olympus}\\ \centering			\scriptsize{Exemple de test en réflexion}}
 			\end{figure}
 		\end{columns}	
-		\vspace{0.6cm}	
+		\vspace{0.4cm}	
 
 	%\begin{columns}
 			%\column{.5\textwidth}
-			Contrôle et évaluation de soudure :\\
+			Contrôle et évaluation de soudures :\\
 			\begin{itemize}
 				\item de centrales nucléaires (système de refroidissement)
 				\item de pipelines 
@@ -133,16 +135,30 @@
 			%\ding{222}
 			%\column{.45\textwidth}
 			%\centering
-			\vspace{0.6cm}
+			\vspace{-0.4cm}
+			\begin{columns}
+			\column{0.7\textwidth}
+			\centering
  			\indent \ding{222} porosité, fissure, manque de fusion, corrosion, corps étrangers,\ldots
+ 			\column{0.3\textwidth}
+ 			\centering
+ 			\includegraphics[width=0.95\textwidth]{img/defaut_soudure.png}\\
+ 			{\itshape \tiny Image extraite de Consonni et al., \\[-0.2cm]Insight, 2011}
+ 			\end{columns}
 	%\end{columns}
 \end{frame}
 
 
 \subsection*{}
 \begin{frame}{\insertsectionhead}
+\begin{small}
 \vspace{-0.5cm}
 \hspace{1cm}
+\onslide<2->{
+\begin{picture}(0,0)(0,0)\put(50,5){
+		\textcolor{red}{Forte anisotropie imprévisible}
+}\end{picture}
+}
 	\begin{columns}[c]
 			\column{.5\textwidth}<1->
 			\centering
@@ -151,28 +167,27 @@
 				{\tiny{ \itshape Image extraite de Chassignole, 2010} \\ \centering \scriptsize Macrographie d'une soudure austénitique  }
 			\end{figure}
 			\column{.001\textwidth}<2->
-			\hspace{-3cm}
-			\vspace{2cm}
+			\hspace{-2.8cm}
+			\vspace{2.5cm}
 			\begin{tikzpicture}
-					\draw[<-, thick,shorten <=2pt,shorten >=2pt,red] (-1.5,3)--(0.5,4);
+					\draw[<-, thick,shorten <=2pt,shorten >=2pt,red] (-1.5,3)--(0.0,4.6);
 			\end{tikzpicture}
 			\column{.9\textwidth}<2->
 			%\vfill
 			\hspace{-1cm}
-			\textcolor{red}{Forte anisotropie imprévisible}\\
 			$\hookrightarrow$ déviation et division du faisceau ultrasonore\\[0.2cm]
 			\hspace{-0.5cm}
-			\includegraphics[scale=0.5]{img/gardahaut.png}\\
-			{\tiny{ \itshape Images extraites de Gardahaut, 2014} \\ \centering \scriptsize Comparaison d'un modèle (lancer de rayons) et d'une mesure }
+			\hspace{1cm}\includegraphics[height=2.5cm]{img/tfm_dort.png}\\
+			{\tiny{ \itshape Images extraites de Cunningham et al., Proc. R. Soc., 2016} \\[0.2cm] \hspace{1cm} \scriptsize Méthodes DORT (gauche) et FTP (droite)\\[-0.1cm] \hspace{1.5cm}sur modèle EF de soudure anisotrope }
 				
 	\end{columns}
-	\vspace{0.3cm}
+	%\vspace{0.3cm}
 	\begin{columns}[c]
 			\column{.5\textwidth}<1->
 			%\begin{block}{}
 				\begin{itemize}
-					\item[$\bullet$] méthodes par sommation cohérente des signaux
-					\item[$\bullet$] Décomposition des matrices de covariance (DORT)
+					\item[$\bullet$] méthodes par sommation cohérente des signaux (ex : FTP)
+					\item[$\bullet$] Décomposition des matrices de covariance (ex : DORT)
 				\end{itemize}
 			%\end{block}
 			\column{.05\textwidth}<2->
@@ -183,7 +198,7 @@
 					\item[\ding{55}] sujettes aux artefacts
 				\end{itemize}
 	\end{columns}
-	%\vspace{0.5cm}
+	\vspace{0.1cm}
 	\begin{columns}[c]
 		\column{.5\textwidth}<3->
 			\begin{itemize}
@@ -194,26 +209,30 @@
 		\column{.5\textwidth}<3->
 			\begin{itemize}
 			\item optimisation topologique :\\\hspace{-0.5cm}\small{\emph{Dominguez et al.}, \emph{Rodriguez et al.}}\\[0.1cm]
-			\item[\ding{51}] \normalsize{reconstruction d'un ensemble de paramètres : FWI}
+			\item[\ding{51}] {reconstruction d'un ensemble de paramètres : FWI}
 		\end{itemize}		
 	\end{columns}
+\end{small}
 \end{frame} 
 
 
 \section{La FWI}
 \subsection*{}
 \begin{frame}{La Full Waveform Inversion}
-	\begin{itemize}
-		\item Développée pour la géophysique
-		\item Estimation des paramètres acoustiques ou élastiques\\ $~~~~~~\hookrightarrow$ optimisation locale
-	\end{itemize}
-	\vspace{1cm}
-	\begin{figure}
-		\centering
-		\includegraphics[height=2cm]{img/schema_fwi2.png}
-	\end{figure}
+	\begin{columns}
+		\column{0.6\textwidth}
+		\begin{itemize}
+			\item Développée pour la géophysique\\[0.3cm]
+			\item Estimation des paramètres élastiques\\ $~~~~~~\hookrightarrow$ optimisation locale\\[0.3cm]
+			\item Utilise tout le champ d'onde\\[0.3cm]
+		\end{itemize}
+		\column{0.5\textwidth}
+		\begin{figure}
+			\centering
+			\hspace{-0.3cm}\includegraphics[width=\textwidth]{img/schema_fwi2.png}
+		\end{figure}
+	\end{columns}
 	
-
 \end{frame}
 
 %\subsection*{}
@@ -227,35 +246,35 @@
 
 
 \section{Résolution de la FWI}
-\subsection*{}
-\begin{frame}{\insertsectionhead}
-	\begin{itemize}
-		\item<1-> Fonction de coût : $C(\bm{m})=\frac{1}{2}||\bm{d}_{obs}-\bm{d}_{cal}(\bm{m})||^{2}$ \\[0.5cm]
-		\item \only<1-1>{Perturbation du modèle : $\bm{\Delta m}=-(C'')^{-1}$\fcolorbox{white!0}{white!0}{$C'$}} \onslide<2->{Perturbation du modèle : $\bm{\Delta m}=-(C'')^{-1}$\fcolorbox{DeepSkyBlue4}{white!0}{$C'$}}
-	\end{itemize}
-	\onslide<2-> {
-		\begin{figure}
-			\vspace{-0.84cm}\hspace{2.8cm}\begin{tikzpicture}	
-					\node (grad) at (10,0) {};
-					\node (exp) at ($(grad)+(-1.5,-1.1)$) {};
-					\draw[->, thick,shorten <=2pt,shorten >=2pt,DeepSkyBlue4] (grad) -- (exp);		
-				\end{tikzpicture}
-		\end{figure}
-	
-	
-%	\only<2-2>{
+%\subsection*{}
+%\begin{frame}{\insertsectionhead}
+%	\begin{itemize}
+%		\item<1-> Fonction de coût : $C(\bm{m})=\frac{1}{2}||\bm{d}_{obs}-\bm{d}_{cal}(\bm{m})||^{2}$ \\[0.5cm]
+%		\item \only<1-1>{Perturbation du modèle : $\bm{\Delta m}=-(C'')^{-1}$\fcolorbox{white!0}{white!0}{$C'$}} \onslide<2->{Perturbation du modèle : $\bm{\Delta m}=-(C'')^{-1}$\fcolorbox{DeepSkyBlue4}{white!0}{$C'$}}
+%	\end{itemize}
+%	\onslide<2-> {
+%		\begin{figure}
+%			\vspace{-0.84cm}\hspace{2.8cm}\begin{tikzpicture}	
+%					\node (grad) at (10,0) {};
+%					\node (exp) at ($(grad)+(-1.5,-1.1)$) {};
+%					\draw[->, thick,shorten <=2pt,shorten >=2pt,DeepSkyBlue4] (grad) -- (exp);		
+%				\end{tikzpicture}
+%		\end{figure}
+%	
+%	
+%%	\only<2-2>{
+%%		\vspace{-0.8cm}\begin{equation}
+%%			\frac{\partial C}{\partial m_{i}}= \tr{\tilde{\bm{d}}_{cal}} \tr{\left( \frac{\partial\bm{A}}{\partial m_{i}} \right)}\bm{A}^{-1} (\tilde{\bm{d}}_{obs} - \tilde{\bm{d}}_{cal}) 
+%%		\end{equation}
+%%	}
+%
 %		\vspace{-0.8cm}\begin{equation}
-%			\frac{\partial C}{\partial m_{i}}= \tr{\tilde{\bm{d}}_{cal}} \tr{\left( \frac{\partial\bm{A}}{\partial m_{i}} \right)}\bm{A}^{-1} (\tilde{\bm{d}}_{obs} - \tilde{\bm{d}}_{cal}) 
+%			\frac{\partial C}{\partial m_{i}}= \tr{\tilde{\bm{d}}_{cal}} \tr{\left( \frac{\partial\bm{A}}{\partial m_{i}} \right)} \textcolor{DeepSkyBlue4}{\underbrace{\textcolor{black}{\bm{A}^{-1} (\tilde{\bm{d}}_{obs} - \tilde{\bm{d}}_{cal})}}_{\text{résidus rétropopagés}}}
 %		\end{equation}
+%
+%			~\\$\bm{A}$ : opérateur équation d'onde (élastique ou acoustique)
 %	}
-
-		\vspace{-0.8cm}\begin{equation}
-			\frac{\partial C}{\partial m_{i}}= \tr{\tilde{\bm{d}}_{cal}} \tr{\left( \frac{\partial\bm{A}}{\partial m_{i}} \right)} \textcolor{DeepSkyBlue4}{\underbrace{\textcolor{black}{\bm{A}^{-1} (\tilde{\bm{d}}_{obs} - \tilde{\bm{d}}_{cal})}}_{\text{résidus rétropopagés}}}
-		\end{equation}
-
-			~\\$\bm{A}$ : opérateur équation d'onde (élastique ou acoustique)
-	}
-\end{frame}
+%\end{frame}
 
 
 \subsection*{}
@@ -325,9 +344,11 @@
 \subsection*{}
 \begin{frame}{\insertsectionhead}
 	\begin{itemize}
-		\item Milieu 2D, isotrope, acoustique
-		\item Paramétrisation : vitesse + masse volumique
-		\item Excitation : Ricker centré à 2 MHz 
+		\item<1-> Milieu 2D, isotrope, acoustique
+		\item<1-> Paramétrisation : vitesse + masse volumique
+		\item<2-> Excitation : Ricker centré à 2 MHz 
+	\end{itemize}	
+	\only<1-1>{
 	\begin{columns}
 		\column{0.5\textwidth}
 		\begin{figure}
@@ -340,14 +361,111 @@
 			{\small Masse volumique vraie}
 		\end{figure}
 	\end{columns}
-	\vspace{1cm}
-		\item 9 inversions successives de 200 kHz à 3 MHz pour
-			\begin{itemize}
-				\item mieux contraindre le problème
-				\item lever les ambiguïtés de déphasage 
-			\end{itemize}
-	\end{itemize}
+	}
+	
+	\only<2->{
+	\begin{columns}
+		\column{0.5\textwidth}
+		\begin{figure}
+			\includegraphics[width=\textwidth]{img/vp_true_lambda.png}\\
+			{\small Vitesse vraie}
+		\end{figure}
+		\column{0.5\textwidth}
+		\begin{figure}
+			\includegraphics[width=\textwidth]{img/rho_true.png}\\
+			{\small Masse volumique vraie}
+		\end{figure}
+	\end{columns}
+	}
+	
+%	\vspace{1cm}
+%	\begin{itemize}
+%		\item 9 inversions successives de 200 kHz à 3 MHz pour
+%			\begin{itemize}
+%				\item mieux contraindre le problème
+%				\item lever les ambiguïtés de déphasage 
+%			\end{itemize}
+%	\end{itemize}
 
+
+\only<2->{
+\begin{picture}(0,0)(0,0)\put(220,110){	
+	\begin{tikzpicture}
+			\node (a) at (0,0) {\includegraphics[height=1.5cm]{img/ricker.png}};
+			\node (b) [below=-0cm of a] {\scriptsize Ondelette de Ricker};
+	\end{tikzpicture}
+}\end{picture}}
+
+
+\end{frame}
+
+\subsection{Stratégies d'inversion}
+\begin{frame}{\insertsubsectionhead}
+\begin{small}
+	\begin{columns}
+	\column{0.6\textwidth}
+	\begin{itemize}
+		\item pour mieux contraindre le problème
+		\item pour lever les ambiguïtés de phase
+	\end{itemize}
+	\onslide<2->{2 critères hiérarchiques :}
+	\begin{itemize}
+		\item<2-> influence des paramètres sur les données %(cinématique, dynamique, prépondérance, ...) %Fort lissage de $\bm{\Delta m}$ : gaussien sur 2 $\lambda$
+		\item<4-> contenu fréquentiel
+	\end{itemize}
+	\column{0.5\textwidth}
+		\centering
+		\vspace{-0.5cm}
+		\only<3-4>{
+		\includegraphics[height=2.7cm]{img/vp_smooth/vp_smooth.png}\\
+		\scriptsize{~~}\\
+		}
+		\only<5-5>{
+		\includegraphics[height=2.7cm]{img/vp_smooth/vp_200k.png}\\
+		\scriptsize{f$\sim$ 200 kHz}\\
+		}
+		\only<6-6>{
+		\includegraphics[height=2.7cm]{img/vp_smooth/vp_300k.png}\\
+		\scriptsize{f$\sim$ 300 kHz}\\
+		}	
+		\only<7-7>{
+		\includegraphics[height=2.7cm]{img/vp_smooth/vp_450k.png}\\
+		\scriptsize{f$\sim$ 450 kHz}\\
+		}
+		\only<8-8>{
+		\includegraphics[height=2.7cm]{img/vp_smooth/vp_675k.png}\\
+		\scriptsize{f$\sim$ 675 kHz}\\
+		}
+		\only<9-9>{
+		\includegraphics[height=2.7cm]{img/vp_smooth/vp_1000k.png}\\
+		\scriptsize{f$\sim$ 1000 kHz}\\
+		}
+		\only<10-10>{
+		\includegraphics[height=2.7cm]{img/vp_smooth/vp_1500k.png}\\
+		\scriptsize{f$\sim$ 1500 kHz}\\
+		}
+		\only<11->{
+		\includegraphics[height=2.7cm]{img/vp_smooth/vp_smooth.png}\\
+		\scriptsize{f$\sim$ 2200 kHz}\\
+		}			
+		\only<3->{\scriptsize{Construction d'un modèle de vitesse lissé}}
+	\end{columns}
+	\vspace{0.3cm}	
+	\begin{columns}
+		\column{0.3\textwidth}
+		\onslide<2->{
+		\centering
+		\includegraphics[height=4.3cm]{img/rho_mono/data_rho_uni.png}\\
+		\scriptsize{Données issues d'une masse volumique homogène}
+		\column{0.3\textwidth}
+		\centering
+		\includegraphics[height=4.3cm]{img/rho_mono/data_rho_vrai.png}\\
+		\scriptsize{Données issues de la vraie masse volumique}
+		}
+	\end{columns}
+	
+
+\end{small}
 \end{frame}
 
 %\subsection{Inversion monoparamètre}
@@ -496,93 +614,181 @@
 
 %\subsection{}
 \begin{frame}{\insertsectionhead}
-\begin{small}
-	\begin{itemize}
-		\item<1-> Modèles initiaux : \\[-0.2cm]
-		\begin{columns}
-			\column{0.5\textwidth}
-			\begin{figure}				
-				\centering{
-				\includegraphics[height=1.7cm]{img/vp_mono_smooth/vp_smooth.png}\\
-				\footnotesize{Vitesse}
-				}
-			\end{figure}
-			\column{0.5\textwidth}
-			\begin{figure}				
-				\centering{
-				\includegraphics[height=1.7cm]{img/vp_mono_smooth/rho_init.png}\\
-				\footnotesize{Masse volumique}
-				}
-			\end{figure}
-		\end{columns}
-		\item<2-> Inversions monoparamètres : \\[-0.2cm]
-		\begin{columns}
-			\column{0.5\textwidth}
-			\begin{figure}				
-				\centering{
-				\includegraphics[height=1.7cm]{img/vp_mono_smooth/vp_2900k.png}\\
-				\footnotesize{Vitesse}
-				}
-			\end{figure}
-			\column{0.5\textwidth}
-			\begin{figure}				
-				\centering{
-				\includegraphics[height=1.7cm]{img/rho_mono/rho_mono.png}\\
-				\footnotesize{Masse volumique}
-				}
-			\end{figure}
-		\end{columns}
-		\item<3-> Inversion multiparamètre : \\[-0.2cm]
-		\begin{columns}
-			\column{0.5\textwidth}
-			\begin{figure}				
-				\centering{
-				\includegraphics[height=1.7cm]{img/multi/vp_multi_6000k.png}\\
-				\footnotesize{Vitesse}
-				}
-			\end{figure}
-			\column{0.5\textwidth}
-			\begin{figure}				
-				\centering{
-				\includegraphics[height=1.7cm]{img/multi/rho_6000k.png}\\
-				\footnotesize{Masse volumique}
-				}
-			\end{figure}
-		\end{columns}
-	\end{itemize}
-\end{small}
+\setlength{\leftmargin}{-2cm}
+\setlength{\rightmargin}{-2cm}
+%\setlength{\textwidth}{29cm}
+\begin{picture}(0,0)(0,0)\put(-20,-33){
+	$v_{p}$
+}\end{picture}
+\begin{picture}(0,0)(0,0)\put(-20,-87){
+	$\rho$
+}\end{picture}
+\vspace{-0.5cm}
+\begin{itemize}
+	\small{\item 9 inversions successives de 200 kHz à 3 MHz }\\[0.3cm]
+\end{itemize}
+\vspace{0.3cm}
+	\begin{columns}
+		\column{0.3\textwidth}
+		\centering
+		\scriptsize{Modèles initiaux}
+		\includegraphics[height=1.9cm]{img/vp_mono_smooth/vp_smooth.png}\\
+		\includegraphics[height=1.9cm]{img/rho_mono/rho_init.png}		
+		\column{0.3\textwidth}
+		\centering
+		\scriptsize{Inversions monoparamètres}
+		\includegraphics[height=1.9cm]{img/vp_mono_uni/vp_3300k.png}\\
+		\includegraphics[height=1.9cm]{img/rho_mono/rho_mono.png}		
+		\column{0.3\textwidth}
+		\centering
+		\scriptsize{Inversion multiparamètre}
+		\includegraphics[height=1.9cm]{img/multi/vp_multi_6000k.png}\\		
+		\includegraphics[height=1.9cm]{img/multi/rho_6000k.png}\\		
+	\end{columns}
+
 \end{frame}
+
+%\begin{frame}{\insertsectionhead}
+%\begin{small}
+%	\begin{itemize}
+%		\item<1-> Modèles initiaux : \\[-0.2cm]
+%		\begin{columns}
+%			\column{0.5\textwidth}
+%			\begin{figure}				
+%				\centering{
+%				\includegraphics[height=1.7cm]{img/vp_mono_smooth/vp_smooth.png}\\
+%				\footnotesize{Vitesse}
+%				}
+%			\end{figure}
+%			\column{0.5\textwidth}
+%			\begin{figure}				
+%				\centering{
+%				\includegraphics[height=1.7cm]{img/vp_mono_smooth/rho_init.png}\\
+%				\footnotesize{Masse volumique}
+%				}
+%			\end{figure}
+%		\end{columns}
+%		\item<2-> Inversions monoparamètres : \\[-0.2cm]
+%		\begin{columns}
+%			\column{0.5\textwidth}
+%			\begin{figure}				
+%				\centering{
+%				\includegraphics[height=1.7cm]{img/vp_mono_smooth/vp_2900k.png}\\
+%				\footnotesize{Vitesse}
+%				}
+%			\end{figure}
+%			\column{0.5\textwidth}
+%			\begin{figure}				
+%				\centering{
+%				\includegraphics[height=1.7cm]{img/rho_mono/rho_mono.png}\\
+%				\footnotesize{Masse volumique}
+%				}
+%			\end{figure}
+%		\end{columns}
+%		\item<3-> Inversion multiparamètre : \\[-0.2cm]
+%		\begin{columns}
+%			\column{0.5\textwidth}
+%			\begin{figure}				
+%				\centering{
+%				\includegraphics[height=1.7cm]{img/multi/vp_multi_6000k.png}\\
+%				\footnotesize{Vitesse}
+%				}
+%			\end{figure}
+%			\column{0.5\textwidth}
+%			\begin{figure}				
+%				\centering{
+%				\includegraphics[height=1.7cm]{img/multi/rho_6000k.png}\\
+%				\footnotesize{Masse volumique}
+%				}
+%			\end{figure}
+%		\end{columns}
+%	\end{itemize}
+%\end{small}
+%\end{frame}
 
 
 \subsection*{}
-\begin{frame}
-
+\begin{frame}{\insertsectionhead}
+\begin{small}
 \begin{itemize}
 	\item Inversion monoparamètre : \\[0.2cm]
 	\begin{columns}
 		\column{0.5\textwidth}
 		\centering
 		Vitesse : \\[0.2cm]
-		\includegraphics[width=0.7\textwidth]{img/multi/coupe_vp_mono_smooth_hor.png}\\
+		\includegraphics[width=0.6\textwidth]{img/multi/coupe_vp_mono_smooth_hor.png}\\
 		\column{0.5\textwidth}
 		\centering
 		Masse volumique  : \\[0.2cm]
-		\includegraphics[width=0.7\textwidth]{img/multi/coupe_rho_mono.png}\\
+		\includegraphics[width=0.6\textwidth]{img/multi/coupe_rho_mono.png}\\
 	\end{columns}
 	\item Inversion multiparamètre : \\[0.2cm]
 	\begin{columns}
 		\column{0.5\textwidth}
 		\centering
 		Vitesse : \\[0.2cm]
-		\includegraphics[width=0.7\textwidth]{img/multi/coupe_vp_multi.png}\\
+		\includegraphics[width=0.6\textwidth]{img/multi/coupe_vp_multi.png}\\
 		\column{0.5\textwidth}
 		\centering
 		Masse volumique : \\[0.2cm]
-		\includegraphics[width=0.7\textwidth]{img/multi/coupe_rho_multi.png}\\
+		\includegraphics[width=0.6\textwidth]{img/multi/coupe_rho_multi.png}\\
 	\end{columns}
 	
 \end{itemize}
-Coupes horizontales à 3cm de profondeur
+\hspace{2.7cm}Coupes horizontales à 3 cm de profondeur
+\end{small}
+\end{frame}
+
+\begin{frame}{\insertsectionhead}
+\setlength{\leftmargin}{-2cm}
+\setlength{\rightmargin}{-2cm}
+%\setlength{\textwidth}{29cm}
+\begin{picture}(0,0)(0,0)\put(-20,-33){
+	$v_{p}$
+}\end{picture}
+\begin{picture}(0,0)(0,0)\put(-20,-87){
+	$\rho$
+}\end{picture}
+\vspace{-0.5cm}
+\begin{itemize}
+	\small{\item 9 inversions successives de 200 kHz à 3 MHz }
+\end{itemize}
+\vspace{0.3cm}
+	\begin{columns}
+		\column{0.3\textwidth}
+		\centering
+		\scriptsize{Modèles initiaux}
+		\includegraphics[height=1.9cm]{img/vp_mono_smooth/vp_smooth.png}\\
+		\includegraphics[height=1.9cm]{img/rho_mono/rho_init.png}		
+		\column{0.3\textwidth}
+		\centering
+		\scriptsize{Inversions monoparamètres}
+		\includegraphics[height=1.9cm]{img/vp_mono_uni/vp_3300k.png}\\
+		\includegraphics[height=1.9cm]{img/rho_mono/rho_mono.png}		
+		\column{0.3\textwidth}
+		\centering
+		\scriptsize{Inversion multiparamètre}
+		\includegraphics[height=1.9cm]{img/multi/vp_multi_6000k.png}\\		
+		\includegraphics[height=1.9cm]{img/multi/rho_6000k.png}\\		
+	\end{columns}
+	\vspace{0.5cm}
+	\onslide<2->{
+		\begin{columns}
+			\column{0.6\textwidth}
+			\small{
+			\begin{itemize}
+				\item Comparaison avec la méthode FTP\\[0.3cm]
+			\end{itemize}
+			 \centering
+			\begin{equation*}
+				I(\bm{r})= \displaystyle\sum_{r} \displaystyle\sum_{e} s_{r,e}\left( T_{\bm{r}\bm{r}_{r}+T_{\bm{r}\bm{r}_{e}}} \right)
+			\end{equation*}
+			}
+			\column{0.4\textwidth}
+			\centering
+			\includegraphics[height=2.5cm]{img/tfm_retouche.png}
+		\end{columns}
+	}
 \end{frame}
 
 \section{Inversions en milieu anisotrope}
@@ -656,15 +862,15 @@ Coupes horizontales à 3cm de profondeur
 				
 		\end{figure}	
 		\item<3-> Élaboration d'un modèle initial fiable 
-		\item<4-> Prise en compte de la propagation 3D
-		\item<5-> Géométrie d'acquisition à adapter
+		\item<4-> Géométrie d'acquisition à adapter
 			\begin{itemize}
 				\item à la géométrie de la soudure réelle
 				\item pour une une bonne illumination/résolution
 			\end{itemize}
+		\item<5-> Prise en compte de la propagation 3D
 	\end{itemize}
 	\begin{picture}(0,0)(0,0)\put(240,0){
-		\only<4->{
+		\only<5->{
 		\begin{tikzpicture}
 			\node (a) at (0,0) {\includegraphics[width=2.5cm]{img/linear_array.png}};
 			\node (b) [below=-0.2cm of a] {\tiny \itshape Image Olympus};
@@ -683,12 +889,11 @@ Coupes horizontales à 3cm de profondeur
 %		\bibliography{biblio}
 %	\end{adjustwidth}
 %\end{frame}
+{
+\setbeamercolor{background canvas}{bg=}
+\includepdf[pages={1,2}]{annexes.pdf}
+}
 
-\begin{frame}
-	questions :\\
-	défaut : air\\
-	focalisation
-\end{frame}
 
 
 \end{document}
