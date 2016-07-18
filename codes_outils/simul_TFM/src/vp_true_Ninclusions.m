@@ -8,7 +8,7 @@ function []=vp_true_Ninclusions(vp1,vp2,r,pitch,xpos_center,zpos_center, nz, nx,
 
 	n_r=floor(r/h);						%nombre de points du rayon
 
-	x_centers = xpos_center- (N-1) *pitch/2 : pitch : xpos_center + (N-1)*pitch/2
+	x_centers = xpos_center- (N-1) *pitch/2 : pitch : xpos_center + (N-1)*pitch/2;
 	
 	n_xpos_center=floor(x_centers/h); %position du centre en nb de points
 	n_zpos_center=floor(zpos_center/h);

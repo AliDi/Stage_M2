@@ -31,7 +31,7 @@ function []=vp_true_inclusion(vp1,vp2,r,xpos_center,zpos_center, nz, nx,h)
 %%%%%%%%%% Illustration %%%%%%%%%%
 	
 	figure
-	imagesc([0 nx*h-1],[0 nz*h-1],m)
+	imagesc([0 nx*h-h],[0 nz*h-h],m)
 	colorbar
 	title('vp\_true')
 	

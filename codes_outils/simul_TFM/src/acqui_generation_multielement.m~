@@ -19,17 +19,16 @@
 
 %cette fonction place les éléments de manière à tomber exactement sur les points de la grille définie par nz,nx et h si grille=='on'
 
-function []= acqui_generation_multielement(nb_elements,pitch, zpos_sources,xpos_sources, zpos_recep,xpos_recep,nz, nx, h, grille)
+function [x_sources z_sources x_recep z_recep]= acqui_generation_multielement(nb_elements,pitch, zpos_sources,xpos_sources, zpos_recep,xpos_recep,nz, nx, h, grille)
 
 	aperture = (nb_elements-1)*pitch; %total length of the probe
-	
 
 %%%%%%%%%% Positionnement des elements en m %%%%%%%%%%
 	x_sources= xpos_sources-(nb_elements-1)*pitch/2 : pitch : xpos_sources+(nb_elements-1)*pitch/2; 			
 
 	z_sources=zpos_sources*ones(1,nb_elements);
 	
-	x_recep= xpos_recep-(nb_elements-1)*pitch/2 : pitch : xpos_recep+(nb_elements-1)*pitch/2; 			
+	x_recep= xpos_recep-(nb_elements-1)*0.001/2 : 0.001 : xpos_recep+(nb_elements-1)*0.001/2; 			
 
 	z_recep=zpos_recep*ones(1,nb_elements);
 	
@@ -39,10 +38,10 @@ function []= acqui_generation_multielement(nb_elements,pitch, zpos_sources,xpos_
 %%%%%%%%%% Placement des sources/recep sur la grille d'échantillonnage %%%%%%%%%%
 
 	if(grille=='on')
-		x_sources = round(x_sources./h).*h;
-		z_sources = round(z_sources./h).*h;	
-		x_recep = round(x_recep./h).*h;
-		z_recep = round(z_recep./h).*h;	
+		x_sources = floor(x_sources./h).*h;
+		z_sources = floor(z_sources./h).*h;	
+		x_recep = floor(x_recep./h).*h;
+		z_recep = floor(z_recep./h).*h;	
 	end
 
 

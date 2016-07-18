@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #OAR -n tfm
-#OAR -l /nodes=1/core=4,walltime=00:10:00
+#OAR -l /nodes=1/core=30,walltime=00:10:00
 
 # Modules loading
 source /soft/env.bash

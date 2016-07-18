@@ -1,76 +1,87 @@
 clear all; close all;
+addpath('/home/dinsenma/simul_TFM/src');
 
-R=10^-5; 			%rapport d'echelle  : 10^5 pour passer de CND->Geophys
+R=1;%10^-5; 			%rapport d'echelle  : 10^5 pour passer de CND->Geophys
 					%n'est a changer que sur la frequence, puisque les autres dimensions sont definies a partir de la longueur d'onde l
 
 %%%%%%%%%% Constantes du probleme %%%%%%%%%%
 
 
 f=2e6*R;			% frequence centrale du transducteur en Hz
-vp=6000;			%vitesse du milieu en m/s
+vp=5500;			%vitesse du milieu en m/s
 l=vp/f;				%longueur d'onde en m
 
-h=l/6;				%pas de discrétisation : en fdtd o(4), respecter 5 pts par longueur d'onde
+h=0.25e-3;				%pas de discrétisation : en fdtd o(4), respecter 5 pts par longueur d'onde
 
-nz=floor(20*l /h)				%nb de points en z
-nx=floor(68*l/2 /h)				%nb de points en x
+nz=200				%nb de points en z
+nx=400				%nb de points en x
+
+dt=1.5e-8/R;			%echantillonage de la fonction de ricker (signal d'excitation)
 
 %%%%%%%%%% Milieu : generation du fichier vp_true %%%%%%%%%%
 
-vp_inclusion=5800;	%vitesse dans l'inclusion en m
-
-if (min(vp,vp_inclusion)/f/h < 5) 
-	disp("!!! ATTENTION !!! \n Il n'y aura pas 5 pts par longueur d'onde. \n\n")
-end
-
-xpos_center=ceil(nx/2)*h;   %position du centre du défaut en m
-zpos_center=16*l;
+vp_inclusion=5500;	%vitesse dans l'inclusion en m
 
 
-r=l/2;						%rayon de l'inclusion en m
-vp_true_inclusion(vp,vp_inclusion,r,xpos_center,zpos_center, nz, nx,h); %generation du fichier 'vp_true_inclusion'
 
 
-%%%%%%%%%% Milieu pour le probleme direct : generation du fichier vp_init %%%%%%%%%%
-
-vp_init_generation(vp,vp, nz, nx,h); %generation du fichier vp_init 
-
-
-%%%%%%%%%% Generation du fichier contenant les masses volumiques %%%%%%%%%%
-rho=1000;
-rho_generation(rho,nz,nx)
 
 %%%%%%%%%% Sources/recepteurs : generation du fichier acqui %%%%%%%%%%
 %sonde immobile et chaque element est considere ponctuel
 nb_elements=64;		%number of active elements	
-pitch=l/2;			%center-to-center distance between 2 successive elements
-zpos_sources =h/2; 			%z position of the probe (in m)
-xpos_sources =ceil(nx/2)*h; 	%position of array center (in m)
+pitch=0.001;
+			%center-to-center distance between 2 successive elements
+zpos_sources1 =h; 			%z position of the probe (in m)
+xpos_sources1 =nx/2*h;%7.7e-2; 	%position of array center (in m)
 
+zpos_recep1 = zpos_sources1;
+xpos_recep1 =  xpos_sources1;
 
-zpos_recep = h/2;
-xpos_recep =  ceil(nx/2)*h;
+zpos_sources2 = (nz-1)*h;
+xpos_sources2 = nx/2*h;
 
+zpos_recep2 = zpos_sources2;
+xpos_recep2 =  xpos_sources2;
 
-[x_sources, z_sources, x_recep, z_recep]=acqui_generation_multielement(nb_elements,pitch,zpos_sources,xpos_sources, zpos_recep, xpos_recep, nz, nx, h,'on');
+%[x_sources, z_sources, x_recep, z_recep]=acqui_generation_multielement(nb_elements , pitch , zpos_sources1 , xpos_sources1 , zpos_recep1 , xpos_recep1 , nz , nx , h , 'on');
+
+[x_sources z_sources x_recep z_recep]= acqui_generation_multielement_2trans(nb_elements , pitch ,  zpos_sources1 , xpos_sources1 , zpos_sources2 , xpos_sources2 , zpos_recep1 , xpos_recep1 , zpos_recep2 , xpos_recep2 , nz , nx , h , 'on');
+
+	figure(100)
+	hold on
+	scatter(x_sources, z_sources,'green','o','filled');
+	hold on
+	scatter(x_recep, z_recep,'black','o','filled');
+	hold off
+	print -dpng acqui.png
 
 
 %%%%%%%%%% calcul TFM %%%%%%%%%%
-
-tfm(nt,dt, nb_elements,pitch, vp, vp_inclusion , x_sources, z_sources, x_recep, z_recep, nz, nx, h);
+nt=1024;
+tfm(nt,dt, 2*nb_elements,pitch, vp, vp_inclusion , x_sources, z_sources, x_recep, z_recep, nz, nx, h);
 
 %%%%%%%%%% Affichage TFM %%%%%%%%%%
 
-data=load('img_tfm');
+data=load('img_tfm2');
 
-imagesc([0 nx*h],[0 nz*h],data');
+%data=data(66:132,30:60);
+
+figure
+imagesc([0 nz*h]*R,[0 nx*h]*R,(data));
 colorbar
 
-theta=0:0.001:2*pi;
 
+xpos_center=0.048000;
+zpos_center=0.030000;
+r=7.5000e-04;
+theta=0:0.0001:2*pi;
 hold on
-plot(r*cos(theta)+xpos_center, r*sin(theta)+zpos_center);
+plot( (r*sin(theta)+(zpos_center))*R,(r*cos(theta)+(xpos_center))*R,'r');
 
+title('TFM')
+xlabel('m')
+ylabel('m')
 
+print -dpng image_tfm2.png
 
 

@@ -21,7 +21,7 @@ function []=vp_init_generation(vp1, vp2, nz, nx,h)
 %%%%%%%%%% Illustration %%%%%%%%%%
 	
 	figure
-	imagesc([0 nx*h-1],[0 nz*h-1],vp)
+	imagesc([0 nx*h-h],[0 nz*h-h],vp)
 	colorbar
 	title('vp\_init')
 

@@ -1,9 +1,18 @@
-function fricker_generation(f,n)
+function fricker_generation(f,n,dt)
 	
-	fricker=ricker(f,n);
+	t=(0:n-1)*dt;
+	freqs=(0:n-1)*1/max(t);
+	
+	fricker=ricker(f,n,dt);
 	
 	figure
+	subplot(2,1,1)
 	plot(fricker,'o');
+	subplot(2,1,2)
+	fft_ricker=abs(fft(fricker));
+	plot(freqs(1:n/2)/1e6,20*log10(fft_ricker(1:n/2)))
+	
+	
 	
 	fid=fopen('fricker','w+');
 	fwrite(fid, fricker(:,:,:),'single');

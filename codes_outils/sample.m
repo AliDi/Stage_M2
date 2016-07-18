@@ -1,3 +1,5 @@
+%reecrit les fichiers de donnees et d'excitation en ne prenant qu'une valuer sur deux
+
 clear all;
 close all;
 
