@@ -1,23 +1,7 @@
-%rappel : l'origine est forcement en (0,0,0) 
-% format du fichier à generer : (dernier chiffre : 0 pour source, 1 pour reception
-% z_source1	x_source1	y_source1	0	0	0
-% z_recep1	x_recep1	y_recep1	0	0	1
-% ...
-% z_recepN	x_recepN	y_recepN	0	0	1
-% ...
-% z_sourceN	x_sourceN	y_sourceN	0	0	0
-% z_recep1	x_recep1	y_recep1	0	0	1
-% ...
-% z_recepN	x_recepN	y_recepN	0	0	1
-
-
-%the probe is fixed
-%the probe is along the x axis, emitting along z axis
-%2 transducers for excitation, all the elements for reception
-
-%zpos_ et xpos_ sont les positions en m du centre des transducteurs multi-elements
-
-%cette fonction place les éléments de manière à tomber exactement sur les points de la grille définie par nz,nx et h si grille=='on'
+%Même fonction que 2D_isotrope/src/acqui_generation_multielement.m, avec en plus la nécessité de renseigner la taille de la troisième dimension ny
+%La coordonnée en y de la position de la sonde est donnée par ypos.
+%
+%usage : [x_sources z_sources x_recep z_recep]= acqui_generation_multielement_2trans_ELAS(nb_elements , pitch ,  zpos_sources1 , xpos_sources1 , zpos_sources2 , xpos_sources2 , zpos_recep1 , xpos_recep1 , zpos_recep2 , xpos_recep2 , ypos , nz , nx , ny , h , grille)
 
 function [x_sources z_sources x_recep z_recep]= acqui_generation_multielement_2trans_ELAS(nb_elements , pitch ,  zpos_sources1 , xpos_sources1 , zpos_sources2 , xpos_sources2 , zpos_recep1 , xpos_recep1 , zpos_recep2 , xpos_recep2 , ypos , nz , nx , ny , h , grille)
 

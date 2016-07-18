@@ -1,8 +1,10 @@
-%vp : vitesse du milieu
-%vp_inclusion : vitesse dans l'inclusion
+%vs : vitesse des ondes  transversale du milieu
+%vs_inclusion : vitesse des ondes transversales dans l'inclusion
 %r : rayon de l'inclusion en m
 %xpos, ypos : coordonnees du centre de l'inclusion 
 %nx,nz : taille du milieu
+%
+%usage : [vs]=vs_inclusion_generation( vs , vs_inclusion, r ,xpos_center,zpos_center, nz, nx,h)
 
 function [vs]=vs_inclusion_generation( vs , vs_inclusion, r ,xpos_center,zpos_center, nz, nx,h)
 

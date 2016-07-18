@@ -1,3 +1,7 @@
+%génration d'un milieu de vitesse transversale uniforme de valeur vs_init_generation
+%
+%usage :  [vs]=vs_init_generation(vs_init, nz, nx,h)
+
 function [vs]=vs_init_generation(vs_init, nz, nx,h)
 
 	vs=vs_init*ones(nz,nx);

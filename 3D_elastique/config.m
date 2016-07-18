@@ -108,9 +108,9 @@ r=l/4;						%rayon de l'inclusion en m
 vp_init=vp_init.*ones(1,1,ny);
 vs_init=vs_init.*ones(1,1,ny);
 rho_init=rho_init.*ones(1,1,ny);
-vp_true=vp_true.*ones(1,1,ny);
+%vp_true=vp_true.*ones(1,1,ny);
 %vs_true=vs_true.*ones(1,1,ny);
-%rho_true= rho_true.*ones(1,1,ny);
+rho_true= rho_true.*ones(1,1,ny);
 
 
 	fid=fopen('vs_init','w+');
@@ -142,10 +142,10 @@ vp_true=vp_true.*ones(1,1,ny);
 nb_elements=64;		%number of active elements	
 pitch=0.001;
 			%center-to-center distance between 2 successive elements
-zpos_sources1 =0%h; 			%z position of the probe (in m)
+zpos_sources1 =h; 			%z position of the probe (in m)
 xpos_sources1 =floor(nx/2)*h; 	%position of array center (in m)
 
-zpos_recep1 = (nz-1)*h;
+zpos_recep1 =h% (nz-1)*h;
 xpos_recep1 =  xpos_sources1;
 
 xpos_sources2 = xpos_sources1;
@@ -175,7 +175,7 @@ ypos=ny/2*h;
 
 %%%%%%%%%% Generation du signal d'excitation fricker %%%%%%%%%%
 
-fricker_generation(f,2048,dt,10^10)
+fricker_generation(f,2000,dt,10^10)
 title('excitation')
 
 

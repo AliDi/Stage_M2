@@ -1,3 +1,7 @@
+%génration d'un milieu de vitesse horizontale uniforme de valeur vs_init_generation
+%
+%usage :  [vs]=vs_init_generation(vs_init, nz, nx,h)
+
 function [vs]=vs_init_generation(vs_init, nz, nx,h)
 
 	vs=vs_init*ones(nz,nx);
@@ -8,7 +12,6 @@ function [vs]=vs_init_generation(vs_init, nz, nx,h)
 	subplot(2,1,1)
 	imagesc([0 nx*h-h],[0 nz*h-h],vs);
 	c=colorbar;
-	set(c,'title','%');
 	title('vs\_init');
 
 %%%%%%%%%% Sauvegarde dans le fichier vp_init %%%%%%%%%%
