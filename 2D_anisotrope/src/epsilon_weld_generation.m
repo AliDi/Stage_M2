@@ -1,6 +1,11 @@
-%%%%%%% milieu : soudure en V %%%%%%%
+%soudure
 %angl est en degre
 %rg : root gap (m)
+%epsilon : matrice du milieu à modifier
+%espilon_weld : valeur d'espilon (scalaire) à mettre dans la soudure
+%
+%usage : [epsilon]=epsilon_weld_generation(epsilon_weld , epsilon , angl , rg , nz , nx , h)
+
 function [epsilon]=epsilon_weld_generation(epsilon_weld , epsilon , angl , rg , nz , nx , h)
 
 	a1=-tan(abs(angl*pi/180)); 	%coefficient directeur du bord droit de la sourdure

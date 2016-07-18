@@ -1,8 +1,10 @@
-%vp : vitesse du milieu
-%vp_inclusion : vitesse dans l'inclusion
+%epsilon : milieu à modifier (matrice nz X nx)
+%epsilon_inclusion : epsilon dans l'inclusion (scalaire)
 %r : rayon de l'inclusion en m
 %xpos, ypos : coordonnees du centre de l'inclusion 
 %nx,nz : taille du milieu
+%
+%usage : [epsilon]=epsilon_inclusion_generation(epsilon_inclusion , epsilon ,  r,xpos_center,zpos_center, nz, nx,h)
 
 function [epsilon]=epsilon_inclusion_generation(epsilon_inclusion , epsilon ,  r,xpos_center,zpos_center, nz, nx,h)
 

@@ -1,8 +1,15 @@
-%vp : vitesse du milieu
-%vp_inclusion : vitesse dans l'inclusion
+%vp : vitesse du milieu à modifier (matrice nz X nx)
+%rho : masse volumique à modifier (idem)
+%vp_inclusion : vitesse dans l'inclusion (scalaire)
+%rho_inclusion : masse volumique dans l'inclusion (scalaire)
 %r : rayon de l'inclusion en m
 %xpos, ypos : coordonnees du centre de l'inclusion 
-%nx,nz : taille du milieu
+%nx,nz : nombre de points du milieu
+%N : nombre d'inclusions
+%
+%usage : [vp,rho]=vp_true_Ninclusions(vp,vp_inclusion , rho , rho_inclusion , r,pitch,xpos_center,zpos_center, nz, nx,h,N)
+%
+%sortie en binaire dans les fichiers 'vp_true' et 'rho_true'
 
 function [vp,rho]=vp_true_Ninclusions(vp,vp_inclusion , rho , rho_inclusion , r,pitch,xpos_center,zpos_center, nz, nx,h,N)
 

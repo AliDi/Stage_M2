@@ -1,4 +1,10 @@
-%%%%%%% milieu : 2 couches lissées %%%%%%%
+%génération des milieux uniformes
+%vp et rho sont les valeurs (scalaires) des vitesse et masse volumique
+%sortie : vp et rho sont les matrices des milieux uniformes, de dimension nz X nx
+%exportation en binaire dans les fichiers 'vp_init' et 'rho_init'
+
+%usage : [vp,rho]=vp_init_generation(vp,rho, nz, nx,h)
+
 function [vp,rho]=vp_init_generation(vp,rho, nz, nx,h)
 	
 	vp=vp*ones(nz,nx);

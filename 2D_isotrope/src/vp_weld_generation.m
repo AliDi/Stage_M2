@@ -1,6 +1,14 @@
 %%%%%%% milieu : soudure en V %%%%%%%
-%angl est en degre
+%angl est en degre : donne l'angle du bord droit de la soudure
 %rg : root gap (m)
+%vp et rho sont les matrices des milieux à modifier
+%vp_weld et rho_weld sont les valeurs (scalaires) de la vitesse et de la masse volumique dans la soudure
+%
+% usage : [vp,rho]=vp_weld_generation(vp, vp_weld , rho, rho_weld, angl, rg, nz, nx,h)
+%
+%sortie en binaire dans les fichiers 'vp_true' et 'rho_true'
+% 
+ 
 function [vp,rho]=vp_weld_generation(vp, vp_weld , rho, rho_weld, angl, rg, nz, nx,h)
 	
 	a1=-tan(abs(angl*pi/180)); 	%coefficient directeur du bord droit de la sourdure

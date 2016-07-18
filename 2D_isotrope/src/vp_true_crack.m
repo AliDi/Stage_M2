@@ -1,11 +1,17 @@
-%vp : vitesse du milieu sans fissure
-%vp_crack : vitesse dans la fissure
+%vp : vitesse du milieu sans fissure (matrice nz X nx)
+%rho : masse volumique sans fissure (idem)
+%vp_crack : vitesse dans la fissure (scalaire)
+%rho_crack : masse volumique dans la fissure (idem)
 %l : longueur du crack en m
 %L : largeur du crack en m
 %xpos_center, ypos_center : coordonnees du centre du crack en m
 %nx,nz : taille du milieu
 %h pas de discrétisation
 %angl : angle du crack en degré
+%
+%usage : [vp,rho]=vp_true_crack(vp,vp_crack, rho, rho_crack, l , L , angl, xpos_center,zpos_center,nz, nx,h)
+%
+%sortie en binaire dans les fichiers 'vp_true' et 'rho_true'
 
 function [vp,rho]=vp_true_crack(vp,vp_crack, rho, rho_crack, l , L , angl, xpos_center,zpos_center,nz, nx,h)
 

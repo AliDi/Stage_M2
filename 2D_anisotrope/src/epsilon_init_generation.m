@@ -1,4 +1,7 @@
-%%%%%%% milieu : 2 couches lissées %%%%%%%
+%milieu uniforme de valeur epsilon sortant dans la matrice espilon
+%
+%usage : [epsilon]=epsilon_init_generation(epsilon_init, nz, nx,h)
+
 function [epsilon]=epsilon_init_generation(epsilon_init, nz, nx,h)
 
 	epsilon=epsilon_init*ones(nz,nx);

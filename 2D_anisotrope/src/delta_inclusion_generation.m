@@ -1,8 +1,10 @@
-%vp : vitesse du milieu
-%vp_inclusion : vitesse dans l'inclusion
+%delta : milieu décrit par le paramètre delta de Thomsen
+%delta_inclusion : delta dans l'inclusion (scalaire)
 %r : rayon de l'inclusion en m
 %xpos, ypos : coordonnees du centre de l'inclusion 
 %nx,nz : taille du milieu
+%
+%usage : [delta]=delta_inclusion_generation(delta_inclusion , delta ,  r,xpos_center,zpos_center, nz, nx,h)
 
 function [delta]=delta_inclusion_generation(delta_inclusion , delta ,  r,xpos_center,zpos_center, nz, nx,h)
 

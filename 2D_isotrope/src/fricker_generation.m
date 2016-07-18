@@ -1,8 +1,15 @@
+% -calcul de l'amplitude de la fonction de Ricker, soit par la focntion de Octave soit par l'expression donnée par ROmain : de fréquence centrale f, pour n nombre de points temporels, dt l'échantillonage temporel et gain le gain à appliquer (si gain==1, l'amplitude max est 1).
+%- Plot du signal dans la fenetre figure
+% -exportation de l'amplitude dans le fichier fricker en binaire
+%
+% usage : fricker_generation(f,n,dt,gain)
+
 function fricker_generation(f,n,dt,gain)
 	
 	t=(0:n-1)*dt;
 	freqs=(0:n-1)*1/max(t);
 	
+%%%%%%%%%% Fonction Octave, présente dans ce dossier %%%%%%%%%%	
 	fricker=ricker(f,n,dt);
 	
 
@@ -22,10 +29,9 @@ n1=n;
  x(i1)=(1.-2.*a2)*exp(-a2);							  %ricker
  dx(i1)=-4*a*da*exp(-a2)-2.*a*da*(1.-2.*a2)*exp(-a2); %derivee du ricker
  end
- 
-%%%%%%%%%%
-	
-	%fricker=dx;
+ 	%fricker=dx;
+%%%%%%%%%%	
+
 	fricker=gain*fricker;
 
 	figure

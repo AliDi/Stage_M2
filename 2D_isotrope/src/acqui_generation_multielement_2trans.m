@@ -9,16 +9,16 @@
 % z_recep1	x_recep1	y_recep1	0	0	1
 % ...
 % z_recepN	x_recepN	y_recepN	0	0	1
-
-
-%the probe is fixed
-%the probe is along the x axis, emitting along z axis
-%2 transducers for excitation, all the elements for reception
-
+%
+%Les sondes sont fixes. La longueur est placées suivant x
 %zpos_ et xpos_ sont les positions en m du centre des transducteurs multi-elements
-
+%
+%On considère 4 positions de barrettes : 2 en émission (en position z/xpos_sources1 et z/xpos_sources2) et 2 en réception (en position z/xpos_recep1 et z/xpos_recep2).
+%
 %cette fonction place les éléments de manière à tomber exactement sur les points de la grille définie par nz,nx et h si grille=='on'
-
+%
+% usage : [x_sources z_sources x_recep z_recep]= acqui_generation_multielement_2trans(nb_elements , pitch ,  zpos_sources1 , xpos_sources1 , zpos_sources2 , xpos_sources2 , zpos_recep1 , xpos_recep1 , zpos_recep2 , xpos_recep2 , nz , nx , h , grille)
+%
 function [x_sources z_sources x_recep z_recep]= acqui_generation_multielement_2trans(nb_elements , pitch ,  zpos_sources1 , xpos_sources1 , zpos_sources2 , xpos_sources2 , zpos_recep1 , xpos_recep1 , zpos_recep2 , xpos_recep2 , nz , nx , h , grille)
 
 	aperture = (nb_elements-1)*pitch; %total length of the probe

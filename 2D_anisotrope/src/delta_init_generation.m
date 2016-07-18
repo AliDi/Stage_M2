@@ -1,4 +1,7 @@
-%%%%%%% milieu : 2 couches lissées %%%%%%%
+%milieu décrit par delta uniforme, de valeur delta_init (scalaire)
+%
+%usage : [delta]=delta_init_generation(delta_init, nz, nx,h)
+
 function [delta]=delta_init_generation(delta_init, nz, nx,h)
 
 	delta=delta_init*ones(nz,nx);

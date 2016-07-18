@@ -9,8 +9,10 @@
 % z_recep1	x_recep1	y_recep1	0	0	1
 % ...
 % z_recepN	x_recepN	y_recepN	0	0	1
-
+%
 %permet de placer des sources et recepteurs en donnant leurs coordonnées en m
+%
+%usage : []= acqui_generation(z_sources,x_sources,y_sources,z_recepts,x_recepts,y_recepts, nz, nx,h , grille)
 
 function []= acqui_generation(z_sources,x_sources,y_sources,z_recepts,x_recepts,y_recepts, nz, nx,h , grille)
 
