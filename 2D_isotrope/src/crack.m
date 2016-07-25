@@ -1,7 +1,5 @@
-%vp : vitesse du milieu sans fissure (matrice nz X nx)
-%rho : masse volumique sans fissure (idem)
-%vp_crack : vitesse dans la fissure (scalaire)
-%rho_crack : masse volumique dans la fissure (idem)
+%vp : paramètre du milieu à modifier (matrice nz X nx)
+%vp_crack : valeur du paramètre dans la fissure (scalaire)
 %l : longueur du crack en m
 %L : largeur du crack en m
 %xpos_center, ypos_center : coordonnees du centre du crack en m
@@ -9,11 +7,16 @@
 %h pas de discrétisation
 %angl : angle du crack en degré
 %
-%usage : [vp,rho]=vp_true_crack(vp,vp_crack, rho, rho_crack, l , L , angl, xpos_center,zpos_center,nz, nx,h)
+%nom_fichier : nom du fichier binaire pour l'exportation du milieu (string)
 %
-%sortie en binaire dans les fichiers 'vp_true' et 'rho_true'
+%num_figure : numéro de la figure pour un affichage du milieu généré. Si num_figure==0, pas d'affichage.
+%num_plot : paramètre d'entrée de subplot
+%
+%usage : [vp]=crack(vp , vp_crack , l , L , angl, xpos_center,zpos_center , nz ,  nx , h , nom_fichier , num_figure , num_subplot) 
+%
 
-function [vp,rho]=vp_true_crack(vp,vp_crack, rho, rho_crack, l , L , angl, xpos_center,zpos_center,nz, nx,h)
+
+function [vp]=crack(vp , vp_crack , l , L , angl, xpos_center,zpos_center , nz ,  nx , h , nom_fichier , num_figure , num_subplot) 
 
 	angl=angl*pi/180;		%passage en radian
 	
@@ -33,7 +36,6 @@ function [vp,rho]=vp_true_crack(vp,vp_crack, rho, rho_crack, l , L , angl, xpos_
 						
 			if ( ((z(i)-a*x(j))<= (b+(l/2/cos(angl)))) && ((z(i)-a*x(j)) >=(b-(l/2/cos(angl)))) && ((z(i)-a2*x(j))<= (b2+abs(L/2/cos(angl2)))) && ((z(i)-a2*x(j)) >= (b2-abs(L/2/cos(angl2)))) ) %i.e. dans la fissure
 				vp(i,j)=vp_crack;
-				rho(i,j)=rho_crack;
 			end
 		end
 	end 
@@ -53,26 +55,17 @@ x=0:h:nx*h;
 	
 %%%%%%%%%% Illustration %%%%%%%%%%
 	
-	figure(100)
-	subplot(212)
+	figure(num_figure)
+	subplot(num_subplot)
 	imagesc([0 nx*h-h],[0 nz*h-h],vp)
 	colorbar
-	title('vp\_true')
-	
-	figure(101)
-	subplot(212)
-	imagesc([0 nx*h-h],[0 nz*h-h],rho)
-	colorbar
-	title('rho\_true')
-	
-%%%%%%%%%% Sauvegarde dans le fichier vp_true_inclusion %%%%%%%%%%
+	title(nom_fichier)
 
-	fid=fopen('vp_true','w+');
-	fwrite(fid, vp(:,:),'single');
-	fclose(fid);
 	
-	fid=fopen('rho_true','w+');
-	fwrite(fid, rho(:,:),'single');
+%%%%%%%%%% Sauvegarde dans le fichier nom_fichier %%%%%%%%%%
+
+	fid=fopen(nom_fichier,'w+');
+	fwrite(fid, vp(:,:),'single');
 	fclose(fid);
 	
 end

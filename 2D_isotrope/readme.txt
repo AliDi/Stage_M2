@@ -10,11 +10,11 @@ Génération de 'fricker' qui contient l'ondelette d'excitation :
 - fricker_generation.m
 
 Génération des fichier de vitesse et masse volumique (pas optmisée puisque la même opération est effectuée par plusieurs fonctions, mais plus simple pour gérer les affichages) :
-vp_init_generation.m (génère des milieux uniformes)
-vp_true_crack.m	(ajoute une fissure aux milieux donnés en entrée)
-vp_true_inclusion.m (ajoute une inclusion, i.e. un cercle, aux milieux donnés en entrée)
-vp_true_Ninclusions.m (ajoute N inclusions aux milieux donnés en entrée)
-vp_weld_generation.m (ajoute une soudure en V aux milieux donnés en entrée)
+background.m (génère des milieux uniformes)
+crack.m	(ajoute une fissure aux milieux donnés en entrée)
+inclusion.m (ajoute une inclusion, i.e. un cercle, aux milieux donnés en entrée)
+Ninclusions.m (ajoute N inclusions aux milieux donnés en entrée)
+weld.m (ajoute une soudure en V aux milieux donnés en entrée)
 
 Plus de détails sont donnés en commentaire, accessibles en tapant :
 help nom_de_la_fonction

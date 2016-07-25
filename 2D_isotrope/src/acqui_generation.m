@@ -12,9 +12,9 @@
 %
 %permet de placer des sources et recepteurs en donnant leurs coordonnées en m
 %
-%usage : []= acqui_generation(z_sources,x_sources,y_sources,z_recepts,x_recepts,y_recepts, nz, nx,h , grille)
+%usage : [x_recepts z_recepts y_recepts]= acqui_generation(z_sources,x_sources,y_sources,z_recepts,x_recepts,y_recepts, nz, nx,h , grille)
 
-function []= acqui_generation(z_sources,x_sources,y_sources,z_recepts,x_recepts,y_recepts, nz, nx,h , grille)
+function [x_recepts z_recepts y_recepts]= acqui_generation(z_sources,x_sources,y_sources,z_recepts,x_recepts,y_recepts, nz, nx,h , grille)
 
 	nb_sources = length(z_sources);
 	nb_recepts = length(z_recepts);
@@ -27,14 +27,12 @@ function []= acqui_generation(z_sources,x_sources,y_sources,z_recepts,x_recepts,
 
 	if(grille=='on')
 		x_sources = round(x_sources./h).*h;
-		z_sources = round(z_sources./h).*h;	
+		z_sources = round(z_sources./h).*h;
+		y_sources = round(y_sources./h).*h;	
 		x_recepts = round(x_recepts./h).*h;
-		z_recepts = round(z_recepts./h).*h;	
+		z_recepts = round(z_recepts./h).*h;
+		y_recepts = round(y_recepts./h).*h;	
 	end	
-
-
-
-
 
 	for i=1:nb_sources
 		acqui(i+(i-1)*nb_recepts,1:6) = [z_sources(i) x_sources(i) y_sources(i) 0 0 0];
@@ -45,18 +43,6 @@ function []= acqui_generation(z_sources,x_sources,y_sources,z_recepts,x_recepts,
 	fid=fopen('acqui_file','w+');
 	fprintf(fid,'%f %f %f %f %f %f\n', acqui(:, :,:));
 	fclose(fid);
-	
 
-	%save("-ascii","acqui_file","acqui")
-	
-	
-
-%%%% schema donnant la disposition %%%%
-	figure(100)
-	hold on
-	scatter(x_sources, z_sources,'green','o','filled');
-	hold on
-	scatter(x_recepts, z_recepts,'black','o','filled');
-	hold off
 end
 

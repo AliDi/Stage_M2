@@ -77,15 +77,5 @@ function [x_sources z_sources x_recep z_recep]= acqui_generation_multielement_2t
 	fprintf(fid,'%f %f %f %f %f %f\n', acqui(:, :,:));
 	fclose(fid);
 
-	%save("-ascii","acqui_file","acqui")
-
-%%%%%%%%%% Schema donnant la disposition des transducteurs %%%%%%%%%%
-	figure(100)
-	hold on
-	scatter(x_sources, z_sources,'green','o','filled');
-	hold on
-	scatter(x_recep, z_recep,'black','o','filled');
-	hold off
-
 end
 

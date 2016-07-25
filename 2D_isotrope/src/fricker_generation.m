@@ -37,10 +37,15 @@ n1=n;
 	figure
 	subplot(2,1,1)
 	plot(fricker,'o');
+	title('signal temporel')
+	xlabel('Temps (s)')
+	
+	
 	subplot(2,1,2)
 	fft_ricker=abs(fft(fricker));
 	plot(freqs(1:n/2)/1e6,20*log10(fft_ricker(1:n/2)))
-	
+	title('Contenu fréquentiel')
+	xlabel('Fréquence (Hz)')
 	
 	
 	fid=fopen('fricker','w+');
