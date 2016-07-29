@@ -34,7 +34,7 @@ figure(3)
 imagesc(data)
 
 figure(4)
-plot(data(:,200),-(0:0.25:50-0.25))
+plot((0:0.25:100-0.25),data(120,:))
 
 fid=fopen('rho_true')
 data=fread(fid,'single');
@@ -42,7 +42,7 @@ fclose(fid)
 data=reshape(data,200,400);
 figure(4)
 hold on
-plot(data(:,200),-(0:0.25:50-0.25),'r')
+plot((0:0.25:100-0.25),data(120,:),'r')
 xlabel('mm');
 ylabel('Masse volumique en kg/m3');
 legend('Reconstruite','Vraie')

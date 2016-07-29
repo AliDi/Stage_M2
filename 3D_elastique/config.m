@@ -178,14 +178,14 @@ ypos=ny/2*h;
 
 %[x_sources z_sources x_recep z_recep]= acqui_generation_multielement_reflex_trans(nb_elements , pitch , zpos_sources1 , xpos_sources1 , zpos_recep1 , xpos_recep1 , zpos_recep2 , xpos_recep2 , nz , nx , h , 'on' );
 nb_src=32;
-nb_recep=128;
+nb_recep=64;
 
 z_sources = h*ones(1,nb_src);
 x_sources = 0.018500:2e-3:0.081500;
 y_sources = ypos*ones(1,nb_src);
 
-z_recepts = [h*ones(1,nb_recep/2)  (nz-1)*h*ones(1,nb_recep/2) ];
-x_recepts = [ 0.018500:1e-3:0.081500 0.018500:1e-3:0.081500];
+z_recepts = [(nz-1)*h*ones(1,nb_recep) ];
+x_recepts = [0.018500:1e-3:0.081500];
 y_recepts = ypos*ones(1,nb_recep);
 
 [x_recep z_recep y_recep] = acqui_generation(z_sources,x_sources,y_sources,z_recepts,x_recepts,y_recepts, nz, nx,h , 'on');
